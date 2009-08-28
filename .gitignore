@@ -1,0 +1,8 @@
+electronics/*.bak
+electronics/*.bck
+electronics/fpga-prototype/*.000
+electronics/fpga-prototype/*.bak
+electronics/fpga-prototype/*.bck
+electronics/fpga-prototype/*.cache.lib
+electronics/fpga-prototype/*.erc
+electronics/fpga-prototype/*.net
