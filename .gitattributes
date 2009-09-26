@@ -1,9 +1,5 @@
 * text=auto !eol
 electronics/block[!!-~]diagram.fig -text
-electronics/fpga-prototype/fpga-prototype.brd -text
-electronics/fpga-prototype/fpga-prototype.cmp -text
-electronics/fpga-prototype/fpga-prototype.pro -text
-electronics/fpga-prototype/fpga-prototype.sch -text
 electronics/thunderbots-modules.mdc -text
 electronics/thunderbots-modules.mod -text
 electronics/thunderbots-symbols.dcm -text
