@@ -1,5 +1,5 @@
 EESchema Schematic File Version 1
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./fpga-prototype.cache
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -303,10 +303,10 @@ NoConn ~ 7450 4850
 NoConn ~ 7450 4900
 NoConn ~ 7450 5100
 $Comp
-L GND #PWR021
+L GND #PWR041
 U 1 1 4ABEAF66
 P 7600 5150
-F 0 "#PWR021" H 7600 5150 30  0001 C C
+F 0 "#PWR041" H 7600 5150 30  0001 C C
 F 1 "GND" H 7600 5080 30  0001 C C
 	1    7600 5150
 	0    -1   -1   0   
@@ -521,10 +521,10 @@ CCLK
 Text GLabel 6950 6400 2    60   BiDi
 CIN/APPOUT
 $Comp
-L GND #PWR022
+L GND #PWR042
 U 1 1 4ABE68D5
 P 5650 2000
-F 0 "#PWR022" H 5650 2000 30  0001 C C
+F 0 "#PWR042" H 5650 2000 30  0001 C C
 F 1 "GND" H 5650 1930 30  0001 C C
 	1    5650 2000
 	1    0    0    -1  
@@ -539,109 +539,109 @@ F 1 "ACOL50" H 5800 1350 60  0000 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L +1.2V #PWR023
+L +1.2V #PWR043
 U 1 1 4ABC0BA3
 P 4350 4500
-F 0 "#PWR023" H 4350 4640 20  0001 C C
+F 0 "#PWR043" H 4350 4640 20  0001 C C
 F 1 "+1.2V" H 4350 4610 30  0000 C C
 	1    4350 4500
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +1.2V #PWR024
+L +1.2V #PWR044
 U 1 1 4ABC0B96
 P 5850 5950
-F 0 "#PWR024" H 5850 6090 20  0001 C C
+F 0 "#PWR044" H 5850 6090 20  0001 C C
 F 1 "+1.2V" H 5850 6060 30  0000 C C
 	1    5850 5950
 	-1   0    0    1   
 $EndComp
 $Comp
-L +1.2V #PWR025
+L +1.2V #PWR045
 U 1 1 4ABC0B7E
 P 7600 4150
-F 0 "#PWR025" H 7600 4290 20  0001 C C
+F 0 "#PWR045" H 7600 4290 20  0001 C C
 F 1 "+1.2V" H 7600 4260 30  0000 C C
 	1    7600 4150
 	0    1    1    0   
 $EndComp
 $Comp
-L +1.2V #PWR026
+L +1.2V #PWR046
 U 1 1 4ABC0B65
 P 6200 2650
-F 0 "#PWR026" H 6200 2790 20  0001 C C
+F 0 "#PWR046" H 6200 2790 20  0001 C C
 F 1 "+1.2V" H 6200 2760 30  0000 C C
 	1    6200 2650
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR027
+L VCC #PWR047
 U 1 1 4ABC0B42
 P 4400 3350
-F 0 "#PWR027" H 4400 3450 30  0001 C C
+F 0 "#PWR047" H 4400 3450 30  0001 C C
 F 1 "VCC" H 4400 3450 30  0000 C C
 	1    4400 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR028
+L VCC #PWR048
 U 1 1 4ABC0B26
 P 5000 5850
-F 0 "#PWR028" H 5000 5950 30  0001 C C
+F 0 "#PWR048" H 5000 5950 30  0001 C C
 F 1 "VCC" H 5000 5950 30  0000 C C
 	1    5000 5850
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR029
+L VCC #PWR049
 U 1 1 4ABC0B00
 P 7550 3350
-F 0 "#PWR029" H 7550 3450 30  0001 C C
+F 0 "#PWR049" H 7550 3450 30  0001 C C
 F 1 "VCC" H 7550 3450 30  0000 C C
 	1    7550 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR030
+L VCC #PWR050
 U 1 1 4ABC0AC7
 P 4950 2700
-F 0 "#PWR030" H 4950 2800 30  0001 C C
+F 0 "#PWR050" H 4950 2800 30  0001 C C
 F 1 "VCC" H 4950 2800 30  0000 C C
 	1    4950 2700
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR031
+L GND #PWR051
 U 1 1 4ABC0A87
 P 4450 5250
-F 0 "#PWR031" H 4450 5250 30  0001 C C
+F 0 "#PWR051" H 4450 5250 30  0001 C C
 F 1 "GND" H 4450 5180 30  0001 C C
 	1    4450 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR032
+L GND #PWR052
 U 1 1 4ABC0A71
 P 6950 5900
-F 0 "#PWR032" H 6950 5900 30  0001 C C
+F 0 "#PWR052" H 6950 5900 30  0001 C C
 F 1 "GND" H 6950 5830 30  0001 C C
 	1    6950 5900
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR033
+L GND #PWR053
 U 1 1 4ABC0A58
 P 7500 5250
-F 0 "#PWR033" H 7500 5250 30  0001 C C
+F 0 "#PWR053" H 7500 5250 30  0001 C C
 F 1 "GND" H 7500 5180 30  0001 C C
 	1    7500 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR034
+L GND #PWR054
 U 1 1 4ABC09D0
 P 7050 2850
-F 0 "#PWR034" H 7050 2850 30  0001 C C
+F 0 "#PWR054" H 7050 2850 30  0001 C C
 F 1 "GND" H 7050 2780 30  0001 C C
 	1    7050 2850
 	1    0    0    -1  
