@@ -1,5 +1,13 @@
 * text=auto !eol
 electronics/block[!!-~]diagram.fig -text
+electronics/fpga-prototype/connectors.sch -text
+electronics/fpga-prototype/flash.sch -text
+electronics/fpga-prototype/fpga-prototype.pro -text
+electronics/fpga-prototype/fpga-prototype.sch -text
+electronics/fpga-prototype/fpga.sch -text
+electronics/fpga-prototype/pic.sch -text
+electronics/fpga-prototype/power.sch -text
+electronics/fpga-prototype/xbee.sch -text
 electronics/thunderbots-modules.mdc -text
 electronics/thunderbots-modules.mod -text
 electronics/thunderbots-symbols.dcm -text

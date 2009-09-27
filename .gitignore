@@ -1,2 +1,4 @@
 electronics/*.bak
 electronics/*.bck
+electronics/fpga-prototype/*.bak
+electronics/fpga-prototype/*.bck
