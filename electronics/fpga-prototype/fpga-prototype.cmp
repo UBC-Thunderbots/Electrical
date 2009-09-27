@@ -1,0 +1,192 @@
+Cmp-Mod V01 Created by Cvpcb (2007-01-15) date = 27/9/2009-07:40:00
+
+BeginCmp
+TimeStamp = 4ABE8019;
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABF01A9;
+Reference = C2;
+ValeurCmp = 100uF;
+IdModule  = C2V10;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE8044;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = C2;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE7E49;
+Reference = C4;
+ValeurCmp = 1uF;
+IdModule  = C2;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE8225;
+Reference = C5;
+ValeurCmp = 1uF;
+IdModule  = C2;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE93EB;
+Reference = C6;
+ValeurCmp = 27pF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE93EC;
+Reference = C7;
+ValeurCmp = 27pF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABECDC0;
+Reference = C8;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABECDD6;
+Reference = C9;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABECDDC;
+Reference = C10;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABECE2A;
+Reference = C11;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABECE6E;
+Reference = C12;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABECE74;
+Reference = C13;
+ValeurCmp = 100nF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABF00CA;
+Reference = C14;
+ValeurCmp = 100uF;
+IdModule  = C2V10;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE9B68;
+Reference = P1;
+ValeurCmp = CONN_13;
+IdModule  = SIL-13;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE9D49;
+Reference = P2;
+ValeurCmp = CONN_2;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE9C9E;
+Reference = P3;
+ValeurCmp = CONN_20X2;
+IdModule  = PIN_ARRAY_20X2;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABEA039;
+Reference = P4;
+ValeurCmp = CONN_6;
+IdModule  = SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE67D0;
+Reference = U2;
+ValeurCmp = ACOL50;
+IdModule  = ACOL50;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABF13CA;
+Reference = U3;
+ValeurCmp = 78ST105;
+IdModule  = TO220-123;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE7FD2;
+Reference = U4;
+ValeurCmp = LD1117V33C;
+IdModule  = TO220-123;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE820F;
+Reference = U5;
+ValeurCmp = MCP1827S-1202E/A;
+IdModule  = TO220-123;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE8D62;
+Reference = U6;
+ValeurCmp = W25X16AVDAIZ;
+IdModule  = 8dip300;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE92C3;
+Reference = U7;
+ValeurCmp = PIC18F4550;
+IdModule  = 40dip600;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE98A8;
+Reference = U8;
+ValeurCmp = XBEE;
+IdModule  = XBee;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABEB60B;
+Reference = U9;
+ValeurCmp = XC3S50A-TQ144;
+IdModule  = TQFP144;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ABE93E3;
+Reference = X1;
+ValeurCmp = 4MHz;
+IdModule  = ;
+EndCmp
+
+EndListe

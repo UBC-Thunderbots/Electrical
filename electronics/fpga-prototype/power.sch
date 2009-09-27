@@ -1,5 +1,5 @@
 EESchema Schematic File Version 1
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./fpga-prototype.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -13,6 +13,33 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L 78ST105 U3
+U 1 1 4ABF13CA
+P 4150 4900
+F 0 "U3" H 4300 4704 60  0000 C C
+F 1 "78ST105" H 4150 5100 60  0000 C C
+	1    4150 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C2
+U 1 1 4ABF01A9
+P 4800 5150
+F 0 "C2" H 4850 5250 50  0000 L C
+F 1 "100uF" H 4850 5050 50  0000 L C
+	1    4800 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C14
+U 1 1 4ABF00CA
+P 3800 3650
+F 0 "C14" H 3850 3750 50  0000 L C
+F 1 "100uF" H 3850 3550 50  0000 L C
+	1    3800 3650
+	1    0    0    -1  
+$EndComp
 Kmarq B 6250 4850 "Warning: Pin power_out connected to Pin BiDi (net 18)" F=1
 Wire Wire Line
 	6600 3900 6600 3850
@@ -272,15 +299,6 @@ F 1 "+BATT" H 3800 3500 30  0000 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C14
-U 1 1 4ABECCF7
-P 3800 3650
-F 0 "C14" H 3850 3750 50  0000 L C
-F 1 "100uF" H 3850 3550 50  0000 L C
-	1    3800 3650
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR031
 U 1 1 4ABECC7B
 P 5900 3900
@@ -395,24 +413,6 @@ P 5850 4900
 F 0 "U4" H 6000 4704 60  0000 C C
 F 1 "LD1117V33C" H 5850 5100 60  0000 C C
 	1    5850 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C2
-U 1 1 4ABE7EE7
-P 4800 5150
-F 0 "C2" H 4850 5250 50  0000 L C
-F 1 "100uF" H 4850 5050 50  0000 L C
-	1    4800 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 7805 U3
-U 1 1 4ABE7E71
-P 4150 4900
-F 0 "U3" H 4300 4704 60  0000 C C
-F 1 "7805" H 4150 5100 60  0000 C C
-	1    4150 4900
 	1    0    0    -1  
 $EndComp
 $Comp

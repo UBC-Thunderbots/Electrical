@@ -1,5 +1,5 @@
-update=27/9/2009-02:31:58
-last_client=kicad
+update=27/9/2009-06:04:24
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=
@@ -118,8 +118,8 @@ ShowRat=0
 ShowMRa=1
 [pcbnew/libraries]
 LibDir=
-LibName1=supports
-LibName2=../thunderbots-modules
+LibName1=../thunderbots-modules
+LibName2=supports
 LibName3=connect
 LibName4=discret
 LibName5=pin_array
@@ -131,3 +131,13 @@ LibName9=valves
 version=1
 RootSch=fpga-prototype.sch
 BoardNm=fpga-prototype.brd
+[cvpcb]
+version=1
+NetITyp=0
+NetIExt=.net
+PkgIExt=.pkg
+NetType=0
+[cvpcb/libraries]
+EquName1=devcms
+[common]
+NetDir=

@@ -3,3 +3,4 @@ electronics/*.bck
 electronics/fpga-prototype/*.bak
 electronics/fpga-prototype/*.bck
 electronics/fpga-prototype/*.cache.lib
+electronics/fpga-prototype/*.net
