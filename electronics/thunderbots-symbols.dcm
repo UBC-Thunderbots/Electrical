@@ -1,33 +1,43 @@
-EESchema-DOCLIB  Version 2.0  Date: 27/9/2009-01:01:23
+EESchema-DOCLIB  Version 2.0  Date: 27/9/2009-07:39:44
 #
-$CMP 78L05
-D Linear Regulator +5V
+$CMP 78ST105
+D Switching Regulator +5V
 K POWER REGUL
-F regulator/lm78*.*
+$ENDCMP
+#
+$CMP ACOL50
+D Oscillator 50MHz
+K OSCILLATOR
 $ENDCMP
 #
 $CMP LD1117V33C
-D Linear Regulator +5V
+D Linear Regulator +3.3V
 K POWER REGUL
-F regulator/lm78*.*
-$ENDCMP
-#
-$CMP LM7805
-D Linear Regulator +5V
-K POWER REGUL
-F regulator/lm78*.*
-$ENDCMP
-#
-$CMP LM7812
-D Linear Regulator +12V
-K POWER REGUL
-F regulator/lm78*.*
 $ENDCMP
 #
 $CMP MCP1827S-1202E/AB
-D Linear Regulator +5V
+D Linear Regulator +1.2V
 K POWER REGUL
-F regulator/lm78*.*
+$ENDCMP
+#
+$CMP PIC18F4550
+D PICmicro 18F4550
+K PIC
+$ENDCMP
+#
+$CMP W25X16AVDAIZ
+D Flash Memory
+K FLASH MEMORY
+$ENDCMP
+#
+$CMP XBEE
+D XBee Radio Modem
+K MODEM RADIO
+$ENDCMP
+#
+$CMP XC3S50A-TQ144
+D Xilinx Extended Spartan-3A FPGA
+K XILINX FPGA
 $ENDCMP
 #
 #End Doc Library
