@@ -3,9 +3,9 @@ LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 3 7
+Sheet 4 7
 Title ""
-Date "27 sep 2009"
+Date "28 sep 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -35,10 +35,10 @@ NoConn ~ 7150 4400
 NoConn ~ 7150 4500
 NoConn ~ 7150 4600
 $Comp
-L GND #PWR05
+L GND #PWR023
 U 1 1 4ABE98E5
 P 4200 4600
-F 0 "#PWR05" H 4200 4600 30  0001 C C
+F 0 "#PWR023" H 4200 4600 30  0001 C C
 F 1 "GND" H 4200 4530 30  0001 C C
 	1    4200 4600
 	0    1    1    0   
@@ -54,10 +54,10 @@ DIN
 Text GLabel 4200 3800 0    60   Output
 DOUT
 $Comp
-L VCC #PWR06
+L VCC #PWR024
 U 1 1 4ABE98C2
 P 4200 3700
-F 0 "#PWR06" H 4200 3800 30  0001 C C
+F 0 "#PWR024" H 4200 3800 30  0001 C C
 F 1 "VCC" H 4200 3800 30  0000 C C
 	1    4200 3700
 	0    -1   -1   0   

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2007-01-15) date = 27/9/2009-07:40:00
+Cmp-Mod V01 Created by Cvpcb (2007-01-15) date = 28/9/2009-06:00:39
 
 BeginCmp
 TimeStamp = 4ABE8019;
@@ -99,10 +99,10 @@ IdModule  = C2V10;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE9B68;
+TimeStamp = 4AC05060;
 Reference = P1;
-ValeurCmp = CONN_13;
-IdModule  = SIL-13;
+ValeurCmp = CONN_15;
+IdModule  = SIL-15;
 EndCmp
 
 BeginCmp
