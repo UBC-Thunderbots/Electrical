@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 5 7
 Title ""
-Date "28 sep 2009"
+Date "2 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3650 4800 4250 4800
+Wire Wire Line
+	8450 4900 7450 4900
 Connection ~ 1700 5250
 Wire Wire Line
 	1700 5250 1700 5350
@@ -52,10 +56,6 @@ Wire Wire Line
 Wire Wire Line
 	7450 4700 8450 4700
 Wire Wire Line
-	7950 4850 8450 4850
-Wire Wire Line
-	7450 4900 7950 4900
-Wire Wire Line
 	7450 5000 8450 5000
 Wire Wire Line
 	3650 5000 4250 5000
@@ -77,11 +77,6 @@ Wire Wire Line
 	4250 5100 3650 5100
 Wire Wire Line
 	8450 5100 7450 5100
-Wire Wire Line
-	7450 4800 7950 4800
-Wire Wire Line
-	7950 4800 7950 4900
-Connection ~ 7950 4850
 Wire Wire Line
 	8450 4600 7450 4600
 Wire Wire Line
@@ -117,13 +112,21 @@ Wire Wire Line
 Connection ~ 1400 4650
 Wire Wire Line
 	1400 5250 2000 5250
+Wire Wire Line
+	7450 4800 8450 4800
+Text GLabel 3650 4800 0    60   BiDi
+MISC
+Text GLabel 8450 4900 2    60   BiDi
+USBD-
+Text GLabel 8450 4800 2    60   BiDi
+USBD+
 Text GLabel 7250 6250 2    60   Input
 ADC[0..12]
 Text Label 8900 3900 0    60   ~
 ADC12
-Text Label 8900 3500 0    60   ~
-ADC11
 Text Label 8900 3800 0    60   ~
+ADC11
+Text Label 8900 3700 0    60   ~
 ADC10
 Entry Wire Line
 	9250 3900 9350 4000
@@ -133,7 +136,7 @@ Entry Wire Line
 	9250 3800 9350 3900
 Text Label 8900 3600 0    60   ~
 ADC9
-Text Label 8900 3700 0    60   ~
+Text Label 8900 3500 0    60   ~
 ADC8
 Entry Wire Line
 	9250 3700 9350 3800
@@ -176,80 +179,70 @@ PGC
 Text GLabel 8450 3200 2    60   BiDi
 PGD
 $Comp
-L GND #PWR025
+L GND #PWR027
 U 1 1 4ABE95D6
 P 8450 3400
-F 0 "#PWR025" H 8450 3400 30  0001 C C
+F 0 "#PWR027" H 8450 3400 30  0001 C C
 F 1 "GND" H 8450 3330 30  0001 C C
 	1    8450 3400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR026
+L GND #PWR028
 U 1 1 4ABE95C5
 P 8450 4100
-F 0 "#PWR026" H 8450 4100 30  0001 C C
+F 0 "#PWR028" H 8450 4100 30  0001 C C
 F 1 "GND" H 8450 4030 30  0001 C C
 	1    8450 4100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VCC #PWR027
+L VCC #PWR029
 U 1 1 4ABE95C2
 P 8450 4000
-F 0 "#PWR027" H 8450 4100 30  0001 C C
+F 0 "#PWR029" H 8450 4100 30  0001 C C
 F 1 "VCC" H 8450 4100 30  0000 C C
 	1    8450 4000
 	0    1    1    0   
 $EndComp
 Text GLabel 8450 4200 2    60   Input
 BOOTLOAD
-Text GLabel 8450 4300 2    60   Output
-FPGA_SS
-Text GLabel 8450 4400 2    60   3State
+Text GLabel 8450 4300 2    60   3State
 FLASH_SS
+Text GLabel 8450 5000 2    60   Output
+FPGA_SS
 Text GLabel 8450 4500 2    60   Input
 DONE
 Text GLabel 8450 4600 2    60   Input
 RX
 Text GLabel 8450 4700 2    60   BiDi
 TX
-$Comp
-L GND #PWR028
-U 1 1 4ABE94D0
-P 8450 4850
-F 0 "#PWR028" H 8450 4850 30  0001 C C
-F 1 "GND" H 8450 4780 30  0001 C C
-	1    8450 4850
-	0    -1   -1   0   
-$EndComp
-Text GLabel 8450 5000 2    60   Output
+Text GLabel 8450 5100 2    60   Output
 PROG_B
-Text GLabel 8450 5100 2    60   Input
+Text GLabel 8450 4400 2    60   Input
 INIT_B
 Text GLabel 3650 5100 0    60   BiDi
 SPIOUT
 Text GLabel 3650 5000 0    60   Input
 SPIIN
 $Comp
-L VCC #PWR029
+L VCC #PWR030
 U 1 1 4ABE9454
 P 3650 4900
-F 0 "#PWR029" H 3650 5000 30  0001 C C
+F 0 "#PWR030" H 3650 5000 30  0001 C C
 F 1 "VCC" H 3650 5000 30  0000 C C
 	1    3650 4900
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 4250 4800
-Text GLabel 3650 4700 0    60   3State
+Text GLabel 3650 4700 0    60   BiDi
 BRAKE
 Text GLabel 3650 4600 0    60   BiDi
 SPICK
 $Comp
-L GND #PWR030
+L GND #PWR031
 U 1 1 4ABE9401
 P 1700 5350
-F 0 "#PWR030" H 1700 5350 30  0001 C C
+F 0 "#PWR031" H 1700 5350 30  0001 C C
 F 1 "GND" H 1700 5280 30  0001 C C
 	1    1700 5350
 	1    0    0    -1  
@@ -282,19 +275,19 @@ F 1 "4MHz" H 1700 4500 60  0000 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR031
+L GND #PWR032
 U 1 1 4ABE93C2
 P 3650 4300
-F 0 "#PWR031" H 3650 4300 30  0001 C C
+F 0 "#PWR032" H 3650 4300 30  0001 C C
 F 1 "GND" H 3650 4230 30  0001 C C
 	1    3650 4300
 	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR032
+L VCC #PWR033
 U 1 1 4ABE93BC
 P 3650 4200
-F 0 "#PWR032" H 3650 4300 30  0001 C C
+F 0 "#PWR033" H 3650 4300 30  0001 C C
 F 1 "VCC" H 3650 4300 30  0000 C C
 	1    3650 4200
 	0    -1   -1   0   

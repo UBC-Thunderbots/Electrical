@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 6 7
 Title ""
-Date "28 sep 2009"
+Date "2 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,19 +45,19 @@ DIN
 Text GLabel 7050 4200 2    60   Input
 CLK
 $Comp
-L GND #PWR033
+L GND #PWR034
 U 1 1 4ABE8D7B
 P 5050 4350
-F 0 "#PWR033" H 5050 4350 30  0001 C C
+F 0 "#PWR034" H 5050 4350 30  0001 C C
 F 1 "GND" H 5050 4280 30  0001 C C
 	1    5050 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR034
+L VCC #PWR035
 U 1 1 4ABE8D6C
 P 6650 3950
-F 0 "#PWR034" H 6650 4050 30  0001 C C
+F 0 "#PWR035" H 6650 4050 30  0001 C C
 F 1 "VCC" H 6650 4050 30  0000 C C
 	1    6650 3950
 	1    0    0    -1  
