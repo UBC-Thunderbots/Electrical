@@ -49,11 +49,6 @@ Wire Wire Line
 	9150 1950 9400 1950
 Wire Wire Line
 	10150 1800 10400 1800
-Connection ~ 9800 4300
-Wire Wire Line
-	9800 4300 9800 3750
-Wire Wire Line
-	9800 3750 9850 3750
 Wire Wire Line
 	5200 5150 5450 5150
 Wire Wire Line
@@ -189,10 +184,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 4850 2250 4850
 Wire Wire Line
-	9850 3550 9700 3550
-Wire Wire Line
-	9700 3550 9700 4100
-Wire Wire Line
 	10400 1950 10150 1950
 Wire Wire Line
 	2450 1750 2450 1600
@@ -290,15 +281,6 @@ P 9800 1600
 F 0 "J1" H 9750 2000 60  0000 C C
 F 1 "USB" V 9550 1750 60  0000 C C
 	1    9800 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_2 P5
-U 1 1 4AC543BE
-P 10200 3650
-F 0 "P5" V 10150 3650 40  0000 C C
-F 1 "CONN_2" V 10250 3650 40  0000 C C
-	1    10200 3650
 	1    0    0    -1  
 $EndComp
 $Comp
