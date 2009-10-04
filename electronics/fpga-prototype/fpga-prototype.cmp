@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2007-01-15) date = 2/10/2009-03:51:47
+Cmp-Mod V01 Created by Cvpcb (2007-01-15) date = 4/10/2009-00:26:44
 
 BeginCmp
 TimeStamp = 4ABE8019;
@@ -106,17 +106,17 @@ IdModule  = USB_B;
 EndCmp
 
 BeginCmp
-TimeStamp = 4AC05060;
+TimeStamp = 4AC7EA6C;
 Reference = P1;
-ValeurCmp = CONN_15;
-IdModule  = SIL-15;
+ValeurCmp = CONN_15X2;
+IdModule  = IDC-30;
 EndCmp
 
 BeginCmp
 TimeStamp = 4ABE9D49;
 Reference = P2;
 ValeurCmp = CONN_2;
-IdModule  = SIL-2;
+IdModule  = 643226-1;
 EndCmp
 
 BeginCmp
@@ -137,7 +137,7 @@ BeginCmp
 TimeStamp = 4AC543BE;
 Reference = P5;
 ValeurCmp = CONN_2;
-IdModule  = SIL-2;
+IdModule  = 643226-1;
 EndCmp
 
 BeginCmp

@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 3 7
 Title ""
-Date "2 oct 2009"
+Date "4 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,8 +13,36 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 9700 4100 "Warning Pin power_in not driven (Net 82)" F=1
-Kmarq B 9400 1950 "Warning: Pin power_out connected to Pin BiDi (net 24)" F=1
+Wire Wire Line
+	3350 4850 3450 4850
+Wire Wire Line
+	3350 4750 3450 4750
+Wire Wire Line
+	3350 4650 3450 4650
+Wire Wire Line
+	3350 4550 3450 4550
+Wire Wire Line
+	3350 4450 3450 4450
+Wire Wire Line
+	3350 4350 3450 4350
+Wire Wire Line
+	3350 4250 3450 4250
+Wire Wire Line
+	3350 4150 3450 4150
+Wire Wire Line
+	3350 4050 3450 4050
+Wire Wire Line
+	3350 3950 3450 3950
+Wire Wire Line
+	3350 3850 3450 3850
+Wire Wire Line
+	3350 3750 3450 3750
+Wire Wire Line
+	3350 3650 3450 3650
+Wire Wire Line
+	3350 3450 3450 3450
+Wire Wire Line
+	3450 3450 3450 4950
 Wire Wire Line
 	2550 1400 2200 1400
 Wire Wire Line
@@ -159,10 +187,6 @@ Wire Wire Line
 Wire Wire Line
 	6250 5050 6800 5050
 Wire Wire Line
-	2450 5100 2450 4950
-Wire Wire Line
-	2450 4950 2550 4950
-Wire Wire Line
 	2550 4850 2250 4850
 Wire Wire Line
 	9850 3550 9700 3550
@@ -174,13 +198,62 @@ Wire Wire Line
 	2450 1750 2450 1600
 Wire Wire Line
 	2450 1600 2550 1600
+Wire Wire Line
+	2450 3350 2450 3450
+Wire Wire Line
+	2450 3450 2550 3450
+Wire Wire Line
+	3350 3550 3450 3550
+Connection ~ 3450 3550
+Connection ~ 3450 3650
+Connection ~ 3450 3750
+Connection ~ 3450 3850
+Connection ~ 3450 3950
+Connection ~ 3450 4050
+Connection ~ 3450 4150
+Connection ~ 3450 4250
+Connection ~ 3450 4350
+Connection ~ 3450 4450
+Connection ~ 3450 4550
+Connection ~ 3450 4650
+Connection ~ 3450 4750
+Connection ~ 3450 4850
+$Comp
+L GND #PWR015
+U 1 1 4AC7EAA0
+P 3450 4950
+F 0 "#PWR015" H 3450 4950 30  0001 C C
+F 1 "GND" H 3450 4880 30  0001 C C
+	1    3450 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR016
+U 1 1 4AC7EA84
+P 2450 3350
+F 0 "#PWR016" H 2450 3450 30  0001 C C
+F 1 "VCC" H 2450 3450 30  0000 C C
+	1    2450 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_15X2 P1
+U 1 1 4AC7EA6C
+P 2950 4150
+F 0 "P1" H 2950 4950 60  0000 C C
+F 1 "CONN_15X2" V 2950 4150 50  0000 C C
+	1    2950 4150
+	1    0    0    -1  
+$EndComp
+Kmarq B 9700 4100 "Warning Pin power_in not driven (Net 82)" F=1
+Kmarq B 9400 1950 "Warning: Pin power_out connected to Pin BiDi (net 24)" F=1
 Text GLabel 2200 1400 0    60   BiDi
 MISC
 $Comp
-L GND #PWR015
+L GND #PWR017
 U 1 1 4AC57812
 P 2450 1750
-F 0 "#PWR015" H 2450 1750 30  0001 C C
+F 0 "#PWR017" H 2450 1750 30  0001 C C
 F 1 "GND" H 2450 1680 30  0001 C C
 	1    2450 1750
 	1    0    0    -1  
@@ -202,10 +275,10 @@ NoConn ~ 10150 2050
 NoConn ~ 9400 2050
 NoConn ~ 9400 1800
 $Comp
-L GND #PWR016
+L GND #PWR018
 U 1 1 4AC56AA4
 P 9150 1950
-F 0 "#PWR016" H 9150 1950 30  0001 C C
+F 0 "#PWR018" H 9150 1950 30  0001 C C
 F 1 "GND" H 9150 1880 30  0001 C C
 	1    9150 1950
 	0    1    1    0   
@@ -229,46 +302,28 @@ F 1 "CONN_2" V 10250 3650 40  0000 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR017
+L VCC #PWR019
 U 1 1 4AC0506E
 P 2250 4850
-F 0 "#PWR017" H 2250 4950 30  0001 C C
+F 0 "#PWR019" H 2250 4950 30  0001 C C
 F 1 "VCC" H 2250 4950 30  0000 C C
 	1    2250 4850
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_15 P1
-U 1 1 4AC05060
-P 2900 4200
-F 0 "P1" V 2870 4200 60  0000 C C
-F 1 "CONN_15" V 2980 4200 60  0000 C C
-	1    2900 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L VCC #PWR018
+L VCC #PWR020
 U 1 1 4AC04F74
 P 5200 5150
-F 0 "#PWR018" H 5200 5250 30  0001 C C
+F 0 "#PWR020" H 5200 5250 30  0001 C C
 F 1 "VCC" H 5200 5250 30  0000 C C
 	1    5200 5150
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR019
-U 1 1 4AC04F51
-P 2450 5100
-F 0 "#PWR019" H 2450 5100 30  0001 C C
-F 1 "GND" H 2450 5030 30  0001 C C
-	1    2450 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR020
+L GND #PWR021
 U 1 1 4AC04EA4
 P 6350 5250
-F 0 "#PWR020" H 6350 5250 30  0001 C C
+F 0 "#PWR021" H 6350 5250 30  0001 C C
 F 1 "GND" H 6350 5180 30  0001 C C
 	1    6350 5250
 	1    0    0    -1  
@@ -350,19 +405,19 @@ GPIO3
 Text Label 5000 3250 0    60   ~
 GPIO1
 $Comp
-L VCC #PWR021
+L VCC #PWR022
 U 1 1 4ABEA0F8
 P 5600 1400
-F 0 "#PWR021" H 5600 1500 30  0001 C C
+F 0 "#PWR022" H 5600 1500 30  0001 C C
 F 1 "VCC" H 5600 1500 30  0000 C C
 	1    5600 1400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR022
+L GND #PWR023
 U 1 1 4ABEA0F3
 P 5600 1500
-F 0 "#PWR022" H 5600 1500 30  0001 C C
+F 0 "#PWR023" H 5600 1500 30  0001 C C
 F 1 "GND" H 5600 1430 30  0001 C C
 	1    5600 1500
 	0    1    1    0   
@@ -384,19 +439,19 @@ F 1 "CONN_6" V 6350 1550 60  0000 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR023
+L +BATT #PWR024
 U 1 1 4ABE9D54
 P 9700 4100
-F 0 "#PWR023" H 9700 4050 20  0001 C C
+F 0 "#PWR024" H 9700 4050 20  0001 C C
 F 1 "+BATT" H 9700 4200 30  0000 C C
 	1    9700 4100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR024
+L GND #PWR025
 U 1 1 4ABE9D4E
 P 9700 4300
-F 0 "#PWR024" H 9700 4300 30  0001 C C
+F 0 "#PWR025" H 9700 4300 30  0001 C C
 F 1 "GND" H 9700 4230 30  0001 C C
 	1    9700 4300
 	0    1    1    0   
