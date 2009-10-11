@@ -8,3 +8,11 @@ electronics/fpga-prototype/*.cache.lib
 electronics/fpga-prototype/*.drl
 electronics/fpga-prototype/*.net
 electronics/fpga-prototype/*.pho
+electronics/motorcontroller/$savepcb.*
+electronics/motorcontroller/*.000
+electronics/motorcontroller/*.bak
+electronics/motorcontroller/*.bck
+electronics/motorcontroller/*.cache.lib
+electronics/motorcontroller/*.drl
+electronics/motorcontroller/*.net
+electronics/motorcontroller/*.pho
