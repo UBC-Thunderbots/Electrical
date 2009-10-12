@@ -1,6 +1,5 @@
 * text=auto !eol
 electronics/block[!!-~]diagram.fig -text
-electronics/fpga-prototype/FPC.brd -text
 electronics/fpga-prototype/connectors.sch -text
 electronics/fpga-prototype/flash.sch -text
 electronics/fpga-prototype/fpga-prototype.brd -text
