@@ -2,8 +2,8 @@ update=2009-10-15T23:37:36 PDT
 last_client=eeschema
 [general]
 version=1
-RootSch=MC.sch
-BoardNm=MC.brd
+RootSch=motorcontroller.sch
+BoardNm=motorcontroller.brd
 [eeschema]
 version=1
 LibDir=
