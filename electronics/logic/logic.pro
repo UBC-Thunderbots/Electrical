@@ -129,8 +129,8 @@ LibName8=display
 LibName9=valves
 [general]
 version=1
-RootSch=fpga-prototype.sch
-BoardNm=fpga-prototype.brd
+RootSch=logic.sch
+BoardNm=logic.brd
 [cvpcb]
 version=1
 NetITyp=0
