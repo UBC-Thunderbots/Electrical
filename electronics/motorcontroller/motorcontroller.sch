@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date Thu 15 Oct 2009 10:07:25 AM PDT
-LIBS:power,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
+EESchema Schematic File Version 2  date 2009-10-16T15:42:45 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr User 20000 15000
@@ -13,13 +13,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	8400 6750 11800 6750
 Connection ~ 2600 7050
 Wire Wire Line
 	17350 6600 17350 3600
 Wire Wire Line
-	2600 3600 17350 3600
+	17350 3600 2600 3600
 Wire Wire Line
-	2600 7900 2600 3600
+	2600 3600 2600 7900
 Wire Wire Line
 	16500 7100 17350 7100
 Wire Wire Line
@@ -70,7 +72,7 @@ Wire Wire Line
 	3600 7450 4050 7450
 Connection ~ 13300 7050
 Wire Wire Line
-	6800 7050 13300 7050
+	13300 7050 6800 7050
 Connection ~ 13300 6650
 Wire Wire Line
 	13500 6650 13300 6650
@@ -154,25 +156,15 @@ Wire Wire Line
 	2600 7050 4050 7050
 Wire Wire Line
 	13200 11950 13200 11150
-Connection ~ 9000 8250
-Wire Wire Line
-	9000 8250 9350 8250
-Wire Wire Line
-	9350 8250 9350 8150
-Connection ~ 9000 7750
 Wire Wire Line
 	12250 11150 12250 11250
 Connection ~ 12650 11150
 Connection ~ 13200 11750
 Wire Wire Line
-	9000 7800 9000 7700
-Wire Wire Line
 	13200 11750 12250 11750
 Wire Wire Line
 	12250 11750 12250 11650
 Connection ~ 12650 11750
-Wire Wire Line
-	9000 8200 9000 8350
 Wire Wire Line
 	12650 11250 12650 11150
 Wire Wire Line
@@ -200,7 +192,6 @@ Wire Wire Line
 	7800 8300 7800 8200
 Wire Wire Line
 	7600 8200 7600 8400
-Connection ~ 9000 7050
 Wire Wire Line
 	7600 7800 7600 6750
 Connection ~ 7600 6750
@@ -209,8 +200,6 @@ Wire Wire Line
 Wire Wire Line
 	13200 6450 13500 6450
 Connection ~ 13200 9550
-Wire Wire Line
-	8450 6750 11800 6750
 Wire Wire Line
 	11800 6750 11800 6550
 Wire Wire Line
@@ -248,14 +237,6 @@ Wire Wire Line
 Wire Wire Line
 	7050 7250 6800 7250
 Wire Wire Line
-	9000 7200 9000 7050
-Wire Wire Line
-	9350 7750 7950 7750
-Wire Wire Line
-	7950 7750 7950 6950
-Wire Wire Line
-	7950 6950 6800 6950
-Wire Wire Line
 	3450 6950 1500 6950
 Wire Wire Line
 	1500 6950 1500 6900
@@ -284,6 +265,8 @@ Wire Wire Line
 	17350 7300 17350 7400
 Wire Wire Line
 	17350 7100 17350 7200
+Wire Wire Line
+	6800 7050 6800 6950
 $Comp
 L R R?
 U 1 1 4AD755F5
@@ -363,15 +346,6 @@ P 8400 4950
 F 0 "R?" V 8480 4950 50  0000 C CNN
 F 1 "1.1K" V 8400 4950 50  0000 C CNN
 	1    8400 4950
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 4AD0E463
-P 9000 7450
-F 0 "R?" V 9080 7450 50  0000 C CNN
-F 1 "330" V 9000 7450 50  0000 C CNN
-	1    9000 7450
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -544,33 +518,6 @@ F 0 "R?" V 13280 10900 50  0000 C CNN
 F 1 "0.05/1.0W" V 13100 10900 50  0000 C CNN
 	1    13200 10900
 	-1   0    0    1   
-$EndComp
-$Comp
-L C C?
-U 1 1 4AD0E665
-P 9350 7950
-F 0 "C?" H 9400 8050 50  0000 L CNN
-F 1 "0.1" H 9400 7850 50  0000 L CNN
-	1    9350 7950
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR010
-U 1 1 4AD0E579
-P 9000 8350
-F 0 "#PWR010" H 9000 8350 30  0001 C CNN
-F 1 "GND" H 9000 8280 30  0001 C CNN
-	1    9000 8350
-	1    0    0    -1  
-$EndComp
-$Comp
-L ZENER D?
-U 1 1 4AD0E499
-P 9000 8000
-F 0 "D?" H 9000 8100 50  0000 C CNN
-F 1 "1N5355B" H 9000 7900 40  0000 C CNN
-	1    9000 8000
-	0    1    -1   0   
 $EndComp
 $Comp
 L AOP605 U?
