@@ -10,7 +10,6 @@ electronics/fpga-prototype/fpga.sch -text
 electronics/fpga-prototype/pic.sch -text
 electronics/fpga-prototype/power.sch -text
 electronics/fpga-prototype/xbee.sch -text
-electronics/motorcontroller/MC.net -text
 electronics/motorcontroller/MC.pro -text
 electronics/motorcontroller/MC.sch -text
 electronics/thunderbots-modules.mdc -text
