@@ -1,4 +1,6 @@
 * text=auto !eol
+electronics/VHDL/Gray[!!-~]Counter/CounterTest.vhd -text
+electronics/VHDL/Gray[!!-~]Counter/GrayCounter.vhd -text
 electronics/block[!!-~]diagram.fig -text
 electronics/logic/connectors.sch -text
 electronics/logic/flash.sch -text
