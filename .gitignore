@@ -4,7 +4,7 @@ electronics/logic/$savepcb.*
 electronics/logic/*.000
 electronics/logic/*.bak
 electronics/logic/*.bck
-electronics/logic/*.cache.lib
+electronics/logic/*.cache.*
 electronics/logic/*.drl
 electronics/logic/*.net
 electronics/logic/*.pho
@@ -12,7 +12,7 @@ electronics/motorcontroller/$savepcb.*
 electronics/motorcontroller/*.000
 electronics/motorcontroller/*.bak
 electronics/motorcontroller/*.bck
-electronics/motorcontroller/*.cache.lib
+electronics/motorcontroller/*.cache.*
 electronics/motorcontroller/*.drl
 electronics/motorcontroller/*.net
 electronics/motorcontroller/*.pho
