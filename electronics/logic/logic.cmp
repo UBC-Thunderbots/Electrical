@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = Fri Oct 16 18:33:02 2009
+Cmp-Mod V01 Genere par PcbNew le 2009-10-17T13:12:36 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -165,7 +165,7 @@ BeginCmp
 TimeStamp = /4AD90417/4ABF13CA;
 Reference = U3;
 ValeurCmp = 78ST105;
-IdModule  = TO220-123;
+IdModule  = 78ST105;
 EndCmp
 
 BeginCmp
