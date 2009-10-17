@@ -1,203 +1,210 @@
-Cmp-Mod V01 Created by Cvpcb (2007-01-15) date = 4/10/2009-05:03:33
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-10-16T16:43:17 PDT
 
 BeginCmp
-TimeStamp = 4ABE8019;
+TimeStamp = /4AD90417/4ABE8019;
 Reference = C1;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABF01A9;
+TimeStamp = /4AD90417/4ABF01A9;
 Reference = C2;
 ValeurCmp = 100uF;
 IdModule  = C2V10;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE8044;
+TimeStamp = /4AD90417/4ABE8044;
 Reference = C3;
 ValeurCmp = 10uF;
 IdModule  = C2;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE7E49;
+TimeStamp = /4AD90417/4ABE7E49;
 Reference = C4;
 ValeurCmp = 1uF;
 IdModule  = C2;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE8225;
+TimeStamp = /4AD90417/4ABE8225;
 Reference = C5;
 ValeurCmp = 1uF;
 IdModule  = C2;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE93EB;
+TimeStamp = /4AD90413/4ABE93EB;
 Reference = C6;
 ValeurCmp = 27pF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE93EC;
+TimeStamp = /4AD90413/4ABE93EC;
 Reference = C7;
 ValeurCmp = 27pF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABECDC0;
+TimeStamp = /4AD90417/4ABECDC0;
 Reference = C8;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABECDD6;
+TimeStamp = /4AD90417/4ABECDD6;
 Reference = C9;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABECDDC;
+TimeStamp = /4AD90417/4ABECDDC;
 Reference = C10;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABECE2A;
+TimeStamp = /4AD90417/4ABECE2A;
 Reference = C11;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABECE6E;
+TimeStamp = /4AD90417/4ABECE6E;
 Reference = C12;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABECE74;
+TimeStamp = /4AD90417/4ABECE74;
 Reference = C13;
 ValeurCmp = 100nF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABF00CA;
+TimeStamp = /4AD90417/4ABF00CA;
 Reference = C14;
 ValeurCmp = 100uF;
 IdModule  = C2V10;
 EndCmp
 
 BeginCmp
-TimeStamp = 4AC56A9A;
+TimeStamp = /4AD9040F/4AC56A9A;
 Reference = J1;
 ValeurCmp = USB;
 IdModule  = USB_B;
 EndCmp
 
 BeginCmp
-TimeStamp = 4AC7EA6C;
+TimeStamp = /4AD9040F/4AC7EA6C;
 Reference = P1;
 ValeurCmp = CONN_15X2;
 IdModule  = IDC-30;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE9D49;
+TimeStamp = /4AD9040F/4ABE9D49;
 Reference = P2;
 ValeurCmp = CONN_2;
 IdModule  = 643226-1;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE9C9E;
+TimeStamp = /4AD9040F/4ABE9C9E;
 Reference = P3;
 ValeurCmp = CONN_20X2;
 IdModule  = PIN_ARRAY_20X2;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABEA039;
+TimeStamp = /4AD9040F/4ABEA039;
 Reference = P4;
 ValeurCmp = CONN_6;
 IdModule  = SIL-6;
 EndCmp
 
 BeginCmp
-TimeStamp = 4AC5780B;
+TimeStamp = /4AD9040F/4AC5780B;
 Reference = P6;
 ValeurCmp = CONN_2;
 IdModule  = SIL-2;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE67D0;
+TimeStamp = /4AD9041F;
+Reference = R1;
+ValeurCmp = 1kR;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD9040D/4ABE67D0;
 Reference = U2;
 ValeurCmp = ACOL50;
 IdModule  = ACOL50;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABF13CA;
+TimeStamp = /4AD90417/4ABF13CA;
 Reference = U3;
 ValeurCmp = 78ST105;
 IdModule  = TO220-123;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE7FD2;
+TimeStamp = /4AD90417/4ABE7FD2;
 Reference = U4;
 ValeurCmp = LD1117V33C;
 IdModule  = TO220-123;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE820F;
+TimeStamp = /4AD90417/4ABE820F;
 Reference = U5;
-ValeurCmp = MCP1827S-1202E/A;
+ValeurCmp = MCP1827S-1202E/AB;
 IdModule  = TO220-123;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE8D62;
+TimeStamp = /4AD90415/4ABE8D62;
 Reference = U6;
 ValeurCmp = W25X16AVDAIZ;
 IdModule  = 8dip300;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE92C3;
+TimeStamp = /4AD90413/4ABE92C3;
 Reference = U7;
 ValeurCmp = PIC18F4550;
 IdModule  = 40dip600;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE98A8;
+TimeStamp = /4AD90411/4ABE98A8;
 Reference = U8;
 ValeurCmp = XBEE;
 IdModule  = XBee;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABEB60B;
+TimeStamp = /4AD9040D/4ABEB60B;
 Reference = U9;
 ValeurCmp = XC3S50A-TQ144;
 IdModule  = TQFP144;
 EndCmp
 
 BeginCmp
-TimeStamp = 4ABE93E3;
+TimeStamp = /4AD90413/4ABE93E3;
 Reference = X1;
 ValeurCmp = 4MHz;
 IdModule  = HC-18UV;

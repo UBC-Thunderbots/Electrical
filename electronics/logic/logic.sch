@@ -1,11 +1,11 @@
-EESchema Schematic File Version 1
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2009-10-16T16:42:20 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 7
 Title ""
-Date "4 oct 2009"
+Date "16 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3300 6450 3300 6400
 Wire Wire Line
 	4600 5350 3450 5350
 Wire Wire Line
@@ -152,17 +154,37 @@ Wire Wire Line
 Wire Wire Line
 	6350 2000 3300 2000
 Wire Wire Line
-	3300 2000 3300 5850
-Wire Wire Line
 	3300 5850 4600 5850
-Text Label 6750 2600 3    60   ~
+Wire Wire Line
+	3300 2000 3300 5900
+Connection ~ 3300 5850
+$Comp
+L GND #PWR01
+U 1 1 4AD9042C
+P 3300 6450
+F 0 "#PWR01" H 3300 6450 30  0001 C CNN
+F 1 "GND" H 3300 6380 30  0001 C CNN
+	1    3300 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 4AD9041F
+P 3300 6150
+F 0 "R1" V 3380 6150 50  0000 C CNN
+F 1 "1kR" V 3300 6150 50  0000 C CNN
+	1    3300 6150
+	1    0    0    -1  
+$EndComp
+Text Label 6750 2600 3    60   ~ 0
 GPIO[1..38]
-Text Label 6000 2000 0    60   ~
+Text Label 6000 2000 0    60   ~ 0
 GPIO1
 Entry Wire Line
 	6350 2500 6450 2600
 $Sheet
 S 7150 3300 1350 1200
+U 4AD9040D
 F0 "fpga" 60
 F1 "fpga.sch" 60
 F2 "CSO_B" B L 7150 3850 60 
@@ -179,6 +201,7 @@ F12 "GPIO[1..38]" B L 7150 3350 60
 $EndSheet
 $Sheet
 S 4600 2150 1350 750 
+U 4AD9040F
 F0 "connectors" 60
 F1 "connectors.sch" 60
 F2 "ADC[0..12]" O L 4600 2500 60 
@@ -192,6 +215,7 @@ F9 "MISC" B L 4600 2200 60
 $EndSheet
 $Sheet
 S 7450 5100 800  800 
+U 4AD90411
 F0 "xbee" 60
 F1 "xbee.sch" 60
 F2 "BOOTLOAD" O L 7450 5850 60 
@@ -200,6 +224,7 @@ F4 "DOUT" O R 8250 5150 60
 $EndSheet
 $Sheet
 S 4600 4500 1550 1400
+U 4AD90413
 F0 "pic" 60
 F1 "pic.sch" 60
 F2 "PGC" I L 4600 4950 60 
@@ -225,6 +250,7 @@ F21 "MISC" B L 4600 5350 60
 $EndSheet
 $Sheet
 S 4750 3250 1050 950 
+U 4AD90415
 F0 "flash" 60
 F1 "flash.sch" 60
 F2 "/WP" I L 4750 3300 60 
@@ -235,6 +261,7 @@ F6 "CLK" I R 5800 3550 60
 $EndSheet
 $Sheet
 S 7150 2100 950  850 
+U 4AD90417
 F0 "power" 60
 F1 "power.sch" 60
 $EndSheet

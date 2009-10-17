@@ -1,11 +1,11 @@
-EESchema Schematic File Version 1
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2009-10-16T16:42:20 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 6 7
 Title ""
-Date "4 oct 2009"
+Date "16 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -34,31 +34,31 @@ Wire Wire Line
 	4450 4100 5100 4100
 Wire Wire Line
 	6600 4200 7050 4200
-Text GLabel 4450 4200 0    60   Input
+Text HLabel 4450 4200 0    60   Input ~ 0
 /WP
-Text GLabel 4450 4100 0    60   Output
+Text HLabel 4450 4100 0    60   Output ~ 0
 DOUT
-Text GLabel 4450 4000 0    60   Input
+Text HLabel 4450 4000 0    60   Input ~ 0
 CS
-Text GLabel 7050 4300 2    60   Input
+Text HLabel 7050 4300 2    60   Input ~ 0
 DIN
-Text GLabel 7050 4200 2    60   Input
+Text HLabel 7050 4200 2    60   Input ~ 0
 CLK
 $Comp
-L GND #PWR035
+L GND #PWR036
 U 1 1 4ABE8D7B
 P 5050 4350
-F 0 "#PWR035" H 5050 4350 30  0001 C C
-F 1 "GND" H 5050 4280 30  0001 C C
+F 0 "#PWR036" H 5050 4350 30  0001 C CNN
+F 1 "GND" H 5050 4280 30  0001 C CNN
 	1    5050 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR036
+L VCC #PWR037
 U 1 1 4ABE8D6C
 P 6650 3950
-F 0 "#PWR036" H 6650 4050 30  0001 C C
-F 1 "VCC" H 6650 4050 30  0000 C C
+F 0 "#PWR037" H 6650 4050 30  0001 C CNN
+F 1 "VCC" H 6650 4050 30  0000 C CNN
 	1    6650 3950
 	1    0    0    -1  
 $EndComp
@@ -66,8 +66,8 @@ $Comp
 L W25X16AVDAIZ U6
 U 1 1 4ABE8D62
 P 5850 4150
-F 0 "U6" H 5850 4100 60  0000 C C
-F 1 "W25X16AVDAIZ" H 5850 4450 60  0000 C C
+F 0 "U6" H 5850 4100 60  0000 C CNN
+F 1 "W25X16AVDAIZ" H 5850 4450 60  0000 C CNN
 	1    5850 4150
 	1    0    0    -1  
 $EndComp

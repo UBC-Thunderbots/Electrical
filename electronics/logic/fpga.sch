@@ -1,11 +1,11 @@
-EESchema Schematic File Version 1
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2009-10-16T16:42:20 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 7
 Title ""
-Date "4 oct 2009"
+Date "16 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,8 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 5150 2850 "Warning: Pin BiDi connected to Pin power_out (net 24)" F=1
-Kmarq B 5150 5800 "Warning: Pin BiDi connected to Pin power_out (net 21)" F=1
+Kmarq B 5150 5800 "Warning: Pin BiDi connected to Pin power_out (net 22)" F=1
+Kmarq B 5150 2850 "Warning: Pin BiDi connected to Pin power_out (net 2)" F=1
 NoConn ~ 7450 3600
 Wire Bus Line
 	3750 3900 3750 7200
@@ -268,8 +268,8 @@ $Comp
 L XC3S50A-TQ144 U9
 U 1 1 4ABEB60B
 P 5950 4350
-F 0 "U9" H 5950 4300 60  0000 C C
-F 1 "XC3S50A-TQ144" H 5950 4400 60  0000 C C
+F 0 "U9" H 5950 4300 60  0000 C CNN
+F 1 "XC3S50A-TQ144" H 5950 4400 60  0000 C CNN
 	1    5950 4350
 	1    0    0    -1  
 $EndComp
@@ -303,11 +303,11 @@ NoConn ~ 7450 4850
 NoConn ~ 7450 4900
 NoConn ~ 7450 5100
 $Comp
-L GND #PWR01
+L GND #PWR02
 U 1 1 4ABEAF66
 P 7600 5150
-F 0 "#PWR01" H 7600 5150 30  0001 C C
-F 1 "GND" H 7600 5080 30  0001 C C
+F 0 "#PWR02" H 7600 5150 30  0001 C CNN
+F 1 "GND" H 7600 5080 30  0001 C CNN
 	1    7600 5150
 	0    -1   -1   0   
 $EndComp
@@ -338,43 +338,43 @@ NoConn ~ 4500 3600
 NoConn ~ 4500 3550
 NoConn ~ 4500 3500
 NoConn ~ 4500 3450
-Text Label 3850 3800 0    30   ~
+Text Label 3850 3800 0    30   ~ 0
 GPIO38
-Text Label 3850 3900 0    30   ~
+Text Label 3850 3900 0    30   ~ 0
 GPIO37
-Text Label 3850 3950 0    30   ~
+Text Label 3850 3950 0    30   ~ 0
 GPIO36
-Text Label 3850 4000 0    30   ~
+Text Label 3850 4000 0    30   ~ 0
 GPIO35
-Text Label 3850 4050 0    30   ~
+Text Label 3850 4050 0    30   ~ 0
 GPIO34
-Text Label 3850 4150 0    30   ~
+Text Label 3850 4150 0    30   ~ 0
 GPIO33
-Text Label 3850 4200 0    30   ~
+Text Label 3850 4200 0    30   ~ 0
 GPIO32
-Text Label 3850 4300 0    30   ~
+Text Label 3850 4300 0    30   ~ 0
 GPIO31
-Text Label 3850 4350 0    30   ~
+Text Label 3850 4350 0    30   ~ 0
 GPIO30
-Text Label 3850 4400 0    30   ~
+Text Label 3850 4400 0    30   ~ 0
 GPIO29
-Text Label 3850 4450 0    30   ~
+Text Label 3850 4450 0    30   ~ 0
 GPIO28
-Text Label 3850 4600 0    30   ~
+Text Label 3850 4600 0    30   ~ 0
 GPIO27
-Text Label 3850 4650 0    30   ~
+Text Label 3850 4650 0    30   ~ 0
 GPIO26
-Text Label 3850 4750 0    30   ~
+Text Label 3850 4750 0    30   ~ 0
 GPIO25
-Text Label 3850 4800 0    30   ~
+Text Label 3850 4800 0    30   ~ 0
 GPIO24
-Text Label 3850 4850 0    30   ~
+Text Label 3850 4850 0    30   ~ 0
 GPIO23
-Text Label 3850 4900 0    30   ~
+Text Label 3850 4900 0    30   ~ 0
 GPIO22
-Text Label 3850 4950 0    30   ~
+Text Label 3850 4950 0    30   ~ 0
 GPIO21
-Text Label 3850 5000 0    30   ~
+Text Label 3850 5000 0    30   ~ 0
 GPIO20
 Entry Wire Line
 	3750 3900 3850 3800
@@ -414,27 +414,27 @@ Entry Wire Line
 	3750 5050 3850 4950
 Entry Wire Line
 	3750 5100 3850 5000
-Text GLabel 7050 2000 2    60   Input
+Text HLabel 7050 2000 2    60   Input ~ 0
 APPSS
-Text GLabel 7050 2200 2    60   Input
+Text HLabel 7050 2200 2    60   Input ~ 0
 XBEERX
-Text GLabel 7050 2100 2    60   BiDi
+Text HLabel 7050 2100 2    60   BiDi ~ 0
 XBEETX
-Text GLabel 8850 7200 2    60   BiDi
+Text HLabel 8850 7200 2    60   BiDi ~ 0
 GPIO[1..38]
-Text Label 8100 5050 0    30   ~
+Text Label 8100 5050 0    30   ~ 0
 GPIO19
-Text Label 8100 5000 0    30   ~
+Text Label 8100 5000 0    30   ~ 0
 GPIO18
-Text Label 8100 4950 0    30   ~
+Text Label 8100 4950 0    30   ~ 0
 GPIO17
-Text Label 8100 4750 0    30   ~
+Text Label 8100 4750 0    30   ~ 0
 GPIO16
-Text Label 8100 4700 0    30   ~
+Text Label 8100 4700 0    30   ~ 0
 GPIO15
-Text Label 8100 4650 0    30   ~
+Text Label 8100 4650 0    30   ~ 0
 GPIO14
-Text Label 8100 4600 0    30   ~
+Text Label 8100 4600 0    30   ~ 0
 GPIO13
 Entry Wire Line
 	8300 5050 8400 5150
@@ -450,21 +450,21 @@ Entry Wire Line
 	8300 4650 8400 4750
 Entry Wire Line
 	8300 4600 8400 4700
-Text Label 8100 4500 0    30   ~
+Text Label 8100 4500 0    30   ~ 0
 GPIO12
-Text Label 8100 4450 0    30   ~
+Text Label 8100 4450 0    30   ~ 0
 GPIO11
-Text Label 8100 4350 0    30   ~
+Text Label 8100 4350 0    30   ~ 0
 GPIO10
-Text Label 8100 4300 0    30   ~
+Text Label 8100 4300 0    30   ~ 0
 GPIO9
-Text Label 8100 4250 0    30   ~
+Text Label 8100 4250 0    30   ~ 0
 GPIO8
-Text Label 8100 4200 0    30   ~
+Text Label 8100 4200 0    30   ~ 0
 GPIO7
-Text Label 8100 3950 0    30   ~
+Text Label 8100 3950 0    30   ~ 0
 GPIO6
-Text Label 8100 3900 0    30   ~
+Text Label 8100 3900 0    30   ~ 0
 GPIO5
 Entry Wire Line
 	8300 4500 8400 4600
@@ -482,13 +482,13 @@ Entry Wire Line
 	8300 3950 8400 4050
 Entry Wire Line
 	8300 3900 8400 4000
-Text Label 8100 3800 0    30   ~
+Text Label 8100 3800 0    30   ~ 0
 GPIO4
-Text Label 8100 3750 0    30   ~
+Text Label 8100 3750 0    30   ~ 0
 GPIO3
-Text Label 8100 3700 0    30   ~
+Text Label 8100 3700 0    30   ~ 0
 GPIO2
-Text Label 8100 3650 0    30   ~
+Text Label 8100 3650 0    30   ~ 0
 GPIO1
 Entry Wire Line
 	8300 3800 8400 3900
@@ -498,26 +498,26 @@ Entry Wire Line
 	8300 3700 8400 3800
 Entry Wire Line
 	8300 3650 8400 3750
-Text GLabel 6950 6700 2    60   BiDi
+Text HLabel 6950 6700 2    60   BiDi ~ 0
 CSO_B
-Text GLabel 6950 6600 2    60   BiDi
+Text HLabel 6950 6600 2    60   BiDi ~ 0
 COUT/APPIN'
-Text GLabel 4850 1750 0    60   Input
+Text HLabel 4850 1750 0    60   Input ~ 0
 PROG_B
-Text GLabel 7950 5200 2    60   BiDi
+Text HLabel 7950 5200 2    60   BiDi ~ 0
 DONE
-Text GLabel 6950 6500 2    60   BiDi
+Text HLabel 6950 6500 2    60   BiDi ~ 0
 INIT_B
-Text GLabel 6950 6300 2    60   Output
+Text HLabel 6950 6300 2    60   Output ~ 0
 CCLK
-Text GLabel 6950 6400 2    60   BiDi
+Text HLabel 6950 6400 2    60   BiDi ~ 0
 CIN/APPOUT
 $Comp
-L GND #PWR02
+L GND #PWR03
 U 1 1 4ABE68D5
 P 5650 2000
-F 0 "#PWR02" H 5650 2000 30  0001 C C
-F 1 "GND" H 5650 1930 30  0001 C C
+F 0 "#PWR03" H 5650 2000 30  0001 C CNN
+F 1 "GND" H 5650 1930 30  0001 C CNN
 	1    5650 2000
 	1    0    0    -1  
 $EndComp
@@ -525,116 +525,116 @@ $Comp
 L ACOL50 U2
 U 1 1 4ABE67D0
 P 5800 1300
-F 0 "U2" H 5800 1250 60  0000 C C
-F 1 "ACOL50" H 5800 1350 60  0000 C C
+F 0 "U2" H 5800 1250 60  0000 C CNN
+F 1 "ACOL50" H 5800 1350 60  0000 C CNN
 	1    5800 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L +1.2V #PWR03
+L +1.2V #PWR04
 U 1 1 4ABC0BA3
 P 4350 4500
-F 0 "#PWR03" H 4350 4640 20  0001 C C
-F 1 "+1.2V" H 4350 4610 30  0000 C C
+F 0 "#PWR04" H 4350 4640 20  0001 C CNN
+F 1 "+1.2V" H 4350 4610 30  0000 C CNN
 	1    4350 4500
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +1.2V #PWR04
+L +1.2V #PWR05
 U 1 1 4ABC0B96
 P 5850 5950
-F 0 "#PWR04" H 5850 6090 20  0001 C C
-F 1 "+1.2V" H 5850 6060 30  0000 C C
+F 0 "#PWR05" H 5850 6090 20  0001 C CNN
+F 1 "+1.2V" H 5850 6060 30  0000 C CNN
 	1    5850 5950
 	-1   0    0    1   
 $EndComp
 $Comp
-L +1.2V #PWR05
+L +1.2V #PWR06
 U 1 1 4ABC0B7E
 P 7600 4150
-F 0 "#PWR05" H 7600 4290 20  0001 C C
-F 1 "+1.2V" H 7600 4260 30  0000 C C
+F 0 "#PWR06" H 7600 4290 20  0001 C CNN
+F 1 "+1.2V" H 7600 4260 30  0000 C CNN
 	1    7600 4150
 	0    1    1    0   
 $EndComp
 $Comp
-L +1.2V #PWR06
+L +1.2V #PWR07
 U 1 1 4ABC0B65
 P 6200 2650
-F 0 "#PWR06" H 6200 2790 20  0001 C C
-F 1 "+1.2V" H 6200 2760 30  0000 C C
+F 0 "#PWR07" H 6200 2790 20  0001 C CNN
+F 1 "+1.2V" H 6200 2760 30  0000 C CNN
 	1    6200 2650
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR07
+L VCC #PWR08
 U 1 1 4ABC0B42
 P 4400 3350
-F 0 "#PWR07" H 4400 3450 30  0001 C C
-F 1 "VCC" H 4400 3450 30  0000 C C
+F 0 "#PWR08" H 4400 3450 30  0001 C CNN
+F 1 "VCC" H 4400 3450 30  0000 C CNN
 	1    4400 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR08
+L VCC #PWR09
 U 1 1 4ABC0B26
 P 5000 5850
-F 0 "#PWR08" H 5000 5950 30  0001 C C
-F 1 "VCC" H 5000 5950 30  0000 C C
+F 0 "#PWR09" H 5000 5950 30  0001 C CNN
+F 1 "VCC" H 5000 5950 30  0000 C CNN
 	1    5000 5850
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR09
+L VCC #PWR010
 U 1 1 4ABC0B00
 P 7550 3350
-F 0 "#PWR09" H 7550 3450 30  0001 C C
-F 1 "VCC" H 7550 3450 30  0000 C C
+F 0 "#PWR010" H 7550 3450 30  0001 C CNN
+F 1 "VCC" H 7550 3450 30  0000 C CNN
 	1    7550 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR010
+L VCC #PWR011
 U 1 1 4ABC0AC7
 P 4950 2700
-F 0 "#PWR010" H 4950 2800 30  0001 C C
-F 1 "VCC" H 4950 2800 30  0000 C C
+F 0 "#PWR011" H 4950 2800 30  0001 C CNN
+F 1 "VCC" H 4950 2800 30  0000 C CNN
 	1    4950 2700
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L GND #PWR012
 U 1 1 4ABC0A87
 P 4450 5250
-F 0 "#PWR011" H 4450 5250 30  0001 C C
-F 1 "GND" H 4450 5180 30  0001 C C
+F 0 "#PWR012" H 4450 5250 30  0001 C CNN
+F 1 "GND" H 4450 5180 30  0001 C CNN
 	1    4450 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR012
+L GND #PWR013
 U 1 1 4ABC0A71
 P 6950 5900
-F 0 "#PWR012" H 6950 5900 30  0001 C C
-F 1 "GND" H 6950 5830 30  0001 C C
+F 0 "#PWR013" H 6950 5900 30  0001 C CNN
+F 1 "GND" H 6950 5830 30  0001 C CNN
 	1    6950 5900
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L GND #PWR014
 U 1 1 4ABC0A58
 P 7500 5250
-F 0 "#PWR013" H 7500 5250 30  0001 C C
-F 1 "GND" H 7500 5180 30  0001 C C
+F 0 "#PWR014" H 7500 5250 30  0001 C CNN
+F 1 "GND" H 7500 5180 30  0001 C CNN
 	1    7500 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L GND #PWR015
 U 1 1 4ABC09D0
 P 7050 2850
-F 0 "#PWR014" H 7050 2850 30  0001 C C
-F 1 "GND" H 7050 2780 30  0001 C C
+F 0 "#PWR015" H 7050 2850 30  0001 C CNN
+F 1 "GND" H 7050 2780 30  0001 C CNN
 	1    7050 2850
 	1    0    0    -1  
 $EndComp
