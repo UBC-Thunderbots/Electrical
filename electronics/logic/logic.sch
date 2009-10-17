@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-17T13:12:05 PDT
+EESchema Schematic File Version 2  date 2009-10-17T16:35:39 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	4600 6300 4450 6300
+Wire Wire Line
+	4450 6300 4450 5850
+Wire Wire Line
+	4450 5850 4600 5850
 Wire Wire Line
 	3300 6450 3300 6400
 Wire Wire Line
@@ -154,10 +160,10 @@ Wire Wire Line
 Wire Wire Line
 	6350 2000 3300 2000
 Wire Wire Line
-	3300 5850 4600 5850
-Wire Wire Line
 	3300 2000 3300 5900
-Connection ~ 3300 5850
+Wire Wire Line
+	4600 5650 3300 5650
+Connection ~ 3300 5650
 $Comp
 L GND #PWR01
 U 1 1 4AD9042C
@@ -173,6 +179,7 @@ U 1 1 4AD9041F
 P 3300 6150
 F 0 "R1" V 3380 6150 50  0000 C CNN
 F 1 "1kR" V 3300 6150 50  0000 C CNN
+F 2 "R3" H 3300 6150 60  0001 C CNN
 	1    3300 6150
 	1    0    0    -1  
 $EndComp
@@ -204,7 +211,7 @@ S 4600 2150 1350 750
 U 4AD9040F
 F0 "connectors" 60
 F1 "connectors.sch" 60
-F2 "ADC[0..12]" O L 4600 2500 60 
+F2 "ADC[0..11]" O L 4600 2500 60 
 F3 "PGC" O L 4600 2600 60 
 F4 "PGD" B L 4600 2700 60 
 F5 "MCLR" O L 4600 2800 60 
@@ -232,7 +239,7 @@ F3 "PGD" B L 4600 4850 60
 F4 "BOOTLOAD" I R 6150 5850 60 
 F5 "FPGA_SS" O R 6150 4950 60 
 F6 "FLASH_SS" T R 6150 4850 60 
-F7 "ADC[0..12]" I L 4600 5050 60 
+F7 "ADC[0..11]" I L 4600 5050 60 
 F8 "DONE" I R 6150 5350 60 
 F9 "RX" I R 6150 5650 60 
 F10 "PROG_B" O R 6150 5150 60 
@@ -245,8 +252,9 @@ F16 "TX" B R 6150 5550 60
 F17 "SPIOUT" B R 6150 4750 60 
 F18 "USBD-" B L 4600 5150 60 
 F19 "USBD+" B L 4600 5250 60 
-F20 "BRAKE" B L 4600 5850 60 
+F20 "BRAKE" B L 4600 5650 60 
 F21 "MISC" B L 4600 5350 60 
+F22 "VMON" I L 4600 5850 60 
 $EndSheet
 $Sheet
 S 4750 3250 1050 950 
@@ -260,9 +268,10 @@ F5 "DIN" I R 5800 3650 60
 F6 "CLK" I R 5800 3550 60 
 $EndSheet
 $Sheet
-S 7150 2100 950  850 
+S 4600 6250 950  850 
 U 4AD90417
 F0 "power" 60
 F1 "power.sch" 60
+F2 "VMON" O L 4600 6300 60 
 $EndSheet
 $EndSCHEMATC

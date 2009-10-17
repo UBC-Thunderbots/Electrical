@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-17T13:12:05 PDT
+EESchema Schematic File Version 2  date 2009-10-17T16:35:39 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -68,6 +68,7 @@ U 1 1 4ABE8D62
 P 5850 4150
 F 0 "U6" H 5850 4100 60  0000 C CNN
 F 1 "W25X16AVDAIZ" H 5850 4450 60  0000 C CNN
+F 2 "8dip300" H 5850 4150 60  0001 C CNN
 	1    5850 4150
 	1    0    0    -1  
 $EndComp

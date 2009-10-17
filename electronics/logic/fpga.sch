@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-17T13:12:05 PDT
+EESchema Schematic File Version 2  date 2009-10-17T16:35:39 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 5150 5800 "Warning: Pin BiDi connected to Pin power_out (net 22)" F=1
-Kmarq B 5150 2850 "Warning: Pin BiDi connected to Pin power_out (net 2)" F=1
 NoConn ~ 7450 3600
 Wire Bus Line
 	3750 3900 3750 7200
@@ -270,6 +268,7 @@ U 1 1 4ABEB60B
 P 5950 4350
 F 0 "U9" H 5950 4300 60  0000 C CNN
 F 1 "XC3S50A-TQ144" H 5950 4400 60  0000 C CNN
+F 2 "TQFP144" H 5950 4350 60  0001 C CNN
 	1    5950 4350
 	1    0    0    -1  
 $EndComp
@@ -527,6 +526,7 @@ U 1 1 4ABE67D0
 P 5800 1300
 F 0 "U2" H 5800 1250 60  0000 C CNN
 F 1 "ACOL50" H 5800 1350 60  0000 C CNN
+F 2 "ACOL50" H 5800 1300 60  0001 C CNN
 	1    5800 1300
 	1    0    0    -1  
 $EndComp

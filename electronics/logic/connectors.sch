@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-17T13:12:05 PDT
+EESchema Schematic File Version 2  date 2009-10-17T16:35:39 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,8 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 9700 4100 "Warning Pin power_in not driven (Net 82)" F=1
-Kmarq B 9400 1950 "Warning: Pin power_out connected to Pin BiDi (net 2)" F=1
+NoConn ~ 2550 4750
 Wire Wire Line
 	3350 4850 3450 4850
 Wire Wire Line
@@ -127,8 +126,6 @@ Wire Wire Line
 	2050 4550 2550 4550
 Wire Wire Line
 	2050 4650 2550 4650
-Wire Wire Line
-	2050 4750 2550 4750
 Wire Bus Line
 	1650 5050 1950 5050
 Wire Bus Line
@@ -235,6 +232,7 @@ U 1 1 4AC7EA6C
 P 2950 4150
 F 0 "P1" H 2950 4950 60  0000 C CNN
 F 1 "CONN_15X2" V 2950 4150 50  0000 C CNN
+F 2 "IDC-30" H 2950 4150 60  0001 C CNN
 	1    2950 4150
 	1    0    0    -1  
 $EndComp
@@ -255,6 +253,7 @@ U 1 1 4AC5780B
 P 2900 1500
 F 0 "P6" V 2850 1500 40  0000 C CNN
 F 1 "CONN_2" V 2950 1500 40  0000 C CNN
+F 2 "SIL-2" H 2900 1500 60  0001 C CNN
 	1    2900 1500
 	1    0    0    -1  
 $EndComp
@@ -280,6 +279,7 @@ U 1 1 4AC56A9A
 P 9800 1600
 F 0 "J1" H 9750 2000 60  0000 C CNN
 F 1 "USB" V 9550 1750 60  0000 C CNN
+F 2 "USB_B" H 9800 1600 60  0001 C CNN
 	1    9800 1600
 	1    0    0    -1  
 $EndComp
@@ -417,6 +417,7 @@ U 1 1 4ABEA039
 P 6300 1550
 F 0 "P4" V 6250 1550 60  0000 C CNN
 F 1 "CONN_6" V 6350 1550 60  0000 C CNN
+F 2 "SIL-6" H 6300 1550 60  0001 C CNN
 	1    6300 1550
 	1    0    0    -1  
 $EndComp
@@ -444,6 +445,7 @@ U 1 1 4ABE9D49
 P 10200 4200
 F 0 "P2" V 10150 4200 40  0000 C CNN
 F 1 "CONN_2" V 10250 4200 40  0000 C CNN
+F 2 "643226-1" H 10200 4200 60  0001 C CNN
 	1    10200 4200
 	1    0    0    -1  
 $EndComp
@@ -531,11 +533,10 @@ U 1 1 4ABE9C9E
 P 5850 4200
 F 0 "P3" H 5850 5500 60  0000 C CNN
 F 1 "CONN_20X2" V 5850 4200 50  0000 C CNN
+F 2 "PIN_ARRAY_20X2" H 5850 4200 60  0001 C CNN
 	1    5850 4200
 	1    0    0    -1  
 $EndComp
-Text Label 2100 4750 0    60   ~ 0
-ADC12
 Text Label 2100 4650 0    60   ~ 0
 ADC11
 Text Label 2100 4550 0    60   ~ 0
@@ -561,8 +562,6 @@ ADC1
 Text Label 2100 3550 0    60   ~ 0
 ADC0
 Entry Wire Line
-	1950 4850 2050 4750
-Entry Wire Line
 	1950 4750 2050 4650
 Entry Wire Line
 	1950 4650 2050 4550
@@ -587,5 +586,5 @@ Entry Wire Line
 Entry Wire Line
 	1950 3650 2050 3550
 Text HLabel 1650 5050 0    60   Output ~ 0
-ADC[0..12]
+ADC[0..11]
 $EndSCHEMATC
