@@ -1,9 +1,5 @@
-update=2009-10-15T23:37:36 PDT
-last_client=eeschema
-[general]
-version=1
-RootSch=motorcontroller.sch
-BoardNm=motorcontroller.brd
+update=2009-10-18T00:41:56 PDT
+last_client=kicad
 [eeschema]
 version=1
 LibDir=
@@ -69,3 +65,28 @@ LibName28=opto
 LibName29=atmel
 LibName30=contrib
 LibName31=valves
+[cvpcb]
+version=1
+NetIExt=.net
+[cvpcb/libraries]
+EquName1=devcms
+[common]
+NetDir=
+[pcbnew]
+[pcbnew/libraries]
+LibDir=
+LibName1=../thunderbots-modules
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=pin_array
+LibName6=divers
+LibName7=libcms
+LibName8=display
+LibName9=valves
+LibName10=led
+LibName11=dip_sockets
+[general]
+version=1
+RootSch=
+BoardNm=
