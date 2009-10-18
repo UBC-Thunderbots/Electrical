@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-18T00:55:44 PDT
+EESchema Schematic File Version 2  date 2009-10-18T01:15:29 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -200,19 +200,19 @@ Wire Wire Line
 Wire Wire Line
 	5600 6650 5600 7150
 $Comp
-L GND #PWR25
+L GND #PWR012
 U 1 1 4ADA5B2E
 P 5600 7650
-F 0 "#PWR25" H 5600 7650 30  0001 C CNN
+F 0 "#PWR012" H 5600 7650 30  0001 C CNN
 F 1 "GND" H 5600 7580 30  0001 C CNN
 	1    5600 7650
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR24
+L +3.3V #PWR013
 U 1 1 4ADA5B1F
 P 5600 6150
-F 0 "#PWR24" H 5600 6110 30  0001 C CNN
+F 0 "#PWR013" H 5600 6110 30  0001 C CNN
 F 1 "+3.3V" H 5600 6260 30  0000 C CNN
 	1    5600 6150
 	1    0    0    -1  
@@ -336,19 +336,19 @@ F 1 "BAT85" H 5000 4600 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR23
+L GND #PWR014
 U 1 1 4ADA5AD4
 P 5600 5900
-F 0 "#PWR23" H 5600 5900 30  0001 C CNN
+F 0 "#PWR014" H 5600 5900 30  0001 C CNN
 F 1 "GND" H 5600 5830 30  0001 C CNN
 	1    5600 5900
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR22
+L +3.3V #PWR015
 U 1 1 4ADA5AD3
 P 5600 4400
-F 0 "#PWR22" H 5600 4360 30  0001 C CNN
+F 0 "#PWR015" H 5600 4360 30  0001 C CNN
 F 1 "+3.3V" H 5600 4510 30  0000 C CNN
 	1    5600 4400
 	1    0    0    -1  
@@ -454,19 +454,19 @@ F 1 "BAT85" H 5000 2850 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR21
+L GND #PWR016
 U 1 1 4ADA5ABD
 P 5600 4150
-F 0 "#PWR21" H 5600 4150 30  0001 C CNN
+F 0 "#PWR016" H 5600 4150 30  0001 C CNN
 F 1 "GND" H 5600 4080 30  0001 C CNN
 	1    5600 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR20
+L +3.3V #PWR017
 U 1 1 4ADA5ABC
 P 5600 2650
-F 0 "#PWR20" H 5600 2610 30  0001 C CNN
+F 0 "#PWR017" H 5600 2610 30  0001 C CNN
 F 1 "+3.3V" H 5600 2760 30  0000 C CNN
 	1    5600 2650
 	1    0    0    -1  
@@ -582,19 +582,19 @@ F 1 "BAT85" H 5000 1100 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR19
+L GND #PWR018
 U 1 1 4ADA596A
 P 5600 2400
-F 0 "#PWR19" H 5600 2400 30  0001 C CNN
+F 0 "#PWR018" H 5600 2400 30  0001 C CNN
 F 1 "GND" H 5600 2330 30  0001 C CNN
 	1    5600 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR18
+L +3.3V #PWR019
 U 1 1 4ADA5967
 P 5600 900
-F 0 "#PWR18" H 5600 860 30  0001 C CNN
+F 0 "#PWR019" H 5600 860 30  0001 C CNN
 F 1 "+3.3V" H 5600 1010 30  0000 C CNN
 	1    5600 900 
 	1    0    0    -1  
