@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-10-17T18:56:49 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
+EESchema Schematic File Version 2  date 2009-10-18T00:35:31 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -304,10 +304,10 @@ Wire Wire Line
 Wire Wire Line
 	1650 3200 1750 3200
 $Comp
-L +BATT #PWR020
+L +BATT #PWR13
 U 1 1 4ADA692F
 P 8400 2000
-F 0 "#PWR020" H 8400 1950 20  0001 C CNN
+F 0 "#PWR13" H 8400 1950 20  0001 C CNN
 F 1 "+BATT" H 8400 2100 30  0000 C CNN
 	1    8400 2000
 	1    0    0    -1  
@@ -345,19 +345,19 @@ F 1 "C" H 3150 4600 50  0000 L CNN
 $EndComp
 NoConn ~ 1750 3600
 $Comp
-L +BATT #PWR021
+L +BATT #PWR7
 U 1 1 4ADA61C8
 P 4700 3650
-F 0 "#PWR021" H 4700 3600 20  0001 C CNN
+F 0 "#PWR7" H 4700 3600 20  0001 C CNN
 F 1 "+BATT" H 4700 3750 30  0000 C CNN
 	1    4700 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR022
+L GND #PWR8
 U 1 1 4ADA61B9
 P 4700 3900
-F 0 "#PWR022" H 4700 3900 30  0001 C CNN
+F 0 "#PWR8" H 4700 3900 30  0001 C CNN
 F 1 "GND" H 4700 3830 30  0001 C CNN
 	1    4700 3900
 	1    0    0    -1  
@@ -372,19 +372,19 @@ F 1 "VCOM" H 1700 4150 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR023
+L +BATT #PWR10
 U 1 1 4ADA5BFB
 P 6400 1250
-F 0 "#PWR023" H 6400 1200 20  0001 C CNN
+F 0 "#PWR10" H 6400 1200 20  0001 C CNN
 F 1 "+BATT" H 6400 1350 30  0000 C CNN
 	1    6400 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR024
+L GND #PWR6
 U 1 1 4ADA3C8E
 P 4600 2100
-F 0 "#PWR024" H 4600 2100 30  0001 C CNN
+F 0 "#PWR6" H 4600 2100 30  0001 C CNN
 F 1 "GND" H 4600 2030 30  0001 C CNN
 	1    4600 2100
 	1    0    0    -1  
@@ -408,10 +408,10 @@ F 1 "R" V 2350 4700 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR025
+L GND #PWR11
 U 1 1 4ADA3C84
 P 6800 1850
-F 0 "#PWR025" H 6800 1850 30  0001 C CNN
+F 0 "#PWR11" H 6800 1850 30  0001 C CNN
 F 1 "GND" H 6800 1780 30  0001 C CNN
 	1    6800 1850
 	1    0    0    -1  
@@ -462,37 +462,37 @@ F 1 "1.1kR" V 5650 1600 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR026
+L GND #PWR9
 U 1 1 4ADA3C7E
 P 5600 4350
-F 0 "#PWR026" H 5600 4350 30  0001 C CNN
+F 0 "#PWR9" H 5600 4350 30  0001 C CNN
 F 1 "GND" H 5600 4280 30  0001 C CNN
 	1    5600 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L DIODESCH 3
+L DIODESCH D36
 U 1 1 4ADA3C7D
 P 5900 4050
-F 0 "3" H 5900 4150 40  0000 C CNN
+F 0 "D36" H 5900 4150 40  0000 C CNN
 F 1 "BAT85" H 5900 3950 40  0000 C CNN
 	1    5900 4050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DIODESCH 2
+L DIODESCH D35
 U 1 1 4ADA3C7C
 P 5600 4050
-F 0 "2" H 5600 4150 40  0000 C CNN
+F 0 "D35" H 5600 4150 40  0000 C CNN
 F 1 "BAT85" H 5600 3950 40  0000 C CNN
 	1    5600 4050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DIODESCH 1
+L DIODESCH D34
 U 1 1 4ADA3C7B
 P 5300 4050
-F 0 "1" H 5300 4150 40  0000 C CNN
+F 0 "D34" H 5300 4150 40  0000 C CNN
 F 1 "BAT85" H 5300 3950 40  0000 C CNN
 	1    5300 4050
 	0    -1   -1   0   
@@ -516,10 +516,10 @@ F 1 "MC33035" H 3200 3550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR027
+L GND #PWR4
 U 1 1 4ADA3C78
 P 900 4400
-F 0 "#PWR027" H 900 4400 30  0001 C CNN
+F 0 "#PWR4" H 900 4400 30  0001 C CNN
 F 1 "GND" H 900 4330 30  0001 C CNN
 	1    900  4400
 	1    0    0    -1  
@@ -579,10 +579,10 @@ F 1 "0.1uF" H 7600 5350 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR028
+L GND #PWR12
 U 1 1 4ADA3C70
 P 8100 5800
-F 0 "#PWR028" H 8100 5800 30  0001 C CNN
+F 0 "#PWR12" H 8100 5800 30  0001 C CNN
 F 1 "GND" H 8100 5730 30  0001 C CNN
 	1    8100 5800
 	1    0    0    -1  

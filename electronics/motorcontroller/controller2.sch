@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-10-17T18:56:49 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
+EESchema Schematic File Version 2  date 2009-10-18T00:35:31 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -304,10 +304,10 @@ Wire Wire Line
 Wire Wire Line
 	7950 2150 8450 2150
 $Comp
-L +BATT #PWR029
+L +BATT #PWR35
 U 1 1 4ADA692F
 P 8400 2000
-F 0 "#PWR029" H 8400 1950 20  0001 C CNN
+F 0 "#PWR35" H 8400 1950 20  0001 C CNN
 F 1 "+BATT" H 8400 2100 30  0000 C CNN
 	1    8400 2000
 	1    0    0    -1  
@@ -345,19 +345,19 @@ F 1 "C" H 3150 4600 50  0000 L CNN
 $EndComp
 NoConn ~ 1750 3600
 $Comp
-L +BATT #PWR030
+L +BATT #PWR29
 U 1 1 4ADA61C8
 P 4700 3650
-F 0 "#PWR030" H 4700 3600 20  0001 C CNN
+F 0 "#PWR29" H 4700 3600 20  0001 C CNN
 F 1 "+BATT" H 4700 3750 30  0000 C CNN
 	1    4700 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR031
+L GND #PWR30
 U 1 1 4ADA61B9
 P 4700 3900
-F 0 "#PWR031" H 4700 3900 30  0001 C CNN
+F 0 "#PWR30" H 4700 3900 30  0001 C CNN
 F 1 "GND" H 4700 3830 30  0001 C CNN
 	1    4700 3900
 	1    0    0    -1  
@@ -372,19 +372,19 @@ F 1 "VCOM" H 1700 4150 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR032
+L +BATT #PWR32
 U 1 1 4ADA5BFB
 P 6400 1250
-F 0 "#PWR032" H 6400 1200 20  0001 C CNN
+F 0 "#PWR32" H 6400 1200 20  0001 C CNN
 F 1 "+BATT" H 6400 1350 30  0000 C CNN
 	1    6400 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR033
+L GND #PWR28
 U 1 1 4ADA3C8E
 P 4600 2100
-F 0 "#PWR033" H 4600 2100 30  0001 C CNN
+F 0 "#PWR28" H 4600 2100 30  0001 C CNN
 F 1 "GND" H 4600 2030 30  0001 C CNN
 	1    4600 2100
 	1    0    0    -1  
@@ -408,10 +408,10 @@ F 1 "R" V 2350 4700 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR034
+L GND #PWR33
 U 1 1 4ADA3C84
 P 6800 1850
-F 0 "#PWR034" H 6800 1850 30  0001 C CNN
+F 0 "#PWR33" H 6800 1850 30  0001 C CNN
 F 1 "GND" H 6800 1780 30  0001 C CNN
 	1    6800 1850
 	1    0    0    -1  
@@ -462,37 +462,37 @@ F 1 "1.1kR" V 5650 1600 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR035
+L GND #PWR31
 U 1 1 4ADA3C7E
 P 5600 4350
-F 0 "#PWR035" H 5600 4350 30  0001 C CNN
+F 0 "#PWR31" H 5600 4350 30  0001 C CNN
 F 1 "GND" H 5600 4280 30  0001 C CNN
 	1    5600 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L DIODESCH 6
+L DIODESCH D39
 U 1 1 4ADA3C7D
 P 5900 4050
-F 0 "6" H 5900 4150 40  0000 C CNN
+F 0 "D39" H 5900 4150 40  0000 C CNN
 F 1 "BAT85" H 5900 3950 40  0000 C CNN
 	1    5900 4050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DIODESCH 5
+L DIODESCH D38
 U 1 1 4ADA3C7C
 P 5600 4050
-F 0 "5" H 5600 4150 40  0000 C CNN
+F 0 "D38" H 5600 4150 40  0000 C CNN
 F 1 "BAT85" H 5600 3950 40  0000 C CNN
 	1    5600 4050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DIODESCH 4
+L DIODESCH D37
 U 1 1 4ADA3C7B
 P 5300 4050
-F 0 "4" H 5300 4150 40  0000 C CNN
+F 0 "D37" H 5300 4150 40  0000 C CNN
 F 1 "BAT85" H 5300 3950 40  0000 C CNN
 	1    5300 4050
 	0    -1   -1   0   
@@ -516,10 +516,10 @@ F 1 "MC33035" H 3200 3550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR036
+L GND #PWR26
 U 1 1 4ADA3C78
 P 900 4400
-F 0 "#PWR036" H 900 4400 30  0001 C CNN
+F 0 "#PWR26" H 900 4400 30  0001 C CNN
 F 1 "GND" H 900 4330 30  0001 C CNN
 	1    900  4400
 	1    0    0    -1  
@@ -579,10 +579,10 @@ F 1 "0.1uF" H 7600 5350 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR037
+L GND #PWR34
 U 1 1 4ADA3C70
 P 8100 5800
-F 0 "#PWR037" H 8100 5800 30  0001 C CNN
+F 0 "#PWR34" H 8100 5800 30  0001 C CNN
 F 1 "GND" H 8100 5730 30  0001 C CNN
 	1    8100 5800
 	1    0    0    -1  
