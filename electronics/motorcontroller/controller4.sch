@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-18T00:38:25 PDT
+EESchema Schematic File Version 2  date 2009-10-18T00:45:06 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -426,7 +426,7 @@ F 1 "1000uF" H 7100 1450 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CAPAPOL C18
+L C C18
 U 1 1 4ADA3C82
 P 6550 1550
 F 0 "C18" H 6600 1650 50  0000 L CNN
@@ -570,7 +570,7 @@ F 1 "1.0kR" V 4950 2750 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CAPAPOL C20
+L C C20
 U 1 1 4ADA3C71
 P 7550 5450
 F 0 "C20" H 7600 5550 50  0000 L CNN
