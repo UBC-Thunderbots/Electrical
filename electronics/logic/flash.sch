@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-10-17T23:53:27 PDT
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2009-10-18T01:17:16 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -45,19 +45,19 @@ DIN
 Text HLabel 7050 4200 2    60   Input ~ 0
 CLK
 $Comp
-L GND #PWR038
+L GND #PWR039
 U 1 1 4ABE8D7B
 P 5050 4350
-F 0 "#PWR038" H 5050 4350 30  0001 C CNN
+F 0 "#PWR039" H 5050 4350 30  0001 C CNN
 F 1 "GND" H 5050 4280 30  0001 C CNN
 	1    5050 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR039
+L VCC #PWR040
 U 1 1 4ABE8D6C
 P 6650 3950
-F 0 "#PWR039" H 6650 4050 30  0001 C CNN
+F 0 "#PWR040" H 6650 4050 30  0001 C CNN
 F 1 "VCC" H 6650 4050 30  0000 C CNN
 	1    6650 3950
 	1    0    0    -1  

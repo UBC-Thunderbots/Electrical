@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-10-17T23:53:27 PDT
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2009-10-18T01:17:16 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -35,10 +35,10 @@ NoConn ~ 7150 4400
 NoConn ~ 7150 4500
 NoConn ~ 7150 4600
 $Comp
-L GND #PWR028
+L GND #PWR029
 U 1 1 4ABE98E5
 P 4200 4600
-F 0 "#PWR028" H 4200 4600 30  0001 C CNN
+F 0 "#PWR029" H 4200 4600 30  0001 C CNN
 F 1 "GND" H 4200 4530 30  0001 C CNN
 	1    4200 4600
 	0    1    1    0   
@@ -54,10 +54,10 @@ DIN
 Text HLabel 4200 3800 0    60   Output ~ 0
 DOUT
 $Comp
-L VCC #PWR029
+L VCC #PWR030
 U 1 1 4ABE98C2
 P 4200 3700
-F 0 "#PWR029" H 4200 3800 30  0001 C CNN
+F 0 "#PWR030" H 4200 3800 30  0001 C CNN
 F 1 "VCC" H 4200 3800 30  0000 C CNN
 	1    4200 3700
 	0    -1   -1   0   
