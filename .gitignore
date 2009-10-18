@@ -6,6 +6,7 @@ electronics/logic/*.bak
 electronics/logic/*.bck
 electronics/logic/*.cache.*
 electronics/logic/*.drl
+electronics/logic/*.erc
 electronics/logic/*.net
 electronics/logic/*.pho
 electronics/motorcontroller/$savepcb.*
@@ -14,5 +15,6 @@ electronics/motorcontroller/*.bak
 electronics/motorcontroller/*.bck
 electronics/motorcontroller/*.cache.*
 electronics/motorcontroller/*.drl
+electronics/motorcontroller/*.erc
 electronics/motorcontroller/*.net
 electronics/motorcontroller/*.pho
