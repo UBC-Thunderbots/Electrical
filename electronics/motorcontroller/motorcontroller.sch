@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-10-18T00:45:06 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
+EESchema Schematic File Version 2  date 2009-10-18T00:55:44 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -312,7 +312,7 @@ L R R1
 U 1 1 4ADA5D38
 P 2200 5150
 F 0 "R1" V 2280 5150 50  0000 C CNN
-F 1 "100R" V 2200 5150 50  0000 C CNN
+F 1 "1kR" V 2200 5150 50  0000 C CNN
 	1    2200 5150
 	1    0    0    -1  
 $EndComp
@@ -321,7 +321,7 @@ L ZENER D1
 U 1 1 4ADA5D2D
 P 2200 5700
 F 0 "D1" H 2200 5800 50  0000 C CNN
-F 1 "5V" H 2200 5600 40  0000 C CNN
+F 1 "BZX79-C5V1" H 2200 5600 40  0000 C CNN
 	1    2200 5700
 	0    -1   -1   0   
 $EndComp
