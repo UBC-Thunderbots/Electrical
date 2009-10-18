@@ -367,7 +367,7 @@ $Sheet
 S 5600 2050 1400 800 
 U 4ADA3BD5
 F0 "controller1" 60
-F1 "controller.sch" 60
+F1 "controller1.sch" 60
 F2 "PHASEC" O R 7000 2300 60 
 F3 "PHASEB" O R 7000 2200 60 
 F4 "PHASEA" O R 7000 2100 60 
@@ -384,7 +384,7 @@ $Sheet
 S 5600 3050 1400 800 
 U 4ADA69F0
 F0 "controller2" 60
-F1 "controller.sch" 60
+F1 "controller2.sch" 60
 F2 "PHASEC" O R 7000 3300 60 
 F3 "PHASEB" O R 7000 3200 60 
 F4 "PHASEA" O R 7000 3100 60 
@@ -401,7 +401,7 @@ $Sheet
 S 5600 4050 1400 800 
 U 4ADA6A33
 F0 "controller3" 60
-F1 "controller.sch" 60
+F1 "controller3.sch" 60
 F2 "PHASEC" O R 7000 4300 60 
 F3 "PHASEB" O R 7000 4200 60 
 F4 "PHASEA" O R 7000 4100 60 
@@ -418,7 +418,7 @@ $Sheet
 S 5600 5050 1400 800 
 U 4ADA6A3A
 F0 "controller4" 60
-F1 "controller.sch" 60
+F1 "controller4.sch" 60
 F2 "PHASEC" O R 7000 5300 60 
 F3 "PHASEB" O R 7000 5200 60 
 F4 "PHASEA" O R 7000 5100 60 
@@ -435,7 +435,7 @@ $Sheet
 S 5600 6050 1400 800 
 U 4ADA6A41
 F0 "controller5" 60
-F1 "controller.sch" 60
+F1 "controller5.sch" 60
 F2 "PHASEC" O R 7000 6300 60 
 F3 "PHASEB" O R 7000 6200 60 
 F4 "PHASEA" O R 7000 6100 60 
