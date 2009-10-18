@@ -12,8 +12,17 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
+electronics/motorcontroller/connectors-misc.sch -text
+electronics/motorcontroller/connectors-motor.sch -text
+electronics/motorcontroller/connectors.sch -text
+electronics/motorcontroller/controller1.sch -text
+electronics/motorcontroller/controller2.sch -text
+electronics/motorcontroller/controller3.sch -text
+electronics/motorcontroller/controller4.sch -text
+electronics/motorcontroller/controller5.sch -text
 electronics/motorcontroller/motorcontroller.pro -text
 electronics/motorcontroller/motorcontroller.sch -text
+electronics/motorcontroller/protection.sch -text
 electronics/thunderbots-modules.mdc -text
 electronics/thunderbots-modules.mod -text
 electronics/thunderbots-symbols.dcm -text
