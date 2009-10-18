@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-18T00:35:31 PDT
+EESchema Schematic File Version 2  date 2009-10-18T00:38:25 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -618,8 +618,8 @@ $Comp
 L AOP605 U19
 U 1 1 4ADA3C6C
 P 9450 2700
-F 0 "U19" H 9450 2700 60  0000 C CNN
-F 1 "AOP605" H 9450 2700 60  0000 C CNN
+F 0 "U19" H 9450 2650 60  0000 C CNN
+F 1 "AOP605" H 9450 2750 60  0000 C CNN
 	1    9450 2700
 	1    0    0    -1  
 $EndComp
@@ -627,8 +627,8 @@ $Comp
 L AOP605 U20
 U 1 1 4ADA3C6B
 P 9450 3200
-F 0 "U20" H 9450 3200 60  0000 C CNN
-F 1 "AOP605" H 9450 3200 60  0000 C CNN
+F 0 "U20" H 9450 3150 60  0000 C CNN
+F 1 "AOP605" H 9450 3250 60  0000 C CNN
 	1    9450 3200
 	1    0    0    -1  
 $EndComp
@@ -636,8 +636,8 @@ $Comp
 L AOP605 U18
 U 1 1 4ADA3C6A
 P 9450 2200
-F 0 "U18" H 9450 2200 60  0000 C CNN
-F 1 "AOP605" H 9450 2200 60  0000 C CNN
+F 0 "U18" H 9450 2150 60  0000 C CNN
+F 1 "AOP605" H 9450 2250 60  0000 C CNN
 	1    9450 2200
 	1    0    0    -1  
 $EndComp
