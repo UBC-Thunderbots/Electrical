@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-18T21:24:03 PDT
+EESchema Schematic File Version 2  date 2009-10-20T20:09:41 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -13,15 +13,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	2500 6050 2200 6050
 Connection ~ 4650 1400
 Connection ~ 4450 1300
 Connection ~ 4250 1200
-Text Label 4750 1150 0    60   ~ 0
-PWM[1..5]
-Text Label 4750 1050 0    60   ~ 0
-DIR[1..5]
-Text Label 4750 950  0    60   ~ 0
-FAULT[1..5]
 Wire Wire Line
 	4100 6700 5600 6700
 Wire Wire Line
@@ -35,11 +31,6 @@ Wire Wire Line
 	5050 5700 5050 2700
 Wire Wire Line
 	5050 3700 5600 3700
-Connection ~ 2200 4850
-Wire Wire Line
-	2200 4850 1850 4850
-Wire Wire Line
-	1850 4850 1850 5250
 Wire Wire Line
 	7000 6800 7500 6800
 Wire Wire Line
@@ -114,7 +105,7 @@ Wire Bus Line
 Wire Wire Line
 	2200 5500 2200 5400
 Wire Wire Line
-	2500 6000 2500 6050
+	2500 6050 2500 6000
 Wire Wire Line
 	2200 6050 2200 5900
 Wire Wire Line
@@ -205,11 +196,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 4800 2200 4900
 Wire Wire Line
-	2500 6050 1850 6050
-Wire Wire Line
-	1850 6050 1850 5650
-Connection ~ 2200 6050
-Wire Wire Line
 	5050 4700 5600 4700
 Connection ~ 5050 3700
 Wire Wire Line
@@ -219,6 +205,12 @@ Wire Wire Line
 	3450 6750 3450 6700
 Wire Wire Line
 	3450 6700 3500 6700
+Text Label 4750 1150 0    60   ~ 0
+PWM[1..5]
+Text Label 4750 1050 0    60   ~ 0
+DIR[1..5]
+Text Label 4750 950  0    60   ~ 0
+FAULT[1..5]
 $Comp
 L GND #PWR01
 U 1 1 4ADBAD1E
@@ -253,15 +245,6 @@ P 3800 2700
 F 0 "JP1" H 3800 2850 60  0000 C CNN
 F 1 "JUMPER" H 3800 2620 40  0000 C CNN
 	1    3800 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L CAPAPOL C26
-U 1 1 4ADACDDB
-P 1850 5450
-F 0 "C26" H 1900 5550 50  0000 L CNN
-F 1 "1mF" H 1900 5350 50  0000 L CNN
-	1    1850 5450
 	1    0    0    -1  
 $EndComp
 $Sheet

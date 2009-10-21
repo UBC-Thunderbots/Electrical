@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-18T21:24:03 PDT
+EESchema Schematic File Version 2  date 2009-10-20T20:09:41 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -380,7 +380,7 @@ P 2350 4700
 F 0 "R20" V 2430 4700 50  0000 C CNN
 F 1 "R" V 2350 4700 50  0000 C CNN
 	1    2350 4700
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L GND #PWR034
@@ -515,7 +515,7 @@ P 4950 3000
 F 0 "R24" V 5030 3000 50  0000 C CNN
 F 1 "1.0kR" V 4950 3000 50  0000 C CNN
 	1    4950 3000
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L R R23
@@ -524,7 +524,7 @@ P 4950 2750
 F 0 "R23" V 5030 2750 50  0000 C CNN
 F 1 "1.0kR" V 4950 2750 50  0000 C CNN
 	1    4950 2750
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L C C10
@@ -605,7 +605,7 @@ P 6200 3500
 F 0 "R27" V 6280 3500 50  0000 C CNN
 F 1 "470R" V 6200 3500 50  0000 C CNN
 	1    6200 3500
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L R R29
@@ -623,6 +623,6 @@ P 7200 3300
 F 0 "R30" V 7280 3300 50  0000 C CNN
 F 1 "470R" V 7200 3300 50  0000 C CNN
 	1    7200 3300
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $EndSCHEMATC
