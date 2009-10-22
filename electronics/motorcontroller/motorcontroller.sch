@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-10-22T10:45:55 PDT
+EESchema Schematic File Version 2  date 2009-10-22T14:50:43 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -13,8 +13,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 1750 6050
 Wire Wire Line
-	2500 6050 2200 6050
+	1350 5650 1350 6050
+Wire Wire Line
+	1350 6050 2500 6050
+Connection ~ 1750 4850
+Wire Wire Line
+	1750 5250 1750 4850
 Connection ~ 4650 1400
 Connection ~ 4450 1300
 Connection ~ 4250 1200
@@ -205,6 +211,32 @@ Wire Wire Line
 	3450 6750 3450 6700
 Wire Wire Line
 	3450 6700 3500 6700
+Wire Wire Line
+	2200 4850 1350 4850
+Wire Wire Line
+	1350 4850 1350 5250
+Connection ~ 2200 4850
+Wire Wire Line
+	1750 6050 1750 5650
+Connection ~ 2200 6050
+$Comp
+L C C8
+U 1 1 4AE0D305
+P 1350 5450
+F 0 "C8" H 1400 5550 50  0000 L CNN
+F 1 "0.1uF" H 1400 5350 50  0000 L CNN
+	1    1350 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 4AE0D2F4
+P 1750 5450
+F 0 "C3" H 1800 5550 50  0000 L CNN
+F 1 "0.1uF" H 1800 5350 50  0000 L CNN
+	1    1750 5450
+	1    0    0    -1  
+$EndComp
 Text Label 4750 1150 0    60   ~ 0
 PWM[1..5]
 Text Label 4750 1050 0    60   ~ 0

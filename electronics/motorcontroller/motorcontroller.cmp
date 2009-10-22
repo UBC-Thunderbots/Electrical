@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-10-18T21:51:47 PDT
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-10-22T14:50:54 PDT
 
 BeginCmp
 TimeStamp = /4ADA3BD5/4ADA3C77;
@@ -15,7 +15,7 @@ IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4ADA3BD5/4ADA3C82;
+TimeStamp = /4AE0D2F4;
 Reference = C3;
 ValeurCmp = 0.1uF;
 IdModule  = C2;
@@ -43,7 +43,7 @@ IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4ADA69F0/4ADA3C82;
+TimeStamp = /4AE0D305;
 Reference = C8;
 ValeurCmp = 0.1uF;
 IdModule  = C2;
@@ -71,13 +71,6 @@ IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4ADA6A33/4ADA3C82;
-Reference = C13;
-ValeurCmp = 0.1uF;
-IdModule  = C2;
-EndCmp
-
-BeginCmp
 TimeStamp = /4ADA6A33/4ADA3C71;
 Reference = C15;
 ValeurCmp = 0.1uF;
@@ -96,13 +89,6 @@ TimeStamp = /4ADA6A3A/4ADA63C9;
 Reference = C17;
 ValeurCmp = C;
 IdModule  = C1;
-EndCmp
-
-BeginCmp
-TimeStamp = /4ADA6A3A/4ADA3C82;
-Reference = C18;
-ValeurCmp = 0.1uF;
-IdModule  = C2;
 EndCmp
 
 BeginCmp
@@ -127,24 +113,10 @@ IdModule  = C1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4ADA6A41/4ADA3C82;
-Reference = C23;
-ValeurCmp = 0.1uF;
-IdModule  = C2;
-EndCmp
-
-BeginCmp
 TimeStamp = /4ADA6A41/4ADA3C71;
 Reference = C25;
 ValeurCmp = 0.1uF;
 IdModule  = C2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4ADACDDB;
-Reference = C26;
-ValeurCmp = 1mF;
-IdModule  = CP36V;
 EndCmp
 
 BeginCmp
