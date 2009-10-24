@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-10-17T16:30:35 PDT
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-10-24T13:42:16 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -141,14 +141,7 @@ IdModule  = SIL-6;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD9040F/4AC5780B;
-Reference = P6;
-ValeurCmp = CONN_2;
-IdModule  = SIL-2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4AD9041F;
+TimeStamp = /4AD9040D/4AE3657D;
 Reference = R1;
 ValeurCmp = 1kR;
 IdModule  = R3;
@@ -172,6 +165,13 @@ BeginCmp
 TimeStamp = /4AD90417/4ADA515D;
 Reference = R4;
 ValeurCmp = 470R;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD9040F/4AE36645;
+Reference = R5;
+ValeurCmp = 330R;
 IdModule  = R3;
 EndCmp
 
@@ -229,6 +229,13 @@ TimeStamp = /4AD9040D/4ABEB60B;
 Reference = U9;
 ValeurCmp = XC3S50A-TQ144;
 IdModule  = TQFP144;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD9040F/4AE36633;
+Reference = W1;
+ValeurCmp = TEST;
+IdModule  = SIL-2;
 EndCmp
 
 BeginCmp

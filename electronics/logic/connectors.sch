@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2009-10-18T01:17:16 PDT
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
+EESchema Schematic File Version 2  date 2009-10-24T13:41:55 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 3 7
 Title ""
-Date "17 oct 2009"
+Date "24 oct 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3050 1400 3100 1400
 Wire Wire Line
 	2550 4750 2250 4750
 Connection ~ 9800 4100
@@ -38,10 +40,6 @@ Wire Wire Line
 	2550 3450 2450 3450
 Wire Wire Line
 	2450 3450 2450 3350
-Wire Wire Line
-	2550 1600 2450 1600
-Wire Wire Line
-	2450 1600 2450 1750
 Wire Wire Line
 	10400 1950 10150 1950
 Wire Wire Line
@@ -212,38 +210,60 @@ Wire Wire Line
 	3350 4750 3450 4750
 Wire Wire Line
 	3350 4850 3450 4850
+Wire Wire Line
+	3500 1400 3550 1400
+Wire Wire Line
+	3550 1400 3550 1450
 $Comp
-L +5V #PWR016
+L R R5
+U 1 1 4AE36645
+P 2800 1400
+F 0 "R5" V 2880 1400 50  0000 C CNN
+F 1 "330R" V 2800 1400 50  0000 C CNN
+	1    2800 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST W1
+U 1 1 4AE36633
+P 3300 1400
+F 0 "W1" H 3300 1460 40  0000 C CNN
+F 1 "TEST" H 3300 1330 40  0000 C CNN
+	1    3300 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR015
 U 1 1 4ADACEF3
 P 2250 4750
-F 0 "#PWR016" H 2250 4840 20  0001 C CNN
+F 0 "#PWR015" H 2250 4840 20  0001 C CNN
 F 1 "+5V" H 2250 4840 30  0000 C CNN
 	1    2250 4750
 	0    -1   -1   0   
 $EndComp
 $Comp
-L PWR_FLAG #FLG017
+L PWR_FLAG #FLG016
 U 1 1 4ADABA4D
 P 9800 4050
-F 0 "#FLG017" H 9800 4320 30  0001 C CNN
+F 0 "#FLG016" H 9800 4320 30  0001 C CNN
 F 1 "PWR_FLAG" H 9800 4280 30  0000 C CNN
 	1    9800 4050
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR018
+L GND #PWR017
 U 1 1 4AC7EAA0
 P 3450 4950
-F 0 "#PWR018" H 3450 4950 30  0001 C CNN
+F 0 "#PWR017" H 3450 4950 30  0001 C CNN
 F 1 "GND" H 3450 4880 30  0001 C CNN
 	1    3450 4950
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR019
+L VCC #PWR018
 U 1 1 4AC7EA84
 P 2450 3350
-F 0 "#PWR019" H 2450 3450 30  0001 C CNN
+F 0 "#PWR018" H 2450 3450 30  0001 C CNN
 F 1 "VCC" H 2450 3450 30  0000 C CNN
 	1    2450 3350
 	1    0    0    -1  
@@ -261,22 +281,12 @@ $EndComp
 Text HLabel 2200 1400 0    60   BiDi ~ 0
 MISC
 $Comp
-L GND #PWR020
+L GND #PWR019
 U 1 1 4AC57812
-P 2450 1750
-F 0 "#PWR020" H 2450 1750 30  0001 C CNN
-F 1 "GND" H 2450 1680 30  0001 C CNN
-	1    2450 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_2 P6
-U 1 1 4AC5780B
-P 2900 1500
-F 0 "P6" V 2850 1500 40  0000 C CNN
-F 1 "CONN_2" V 2950 1500 40  0000 C CNN
-F 2 "SIL-2" H 2900 1500 60  0001 C CNN
-	1    2900 1500
+P 3550 1450
+F 0 "#PWR019" H 3550 1450 30  0001 C CNN
+F 1 "GND" H 3550 1380 30  0001 C CNN
+	1    3550 1450
 	1    0    0    -1  
 $EndComp
 Text HLabel 10400 1950 2    60   BiDi ~ 0
@@ -287,10 +297,10 @@ NoConn ~ 10150 2050
 NoConn ~ 9400 2050
 NoConn ~ 9400 1800
 $Comp
-L GND #PWR021
+L GND #PWR020
 U 1 1 4AC56AA4
 P 9150 1950
-F 0 "#PWR021" H 9150 1950 30  0001 C CNN
+F 0 "#PWR020" H 9150 1950 30  0001 C CNN
 F 1 "GND" H 9150 1880 30  0001 C CNN
 	1    9150 1950
 	0    1    1    0   
@@ -306,28 +316,28 @@ F 2 "USB_B" H 9800 1600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR022
+L VCC #PWR021
 U 1 1 4AC0506E
 P 2250 4850
-F 0 "#PWR022" H 2250 4950 30  0001 C CNN
+F 0 "#PWR021" H 2250 4950 30  0001 C CNN
 F 1 "VCC" H 2250 4950 30  0000 C CNN
 	1    2250 4850
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VCC #PWR023
+L VCC #PWR022
 U 1 1 4AC04F74
 P 5200 5150
-F 0 "#PWR023" H 5200 5250 30  0001 C CNN
+F 0 "#PWR022" H 5200 5250 30  0001 C CNN
 F 1 "VCC" H 5200 5250 30  0000 C CNN
 	1    5200 5150
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR024
+L GND #PWR023
 U 1 1 4AC04EA4
 P 6350 5250
-F 0 "#PWR024" H 6350 5250 30  0001 C CNN
+F 0 "#PWR023" H 6350 5250 30  0001 C CNN
 F 1 "GND" H 6350 5180 30  0001 C CNN
 	1    6350 5250
 	1    0    0    -1  
@@ -409,19 +419,19 @@ GPIO3
 Text Label 5000 3250 0    60   ~ 0
 GPIO1
 $Comp
-L VCC #PWR025
+L VCC #PWR024
 U 1 1 4ABEA0F8
 P 5600 1400
-F 0 "#PWR025" H 5600 1500 30  0001 C CNN
+F 0 "#PWR024" H 5600 1500 30  0001 C CNN
 F 1 "VCC" H 5600 1500 30  0000 C CNN
 	1    5600 1400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR026
+L GND #PWR025
 U 1 1 4ABEA0F3
 P 5600 1500
-F 0 "#PWR026" H 5600 1500 30  0001 C CNN
+F 0 "#PWR025" H 5600 1500 30  0001 C CNN
 F 1 "GND" H 5600 1430 30  0001 C CNN
 	1    5600 1500
 	0    1    1    0   
@@ -444,19 +454,19 @@ F 2 "SIL-6" H 6300 1550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR027
+L +BATT #PWR026
 U 1 1 4ABE9D54
 P 9700 4100
-F 0 "#PWR027" H 9700 4050 20  0001 C CNN
+F 0 "#PWR026" H 9700 4050 20  0001 C CNN
 F 1 "+BATT" H 9700 4200 30  0000 C CNN
 	1    9700 4100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR028
+L GND #PWR027
 U 1 1 4ABE9D4E
 P 9700 4300
-F 0 "#PWR028" H 9700 4300 30  0001 C CNN
+F 0 "#PWR027" H 9700 4300 30  0001 C CNN
 F 1 "GND" H 9700 4230 30  0001 C CNN
 	1    9700 4300
 	0    1    1    0   
