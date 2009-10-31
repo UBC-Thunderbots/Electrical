@@ -12,6 +12,8 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
+electronics/motorcontroller/Multiplier.vhd -text
+electronics/motorcontroller/MultiplierTest.vhd -text
 electronics/motorcontroller/connectors-misc.sch -text
 electronics/motorcontroller/connectors-motor.sch -text
 electronics/motorcontroller/connectors.sch -text
