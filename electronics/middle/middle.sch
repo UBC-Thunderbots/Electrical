@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 30/10/2009 01:36:34
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
+EESchema Schematic File Version 2  date 2009-10-31T17:43:14 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./middle.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "30 oct 2009"
+Date "1 nov 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,28 +13,43 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 8400 4450 "Warning Pin input not driven (Net 41)" F=1
-Kmarq B 7250 4600 "Warning Pin power_in not driven (Net 19)" F=1
-Kmarq B 6450 2300 "Error: Pin output connected to Pin output (net 10)" F=2
-Kmarq B 10000 5500 "Error: Pin output connected to Pin output (net 10)" F=2
-Kmarq B 1150 4750 "Error: Pin output connected to Pin output (net 10)" F=2
-Kmarq B 10200 3850 "Error: Pin output connected to Pin output (net 10)" F=2
-Kmarq B 4800 1900 "Warning Pin input Unconnected" F=1
-Kmarq B 1150 4550 "Warning Pin input Unconnected" F=1
-Kmarq B 9800 5500 "Warning Pin input Unconnected" F=1
-Kmarq B 10350 2550 "Warning Pin passive Unconnected" F=1
-Kmarq B 10350 3200 "Warning Pin passive Unconnected" F=1
-Connection ~ 10350 3200
-Connection ~ 10350 2550
+$Comp
+L LT3751 U2
+U 1 1 4AECD722
+P 5350 3500
+F 0 "U2" H 5350 1800 60  0000 C CNN
+F 1 "LT3751" H 5350 3450 60  0000 C CNN
+	1    5350 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTOCOUPLER_6DIP U4
+U 1 1 4AECD6DC
+P 9650 4650
+F 0 "U4" H 9650 3950 60  0000 C CNN
+F 1 "OPTOCOUPLER_6DIP" H 9650 4650 60  0000 C CNN
+	1    9650 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L OPTOCOUPLER_6DIP U1
+U 1 1 4AECD69B
+P 2000 4400
+F 0 "U1" H 2000 3700 60  0000 C CNN
+F 1 "OPTOCOUPLER_6DIP" H 2000 4400 60  0000 C CNN
+	1    2000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTOCOUPLER_6DIP U3
+U 1 1 4AECD662
+P 5650 1750
+F 0 "U3" H 5650 1050 60  0000 C CNN
+F 1 "OPTOCOUPLER_6DIP" H 5650 1750 60  0000 C CNN
+	1    5650 1750
+	1    0    0    -1  
+$EndComp
 Connection ~ 2700 2950
-Connection ~ 6450 2300
-Connection ~ 4800 1900
-Connection ~ 1150 4550
-Connection ~ 1150 4750
-Connection ~ 6150 4450
-Connection ~ 9800 5500
-Connection ~ 10000 5500
-Connection ~ 10200 3850
 Wire Wire Line
 	7900 4500 7900 4450
 Connection ~ 10000 3650
@@ -70,19 +85,9 @@ Wire Wire Line
 	950  4550 1150 4550
 Wire Wire Line
 	3300 5100 3300 4750
-Connection ~ 10200 2950
-Connection ~ 7250 4600
-Connection ~ 4800 1900
-Connection ~ 6450 2100
-Connection ~ 10200 2950
-Connection ~ 4800 1900
-Connection ~ 7250 4600
-Connection ~ 7900 4450
 Connection ~ 2700 2950
 Connection ~ 6950 3700
 Connection ~ 9600 2950
-Connection ~ 6450 2100
-Connection ~ 4800 1900
 Wire Wire Line
 	6950 4000 6950 3350
 Wire Wire Line
@@ -93,7 +98,6 @@ Wire Wire Line
 	6900 2650 6900 2300
 Wire Wire Line
 	6900 2300 6450 2300
-Connection ~ 6900 2650
 Wire Wire Line
 	4800 2100 4150 2100
 Wire Wire Line
@@ -115,7 +119,6 @@ Wire Wire Line
 Connection ~ 6900 5250
 Wire Wire Line
 	7400 5550 7850 5550
-Connection ~ 7250 4600
 Wire Wire Line
 	7100 4600 7250 4600
 Connection ~ 3300 2950
@@ -136,7 +139,6 @@ Wire Wire Line
 	8800 4050 8800 3800
 Wire Wire Line
 	6150 5050 6150 5250
-Connection ~ 7950 4950
 Wire Wire Line
 	7950 4900 7950 5050
 Wire Wire Line
@@ -220,8 +222,6 @@ Wire Wire Line
 	6150 4600 7300 4600
 Wire Wire Line
 	7100 4750 6150 4750
-Connection ~ 8400 4450
-Connection ~ 7900 4450
 Wire Wire Line
 	2700 2950 3300 2950
 Connection ~ 2700 2950
@@ -247,7 +247,6 @@ Wire Wire Line
 Wire Wire Line
 	3300 5600 3300 5750
 Connection ~ 3550 5750
-Connection ~ 3300 4750
 Wire Wire Line
 	1150 4750 950  4750
 Wire Wire Line
@@ -359,24 +358,6 @@ F 1 "GND" H 10000 5780 30  0001 C CNN
 	1    10000 5850
 	1    0    0    -1  
 $EndComp
-$Comp
-L OPTOCOUPLER_6DIP O3
-U 1 1 4AEA9DD2
-P 9650 4650
-F 0 "O3" H 9650 4650 60  0000 C CNN
-F 1 "OPTOCOUPLER_6DIP" H 9650 4650 60  0000 C CNN
-	1    9650 4650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L OPTOCOUPLER_6DIP O2
-U 1 1 4AEA9DA4
-P 2000 4400
-F 0 "O2" H 2000 4400 60  0000 C CNN
-F 1 "OPTOCOUPLER_6DIP" H 2000 4400 60  0000 C CNN
-	1    2000 4400
-	1    0    0    -1  
-$EndComp
 NoConn ~ 6450 1900
 NoConn ~ 4800 2300
 $Comp
@@ -390,15 +371,6 @@ F 1 "GND" H 4150 2030 30  0001 C CNN
 $EndComp
 Text Label 3800 1750 0    60   ~ 0
 Controller Input
-$Comp
-L OPTOCOUPLER_6DIP O1
-U 1 1 4AEA2E63
-P 5650 1750
-F 0 "O1" H 5650 1750 60  0000 C CNN
-F 1 "Optocoupler" H 5650 1750 60  0000 C CNN
-	1    5650 1750
-	1    0    0    -1  
-$EndComp
 $Comp
 L MOSFET_N Q1
 U 1 1 4AEA2C04
@@ -524,15 +496,6 @@ P 8600 4450
 F 0 "M1" H 8610 4620 60  0000 R CNN
 F 1 "M1" H 8610 4300 60  0000 R CNN
 	1    8600 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L LT3751 L1
-U 1 1 4AE8D219
-P 5350 3500
-F 0 "L1" H 5350 3500 60  0000 C CNN
-F 1 "LT3751" H 5350 3500 60  0000 C CNN
-	1    5350 3500
 	1    0    0    -1  
 $EndComp
 $Comp

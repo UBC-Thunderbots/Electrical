@@ -12,8 +12,6 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
-electronics/middle/middle.cache.dcm -text
-electronics/middle/middle.cache.lib -text
 electronics/middle/middle.cmp -text
 electronics/middle/middle.lst -text
 electronics/middle/middle.pro -text

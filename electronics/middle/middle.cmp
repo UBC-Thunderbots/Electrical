@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 29/10/2009 16:35:57
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-10-31T17:43:11 PDT
 
 BeginCmp
 TimeStamp = /4AE8A683;
@@ -43,23 +43,30 @@ IdModule  = D3;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AE8D219;
-Reference = L1;
-ValeurCmp = LT3751;
-IdModule  = SSOP20;
-EndCmp
-
-BeginCmp
 TimeStamp = /4AE8D74B;
 Reference = M1;
-ValeurCmp = 200V,_33A;
+ValeurCmp = M1;
 IdModule  = ;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AE8DA97;
 Reference = M2;
-ValeurCmp = 200V,_33A;
+ValeurCmp = M2;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AEA2C04;
+Reference = Q1;
+ValeurCmp = M3;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AEAA3C1;
+Reference = Q2;
+ValeurCmp = MOSFET_N;
 IdModule  = ;
 EndCmp
 
@@ -169,10 +176,59 @@ IdModule  = ;
 EndCmp
 
 BeginCmp
+TimeStamp = /4AEA9E0A;
+Reference = R16;
+ValeurCmp = R;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AEAA38F;
+Reference = R17;
+ValeurCmp = R;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AEAA324;
+Reference = R18;
+ValeurCmp = R;
+IdModule  = ;
+EndCmp
+
+BeginCmp
 TimeStamp = /4AE8DB24;
 Reference = T1;
 ValeurCmp = 1:10;
 IdModule  = TRANSF-37x44;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECD69B;
+Reference = U1;
+ValeurCmp = OPTOCOUPLER_6DIP;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECD722;
+Reference = U2;
+ValeurCmp = LT3751;
+IdModule  = DIP-20__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECD662;
+Reference = U3;
+ValeurCmp = OPTOCOUPLER_6DIP;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECD6DC;
+Reference = U4;
+ValeurCmp = OPTOCOUPLER_6DIP;
+IdModule  = DIP-6__300;
 EndCmp
 
 BeginCmp
