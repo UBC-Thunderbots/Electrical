@@ -9,6 +9,15 @@ electronics/logic/*.drl
 electronics/logic/*.erc
 electronics/logic/*.net
 electronics/logic/*.pho
+electronics/middle/$savepcb.*
+electronics/middle/*.000
+electronics/middle/*.bak
+electronics/middle/*.bck
+electronics/middle/*.cache.*
+electronics/middle/*.drl
+electronics/middle/*.erc
+electronics/middle/*.net
+electronics/middle/*.pho
 electronics/motorcontroller/$savepcb.*
 electronics/motorcontroller/*.000
 electronics/motorcontroller/*.bak
