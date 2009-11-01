@@ -12,10 +12,6 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
-electronics/middle/connectors.sch -text
-electronics/middle/flash.sch -text
-electronics/middle/fpga.sch -text
-electronics/middle/middle.brd -text
 electronics/middle/middle.cache.dcm -text
 electronics/middle/middle.cache.lib -text
 electronics/middle/middle.cmp -text
@@ -23,9 +19,6 @@ electronics/middle/middle.lst -text
 electronics/middle/middle.pro -text
 electronics/middle/middle.sch -text
 electronics/middle/mine.brd -text
-electronics/middle/pic.sch -text
-electronics/middle/power.sch -text
-electronics/middle/xbee.sch -text
 electronics/motorcontroller/Multiplier.vhd -text
 electronics/motorcontroller/MultiplierTest.vhd -text
 electronics/motorcontroller/connectors-misc.sch -text
