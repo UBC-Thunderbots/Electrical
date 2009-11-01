@@ -12,11 +12,12 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
+electronics/middle/connectors.sch -text
+electronics/middle/kicker.sch -text
 electronics/middle/middle.brd -text
 electronics/middle/middle.cmp -text
 electronics/middle/middle.lst -text
 electronics/middle/middle.pro -text
-electronics/middle/middle.sch -text
 electronics/motorcontroller/Multiplier.vhd -text
 electronics/motorcontroller/MultiplierTest.vhd -text
 electronics/motorcontroller/connectors-misc.sch -text

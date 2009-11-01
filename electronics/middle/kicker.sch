@@ -1,9 +1,9 @@
-EESchema Schematic File Version 2  date 2009-10-31T17:43:14 PDT
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./middle.cache
+EESchema Schematic File Version 2  date 2009-10-31T17:55:06 PDT
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 1 1
+Sheet 2 3
 Title ""
 Date "1 nov 2009"
 Rev ""
@@ -13,6 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 4150 1900 0    60   Input ~ 0
+Kick
 $Comp
 L LT3751 U2
 U 1 1 4AECD722
