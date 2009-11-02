@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2009-11-02T11:33:41 PST
+PCBNEW-BOARD Version 1 date 2009-11-02T11:52:34 PST
 
 $GENERAL
 LayerCount 2
@@ -31,17 +31,19 @@ ZoneGridSize 250
 Layers 2
 Layer[0] Copper signal
 Layer[15] Component signal
-TrackWidth 200
+TrackWidth 100
+TrackWidthHistory 100
 TrackWidthHistory 170
 TrackWidthHistory 200
 TrackClearence 70
 ZoneClearence 200
 DrawSegmWidth 150
 EdgeSegmWidth 150
-ViaSize 200
-ViaDrill 80
-ViaAltDrill 80
+ViaSize 300
+ViaDrill 200
+ViaAltDrill 200
 ViaSizeHistory 200
+ViaSizeHistory 300
 ViaSizeHistory 450
 MicroViaSize 200
 MicroViaDrill 80
