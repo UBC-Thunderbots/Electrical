@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2009-11-02T11:52:34 PST
+PCBNEW-BOARD Version 1 date 2009-11-02T11:53:30 PST
 
 $GENERAL
 LayerCount 2
@@ -6,7 +6,7 @@ Ly 1FFF8001
 Links 471
 NoConn 436
 Di 6400 8796 56375 49326
-Ndraw 12
+Ndraw 14
 Ntrack 117
 Nzone 0
 Nmodule 182
@@ -9160,6 +9160,16 @@ Ne 0 ""
 Po 0 0
 $EndPAD
 $EndMODULE  M3_MOUNT
+$TEXTPCB
+Te "Orientation Component"
+Po 30000 52750 600 800 120 0
+De 15 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "Orientation Copper"
+Po 30250 51250 600 800 120 0
+De 0 0 0 Normal
+$EndTEXTPCB
 $DRAWSEGMENT
 Po 0 46250 44250 46250 49250 150
 De 24 0 900 0 0
