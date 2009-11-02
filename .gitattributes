@@ -18,6 +18,7 @@ electronics/middle/middle.brd -text
 electronics/middle/middle.cmp -text
 electronics/middle/middle.lst -text
 electronics/middle/middle.pro -text
+electronics/middle/middle.sch -text
 electronics/motorcontroller/Multiplier.vhd -text
 electronics/motorcontroller/MultiplierTest.vhd -text
 electronics/motorcontroller/connectors-misc.sch -text
