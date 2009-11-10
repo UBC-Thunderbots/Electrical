@@ -1,6 +1,8 @@
 * text=auto !eol
 electronics/VHDL/Gray[!!-~]Counter/CounterTest.vhd -text
 electronics/VHDL/Gray[!!-~]Counter/GrayCounter.vhd -text
+electronics/VHDL/Multiplier/Multiplier.vhd -text
+electronics/VHDL/Multiplier/MultiplierTest.vhd -text
 electronics/block[!!-~]diagram.fig -text
 electronics/logic/connectors.sch -text
 electronics/logic/flash.sch -text
@@ -19,8 +21,6 @@ electronics/middle/middle.cmp -text
 electronics/middle/middle.lst -text
 electronics/middle/middle.pro -text
 electronics/middle/middle.sch -text
-electronics/motorcontroller/Multiplier.vhd -text
-electronics/motorcontroller/MultiplierTest.vhd -text
 electronics/motorcontroller/connectors-misc.sch -text
 electronics/motorcontroller/connectors-motor.sch -text
 electronics/motorcontroller/connectors.sch -text
