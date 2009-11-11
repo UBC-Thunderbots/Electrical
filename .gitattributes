@@ -7,6 +7,7 @@ electronics/block[!!-~]diagram.fig -text
 electronics/logic/connectors.sch -text
 electronics/logic/flash.sch -text
 electronics/logic/fpga.sch -text
+electronics/logic/logic.MVL -text
 electronics/logic/logic.brd -text
 electronics/logic/logic.cmp -text
 electronics/logic/logic.pro -text
@@ -14,8 +15,11 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
+electronics/middle/connectors.MVL -text
 electronics/middle/connectors.sch -text
+electronics/middle/kicker.MVL -text
 electronics/middle/kicker.sch -text
+electronics/middle/middle.MVL -text
 electronics/middle/middle.brd -text
 electronics/middle/middle.cmp -text
 electronics/middle/middle.lst -text
