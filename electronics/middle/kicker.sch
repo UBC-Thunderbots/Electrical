@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 02/11/2009 01:19:24
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
+EESchema Schematic File Version 2  date 12/11/2009 15:55:57
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -299,7 +299,7 @@ P 10150 3300
 F 0 "Q2" H 10160 3470 60  0000 R CNN
 F 1 "MOSFET_N" H 10160 3150 60  0000 R CNN
 	1    10150 3300
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L GND #PWR01
