@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 12/11/2009 17:07:46
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
+EESchema Schematic File Version 2  date 2009-11-12T17:31:41 PST
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./middle.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -55,14 +55,6 @@ Wire Wire Line
 	3100 3050 3100 5650
 Wire Wire Line
 	3100 5650 3950 5650
-Text HLabel 3950 5850 2    60   Output ~ 0
-Capacitor Charge In(+ve)
-Text HLabel 3950 5650 2    60   Output ~ 0
-Capacitor Charge In (-ve)
-Text HLabel 3950 6450 2    60   Output ~ 0
-Solenoid1 Power Input
-Text HLabel 3950 6250 2    60   Output ~ 0
-Solenoid2 Power Input
 $Sheet
 S 3950 4350 2550 2600
 U 4AECDC4C
@@ -71,6 +63,10 @@ F1 "connectors.sch" 60
 F2 "Solenoid1 control MOSFET" O R 6500 4900 60 
 F3 "Solenoid2 control MOSFET" O R 6500 4750 60 
 F4 "LT3751 IC On/Off" O R 6500 5050 60 
+F5 "Capacitor Charge In(-ve)" I L 3950 5650 60 
+F6 "Capacitor Charge In(+ve)" I L 3950 5850 60 
+F7 "Solenoid2 Power Input" I L 3950 6250 60 
+F8 "Solenoid1 Power Input" I L 3950 6450 60 
 $EndSheet
 $Sheet
 S 4000 1500 2450 2350
