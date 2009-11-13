@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2009-11-12T17:31:41 PST
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./middle.cache
+EESchema Schematic File Version 2  date 12/11/2009 18:19:12
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 3
 Title ""
-Date ""
+Date "13 nov 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -50,46 +50,46 @@ Wire Wire Line
 Wire Wire Line
 	8950 4400 9050 4400
 $Comp
-L CONN_2 P?
+L CONN_2 P7
 U 1 1 4AFCB6ED
 P 9400 4500
-F 0 "P?" V 9350 4500 40  0000 C CNN
+F 0 "P7" V 9350 4500 40  0000 C CNN
 F 1 "CONN_2" V 9450 4500 40  0000 C CNN
 	1    9400 4500
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR01
 U 1 1 4AFCB6DB
 P 9000 4200
-F 0 "#PWR?" H 9000 4200 30  0001 C CNN
+F 0 "#PWR01" H 9000 4200 30  0001 C CNN
 F 1 "GND" H 9000 4130 30  0001 C CNN
 	1    9000 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P?
+L CONN_2 P6
 U 1 1 4AFCB6D4
 P 9400 4050
-F 0 "P?" V 9350 4050 40  0000 C CNN
+F 0 "P6" V 9350 4050 40  0000 C CNN
 F 1 "CONN_2" V 9450 4050 40  0000 C CNN
 	1    9400 4050
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR02
 U 1 1 4AFCB6C1
 P 9000 3750
-F 0 "#PWR?" H 9000 3750 30  0001 C CNN
+F 0 "#PWR02" H 9000 3750 30  0001 C CNN
 F 1 "GND" H 9000 3680 30  0001 C CNN
 	1    9000 3750
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P?
+L CONN_2 P5
 U 1 1 4AFCB6B3
 P 9400 3600
-F 0 "P?" V 9350 3600 40  0000 C CNN
+F 0 "P5" V 9350 3600 40  0000 C CNN
 F 1 "CONN_2" V 9450 3600 40  0000 C CNN
 	1    9400 3600
 	1    0    0    -1  
@@ -162,55 +162,55 @@ NoConn ~ 5100 2650
 NoConn ~ 5100 2550
 NoConn ~ 5100 2450
 $Comp
-L CONN_15X2 P?
+L CONN_15X2 P2
 U 1 1 4AFCB432
 P 5500 6000
-F 0 "P?" H 5500 6800 60  0000 C CNN
+F 0 "P2" H 5500 6800 60  0000 C CNN
 F 1 "CONN_15X2" V 5500 6000 50  0000 C CNN
 	1    5500 6000
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_20X2 P?
+L CONN_20X2 P1
 U 1 1 4AFCB42D
 P 5500 3400
-F 0 "P?" H 5500 4450 60  0000 C CNN
+F 0 "P1" H 5500 4450 60  0000 C CNN
 F 1 "CONN_20X2" V 5500 3400 50  0000 C CNN
 	1    5500 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR03
 U 1 1 4AFCB418
 P 7650 2750
-F 0 "#PWR?" H 7650 2750 30  0001 C CNN
+F 0 "#PWR03" H 7650 2750 30  0001 C CNN
 F 1 "GND" H 7650 2680 30  0001 C CNN
 	1    7650 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR?
+L VCC #PWR04
 U 1 1 4AFCB40C
 P 7550 1850
-F 0 "#PWR?" H 7550 1950 30  0001 C CNN
+F 0 "#PWR04" H 7550 1950 30  0001 C CNN
 F 1 "VCC" H 7550 1950 30  0000 C CNN
 	1    7550 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P?
+L CONN_2 P4
 U 1 1 4AFCB400
 P 8050 2550
-F 0 "P?" V 8000 2550 40  0000 C CNN
+F 0 "P4" V 8000 2550 40  0000 C CNN
 F 1 "CONN_2" V 8100 2550 40  0000 C CNN
 	1    8050 2550
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P?
+L CONN_2 P3
 U 1 1 4AFCB3FE
 P 8050 2100
-F 0 "P?" V 8000 2100 40  0000 C CNN
+F 0 "P3" V 8000 2100 40  0000 C CNN
 F 1 "CONN_2" V 8100 2100 40  0000 C CNN
 	1    8050 2100
 	1    0    0    -1  

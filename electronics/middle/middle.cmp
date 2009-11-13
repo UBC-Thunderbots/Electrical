@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 08/11/2009 22:21:55
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 12/11/2009 18:27:10
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A683;
@@ -22,38 +22,80 @@ IdModule  = C1V7H;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AECDBEB/4AE8A6B2;
-Reference = C4;
-ValeurCmp = 1200u;
-IdModule  = C1V7H;
-EndCmp
-
-BeginCmp
 TimeStamp = /4AECDBEB/4AE8DB07;
 Reference = D1;
 ValeurCmp = DIODE;
-IdModule  = TO220;
+IdModule  = RURP860;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8DB15;
 Reference = D2;
 ValeurCmp = DIODE;
-IdModule  = TO220;
+IdModule  = RURP860;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8D74B;
 Reference = M1;
 ValeurCmp = M1;
-IdModule  = DPAK2;
+IdModule  = SUM33N20;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8DA97;
 Reference = M2;
 ValeurCmp = M2;
-IdModule  = DPAK2;
+IdModule  = SUM33N20;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB42D;
+Reference = P1;
+ValeurCmp = CONN_20X2;
+IdModule  = PIN_ARRAY_20X2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB432;
+Reference = P2;
+ValeurCmp = CONN_15X2;
+IdModule  = IDC-30;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB3FE;
+Reference = P3;
+ValeurCmp = CONN_2;
+IdModule  = 643226-1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB400;
+Reference = P4;
+ValeurCmp = CONN_2;
+IdModule  = 643226-1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB6B3;
+Reference = P5;
+ValeurCmp = CONN_2;
+IdModule  = 643226-1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB6D4;
+Reference = P6;
+ValeurCmp = CONN_2;
+IdModule  = 643226-1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDC4C/4AFCB6ED;
+Reference = P7;
+ValeurCmp = CONN_2;
+IdModule  = 643226-1;
 EndCmp
 
 BeginCmp
