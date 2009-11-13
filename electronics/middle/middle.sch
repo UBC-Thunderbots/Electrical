@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 12/11/2009 16:57:02
+EESchema Schematic File Version 2  date 12/11/2009 17:07:46
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3950 5850 2900 5850
+Wire Wire Line
+	2900 5850 2900 2900
+Wire Wire Line
+	2900 2900 4000 2900
 Wire Wire Line
 	3950 6450 3300 6450
 Wire Wire Line
@@ -43,6 +49,16 @@ Wire Wire Line
 	3550 3650 3550 6250
 Wire Wire Line
 	3550 6250 3950 6250
+Wire Wire Line
+	4000 3050 3100 3050
+Wire Wire Line
+	3100 3050 3100 5650
+Wire Wire Line
+	3100 5650 3950 5650
+Text HLabel 3950 5850 2    60   Output ~ 0
+Capacitor Charge In(+ve)
+Text HLabel 3950 5650 2    60   Output ~ 0
+Capacitor Charge In (-ve)
 Text HLabel 3950 6450 2    60   Output ~ 0
 Solenoid1 Power Input
 Text HLabel 3950 6250 2    60   Output ~ 0
@@ -63,12 +79,10 @@ F0 "kicker" 60
 F1 "kicker.sch" 60
 F2 "Vout1(500V)" O L 4000 3450 60 
 F3 "Vout2(500V)" O L 4000 3650 60 
-F4 "Input_Battery(Vcc)" I L 4000 1800 60 
-F5 "Input_Battery(Vtrans)" I L 4000 1950 60 
-F6 "Charge_capacitor" I R 6450 2250 60 
-F7 "Kick_solenoid2" I R 6450 2600 60 
-F8 "Kick_solenoid1" I R 6450 2450 60 
-F9 "Capacitor Charge Out(-ve)" O L 4000 3050 60 
-F10 "Capacitor Charge Out(+ve)" O L 4000 2900 60 
+F4 "Charge_capacitor" I R 6450 2250 60 
+F5 "Kick_solenoid2" I R 6450 2600 60 
+F6 "Kick_solenoid1" I R 6450 2450 60 
+F7 "Capacitor Charge Out(-ve)" O L 4000 3050 60 
+F8 "Capacitor Charge Out(+ve)" O L 4000 2900 60 
 $EndSheet
 $EndSCHEMATC

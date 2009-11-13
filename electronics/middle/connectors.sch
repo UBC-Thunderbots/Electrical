@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 12/11/2009 16:57:02
+EESchema Schematic File Version 2  date 12/11/2009 17:07:46
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 3650 4500 0    60   Input ~ 0
+Capacitor Charge In(-ve)
+Text HLabel 3650 4200 0    60   Input ~ 0
+Capacitor Charge In(+ve)
 Text HLabel 3650 3800 0    60   Input ~ 0
 Solenoid2 Power Input
 Text HLabel 3650 3500 0    60   Input ~ 0
