@@ -1,5 +1,5 @@
-update=2009-10-31T17:42:36 PDT
-last_client=cvpcb
+update=12/11/2009 16:18:41
+last_client=kicad
 [eeschema]
 version=1
 LibDir=
@@ -129,12 +129,12 @@ LibName8=display
 LibName9=valves
 [common]
 NetDir=
-[general]
-version=1
-RootSch=
-BoardNm=
 [cvpcb]
 version=1
 NetIExt=.net
 [cvpcb/libraries]
 EquName1=devcms
+[general]
+version=1
+RootSch=
+BoardNm=

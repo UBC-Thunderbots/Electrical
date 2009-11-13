@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 12/11/2009 15:55:57
+EESchema Schematic File Version 2  date 12/11/2009 16:17:56
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
@@ -36,14 +36,13 @@ S 4000 1500 2450 2350
 U 4AECDBEB
 F0 "kicker" 60
 F1 "kicker.sch" 60
-F2 "Kick" I L 4000 1600 60 
-F3 "Vout1(500V)" I L 4000 3450 60 
-F4 "Vout2(500V)" I L 4000 3650 60 
-F5 "Input_Battery(Vcc)" I L 4000 1800 60 
-F6 "Input_Battery(Vtrans)" I L 4000 1950 60 
-F7 "Charge_capacitor" I R 6450 2250 60 
-F8 "Kick_solenoid2" I R 6450 2600 60 
-F9 "Kick_solenoid1" I R 6450 2450 60 
+F2 "Vout1(500V)" I L 4000 3450 60 
+F3 "Vout2(500V)" I L 4000 3650 60 
+F4 "Input_Battery(Vcc)" I L 4000 1800 60 
+F5 "Input_Battery(Vtrans)" I L 4000 1950 60 
+F6 "Charge_capacitor" I R 6450 2250 60 
+F7 "Kick_solenoid2" I R 6450 2600 60 
+F8 "Kick_solenoid1" I R 6450 2450 60 
 $EndSheet
 $Sheet
 S 3950 4350 2550 2600

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 12/11/2009 15:55:57
+EESchema Schematic File Version 2  date 12/11/2009 16:17:56
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
@@ -13,9 +13,27 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 10550 2550 2    60   Input ~ 0
+Text HLabel 10550 2550 2    60   Output ~ 0
 Vout1(500V)
-Text HLabel 10550 3200 2    60   Input ~ 0
+$Comp
+L VCC #PWR?
+U 1 1 4AFCA566
+P 7300 4600
+F 0 "#PWR?" H 7300 4700 30  0001 C CNN
+F 1 "VCC" H 7300 4700 30  0000 C CNN
+	1    7300 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 4AFCA556
+P 2600 2950
+F 0 "#PWR?" H 2600 3050 30  0001 C CNN
+F 1 "VCC" H 2600 3050 30  0000 C CNN
+	1    2600 2950
+	0    -1   -1   0   
+$EndComp
+Text HLabel 10550 3200 2    60   Output ~ 0
 Vout2(500V)
 Wire Wire Line
 	9800 5500 9800 5850
@@ -235,8 +253,6 @@ Wire Wire Line
 	2600 2950 7300 2950
 Wire Wire Line
 	7300 4600 6150 4600
-Text HLabel 7300 4600 2    60   Input ~ 0
-Input_Battery(Vcc)
 $Comp
 L C C3
 U 1 1 4AE8A671
@@ -246,8 +262,6 @@ F 1 "1000u" H 3350 3050 50  0000 L CNN
 	1    3300 3150
 	1    0    0    -1  
 $EndComp
-Text HLabel 2600 2950 0    60   Input ~ 0
-Input_Battery(Vtrans)
 Text HLabel 950  4100 3    60   Input ~ 0
 Charge_capacitor
 Text HLabel 9300 5850 0    60   Input ~ 0
