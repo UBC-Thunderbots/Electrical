@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2009-10-31T17:27:34 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2009-11-15T15:05:14 PST
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -8,11 +8,6 @@ $ENDCMP
 $CMP ACOL50
 D Oscillator 50MHz
 K OSCILLATOR
-$ENDCMP
-#
-$CMP CONN_15
-D Symbole general de connexion
-K CONN
 $ENDCMP
 #
 $CMP LD1117V33C
