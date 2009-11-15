@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 12/11/2009 18:19:12
+EESchema Schematic File Version 2  date 14/11/2009 17:55:23
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 3
 Title ""
-Date "13 nov 2009"
+Date "14 nov 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Kmarq B 7550 1850 "Warning Pin power_in not driven (Net 39)" F=1
 Wire Wire Line
 	9050 4600 8950 4600
 Wire Wire Line

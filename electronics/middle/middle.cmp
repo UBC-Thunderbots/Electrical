@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 12/11/2009 18:27:10
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 15/11/2009 00:59:31
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A683;
@@ -33,20 +33,6 @@ TimeStamp = /4AECDBEB/4AE8DB15;
 Reference = D2;
 ValeurCmp = DIODE;
 IdModule  = RURP860;
-EndCmp
-
-BeginCmp
-TimeStamp = /4AECDBEB/4AE8D74B;
-Reference = M1;
-ValeurCmp = M1;
-IdModule  = SUM33N20;
-EndCmp
-
-BeginCmp
-TimeStamp = /4AECDBEB/4AE8DA97;
-Reference = M2;
-ValeurCmp = M2;
-IdModule  = SUM33N20;
 EndCmp
 
 BeginCmp
@@ -101,15 +87,29 @@ EndCmp
 BeginCmp
 TimeStamp = /4AECDBEB/4AEA2C04;
 Reference = Q1;
-ValeurCmp = M3;
-IdModule  = TO220;
+ValeurCmp = MOSFET_N;
+IdModule  = TO-247AC;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AEAA3C1;
 Reference = Q2;
 ValeurCmp = MOSFET_N;
-IdModule  = TO220;
+IdModule  = TO-247AC;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDBEB/4AE8DA97;
+Reference = Q3;
+ValeurCmp = MOSFET_N;
+IdModule  = SUM33N20;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AECDBEB/4AE8D74B;
+Reference = Q4;
+ValeurCmp = MOSFET_N;
+IdModule  = SUM33N20;
 EndCmp
 
 BeginCmp
@@ -144,14 +144,14 @@ BeginCmp
 TimeStamp = /4AECDBEB/4AE8A5D2;
 Reference = R5a1;
 ValeurCmp = 0.05;
-IdModule  = R3;
+IdModule  = RL3264L4;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A517;
 Reference = R5b1;
 ValeurCmp = 0.05;
-IdModule  = R3;
+IdModule  = RL3264L4;
 EndCmp
 
 BeginCmp
@@ -242,7 +242,7 @@ BeginCmp
 TimeStamp = /4AECDBEB/4AE8DB24;
 Reference = T1;
 ValeurCmp = 1:10;
-IdModule  = TRANSF-37x44;
+IdModule  = GA3460-BL;
 EndCmp
 
 BeginCmp
@@ -256,7 +256,7 @@ BeginCmp
 TimeStamp = /4AECDBEB/4AECD722;
 Reference = U2;
 ValeurCmp = LT3751;
-IdModule  = DIP-20__300;
+IdModule  = LT3751;
 EndCmp
 
 BeginCmp

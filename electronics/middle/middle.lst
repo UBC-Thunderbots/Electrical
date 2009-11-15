@@ -1,0 +1,89 @@
+EESchema (20090216-final)  >> Creation date: 14/11/2009 17:50:21
+
+#Cmp ( order = Reference )
+| C1         10u         
+| C2         10u         
+| C3         1000u       
+| D1         DIODE       
+| D2         DIODE       
+| P1         CONN_20X2   
+| P2         CONN_15X2   
+| P3         CONN_2      
+| P4         CONN_2      
+| P5         CONN_2      
+| P6         CONN_2      
+| P7         CONN_2      
+| Q1         MOSFET_N    
+| Q2         MOSFET_N    
+| Q3         MOSFET_N    
+| Q4         MOSFET_N    
+| R1         191k        
+| R2         475k        
+| R3         191k        
+| R4         475k        
+| R7         18.2k       
+| R8         40.2k       
+| R9         300         
+| R10        100k        
+| R11        100k        
+| R12        40.2k       
+| R13        300         
+| R14        100         
+| R15        100         
+| R16        R           
+| R17        R           
+| R18        R           
+| R5a1       0.05        
+| R5b1       0.05        
+| T1         1:10        
+| U1         OPTOCOUPLER_6DIP
+| U2         LT3751      
+| U3         OPTOCOUPLER_6DIP
+| U4         OPTOCOUPLER_6DIP
+| Y-RATED1   4.7n        
+#End Cmp
+
+#Cmp ( order = Value )
+| 0.05         R5a1      
+| 0.05         R5b1      
+| 100          R14       
+| 100          R15       
+| 1000u        C3        
+| 100k         R10       
+| 100k         R11       
+| 10u          C1        
+| 10u          C2        
+| 18.2k        R7        
+| 191k         R1        
+| 191k         R3        
+| 1:10         T1        
+| 300          R9        
+| 300          R13       
+| 4.7n         Y-RATED1  
+| 40.2k        R8        
+| 40.2k        R12       
+| 475k         R2        
+| 475k         R4        
+| CONN_15X2    P2        
+| CONN_2       P3        
+| CONN_2       P4        
+| CONN_2       P5        
+| CONN_2       P6        
+| CONN_2       P7        
+| CONN_20X2    P1        
+| DIODE        D1        
+| DIODE        D2        
+| LT3751       U2        
+| MOSFET_N     Q1        
+| MOSFET_N     Q2        
+| MOSFET_N     Q3        
+| MOSFET_N     Q4        
+| OPTOCOUPLER_6DIP U1        
+| OPTOCOUPLER_6DIP U3        
+| OPTOCOUPLER_6DIP U4        
+| R            R16       
+| R            R17       
+| R            R18       
+#End Cmp
+
+#End List
