@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 14/11/2009 17:55:23
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,.\middle.cache
+EESchema Schematic File Version 2  date 2009-11-15T15:03:06 PST
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./middle.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -13,43 +13,53 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 7550 1850 "Warning Pin power_in not driven (Net 39)" F=1
 Wire Wire Line
-	9050 4600 8950 4600
+	7700 2000 7350 2000
 Wire Wire Line
-	9000 4200 9000 4150
+	7350 2000 7350 1850
 Wire Wire Line
-	9000 4150 9050 4150
-Wire Wire Line
-	9000 3750 9000 3700
-Wire Wire Line
-	9000 3700 9050 3700
-Wire Wire Line
-	5000 3750 5100 3750
-Wire Wire Line
-	5000 3650 5100 3650
-Wire Wire Line
-	5000 3550 5100 3550
-Wire Wire Line
-	7650 2650 7700 2650
-Wire Wire Line
-	7550 2000 7700 2000
-Wire Wire Line
-	7550 1850 7550 2450
-Wire Wire Line
-	7550 2450 7700 2450
-Connection ~ 7550 2000
-Wire Wire Line
-	7700 2200 7650 2200
-Wire Wire Line
-	7650 2200 7650 2750
-Connection ~ 7650 2650
-Wire Wire Line
-	8950 3500 9050 3500
+	8950 4400 9050 4400
 Wire Wire Line
 	8950 3950 9050 3950
 Wire Wire Line
-	8950 4400 9050 4400
+	8950 3500 9050 3500
+Connection ~ 7650 2650
+Wire Wire Line
+	7650 2750 7650 2200
+Wire Wire Line
+	7650 2200 7700 2200
+Connection ~ 7550 2000
+Wire Wire Line
+	7700 2450 7550 2450
+Wire Wire Line
+	7550 2450 7550 1850
+Wire Wire Line
+	7650 2650 7700 2650
+Wire Wire Line
+	5000 3550 5100 3550
+Wire Wire Line
+	5000 3650 5100 3650
+Wire Wire Line
+	5000 3750 5100 3750
+Wire Wire Line
+	9050 3700 9000 3700
+Wire Wire Line
+	9000 3700 9000 3750
+Wire Wire Line
+	9050 4150 9000 4150
+Wire Wire Line
+	9000 4150 9000 4200
+Wire Wire Line
+	9050 4600 8950 4600
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 4B008885
+P 7350 1850
+F 0 "#FLG01" H 7350 2120 30  0001 C CNN
+F 1 "PWR_FLAG" H 7350 2080 30  0000 C CNN
+	1    7350 1850
+	1    0    0    -1  
+$EndComp
 $Comp
 L CONN_2 P7
 U 1 1 4AFCB6ED
@@ -60,10 +70,10 @@ F 1 "CONN_2" V 9450 4500 40  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L GND #PWR02
 U 1 1 4AFCB6DB
 P 9000 4200
-F 0 "#PWR01" H 9000 4200 30  0001 C CNN
+F 0 "#PWR02" H 9000 4200 30  0001 C CNN
 F 1 "GND" H 9000 4130 30  0001 C CNN
 	1    9000 4200
 	1    0    0    -1  
@@ -78,10 +88,10 @@ F 1 "CONN_2" V 9450 4050 40  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L GND #PWR03
 U 1 1 4AFCB6C1
 P 9000 3750
-F 0 "#PWR02" H 9000 3750 30  0001 C CNN
+F 0 "#PWR03" H 9000 3750 30  0001 C CNN
 F 1 "GND" H 9000 3680 30  0001 C CNN
 	1    9000 3750
 	1    0    0    -1  
@@ -181,19 +191,19 @@ F 1 "CONN_20X2" V 5500 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR04
 U 1 1 4AFCB418
 P 7650 2750
-F 0 "#PWR03" H 7650 2750 30  0001 C CNN
+F 0 "#PWR04" H 7650 2750 30  0001 C CNN
 F 1 "GND" H 7650 2680 30  0001 C CNN
 	1    7650 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR04
+L VCC #PWR05
 U 1 1 4AFCB40C
 P 7550 1850
-F 0 "#PWR04" H 7550 1950 30  0001 C CNN
+F 0 "#PWR05" H 7550 1950 30  0001 C CNN
 F 1 "VCC" H 7550 1950 30  0000 C CNN
 	1    7550 1850
 	1    0    0    -1  
