@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-20T15:54:09 PST
+EESchema Schematic File Version 2  date 2009-11-20T15:55:59 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Kmarq B 9400 1950 "Warning: Pin power_out connected to Pin BiDi (net 24)" F=1
 Wire Wire Line
 	2550 4750 2250 4750
 Connection ~ 9800 4100
@@ -260,10 +261,10 @@ NoConn ~ 10150 2050
 NoConn ~ 9400 2050
 NoConn ~ 9400 1800
 $Comp
-L GND #PWR020
+L GND #PWR019
 U 1 1 4AC56AA4
 P 9150 1950
-F 0 "#PWR020" H 9150 1950 30  0001 C CNN
+F 0 "#PWR019" H 9150 1950 30  0001 C CNN
 F 1 "GND" H 9150 1880 30  0001 C CNN
 	1    9150 1950
 	0    1    1    0   
@@ -279,28 +280,28 @@ F 2 "USB_B" H 9800 1600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR021
+L VCC #PWR020
 U 1 1 4AC0506E
 P 2250 4850
-F 0 "#PWR021" H 2250 4950 30  0001 C CNN
+F 0 "#PWR020" H 2250 4950 30  0001 C CNN
 F 1 "VCC" H 2250 4950 30  0000 C CNN
 	1    2250 4850
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VCC #PWR022
+L VCC #PWR021
 U 1 1 4AC04F74
 P 5200 5150
-F 0 "#PWR022" H 5200 5250 30  0001 C CNN
+F 0 "#PWR021" H 5200 5250 30  0001 C CNN
 F 1 "VCC" H 5200 5250 30  0000 C CNN
 	1    5200 5150
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR023
+L GND #PWR022
 U 1 1 4AC04EA4
 P 6350 5250
-F 0 "#PWR023" H 6350 5250 30  0001 C CNN
+F 0 "#PWR022" H 6350 5250 30  0001 C CNN
 F 1 "GND" H 6350 5180 30  0001 C CNN
 	1    6350 5250
 	1    0    0    -1  
@@ -382,19 +383,19 @@ GPIO3
 Text Label 5000 3250 0    60   ~ 0
 GPIO1
 $Comp
-L VCC #PWR024
+L VCC #PWR023
 U 1 1 4ABEA0F8
 P 5600 1400
-F 0 "#PWR024" H 5600 1500 30  0001 C CNN
+F 0 "#PWR023" H 5600 1500 30  0001 C CNN
 F 1 "VCC" H 5600 1500 30  0000 C CNN
 	1    5600 1400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR025
+L GND #PWR024
 U 1 1 4ABEA0F3
 P 5600 1500
-F 0 "#PWR025" H 5600 1500 30  0001 C CNN
+F 0 "#PWR024" H 5600 1500 30  0001 C CNN
 F 1 "GND" H 5600 1430 30  0001 C CNN
 	1    5600 1500
 	0    1    1    0   
@@ -417,19 +418,19 @@ F 2 "SIL-6" H 6300 1550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR026
+L +BATT #PWR025
 U 1 1 4ABE9D54
 P 9700 4100
-F 0 "#PWR026" H 9700 4050 20  0001 C CNN
+F 0 "#PWR025" H 9700 4050 20  0001 C CNN
 F 1 "+BATT" H 9700 4200 30  0000 C CNN
 	1    9700 4100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR027
+L GND #PWR026
 U 1 1 4ABE9D4E
 P 9700 4300
-F 0 "#PWR027" H 9700 4300 30  0001 C CNN
+F 0 "#PWR026" H 9700 4300 30  0001 C CNN
 F 1 "GND" H 9700 4230 30  0001 C CNN
 	1    9700 4300
 	0    1    1    0   

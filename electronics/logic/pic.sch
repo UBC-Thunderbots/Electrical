@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-20T15:54:09 PST
+EESchema Schematic File Version 2  date 2009-11-20T15:55:59 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -122,10 +122,10 @@ Wire Wire Line
 Text HLabel 8450 3900 2    60   Input ~ 0
 VMON
 $Comp
-L VCC #PWR031
+L VCC #PWR029
 U 1 1 4AD91E7E
 P 3950 2600
-F 0 "#PWR031" H 3950 2700 30  0001 C CNN
+F 0 "#PWR029" H 3950 2700 30  0001 C CNN
 F 1 "VCC" H 3950 2700 30  0000 C CNN
 	1    3950 2600
 	1    0    0    -1  
@@ -201,28 +201,28 @@ PGC
 Text HLabel 8450 3200 2    60   BiDi ~ 0
 PGD
 $Comp
-L GND #PWR032
+L GND #PWR030
 U 1 1 4ABE95D6
 P 8450 3400
-F 0 "#PWR032" H 8450 3400 30  0001 C CNN
+F 0 "#PWR030" H 8450 3400 30  0001 C CNN
 F 1 "GND" H 8450 3330 30  0001 C CNN
 	1    8450 3400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR033
+L GND #PWR031
 U 1 1 4ABE95C5
 P 8450 4100
-F 0 "#PWR033" H 8450 4100 30  0001 C CNN
+F 0 "#PWR031" H 8450 4100 30  0001 C CNN
 F 1 "GND" H 8450 4030 30  0001 C CNN
 	1    8450 4100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VCC #PWR034
+L VCC #PWR032
 U 1 1 4ABE95C2
 P 8450 4000
-F 0 "#PWR034" H 8450 4100 30  0001 C CNN
+F 0 "#PWR032" H 8450 4100 30  0001 C CNN
 F 1 "VCC" H 8450 4100 30  0000 C CNN
 	1    8450 4000
 	0    1    1    0   
@@ -248,10 +248,10 @@ SPIOUT
 Text HLabel 3650 5000 0    60   Input ~ 0
 SPIIN
 $Comp
-L VCC #PWR035
+L VCC #PWR033
 U 1 1 4ABE9454
 P 3650 4900
-F 0 "#PWR035" H 3650 5000 30  0001 C CNN
+F 0 "#PWR033" H 3650 5000 30  0001 C CNN
 F 1 "VCC" H 3650 5000 30  0000 C CNN
 	1    3650 4900
 	0    -1   -1   0   
@@ -261,10 +261,10 @@ BRAKE
 Text HLabel 3650 4600 0    60   BiDi ~ 0
 SPICK
 $Comp
-L GND #PWR036
+L GND #PWR034
 U 1 1 4ABE9401
 P 1700 5350
-F 0 "#PWR036" H 1700 5350 30  0001 C CNN
+F 0 "#PWR034" H 1700 5350 30  0001 C CNN
 F 1 "GND" H 1700 5280 30  0001 C CNN
 	1    1700 5350
 	1    0    0    -1  
@@ -300,19 +300,19 @@ F 2 "HC-18UV" H 1700 4650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR037
+L GND #PWR035
 U 1 1 4ABE93C2
 P 3650 4300
-F 0 "#PWR037" H 3650 4300 30  0001 C CNN
+F 0 "#PWR035" H 3650 4300 30  0001 C CNN
 F 1 "GND" H 3650 4230 30  0001 C CNN
 	1    3650 4300
 	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR038
+L VCC #PWR036
 U 1 1 4ABE93BC
 P 3650 4200
-F 0 "#PWR038" H 3650 4300 30  0001 C CNN
+F 0 "#PWR036" H 3650 4300 30  0001 C CNN
 F 1 "VCC" H 3650 4300 30  0000 C CNN
 	1    3650 4200
 	0    -1   -1   0   
