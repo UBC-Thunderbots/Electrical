@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-18T12:33:21 PST
+EESchema Schematic File Version 2  date 2009-11-20T15:54:09 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -140,8 +140,8 @@ F 2 "R3" H 3950 2900 60  0001 C CNN
 	1    3950 2900
 	1    0    0    -1  
 $EndComp
-Text HLabel 3650 4800 0    60   BiDi ~ 0
-MISC
+Text HLabel 3650 4800 0    60   Output ~ 0
+/RTS
 Text HLabel 8450 4900 2    60   BiDi ~ 0
 USBD-
 Text HLabel 8450 4800 2    60   BiDi ~ 0

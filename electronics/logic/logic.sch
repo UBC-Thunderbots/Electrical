@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-18T12:33:21 PST
+EESchema Schematic File Version 2  date 2009-11-20T15:54:09 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -14,153 +14,149 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	3300 5650 3300 2000
+	6150 5750 7450 5750
 Wire Wire Line
-	3300 5650 4600 5650
+	4600 6300 4450 6300
 Wire Wire Line
-	3300 2000 6350 2000
+	4450 6300 4450 5850
 Wire Wire Line
-	6350 2000 6350 2500
+	4450 5850 4600 5850
 Wire Wire Line
-	4600 2400 3750 2400
+	4600 2300 3600 2300
 Wire Wire Line
-	3750 2400 3750 5150
+	3600 2300 3600 5250
 Wire Wire Line
-	3750 5150 4600 5150
-Wire Wire Line
-	4600 2600 4050 2600
-Wire Wire Line
-	4050 2600 4050 4950
-Wire Wire Line
-	4050 4950 4600 4950
-Wire Wire Line
-	4600 2700 4200 2700
-Wire Wire Line
-	4200 2700 4200 4850
-Connection ~ 8600 4750
-Wire Wire Line
-	8600 4750 7150 4750
-Wire Wire Line
-	7150 4750 7150 5650
-Wire Wire Line
-	7150 5650 6150 5650
-Wire Wire Line
-	6150 5850 7450 5850
-Wire Wire Line
-	8500 4450 8600 4450
-Wire Wire Line
-	8600 4450 8600 5150
-Wire Wire Line
-	8600 5150 8250 5150
-Wire Wire Line
-	7150 4350 6850 4350
-Wire Wire Line
-	6850 4350 6850 5250
-Wire Wire Line
-	6850 5250 6150 5250
-Wire Wire Line
-	7150 3950 6650 3950
-Wire Wire Line
-	6650 3950 6650 4950
-Wire Wire Line
-	6650 4950 6150 4950
-Wire Wire Line
-	6150 4750 6450 4750
-Wire Wire Line
-	6150 4550 6250 4550
-Connection ~ 6450 3650
-Wire Wire Line
-	6450 4750 6450 3650
-Connection ~ 6250 3550
-Wire Wire Line
-	6250 4550 6250 3550
-Wire Wire Line
-	7150 3750 5800 3750
-Wire Wire Line
-	5800 3550 7150 3550
-Wire Wire Line
-	4750 3300 4500 3300
-Wire Wire Line
-	4500 3300 4500 4550
-Wire Wire Line
-	4500 4550 4600 4550
+	3600 5250 4600 5250
 Wire Bus Line
-	7150 3350 6750 3350
+	4600 2500 3900 2500
 Wire Bus Line
-	6750 3350 6750 2600
+	3900 2500 3900 5050
 Wire Bus Line
-	6750 2600 5950 2600
+	3900 5050 4600 5050
 Wire Wire Line
-	5800 3650 7150 3650
+	4600 4850 4200 4850
+Wire Wire Line
+	4600 2800 4350 2800
+Wire Wire Line
+	4350 2800 4350 4750
+Wire Wire Line
+	4350 4750 4600 4750
+Connection ~ 8700 4650
+Wire Wire Line
+	8700 4650 7050 4650
+Wire Wire Line
+	7050 4650 7050 5550
+Wire Wire Line
+	7050 5550 6150 5550
+Wire Wire Line
+	8500 4350 8700 4350
+Wire Wire Line
+	8700 4350 8700 5250
+Wire Wire Line
+	8700 5250 8250 5250
+Wire Wire Line
+	7150 4450 6950 4450
+Wire Wire Line
+	6950 4450 6950 5350
+Wire Wire Line
+	6950 5350 6150 5350
+Wire Wire Line
+	6150 5150 6750 5150
+Wire Wire Line
+	6750 5150 6750 4250
+Wire Wire Line
+	6750 4250 7150 4250
+Connection ~ 6550 3850
+Wire Wire Line
+	6550 3850 6550 4850
+Wire Wire Line
+	6550 4850 6150 4850
+Wire Wire Line
+	6150 4650 6350 4650
+Connection ~ 6350 3750
+Wire Wire Line
+	6350 4650 6350 3750
 Wire Wire Line
 	7150 3850 5800 3850
 Wire Wire Line
-	6350 3750 6350 4650
-Connection ~ 6350 3750
-Wire Wire Line
-	6350 4650 6150 4650
-Wire Wire Line
-	6150 4850 6550 4850
-Wire Wire Line
-	6550 4850 6550 3850
-Connection ~ 6550 3850
-Wire Wire Line
-	7150 4250 6750 4250
-Wire Wire Line
-	6750 4250 6750 5150
-Wire Wire Line
-	6750 5150 6150 5150
-Wire Wire Line
-	6150 5350 6950 5350
-Wire Wire Line
-	6950 5350 6950 4450
-Wire Wire Line
-	6950 4450 7150 4450
-Wire Wire Line
-	8250 5250 8700 5250
-Wire Wire Line
-	8700 5250 8700 4350
-Wire Wire Line
-	8700 4350 8500 4350
-Wire Wire Line
-	6150 5550 7050 5550
-Wire Wire Line
-	7050 5550 7050 4650
-Wire Wire Line
-	7050 4650 8700 4650
-Connection ~ 8700 4650
-Wire Wire Line
-	4600 4750 4350 4750
-Wire Wire Line
-	4350 4750 4350 2800
-Wire Wire Line
-	4350 2800 4600 2800
-Wire Wire Line
-	4200 4850 4600 4850
+	5800 3650 7150 3650
 Wire Bus Line
-	4600 5050 3900 5050
+	5950 2600 6750 2600
 Wire Bus Line
-	3900 5050 3900 2500
+	6750 2600 6750 3350
 Wire Bus Line
-	3900 2500 4600 2500
+	6750 3350 7150 3350
 Wire Wire Line
-	4600 5250 3600 5250
+	4600 4550 4500 4550
 Wire Wire Line
-	3600 5250 3600 2300
+	4500 4550 4500 3300
 Wire Wire Line
-	3600 2300 4600 2300
+	4500 3300 4750 3300
 Wire Wire Line
-	4600 2200 3450 2200
+	5800 3550 7150 3550
 Wire Wire Line
-	3450 2200 3450 5350
+	7150 3750 5800 3750
 Wire Wire Line
-	3450 5350 4600 5350
+	6250 3550 6250 4550
+Connection ~ 6250 3550
 Wire Wire Line
-	4600 5850 4450 5850
+	6450 3650 6450 4750
+Connection ~ 6450 3650
 Wire Wire Line
-	4450 5850 4450 6300
+	6250 4550 6150 4550
 Wire Wire Line
-	4450 6300 4600 6300
+	6450 4750 6150 4750
+Wire Wire Line
+	6150 4950 6650 4950
+Wire Wire Line
+	6650 4950 6650 3950
+Wire Wire Line
+	6650 3950 7150 3950
+Wire Wire Line
+	6150 5250 6850 5250
+Wire Wire Line
+	6850 5250 6850 4350
+Wire Wire Line
+	6850 4350 7150 4350
+Wire Wire Line
+	8250 5150 8600 5150
+Wire Wire Line
+	8600 5150 8600 4450
+Wire Wire Line
+	8600 4450 8500 4450
+Wire Wire Line
+	6150 5850 7450 5850
+Wire Wire Line
+	6150 5650 7150 5650
+Wire Wire Line
+	7150 5650 7150 4750
+Wire Wire Line
+	7150 4750 8600 4750
+Connection ~ 8600 4750
+Wire Wire Line
+	4200 4850 4200 2700
+Wire Wire Line
+	4200 2700 4600 2700
+Wire Wire Line
+	4600 4950 4050 4950
+Wire Wire Line
+	4050 4950 4050 2600
+Wire Wire Line
+	4050 2600 4600 2600
+Wire Wire Line
+	4600 5150 3750 5150
+Wire Wire Line
+	3750 5150 3750 2400
+Wire Wire Line
+	3750 2400 4600 2400
+Wire Wire Line
+	6350 2500 6350 2000
+Wire Wire Line
+	6350 2000 3300 2000
+Wire Wire Line
+	4600 5650 3300 5650
+Wire Wire Line
+	3300 5650 3300 2000
 Text Label 6750 2600 3    60   ~ 0
 GPIO[1..38]
 Text Label 6000 2000 0    60   ~ 0
@@ -196,7 +192,6 @@ F5 "MCLR" O L 4600 2800 60
 F6 "GPIO[1..38]" B R 5950 2600 60 
 F7 "USBD-" B L 4600 2400 60 
 F8 "USBD+" B L 4600 2300 60 
-F9 "MISC" B L 4600 2200 60 
 $EndSheet
 $Sheet
 S 7450 5100 800  800 
@@ -206,6 +201,7 @@ F1 "xbee.sch" 60
 F2 "BOOTLOAD" O L 7450 5850 60 
 F3 "DIN" I R 8250 5250 60 
 F4 "DOUT" O R 8250 5150 60 
+F5 "/RTS" I L 7450 5750 60 
 $EndSheet
 $Sheet
 S 4600 4500 1550 1400
@@ -231,8 +227,8 @@ F17 "SPIOUT" B R 6150 4750 60
 F18 "USBD-" B L 4600 5150 60 
 F19 "USBD+" B L 4600 5250 60 
 F20 "BRAKE" B L 4600 5650 60 
-F21 "MISC" B L 4600 5350 60 
-F22 "VMON" I L 4600 5850 60 
+F21 "VMON" I L 4600 5850 60 
+F22 "/RTS" O R 6150 5750 60 
 $EndSheet
 $Sheet
 S 4750 3250 1050 950 

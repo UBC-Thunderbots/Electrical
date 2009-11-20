@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-18T12:33:21 PST
+EESchema Schematic File Version 2  date 2009-11-20T15:54:09 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	3050 1400 3100 1400
 Wire Wire Line
 	2550 4750 2250 4750
 Connection ~ 9800 4100
@@ -179,8 +177,6 @@ Wire Wire Line
 Wire Wire Line
 	9150 1950 9400 1950
 Wire Wire Line
-	2550 1400 2200 1400
-Wire Wire Line
 	3450 4950 3450 3450
 Wire Wire Line
 	3450 3450 3350 3450
@@ -210,28 +206,6 @@ Wire Wire Line
 	3350 4750 3450 4750
 Wire Wire Line
 	3350 4850 3450 4850
-Wire Wire Line
-	3500 1400 3550 1400
-Wire Wire Line
-	3550 1400 3550 1450
-$Comp
-L R R5
-U 1 1 4AE36645
-P 2800 1400
-F 0 "R5" V 2880 1400 50  0000 C CNN
-F 1 "330R" V 2800 1400 50  0000 C CNN
-	1    2800 1400
-	0    1    1    0   
-$EndComp
-$Comp
-L TEST W1
-U 1 1 4AE36633
-P 3300 1400
-F 0 "W1" H 3300 1460 40  0000 C CNN
-F 1 "TEST" H 3300 1330 40  0000 C CNN
-	1    3300 1400
-	1    0    0    -1  
-$EndComp
 $Comp
 L +5V #PWR015
 U 1 1 4ADACEF3
@@ -276,17 +250,6 @@ F 0 "P1" H 2950 4950 60  0000 C CNN
 F 1 "CONN_15X2" V 2950 4150 50  0000 C CNN
 F 2 "IDC-30" H 2950 4150 60  0001 C CNN
 	1    2950 4150
-	1    0    0    -1  
-$EndComp
-Text HLabel 2200 1400 0    60   BiDi ~ 0
-MISC
-$Comp
-L GND #PWR019
-U 1 1 4AC57812
-P 3550 1450
-F 0 "#PWR019" H 3550 1450 30  0001 C CNN
-F 1 "GND" H 3550 1380 30  0001 C CNN
-	1    3550 1450
 	1    0    0    -1  
 $EndComp
 Text HLabel 10400 1950 2    60   BiDi ~ 0
