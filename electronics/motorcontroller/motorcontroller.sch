@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-10-31T16:53:55 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
+EESchema Schematic File Version 2  date Sat 21 Nov 2009 12:57:15 PM PST
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -394,7 +394,7 @@ L R R3
 U 1 1 4ADA5FCB
 P 2500 5750
 F 0 "R3" V 2580 5750 50  0000 C CNN
-F 1 "R" V 2500 5750 50  0000 C CNN
+F 1 "10kR" V 2500 5750 50  0000 C CNN
 	1    2500 5750
 	1    0    0    -1  
 $EndComp
@@ -403,7 +403,7 @@ L R R2
 U 1 1 4ADA5FCA
 P 2500 5150
 F 0 "R2" V 2580 5150 50  0000 C CNN
-F 1 "R" V 2500 5150 50  0000 C CNN
+F 1 "11kR" V 2500 5150 50  0000 C CNN
 	1    2500 5150
 	1    0    0    -1  
 $EndComp
