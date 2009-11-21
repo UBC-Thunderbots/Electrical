@@ -7,6 +7,7 @@ electronics/logic/*.bck
 electronics/logic/*.cache.*
 electronics/logic/*.drl
 electronics/logic/*.erc
+electronics/logic/*.mvl
 electronics/logic/*.net
 electronics/logic/*.pho
 electronics/middle/$savepcb.*
@@ -16,6 +17,7 @@ electronics/middle/*.bck
 electronics/middle/*.cache.*
 electronics/middle/*.drl
 electronics/middle/*.erc
+electronics/middle/*.mvl
 electronics/middle/*.net
 electronics/middle/*.pho
 electronics/motorcontroller/$savepcb.*
@@ -25,5 +27,6 @@ electronics/motorcontroller/*.bck
 electronics/motorcontroller/*.cache.*
 electronics/motorcontroller/*.drl
 electronics/motorcontroller/*.erc
+electronics/motorcontroller/*.mvl
 electronics/motorcontroller/*.net
 electronics/motorcontroller/*.pho
