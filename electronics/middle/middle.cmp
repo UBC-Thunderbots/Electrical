@@ -1,23 +1,23 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 15/11/2009 00:59:31
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 21/11/2009 14:51:07
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A683;
 Reference = C1;
-ValeurCmp = 10u;
+ValeurCmp = 10uF;
 IdModule  = C2;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A69C;
 Reference = C2;
-ValeurCmp = 10u;
+ValeurCmp = 10uF;
 IdModule  = C2;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A671;
 Reference = C3;
-ValeurCmp = 1000u;
+ValeurCmp = 1000uF;
 IdModule  = C1V7H;
 EndCmp
 
@@ -239,9 +239,9 @@ IdModule  = R4;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AECDBEB/4AE8DB24;
+TimeStamp = /4AECDBEB/4B02F7A0;
 Reference = T1;
-ValeurCmp = 1:10;
+ValeurCmp = GA3460-BL;
 IdModule  = GA3460-BL;
 EndCmp
 
@@ -276,7 +276,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4AECDBEB/4AE8A6A7;
 Reference = Y-RATED1;
-ValeurCmp = 4.7n;
+ValeurCmp = 4.7nF;
 IdModule  = C1;
 EndCmp
 
