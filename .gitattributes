@@ -3,6 +3,7 @@ electronics/VHDL/Gray[!!-~]Counter/CounterTest.vhd -text
 electronics/VHDL/Gray[!!-~]Counter/GrayCounter.vhd -text
 electronics/VHDL/Multiplier/Multiplier.vhd -text
 electronics/VHDL/Multiplier/MultiplierTest.vhd -text
+electronics/VHDL/PID[!!-~]Controller/Makefile -text
 electronics/VHDL/PID[!!-~]Controller/PIDController.vhd -text
 electronics/VHDL/PID[!!-~]Controller/PIDTest.vhd -text
 electronics/block[!!-~]diagram.fig -text
