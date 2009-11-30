@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T18:12:16 PST
+EESchema Schematic File Version 2  date 2009-11-29T22:59:56 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -13,8 +13,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 7050 950  0    60   ~ 0
-DSNS[1..3]
+Connection ~ 2500 6050
+Wire Wire Line
+	2850 5950 2850 6050
+Wire Wire Line
+	2850 6050 1350 6050
 Connection ~ 7200 6500
 Wire Wire Line
 	7200 6500 7200 1850
@@ -49,9 +52,7 @@ Wire Bus Line
 	5350 1150 4450 1150
 Connection ~ 1750 6050
 Wire Wire Line
-	1350 5650 1350 6050
-Wire Wire Line
-	1350 6050 2500 6050
+	1350 6050 1350 5650
 Connection ~ 1750 4850
 Wire Wire Line
 	1750 5250 1750 4850
@@ -131,8 +132,6 @@ Wire Wire Line
 	2200 6050 2200 5900
 Wire Wire Line
 	2500 5500 2500 5400
-Wire Wire Line
-	2500 5450 2750 5450
 Wire Wire Line
 	2750 5450 2750 5400
 Connection ~ 2500 5450
@@ -265,6 +264,22 @@ Wire Wire Line
 Wire Wire Line
 	7300 1900 7300 6600
 Connection ~ 7300 6600
+Wire Wire Line
+	2500 5450 2850 5450
+Wire Wire Line
+	2850 5450 2850 5550
+Connection ~ 2750 5450
+$Comp
+L C C26
+U 1 1 4B136D47
+P 2850 5750
+F 0 "C26" H 2900 5850 50  0000 L CNN
+F 1 "0.1uF" H 2900 5650 50  0000 L CNN
+	1    2850 5750
+	1    0    0    -1  
+$EndComp
+Text Label 7050 950  0    60   ~ 0
+DSNS[1..3]
 $Comp
 L GND #PWR01
 U 1 1 4B132890

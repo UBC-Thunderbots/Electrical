@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T18:12:16 PST
+EESchema Schematic File Version 2  date 2009-11-29T22:59:56 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -363,7 +363,7 @@ P 3100 4400
 F 0 "R21" V 3180 4400 50  0000 C CNN
 F 1 "10k" V 3100 4400 50  0000 C CNN
 	1    3100 4400
-	0    1    -1   0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R20
