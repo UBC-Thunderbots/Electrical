@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le 2009-11-29T21:14:55 PST
+Cmp-Mod V01 Genere par PcbNew le 2009-11-29T21:26:12 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -190,17 +190,17 @@ IdModule  = MCP1827S;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD90415/4B1353EA;
+TimeStamp = /4AD90415/4B135733;
 Reference = U6;
 ValeurCmp = W25X16AVDAIZ;
-IdModule  = 8DIP300;
+IdModule  = DIP-8__300;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD90413/4B135439;
+TimeStamp = /4AD90413/4B135728;
 Reference = U7;
 ValeurCmp = PIC18F4550;
-IdModule  = 40DIP600;
+IdModule  = DIP-40__600;
 EndCmp
 
 BeginCmp
