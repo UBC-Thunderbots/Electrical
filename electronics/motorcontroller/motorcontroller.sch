@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T18:07:32 PST
+EESchema Schematic File Version 2  date 2009-11-29T18:12:16 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 7050 950  0    60   ~ 0
+DSNS[1..3]
 Connection ~ 7200 6500
 Wire Wire Line
 	7200 6500 7200 1850
@@ -264,10 +266,10 @@ Wire Wire Line
 	7300 1900 7300 6600
 Connection ~ 7300 6600
 $Comp
-L GND #PWR6
+L GND #PWR01
 U 1 1 4B132890
 P 8500 550
-F 0 "#PWR6" H 8500 550 30  0001 C CNN
+F 0 "#PWR01" H 8500 550 30  0001 C CNN
 F 1 "GND" H 8500 480 30  0001 C CNN
 	1    8500 550 
 	1    0    0    -1  
@@ -363,19 +365,19 @@ DIR[1..5]
 Text Label 5300 1050 2    60   ~ 0
 FAULT[1..5]
 $Comp
-L GND #PWR5
+L GND #PWR02
 U 1 1 4ADBAD1E
 P 3450 6900
-F 0 "#PWR5" H 3450 6900 30  0001 C CNN
+F 0 "#PWR02" H 3450 6900 30  0001 C CNN
 F 1 "GND" H 3450 6830 30  0001 C CNN
 	1    3450 6900
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR4
+L GND #PWR03
 U 1 1 4ADBAD1B
 P 3350 2750
-F 0 "#PWR4" H 3350 2750 30  0001 C CNN
+F 0 "#PWR03" H 3350 2750 30  0001 C CNN
 F 1 "GND" H 3350 2680 30  0001 C CNN
 	1    3350 2750
 	1    0    0    -1  
@@ -545,19 +547,19 @@ F 1 "BZX79-C5V1" H 2200 5600 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR2
+L GND #PWR04
 U 1 1 4ADA5D25
 P 2350 6100
-F 0 "#PWR2" H 2350 6100 30  0001 C CNN
+F 0 "#PWR04" H 2350 6100 30  0001 C CNN
 F 1 "GND" H 2350 6030 30  0001 C CNN
 	1    2350 6100
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR1
+L +BATT #PWR05
 U 1 1 4ADA5D23
 P 2200 4800
-F 0 "#PWR1" H 2200 4750 20  0001 C CNN
+F 0 "#PWR05" H 2200 4750 20  0001 C CNN
 F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    2200 4800
 	1    0    0    -1  
