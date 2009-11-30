@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2009-11-29T17:42:12 PST
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
+EESchema Schematic File Version 2  date 2009-11-29T18:07:32 PST
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 8
 Title ""
-Date "19 oct 2009"
+Date "30 nov 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,38 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 7200 6500
+Wire Wire Line
+	7200 6500 7200 1850
+Wire Wire Line
+	7200 1850 7900 1850
+Connection ~ 7400 6700
+Wire Wire Line
+	7400 6700 7400 1950
+Wire Wire Line
+	7400 1950 8300 1950
+Wire Wire Line
+	8300 1950 8300 1850
+Connection ~ 8100 1200
+Wire Wire Line
+	7350 1200 8100 1200
+Wire Wire Line
+	8300 1050 8300 1350
+Wire Wire Line
+	7900 1050 7900 1350
+Connection ~ 8100 500 
+Wire Wire Line
+	8100 550  8100 500 
+Wire Bus Line
+	7250 1200 7250 950 
+Wire Wire Line
+	5600 6850 4100 6850
+Wire Bus Line
+	4250 6000 4250 1050
+Wire Bus Line
+	4650 6300 4650 1250
+Wire Bus Line
+	5350 1150 4450 1150
 Connection ~ 1750 6050
 Wire Wire Line
 	1350 5650 1350 6050
@@ -22,11 +54,9 @@ Connection ~ 1750 4850
 Wire Wire Line
 	1750 5250 1750 4850
 Wire Wire Line
-	4100 6700 5600 6700
+	3400 2700 3350 2700
 Wire Wire Line
-	3500 2700 3450 2700
-Wire Wire Line
-	3450 2700 3450 2750
+	3350 2700 3350 2750
 Connection ~ 5050 4700
 Wire Wire Line
 	5600 5700 5050 5700
@@ -74,14 +104,6 @@ Wire Wire Line
 	7000 2600 7500 2600
 Wire Wire Line
 	7000 2500 7500 2500
-Wire Bus Line
-	4250 6000 4250 950 
-Wire Bus Line
-	4250 950  5600 950 
-Wire Bus Line
-	4650 6300 4650 1150
-Wire Bus Line
-	4650 1150 5600 1150
 Wire Wire Line
 	4850 5550 5600 5550
 Wire Wire Line
@@ -150,14 +172,6 @@ Connection ~ 4850 3550
 Connection ~ 4850 4550
 Connection ~ 4850 5550
 Wire Wire Line
-	5600 1250 4850 1250
-Wire Wire Line
-	4850 1250 4850 6550
-Wire Bus Line
-	5600 1050 4450 1050
-Wire Bus Line
-	4450 1050 4450 6150
-Wire Wire Line
 	7000 2100 7500 2100
 Wire Wire Line
 	7000 2200 7500 2200
@@ -192,13 +206,11 @@ Wire Wire Line
 Wire Wire Line
 	5050 4700 5600 4700
 Connection ~ 5050 3700
-Wire Wire Line
-	4100 2700 5600 2700
 Connection ~ 5050 2700
 Wire Wire Line
-	3450 6750 3450 6700
+	3450 6900 3450 6850
 Wire Wire Line
-	3450 6700 3500 6700
+	3450 6850 3500 6850
 Wire Wire Line
 	2200 4850 1350 4850
 Wire Wire Line
@@ -207,6 +219,125 @@ Connection ~ 2200 4850
 Wire Wire Line
 	1750 6050 1750 5650
 Connection ~ 2200 6050
+Wire Wire Line
+	5350 1350 4850 1350
+Wire Bus Line
+	4650 1250 5350 1250
+Wire Bus Line
+	4250 1050 5350 1050
+Wire Bus Line
+	4450 1150 4450 6150
+Wire Wire Line
+	4850 1350 4850 6550
+Wire Wire Line
+	5600 2700 4000 2700
+Wire Wire Line
+	5600 6700 4050 6700
+Wire Wire Line
+	4050 6700 4050 950 
+Wire Wire Line
+	4050 950  5350 950 
+Wire Bus Line
+	7250 950  7000 950 
+Wire Wire Line
+	7900 550  7900 500 
+Wire Wire Line
+	7900 500  8500 500 
+Wire Wire Line
+	8500 500  8500 550 
+Wire Wire Line
+	8300 550  8300 500 
+Connection ~ 8300 500 
+Wire Wire Line
+	8100 1350 8100 1050
+Wire Wire Line
+	7350 1100 7900 1100
+Connection ~ 7900 1100
+Wire Wire Line
+	7350 1300 8300 1300
+Connection ~ 8300 1300
+Wire Wire Line
+	8100 1850 8100 1900
+Wire Wire Line
+	8100 1900 7300 1900
+Wire Wire Line
+	7300 1900 7300 6600
+Connection ~ 7300 6600
+$Comp
+L GND #PWR6
+U 1 1 4B132890
+P 8500 550
+F 0 "#PWR6" H 8500 550 30  0001 C CNN
+F 1 "GND" H 8500 480 30  0001 C CNN
+	1    8500 550 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R84
+U 1 1 4B13285C
+P 8300 1600
+F 0 "R84" V 8380 1600 50  0000 C CNN
+F 1 "10kR" V 8300 1600 50  0000 C CNN
+	1    8300 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R82
+U 1 1 4B13285B
+P 8100 1600
+F 0 "R82" V 8180 1600 50  0000 C CNN
+F 1 "10kR" V 8100 1600 50  0000 C CNN
+	1    8100 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R80
+U 1 1 4B13285A
+P 7900 1600
+F 0 "R80" V 7980 1600 50  0000 C CNN
+F 1 "10kR" V 7900 1600 50  0000 C CNN
+	1    7900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R83
+U 1 1 4B13283C
+P 8300 800
+F 0 "R83" V 8380 800 50  0000 C CNN
+F 1 "10kR" V 8300 800 50  0000 C CNN
+	1    8300 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R81
+U 1 1 4B132838
+P 8100 800
+F 0 "R81" V 8180 800 50  0000 C CNN
+F 1 "10kR" V 8100 800 50  0000 C CNN
+	1    8100 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R79
+U 1 1 4B132759
+P 7900 800
+F 0 "R79" V 7980 800 50  0000 C CNN
+F 1 "10kR" V 7900 800 50  0000 C CNN
+	1    7900 800 
+	1    0    0    -1  
+$EndComp
+Text Label 7400 1100 0    60   ~ 0
+DSNS1
+Text Label 7400 1300 0    60   ~ 0
+DSNS3
+Text Label 7400 1200 0    60   ~ 0
+DSNS2
+Entry Wire Line
+	7250 1000 7350 1100
+Entry Wire Line
+	7250 1100 7350 1200
+Entry Wire Line
+	7250 1200 7350 1300
 $Comp
 L C C8
 U 1 1 4AE0D305
@@ -225,46 +356,46 @@ F 1 "0.1uF" H 1800 5350 50  0000 L CNN
 	1    1750 5450
 	1    0    0    -1  
 $EndComp
-Text Label 4750 1150 0    60   ~ 0
+Text Label 5300 1250 2    60   ~ 0
 PWM[1..5]
-Text Label 4750 1050 0    60   ~ 0
+Text Label 5300 1150 2    60   ~ 0
 DIR[1..5]
-Text Label 4750 950  0    60   ~ 0
+Text Label 5300 1050 2    60   ~ 0
 FAULT[1..5]
 $Comp
-L GND #PWR01
+L GND #PWR5
 U 1 1 4ADBAD1E
-P 3450 6750
-F 0 "#PWR01" H 3450 6750 30  0001 C CNN
-F 1 "GND" H 3450 6680 30  0001 C CNN
-	1    3450 6750
+P 3450 6900
+F 0 "#PWR5" H 3450 6900 30  0001 C CNN
+F 1 "GND" H 3450 6830 30  0001 C CNN
+	1    3450 6900
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L GND #PWR4
 U 1 1 4ADBAD1B
-P 3450 2750
-F 0 "#PWR02" H 3450 2750 30  0001 C CNN
-F 1 "GND" H 3450 2680 30  0001 C CNN
-	1    3450 2750
+P 3350 2750
+F 0 "#PWR4" H 3350 2750 30  0001 C CNN
+F 1 "GND" H 3350 2680 30  0001 C CNN
+	1    3350 2750
 	1    0    0    -1  
 $EndComp
 $Comp
 L JUMPER JP2
 U 1 1 4ADBAD16
-P 3800 6700
-F 0 "JP2" H 3800 6850 60  0000 C CNN
-F 1 "JUMPER" H 3800 6620 40  0000 C CNN
-	1    3800 6700
+P 3800 6850
+F 0 "JP2" H 3800 7000 60  0000 C CNN
+F 1 "JUMPER" H 3800 6770 40  0000 C CNN
+	1    3800 6850
 	1    0    0    -1  
 $EndComp
 $Comp
 L JUMPER JP1
 U 1 1 4ADBAD14
-P 3800 2700
-F 0 "JP1" H 3800 2850 60  0000 C CNN
-F 1 "JUMPER" H 3800 2620 40  0000 C CNN
-	1    3800 2700
+P 3700 2700
+F 0 "JP1" H 3700 2850 60  0000 C CNN
+F 1 "JUMPER" H 3700 2620 40  0000 C CNN
+	1    3700 2700
 	1    0    0    -1  
 $EndComp
 $Sheet
@@ -414,32 +545,34 @@ F 1 "BZX79-C5V1" H 2200 5600 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR2
 U 1 1 4ADA5D25
 P 2350 6100
-F 0 "#PWR03" H 2350 6100 30  0001 C CNN
+F 0 "#PWR2" H 2350 6100 30  0001 C CNN
 F 1 "GND" H 2350 6030 30  0001 C CNN
 	1    2350 6100
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR04
+L +BATT #PWR1
 U 1 1 4ADA5D23
 P 2200 4800
-F 0 "#PWR04" H 2200 4750 20  0001 C CNN
+F 0 "#PWR1" H 2200 4750 20  0001 C CNN
 F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    2200 4800
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 5600 850  1400 1000
+S 5350 850  1650 1000
 U 4ADA3E09
 F0 "connectors-misc" 60
 F1 "connectors-misc.sch" 60
-F2 "FAULT[1..5]" I L 5600 950 60 
-F3 "DIR[1..5]" O L 5600 1050 60 
-F4 "PWM[1..5]" O L 5600 1150 60 
-F5 "BRAKE" O L 5600 1250 60 
+F2 "FAULT[1..5]" I L 5350 1050 60 
+F3 "DIR[1..5]" O L 5350 1150 60 
+F4 "PWM[1..5]" O L 5350 1250 60 
+F5 "BRAKE" O L 5350 1350 60 
+F6 "DCURRENT" I L 5350 950 60 
+F7 "DSNS[1..3]" I R 7000 950 60 
 $EndSheet
 $Sheet
 S 5600 2050 1400 800 
@@ -514,7 +647,7 @@ F12 "BRAKE" I L 5600 5550 60
 F13 "60120" I L 5600 5700 60 
 $EndSheet
 $Sheet
-S 5600 6050 1400 800 
+S 5600 6050 1400 900 
 U 4ADA6A41
 F0 "controller5" 60
 F1 "controller5.sch" 60
@@ -529,6 +662,7 @@ F9 "VREF" O R 7000 6800 60
 F10 "PWM" I L 5600 6400 60 
 F11 "FAULT" O L 5600 6100 60 
 F12 "BRAKE" I L 5600 6550 60 
-F13 "60120" I L 5600 6700 60 
+F13 "60120" I L 5600 6850 60 
+F14 "DCURRENT" O L 5600 6700 60 
 $EndSheet
 $EndSCHEMATC
