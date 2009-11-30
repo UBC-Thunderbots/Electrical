@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T23:59:58 PST
+EESchema Schematic File Version 2  date 2009-11-30T00:51:44 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 8300 4550 1    60   ~ 0
+FETPWR
 Wire Wire Line
 	5950 1200 5950 1350
 Wire Wire Line
