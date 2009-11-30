@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-11-29T21:32:49 PST
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-11-29T21:48:02 PST
 
 BeginCmp
 TimeStamp = /4ADA3BD5/4ADA3C77;
@@ -900,7 +900,7 @@ BeginCmp
 TimeStamp = /4ADA3BD5/4ADA3C79;
 Reference = U1;
 ValeurCmp = MC33035;
-IdModule  = DIP-24__300;
+IdModule  = SO24E;
 EndCmp
 
 BeginCmp
@@ -928,7 +928,7 @@ BeginCmp
 TimeStamp = /4ADA69F0/4ADA3C79;
 Reference = U5;
 ValeurCmp = MC33035;
-IdModule  = DIP-24__300;
+IdModule  = SO24E;
 EndCmp
 
 BeginCmp
@@ -956,7 +956,7 @@ BeginCmp
 TimeStamp = /4ADA6A33/4ADA3C79;
 Reference = U9;
 ValeurCmp = MC33035;
-IdModule  = DIP-24__300;
+IdModule  = SO24E;
 EndCmp
 
 BeginCmp
@@ -984,7 +984,7 @@ BeginCmp
 TimeStamp = /4ADA6A3A/4ADA3C79;
 Reference = U13;
 ValeurCmp = MC33035;
-IdModule  = DIP-24__300;
+IdModule  = SO24E;
 EndCmp
 
 BeginCmp
@@ -1012,7 +1012,7 @@ BeginCmp
 TimeStamp = /4ADA6A41/4ADA3C79;
 Reference = U17;
 ValeurCmp = MC33035;
-IdModule  = DIP-24__300;
+IdModule  = SO24E;
 EndCmp
 
 BeginCmp
