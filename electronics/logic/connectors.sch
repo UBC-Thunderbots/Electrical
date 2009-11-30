@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-11-20T15:55:59 PST
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2009-11-29T20:49:03 PST
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -13,7 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 9400 1950 "Warning: Pin power_out connected to Pin BiDi (net 24)" F=1
 Wire Wire Line
 	2550 4750 2250 4750
 Connection ~ 9800 4100
@@ -39,8 +38,6 @@ Wire Wire Line
 	2550 3450 2450 3450
 Wire Wire Line
 	2450 3450 2450 3350
-Wire Wire Line
-	10400 1950 10150 1950
 Wire Wire Line
 	2550 4850 2250 4850
 Wire Wire Line
@@ -174,10 +171,6 @@ Wire Wire Line
 Wire Wire Line
 	5200 5150 5450 5150
 Wire Wire Line
-	10150 1800 10400 1800
-Wire Wire Line
-	9150 1950 9400 1950
-Wire Wire Line
 	3450 4950 3450 3450
 Wire Wire Line
 	3450 3450 3350 3450
@@ -251,32 +244,6 @@ F 0 "P1" H 2950 4950 60  0000 C CNN
 F 1 "CONN_15X2" V 2950 4150 50  0000 C CNN
 F 2 "IDC-30" H 2950 4150 60  0001 C CNN
 	1    2950 4150
-	1    0    0    -1  
-$EndComp
-Text HLabel 10400 1950 2    60   BiDi ~ 0
-USBD-
-Text HLabel 10400 1800 2    60   BiDi ~ 0
-USBD+
-NoConn ~ 10150 2050
-NoConn ~ 9400 2050
-NoConn ~ 9400 1800
-$Comp
-L GND #PWR019
-U 1 1 4AC56AA4
-P 9150 1950
-F 0 "#PWR019" H 9150 1950 30  0001 C CNN
-F 1 "GND" H 9150 1880 30  0001 C CNN
-	1    9150 1950
-	0    1    1    0   
-$EndComp
-$Comp
-L USB J1
-U 1 1 4AC56A9A
-P 9800 1600
-F 0 "J1" H 9750 2000 60  0000 C CNN
-F 1 "USB" V 9550 1750 60  0000 C CNN
-F 2 "USB_B" H 9800 1600 60  0001 C CNN
-	1    9800 1600
 	1    0    0    -1  
 $EndComp
 $Comp
