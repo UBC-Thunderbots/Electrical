@@ -126,6 +126,7 @@ LibName5=divers
 LibName6=libcms
 LibName7=display
 LibName8=valves
+LibName9=dip_sockets
 [common]
 NetDir=
 [cvpcb]
