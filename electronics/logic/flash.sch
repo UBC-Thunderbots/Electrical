@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T20:52:21 PST
+EESchema Schematic File Version 2  date 2009-11-29T21:11:26 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L W25X16AVDAIZ U6
+U 1 1 4B1353EA
+P 5850 4150
+F 0 "U6" H 5850 4150 60  0000 C CNN
+F 1 "W25X16AVDAIZ" H 5850 4450 60  0000 C CNN
+	1    5850 4150
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	7050 4300 6600 4300
 Wire Wire Line
@@ -45,31 +54,21 @@ DIN
 Text HLabel 7050 4200 2    60   Input ~ 0
 CLK
 $Comp
-L GND #PWR037
+L GND #PWR036
 U 1 1 4ABE8D7B
 P 5050 4350
-F 0 "#PWR037" H 5050 4350 30  0001 C CNN
+F 0 "#PWR036" H 5050 4350 30  0001 C CNN
 F 1 "GND" H 5050 4280 30  0001 C CNN
 	1    5050 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR038
+L VCC #PWR037
 U 1 1 4ABE8D6C
 P 6650 3950
-F 0 "#PWR038" H 6650 4050 30  0001 C CNN
+F 0 "#PWR037" H 6650 4050 30  0001 C CNN
 F 1 "VCC" H 6650 4050 30  0000 C CNN
 	1    6650 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L W25X16AVDAIZ U6
-U 1 1 4ABE8D62
-P 5850 4150
-F 0 "U6" H 5850 4100 60  0000 C CNN
-F 1 "W25X16AVDAIZ" H 5850 4450 60  0000 C CNN
-F 2 "8dip300" H 5850 4150 60  0001 C CNN
-	1    5850 4150
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

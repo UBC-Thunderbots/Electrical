@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T20:52:20 PST
+EESchema Schematic File Version 2  date 2009-11-29T21:11:26 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -38,10 +38,10 @@ NoConn ~ 7150 4400
 NoConn ~ 7150 4500
 NoConn ~ 7150 4600
 $Comp
-L GND #PWR027
+L GND #PWR026
 U 1 1 4ABE98E5
 P 4200 4600
-F 0 "#PWR027" H 4200 4600 30  0001 C CNN
+F 0 "#PWR026" H 4200 4600 30  0001 C CNN
 F 1 "GND" H 4200 4530 30  0001 C CNN
 	1    4200 4600
 	0    1    1    0   
@@ -57,10 +57,10 @@ DIN
 Text HLabel 4200 3800 0    60   Output ~ 0
 DOUT
 $Comp
-L VCC #PWR028
+L VCC #PWR027
 U 1 1 4ABE98C2
 P 4200 3700
-F 0 "#PWR028" H 4200 3800 30  0001 C CNN
+F 0 "#PWR027" H 4200 3800 30  0001 C CNN
 F 1 "VCC" H 4200 3800 30  0000 C CNN
 	1    4200 3700
 	0    -1   -1   0   
