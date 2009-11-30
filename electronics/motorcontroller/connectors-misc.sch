@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T18:07:32 PST
+EESchema Schematic File Version 2  date 2009-11-29T18:12:16 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -14,6 +14,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
+	1950 3950 1950 4000
+Wire Wire Line
+	1950 4000 2250 4000
+Wire Wire Line
+	6000 2800 5600 2800
+Wire Wire Line
 	2250 4100 1850 4100
 Wire Wire Line
 	3450 1950 3050 1950
@@ -24,8 +30,6 @@ Wire Bus Line
 Connection ~ 5800 2100
 Wire Wire Line
 	5800 2050 5800 2600
-Wire Wire Line
-	5900 2800 6000 2800
 Wire Wire Line
 	6000 2300 5900 2300
 Connection ~ 3100 5300
@@ -99,8 +103,6 @@ Wire Wire Line
 Wire Wire Line
 	3050 1750 3450 1750
 Wire Wire Line
-	2200 4000 2250 4000
-Wire Wire Line
 	3050 4000 3100 4000
 Wire Wire Line
 	3100 4000 3100 5450
@@ -126,8 +128,6 @@ Wire Wire Line
 	3100 5400 3050 5400
 Connection ~ 3100 5400
 Wire Wire Line
-	5800 2100 6000 2100
-Wire Wire Line
 	5800 2600 6000 2600
 Wire Wire Line
 	5900 2300 5900 2850
@@ -136,6 +136,39 @@ Wire Wire Line
 	3050 1850 3450 1850
 Wire Wire Line
 	3050 2050 3450 2050
+Wire Wire Line
+	6000 2100 5600 2100
+Wire Wire Line
+	5600 2100 5600 2050
+Wire Wire Line
+	5600 2800 5600 2750
+$Comp
+L PWR_FLAG #FLG011
+U 1 1 4B132970
+P 1950 3950
+F 0 "#FLG011" H 1950 4220 30  0001 C CNN
+F 1 "PWR_FLAG" H 1950 4180 30  0000 C CNN
+	1    1950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG012
+U 1 1 4B132953
+P 5600 2750
+F 0 "#FLG012" H 5600 3020 30  0001 C CNN
+F 1 "PWR_FLAG" H 5600 2980 30  0000 C CNN
+	1    5600 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG013
+U 1 1 4B13294C
+P 5600 2050
+F 0 "#FLG013" H 5600 2320 30  0001 C CNN
+F 1 "PWR_FLAG" H 5600 2280 30  0000 C CNN
+	1    5600 2050
+	1    0    0    -1  
+$EndComp
 Text HLabel 1850 4100 0    60   Input ~ 0
 DCURRENT
 Text Label 3100 2050 0    60   ~ 0
@@ -174,19 +207,19 @@ NoConn ~ 2250 2650
 NoConn ~ 2250 2550
 NoConn ~ 2250 2450
 $Comp
-L GND #PWR18
+L GND #PWR014
 U 1 1 4ADA585E
 P 5900 2850
-F 0 "#PWR18" H 5900 2850 30  0001 C CNN
+F 0 "#PWR014" H 5900 2850 30  0001 C CNN
 F 1 "GND" H 5900 2780 30  0001 C CNN
 	1    5900 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR17
+L +BATT #PWR015
 U 1 1 4ADA585A
 P 5800 2050
-F 0 "#PWR17" H 5800 2000 20  0001 C CNN
+F 0 "#PWR015" H 5800 2000 20  0001 C CNN
 F 1 "+BATT" H 5800 2150 30  0000 C CNN
 	1    5800 2050
 	1    0    0    -1  
@@ -222,19 +255,19 @@ NoConn ~ 2250 4400
 NoConn ~ 2250 4300
 NoConn ~ 2250 4200
 $Comp
-L GND #PWR16
+L GND #PWR016
 U 1 1 4ADA4287
 P 3100 5450
-F 0 "#PWR16" H 3100 5450 30  0001 C CNN
+F 0 "#PWR016" H 3100 5450 30  0001 C CNN
 F 1 "GND" H 3100 5380 30  0001 C CNN
 	1    3100 5450
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR15
+L +3.3V #PWR017
 U 1 1 4ADA4274
 P 2200 3950
-F 0 "#PWR15" H 2200 3910 30  0001 C CNN
+F 0 "#PWR017" H 2200 3910 30  0001 C CNN
 F 1 "+3.3V" H 2200 4060 30  0000 C CNN
 	1    2200 3950
 	1    0    0    -1  
