@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-11-29T20:49:03 PST
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
+EESchema Schematic File Version 2  date 2009-11-29T20:52:21 PST
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -13,6 +13,24 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L MCP1827S-1202E/AB U5
+U 1 1 4B134F6F
+P 7200 4900
+F 0 "U5" H 7350 4704 60  0000 C CNN
+F 1 "MCP1827S-1202E/AB" H 7200 5100 60  0000 C CNN
+	1    7200 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LD1117V33C U4
+U 1 1 4B134F5A
+P 5850 4900
+F 0 "U4" H 6000 4704 60  0000 C CNN
+F 1 "LD1117V33C" H 5850 5100 60  0000 C CNN
+	1    5850 4900
+	1    0    0    -1  
+$EndComp
 Connection ~ 5050 4850
 Wire Wire Line
 	5050 4750 5050 4850
@@ -455,16 +473,6 @@ F 2 "C2" H 5900 3650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCP1827S-1202E/AB U5
-U 1 1 4ABE820F
-P 7200 4900
-F 0 "U5" H 7350 4704 60  0000 C CNN
-F 1 "MCP1827S-1202E/AB" H 7200 5100 60  0000 C CNN
-F 2 "TO220-123" H 7200 4900 60  0001 C CNN
-	1    7200 4900
-	1    0    0    -1  
-$EndComp
-$Comp
 L VCC #PWR063
 U 1 1 4ABE8056
 P 6500 4750
@@ -491,16 +499,6 @@ F 0 "C1" H 5300 5250 50  0000 L CNN
 F 1 "100nF" H 5300 5050 50  0000 L CNN
 F 2 "C1" H 5250 5150 60  0001 C CNN
 	1    5250 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L LD1117V33C U4
-U 1 1 4ABE7FD2
-P 5850 4900
-F 0 "U4" H 6000 4704 60  0000 C CNN
-F 1 "LD1117V33C" H 5850 5100 60  0000 C CNN
-F 2 "TO220-123" H 5850 4900 60  0001 C CNN
-	1    5850 4900
 	1    0    0    -1  
 $EndComp
 $Comp
