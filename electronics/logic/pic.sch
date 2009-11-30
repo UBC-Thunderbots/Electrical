@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-29T21:11:26 PST
+EESchema Schematic File Version 2  date 2009-11-29T21:12:41 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L PIC18F4550 U7
+U 1 1 4B135439
+P 5850 4150
+F 0 "U7" H 5850 4100 60  0000 C CNN
+F 1 "PIC18F4550" H 5850 4200 60  0000 C CNN
+	1    5850 4150
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	7450 3900 8450 3900
 Connection ~ 3950 3200
@@ -321,14 +330,4 @@ Text HLabel 3650 3700 0    60   Output ~ 0
 /WP
 Text HLabel 3650 3200 0    60   Input ~ 0
 MCLR
-$Comp
-L PIC18F4550 U7
-U 1 1 4ABE92C3
-P 5850 4150
-F 0 "U7" H 5850 4100 60  0000 C CNN
-F 1 "PIC18F4550" H 5850 4200 60  0000 C CNN
-F 2 "40dip600" H 5850 4150 60  0001 C CNN
-	1    5850 4150
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC

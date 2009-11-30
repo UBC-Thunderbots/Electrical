@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-11-29T21:11:41 PST
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-11-29T21:12:49 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -197,10 +197,10 @@ IdModule  = 8DIP300;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD90413/4ABE92C3;
+TimeStamp = /4AD90413/4B135439;
 Reference = U7;
 ValeurCmp = PIC18F4550;
-IdModule  = 40dip600;
+IdModule  = 40DIP600;
 EndCmp
 
 BeginCmp
