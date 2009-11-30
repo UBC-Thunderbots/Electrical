@@ -36,7 +36,6 @@ electronics/motorcontroller/motorcontroller.brd -text
 electronics/motorcontroller/motorcontroller.cmp -text
 electronics/motorcontroller/motorcontroller.pro -text
 electronics/motorcontroller/motorcontroller.sch -text
-electronics/motorcontroller/protection.sch -text
 electronics/thunderbots-modules.mdc -text
 electronics/thunderbots-modules.mod -text
 electronics/thunderbots-symbols.dcm -text

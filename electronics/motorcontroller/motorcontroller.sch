@@ -1,9 +1,9 @@
-EESchema Schematic File Version 2  date Sat 21 Nov 2009 12:57:15 PM PST
+EESchema Schematic File Version 2  date 2009-11-29T17:42:12 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 1 9
+Sheet 1 8
 Title ""
 Date "19 oct 2009"
 Rev ""
@@ -21,9 +21,6 @@ Wire Wire Line
 Connection ~ 1750 4850
 Wire Wire Line
 	1750 5250 1750 4850
-Connection ~ 4650 1400
-Connection ~ 4450 1300
-Connection ~ 4250 1200
 Wire Wire Line
 	4100 6700 5600 6700
 Wire Wire Line
@@ -92,10 +89,6 @@ Wire Wire Line
 Connection ~ 4850 2550
 Wire Wire Line
 	5600 2550 4850 2550
-Wire Bus Line
-	4650 1400 4050 1400
-Wire Bus Line
-	4450 1300 4050 1300
 Wire Wire Line
 	2500 4900 2350 4900
 Wire Wire Line
@@ -106,8 +99,6 @@ Wire Wire Line
 Connection ~ 2350 6050
 Wire Wire Line
 	2350 6050 2350 6100
-Wire Bus Line
-	4250 1200 4050 1200
 Wire Wire Line
 	2200 5500 2200 5400
 Wire Wire Line
@@ -132,8 +123,6 @@ Wire Wire Line
 Wire Wire Line
 	4350 6100 5600 6100
 Wire Wire Line
-	4850 1500 4050 1500
-Wire Wire Line
 	4550 2250 5600 2250
 Wire Wire Line
 	4550 3250 5600 3250
@@ -155,7 +144,6 @@ Wire Wire Line
 	4750 6400 5600 6400
 Wire Wire Line
 	5600 6550 4850 6550
-Connection ~ 4850 1500
 Wire Wire Line
 	4850 3550 5600 3550
 Connection ~ 4850 3550
@@ -444,24 +432,14 @@ F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 2400 1150 1650 1000
+S 5600 850  1400 1000
 U 4ADA3E09
 F0 "connectors-misc" 60
 F1 "connectors-misc.sch" 60
-F2 "FAULT[1..5]" I R 4050 1200 60 
-F3 "DIR[1..5]" O R 4050 1300 60 
-F4 "PWM[1..5]" O R 4050 1400 60 
-F5 "BRAKE" O R 4050 1500 60 
-$EndSheet
-$Sheet
-S 5600 900  1300 950 
-U 4ADA58A5
-F0 "protection" 60
-F1 "protection.sch" 60
-F2 "BRAKE" I L 5600 1250 60 
-F3 "DIR[1..5]" I L 5600 1050 60 
-F4 "PWM[1..5]" I L 5600 1150 60 
-F5 "FAULT[1..5]" I L 5600 950 60 
+F2 "FAULT[1..5]" I L 5600 950 60 
+F3 "DIR[1..5]" O L 5600 1050 60 
+F4 "PWM[1..5]" O L 5600 1150 60 
+F5 "BRAKE" O L 5600 1250 60 
 $EndSheet
 $Sheet
 S 5600 2050 1400 800 
