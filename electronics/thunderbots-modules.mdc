@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2009-11-29T20:45:58 PST
+PCBNEW-LibDoc----V1  2009-11-29T21:04:14 PST
 #
 $MODULE D2
 Li D2
@@ -57,6 +57,12 @@ $EndMODULE
 $MODULE XBee
 Li XBee
 Cd XBee Radio Modem
+$EndMODULE
+#
+$MODULE 40DIP600
+Li 40DIP600
+Cd Module Dil 40 pins, pads round, e=600 mils
+Kw DIL
 $EndMODULE
 #
 $EndLIBDOC
