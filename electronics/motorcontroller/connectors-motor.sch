@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-11-30T00:51:44 PST
+EESchema Schematic File Version 2  date 2009-12-05T12:08:48 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -221,8 +221,8 @@ L GND #PWR?
 U 1 1 4ADA7299
 P 6850 6150
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7299" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 6850 6150 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7299" Ref="#PWR013"  Part="1" 
+F 0 "#PWR013" H 6850 6150 30  0001 C CNN
 F 1 "GND" H 6850 6080 30  0001 C CNN
 	1    6850 6150
 	0    1    1    0   
@@ -232,8 +232,8 @@ L GND #PWR?
 U 1 1 4ADA7297
 P 6850 4950
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7297" Ref="#PWR07"  Part="1" 
-F 0 "#PWR07" H 6850 4950 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7297" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 6850 4950 30  0001 C CNN
 F 1 "GND" H 6850 4880 30  0001 C CNN
 	1    6850 4950
 	0    1    1    0   
@@ -243,8 +243,8 @@ L GND #PWR?
 U 1 1 4ADA7296
 P 6850 3750
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7296" Ref="#PWR08"  Part="1" 
-F 0 "#PWR08" H 6850 3750 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7296" Ref="#PWR015"  Part="1" 
+F 0 "#PWR015" H 6850 3750 30  0001 C CNN
 F 1 "GND" H 6850 3680 30  0001 C CNN
 	1    6850 3750
 	0    1    1    0   
@@ -254,17 +254,17 @@ L GND #PWR?
 U 1 1 4ADA7292
 P 6850 2550
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7292" Ref="#PWR09"  Part="1" 
-F 0 "#PWR09" H 6850 2550 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7292" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 6850 2550 30  0001 C CNN
 F 1 "GND" H 6850 2480 30  0001 C CNN
 	1    6850 2550
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR010
+L GND #PWR017
 U 1 1 4ADA728E
 P 6850 1350
-F 0 "#PWR010" H 6850 1350 30  0001 C CNN
+F 0 "#PWR017" H 6850 1350 30  0001 C CNN
 F 1 "GND" H 6850 1280 30  0001 C CNN
 	1    6850 1350
 	0    1    1    0   
