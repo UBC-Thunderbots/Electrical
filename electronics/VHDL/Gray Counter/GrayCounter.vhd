@@ -30,58 +30,58 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity GrayCounter is
     Port ( Encoder : in  STD_LOGIC_VECTOR (1 downto 0);
            Reset	 : in STD_LOGIC;
-			  Count_out : out  STD_LOGIC_VECTOR (15 downto 0));
-			  
+	   CLK		: in STD_LOGIC;
+	   Count_out : out  STD_LOGIC_VECTOR (15 downto 0));	  
 end GrayCounter;
 
 architecture Behavioral of GrayCounter is
-signal Trig : STD_LOGIC;
 begin
-Trig <= Encoder(1) xor Encoder(0);
 
-
-count_process: process(Encoder,Reset)
+count_process: process(Encoder,Reset,CLK)
 variable Count : STD_LOGIC_VECTOR(15 downto 0) := x"0000";
 variable PrevEncoder : STD_LOGIC_VECTOR(1 downto 0) := "00";
+
 begin
-if Reset = '1' then
-PrevEncoder := "00";
-Count := x"0000";
-else
-	case Encoder is
-		when "00"   => 
+if rising_edge(CLK) then
+	if Reset = '1' then
+		PrevEncoder := Encoder;
+		Count := x"0000";
+	else
+		case Encoder is
+			when "00"   => 
 					case PrevEncoder is
 						when "00"   => Count := Count;
 						when "01"   => Count := Count + 1;
 						when "10"   => Count := Count - 1;
 						when others => Count := Count; 
 					end case;		
-		when "01"   => 					
+			when "01"   => 					
 					case PrevEncoder is
 						when "00"   => Count := Count - 1;
 						when "01"   => Count := Count;
 						when "10"   => Count := Count;
 						when others => Count := Count + 1; 
 					end case;
-		when "10"   =>  					
+			when "10"   =>  					
 					case PrevEncoder is
 						when "00"   => Count := Count + 1;
 						when "01"   => Count := Count;
 						when "10"   => Count := Count;
 						when others => Count := Count - 1; 
 					end case;
-		when others => 
+			when others => 
 					case PrevEncoder is
 						when "00"   => Count := Count;
 						when "01"   => Count := Count - 1;
 						when "10"   => Count := Count + 1;
 						when others => Count := Count; 
 					end case;
-	end case;
+		end case;
 
 end if;
 PrevEncoder := Encoder;
 Count_out <= Count;
+end if;
 end process;
 
 end Behavioral;

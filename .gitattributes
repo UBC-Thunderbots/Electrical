@@ -1,6 +1,7 @@
 * text=auto !eol
 electronics/VHDL/Gray[!!-~]Counter/CounterTest.vhd -text
 electronics/VHDL/Gray[!!-~]Counter/GrayCounter.vhd -text
+electronics/VHDL/Gray[!!-~]Counter/Makefile -text
 electronics/VHDL/Multiplier/Multiplier.vhd -text
 electronics/VHDL/Multiplier/MultiplierTest.vhd -text
 electronics/VHDL/PID[!!-~]Controller/Makefile -text

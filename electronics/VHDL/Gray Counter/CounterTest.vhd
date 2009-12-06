@@ -42,6 +42,7 @@ ARCHITECTURE behavior OF CounterTest IS
     PORT(
          Encoder : IN  std_logic_vector(1 downto 0);
          Reset : IN  std_logic;
+         CLK : IN std_logic;
          Count_out : OUT  std_logic_vector(15 downto 0)
         );
     END COMPONENT;
@@ -55,12 +56,14 @@ ARCHITECTURE behavior OF CounterTest IS
    signal Count_out : std_logic_vector(15 downto 0);
 	signal EncoderSel : std_logic_vector(1 downto 0);
 	signal CLK : std_logic;
+	signal StopSignal : std_logic := '0';
 BEGIN
 
 	-- Instantiate the Unit Under Test (UUT)
    uut: GrayCounter PORT MAP (
           Encoder => Encoder,
           Reset => Reset,
+          CLK => CLK,
           Count_out => Count_out
         );
  
@@ -68,28 +71,42 @@ BEGIN
    -- appropriate port name 
 	with EncoderSel select
 		Encoder <= 	"00" when "00",
-						"01" when "01",
-						"10" when "10",
-						"11" when others;
+				"10" when "01",
+				"11" when "10",
+				"01" when others;
 	
 	
 	
  
    clock_process :process
    begin
-		CLK <= '0';
-		wait for CLK_period/2;
-		CLK <= '1';
-		wait for CLK_period/2;
+   	if StopSignal = '1' then
+   		wait;
+   	end if;
+	CLK <= '0';
+	wait for CLK_period/2;
+	CLK <= '1';
+	wait for CLK_period/2;
   end process;
 
    -- Stimulus process
    stim_proc: process
-   begin		
-		for i in 0 to 3 loop
+   begin	
+   		reset <= '1';
+   		wait for CLK_period*10;
+   		reset <= '0';
+   		wait for CLK_period;
+   		
+		for i in 0 to 6 loop
+			wait for CLK_period*10;
 			EncoderSel <= conv_std_logic_vector(i,2);
-			wait until rising_edge(CLK);
 		end loop;
+		for i in 0 to 6 loop
+			wait for CLK_period*10;
+			EncoderSel <= conv_std_logic_vector(6-i,2);
+		end loop;
+		StopSignal <= '1';
+		wait;
    end process;
 
 END;
