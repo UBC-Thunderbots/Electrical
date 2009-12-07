@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-11-29T23:00:09 PST
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = 2009-12-07T12:01:15 PST
 
 BeginCmp
 TimeStamp = /4ADA3BD5/4ADA3C77;
@@ -257,13 +257,6 @@ TimeStamp = /4ADA3E09/4ADA3E2D;
 Reference = P1;
 ValeurCmp = CONN_20X2;
 IdModule  = IDC-40;
-EndCmp
-
-BeginCmp
-TimeStamp = /4ADA3E09/4ADA4267;
-Reference = P2;
-ValeurCmp = CONN_15X2;
-IdModule  = IDC-30;
 EndCmp
 
 BeginCmp
@@ -862,20 +855,6 @@ IdModule  = R5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4B132759;
-Reference = R79;
-ValeurCmp = 10kR;
-IdModule  = R1;
-EndCmp
-
-BeginCmp
-TimeStamp = /4B13285A;
-Reference = R80;
-ValeurCmp = 10kR;
-IdModule  = R1;
-EndCmp
-
-BeginCmp
 TimeStamp = /4B132838;
 Reference = R81;
 ValeurCmp = 10kR;
@@ -885,20 +864,6 @@ EndCmp
 BeginCmp
 TimeStamp = /4B13285B;
 Reference = R82;
-ValeurCmp = 10kR;
-IdModule  = R1;
-EndCmp
-
-BeginCmp
-TimeStamp = /4B13283C;
-Reference = R83;
-ValeurCmp = 10kR;
-IdModule  = R1;
-EndCmp
-
-BeginCmp
-TimeStamp = /4B13285C;
-Reference = R84;
 ValeurCmp = 10kR;
 IdModule  = R1;
 EndCmp

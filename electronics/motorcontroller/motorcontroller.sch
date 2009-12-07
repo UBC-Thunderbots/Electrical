@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2009-12-05T12:08:48 PST
+EESchema Schematic File Version 2  date 2009-12-07T12:35:12 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,17 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 5350 850  1650 1000
+U 4ADA3E09
+F0 "connectors-misc" 60
+F1 "connectors-misc.sch" 60
+F2 "FAULT[1..5]" I L 5350 1050 60 
+F3 "DIR[1..5]" O L 5350 1150 60 
+F4 "PWM[1..5]" O L 5350 1250 60 
+F5 "BRAKE" O L 5350 1350 60 
+F6 "DSNS" I R 7000 1200 60 
+$EndSheet
 Wire Wire Line
 	7000 1200 8100 1200
 Wire Wire Line
@@ -215,12 +226,6 @@ Wire Wire Line
 Wire Wire Line
 	5600 2700 4000 2700
 Wire Wire Line
-	5600 6700 4050 6700
-Wire Wire Line
-	4050 6700 4050 950 
-Wire Wire Line
-	4050 950  5350 950 
-Wire Wire Line
 	8100 1350 8100 1050
 Wire Wire Line
 	8100 1850 8100 1900
@@ -241,18 +246,6 @@ Wire Wire Line
 	8100 500  8250 500 
 Wire Wire Line
 	8250 500  8250 550 
-$Sheet
-S 5350 850  1650 1000
-U 4ADA3E09
-F0 "connectors-misc" 60
-F1 "connectors-misc.sch" 60
-F2 "FAULT[1..5]" I L 5350 1050 60 
-F3 "DIR[1..5]" O L 5350 1150 60 
-F4 "PWM[1..5]" O L 5350 1250 60 
-F5 "BRAKE" O L 5350 1350 60 
-F6 "DCURRENT" I L 5350 950 60 
-F7 "DSNS" I R 7000 1200 60 
-$EndSheet
 $Comp
 L R R81
 U 1 1 4B132838
@@ -268,8 +261,6 @@ Text Label 5550 6850 2    60   ~ 0
 60120D
 Text Label 5550 2700 2    60   ~ 0
 60120W
-Text Label 5250 950  2    60   ~ 0
-DCURRENT
 Text Label 7050 6800 0    60   ~ 0
 VREF5
 Text Label 7050 5800 0    60   ~ 0
@@ -682,6 +673,5 @@ F10 "PWM" I L 5600 6400 60
 F11 "FAULT" O L 5600 6100 60 
 F12 "BRAKE" I L 5600 6550 60 
 F13 "60120" I L 5600 6850 60 
-F14 "DCURRENT" O L 5600 6700 60 
 $EndSheet
 $EndSCHEMATC
