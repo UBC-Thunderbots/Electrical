@@ -1,0 +1,126 @@
+# EESchema Netlist Version 1.1 created  Tue 15 Dec 2009 10:58:02 AM PST
+(
+ ( /4B1F3C5A SIL-4 P1 CONN_4
+  ( 1 GND )
+  ( 2 N-000012 )
+  ( 3 N-000010 )
+  ( 4 VCC )
+ )
+ ( /4B1F4749 SM0603 R1 R
+  ( 1 VCC )
+  ( 2 N-000011 )
+ )
+ ( /4B1F474B SM0603 R2 R
+  ( 1 N-000011 )
+  ( 2 GND )
+ )
+ ( /4B27D75C SM0603 R3 R
+  ( 1 N-000008 )
+  ( 2 N-000009 )
+ )
+ ( /4B27D7A9 SM0603 R4 R
+  ( 1 N-000007 )
+  ( 2 N-000013 )
+ )
+ ( /4B27D7BC SM0603 R5 R
+  ( 1 N-000005 )
+  ( 2 N-000006 )
+ )
+ ( /4B27D7CB SM0603 R6 R
+  ( 1 N-000001 )
+  ( 2 N-000002 )
+ )
+ ( /4B1F46E6 SOT23-5 U1 MIC7300
+  ( 1 N-000010 )
+  ( 2 GND )
+  ( 3 N-000011 )
+  ( 4 N-000010 )
+  ( 5 VCC )
+ )
+ ( /4B27D6B4 SOT23-5 U2 74LVC1G80
+  ( 1 N-000009 )
+  ( 2 N-000012 )
+  ( 3 GND )
+  ( 4 N-000009 )
+  ( 5 VCC )
+ )
+ ( /4B27D6A6 OPB733T U3 OPB733TR
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 N-000011 )
+  ( 4 N-000008 )
+ )
+ ( /4B27D7A6 SOT23-5 U4 74LVC1G80
+  ( 1 N-000013 )
+  ( 2 N-000009 )
+  ( 3 GND )
+  ( 4 N-000013 )
+  ( 5 VCC )
+ )
+ ( /4B27D7A5 OPB733T U5 OPB733TR
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 N-000011 )
+  ( 4 N-000007 )
+ )
+ ( /4B27D7B9 SOT23-5 U6 74LVC1G80
+  ( 1 N-000006 )
+  ( 2 N-000013 )
+  ( 3 GND )
+  ( 4 N-000006 )
+  ( 5 VCC )
+ )
+ ( /4B27D7B8 OPB733T U7 OPB733TR
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 N-000011 )
+  ( 4 N-000005 )
+ )
+ ( /4B27D7C8 SOT23-5 U8 74LVC1G80
+  ( 1 N-000002 )
+  ( 2 N-000006 )
+  ( 3 GND )
+  ( 4 N-000002 )
+  ( 5 VCC )
+ )
+ ( /4B27D7C7 OPB733T U9 OPB733TR
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 N-000011 )
+  ( 4 N-000001 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+$endlist
+$endfootprintlist
+}

@@ -106,7 +106,7 @@ MSegLar=150
 WpenSer=10
 [pcbnew/libraries]
 LibDir=
-LibName1=C:/Documents and Settings/Binaryblade/My Documents/thunderbots/electronics/thunderbots-modules
+LibName1=../thunderbots-modules
 LibName2=sockets
 LibName3=connect
 LibName4=discret
