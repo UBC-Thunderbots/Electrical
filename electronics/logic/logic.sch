@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2009-11-29T21:12:41 PST
+EESchema Schematic File Version 2  date 2009-12-24T14:51:25 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 7
 Title ""
-Date "24 oct 2009"
+Date "24 dec 2009"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,19 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 3700 2200 0    60   ~ 0
+/EMERG_ERASE
+Connection ~ 6750 5950
+Wire Wire Line
+	6750 5950 6750 7300
+Wire Wire Line
+	6750 7300 3650 7300
+Wire Wire Line
+	3650 7300 3650 2200
+Wire Wire Line
+	3650 2200 4600 2200
+Wire Wire Line
+	8400 5150 8600 5150
 Wire Wire Line
 	6150 5750 7450 5750
 Wire Wire Line
@@ -21,12 +34,6 @@ Wire Wire Line
 	4450 6300 4450 5850
 Wire Wire Line
 	4450 5850 4600 5850
-Wire Wire Line
-	4600 2300 3600 2300
-Wire Wire Line
-	3600 2300 3600 5250
-Wire Wire Line
-	3600 5250 4600 5250
 Wire Bus Line
 	4600 2500 3900 2500
 Wire Bus Line
@@ -52,8 +59,6 @@ Wire Wire Line
 	8500 4350 8700 4350
 Wire Wire Line
 	8700 4350 8700 5250
-Wire Wire Line
-	8700 5250 8250 5250
 Wire Wire Line
 	7150 4450 6950 4450
 Wire Wire Line
@@ -119,8 +124,6 @@ Wire Wire Line
 Wire Wire Line
 	6850 4350 7150 4350
 Wire Wire Line
-	8250 5150 8600 5150
-Wire Wire Line
 	8600 5150 8600 4450
 Wire Wire Line
 	8600 4450 8500 4450
@@ -144,12 +147,6 @@ Wire Wire Line
 Wire Wire Line
 	4050 2600 4600 2600
 Wire Wire Line
-	4600 5150 3750 5150
-Wire Wire Line
-	3750 5150 3750 2400
-Wire Wire Line
-	3750 2400 4600 2400
-Wire Wire Line
 	6350 2500 6350 2000
 Wire Wire Line
 	6350 2000 3300 2000
@@ -157,6 +154,10 @@ Wire Wire Line
 	4600 5650 3300 5650
 Wire Wire Line
 	3300 5650 3300 2000
+Wire Wire Line
+	6150 5950 7450 5950
+Wire Wire Line
+	8700 5250 8400 5250
 Text Label 6750 2600 3    60   ~ 0
 GPIO[1..38]
 Text Label 6000 2000 0    60   ~ 0
@@ -190,21 +191,21 @@ F3 "PGC" O L 4600 2600 60
 F4 "PGD" B L 4600 2700 60 
 F5 "MCLR" O L 4600 2800 60 
 F6 "GPIO[1..38]" B R 5950 2600 60 
-F7 "USBD-" B L 4600 2400 60 
-F8 "USBD+" B L 4600 2300 60 
+F7 "/EMERG_ERASE" T L 4600 2200 60 
 $EndSheet
 $Sheet
-S 7450 5100 800  800 
+S 7450 5100 950  900 
 U 4AD90411
 F0 "xbee" 60
 F1 "xbee.sch" 60
 F2 "BOOTLOAD" O L 7450 5850 60 
-F3 "DIN" I R 8250 5250 60 
-F4 "DOUT" O R 8250 5150 60 
+F3 "DIN" I R 8400 5250 60 
+F4 "DOUT" O R 8400 5150 60 
 F5 "/RTS" I L 7450 5750 60 
+F6 "/EMERG_ERASE" T L 7450 5950 60 
 $EndSheet
 $Sheet
-S 4600 4500 1550 1400
+S 4600 4500 1550 1500
 U 4AD90413
 F0 "pic" 60
 F1 "pic.sch" 60
@@ -225,10 +226,10 @@ F15 "/WP" O L 4600 4550 60
 F16 "TX" B R 6150 5550 60 
 F17 "SPIOUT" B R 6150 4750 60 
 F18 "USBD-" B L 4600 5150 60 
-F19 "USBD+" B L 4600 5250 60 
-F20 "BRAKE" B L 4600 5650 60 
-F21 "VMON" I L 4600 5850 60 
-F22 "/RTS" O R 6150 5750 60 
+F19 "BRAKE" B L 4600 5650 60 
+F20 "VMON" I L 4600 5850 60 
+F21 "/RTS" O R 6150 5750 60 
+F22 "/EMERG_ERASE" I R 6150 5950 60 
 $EndSheet
 $Sheet
 S 4750 3250 1050 950 
