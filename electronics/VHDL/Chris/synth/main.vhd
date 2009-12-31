@@ -125,7 +125,7 @@ begin
 	end process;
 
 	-- A test PWM generator that follows analogue input channel 0.
-	testpwm : PWM
+	TestPWM : PWM
 	generic map(
 		Width => 10
 	)
@@ -136,7 +136,7 @@ begin
 	);
 
 	-- The SPI receiver for the analogue to digital converters.
-	testadc : ADC
+	ADC_Instance : ADC
 	port map(
 		Clock => Clock,
 		SPICK => AppClkL,
@@ -155,16 +155,14 @@ begin
 		Channel10 => open,
 		Channel11 => open,
 		Channel12 => open,
-		Good => open
+		Good => GPIO38
 	);
 
 	--  The brake line activates when the PWM duty cycle is small.
 	GPIO1 <= '1' when DutyCycle < to_unsigned(10, 10) else '0';
-	GPIO13 <= '0';
-	GPIO38 <= DutyCycle(9);
 
-	XBEETX <= '1';
-	APPOUT <= '0';
+	XBeeTX <= '1';
+	AppOut <= '0';
 	GPIO2 <= '0';
 	GPIO4 <= '0';
 	GPIO5 <= '0';
@@ -175,6 +173,7 @@ begin
 	GPIO10 <= '0';
 	GPIO11 <= '0';
 	GPIO12 <= '0';
+	GPIO13 <= '0';
 	GPIO14 <= '0';
 	GPIO15 <= '0';
 	GPIO16 <= '0';
