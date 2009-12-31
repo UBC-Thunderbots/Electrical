@@ -15,6 +15,7 @@ end entity ClockGen;
 architecture Behavioural of ClockGen is
 	signal OscillatorBuffered : std_logic;
 	signal DCMOut : std_logic;
+	signal BufGOut : std_logic;
 begin
 	IBufferG : IBufG
 	port map(
@@ -30,7 +31,7 @@ begin
 	)
 	port map(
 		CLKIN => OscillatorBuffered,
-		CLKFB => DCMOut,
+		CLKFB => BufGOut,
 		RST => '0',
 		PSEN => '0',
 		CLK0 => DCMOut
@@ -39,6 +40,8 @@ begin
 	BufferG : BufG
 	port map(
 		I => DCMOut,
-		O => Clock
+		O => BufGOut
 	);
+
+	Clock <= BufGOut;
 end architecture Behavioural;
