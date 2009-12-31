@@ -7,6 +7,8 @@ electronics/VHDL/Multiplier/MultiplierTest.vhd -text
 electronics/VHDL/PID[!!-~]Controller/Makefile -text
 electronics/VHDL/PID[!!-~]Controller/PIDController.vhd -text
 electronics/VHDL/PID[!!-~]Controller/PIDTest.vhd -text
+electronics/VHDL/XBee_Matthew/Rx.vhd -text
+electronics/VHDL/XBee_Matthew/Tx.vhd -text
 electronics/adc.txt -text
 electronics/block[!!-~]diagram.fig -text
 electronics/gpios.txt -text
