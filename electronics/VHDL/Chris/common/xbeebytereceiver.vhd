@@ -17,10 +17,10 @@ entity XBeeByteReceiver is
 end entity XBeeByteReceiver;
 
 architecture Behavioural of XBeeByteReceiver is
-	signal Escaped : std_logic := '0';
+	signal Escaped : boolean := false;
 begin
-	FErr <= '1' when (SerialFErr = '1' or (SerialData = X"7D" and Escaped = '1')) else '0';
-	Data <= SerialData xor X"20" when Escaped = '1' else SerialData;
+	FErr <= '1' when (SerialFErr = '1' or (SerialData = X"7D" and Escaped)) else '0';
+	Data <= SerialData xor X"20" when Escaped else SerialData;
 	Good <= '1' when SerialGood = '1' and SerialData /= X"7D" and SerialData /= X"7E" else '0';
 	SOP <= '1' when SerialGood = '1' and SerialData = X"7E" else '0';
 
@@ -29,9 +29,9 @@ begin
 		if rising_edge(Clock) then
 			if SerialGood = '1' then
 				if SerialData = X"7D" then
-					Escaped <= '1';
+					Escaped <= true;
 				else
-					Escaped <= '0';
+					Escaped <= false;
 				end if;
 			end if;
 		end if;

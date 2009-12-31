@@ -16,8 +16,8 @@ end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
 	signal DBuf : std_logic_vector(9 downto 0) := "0000000000";
-	signal BitClocks : unsigned(7 downto 0) := to_unsigned(0, 8);
-	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
+	signal BitClocks : natural range 0 to 199 := 0;
+	signal BitValue : integer range -63 to 63 := 0;
 	signal FErrBuf : std_logic := '0';
 begin
 	Data <= DBuf(8 downto 1);
@@ -33,8 +33,8 @@ begin
 					-- Start bit of new byte.
 					FErrBuf <= '0';
 					DBuf <= "1111111111";
-					BitClocks <= to_unsigned(199, 8);
-					BitValue <= to_signed(0, 7);
+					BitClocks <= 199;
+					BitValue <= 0;
 				end if;
 			else
 				-- Receive in progress. What do we do with the current bit?
@@ -70,8 +70,8 @@ begin
 					-- which what is now DBuf(0) was then DBuf(1)!
 					if DBuf(1) = '1' then
 						-- We have more bits to receive. Set up the clock.
-						BitClocks <= to_unsigned(199, 8);
-						BitValue <= to_signed(0, 7);
+						BitClocks <= 199;
+						BitValue <= 0;
 					else
 						-- We have finished receiving a full byte. Check polarity of stop bit.
 						if FErrBuf = '0' and BitValue >= 22 then

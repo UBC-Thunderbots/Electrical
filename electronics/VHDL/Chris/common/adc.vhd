@@ -29,7 +29,7 @@ end entity ADC;
 
 architecture Behavioural of ADC is
 	signal Bits : std_logic_vector(201 downto 0);
-	signal BitsLeft : unsigned(7 downto 0) := to_unsigned(0, 8);
+	signal BitsLeft : natural range 0 to 208;
 	signal PrevSPICK : std_logic := '0';
 begin
 	process(Clock)
@@ -38,7 +38,7 @@ begin
 			if SPISS = '1' then
 				-- Slave select deasserted.
 				-- If all is good, copy out.
-				if BitsLeft = to_unsigned(0, 8) then
+				if BitsLeft = 0 then
 					-- There is padding in the bitstream.
 					Channel0 <= unsigned(Bits(201 downto 192));
 					Channel1 <= unsigned(Bits(185 downto 176));
@@ -54,10 +54,10 @@ begin
 					Channel11 <= unsigned(Bits(25 downto 16));
 					Channel12 <= unsigned(Bits(9 downto 0));
 					Good <= '1';
-				elsif BitsLeft /= to_unsigned(208, 8) then
+				elsif BitsLeft /= 208 then
 					Good <= '0';
 				end if;
-				BitsLeft <= to_unsigned(208, 8);
+				BitsLeft <= 208;
 			else
 				if SPICK = '1' and PrevSPICK = '0' then
 					Bits <= Bits(200 downto 0) & SPIDT;

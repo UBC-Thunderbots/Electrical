@@ -17,9 +17,9 @@ entity XBeeByteTransmitter is
 end entity XBeeByteTransmitter;
 
 architecture Behavioural of XBeeByteTransmitter is
-	signal HoldBusy : std_logic := '0';
-	signal EscapedData : std_logic_vector(7 downto 0) := "00000000";
-	signal EscapeSent : std_logic := '0';
+	signal HoldBusy : boolean := false;
+	signal EscapedData : std_logic_vector(7 downto 0) := X"00";
+	signal EscapeSent : boolean := false;
 begin
 	process(Clock)
 	begin
@@ -28,41 +28,41 @@ begin
 				Busy <= '1';
 				SerialData <= X"7E";
 				SerialLoad <= '1';
-				HoldBusy <= '1';
-				EscapeSent <= '0';
+				HoldBusy <= true;
+				EscapeSent <= false;
 			elsif Load = '1' then
 				Busy <= '1';
 				SerialLoad <= '1';
-				HoldBusy <= '1';
+				HoldBusy <= true;
 				if Data = X"7E" or Data = X"7D" or Data = X"11" or Data = X"13" then
 					SerialData <= X"7D";
 					EscapedData <= Data xor X"20";
-					EscapeSent <= '1';
+					EscapeSent <= true;
 				else
 					SerialData <= Data;
-					EscapeSent <= '0';
+					EscapeSent <= false;
 				end if;
 			elsif SerialBusy = '1' then
 				Busy <= '1';
 				SerialData <= Data;
 				SerialLoad <= '0';
-				HoldBusy <= '1';
+				HoldBusy <= true;
 			else
 				SerialData <= EscapedData;
-				if HoldBusy = '1' then
+				if HoldBusy then
 					Busy <= '1';
 					SerialLoad <= '0';
-					HoldBusy <= '0';
-				elsif EscapeSent = '1' then
+					HoldBusy <= false;
+				elsif EscapeSent then
 					Busy <= '1';
 					SerialLoad <= '1';
-					HoldBusy <= '1';
-					EscapeSent <= '0';
+					HoldBusy <= true;
+					EscapeSent <= false;
 				else
 					Busy <= '0';
 					SerialLoad <= '0';
-					HoldBusy <= '0';
-					EscapeSent <= '0';
+					HoldBusy <= false;
+					EscapeSent <= false;
 				end if;
 			end if; 
 		end if;
