@@ -7,31 +7,27 @@ VAR
 	Ferr : boolean;
 	Dbuf : word[10];
 	BitClocks : 0..199;
-	BitValue : word[7];
-
-DEFINE
-	Above22 := (BitValue >= 0d7_22) & (BitValue < 0d7_64);
-	BelowM22 := (BitValue >= 0d7_64) & (BitValue <= 0d7_106);
+	BitValue : -64..64;
 
 ASSIGN
 	init(Dgood) := 0;
 	init(Ferr) := 0;
 	init(Dbuf) := 0b10_0000000000;
 	init(BitClocks) := 0;
-	init(BitValue) := 0d7_0;
+	init(BitValue) := 0;
 
 
 	next(Dgood) :=
 		case
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !Ferr & Above22 : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !Ferr & BitValue >= 22 : 1;
 			1 : 0;
 		esac;
 
 	next(Ferr) :=
 		case
 			!bool(Dbuf[0:0]) & !Din : 0;
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !(Above22 | BelowM22) : 1;
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !(!Ferr & Above22) : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !(BitValue >= 22 | BitValue <= -22) : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !(!Ferr & BitValue >= 22) : 1;
 			1 : Ferr;
 		esac;
 
@@ -46,8 +42,8 @@ ASSIGN
 				case
 					BitClocks = 0 :
 						case
-							Above22 : 0b1_1 :: Dbuf[9:1];
-							BelowM22 : 0b1_0 :: Dbuf[9:1];
+							BitValue >= 22 : 0b1_1 :: Dbuf[9:1];
+							BitValue <= -22 : 0b1_0 :: Dbuf[9:1];
 							1 : 0b1_1 :: Dbuf[9:1];
 						esac;
 					1 : Dbuf;
@@ -76,15 +72,33 @@ ASSIGN
 		case
 			!bool(Dbuf[0:0]) :
 				case
-					!Din : 0d7_0;
+					!Din : 0;
 					1 : BitValue;
 				esac;
 			1 :
 				case
-					BitClocks > 131 : BitValue;
-					BitClocks > 68 : case Din : BitValue + 0d7_1 ; 1 : BitValue - 0d7_1; esac;
-					BitClocks > 0 : BitValue;
-					1 : case bool(Dbuf[1:1]) : 0d7_0; 1 : BitValue; esac;
+					BitClocks > 131 :
+						BitValue;
+					BitClocks > 68 :
+						case
+							-- These lines are required to allow us to use an integer-based type
+							-- instead of having to go for the word-based type. This makes the
+							-- syntax more pleasant, but we do have to make it obvious to NuSMV
+							-- that we can't ever go outside the defined range of values. We do
+							-- this by defining the data type to accept -64..64 and, right here,
+							-- doing saturated arithmetic. This means that the semantics of this
+							-- code is very slightly different than the semantics of the original
+							-- VHDL. We prove that this difference is irrelevant by means of the
+							-- INVARSPEC BitValue <= 63 & BitValue >= -63; line below.
+							BitValue = 64 : 64;
+							BitValue = -64 : -64;
+							Din : BitValue + 1 ;
+							1 : BitValue - 1;
+						esac;
+					BitClocks > 0 :
+						BitValue;
+					1 :
+						case bool(Dbuf[1:1]) : 0; 1 : BitValue; esac;
 				esac;
 		esac;
 
@@ -95,7 +109,7 @@ ASSIGN
 --
 
 -- Should not overflow the bit value counter.
-INVARSPEC BitValue <= 0d7_63 | BitValue >= 0d7_65;
+INVARSPEC BitValue <= 63 & BitValue >= -63;
 
 -- Should never have a framing error and good data simultaneously.
 INVARSPEC !(Ferr & Dgood);
