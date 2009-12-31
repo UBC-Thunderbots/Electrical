@@ -10,7 +10,7 @@ entity SerialReceiver is
 
 		Data : out std_logic_vector(7 downto 0);
 		Good : out std_logic;
-		FErr : buffer std_logic := '0'
+		FErr : out std_logic := '0'
 	);
 end entity SerialReceiver;
 
@@ -18,8 +18,10 @@ architecture Behavioural of SerialReceiver is
 	signal DBuf : std_logic_vector(9 downto 0) := "0000000000";
 	signal BitClocks : unsigned(7 downto 0) := to_unsigned(0, 8);
 	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
+	signal FErrBuf : std_logic := '0';
 begin
 	Data <= DBuf(8 downto 1);
+	FErr <= FErrBuf;
 
 	process(Clock)
 	begin
@@ -29,7 +31,7 @@ begin
 				-- Not receiving right now.
 				if Serial = '0' then
 					-- Start bit of new byte.
-					FErr <= '0';
+					FErrBuf <= '0';
 					DBuf <= "1111111111";
 					BitClocks <= to_unsigned(199, 8);
 					BitValue <= to_signed(0, 7);
@@ -60,7 +62,7 @@ begin
 						DBuf <= '0' & DBuf(9 downto 1);
 					else
 						-- Unstable. Reject whole byte.
-						FErr <= '1';
+						FErrBuf <= '1';
 						-- Still need to push the shift register to keep things moving.
 						DBuf <= '1' & DBuf(9 downto 1);
 					end if;
@@ -72,10 +74,10 @@ begin
 						BitValue <= to_signed(0, 7);
 					else
 						-- We have finished receiving a full byte. Check polarity of stop bit.
-						if FErr = '0' and BitValue >= 22 then
+						if FErrBuf = '0' and BitValue >= 22 then
 							Good <= '1';
 						else
-							FErr <= '1';
+							FErrBuf <= '1';
 						end if;
 					end if;
 				end if;

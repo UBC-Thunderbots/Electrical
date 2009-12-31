@@ -12,7 +12,7 @@ architecture Behavioural of SerialReceiverTest is
 
 			Data : out std_logic_vector(7 downto 0);
 			Good : out std_logic;
-			FErr : buffer std_logic;
+			FErr : out std_logic;
 
 			Serial : in std_logic
 		);
