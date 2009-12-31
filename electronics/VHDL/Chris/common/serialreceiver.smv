@@ -1,0 +1,122 @@
+MODULE main
+
+VAR
+	Din : boolean;
+VAR
+	Dgood : boolean;
+	Ferr : boolean;
+	Dbuf : word[10];
+	BitClocks : 0..199;
+	BitValue : word[7];
+
+DEFINE
+	Above22 := (BitValue >= 0d7_22) & (BitValue < 0d7_64);
+	BelowM22 := (BitValue >= 0d7_64) & (BitValue <= 0d7_106);
+
+ASSIGN
+	init(Dgood) := 0;
+	init(Ferr) := 0;
+	init(Dbuf) := 0b10_0000000000;
+	init(BitClocks) := 0;
+	init(BitValue) := 0d7_0;
+
+
+	next(Dgood) :=
+		case
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !Ferr & Above22 : 1;
+			1 : 0;
+		esac;
+
+	next(Ferr) :=
+		case
+			!bool(Dbuf[0:0]) & !Din : 0;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !(Above22 | BelowM22) : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !(!Ferr & Above22) : 1;
+			1 : Ferr;
+		esac;
+
+	next(Dbuf) :=
+		case
+			!bool(Dbuf[0:0]) :
+				case
+					!Din : 0b10_1111111111;
+					1 : Dbuf;
+				esac;
+			1 :
+				case
+					BitClocks = 0 :
+						case
+							Above22 : 0b1_1 :: Dbuf[9:1];
+							BelowM22 : 0b1_0 :: Dbuf[9:1];
+							1 : 0b1_1 :: Dbuf[9:1];
+						esac;
+					1 : Dbuf;
+				esac;
+		esac;
+
+	next(BitClocks) :=
+		case
+			!bool(Dbuf[0:0]) :
+				case
+					!Din : 199;
+					1 : BitClocks;
+				esac;
+			1 :
+				case
+					BitClocks > 0 : BitClocks - 1;
+					1 :
+						case
+							bool(Dbuf[1:1]) : 199;
+							1 : BitClocks;
+						esac;
+				esac;
+		esac;
+
+	next(BitValue) :=
+		case
+			!bool(Dbuf[0:0]) :
+				case
+					!Din : 0d7_0;
+					1 : BitValue;
+				esac;
+			1 :
+				case
+					BitClocks > 131 : BitValue;
+					BitClocks > 68 : case Din : BitValue + 0d7_1 ; 1 : BitValue - 0d7_1; esac;
+					BitClocks > 0 : BitValue;
+					1 : case bool(Dbuf[1:1]) : 0d7_0; 1 : BitValue; esac;
+				esac;
+		esac;
+
+--
+-- IDENTITY FOR CTL SPECIFICATIONS
+--
+-- A[x W y] = !E[!y U (!x & !y)]
+--
+
+-- Should not overflow the bit value counter.
+INVARSPEC BitValue <= 0d7_63 | BitValue >= 0d7_65;
+
+-- Should never have a framing error and good data simultaneously.
+INVARSPEC !(Ferr & Dgood);
+
+-- If good data is found, byte should be framed right (start bit and stop bit).
+INVARSPEC Dgood -> (!bool(Dbuf[0:0]) & bool(Dbuf[9:9]));
+
+-- Dgood should never stay high for more than one clock cycle.
+CTLSPEC AG (Dgood -> AX !Dgood);
+
+-- If you see a framing error, Ferr should stay true until the system goes idle.
+-- CTLSPEC AG (Ferr -> A [Ferr W !bool(Dbuf[0:0])]);
+CTLSPEC AG (Ferr -> !E [bool(Dbuf[0:0]) U (!Ferr & bool(Dbuf[0:0]))]);
+
+-- No matter what happens, you can get back to an idle state.
+CTLSPEC AG EF !bool(Dbuf[0:0]);
+
+-- All errors are transient (if you wait long enough, you can start receiving again).
+CTLSPEC AG EF Dgood;
+
+-- There is a path where you do sometime receive some data, but never see a framing
+-- error (i.e. the receiver is capable of properly interpreting a perfect bitstream).
+-- You can follow this path from any idle state.
+CTLSPEC AG((!bool(Dbuf[0:0]) & !Ferr) -> E [!Ferr U (Dgood & !Ferr)]);

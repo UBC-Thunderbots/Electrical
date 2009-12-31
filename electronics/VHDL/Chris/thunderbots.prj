@@ -1,0 +1,6 @@
+vhdl work common/adc.vhd
+vhdl work common/pwm.vhd
+vhdl work common/serialreceiver.vhd
+vhdl work common/xbeebytereceiver.vhd
+vhdl work synth/clockgen.vhd
+vhdl work synth/main.vhd

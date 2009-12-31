@@ -1,0 +1,9 @@
+run
+-ifn thunderbots.prj
+-ofn thunderbots.ngc
+-p xc3s50a
+-top main
+-opt_level 1
+-opt_mode area
+-arch behavioural
+
