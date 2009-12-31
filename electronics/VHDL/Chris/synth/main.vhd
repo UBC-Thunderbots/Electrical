@@ -95,6 +95,10 @@ architecture Behavioural of Main is
 	end component;
 	
 	signal Clock : std_logic;
+	signal XBeeRXL : std_logic := '1';
+	signal AppSSL : std_logic := '1';
+	signal AppInL : std_logic := '0';
+	signal AppClkL : std_logic := '0';
 	signal DutyCycle : unsigned(9 downto 0);
 begin
 	ClockGen_Instance : ClockGen
@@ -102,6 +106,16 @@ begin
 		Oscillator => Oscillator,
 		Clock => Clock
 	);
+
+	process(Clock)
+	begin
+		if rising_edge(Clock) then
+			XBeeRXL <= XBeeRX;
+			AppSSL <= AppSS;
+			AppInL <= AppIn;
+			AppClkL <= AppClk;
+		end if;
+	end process;
 
 	testpwm : PWM
 	generic map(
@@ -116,9 +130,9 @@ begin
 	testadc : ADC
 	port map(
 		Clock => Clock,
-		SPICK => APPCLK,
-		SPIDT => APPIN,
-		SPISS => APPSS,
+		SPICK => AppClkL,
+		SPIDT => AppInL,
+		SPISS => AppSSL,
 		Channel0 => DutyCycle,
 		Channel1 => open,
 		Channel2 => open,
