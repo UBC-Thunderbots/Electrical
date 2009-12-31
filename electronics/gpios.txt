@@ -1,0 +1,39 @@
+GPIO#	Receiver	Name
+   1	Motorcon	Brake
+   2	Motorcon	Fault1
+   3	Motorcon	PWM1
+   4	Motorcon	Fault2
+   5	Motorcon	PWM2
+   6	Motorcon	Fault3
+   7	Motorcon	PWM3
+   8	Motorcon	Fault4
+   9	Motorcon	PWM4
+  10	Motorcon	Fault5
+  11	Motorcon	PWM5
+  12
+  13	Motorcon	Dir1
+  14
+  15	Motorcon	Dir2
+  16
+  17	Motorcon	Dir3
+  18
+  19	Motorcon	Dir4
+  20
+  21	Motorcon	Dir5
+  22
+  23	Solenoids	Kick
+  24
+  25	Solenoids	Chip
+  26
+  27	Solenoids	Charge
+  28
+  29
+  30
+  31
+  32
+  33
+  34
+  35
+  36
+  37
+  38
