@@ -21,6 +21,8 @@ net "AppOut" iostandard=LVCMOS33 | loc=P71;
 net "AppClk" iostandard=LVCMOS33 | loc=P72 | pulldown;
 
 # Control lines to and from the motor controllers.
+# Pullups on Dir* are so we can do the hacky thing where we don't need a
+# discrete resistor to limit current into the base of the level-shifting BJT.
 # Pullups on Fault* are because the motor controllers have open-collector
 # outputs.
 # Pullup on DSense is because the Hall sensor has an open-collector output.
@@ -30,11 +32,11 @@ net "PWM2" iostandard=LVCMOS33 | loc=P99;
 net "PWM3" iostandard=LVCMOS33 | loc=P93;
 net "PWM4" iostandard=LVCMOS33 | loc=P91;
 net "PWM5" iostandard=LVCMOS33 | loc=P88;
-net "Dir1" iostandard=LVCMOS33 | loc=P85;
-net "Dir2" iostandard=LVCMOS33 | loc=P83;
-net "Dir3" iostandard=LVCMOS33 | loc=P78;
-net "Dir4" iostandard=LVCMOS33 | loc=P76;
-net "Dir5" iostandard=LVCMOS33 | loc=P31;
+net "Dir1" iostandard=LVCMOS33 | loc=P85 | pullup;
+net "Dir2" iostandard=LVCMOS33 | loc=P83 | pullup;
+net "Dir3" iostandard=LVCMOS33 | loc=P78 | pullup;
+net "Dir4" iostandard=LVCMOS33 | loc=P76 | pullup;
+net "Dir5" iostandard=LVCMOS33 | loc=P31 | pullup;
 net "Fault1" iostandard=LVCMOS33 | loc=P103 | pullup;
 net "Fault2" iostandard=LVCMOS33 | loc=P101 | pullup;
 net "Fault3" iostandard=LVCMOS33 | loc=P98 | pullup;

@@ -2,6 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library unisim;
+use unisim.vcomponents.all;
+
 entity Main is
 	port(
 		-- The 50MHz canned oscillator.
@@ -99,6 +102,13 @@ architecture Behavioural of Main is
 	signal Fault4L : std_logic := '1';
 	signal Fault5L : std_logic := '1';
 
+	-- Tristate controls for the Dir* pins.
+	signal Dir1T : std_logic := '0';
+	signal Dir2T : std_logic := '0';
+	signal Dir3T : std_logic := '0';
+	signal Dir4T : std_logic := '0';
+	signal Dir5T : std_logic := '0';
+
 	-- The duty cycle of the test PWM generator.
 	signal DutyCycle : unsigned(9 downto 0);
 begin
@@ -135,15 +145,47 @@ begin
 		DutyCycle => DutyCycle,
 		PWM => PWM1
 	);
+
+	-- Tristate drivers for the Dir* pins.
+	Dir1Driver : OBUFT
+	port map(
+		I => '0',
+		T => Dir1T,
+		O => Dir1
+	);
+	Dir2Driver : OBUFT
+	port map(
+		I => '0',
+		T => Dir2T,
+		O => Dir2
+	);
+	Dir3Driver : OBUFT
+	port map(
+		I => '0',
+		T => Dir3T,
+		O => Dir3
+	);
+	Dir4Driver : OBUFT
+	port map(
+		I => '0',
+		T => Dir4T,
+		O => Dir4
+	);
+	Dir5Driver : OBUFT
+	port map(
+		I => '0',
+		T => Dir5T,
+		O => Dir5
+	);
 	PWM2 <= '1';
 	PWM3 <= '1';
 	PWM4 <= '1';
 	PWM5 <= '1';
-	Dir1 <= '0';
-	Dir2 <= '0';
-	Dir3 <= '0';
-	Dir4 <= '0';
-	Dir5 <= '0';
+	Dir1T <= '0';
+	Dir2T <= '0';
+	Dir3T <= '0';
+	Dir4T <= '0';
+	Dir5T <= '0';
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADC_Instance : ADC
