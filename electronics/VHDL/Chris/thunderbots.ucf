@@ -1,49 +1,50 @@
+# Global configuration options.
 config part=xc3s50atq144-4;
 config vccaux=3.3;
 config post_crc=enable;
+
+# Connection to the canned 50MHz oscillator.
 timespec "TSOscillator" = PERIOD "Oscillator" 20 ns;
 net "Oscillator" iostandard=LVCMOS33 | loc=P127 | float | tnm_net="Oscillator";
+
+# Serial lines to and from the XBee.
+# Pullup on RX causes line to go idle by default.
 net "XBeeRX" iostandard=LVCMOS33 | loc=P110 | pullup;
 net "XBeeTX" iostandard=LVCMOS33 | loc=P111;
+
+# SPI lines to and from the PIC.
+# Pullup on AppSS causes slave select to deassert by default.
+# Pulldowns on AppIn and AppClk prevent floating inputs.
 net "AppSS" iostandard=LVCMOS33 | loc=P112 | pullup;
 net "AppIn" iostandard=LVCMOS33 | loc=P62 | pulldown;
 net "AppOut" iostandard=LVCMOS33 | loc=P71;
 net "AppClk" iostandard=LVCMOS33 | loc=P72 | pulldown;
-net "GPIO1" iostandard=LVCMOS33 | loc=P104;
-net "GPIO2" iostandard=LVCMOS33 | loc=P103;
-net "GPIO3" iostandard=LVCMOS33 | loc=P102;
-net "GPIO4" iostandard=LVCMOS33 | loc=P101;
-net "GPIO5" iostandard=LVCMOS33 | loc=P99;
-net "GPIO6" iostandard=LVCMOS33 | loc=P98;
-net "GPIO7" iostandard=LVCMOS33 | loc=P93;
-net "GPIO8" iostandard=LVCMOS33 | loc=P92;
-net "GPIO9" iostandard=LVCMOS33 | loc=P91;
-net "GPIO10" iostandard=LVCMOS33 | loc=P90;
-net "GPIO11" iostandard=LVCMOS33 | loc=P88;
-net "GPIO12" iostandard=LVCMOS33 | loc=P87;
-net "GPIO13" iostandard=LVCMOS33 | loc=P85;
-net "GPIO14" iostandard=LVCMOS33 | loc=P84;
-net "GPIO15" iostandard=LVCMOS33 | loc=P83;
-net "GPIO16" iostandard=LVCMOS33 | loc=P82;
-net "GPIO17" iostandard=LVCMOS33 | loc=P78;
-net "GPIO18" iostandard=LVCMOS33 | loc=P77;
-net "GPIO19" iostandard=LVCMOS33 | loc=P76;
-net "GPIO20" iostandard=LVCMOS33 | loc=P32;
-net "GPIO21" iostandard=LVCMOS33 | loc=P31;
-net "GPIO22" iostandard=LVCMOS33 | loc=P30;
-net "GPIO23" iostandard=LVCMOS33 | loc=P29;
-net "GPIO24" iostandard=LVCMOS33 | loc=P28;
-net "GPIO25" iostandard=LVCMOS33 | loc=P27;
-net "GPIO26" iostandard=LVCMOS33 | loc=P25;
-net "GPIO27" iostandard=LVCMOS33 | loc=P24;
-net "GPIO28" iostandard=LVCMOS33 | loc=P21;
-net "GPIO29" iostandard=LVCMOS33 | loc=P20;
-net "GPIO30" iostandard=LVCMOS33 | loc=P19;
-net "GPIO31" iostandard=LVCMOS33 | loc=P18;
-net "GPIO32" iostandard=LVCMOS33 | loc=P16;
-net "GPIO33" iostandard=LVCMOS33 | loc=P15;
-net "GPIO34" iostandard=LVCMOS33 | loc=P13;
-net "GPIO35" iostandard=LVCMOS33 | loc=P12;
-net "GPIO36" iostandard=LVCMOS33 | loc=P11;
-net "GPIO37" iostandard=LVCMOS33 | loc=P10;
-net "GPIO38" iostandard=LVCMOS33 | loc=P8;
+
+# Control lines to and from the motor controllers.
+# Pullups on Fault* are because the motor controllers have open-collector
+# outputs.
+# DSense must float because the Xilinx pullup/pulldown resistors are rather
+# small (~5kR), and might substantially influence the Hall sensor and following
+# resistive divider.
+net "Brake" iostandard=LVCMOS33 | loc=P104;
+net "PWM1" iostandard=LVCMOS33 | loc=P102;
+net "PWM2" iostandard=LVCMOS33 | loc=P99;
+net "PWM3" iostandard=LVCMOS33 | loc=P93;
+net "PWM4" iostandard=LVCMOS33 | loc=P91;
+net "PWM5" iostandard=LVCMOS33 | loc=P88;
+net "Dir1" iostandard=LVCMOS33 | loc=P85;
+net "Dir2" iostandard=LVCMOS33 | loc=P83;
+net "Dir3" iostandard=LVCMOS33 | loc=P78;
+net "Dir4" iostandard=LVCMOS33 | loc=P76;
+net "Dir5" iostandard=LVCMOS33 | loc=P31;
+net "Fault1" iostandard=LVCMOS33 | loc=P103 | pullup;
+net "Fault2" iostandard=LVCMOS33 | loc=P101 | pullup;
+net "Fault3" iostandard=LVCMOS33 | loc=P98 | pullup;
+net "Fault4" iostandard=LVCMOS33 | loc=P92 | pullup;
+net "Fault5" iostandard=LVCMOS33 | loc=P90 | pullup;
+net "DSense" iostandard=LVCMOS33 | loc=P87 | float;
+
+# Control lines to the chicker.
+net "Kick" iostandard=LVCMOS33 | loc=P29;
+net "Chip" iostandard=LVCMOS33 | loc=P27;
+net "Charge" iostandard=LVCMOS33 | loc=P24;

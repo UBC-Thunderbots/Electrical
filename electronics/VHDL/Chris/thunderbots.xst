@@ -1,7 +1,7 @@
 run
 -ifn thunderbots.prj
 -ofn thunderbots.ngc
--p xc3s50a
+-p xc3s50atq144-4
 -top main
 -opt_level 1
 -opt_mode area

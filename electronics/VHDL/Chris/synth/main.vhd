@@ -4,51 +4,42 @@ use ieee.numeric_std.all;
 
 entity Main is
 	port(
+		-- The 50MHz canned oscillator.
 		Oscillator : in std_logic;
+
+		-- Serial lines to and from the XBee.
 		XBeeRX : in std_logic;
 		XBeeTX : out std_logic;
+
+		-- SPI lines to and from the PIC.
 		AppSS : in std_logic;
 		AppOut : out std_logic;
 		AppIn : in std_logic;
 		AppClk : in std_logic;
-		GPIO1 : out std_logic;
-		GPIO2 : out std_logic;
-		GPIO3 : out std_logic;
-		GPIO4 : out std_logic;
-		GPIO5 : out std_logic;
-		GPIO6 : out std_logic;
-		GPIO7 : out std_logic;
-		GPIO8 : out std_logic;
-		GPIO9 : out std_logic;
-		GPIO10 : out std_logic;
-		GPIO11 : out std_logic;
-		GPIO12 : out std_logic;
-		GPIO13 : out std_logic;
-		GPIO14 : out std_logic;
-		GPIO15 : out std_logic;
-		GPIO16 : out std_logic;
-		GPIO17 : out std_logic;
-		GPIO18 : out std_logic;
-		GPIO19 : out std_logic;
-		GPIO20 : out std_logic;
-		GPIO21 : out std_logic;
-		GPIO22 : out std_logic;
-		GPIO23 : out std_logic;
-		GPIO24 : out std_logic;
-		GPIO25 : out std_logic;
-		GPIO26 : out std_logic;
-		GPIO27 : out std_logic;
-		GPIO28 : out std_logic;
-		GPIO29 : out std_logic;
-		GPIO30 : out std_logic;
-		GPIO31 : out std_logic;
-		GPIO32 : out std_logic;
-		GPIO33 : out std_logic;
-		GPIO34 : out std_logic;
-		GPIO35 : out std_logic;
-		GPIO36 : out std_logic;
-		GPIO37 : out std_logic;
-		GPIO38 : out std_logic
+
+		-- Control lines to and from the motor controllers.
+		Brake : out std_logic;
+		PWM1 : out std_logic;
+		PWM2 : out std_logic;
+		PWM3 : out std_logic;
+		PWM4 : out std_logic;
+		PWM5 : out std_logic;
+		Dir1 : out std_logic;
+		Dir2 : out std_logic;
+		Dir3 : out std_logic;
+		Dir4 : out std_logic;
+		Dir5 : out std_logic;
+		Fault1 : in std_logic;
+		Fault2 : in std_logic;
+		Fault3 : in std_logic;
+		Fault4 : in std_logic;
+		Fault5 : in std_logic;
+		DSense : in std_logic;
+
+		-- Control lines to the chicker.
+		Kick : out std_logic;
+		Chip : out std_logic;
+		Charge : out std_logic
 	);
 end entity Main;
 
@@ -102,6 +93,11 @@ architecture Behavioural of Main is
 	signal AppSSL : std_logic := '1';
 	signal AppInL : std_logic := '0';
 	signal AppClkL : std_logic := '0';
+	signal Fault1L : std_logic := '1';
+	signal Fault2L : std_logic := '1';
+	signal Fault3L : std_logic := '1';
+	signal Fault4L : std_logic := '1';
+	signal Fault5L : std_logic := '1';
 
 	-- The duty cycle of the test PWM generator.
 	signal DutyCycle : unsigned(9 downto 0);
@@ -121,6 +117,11 @@ begin
 			AppSSL <= AppSS;
 			AppInL <= AppIn;
 			AppClkL <= AppClk;
+			Fault1L <= Fault1;
+			Fault2L <= Fault2;
+			Fault3L <= Fault3;
+			Fault4L <= Fault4;
+			Fault5L <= Fault5;
 		end if;
 	end process;
 
@@ -132,8 +133,17 @@ begin
 	port map(
 		Clock => Clock,
 		DutyCycle => DutyCycle,
-		PWM => GPIO3
+		PWM => PWM1
 	);
+	PWM2 <= '1';
+	PWM3 <= '1';
+	PWM4 <= '1';
+	PWM5 <= '1';
+	Dir1 <= '0';
+	Dir2 <= '0';
+	Dir3 <= '0';
+	Dir4 <= '0';
+	Dir5 <= '0';
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADC_Instance : ADC
@@ -155,47 +165,16 @@ begin
 		Channel10 => open,
 		Channel11 => open,
 		Channel12 => open,
-		Good => GPIO38
+		Good => open
 	);
 
 	--  The brake line activates when the PWM duty cycle is small.
-	GPIO1 <= '1' when DutyCycle < to_unsigned(10, 10) else '0';
+	Brake <= '1' when DutyCycle < to_unsigned(10, 10) else '0';
 
 	XBeeTX <= '1';
 	AppOut <= '0';
-	GPIO2 <= '0';
-	GPIO4 <= '0';
-	GPIO5 <= '0';
-	GPIO6 <= '0';
-	GPIO7 <= '0';
-	GPIO8 <= '0';
-	GPIO9 <= '0';
-	GPIO10 <= '0';
-	GPIO11 <= '0';
-	GPIO12 <= '0';
-	GPIO13 <= '0';
-	GPIO14 <= '0';
-	GPIO15 <= '0';
-	GPIO16 <= '0';
-	GPIO17 <= '0';
-	GPIO18 <= '0';
-	GPIO19 <= '0';
-	GPIO20 <= '0';
-	GPIO21 <= '0';
-	GPIO22 <= '0';
-	GPIO23 <= '0';
-	GPIO24 <= '0';
-	GPIO25 <= '0';
-	GPIO26 <= '0';
-	GPIO27 <= '0';
-	GPIO28 <= '0';
-	GPIO29 <= '0';
-	GPIO30 <= '0';
-	GPIO31 <= '0';
-	GPIO32 <= '0';
-	GPIO33 <= '0';
-	GPIO34 <= '0';
-	GPIO35 <= '0';
-	GPIO36 <= '0';
-	GPIO37 <= '0';
+
+	Kick <= '1';
+	Chip <= '1';
+	Charge <= '1';
 end architecture Behavioural;
