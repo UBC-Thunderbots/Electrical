@@ -23,9 +23,7 @@ net "AppClk" iostandard=LVCMOS33 | loc=P72 | pulldown;
 # Control lines to and from the motor controllers.
 # Pullups on Fault* are because the motor controllers have open-collector
 # outputs.
-# DSense must float because the Xilinx pullup/pulldown resistors are rather
-# small (~5kR), and might substantially influence the Hall sensor and following
-# resistive divider.
+# Pullup on DSense is because the Hall sensor has an open-collector output.
 net "Brake" iostandard=LVCMOS33 | loc=P104;
 net "PWM1" iostandard=LVCMOS33 | loc=P102;
 net "PWM2" iostandard=LVCMOS33 | loc=P99;
@@ -42,7 +40,7 @@ net "Fault2" iostandard=LVCMOS33 | loc=P101 | pullup;
 net "Fault3" iostandard=LVCMOS33 | loc=P98 | pullup;
 net "Fault4" iostandard=LVCMOS33 | loc=P92 | pullup;
 net "Fault5" iostandard=LVCMOS33 | loc=P90 | pullup;
-net "DSense" iostandard=LVCMOS33 | loc=P87 | float;
+net "DSense" iostandard=LVCMOS33 | loc=P87 | pullup;
 
 # Control lines to the chicker.
 net "Kick" iostandard=LVCMOS33 | loc=P29;
