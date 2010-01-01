@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2009-12-07T12:35:12 PST
+EESchema Schematic File Version 2  date 2010-01-01T03:31:29 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 8
 Title ""
-Date "30 nov 2009"
+Date "1 jan 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -84,19 +84,19 @@ Connection ~ 5800 2100
 Wire Wire Line
 	5600 2800 6000 2800
 $Comp
-L PWR_FLAG #FLG06
+L PWR_FLAG #FLG05
 U 1 1 4B132953
 P 5600 2750
-F 0 "#FLG06" H 5600 3020 30  0001 C CNN
+F 0 "#FLG05" H 5600 3020 30  0001 C CNN
 F 1 "PWR_FLAG" H 5600 2980 30  0000 C CNN
 	1    5600 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG07
+L PWR_FLAG #FLG06
 U 1 1 4B13294C
 P 5600 2050
-F 0 "#FLG07" H 5600 2320 30  0001 C CNN
+F 0 "#FLG06" H 5600 2320 30  0001 C CNN
 F 1 "PWR_FLAG" H 5600 2280 30  0000 C CNN
 	1    5600 2050
 	1    0    0    -1  
@@ -125,19 +125,19 @@ NoConn ~ 2250 2650
 NoConn ~ 2250 2550
 NoConn ~ 2250 2450
 $Comp
-L GND #PWR08
+L GND #PWR07
 U 1 1 4ADA585E
 P 5900 2850
-F 0 "#PWR08" H 5900 2850 30  0001 C CNN
+F 0 "#PWR07" H 5900 2850 30  0001 C CNN
 F 1 "GND" H 5900 2780 30  0001 C CNN
 	1    5900 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR09
+L +BATT #PWR08
 U 1 1 4ADA585A
 P 5800 2050
-F 0 "#PWR09" H 5800 2000 20  0001 C CNN
+F 0 "#PWR08" H 5800 2000 20  0001 C CNN
 F 1 "+BATT" H 5800 2150 30  0000 C CNN
 	1    5800 2050
 	1    0    0    -1  
