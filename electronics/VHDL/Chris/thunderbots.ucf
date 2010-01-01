@@ -1,7 +1,8 @@
 config part=xc3s50atq144-4;
 config vccaux=3.3;
 config post_crc=enable;
-net "Oscillator" iostandard=LVCMOS33 | loc=P127 | float;
+timespec "TSOscillator" = PERIOD "Oscillator" 20 ns;
+net "Oscillator" iostandard=LVCMOS33 | loc=P127 | float | tnm_net="Oscillator";
 net "XBeeRX" iostandard=LVCMOS33 | loc=P110 | pullup;
 net "XBeeTX" iostandard=LVCMOS33 | loc=P111;
 net "AppSS" iostandard=LVCMOS33 | loc=P112 | pullup;
