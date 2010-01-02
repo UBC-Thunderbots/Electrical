@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity PWM is
 	generic(
-		Width : positive
+		Width : positive;
+		Invert : boolean
 	);
 	port(
 		Clock : in std_ulogic;
@@ -18,7 +19,7 @@ end entity PWM;
 architecture Behavioural of PWM is
 	signal Count : unsigned(Width - 1 downto 0) := to_unsigned(0, Width);
 begin
-	PWM <= '0' when (Count < DutyCycle) else '1';
+	PWM <= '1' when (Count < DutyCycle) xor Invert else '0';
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
