@@ -13,7 +13,7 @@ ASSIGN
 	init(Dgood) := 0;
 	init(Ferr) := 0;
 	init(Dbuf) := 0b10_0000000000;
-	init(BitClocks) := 0;
+	init(BitClocks) := 199;
 	init(BitValue) := 0;
 
 
@@ -53,28 +53,18 @@ ASSIGN
 	next(BitClocks) :=
 		case
 			!bool(Dbuf[0:0]) :
-				case
-					!Din : 199;
-					1 : BitClocks;
-				esac;
+				199;
 			1 :
 				case
 					BitClocks > 0 : BitClocks - 1;
-					1 :
-						case
-							bool(Dbuf[1:1]) : 199;
-							1 : BitClocks;
-						esac;
+					1 : 199;
 				esac;
 		esac;
 
 	next(BitValue) :=
 		case
 			!bool(Dbuf[0:0]) :
-				case
-					!Din : 0;
-					1 : BitValue;
-				esac;
+				0;
 			1 :
 				case
 					BitClocks > 131 :
@@ -98,7 +88,7 @@ ASSIGN
 					BitClocks > 0 :
 						BitValue;
 					1 :
-						case bool(Dbuf[1:1]) : 0; 1 : BitValue; esac;
+						0;
 				esac;
 		esac;
 

@@ -15,7 +15,7 @@ end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
 	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
-	signal BitClocks : natural range 0 to 199 := 0;
+	signal BitClocks : natural range 0 to 199 := 199;
 	signal BitValue : integer range -63 to 63 := 0;
 	signal FErrBuf : std_ulogic := '0';
 begin
@@ -23,8 +23,14 @@ begin
 	FErr <= FErrBuf;
 
 	process(Clock)
+		variable ResetBitClocks : boolean;
+		variable ResetBitValue : boolean;
+		variable BitValueDelta : integer range -1 to 1;
 	begin
 		if rising_edge(Clock) then
+			ResetBitClocks := false;
+			ResetBitValue := false;
+			BitValueDelta := 0;
 			Good <= '0';
 			if DBuf(0) = '0' then
 				-- Not receiving right now.
@@ -32,25 +38,22 @@ begin
 					-- Start bit of new byte.
 					FErrBuf <= '0';
 					DBuf <= "1111111111";
-					BitClocks <= 199;
-					BitValue <= 0;
 				end if;
+				ResetBitClocks := true;
+				ResetBitValue := true;
 			else
 				-- Receive in progress. What do we do with the current bit?
 				if BitClocks > 131 then
 					-- Too early in the bit to take a stable sample. Do nothing.
-					BitClocks <= BitClocks - 1;
 				elsif BitClocks > 68 then
 					-- Middle 63 clocks. Sample.
 					if Serial = '1' then
-						BitValue <= BitValue + 1;
+						BitValueDelta := 1;
 					else
-						BitValue <= BitValue - 1;
+						BitValueDelta := -1;
 					end if;
-					BitClocks <= BitClocks - 1;
 				elsif BitClocks > 0 then
 					-- Too late in the bit to take a stable sample. Do nothing.
-					BitClocks <= BitClocks - 1;
 				else
 					-- End of bit. See what our sampling achieved.
 					if BitValue >= 22 then
@@ -68,9 +71,7 @@ begin
 					-- Note: DBuf is a signal, so reflects the **OLD** value, in
 					-- which what is now DBuf(0) was then DBuf(1)!
 					if DBuf(1) = '1' then
-						-- We have more bits to receive. Set up the clock.
-						BitClocks <= 199;
-						BitValue <= 0;
+						-- We have more bits to receive.
 					else
 						-- We have finished receiving a full byte. Check polarity of stop bit.
 						if FErrBuf = '0' and BitValue >= 22 then
@@ -79,7 +80,21 @@ begin
 							FErrBuf <= '1';
 						end if;
 					end if;
+					ResetBitClocks := true;
+					ResetBitValue := true;
 				end if;
+			end if;
+
+			if ResetBitClocks then
+				BitClocks <= 199;
+			else
+				BitClocks <= BitClocks - 1;
+			end if;
+
+			if ResetBitValue then
+				BitValue <= 0;
+			else
+				BitValue <= BitValue + BitValueDelta;
 			end if;
 		end if;
 	end process;
