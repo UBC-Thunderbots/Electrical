@@ -11,6 +11,10 @@ electronics/VHDL/Chris/common/sumultiplier.smv -text
 electronics/VHDL/Chris/common/sumultiplier.vhd -text
 electronics/VHDL/Chris/common/xbeebytereceiver.vhd -text
 electronics/VHDL/Chris/common/xbeebytetransmitter.vhd -text
+electronics/VHDL/Chris/common/xbeepacketreceiver.vhd -text
+electronics/VHDL/Chris/common/xbeepackettransmitter.vhd -text
+electronics/VHDL/Chris/common/xbeereceiver.vhd -text
+electronics/VHDL/Chris/common/xbeetransmitter.vhd -text
 electronics/VHDL/Chris/sim/graycountertest.vhd -text
 electronics/VHDL/Chris/sim/serialreceivertest.vhd -text
 electronics/VHDL/Chris/sim/serialtransmittertest.vhd -text
