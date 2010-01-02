@@ -30,7 +30,8 @@ architecture Behavioural of XBeeByteTransmitterTest is
 	signal Busy : std_ulogic;
 	signal SerialData : std_ulogic_vector(7 downto 0);
 	signal SerialLoad : std_ulogic;
-	signal SerialBusy : std_ulogic := '0';
+	signal SerialBusy : std_ulogic;
+	signal SerialWorking : std_ulogic := '0';
 
 	signal NumBytesSeen : natural := 0;
 	type BytesSeenType is array(16 downto 0) of std_ulogic_vector(7 downto 0);
@@ -55,17 +56,18 @@ begin
 		while SerialLoad = '0' loop
 			wait until rising_edge(Clock);
 		end loop;
-		SerialBusy <= '1';
+		SerialWorking <= '1';
 		BytesSeen(NumBytesSeen) <= SerialData;
 		NumBytesSeen <= NumBytesSeen + 1;
 		wait for ClockPeriod * 200 * 10;
 		wait until rising_edge(Clock);
-		SerialBusy <= '0';
+		SerialWorking <= '0';
 	end process;
+	SerialBusy <= SerialWorking or SerialLoad;
 
-	process(SerialBusy, SerialLoad)
+	process(SerialWorking, SerialLoad)
 	begin
-		assert not (SerialBusy = '1' and SerialLoad = '1');
+		assert not (SerialWorking = '1' and SerialLoad = '1');
 	end process;
 
 	process
@@ -96,8 +98,6 @@ begin
 		WaitSerial;
 		assert Busy = '1';
 		Tick;
-		assert Busy = '1';
-		Tick;
 		assert Busy = '0';
 		assert NumBytesSeen = 1;
 		assert BytesSeen(0) = X"7E";
@@ -110,8 +110,6 @@ begin
 		Load <= '0';
 		Tick;
 		WaitSerial;
-		assert Busy = '1';
-		Tick;
 		assert Busy = '1';
 		Tick;
 		assert Busy = '0';
@@ -134,8 +132,6 @@ begin
 		Tick;
 		assert Busy = '1';
 		WaitSerial;
-		assert Busy = '1';
-		Tick;
 		assert Busy = '1';
 		Tick;
 		assert Busy = '0';
