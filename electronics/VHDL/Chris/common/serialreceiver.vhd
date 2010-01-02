@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity SerialReceiver is
 	port(
@@ -16,7 +17,7 @@ end entity SerialReceiver;
 architecture Behavioural of SerialReceiver is
 	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
 	signal BitClocks : natural range 0 to 199 := 199;
-	signal BitValue : integer range -63 to 63 := 0;
+	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
 	signal FErrBuf : std_ulogic := '0';
 begin
 	Data <= DBuf(8 downto 1);
@@ -25,12 +26,12 @@ begin
 	process(Clock)
 		variable ResetBitClocks : boolean;
 		variable ResetBitValue : boolean;
-		variable BitValueDelta : integer range -1 to 1;
+		variable BitValueDelta : signed(6 downto 0);
 	begin
 		if rising_edge(Clock) then
 			ResetBitClocks := false;
 			ResetBitValue := false;
-			BitValueDelta := 0;
+			BitValueDelta := to_signed(0, 7);
 			Good <= '0';
 			if DBuf(0) = '0' then
 				-- Not receiving right now.
@@ -48,9 +49,9 @@ begin
 				elsif BitClocks > 68 then
 					-- Middle 63 clocks. Sample.
 					if Serial = '1' then
-						BitValueDelta := 1;
+						BitValueDelta := to_signed(1, 7);
 					else
-						BitValueDelta := -1;
+						BitValueDelta := to_signed(-1, 7);
 					end if;
 				elsif BitClocks > 0 then
 					-- Too late in the bit to take a stable sample. Do nothing.
@@ -92,7 +93,7 @@ begin
 			end if;
 
 			if ResetBitValue then
-				BitValue <= 0;
+				BitValue <= to_signed(0, 7);
 			else
 				BitValue <= BitValue + BitValueDelta;
 			end if;
