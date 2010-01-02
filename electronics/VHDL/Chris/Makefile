@@ -60,6 +60,8 @@ $(PROJ).mcs : $(PROJ).bit
 
 # We can make a BIT file from a routed NCD file using Xilinx BITGEN.
 # Options
+#  -d
+#    Skips DRC, since it's done by MAP/PAR anyway.
 #  -g Compress
 #    Packs data more efficiently, resulting in a smaller bitstream, without
 #    altering the semantics of the bitstream.
@@ -81,7 +83,7 @@ $(PROJ).mcs : $(PROJ).bit
 #  -w
 #    Overwrites any existing file.
 $(PROJ).bit : $(PROJ).ncd
-	bitgen -g Compress -g ConfigRate:1 -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w
+	bitgen -d -g Compress -g ConfigRate:1 -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w
 
 # We can make a routed NCD file from an unrouted NCD file using Xilinx PAR.
 # Options
