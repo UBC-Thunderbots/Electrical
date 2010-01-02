@@ -4,11 +4,11 @@ use ieee.numeric_std.all;
 
 entity ADC is
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		SPICK : in std_logic;
-		SPIDT : in std_logic;
-		SPISS : in std_logic;
+		SPICK : in std_ulogic;
+		SPIDT : in std_ulogic;
+		SPISS : in std_ulogic;
 
 		Channel0  : out unsigned(9 downto 0) := to_unsigned(0, 10);
 		Channel1  : out unsigned(9 downto 0) := to_unsigned(0, 10);
@@ -23,14 +23,14 @@ entity ADC is
 		Channel10 : out unsigned(9 downto 0) := to_unsigned(0, 10);
 		Channel11 : out unsigned(9 downto 0) := to_unsigned(0, 10);
 		Channel12 : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Good : out std_logic := '0'
+		Good : out std_ulogic := '0'
 	);
 end entity ADC;
 
 architecture Behavioural of ADC is
-	signal Bits : std_logic_vector(201 downto 0);
+	signal Bits : std_ulogic_vector(201 downto 0);
 	signal BitsLeft : natural range 0 to 208;
-	signal PrevSPICK : std_logic := '0';
+	signal PrevSPICK : std_ulogic := '0';
 begin
 	process(Clock)
 	begin

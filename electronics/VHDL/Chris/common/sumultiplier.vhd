@@ -7,7 +7,7 @@ entity SUMultiplier is
 		Width : positive
 	);
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
 		A : in unsigned(Width - 1 downto 0);
 		B : in unsigned(Width - 1 downto 0);

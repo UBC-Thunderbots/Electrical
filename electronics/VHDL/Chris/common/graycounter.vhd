@@ -7,23 +7,23 @@ entity GrayCounter is
 		Width : positive
 	);
 	port (
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		A : in std_logic;
-		B : in std_logic;
+		A : in std_ulogic;
+		B : in std_ulogic;
 
-		Reset : in std_logic;
+		Reset : in std_ulogic;
 		Count : out signed(Width - 1 downto 0)
 	);
 end entity GrayCounter;
 
 architecture Behavioural of GrayCounter is
-	signal OldA : std_logic := '0';
-	signal OldB : std_logic := '0';
-	signal NewA : std_logic := '0';
-	signal NewB : std_logic := '0';
+	signal OldA : std_ulogic := '0';
+	signal OldB : std_ulogic := '0';
+	signal NewA : std_ulogic := '0';
+	signal NewB : std_ulogic := '0';
 	signal Acc : signed(Width - 1 downto 0) := to_signed(0, Width);
-	signal State : std_logic_vector(3 downto 0) := "0000";
+	signal State : std_ulogic_vector(3 downto 0) := "0000";
 	signal NewCount : signed(Width - 1 downto 0) := to_signed(0, Width);
 	signal NewAcc : signed(Width - 1 downto 0) := to_signed(0, Width);
 begin

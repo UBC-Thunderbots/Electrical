@@ -3,22 +3,22 @@ use ieee.std_logic_1164.all;
 
 entity XBeeByteTransmitter is
 	port (
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		Data : in std_logic_vector(7 downto 0);
-		Load : in std_logic;
-		SOP : in std_logic;
-		Busy : out std_logic := '0';
+		Data : in std_ulogic_vector(7 downto 0);
+		Load : in std_ulogic;
+		SOP : in std_ulogic;
+		Busy : out std_ulogic := '0';
 
-		SerialData : out std_logic_vector(7 downto 0);
-		SerialLoad : out std_logic := '0';
-		SerialBusy : in std_logic
+		SerialData : out std_ulogic_vector(7 downto 0);
+		SerialLoad : out std_ulogic := '0';
+		SerialBusy : in std_ulogic
 	);
 end entity XBeeByteTransmitter;
 
 architecture Behavioural of XBeeByteTransmitter is
 	signal HoldBusy : boolean := false;
-	signal EscapedData : std_logic_vector(7 downto 0) := X"00";
+	signal EscapedData : std_ulogic_vector(7 downto 0) := X"00";
 	signal EscapeSent : boolean := false;
 begin
 	process(Clock)

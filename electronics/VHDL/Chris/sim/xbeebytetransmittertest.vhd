@@ -8,32 +8,32 @@ end XBeeByteTransmitterTest;
 architecture Behavioural of XBeeByteTransmitterTest is
 	component XBeeByteTransmitter is
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
-			Data : in std_logic_vector(7 downto 0);
-			Load : in std_logic;
-			SOP : in std_logic;
-			Busy : out std_logic;
+			Data : in std_ulogic_vector(7 downto 0);
+			Load : in std_ulogic;
+			SOP : in std_ulogic;
+			Busy : out std_ulogic;
 
-			SerialData : out std_logic_vector(7 downto 0) := "00000000";
-			SerialLoad : out std_logic := '0';
-			SerialBusy : in std_logic
+			SerialData : out std_ulogic_vector(7 downto 0) := "00000000";
+			SerialLoad : out std_ulogic := '0';
+			SerialBusy : in std_ulogic
 		);
 	end component XBeeByteTransmitter;
 
 	constant ClockPeriod : time := 20 ns;
 
-	signal Clock : std_logic := '0';
-	signal Data : std_logic_vector(7 downto 0) := X"00";
-	signal Load : std_logic := '0';
-	signal SOP : std_logic := '0';
-	signal Busy : std_logic;
-	signal SerialData : std_logic_vector(7 downto 0);
-	signal SerialLoad : std_logic;
-	signal SerialBusy : std_logic := '0';
+	signal Clock : std_ulogic := '0';
+	signal Data : std_ulogic_vector(7 downto 0) := X"00";
+	signal Load : std_ulogic := '0';
+	signal SOP : std_ulogic := '0';
+	signal Busy : std_ulogic;
+	signal SerialData : std_ulogic_vector(7 downto 0);
+	signal SerialLoad : std_ulogic;
+	signal SerialBusy : std_ulogic := '0';
 
 	signal NumBytesSeen : natural := 0;
-	type BytesSeenType is array(16 downto 0) of std_logic_vector(7 downto 0);
+	type BytesSeenType is array(16 downto 0) of std_ulogic_vector(7 downto 0);
 	signal BytesSeen : BytesSeenType;
 begin
 	uut: XBeeByteTransmitter

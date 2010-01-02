@@ -7,7 +7,7 @@ entity SSMultiplier is
 		Width : positive
 	);
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
 		A : in signed(Width - 1 downto 0);
 		B : in signed(Width - 1 downto 0);
@@ -21,7 +21,7 @@ architecture Behavioural of SSMultiplier is
 			Width : positive
 		);
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 			A : in unsigned(Width - 1 downto 0);
 			B : in unsigned(Width - 1 downto 0);
 			Prod : buffer unsigned(Width * 2 - 1 downto 0)
@@ -52,11 +52,11 @@ architecture Behavioural of SSMultiplier is
 		return to_signed(-to_integer(X), Width * 2);
 	end function Negated2S;
 
-	signal SgnA : std_logic;
+	signal SgnA : std_ulogic;
 	signal AbsA : unsigned(Width - 1 downto 0);
-	signal SgnB : std_logic;
+	signal SgnB : std_ulogic;
 	signal AbsB : unsigned(Width - 1 downto 0);
-	signal SgnProd : std_logic;
+	signal SgnProd : std_ulogic;
 	signal AbsProd : unsigned(Width * 2 - 1 downto 0);
 begin
 	um : SUMultiplier

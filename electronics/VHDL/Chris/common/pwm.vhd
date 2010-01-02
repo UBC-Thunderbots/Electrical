@@ -7,9 +7,9 @@ entity PWM is
 		Width : positive
 	);
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		PWM : out std_logic;
+		PWM : out std_ulogic;
 
 		DutyCycle : in unsigned(Width - 1 downto 0)
 	);

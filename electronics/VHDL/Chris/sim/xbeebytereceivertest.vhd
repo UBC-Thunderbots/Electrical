@@ -8,29 +8,29 @@ end entity XBeeByteReceiverTest;
 architecture Behavioural of XBeeByteReceiverTest is
 	component XBeeByteReceiver is
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
-			SerialData : in std_logic_vector(7 downto 0);
-			SerialGood : in std_logic;
-			SerialFErr : in std_logic;
+			SerialData : in std_ulogic_vector(7 downto 0);
+			SerialGood : in std_ulogic;
+			SerialFErr : in std_ulogic;
 
-			FErr : out std_logic := '0';
-			Data : out std_logic_vector(7 downto 0);
-			Good : out std_logic := '0';
-			SOP : out std_logic := '0'
+			FErr : out std_ulogic := '0';
+			Data : out std_ulogic_vector(7 downto 0);
+			Good : out std_ulogic := '0';
+			SOP : out std_ulogic := '0'
 		);
 	end component XBeeByteReceiver;
 
 	constant ClockPeriod : time := 20 ns;
 
-	signal Clock : std_logic := '0';
-	signal SerialData : std_logic_vector(7 downto 0) := X"00";
-	signal SerialGood : std_logic := '0';
-	signal SerialFErr : std_logic := '0';
-	signal FErr : std_logic;
-	signal Data : std_logic_vector(7 downto 0);
-	signal Good : std_logic;
-	signal SOP : std_logic;
+	signal Clock : std_ulogic := '0';
+	signal SerialData : std_ulogic_vector(7 downto 0) := X"00";
+	signal SerialGood : std_ulogic := '0';
+	signal SerialFErr : std_ulogic := '0';
+	signal FErr : std_ulogic;
+	signal Data : std_ulogic_vector(7 downto 0);
+	signal Good : std_ulogic;
+	signal SOP : std_ulogic;
 begin
 	uut: XBeeByteReceiver
 	port map(

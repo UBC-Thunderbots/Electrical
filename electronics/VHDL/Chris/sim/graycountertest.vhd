@@ -11,12 +11,12 @@ architecture Behavioural of GrayCounterTest is
 			Width : positive
 		);
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
-			A : in std_logic;
-			B : in std_logic;
+			A : in std_ulogic;
+			B : in std_ulogic;
 
-			Reset : in std_logic;
+			Reset : in std_ulogic;
 			Count : out signed(Width - 1 downto 0)
 		);
 	end component GrayCounter;
@@ -24,12 +24,12 @@ architecture Behavioural of GrayCounterTest is
 	constant ClockPeriod : time := 20 ns;
 	constant Width : positive := 16;
 
-	signal Clock : std_logic := '0';
-	signal A : std_logic := '0';
-	signal B : std_logic := '0';
-	signal Reset : std_logic := '0';
+	signal Clock : std_ulogic := '0';
+	signal A : std_ulogic := '0';
+	signal B : std_ulogic := '0';
+	signal Reset : std_ulogic := '0';
 	signal Count : signed(Width - 1 downto 0) := to_signed(0, Width);
-	signal Done : std_logic := '0';
+	signal Done : std_ulogic := '0';
 begin
 	uut: GrayCounter
 	generic map(

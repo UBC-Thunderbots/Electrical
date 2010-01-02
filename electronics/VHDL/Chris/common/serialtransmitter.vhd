@@ -4,18 +4,18 @@ use ieee.numeric_std.all;
 
 entity SerialTransmitter is
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		Data : in std_logic_vector(7 downto 0);
-		Load : in std_logic;
-		Busy : out std_logic;
+		Data : in std_ulogic_vector(7 downto 0);
+		Load : in std_ulogic;
+		Busy : out std_ulogic;
 
-		Serial : out std_logic
+		Serial : out std_ulogic
 	);
 end entity SerialTransmitter;
 
 architecture Behavioural of SerialTransmitter is
-	signal DBuf : std_logic_vector(8 downto 0) := "111111111";
+	signal DBuf : std_ulogic_vector(8 downto 0) := "111111111";
 	signal Bits : natural range 0 to 10 := 0;
 	signal BitClocks : natural range 0 to 199 := 0;
 begin

@@ -8,28 +8,28 @@ end entity SerialReceiverTest;
 architecture Behavioural of SerialReceiverTest is
 	component SerialReceiver
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
-			Data : out std_logic_vector(7 downto 0);
-			Good : out std_logic;
-			FErr : out std_logic;
+			Data : out std_ulogic_vector(7 downto 0);
+			Good : out std_ulogic;
+			FErr : out std_ulogic;
 
-			Serial : in std_logic
+			Serial : in std_ulogic
 		);
 	end component SerialReceiver;
 
 	constant ClockPeriod : time := 20 ns;
 	constant BitTime : time := 4 us;
 
-	signal Clock : std_logic := '0';
-	signal Serial : std_logic := '1';
-	signal Data : std_logic_vector(7 downto 0);
-	signal Good : std_logic := '0';
-	signal FErr : std_logic := '0';
-	signal Done : std_logic := '0';
+	signal Clock : std_ulogic := '0';
+	signal Serial : std_ulogic := '1';
+	signal Data : std_ulogic_vector(7 downto 0);
+	signal Good : std_ulogic := '0';
+	signal FErr : std_ulogic := '0';
+	signal Done : std_ulogic := '0';
 	signal FErrSeen : natural := 0;
 	signal BytesSeen : natural := 0;
-	signal LastByte : std_logic_vector(7 downto 0);
+	signal LastByte : std_ulogic_vector(7 downto 0);
 begin
 	uut: SerialReceiver
 	port map(

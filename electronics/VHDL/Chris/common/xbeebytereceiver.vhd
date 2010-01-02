@@ -3,16 +3,16 @@ use ieee.std_logic_1164.all;
 
 entity XBeeByteReceiver is
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		SerialData : in std_logic_vector(7 downto 0);
-		SerialGood : in std_logic;
-		SerialFErr : in std_logic;
+		SerialData : in std_ulogic_vector(7 downto 0);
+		SerialGood : in std_ulogic;
+		SerialFErr : in std_ulogic;
 
-		FErr : out std_logic := '0';
-		Data : out std_logic_vector(7 downto 0) := X"00";
-		Good : out std_logic := '0';
-		SOP : out std_logic := '0'
+		FErr : out std_ulogic := '0';
+		Data : out std_ulogic_vector(7 downto 0) := X"00";
+		Good : out std_ulogic := '0';
+		SOP : out std_ulogic := '0'
 	);
 end entity XBeeByteReceiver;
 

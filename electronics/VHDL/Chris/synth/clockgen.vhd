@@ -7,15 +7,15 @@ use unisim.vcomponents.all;
 
 entity ClockGen is
 	port(
-		Oscillator : in std_logic;
-		Clock : out std_logic
+		Oscillator : in std_ulogic;
+		Clock : out std_ulogic
 	);
 end entity ClockGen;
 
 architecture Behavioural of ClockGen is
-	signal OscillatorBuffered : std_logic;
-	signal DCMOut : std_logic;
-	signal BufGOut : std_logic;
+	signal OscillatorBuffered : std_ulogic;
+	signal DCMOut : std_ulogic;
+	signal BufGOut : std_ulogic;
 begin
 	IBufferG : IBufG
 	port map(

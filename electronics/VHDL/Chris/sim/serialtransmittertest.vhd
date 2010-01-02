@@ -7,24 +7,24 @@ end entity SerialTransmitterTest;
 architecture Behavioural of SerialTransmitterTest is
 	component SerialTransmitter
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
-			Data : in std_logic_vector(7 downto 0);
-			Load : in std_logic;
-			Busy : out std_logic;
+			Data : in std_ulogic_vector(7 downto 0);
+			Load : in std_ulogic;
+			Busy : out std_ulogic;
 
-			Serial : out std_logic
+			Serial : out std_ulogic
 		);
 	end component SerialTransmitter;
 
 	constant ClockPeriod : time := 20 ns;
 	constant BitTicks : positive := 4 us / ClockPeriod;
 
-	signal Clock : std_logic := '0';
-	signal Data : std_logic_vector(7 downto 0) := "00000000";
-	signal Load : std_logic := '0';
-	signal Serial : std_logic;
-	signal Busy : std_logic;
+	signal Clock : std_ulogic := '0';
+	signal Data : std_ulogic_vector(7 downto 0) := "00000000";
+	signal Load : std_ulogic := '0';
+	signal Serial : std_ulogic;
+	signal Busy : std_ulogic;
 begin
 	uut: SerialTransmitter
 	port map(

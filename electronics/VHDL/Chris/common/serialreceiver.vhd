@@ -4,21 +4,21 @@ use ieee.numeric_std.all;
 
 entity SerialReceiver is
 	port(
-		Clock : in std_logic;
+		Clock : in std_ulogic;
 
-		Serial : in std_logic;
+		Serial : in std_ulogic;
 
-		Data : out std_logic_vector(7 downto 0);
-		Good : out std_logic;
-		FErr : out std_logic := '0'
+		Data : out std_ulogic_vector(7 downto 0);
+		Good : out std_ulogic;
+		FErr : out std_ulogic := '0'
 	);
 end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
-	signal DBuf : std_logic_vector(9 downto 0) := "0000000000";
+	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
 	signal BitClocks : natural range 0 to 199 := 0;
 	signal BitValue : integer range -63 to 63 := 0;
-	signal FErrBuf : std_logic := '0';
+	signal FErrBuf : std_ulogic := '0';
 begin
 	Data <= DBuf(8 downto 1);
 	FErr <= FErrBuf;

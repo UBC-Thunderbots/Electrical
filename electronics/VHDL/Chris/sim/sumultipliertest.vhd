@@ -11,7 +11,7 @@ architecture Behavioural of SUMultiplierTest is
 			Width : positive
 		);
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
 			A : in unsigned(Width - 1 downto 0);
 			B : in unsigned(Width - 1 downto 0);
@@ -22,11 +22,11 @@ architecture Behavioural of SUMultiplierTest is
 	constant ClockPeriod : time := 20 ns;
 	constant Width : positive := 6;
 
-	signal Clock : std_logic := '0';
+	signal Clock : std_ulogic := '0';
 	signal A : unsigned(Width - 1 downto 0) := to_unsigned(0, Width);
 	signal B : unsigned(Width - 1 downto 0) := to_unsigned(0, Width);
 	signal Prod : unsigned(Width * 2 - 1 downto 0);
-	signal Done : std_logic := '0';
+	signal Done : std_ulogic := '0';
 begin
 	uut: SUMultiplier
 	generic map(

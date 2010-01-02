@@ -11,7 +11,7 @@ architecture Behavioural of SSMultiplierTest is
 			Width : positive
 		);
 		port(
-			Clock : in std_logic;
+			Clock : in std_ulogic;
 
 			A : in signed(Width - 1 downto 0);
 			B : in signed(Width - 1 downto 0);
@@ -22,11 +22,11 @@ architecture Behavioural of SSMultiplierTest is
 	constant ClockPeriod : time := 20 ns;
 	constant Width : positive := 6;
 
-	signal Clock : std_logic := '0';
+	signal Clock : std_ulogic := '0';
 	signal A : signed(Width - 1 downto 0) := to_signed(0, Width);
 	signal B : signed(Width - 1 downto 0) := to_signed(0, Width);
 	signal Prod : signed(Width * 2 - 1 downto 0);
-	signal Done : std_logic := '0';
+	signal Done : std_ulogic := '0';
 begin
 	uut: SSMultiplier
 	generic map(
