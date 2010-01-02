@@ -211,11 +211,11 @@ begin
 			AppSSL <= AppSS;
 			AppInL <= AppIn;
 			AppClkL <= AppClk;
-			Fault1L <= Fault1;
-			Fault2L <= Fault2;
-			Fault3L <= Fault3;
-			Fault4L <= Fault4;
-			Fault5L <= Fault5;
+			Fault1L <= not Fault1;
+			Fault2L <= not Fault2;
+			Fault3L <= not Fault3;
+			Fault4L <= not Fault4;
+			Fault5L <= not Fault5;
 		end if;
 	end process;
 
