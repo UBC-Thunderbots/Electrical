@@ -42,6 +42,7 @@ ASSIGN
 				case
 					BitClocks = 0 :
 						case
+							Dbuf = 0b10_1111111111 & BitValue > -22 : 0b10_0000000000;
 							BitValue >= 22 : 0b1_1 :: Dbuf[9:1];
 							BitValue <= -22 : 0b1_0 :: Dbuf[9:1];
 							1 : 0b1_1 :: Dbuf[9:1];

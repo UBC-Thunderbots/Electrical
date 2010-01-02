@@ -81,6 +81,10 @@ begin
 							FErrBuf <= '1';
 						end if;
 					end if;
+					-- Check if this is a false start bit.
+					if DBuf = "1111111111" and BitValue > -22 then
+						DBuf <= "0000000000";
+					end if;
 					ResetBitClocks := true;
 					ResetBitValue := true;
 				end if;
