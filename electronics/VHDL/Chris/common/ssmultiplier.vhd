@@ -52,11 +52,11 @@ architecture Behavioural of SSMultiplier is
 		return to_signed(-to_integer(X), Width * 2);
 	end function Negated2S;
 
-	signal SgnA : std_ulogic;
+	signal SgnA : boolean;
 	signal AbsA : unsigned(Width - 1 downto 0);
-	signal SgnB : std_ulogic;
+	signal SgnB : boolean;
 	signal AbsB : unsigned(Width - 1 downto 0);
-	signal SgnProd : std_ulogic;
+	signal SgnProd : boolean;
 	signal AbsProd : unsigned(Width * 2 - 1 downto 0);
 begin
 	um : SUMultiplier
@@ -70,10 +70,10 @@ begin
 		Prod => AbsProd
 	);
 
-	SgnA <= '1' when A < 0 else '0';
+	SgnA <= A < 0;
 	AbsA <= Negated2U(A) when A < 0 else NotNegated2U(A);
-	SgnB <= '1' when B < 0 else '0';
+	SgnB <= B < 0;
 	AbsB <= Negated2U(B) when B < 0 else NotNegated2U(B);
 	SgnProd <= SgnA xor SgnB;
-	Prod <= Negated2S(AbsProd) when SgnProd = '1' else NotNegated2S(AbsProd);
+	Prod <= Negated2S(AbsProd) when SgnProd else NotNegated2S(AbsProd);
 end architecture Behavioural;
