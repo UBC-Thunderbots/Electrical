@@ -89,6 +89,9 @@ begin
 		assert Busy = '1';
 		assert Serial = '1';
 		TickBit;
+		assert Busy = '1';
+		assert Serial = '1';
+		TickBit;
 		assert Busy = '0';
 		assert Serial = '1';
 
