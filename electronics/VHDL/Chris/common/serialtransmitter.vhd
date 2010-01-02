@@ -16,27 +16,25 @@ end entity SerialTransmitter;
 
 architecture Behavioural of SerialTransmitter is
 	signal DBuf : std_ulogic_vector(8 downto 0) := "111111111";
-	signal Bits : natural range 0 to 10 := 0;
+	signal Bits : natural range 0 to 11 := 0;
 	signal BitClocks : natural range 0 to 199 := 0;
 begin
 	Serial <= DBuf(0);
-	Busy <= '1' when Bits /= 0 else '0';
+	Busy <= '1' when Load = '1' or Bits /= 0 or BitClocks /= 0 else '0';
 
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
 			if Load = '1' then
 				DBuf <= Data & "0";
-				Bits <= 10;
+				Bits <= 11;
 				BitClocks <= 199;
-			else
-				if BitClocks /= 0 then
-					BitClocks <= BitClocks - 1;
-				elsif Bits /= 0 then
-					Bits <= Bits - 1;
-					BitClocks <= 199;
-					DBuf <= "1" & DBuf(8 downto 1);
-				end if;
+			elsif BitClocks /= 0 then
+				BitClocks <= BitClocks - 1;
+			elsif Bits /= 0 then
+				Bits <= Bits - 1;
+				BitClocks <= 199;
+				DBuf <= "1" & DBuf(8 downto 1);
 			end if;
 		end if;
 	end process;
