@@ -366,10 +366,10 @@ begin
 
 	-- Decode the signed values into sign-magnitude.
 	DutyCycle1 <= to_unsigned(to_integer(Motor1), 10) when Motor1 >= 0 else to_unsigned(-to_integer(Motor1), 10);
-	DutyCycle2 <= to_unsigned(to_integer(Motor2), 10) when Motor1 >= 0 else to_unsigned(-to_integer(Motor2), 10);
-	DutyCycle3 <= to_unsigned(to_integer(Motor3), 10) when Motor1 >= 0 else to_unsigned(-to_integer(Motor3), 10);
-	DutyCycle4 <= to_unsigned(to_integer(Motor4), 10) when Motor1 >= 0 else to_unsigned(-to_integer(Motor4), 10);
-	DutyCycle5 <= to_unsigned(to_integer(Motor5), 10) when Motor1 >= 0 else to_unsigned(-to_integer(Motor5), 10);
+	DutyCycle2 <= to_unsigned(to_integer(Motor2), 10) when Motor2 >= 0 else to_unsigned(-to_integer(Motor2), 10);
+	DutyCycle3 <= to_unsigned(to_integer(Motor3), 10) when Motor3 >= 0 else to_unsigned(-to_integer(Motor3), 10);
+	DutyCycle4 <= to_unsigned(to_integer(Motor4), 10) when Motor4 >= 0 else to_unsigned(-to_integer(Motor4), 10);
+	DutyCycle5 <= to_unsigned(to_integer(Motor5), 10) when Motor5 >= 0 else to_unsigned(-to_integer(Motor5), 10);
 	Dir1T <= '1' when Motor1 < 0 else '0';
 	Dir2T <= '1' when Motor2 < 0 else '0';
 	Dir3T <= '1' when Motor3 < 0 else '0';
