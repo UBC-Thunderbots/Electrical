@@ -120,7 +120,6 @@ begin
 		Load <= '1';
 		Tick;
 		assert Busy = '1';
-		Data <= X"00";
 		Load <= '0';
 		Tick;
 		WaitSerial;
