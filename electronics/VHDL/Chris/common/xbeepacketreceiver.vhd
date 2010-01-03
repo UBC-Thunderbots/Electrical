@@ -12,7 +12,7 @@ entity XBeePacketReceiver is
 		ByteSOP : in std_ulogic;
 
 		Good : out std_ulogic := '0';
-		Address : out std_ulogic_vector(63 downto 0) := X"0000000000000000";
+		Address : out std_ulogic_vector(63 downto 0);
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
@@ -28,17 +28,24 @@ entity XBeePacketReceiver is
 end entity XBeePacketReceiver;
 
 architecture Behavioural of XBeePacketReceiver is
-	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectData, ExpectChecksum, CheckChecksum);
+	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectAPIID, ExpectAddress, ExpectRSSI, ExpectOptions, ExpectData, ExpectChecksum, CheckChecksum);
 	signal State : StateType := ExpectSOP;
-	signal DataLeft : natural range 1 to 26;
+	signal DataLeft : natural range 1 to 15;
 	signal Checksum : unsigned(7 downto 0);
-	type DataType is array(0 to 25) of std_ulogic_vector(7 downto 0);
+	signal AddressBuf : std_ulogic_vector(63 downto 0);
+	type DataType is array(0 to 14) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
 begin
+	Address <= AddressBuf;
+
 	process(Clock)
 		variable Word : std_ulogic_vector(15 downto 0);
+		variable ClearChecksum : boolean;
+		variable AddChecksum : boolean;
 	begin
 		if rising_edge(Clock) then
+			ClearChecksum := false;
+			AddChecksum := false;
 			Good <= '0';
 			if ByteFErr = '1' then
 				State <= ExpectSOP;
@@ -52,48 +59,73 @@ begin
 						State <= ExpectSOP;
 					end if;
 				elsif State = ExpectLengthLSB then
+					ClearChecksum := true;
 					if ByteData = X"1A" then
-						State <= ExpectData;
-						DataLeft <= 26;
-						Checksum <= X"00";
+						State <= ExpectAPIID;
 					else
 						State <= ExpectSOP;
 					end if;
+				elsif State = ExpectAPIID then
+					AddChecksum := true;
+					if ByteData = X"80" then
+						State <= ExpectAddress;
+						DataLeft <= 8;
+					else
+						State <= ExpectSOP;
+					end if;
+				elsif State = ExpectAddress then
+					AddChecksum := true;
+					AddressBuf <= AddressBuf(55 downto 0) & ByteData;
+					if DataLeft = 1 then
+						State <= ExpectRSSI;
+					end if;
+					DataLeft <= DataLeft - 1;
+				elsif State = ExpectRSSI then
+					AddChecksum := true;
+					RSSI <= ByteData;
+					State <= ExpectOptions;
+				elsif State = ExpectOptions then
+					AddChecksum := true;
+					State <= ExpectData;
+					DataLeft <= 15;
 				elsif State = ExpectData then
-					Data <= Data(1 to 25) & ByteData;
-					Checksum <= Checksum + unsigned(ByteData);
+					AddChecksum := true;
+					Data <= Data(1 to 14) & ByteData;
 					if DataLeft = 1 then
 						State <= ExpectChecksum;
 					end if;
 					DataLeft <= DataLeft - 1;
 				elsif State = ExpectChecksum then
-					Checksum <= Checksum + unsigned(ByteData);
+					AddChecksum := true;
 					State <= CheckChecksum;
 				end if;
 			elsif State = CheckChecksum then
 				if Checksum = X"FF" then
-					if Data(0) = X"80" and Data(11)(7) = '1' then
-						Address <= Data(1) & Data(2) & Data(3) & Data(4) & Data(5) & Data(6) & Data(7) & Data(8);
-						RSSI <= Data(9);
-						FeedbackFlag <= Data(11)(6);
-						DirectDriveFlag <= Data(11)(0);
-						Word := Data(13) & Data(12);
+					if Data(0)(7) = '1' then
+						FeedbackFlag <= Data(0)(6);
+						DirectDriveFlag <= Data(0)(0);
+						Word := Data(2) & Data(1);
 						Drive1 <= signed(Word);
-						Word := Data(15) & Data(14);
+						Word := Data(4) & Data(3);
 						Drive2 <= signed(Word);
-						Word := Data(17) & Data(16);
+						Word := Data(6) & Data(5);
 						Drive3 <= signed(Word);
-						Word := Data(19) & Data(18);
+						Word := Data(8) & Data(7);
 						Drive4 <= signed(Word);
-						Word := Data(21) & Data(20);
+						Word := Data(10) & Data(9);
 						Dribble <= signed(Word);
-						CommandSeq <= Data(22);
-						Command <= Data(23);
-						CommandData <= Data(25) & Data(24);
+						CommandSeq <= Data(11);
+						Command <= Data(12);
+						CommandData <= Data(14) & Data(13);
 						Good <= '1';
 					end if;
 				end if;
 				State <= ExpectSOP;
+			end if;
+			if ClearChecksum then
+				Checksum <= to_unsigned(0, 7);
+			elsif AddChecksum then
+				Checksum <= Checksum + unsigned(ByteData);
 			end if;
 		end if;
 	end process;
