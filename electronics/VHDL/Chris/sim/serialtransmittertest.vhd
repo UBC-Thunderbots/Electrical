@@ -5,18 +5,6 @@ entity SerialTransmitterTest is
 end entity SerialTransmitterTest;
 
 architecture Behavioural of SerialTransmitterTest is
-	component SerialTransmitter
-		port(
-			Clock : in std_ulogic;
-
-			Data : in std_ulogic_vector(7 downto 0);
-			Load : in std_ulogic;
-			Busy : out std_ulogic;
-
-			Serial : out std_ulogic
-		);
-	end component SerialTransmitter;
-
 	constant ClockPeriod : time := 20 ns;
 	constant BitTicks : positive := 4 us / ClockPeriod;
 
@@ -26,7 +14,7 @@ architecture Behavioural of SerialTransmitterTest is
 	signal Serial : std_ulogic;
 	signal Busy : std_ulogic;
 begin
-	uut: SerialTransmitter
+	uut : entity work.SerialTransmitter(Behavioural)
 	port map(
 		Clock => Clock,
 		Data => Data,

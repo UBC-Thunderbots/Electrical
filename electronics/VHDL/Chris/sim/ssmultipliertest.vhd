@@ -6,19 +6,6 @@ entity SSMultiplierTest is
 end entity SSMultiplierTest;
 
 architecture Behavioural of SSMultiplierTest is
-	component SSMultiplier
-		generic(
-			Width : positive
-		);
-		port(
-			Clock : in std_ulogic;
-
-			A : in signed(Width - 1 downto 0);
-			B : in signed(Width - 1 downto 0);
-			Prod : out signed(Width * 2 - 1 downto 0)
-		);
-	end component SSMultiplier;
-
 	constant ClockPeriod : time := 20 ns;
 	constant Width : positive := 6;
 
@@ -28,7 +15,7 @@ architecture Behavioural of SSMultiplierTest is
 	signal Prod : signed(Width * 2 - 1 downto 0);
 	signal Done : std_ulogic := '0';
 begin
-	uut: SSMultiplier
+	uut : entity work.SSMultiplier(Behavioural)
 	generic map(
 		Width => Width
 	)

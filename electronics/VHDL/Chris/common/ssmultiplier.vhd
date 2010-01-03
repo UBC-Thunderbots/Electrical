@@ -16,18 +16,6 @@ entity SSMultiplier is
 end entity SSMultiplier;
 
 architecture Behavioural of SSMultiplier is
-	component SUMultiplier
-		generic(
-			Width : positive
-		);
-		port(
-			Clock : in std_ulogic;
-			A : in unsigned(Width - 1 downto 0);
-			B : in unsigned(Width - 1 downto 0);
-			Prod : buffer unsigned(Width * 2 - 1 downto 0)
-		);
-	end component;
-
 	pure function NotNegated2U(X : in signed(Width - 1 downto 0))
 	return unsigned is
 	begin
@@ -59,7 +47,7 @@ architecture Behavioural of SSMultiplier is
 	signal SgnProd : boolean;
 	signal AbsProd : unsigned(Width * 2 - 1 downto 0);
 begin
-	um : SUMultiplier
+	um : entity work.SUMultiplier(Behavioural)
 	generic map(
 		Width => Width
 	)

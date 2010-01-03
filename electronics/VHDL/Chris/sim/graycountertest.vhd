@@ -6,21 +6,6 @@ entity GrayCounterTest is
 end entity GrayCounterTest;
 
 architecture Behavioural of GrayCounterTest is
-	component GrayCounter
-		generic(
-			Width : positive
-		);
-		port(
-			Clock : in std_ulogic;
-
-			A : in std_ulogic;
-			B : in std_ulogic;
-
-			Reset : in std_ulogic;
-			Count : out signed(Width - 1 downto 0)
-		);
-	end component GrayCounter;
-
 	constant ClockPeriod : time := 20 ns;
 	constant Width : positive := 16;
 
@@ -31,7 +16,7 @@ architecture Behavioural of GrayCounterTest is
 	signal Count : signed(Width - 1 downto 0) := to_signed(0, Width);
 	signal Done : std_ulogic := '0';
 begin
-	uut: GrayCounter
+	uut : entity work.GrayCounter(Behavioural)
 	generic map(
 		Width => Width
 	)

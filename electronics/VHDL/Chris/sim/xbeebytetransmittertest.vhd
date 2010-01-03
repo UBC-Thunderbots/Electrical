@@ -6,21 +6,6 @@ entity XBeeByteTransmitterTest is
 end XBeeByteTransmitterTest;
 
 architecture Behavioural of XBeeByteTransmitterTest is
-	component XBeeByteTransmitter is
-		port(
-			Clock : in std_ulogic;
-
-			Data : in std_ulogic_vector(7 downto 0);
-			Load : in std_ulogic;
-			SOP : in std_ulogic;
-			Busy : out std_ulogic;
-
-			SerialData : out std_ulogic_vector(7 downto 0) := "00000000";
-			SerialLoad : out std_ulogic := '0';
-			SerialBusy : in std_ulogic
-		);
-	end component XBeeByteTransmitter;
-
 	constant ClockPeriod : time := 20 ns;
 
 	signal Clock : std_ulogic := '0';
@@ -37,7 +22,7 @@ architecture Behavioural of XBeeByteTransmitterTest is
 	type BytesSeenType is array(16 downto 0) of std_ulogic_vector(7 downto 0);
 	signal BytesSeen : BytesSeenType;
 begin
-	uut: XBeeByteTransmitter
+	uut : entity work.XBeeByteTransmitter(Behavioural)
 	port map(
 		Clock => Clock,
 

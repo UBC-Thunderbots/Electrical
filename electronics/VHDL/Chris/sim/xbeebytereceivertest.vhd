@@ -6,21 +6,6 @@ entity XBeeByteReceiverTest is
 end entity XBeeByteReceiverTest;
 
 architecture Behavioural of XBeeByteReceiverTest is
-	component XBeeByteReceiver is
-		port(
-			Clock : in std_ulogic;
-
-			SerialData : in std_ulogic_vector(7 downto 0);
-			SerialGood : in std_ulogic;
-			SerialFErr : in std_ulogic;
-
-			FErr : out std_ulogic := '0';
-			Data : out std_ulogic_vector(7 downto 0);
-			Good : out std_ulogic := '0';
-			SOP : out std_ulogic := '0'
-		);
-	end component XBeeByteReceiver;
-
 	constant ClockPeriod : time := 20 ns;
 
 	signal Clock : std_ulogic := '0';
@@ -32,7 +17,7 @@ architecture Behavioural of XBeeByteReceiverTest is
 	signal Good : std_ulogic;
 	signal SOP : std_ulogic;
 begin
-	uut: XBeeByteReceiver
+	uut : entity work.XBeeByteReceiver(Behavioural)
 	port map(
 		Clock => Clock,
 		SerialData => SerialData,

@@ -6,19 +6,6 @@ entity SUMultiplierTest is
 end entity SUMultiplierTest;
 
 architecture Behavioural of SUMultiplierTest is
-	component SUMultiplier
-		generic(
-			Width : positive
-		);
-		port(
-			Clock : in std_ulogic;
-
-			A : in unsigned(Width - 1 downto 0);
-			B : in unsigned(Width - 1 downto 0);
-			Prod : buffer unsigned(Width * 2 - 1 downto 0)
-		);
-	end component SUMultiplier;
-
 	constant ClockPeriod : time := 20 ns;
 	constant Width : positive := 6;
 
@@ -28,7 +15,7 @@ architecture Behavioural of SUMultiplierTest is
 	signal Prod : unsigned(Width * 2 - 1 downto 0);
 	signal Done : std_ulogic := '0';
 begin
-	uut: SUMultiplier
+	uut : entity work.SUMultiplier(Behavioural)
 	generic map(
 		Width => Width
 	)
