@@ -211,11 +211,20 @@ begin
 			AppSSL <= AppSS;
 			AppInL <= AppIn;
 			AppClkL <= AppClk;
-			Fault1L <= not Fault1;
-			Fault2L <= not Fault2;
-			Fault3L <= not Fault3;
-			Fault4L <= not Fault4;
-			Fault5L <= not Fault5;
+			-- Fault signals stay asserted until consumed by XBeeTransmitter.
+			if XBeeStartTransmitter = '1' then
+				Fault1L <= '0';
+				Fault2L <= '0';
+				Fault3L <= '0';
+				Fault4L <= '0';
+				Fault5L <= '0';
+			else
+				Fault1L <= Fault1L or not Fault1;
+				Fault2L <= Fault2L or not Fault2;
+				Fault3L <= Fault3L or not Fault3;
+				Fault4L <= Fault4L or not Fault4;
+				Fault5L <= Fault5L or not Fault5;
+			end if;
 		end if;
 	end process;
 
