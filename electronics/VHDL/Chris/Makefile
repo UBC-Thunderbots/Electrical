@@ -144,7 +144,6 @@ endef
 $(eval $(foreach target,$(SIM_TARGETS),$(call sim_target_template,$(target))))
 
 # Template of code to analyze a VHD and generate an object file.
-#$$(shell echo $(patsubst %.vhd,%.o,$(notdir $(1))) : $(1))
 define sim_analyze_template
 
 $(patsubst %.vhd,%.o,$(notdir $(1))) : $(1)
