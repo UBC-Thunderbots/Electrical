@@ -46,7 +46,6 @@ begin
 	begin
 		if rising_edge(Clock) then
 			-- Clear these in case they aren't assigned later.
-			ByteData <= X"00";
 			ByteLoad <= '0';
 			ByteSOP <= '0';
 

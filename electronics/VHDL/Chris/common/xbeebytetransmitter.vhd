@@ -20,7 +20,6 @@ architecture Behavioural of XBeeByteTransmitter is
 	signal NeedsEscape : boolean;
 	type StateType is (Idle, SendingData, SendingEscape);
 	signal State : StateType := Idle;
-	signal DataL : std_ulogic_vector(7 downto 0);
 begin
 	NeedsEscape <= (Data = X"7E") or (Data = X"7D") or (Data = X"11") or (Data = X"13");
 	Busy <= '1' when (Load = '1') or (SOP = '1') or (State /= Idle) else '0';
@@ -40,7 +39,6 @@ begin
 						SerialData <= X"7D";
 						SerialLoad <= '1';
 						State <= SendingEscape;
-						DataL <= Data;
 					elsif Load = '1' and not NeedsEscape then
 						SerialData <= Data;
 						SerialLoad <= '1';
@@ -49,7 +47,7 @@ begin
 				elsif State = SendingData then
 					State <= Idle;
 				elsif State = SendingEscape then
-					SerialData <= DataL xor X"20";
+					SerialData <= Data xor X"20";
 					SerialLoad <= '1';
 					State <= SendingData;
 				end if;
