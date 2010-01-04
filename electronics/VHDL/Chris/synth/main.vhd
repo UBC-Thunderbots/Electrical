@@ -26,17 +26,17 @@ entity Main is
 		PWM2 : out std_ulogic;
 		PWM3 : out std_ulogic;
 		PWM4 : out std_ulogic;
-		PWM5 : out std_ulogic;
+		PWMD : out std_ulogic;
 		Dir1 : out std_ulogic;
 		Dir2 : out std_ulogic;
 		Dir3 : out std_ulogic;
 		Dir4 : out std_ulogic;
-		Dir5 : out std_ulogic;
+		DirD : out std_ulogic;
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
-		Fault5 : in std_ulogic;
+		FaultD : in std_ulogic;
 		DSense : in std_ulogic;
 
 		-- Control lines to the chicker.
@@ -59,14 +59,7 @@ architecture Behavioural of Main is
 	signal Fault2L : std_ulogic := '1';
 	signal Fault3L : std_ulogic := '1';
 	signal Fault4L : std_ulogic := '1';
-	signal Fault5L : std_ulogic := '1';
-
-	-- Tristate controls for the Dir* pins.
-	signal Dir1T : std_ulogic := '0';
-	signal Dir2T : std_ulogic := '0';
-	signal Dir3T : std_ulogic := '0';
-	signal Dir4T : std_ulogic := '0';
-	signal Dir5T : std_ulogic := '0';
+	signal FaultDL : std_ulogic := '1';
 
 	-- XBee-related stuff.
 	signal XBeeGood : std_ulogic;
@@ -85,22 +78,22 @@ architecture Behavioural of Main is
 	signal Drive3 : signed(15 downto 0);
 	signal Drive4 : signed(15 downto 0);
 
-	-- Dribble speed from the XBee.
-	signal Dribble : signed(15 downto 0);
-
-	-- Signed duty cycles.
-	signal Motor1 : signed(10 downto 0);
-	signal Motor2 : signed(10 downto 0);
-	signal Motor3 : signed(10 downto 0);
-	signal Motor4 : signed(10 downto 0);
-	signal Motor5 : signed(10 downto 0);
-
-	-- Duty cycles for the PWM generators.
+	-- Duty cycles from the controller.
 	signal DutyCycle1 : unsigned(9 downto 0);
 	signal DutyCycle2 : unsigned(9 downto 0);
 	signal DutyCycle3 : unsigned(9 downto 0);
 	signal DutyCycle4 : unsigned(9 downto 0);
-	signal DutyCycle5 : unsigned(9 downto 0);
+
+	-- Directions from the controller.
+	signal Dir1T : std_ulogic := '0';
+	signal Dir2T : std_ulogic := '0';
+	signal Dir3T : std_ulogic := '0';
+	signal Dir4T : std_ulogic := '0';
+
+	-- Dribbler stuff.
+	signal Dribble : signed(15 downto 0);
+	signal DutyCycleD : unsigned(9 downto 0);
+	signal DirDT : std_ulogic := '0';
 begin
 	-- Pass the Oscillator pin through a DCM to get Clock.
 	ClockGenInstance : entity work.ClockGen(Behavioural)
@@ -123,13 +116,13 @@ begin
 				Fault2L <= '0';
 				Fault3L <= '0';
 				Fault4L <= '0';
-				Fault5L <= '0';
+				FaultDL <= '0';
 			else
 				Fault1L <= Fault1L or not Fault1;
 				Fault2L <= Fault2L or not Fault2;
 				Fault3L <= Fault3L or not Fault3;
 				Fault4L <= Fault4L or not Fault4;
-				Fault5L <= Fault5L or not Fault5;
+				FaultDL <= FaultDL or not FaultD;
 			end if;
 		end if;
 	end process;
@@ -169,12 +162,32 @@ begin
 		Fault2 => Fault2L,
 		Fault3 => Fault3L,
 		Fault4 => Fault4L,
-		Fault5 => Fault5L,
+		FaultD => FaultDL,
 		CommandAck => XBeeCommandSeq,
 		Serial => XBeeTX
 	);
 
-	-- PWM generators for the wheels and dribbler.
+	-- Braking stuff.
+	Brake <= '0' when (DirectDriveFlag = '1') else '1';
+
+	-- Wheel stuff.
+	ControllerInstance : entity work.Controller(Behavioural)
+	port map(
+		Clock => Clock,
+		DirectDriveFlag => DirectDriveFlag,
+		Drive1 => Drive1,
+		Drive2 => Drive2,
+		Drive3 => Drive3,
+		Drive4 => Drive4,
+		DutyCycle1 => DutyCycle1,
+		DutyCycle2 => DutyCycle2,
+		DutyCycle3 => DutyCycle3,
+		DutyCycle4 => DutyCycle4,
+		Direction1 => Dir1T,
+		Direction2 => Dir2T,
+		Direction3 => Dir3T,
+		Direction4 => Dir4T
+	);
 	PWM1Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
@@ -215,23 +228,32 @@ begin
 		DutyCycle => DutyCycle4,
 		PWM => PWM4
 	);
-	PWM5Instance : entity work.PWM(Behavioural)
+	Dir1 <= 'Z' when Dir1T = '1' else '0';
+	Dir2 <= 'Z' when Dir2T = '1' else '0';
+	Dir3 <= 'Z' when Dir3T = '1' else '0';
+	Dir4 <= 'Z' when Dir4T = '1' else '0';
+
+	-- Dribbler stuff.
+	SMDInstance : entity work.SignMagnitude(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Value => Dribble(10 downto 0),
+		Absolute => DutyCycleD,
+		Sign => DirDT
+	);
+	PWMDInstance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
 		Invert => true
 	)
 	port map(
 		Clock => Clock,
-		DutyCycle => DutyCycle5,
-		PWM => PWM5
+		DutyCycle => DutyCycleD,
+		PWM => PWMD
 	);
-
-	-- Tristate drivers for the Dir* pins.
-	Dir1 <= 'Z' when Dir1T = '1' else '0';
-	Dir2 <= 'Z' when Dir2T = '1' else '0';
-	Dir3 <= 'Z' when Dir3T = '1' else '0';
-	Dir4 <= 'Z' when Dir4T = '1' else '0';
-	Dir5 <= 'Z' when Dir5T = '1' else '0';
+	DirD <= 'Z' when DirDT = '1' else '0';
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADCInstance : entity work.ADC(Behavioural)
@@ -255,41 +277,6 @@ begin
 		Channel12 => open,
 		Good => open
 	);
-
-	-- Push drive through the system.
-	process(Clock)
-	begin
-		if rising_edge(Clock) then
-			if DirectDriveFlag = '1' then
-				-- Direct drive passes transmitted values directly to PWMs.
-				Motor1 <= Drive1(10 downto 0);
-				Motor2 <= Drive2(10 downto 0);
-				Motor3 <= Drive3(10 downto 0);
-				Motor4 <= Drive4(10 downto 0);
-				Motor5 <= Dribble(10 downto 0);
-				Brake <= '0';
-			else
-				Motor1 <= to_signed(0, 11);
-				Motor2 <= to_signed(0, 11);
-				Motor3 <= to_signed(0, 11);
-				Motor4 <= to_signed(0, 11);
-				Motor5 <= to_signed(0, 11);
-				Brake <= '1';
-			end if;
-		end if;
-	end process;
-
-	-- Decode the signed values into sign-magnitude.
-	DutyCycle1 <= to_unsigned(to_integer(Motor1), 10) when Motor1 >= 0 else to_unsigned(-to_integer(Motor1), 10);
-	DutyCycle2 <= to_unsigned(to_integer(Motor2), 10) when Motor2 >= 0 else to_unsigned(-to_integer(Motor2), 10);
-	DutyCycle3 <= to_unsigned(to_integer(Motor3), 10) when Motor3 >= 0 else to_unsigned(-to_integer(Motor3), 10);
-	DutyCycle4 <= to_unsigned(to_integer(Motor4), 10) when Motor4 >= 0 else to_unsigned(-to_integer(Motor4), 10);
-	DutyCycle5 <= to_unsigned(to_integer(Motor5), 10) when Motor5 >= 0 else to_unsigned(-to_integer(Motor5), 10);
-	Dir1T <= '1' when Motor1 < 0 else '0';
-	Dir2T <= '1' when Motor2 < 0 else '0';
-	Dir3T <= '1' when Motor3 < 0 else '0';
-	Dir4T <= '1' when Motor4 < 0 else '0';
-	Dir5T <= '1' when Motor5 < 0 else '0';
 
 	AppOut <= '0';
 	Kick <= '1';

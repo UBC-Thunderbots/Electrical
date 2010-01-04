@@ -31,17 +31,17 @@ net "PWM1" iostandard=LVCMOS33 | loc=P102;
 net "PWM2" iostandard=LVCMOS33 | loc=P99;
 net "PWM3" iostandard=LVCMOS33 | loc=P93;
 net "PWM4" iostandard=LVCMOS33 | loc=P91;
-net "PWM5" iostandard=LVCMOS33 | loc=P88;
+net "PWMD" iostandard=LVCMOS33 | loc=P88;
 net "Dir1" iostandard=LVCMOS33 | loc=P85 | pullup;
 net "Dir2" iostandard=LVCMOS33 | loc=P83 | pullup;
 net "Dir3" iostandard=LVCMOS33 | loc=P78 | pullup;
 net "Dir4" iostandard=LVCMOS33 | loc=P76 | pullup;
-net "Dir5" iostandard=LVCMOS33 | loc=P31 | pullup;
+net "DirD" iostandard=LVCMOS33 | loc=P31 | pullup;
 net "Fault1" iostandard=LVCMOS33 | loc=P103 | pullup;
 net "Fault2" iostandard=LVCMOS33 | loc=P101 | pullup;
 net "Fault3" iostandard=LVCMOS33 | loc=P98 | pullup;
 net "Fault4" iostandard=LVCMOS33 | loc=P92 | pullup;
-net "Fault5" iostandard=LVCMOS33 | loc=P90 | pullup;
+net "FaultD" iostandard=LVCMOS33 | loc=P90 | pullup;
 net "DSense" iostandard=LVCMOS33 | loc=P87 | pullup;
 
 # Control lines to the chicker.

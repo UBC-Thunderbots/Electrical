@@ -17,7 +17,7 @@ entity XBeeTransmitter is
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
-		Fault5 : in std_ulogic;
+		FaultD : in std_ulogic;
 		CommandAck : in std_ulogic_vector(7 downto 0);
 
 		Serial : out std_ulogic
@@ -46,7 +46,7 @@ begin
 		Fault2 => Fault2,
 		Fault3 => Fault3,
 		Fault4 => Fault4,
-		Fault5 => Fault5,
+		FaultD => FaultD,
 		CommandAck => CommandAck,
 		ByteData => ByteData,
 		ByteLoad => ByteLoad,

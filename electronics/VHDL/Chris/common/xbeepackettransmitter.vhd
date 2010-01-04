@@ -17,7 +17,7 @@ entity XBeePacketTransmitter is
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
-		Fault5 : in std_ulogic;
+		FaultD : in std_ulogic;
 		CommandAck : in std_ulogic_vector(7 downto 0);
 
 		ByteData : out std_ulogic_vector(7 downto 0) := X"00";
@@ -28,13 +28,13 @@ entity XBeePacketTransmitter is
 end entity XBeePacketTransmitter;
 
 architecture Behavioural of XBeePacketTransmitter is
-	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFault12, SendFault34, SendFault5, SendCommandAck, SendChecksum);
+	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFault12, SendFault34, SendFaultD, SendCommandAck, SendChecksum);
 	signal State : StateType := Idle;
 	signal FaultCount1 : unsigned(3 downto 0) := to_unsigned(0, 4);
 	signal FaultCount2 : unsigned(3 downto 0) := to_unsigned(0, 4);
 	signal FaultCount3 : unsigned(3 downto 0) := to_unsigned(0, 4);
 	signal FaultCount4 : unsigned(3 downto 0) := to_unsigned(0, 4);
-	signal FaultCount5 : unsigned(3 downto 0) := to_unsigned(0, 4);
+	signal FaultCountD : unsigned(3 downto 0) := to_unsigned(0, 4);
 	signal DataLeft : natural range 0 to 7;
 	signal Temp : std_ulogic_vector(7 downto 0);
 	signal Checksum : unsigned(7 downto 0);
@@ -63,7 +63,7 @@ begin
 						if Fault2 = '1' then FaultCount2 <= FaultCount2 + 1; end if;
 						if Fault3 = '1' then FaultCount3 <= FaultCount3 + 1; end if;
 						if Fault4 = '1' then FaultCount4 <= FaultCount4 + 1; end if;
-						if Fault5 = '1' then FaultCount5 <= FaultCount5 + 1; end if;
+						if FaultD = '1' then FaultCountD <= FaultCountD + 1; end if;
 						ClearChecksum := true;
 					end if;
 				elsif State = SendSOP then
@@ -138,15 +138,15 @@ begin
 					ByteLoad <= '1';
 					ChecksumByte := FaultCount2 & FaultCount1;
 				elsif State = SendFault34 then
-					State <= SendFault5;
+					State <= SendFaultD;
 					ByteData <= std_ulogic_vector(FaultCount4 & FaultCount3);
 					ByteLoad <= '1';
 					ChecksumByte := FaultCount4 & FaultCount3;
-				elsif State = SendFault5 then
+				elsif State = SendFaultD then
 					State <= SendCommandAck;
-					ByteData <= std_ulogic_vector(X"0" & FaultCount5);
+					ByteData <= std_ulogic_vector(X"0" & FaultCountD);
 					ByteLoad <= '1';
-					ChecksumByte := X"0" & FaultCount5;
+					ChecksumByte := X"0" & FaultCountD;
 				elsif State = SendCommandAck then
 					State <= SendChecksum;
 					ByteData <= CommandAck;
