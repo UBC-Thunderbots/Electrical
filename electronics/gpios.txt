@@ -8,8 +8,8 @@ GPIO#	Name	Peer Loc	Purpose
    7	P93 	Motorcon	PWM3
    8	P92 	Motorcon	Fault4
    9	P91 	Motorcon	PWM4
-  10	P90 	Motorcon	Fault5
-  11	P88 	Motorcon	PWM5
+  10	P90 	Motorcon	FaultD
+  11	P88 	Motorcon	PWMD
   12	P87 	Motorcon	DSense
   13	P85 	Motorcon	Dir1
   14	P84
@@ -19,7 +19,7 @@ GPIO#	Name	Peer Loc	Purpose
   18	P77
   19	P76 	Motorcon	Dir4
   20	P32
-  21	P31 	Motorcon	Dir5
+  21	P31 	Motorcon	DirD
   22	P30
   23	P29 	Solenoids	Kick
   24	P28
