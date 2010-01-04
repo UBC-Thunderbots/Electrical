@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 entity PWM is
 	generic(
 		Width : positive;
+		Modulus : positive;
 		Invert : boolean
 	);
 	port(
@@ -23,7 +24,7 @@ begin
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
-			Count <= Count + 1;
+			Count <= (Count + 1) mod Modulus;
 		end if;
 	end process;
 end architecture Behavioural;

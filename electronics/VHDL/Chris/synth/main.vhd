@@ -191,6 +191,7 @@ begin
 	PWM1Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
+		Modulus => 1023,
 		Invert => true
 	)
 	port map(
@@ -201,6 +202,7 @@ begin
 	PWM2Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
+		Modulus => 1023,
 		Invert => true
 	)
 	port map(
@@ -211,6 +213,7 @@ begin
 	PWM3Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
+		Modulus => 1023,
 		Invert => true
 	)
 	port map(
@@ -221,6 +224,7 @@ begin
 	PWM4Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
+		Modulus => 1023,
 		Invert => true
 	)
 	port map(
@@ -246,6 +250,7 @@ begin
 	PWMDInstance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
+		Modulus => 1023,
 		Invert => true
 	)
 	port map(
