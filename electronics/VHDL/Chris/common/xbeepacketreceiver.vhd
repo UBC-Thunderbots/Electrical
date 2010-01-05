@@ -35,18 +35,21 @@ architecture Behavioural of XBeePacketReceiver is
 	signal AddressBuf : std_ulogic_vector(63 downto 0);
 	type DataType is array(0 to 14) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
+	signal GoodShifter : std_ulogic_vector(49 downto 0) := "00000000000000000000000000000000000000000000000000";
 begin
 	Address <= AddressBuf;
+	Good <= GoodShifter(0);
 
 	process(Clock50M)
 		variable Word : std_ulogic_vector(15 downto 0);
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
+		variable SetGood : boolean;
 	begin
 		if rising_edge(Clock50M) then
 			ClearChecksum := false;
 			AddChecksum := false;
-			Good <= '0';
+			SetGood := false;
 			if ByteFErr = '1' then
 				State <= ExpectSOP;
 			elsif ByteSOP = '1' then
@@ -117,7 +120,7 @@ begin
 						CommandSeq <= Data(11);
 						Command <= Data(12);
 						CommandData <= Data(14) & Data(13);
-						Good <= '1';
+						SetGood := true;
 					end if;
 				end if;
 				State <= ExpectSOP;
@@ -126,6 +129,11 @@ begin
 				Checksum <= to_unsigned(0, 7);
 			elsif AddChecksum then
 				Checksum <= Checksum + unsigned(ByteData);
+			end if;
+			if SetGood then
+				GoodShifter <= "11111111111111111111111111111111111111111111111111";
+			else
+				GoodShifter <= '0' & GoodShifter(49 downto 1);
 			end if;
 		end if;
 	end process;
