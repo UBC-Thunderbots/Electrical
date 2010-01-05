@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-12-24T14:51:25 PST
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2010-01-05T15:27:22 PST
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -13,6 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 4250 4700
 Wire Wire Line
 	8450 4900 7450 4900
 Wire Wire Line
@@ -73,8 +74,6 @@ Wire Wire Line
 	4250 4300 3650 4300
 Wire Wire Line
 	4250 3200 3650 3200
-Wire Wire Line
-	3650 4700 4250 4700
 Wire Wire Line
 	3650 5000 4250 5000
 Wire Wire Line
@@ -300,8 +299,6 @@ F 1 "VCC" H 3650 5000 30  0000 C CNN
 	1    3650 4900
 	0    -1   -1   0   
 $EndComp
-Text HLabel 3650 4700 0    60   BiDi ~ 0
-BRAKE
 Text HLabel 3650 4600 0    60   BiDi ~ 0
 SPICK
 $Comp

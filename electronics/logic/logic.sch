@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2009-12-24T14:51:25 PST
-LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves,./logic.cache
+EESchema Schematic File Version 2  date 2010-01-05T15:27:21 PST
+LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -147,23 +147,11 @@ Wire Wire Line
 Wire Wire Line
 	4050 2600 4600 2600
 Wire Wire Line
-	6350 2500 6350 2000
-Wire Wire Line
-	6350 2000 3300 2000
-Wire Wire Line
-	4600 5650 3300 5650
-Wire Wire Line
-	3300 5650 3300 2000
-Wire Wire Line
 	6150 5950 7450 5950
 Wire Wire Line
 	8700 5250 8400 5250
 Text Label 6750 2600 3    60   ~ 0
 GPIO[1..38]
-Text Label 6000 2000 0    60   ~ 0
-GPIO1
-Entry Wire Line
-	6350 2500 6450 2600
 $Sheet
 S 7150 3300 1350 1200
 U 4AD9040D
@@ -226,10 +214,9 @@ F15 "/WP" O L 4600 4550 60
 F16 "TX" B R 6150 5550 60 
 F17 "SPIOUT" B R 6150 4750 60 
 F18 "USBD-" B L 4600 5150 60 
-F19 "BRAKE" B L 4600 5650 60 
-F20 "VMON" I L 4600 5850 60 
-F21 "/RTS" O R 6150 5750 60 
-F22 "/EMERG_ERASE" I R 6150 5950 60 
+F19 "VMON" I L 4600 5850 60 
+F20 "/RTS" O R 6150 5750 60 
+F21 "/EMERG_ERASE" I R 6150 5950 60 
 $EndSheet
 $Sheet
 S 4750 3250 1050 950 
