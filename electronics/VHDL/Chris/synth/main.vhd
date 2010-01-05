@@ -155,7 +155,7 @@ begin
 
 	XBeeTransmitterInstance : entity work.XBeeTransmitter(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1M => Clock1M,
 		Start => XBeeStartTransmitter,
 		Busy => open,
 		Address => XBeeAddress,

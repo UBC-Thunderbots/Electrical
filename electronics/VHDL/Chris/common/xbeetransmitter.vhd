@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity XBeeTransmitter is
 	port(
-		Clock50M : in std_ulogic;
+		Clock1M : in std_ulogic;
 
 		Start : in std_ulogic;
 		Busy : out std_ulogic;
@@ -35,7 +35,7 @@ architecture Behavioural of XBeeTransmitter is
 begin
 	XBeePacketTransmitterInstance : entity work.XBeePacketTransmitter(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1M => Clock1M,
 		Start => Start,
 		Busy => Busy,
 		Address => Address,
@@ -56,7 +56,7 @@ begin
 
 	XBeeByteTransmitterInstance : entity work.XBeeByteTransmitter(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1M => Clock1M,
 		Data => ByteData,
 		Load => ByteLoad,
 		SOP => ByteSOP,
@@ -68,7 +68,7 @@ begin
 
 	SerialTransmitterInstance : entity work.SerialTransmitter(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1M => Clock1M,
 		Data => SerialData,
 		Load => SerialLoad,
 		Busy => SerialBusy,
