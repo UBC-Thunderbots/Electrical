@@ -126,7 +126,7 @@ begin
 				State <= ExpectSOP;
 			end if;
 			if ClearChecksum then
-				Checksum <= to_unsigned(0, 7);
+				Checksum <= to_unsigned(0, 8);
 			elsif AddChecksum then
 				Checksum <= Checksum + unsigned(ByteData);
 			end if;
