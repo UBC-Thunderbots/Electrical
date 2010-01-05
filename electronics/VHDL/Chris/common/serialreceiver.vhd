@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity SerialReceiver is
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		Serial : in std_ulogic;
 
@@ -23,12 +23,12 @@ begin
 	Data <= DBuf(8 downto 1);
 	FErr <= FErrBuf;
 
-	process(Clock)
+	process(Clock50M)
 		variable ResetBitClocks : boolean;
 		variable ResetBitValue : boolean;
 		variable BitValueDelta : signed(6 downto 0);
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			ResetBitClocks := false;
 			ResetBitValue := false;
 			BitValueDelta := to_signed(0, 7);

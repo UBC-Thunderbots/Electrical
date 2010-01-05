@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity XBeePacketTransmitter is
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		Start : in std_ulogic;
 		Busy : out std_ulogic := '0';
@@ -41,14 +41,14 @@ architecture Behavioural of XBeePacketTransmitter is
 begin
 	Busy <= '0' when State = Idle and ByteBusy = '0' else '1';
 
-	process(Clock)
+	process(Clock50M)
 		variable AddressShifted : std_ulogic_vector(63 downto 0);
 		variable ShiftDistance : natural;
 		variable ClearChecksum : boolean;
 		variable UpdateChecksum : boolean;
 		variable ChecksumByte : unsigned(7 downto 0);
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			-- Clear these in case they aren't assigned later.
 			ByteLoad <= '0';
 			ByteSOP <= '0';

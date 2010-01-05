@@ -7,7 +7,7 @@ entity GrayCounter is
 		Width : positive
 	);
 	port (
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		A : in std_ulogic;
 		B : in std_ulogic;
@@ -44,9 +44,9 @@ begin
 	
 	NewAcc <= to_signed(0, Width) when Reset = '1' else NewCount;
 	
-	process(Clock)
+	process(Clock50M)
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			Acc <= NewAcc;
 			OldA <= NewA;
 			OldB <= NewB;

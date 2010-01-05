@@ -7,7 +7,7 @@ entity SUMultiplier is
 		Width : positive
 	);
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		A : in unsigned(Width - 1 downto 0);
 		B : in unsigned(Width - 1 downto 0);
@@ -21,9 +21,9 @@ architecture Behavioural of SUMultiplier is
 	signal Shift : unsigned(Width * 2 - 1 downto 0) := to_unsigned(0, Width * 2);
 	signal Key : unsigned(Width - 1 downto 0) := to_unsigned(0, Width);
 begin
-	process(Clock)
+	process(Clock50M)
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			if A /= OldA or B /= OldB then
 				Prod <= to_unsigned(0, Width * 2);
 				OldA <= A;

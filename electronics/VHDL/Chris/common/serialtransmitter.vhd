@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity SerialTransmitter is
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		Data : in std_ulogic_vector(7 downto 0);
 		Load : in std_ulogic;
@@ -22,9 +22,9 @@ begin
 	Serial <= DBuf(0);
 	Busy <= '1' when Load = '1' or Bits /= 0 or BitClocks /= 0 else '0';
 
-	process(Clock)
+	process(Clock50M)
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			if Load = '1' then
 				DBuf <= Data & "0";
 				Bits <= 10;

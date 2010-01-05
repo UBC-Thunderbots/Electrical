@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity XBeePacketReceiver is
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		ByteFErr : in std_ulogic;
 		ByteData : in std_ulogic_vector(7 downto 0);
@@ -38,12 +38,12 @@ architecture Behavioural of XBeePacketReceiver is
 begin
 	Address <= AddressBuf;
 
-	process(Clock)
+	process(Clock50M)
 		variable Word : std_ulogic_vector(15 downto 0);
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			ClearChecksum := false;
 			AddChecksum := false;
 			Good <= '0';

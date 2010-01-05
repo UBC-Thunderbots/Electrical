@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity XBeeByteTransmitter is
 	port (
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		Data : in std_ulogic_vector(7 downto 0);
 		Load : in std_ulogic;
@@ -24,9 +24,9 @@ begin
 	NeedsEscape <= (Data = X"7E") or (Data = X"7D") or (Data = X"11") or (Data = X"13");
 	Busy <= '1' when (Load = '1') or (SOP = '1') or (State /= Idle) else '0';
 
-	process(Clock)
+	process(Clock50M)
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			SerialLoad <= '0';
 
 			if SerialBusy = '0' then

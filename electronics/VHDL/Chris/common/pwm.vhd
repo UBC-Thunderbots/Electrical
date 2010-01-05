@@ -9,7 +9,7 @@ entity PWM is
 		Invert : boolean
 	);
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		PWM : out std_ulogic;
 
@@ -21,9 +21,9 @@ architecture Behavioural of PWM is
 	signal Count : unsigned(Width - 1 downto 0) := to_unsigned(0, Width);
 begin
 	PWM <= '1' when (Count < DutyCycle) xor Invert else '0';
-	process(Clock)
+	process(Clock50M)
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			Count <= (Count + 1) mod Modulus;
 		end if;
 	end process;

@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity ADC is
 	port(
-		Clock : in std_ulogic;
+		Clock50M : in std_ulogic;
 
 		SPICK : in std_ulogic;
 		SPIDT : in std_ulogic;
@@ -32,9 +32,9 @@ architecture Behavioural of ADC is
 	signal BitsLeft : natural range 0 to 208;
 	signal PrevSPICK : std_ulogic := '0';
 begin
-	process(Clock)
+	process(Clock50M)
 	begin
-		if rising_edge(Clock) then
+		if rising_edge(Clock50M) then
 			if SPISS = '1' then
 				-- Slave select deasserted.
 				-- If all is good, copy out.
