@@ -21,7 +21,6 @@ architecture Behavioural of ClockGen is
 	signal DCM1Locked : std_ulogic;
 	signal DCM2Clk10M : std_ulogic;
 	signal DCM2Clk1M : std_ulogic;
-	signal ResetDCM2 : std_ulogic_vector(7 downto 0) := X"FF";
 	signal BufGOut50M : std_ulogic;
 	signal BufGOut10M1 : std_ulogic;
 	signal BufGOut10M2 : std_ulogic;
@@ -61,15 +60,6 @@ begin
 		O => BufGOut10M1
 	);
 
-	process(BufGOut10M1)
-	begin
-		if rising_edge(BufGOut10M1) then
-			if DCM1Locked = '1' then
-				ResetDCM2 <= '0' & ResetDCM2(6 downto 0);
-			end if;
-		end if;
-	end process;
-
 	DCM2 : DCM_SP
 	generic map(
 		CLKIN_PERIOD => 100.0,
@@ -79,7 +69,7 @@ begin
 	port map(
 		CLKIN => BufGOut10M1,
 		CLKFB => BufGOut10M2,
-		RST => ResetDCM2(0),
+		RST => not DCM1Locked,
 		PSEN => '0',
 		CLK0 => DCM2Clk10M,
 		CLKDV => DCM2Clk1M
