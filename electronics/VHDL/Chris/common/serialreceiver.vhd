@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity SerialReceiver is
 	port(
-		Clock50M : in std_ulogic;
+		Clock1 : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		Serial : in std_ulogic;
 
@@ -16,23 +17,25 @@ end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
 	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
-	signal BitClocks : natural range 0 to 199 := 199;
+	signal BitClocks : natural range 0 to 399 := 399;
 	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
 	signal FErrBuf : std_ulogic := '0';
+
+	signal DataBuffer : std_ulogic_vector(7 downto 0) := X"00";
+	signal DataBufferPolarity1 : std_ulogic := '0';
+	signal DataBufferPolarity100 : std_ulogic := '0';
 begin
-	Data <= DBuf(8 downto 1);
 	FErr <= FErrBuf;
 
-	process(Clock50M)
+	process(Clock100)
 		variable ResetBitClocks : boolean;
 		variable ResetBitValue : boolean;
 		variable BitValueDelta : signed(6 downto 0);
 	begin
-		if rising_edge(Clock50M) then
+		if rising_edge(Clock100) then
 			ResetBitClocks := false;
 			ResetBitValue := false;
 			BitValueDelta := to_signed(0, 7);
-			Good <= '0';
 			if DBuf(0) = '0' then
 				-- Not receiving right now.
 				if Serial = '0' then
@@ -44,9 +47,9 @@ begin
 				ResetBitValue := true;
 			else
 				-- Receive in progress. What do we do with the current bit?
-				if BitClocks > 131 then
+				if BitClocks > 232 then
 					-- Too early in the bit to take a stable sample. Do nothing.
-				elsif BitClocks > 68 then
+				elsif BitClocks > 169 then
 					-- Middle 63 clocks. Sample.
 					if Serial = '1' then
 						BitValueDelta := to_signed(1, 7);
@@ -76,7 +79,8 @@ begin
 					else
 						-- We have finished receiving a full byte. Check polarity of stop bit.
 						if FErrBuf = '0' and BitValue >= 22 then
-							Good <= '1';
+							DataBuffer <= DBuf(9 downto 2);
+							DataBufferPolarity100 <= not DataBufferPolarity100;
 						else
 							FErrBuf <= '1';
 						end if;
@@ -91,7 +95,7 @@ begin
 			end if;
 
 			if ResetBitClocks then
-				BitClocks <= 199;
+				BitClocks <= 399;
 			else
 				BitClocks <= BitClocks - 1;
 			end if;
@@ -101,6 +105,15 @@ begin
 			else
 				BitValue <= BitValue + BitValueDelta;
 			end if;
+		end if;
+	end process;
+
+	process(Clock1)
+	begin
+		if rising_edge(Clock1) then
+			Data <= DataBuffer;
+			Good <= DataBufferPolarity1 xor DataBufferPolarity100;
+			DataBufferPolarity1 <= DataBufferPolarity100;
 		end if;
 	end process;
 end architecture Behavioural;

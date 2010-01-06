@@ -6,9 +6,9 @@ entity XBeeByteReceiverTest is
 end entity XBeeByteReceiverTest;
 
 architecture Behavioural of XBeeByteReceiverTest is
-	constant ClockPeriod : time := 20 ns;
+	constant ClockPeriod : time := 100 ns;
 
-	signal Clock : std_ulogic := '0';
+	signal Clock1 : std_ulogic := '0';
 	signal SerialData : std_ulogic_vector(7 downto 0) := X"00";
 	signal SerialGood : std_ulogic := '0';
 	signal SerialFErr : std_ulogic := '0';
@@ -19,7 +19,7 @@ architecture Behavioural of XBeeByteReceiverTest is
 begin
 	uut : entity work.XBeeByteReceiver(Behavioural)
 	port map(
-		Clock => Clock,
+		Clock1 => Clock1,
 		SerialData => SerialData,
 		SerialGood => SerialGood,
 		SerialFErr => SerialFErr,
@@ -33,9 +33,9 @@ begin
 		procedure Tick is
 		begin
 			wait for ClockPeriod / 4;
-			Clock <= '1';
+			Clock1 <= '1';
 			wait for ClockPeriod / 2;
-			Clock <= '0';
+			Clock1 <= '0';
 			wait for ClocKperiod / 4;
 		end procedure Tick;
 

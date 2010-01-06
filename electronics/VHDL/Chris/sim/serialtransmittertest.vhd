@@ -5,10 +5,10 @@ entity SerialTransmitterTest is
 end entity SerialTransmitterTest;
 
 architecture Behavioural of SerialTransmitterTest is
-	constant ClockPeriod : time := 20 ns;
+	constant ClockPeriod : time := 1 us;
 	constant BitTicks : positive := 4 us / ClockPeriod;
 
-	signal Clock : std_ulogic := '0';
+	signal Clock1 : std_ulogic := '0';
 	signal Data : std_ulogic_vector(7 downto 0) := "00000000";
 	signal Load : std_ulogic := '0';
 	signal Serial : std_ulogic;
@@ -16,7 +16,7 @@ architecture Behavioural of SerialTransmitterTest is
 begin
 	uut : entity work.SerialTransmitter(Behavioural)
 	port map(
-		Clock => Clock,
+		Clock1 => Clock1,
 		Data => Data,
 		Load => Load,
 		Busy => Busy,
@@ -27,9 +27,9 @@ begin
 		procedure Tick is
 		begin
 			wait for ClockPeriod / 2;
-			Clock <= '1';
+			Clock1 <= '1';
 			wait for ClockPeriod / 2;
-			Clock <= '0';
+			Clock1 <= '0';
 		end procedure Tick;
 
 		procedure TickBit is

@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity XBeeReceiver is
 	port(
-		Clock50M : in std_ulogic;
+		Clock1 : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		Good : out std_ulogic;
 		Address : out std_ulogic_vector(63 downto 0);
@@ -35,7 +36,8 @@ architecture Behavioural of XBeeReceiver is
 begin
 	SerialReceiverInstance : entity work.SerialReceiver(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1 => Clock1,
+		Clock100 => Clock100,
 		Serial => Serial,
 		Data => SerialData,
 		Good => SerialGood,
@@ -44,7 +46,7 @@ begin
 
 	XBeeByteReceiverInstance : entity work.XBeeByteReceiver(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1 => Clock1,
 		SerialData => SerialData,
 		SerialGood => SerialGood,
 		SerialFErr => SerialFErr,
@@ -56,7 +58,7 @@ begin
 
 	XBeePacketReceiverInstance : entity work.XBeePacketReceiver(Behavioural)
 	port map(
-		Clock50M => Clock50M,
+		Clock1 => Clock1,
 		ByteFErr => ByteFErr,
 		ByteData => ByteData,
 		ByteGood => ByteGood,

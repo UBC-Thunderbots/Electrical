@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity XBeeByteReceiver is
 	port(
-		Clock50M : in std_ulogic;
+		Clock1 : in std_ulogic;
 
 		SerialData : in std_ulogic_vector(7 downto 0);
 		SerialGood : in std_ulogic;
@@ -24,9 +24,9 @@ begin
 	Good <= '1' when SerialGood = '1' and SerialData /= X"7D" and SerialData /= X"7E" else '0';
 	SOP <= '1' when SerialGood = '1' and SerialData = X"7E" else '0';
 
-	process(Clock50M)
+	process(Clock1)
 	begin
-		if rising_edge(Clock50M) then
+		if rising_edge(Clock1) then
 			if SerialGood = '1' then
 				if SerialData = X"7D" then
 					Escaped <= true;

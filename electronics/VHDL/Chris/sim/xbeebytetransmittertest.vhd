@@ -6,9 +6,9 @@ entity XBeeByteTransmitterTest is
 end XBeeByteTransmitterTest;
 
 architecture Behavioural of XBeeByteTransmitterTest is
-	constant ClockPeriod : time := 20 ns;
+	constant ClockPeriod : time := 1 us;
 
-	signal Clock : std_ulogic := '0';
+	signal Clock1 : std_ulogic := '0';
 	signal Data : std_ulogic_vector(7 downto 0) := X"00";
 	signal Load : std_ulogic := '0';
 	signal SOP : std_ulogic := '0';
@@ -24,7 +24,7 @@ architecture Behavioural of XBeeByteTransmitterTest is
 begin
 	uut : entity work.XBeeByteTransmitter(Behavioural)
 	port map(
-		Clock => Clock,
+		Clock1 => Clock1,
 
 		Data => Data,
 		Load => Load,
@@ -39,13 +39,13 @@ begin
 	process
 	begin
 		while SerialLoad = '0' loop
-			wait until rising_edge(Clock);
+			wait until rising_edge(Clock1);
 		end loop;
 		SerialWorking <= '1';
 		BytesSeen(NumBytesSeen) <= SerialData;
 		NumBytesSeen <= NumBytesSeen + 1;
 		wait for ClockPeriod * 200 * 10;
-		wait until rising_edge(Clock);
+		wait until rising_edge(Clock1);
 		SerialWorking <= '0';
 	end process;
 	SerialBusy <= SerialWorking or SerialLoad;
@@ -59,9 +59,9 @@ begin
 		procedure Tick is
 		begin
 			wait for ClockPeriod / 4;
-			Clock <= '1';
+			Clock1 <= '1';
 			wait for ClockPeriod / 2;
-			Clock <= '0';
+			Clock1 <= '0';
 			wait for ClockPeriod / 4;
 		end procedure Tick;
 

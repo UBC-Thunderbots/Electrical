@@ -7,7 +7,7 @@ entity SSMultiplier is
 		Width : positive
 	);
 	port(
-		Clock50M : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		A : in signed(Width - 1 downto 0);
 		B : in signed(Width - 1 downto 0);
@@ -52,7 +52,7 @@ begin
 		Width => Width
 	)
 	port map(
-		Clock50M => Clock50M,
+		Clock100 => Clock100,
 		A => AbsA,
 		B => AbsB,
 		Prod => AbsProd

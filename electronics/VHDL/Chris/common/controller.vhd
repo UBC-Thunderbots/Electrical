@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 
 entity Controller is
 	port(
-		Clock50M : in std_ulogic;
+		Clock1 : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		DirectDriveFlag : in std_ulogic;
 		Drive1 : in signed(15 downto 0);

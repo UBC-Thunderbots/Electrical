@@ -8,23 +8,23 @@ use unisim.vcomponents.all;
 entity ClockGen is
 	port(
 		Oscillator : in std_ulogic;
-		Clock50M : out std_ulogic;
-		Clock10M : out std_ulogic;
-		Clock1M : out std_ulogic
+		Clock100 : out std_ulogic;
+		Clock10 : out std_ulogic;
+		Clock1 : out std_ulogic
 	);
 end entity ClockGen;
 
 architecture Behavioural of ClockGen is
 	signal OscillatorBuffered : std_ulogic;
-	signal DCM1Clk50M : std_ulogic;
-	signal DCM1Clk10M : std_ulogic;
+	signal DCM1Clk100 : std_ulogic;
+	signal DCM1Clk10 : std_ulogic;
 	signal DCM1Locked : std_ulogic;
-	signal DCM2Clk10M : std_ulogic;
-	signal DCM2Clk1M : std_ulogic;
-	signal BufGOut50M : std_ulogic;
-	signal BufGOut10M1 : std_ulogic;
-	signal BufGOut10M2 : std_ulogic;
-	signal BufGOut1M : std_ulogic;
+	signal DCM2Clk10 : std_ulogic;
+	signal DCM2Clk1 : std_ulogic;
+	signal BufGOut100 : std_ulogic;
+	signal BufGOut10DCM1 : std_ulogic;
+	signal BufGOut10DCM2 : std_ulogic;
+	signal BufGOut1 : std_ulogic;
 begin
 	IBufferG : IBufG
 	port map(
@@ -35,29 +35,30 @@ begin
 	DCM1 : DCM_SP
 	generic map(
 		CLKIN_PERIOD => 20.0,
+		CLK_FEEDBACK => "2X",
 		CLKDV_DIVIDE => 5.0,
 		STARTUP_WAIT => true
 	)
 	port map(
 		CLKIN => OscillatorBuffered,
-		CLKFB => BufGOut50M,
+		CLKFB => BufGOut100,
 		RST => '0',
 		PSEN => '0',
-		CLK0 => DCM1Clk50M,
-		CLKDV => DCM1Clk10M,
+		CLK2X => DCM1Clk100,
+		CLKDV => DCM1Clk10,
 		LOCKED => DCM1Locked
 	);
 
-	BufG50M : BufG
+	BufG100 : BufG
 	port map(
-		I => DCM1Clk50M,
-		O => BufGOut50M
+		I => DCM1Clk100,
+		O => BufGOut100
 	);
 
-	BufG10M1 : BufG
+	BufG10DCM1 : BufG
 	port map(
-		I => DCM1Clk10M,
-		O => BufGOut10M1
+		I => DCM1Clk10,
+		O => BufGOut10DCM1
 	);
 
 	DCM2 : DCM_SP
@@ -67,27 +68,27 @@ begin
 		STARTUP_WAIT => true
 	)
 	port map(
-		CLKIN => BufGOut10M1,
-		CLKFB => BufGOut10M2,
+		CLKIN => BufGOut10DCM1,
+		CLKFB => BufGOut10DCM2,
 		RST => not DCM1Locked,
 		PSEN => '0',
-		CLK0 => DCM2Clk10M,
-		CLKDV => DCM2Clk1M
+		CLK0 => DCM2Clk10,
+		CLKDV => DCM2Clk1
 	);
 
-	BufG10M2 : BufG
+	BufG10DCM2 : BufG
 	port map(
-		I => DCM2Clk10M,
-		O => BufGOut10M2
+		I => DCM2Clk10,
+		O => BufGOut10DCM2
 	);
 
-	BufG1M : BufG
+	BufG1 : BufG
 	port map(
-		I => DCM2Clk1M,
-		O => BufGOut1M
+		I => DCM2Clk1,
+		O => BufGOut1
 	);
 
-	Clock50M <= BufGOut50M;
-	Clock10M <= BufGOut10M1;
-	Clock1M <= BufGOut1M;
+	Clock100 <= BufGOut100;
+	Clock10 <= BufGOut10DCM1;
+	Clock1 <= BufGOut1;
 end architecture Behavioural;
