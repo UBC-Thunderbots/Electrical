@@ -9,8 +9,8 @@ entity SerialReceiver is
 
 		Serial : in std_ulogic;
 
-		Data : out std_ulogic_vector(7 downto 0);
-		Good : out std_ulogic;
+		Data : out std_ulogic_vector(7 downto 0) := X"00";
+		Good : out std_ulogic := '0';
 		FErr : out std_ulogic := '0'
 	);
 end entity SerialReceiver;
