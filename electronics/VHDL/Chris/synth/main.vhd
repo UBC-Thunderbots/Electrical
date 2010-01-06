@@ -21,7 +21,8 @@ entity Main is
 		AppClk : in std_ulogic;
 
 		-- Control lines to and from the motor controllers.
-		Brake : out std_ulogic;
+		BrakeDrive : out std_ulogic;
+		BrakeDribbler : out std_ulogic;
 		PWM1 : out std_ulogic;
 		PWM2 : out std_ulogic;
 		PWM3 : out std_ulogic;
@@ -178,7 +179,8 @@ begin
 	);
 
 	-- Braking stuff.
-	Brake <= '0' when (DirectDriveFlag = '1') else '1';
+	BrakeDrive <= '0' when (DirectDriveFlag = '1') else '1';
+	BrakeDribbler <= '0' when (DirectDriveFlag = '1') else '1';
 
 	-- Wheel stuff.
 	ControllerInstance : entity work.Controller(Behavioural)
