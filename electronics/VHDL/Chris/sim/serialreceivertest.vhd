@@ -6,11 +6,11 @@ entity SerialReceiverTest is
 end entity SerialReceiverTest;
 
 architecture Behavioural of SerialReceiverTest is
-	constant ClockPeriod : time := 100 ns;
+	constant ClockPeriod : time := 10 ns;
 	constant BitTime : time := 4 us;
 
 	signal Clock1 : std_ulogic := '0';
-	signal Clock10 : std_ulogic := '0';
+	signal Clock100 : std_ulogic := '0';
 	signal Serial : std_ulogic := '1';
 	signal Data : std_ulogic_vector(7 downto 0);
 	signal Good : std_ulogic := '0';
@@ -23,7 +23,7 @@ begin
 	uut : entity work.SerialReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
-		Clock10 => Clock10,
+		Clock100 => Clock100,
 		Data => Data,
 		Good => Good,
 		FErr => FErr,
@@ -31,55 +31,28 @@ begin
 	);
 
 	process
+		variable i : positive;
 	begin
 		Clock1 <= '1';
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
+		for i in 1 to 50 loop
+			Clock100 <= '1';
+			wait for ClockPeriod / 2;
+			Clock100 <= '0';
+			wait for ClockPeriod / 2;
+		end loop;
 		Clock1 <= '0';
-		Clock10 <= '1';
 		if Good = '1' then
 			LastByte <= Data;
 			BytesSeen <= BytesSeen + 1;
 		elsif FErr = '1' then
 			FErrSeen <= FErrSeen + 1;
 		end if;
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
-		Clock10 <= '1';
-		wait for ClockPeriod / 2;
-		Clock10 <= '0';
-		wait for ClockPeriod / 2;
+		for i in 1 to 50 loop
+			Clock100 <= '1';
+			wait for ClockPeriod / 2;
+			Clock100 <= '0';
+			wait for ClockPeriod / 2;
+		end loop;
 		if Done = '1' then
 			wait;
 		end if;
@@ -94,7 +67,7 @@ begin
 		Serial <= '0';
 		wait for BitTime;
 		Serial <= '1';
-		wait for 10 * BitTime + 20 * ClockPeriod;
+		wait for 10 * BitTime + 110 * ClockPeriod;
 		assert FErrSeen = 0;
 		assert BytesSeen = 1;
 		assert LastByte = X"FF";
@@ -118,7 +91,7 @@ begin
 		Serial <= '0';
 		wait for BitTime;
 		Serial <= '1';
-		wait for 1.1 * BitTime + 20 * ClockPeriod;
+		wait for 1.1 * BitTime + 110 * ClockPeriod;
 		assert FErrSeen = 0;
 		assert BytesSeen = 2;
 		assert LastByte = X"55";
