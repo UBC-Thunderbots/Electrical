@@ -1,5 +1,5 @@
 GPIO#	Name	Peer Loc	Purpose
-   1	P104	Motorcon	Brake
+   1	P104	Motorcon	BrakeDrive
    2	P103	Motorcon	Fault1
    3	P102	Motorcon	PWM1
    4	P101	Motorcon	Fault2
@@ -12,7 +12,7 @@ GPIO#	Name	Peer Loc	Purpose
   11	P88 	Motorcon	PWMD
   12	P87 	Motorcon	DSense
   13	P85 	Motorcon	Dir1
-  14	P84
+  14	P84 	Motorcon	BrakeDribbler
   15	P83 	Motorcon	Dir2
   16	P82
   17	P78 	Motorcon	Dir3
