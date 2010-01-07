@@ -16,6 +16,7 @@ entity XBeePacketReceiver is
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
+		ControlledDriveFlag : out std_ulogic := '0';
 		Drive1 : out signed(15 downto 0) := to_signed(0, 16);
 		Drive2 : out signed(15 downto 0) := to_signed(0, 16);
 		Drive3 : out signed(15 downto 0) := to_signed(0, 16);
@@ -105,6 +106,7 @@ begin
 					if Data(0)(7) = '1' then
 						FeedbackFlag <= Data(0)(6);
 						DirectDriveFlag <= Data(0)(0);
+						ControlledDriveFlag <= Data(0)(1);
 						Word := Data(2) & Data(1);
 						Drive1 <= signed(Word);
 						Word := Data(4) & Data(3);

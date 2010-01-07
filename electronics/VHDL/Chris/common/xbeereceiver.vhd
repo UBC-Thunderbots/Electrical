@@ -12,6 +12,7 @@ entity XBeeReceiver is
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic;
 		DirectDriveFlag : out std_ulogic;
+		ControlledDriveFlag : out std_ulogic;
 		Drive1 : out signed(15 downto 0);
 		Drive2 : out signed(15 downto 0);
 		Drive3 : out signed(15 downto 0);
@@ -68,6 +69,7 @@ begin
 		RSSI => RSSI,
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
+		ControlledDriveFlag => ControlledDriveFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,

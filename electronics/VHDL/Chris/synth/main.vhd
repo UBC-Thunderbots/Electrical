@@ -74,6 +74,7 @@ architecture Behavioural of Main is
 	-- Mode flags from the XBee.
 	signal FeedbackFlag : std_ulogic;
 	signal DirectDriveFlag : std_ulogic;
+	signal ControlledDriveFlag : std_ulogic;
 
 	-- Drive levels from the XBee.
 	signal Drive1 : signed(15 downto 0);
@@ -81,13 +82,25 @@ architecture Behavioural of Main is
 	signal Drive3 : signed(15 downto 0);
 	signal Drive4 : signed(15 downto 0);
 
-	-- Duty cycles from the controller.
+	-- Controller outputs.
+	signal ControlM1 : signed(10 downto 0);
+	signal ControlM2 : signed(10 downto 0);
+	signal ControlM3 : signed(10 downto 0);
+	signal ControlM4 : signed(10 downto 0);
+
+	-- Motor powers from the controller or direct drive.
+	signal Motor1 : signed(10 downto 0);
+	signal Motor2 : signed(10 downto 0);
+	signal Motor3 : signed(10 downto 0);
+	signal Motor4 : signed(10 downto 0);
+
+	-- Duty cycles from the sign-magnitude converters.
 	signal DutyCycle1 : unsigned(9 downto 0);
 	signal DutyCycle2 : unsigned(9 downto 0);
 	signal DutyCycle3 : unsigned(9 downto 0);
 	signal DutyCycle4 : unsigned(9 downto 0);
 
-	-- Directions from the controller.
+	-- Directions from the sign-magnitude converters.
 	signal Dir1T : std_ulogic := '0';
 	signal Dir2T : std_ulogic := '0';
 	signal Dir3T : std_ulogic := '0';
@@ -150,6 +163,7 @@ begin
 		RSSI => XBeeRSSI,
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
+		ControlledDriveFlag => ControlledDriveFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
@@ -182,27 +196,49 @@ begin
 	);
 
 	-- Braking stuff.
-	BrakeDrive <= '0' when (DirectDriveFlag = '1') else '1';
-	BrakeDribbler <= '0' when (DirectDriveFlag = '1') else '1';
+	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') else '1';
+	BrakeDribbler <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') else '1';
 
 	-- Wheel stuff.
 	ControllerInstance : entity work.Controller(Behavioural)
 	port map(
 		Clock1 => Clock1,
 		Clock100 => Clock100,
-		DirectDriveFlag => DirectDriveFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
-		Drive4 => Drive4,
-		DutyCycle1 => DutyCycle1,
-		DutyCycle2 => DutyCycle2,
-		DutyCycle3 => DutyCycle3,
-		DutyCycle4 => DutyCycle4,
-		Direction1 => Dir1T,
-		Direction2 => Dir2T,
-		Direction3 => Dir3T,
-		Direction4 => Dir4T
+		Motor1 => ControlM1,
+		Motor2 => ControlM2,
+		Motor3 => ControlM3,
+		Motor4 => ControlM4
+	);
+	process(DirectDriveFlag, ControlledDriveFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
+	begin
+		if DirectDriveFlag = '1' then
+			Motor1 <= Drive1(10 downto 0);
+			Motor2 <= Drive2(10 downto 0);
+			Motor3 <= Drive3(10 downto 0);
+			Motor4 <= Drive4(10 downto 0);
+		elsif ControlledDriveFlag = '1' then
+			Motor1 <= ControlM1;
+			Motor2 <= ControlM2;
+			Motor3 <= ControlM3;
+			Motor4 <= ControlM4;
+		else
+			Motor1 <= to_signed(0, 11);
+			Motor2 <= to_signed(0, 11);
+			Motor3 <= to_signed(0, 11);
+			Motor4 <= to_signed(0, 11);
+		end if;
+	end process;
+	SignMagnitude1Instance : entity work.SignMagnitude(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Value => Motor1,
+		Absolute => DutyCycle1,
+		Sign => Dir1T
 	);
 	PWM1Instance : entity work.PWM(Behavioural)
 	generic map(
@@ -215,6 +251,15 @@ begin
 		DutyCycle => DutyCycle1,
 		PWM => PWM1
 	);
+	SignMagnitude2Instance : entity work.SignMagnitude(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Value => Motor2,
+		Absolute => DutyCycle2,
+		Sign => Dir2T
+	);
 	PWM2Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
@@ -226,6 +271,15 @@ begin
 		DutyCycle => DutyCycle2,
 		PWM => PWM2
 	);
+	SignMagnitude3Instance : entity work.SignMagnitude(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Value => Motor3,
+		Absolute => DutyCycle3,
+		Sign => Dir3T
+	);
 	PWM3Instance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
@@ -236,6 +290,15 @@ begin
 		Clock100 => Clock100,
 		DutyCycle => DutyCycle3,
 		PWM => PWM3
+	);
+	SignMagnitude4Instance : entity work.SignMagnitude(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Value => Motor4,
+		Absolute => DutyCycle4,
+		Sign => Dir4T
 	);
 	PWM4Instance : entity work.PWM(Behavioural)
 	generic map(
