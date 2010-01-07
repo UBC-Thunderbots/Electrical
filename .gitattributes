@@ -3,6 +3,7 @@ electronics/VHDL/Chris/Makefile -text
 electronics/VHDL/Chris/common/adc.vhd -text
 electronics/VHDL/Chris/common/controller.vhd -text
 electronics/VHDL/Chris/common/graycounter.vhd -text
+electronics/VHDL/Chris/common/madd.vhd -text
 electronics/VHDL/Chris/common/pwm.vhd -text
 electronics/VHDL/Chris/common/serialreceiver.smv -text
 electronics/VHDL/Chris/common/serialreceiver.vhd -text

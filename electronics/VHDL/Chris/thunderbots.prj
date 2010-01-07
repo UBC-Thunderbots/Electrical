@@ -1,6 +1,7 @@
 vhdl work common/adc.vhd
 vhdl work common/controller.vhd
 vhdl work common/graycounter.vhd
+vhdl work common/madd.vhd
 vhdl work common/pwm.vhd
 vhdl work common/serialreceiver.vhd
 vhdl work common/serialtransmitter.vhd
