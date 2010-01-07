@@ -8,10 +8,10 @@ entity XBeePacketReceiver is
 
 		ByteFErr : in std_ulogic;
 		ByteData : in std_ulogic_vector(7 downto 0);
-		ByteGood : in std_ulogic;
+		ByteStrobe : in std_ulogic;
 		ByteSOP : in std_ulogic;
 
-		Good : out std_ulogic := '0';
+		Strobe : out std_ulogic := '0';
 		Address : out std_ulogic_vector(63 downto 0);
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic := '0';
@@ -20,7 +20,7 @@ entity XBeePacketReceiver is
 		Drive2 : out signed(15 downto 0) := to_signed(0, 16);
 		Drive3 : out signed(15 downto 0) := to_signed(0, 16);
 		Drive4 : out signed(15 downto 0) := to_signed(0, 16);
-		Dribble : out signed(15 downto 0) := to_signed(0, 16);
+		Dribble : out signed(10 downto 0) := to_signed(0, 11);
 		CommandSeq : out std_ulogic_vector(7 downto 0) := X"00";
 		Command : out std_ulogic_vector(7 downto 0) := X"00";
 		CommandData : out std_ulogic_vector(15 downto 0) := X"0000"
@@ -42,17 +42,17 @@ begin
 		variable Word : std_ulogic_vector(15 downto 0);
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
-		variable SetGood : boolean;
+		variable SetStrobe : boolean;
 	begin
 		if rising_edge(Clock1) then
 			ClearChecksum := false;
 			AddChecksum := false;
-			SetGood := false;
+			SetStrobe := false;
 			if ByteFErr = '1' then
 				State <= ExpectSOP;
 			elsif ByteSOP = '1' then
 				State <= ExpectLengthMSB;
-			elsif ByteGood = '1' then
+			elsif ByteStrobe = '1' then
 				if State = ExpectLengthMSB then
 					if ByteData = X"00" then
 						State <= ExpectLengthLSB;
@@ -114,11 +114,11 @@ begin
 						Word := Data(8) & Data(7);
 						Drive4 <= signed(Word);
 						Word := Data(10) & Data(9);
-						Dribble <= signed(Word);
+						Dribble <= signed(Word(10 downto 0));
 						CommandSeq <= Data(11);
 						Command <= Data(12);
 						CommandData <= Data(14) & Data(13);
-						SetGood := true;
+						SetStrobe := true;
 					end if;
 				end if;
 				State <= ExpectSOP;
@@ -128,10 +128,10 @@ begin
 			elsif AddChecksum then
 				Checksum <= Checksum + unsigned(ByteData);
 			end if;
-			if SetGood then
-				Good <= '1';
+			if SetStrobe then
+				Strobe <= '1';
 			else
-				Good <= '0';
+				Strobe <= '0';
 			end if;
 		end if;
 	end process;

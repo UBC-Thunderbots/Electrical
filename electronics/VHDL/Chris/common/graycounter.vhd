@@ -7,7 +7,7 @@ entity GrayCounter is
 		Width : positive
 	);
 	port (
-		Clock10 : in std_ulogic;
+		Clock1 : in std_ulogic;
 
 		A : in std_ulogic;
 		B : in std_ulogic;
@@ -20,38 +20,40 @@ end entity GrayCounter;
 architecture Behavioural of GrayCounter is
 	signal OldA : std_ulogic := '0';
 	signal OldB : std_ulogic := '0';
-	signal NewA : std_ulogic := '0';
-	signal NewB : std_ulogic := '0';
-	signal Acc : signed(Width - 1 downto 0) := to_signed(0, Width);
-	signal State : std_ulogic_vector(3 downto 0) := "0000";
-	signal NewCount : signed(Width - 1 downto 0) := to_signed(0, Width);
-	signal NewAcc : signed(Width - 1 downto 0) := to_signed(0, Width);
+	signal CountBuf : signed(Width - 1 downto 0) := to_signed(0, Width);
 begin
-	State <= OldA & OldB & NewA & NewB;
-	
-	NewCount <=
-		     Acc + 1 when State = "0010"
-		else Acc + 1 when State = "1011"
-		else Acc + 1 when State = "1101"
-		else Acc + 1 when State = "0100"
-		else Acc - 1 when State = "0001"
-		else Acc - 1 when State = "0111"
-		else Acc - 1 when State = "1110"
-		else Acc - 1 when State = "1000"
-		else Acc;
-		
-	Count <= NewCount;
-	
-	NewAcc <= to_signed(0, Width) when Reset = '1' else NewCount;
-	
-	process(Clock10)
+	Count <= CountBuf;
+
+	process(Clock1)
+		variable Delta : signed(Width - 1 downto 0);
 	begin
-		if rising_edge(Clock10) then
-			Acc <= NewAcc;
-			OldA <= NewA;
-			OldB <= NewB;
-			NewA <= A;
-			NewB <= B;
+		if rising_edge(Clock1) then
+			if OldA = '0' and OldB = '0' and A = '1' and B = '0' then 
+				Delta := to_signed(1, Width);
+			elsif OldA = '1' and OldB = '0' and A = '1' and B = '1' then 
+				Delta := to_signed(1, Width);
+			elsif OldA = '1' and OldB = '1' and A = '0' and B = '1' then 
+				Delta := to_signed(1, Width);
+			elsif OldA = '0' and OldB = '1' and A = '0' and B = '0' then 
+				Delta := to_signed(1, Width);
+			elsif OldA = '0' and OldB = '0' and A = '0' and B = '1' then 
+				Delta := to_signed(-1, Width);
+			elsif OldA = '0' and OldB = '1' and A = '1' and B = '1' then 
+				Delta := to_signed(-1, Width);
+			elsif OldA = '1' and OldB = '1' and A = '1' and B = '0' then 
+				Delta := to_signed(-1, Width);
+			elsif OldA = '1' and OldB = '0' and A = '0' and B = '0' then 
+				Delta := to_signed(-1, Width);
+			else
+				Delta := to_signed(0, Width);
+			end if;
+			OldA <= A;
+			OldB <= B;
+			if Reset = '1' then
+				CountBuf <= Delta;
+			else
+				CountBuf <= CountBuf + Delta;
+			end if;
 		end if;
 	end process;
 end architecture Behavioural;

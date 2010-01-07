@@ -6,28 +6,28 @@ VAR
 	Dgood : boolean;
 	Ferr : boolean;
 	Dbuf : word[10];
-	BitClocks : 0..39;
-	BitValue : -9..9;
+	BitClocks : 0..399;
+	BitValue : -64..64;
 
 ASSIGN
 	init(Dgood) := 0;
 	init(Ferr) := 0;
 	init(Dbuf) := 0b10_0000000000;
-	init(BitClocks) := 39;
+	init(BitClocks) := 399;
 	init(BitValue) := 0;
 
 
 	next(Dgood) :=
 		case
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !Ferr & BitValue >= 3 : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !Ferr & BitValue >= 22 : 1;
 			1 : 0;
 		esac;
 
 	next(Ferr) :=
 		case
 			!bool(Dbuf[0:0]) & !Din : 0;
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !(BitValue >= 3 | BitValue <= -3) : 1;
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !(!Ferr & BitValue >= 3) : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !(BitValue >= 22 | BitValue <= -22) : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !(!Ferr & BitValue >= 22) : 1;
 			1 : Ferr;
 		esac;
 
@@ -42,9 +42,9 @@ ASSIGN
 				case
 					BitClocks = 0 :
 						case
-							Dbuf = 0b10_1111111111 & BitValue > -3 : 0b10_0000000000;
-							BitValue >= 3 : 0b1_1 :: Dbuf[9:1];
-							BitValue <= -3 : 0b1_0 :: Dbuf[9:1];
+							Dbuf = 0b10_1111111111 & BitValue > -22 : 0b10_0000000000;
+							BitValue >= 22 : 0b1_1 :: Dbuf[9:1];
+							BitValue <= -22 : 0b1_0 :: Dbuf[9:1];
 							1 : 0b1_1 :: Dbuf[9:1];
 						esac;
 					1 : Dbuf;
@@ -54,11 +54,11 @@ ASSIGN
 	next(BitClocks) :=
 		case
 			!bool(Dbuf[0:0]) :
-				39;
+				399;
 			1 :
 				case
 					BitClocks > 0 : BitClocks - 1;
-					1 : 39;
+					1 : 399;
 				esac;
 		esac;
 
@@ -68,9 +68,9 @@ ASSIGN
 				0;
 			1 :
 				case
-					BitClocks > 23 :
+					BitClocks > 232 :
 						BitValue;
-					BitClocks > 15 :
+					BitClocks > 169 :
 						case
 							-- These lines are required to allow us to use an integer-based type
 							-- instead of having to go for the word-based type. This makes the
@@ -80,9 +80,9 @@ ASSIGN
 							-- doing saturated arithmetic. This means that the semantics of this
 							-- code is very slightly different than the semantics of the original
 							-- VHDL. We prove that this difference is irrelevant by means of the
-							-- INVARSPEC BitValue <= 9 & BitValue >= -9; line below.
-							BitValue = 9 : 9;
-							BitValue = -9 : -9;
+							-- INVARSPEC BitValue <= 63 & BitValue >= -63; line below.
+							BitValue = 64 : 64;
+							BitValue = -64 : -64;
 							Din : BitValue + 1 ;
 							1 : BitValue - 1;
 						esac;
@@ -100,7 +100,7 @@ ASSIGN
 --
 
 -- Should not overflow the bit value counter.
-INVARSPEC BitValue <= 8 & BitValue >= -8;
+INVARSPEC BitValue <= 63 & BitValue >= -63;
 
 -- Should never have a framing error and good data simultaneously.
 INVARSPEC !(Ferr & Dgood);

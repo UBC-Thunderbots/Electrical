@@ -6,14 +6,14 @@ entity GrayCounterTest is
 end entity GrayCounterTest;
 
 architecture Behavioural of GrayCounterTest is
-	constant ClockPeriod : time := 100 ns;
+	constant ClockPeriod : time := 1 us;
 	constant Width : positive := 16;
 
-	signal Clock10 : std_ulogic := '0';
+	signal Clock1 : std_ulogic := '0';
 	signal A : std_ulogic := '0';
 	signal B : std_ulogic := '0';
 	signal Reset : std_ulogic := '0';
-	signal Count : signed(Width - 1 downto 0) := to_signed(0, Width);
+	signal Count : signed(Width - 1 downto 0);
 	signal Done : std_ulogic := '0';
 begin
 	uut : entity work.GrayCounter(Behavioural)
@@ -21,7 +21,7 @@ begin
 		Width => Width
 	)
 	port map(
-		Clock10 => Clock10,
+		Clock1 => Clock1,
 		A => A,
 		B => B,
 		Reset => Reset,
@@ -30,9 +30,9 @@ begin
 
 	process
 	begin
-		Clock10 <= '1';
+		Clock1 <= '1';
 		wait for ClockPeriod / 2;
-		Clock10 <= '0';
+		Clock1 <= '0';
 		wait for ClockPeriod / 2;
 		if Done = '1' then
 			wait;

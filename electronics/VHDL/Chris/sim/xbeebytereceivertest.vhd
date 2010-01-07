@@ -10,22 +10,22 @@ architecture Behavioural of XBeeByteReceiverTest is
 
 	signal Clock1 : std_ulogic := '0';
 	signal SerialData : std_ulogic_vector(7 downto 0) := X"00";
-	signal SerialGood : std_ulogic := '0';
+	signal SerialStrobe : std_ulogic := '0';
 	signal SerialFErr : std_ulogic := '0';
 	signal FErr : std_ulogic;
 	signal Data : std_ulogic_vector(7 downto 0);
-	signal Good : std_ulogic;
+	signal Strobe : std_ulogic;
 	signal SOP : std_ulogic;
 begin
 	uut : entity work.XBeeByteReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
 		SerialData => SerialData,
-		SerialGood => SerialGood,
+		SerialStrobe => SerialStrobe,
 		SerialFErr => SerialFErr,
 		FErr => FErr,
 		Data => Data,
-		Good => Good,
+		Strobe => Strobe,
 		SOP => SOP
 	);
 
@@ -46,39 +46,39 @@ begin
 	begin
 		Tick;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 
 		SerialData <= X"7D";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"00";
-		SerialGood <= '0';
+		SerialStrobe <= '0';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"FF";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
 		assert Data = X"DF";
-		assert Good = '1';
+		assert Strobe = '1';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"00";
-		SerialGood <= '0';
+		SerialStrobe <= '0';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
@@ -86,18 +86,18 @@ begin
 		Tick;
 
 		SerialData <= X"7E";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '1';
 		Tick;
 
-		SerialGood <= '0';
+		SerialStrobe <= '0';
 		SerialData <= X"00";
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
@@ -105,18 +105,18 @@ begin
 		Tick;
 
 		SerialData <= X"7D";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"00";
-		SerialGood <= '0';
+		SerialStrobe <= '0';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
@@ -125,60 +125,60 @@ begin
 		Tick;
 
 		SerialData <= X"5E";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
 		assert Data = X"7E";
-		assert Good = '1';
+		assert Strobe = '1';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"7D";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"7E";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '1';
 		Tick;
 
 		SerialData <= X"27";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
 		assert Data = X"27";
-		assert Good = '1';
+		assert Strobe = '1';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"7D";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"7D";
-		SerialGood <= '1';
+		SerialStrobe <= '1';
 		Delta;
 		assert FErr = '1';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 
 		SerialData <= X"00";
-		SerialGood <= '0';
+		SerialStrobe <= '0';
 		Delta;
 		assert FErr = '0';
-		assert Good = '0';
+		assert Strobe = '0';
 		assert SOP = '0';
 		Tick;
 

@@ -10,61 +10,64 @@ entity ADC is
 		SPIDT : in std_ulogic;
 		SPISS : in std_ulogic;
 
-		Channel0  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel1  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel2  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel3  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel4  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel5  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel6  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel7  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel8  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel9  : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel10 : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel11 : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Channel12 : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		Good : out std_ulogic := '0'
+		VMon : out unsigned(9 downto 0) := to_unsigned(0, 10)
 	);
 end entity ADC;
 
 architecture Behavioural of ADC is
-	signal Bits : std_ulogic_vector(201 downto 0);
-	signal BitsLeft : natural range 0 to 208;
+	type StateType is (Idle, Channel0, Channel1, Channel2, Channel3, Channel4, Channel5, Channel6, Channel7, Channel8, Channel9, Channel10, Channel11, Channel12);
+	signal State : StateType := Idle;
+	signal Bits : std_ulogic_vector(8 downto 0);
+	signal BitsLeft : natural range 0 to 15;
 	signal PrevSPICK : std_ulogic := '0';
 begin
 	process(Clock10)
+		variable OK : boolean;
 	begin
 		if rising_edge(Clock10) then
+			OK := SPICK = '1' and PrevSPICK = '0';
+			PrevSPICK <= SPICK;
 			if SPISS = '1' then
-				-- Slave select deasserted.
-				-- If all is good, copy out.
+				State <= Idle;
+			elsif State = Idle then
+				State <= Channel0;
+				BitsLeft <= 15;
+			elsif OK then
 				if BitsLeft = 0 then
-					-- There is padding in the bitstream.
-					Channel0 <= unsigned(Bits(201 downto 192));
-					Channel1 <= unsigned(Bits(185 downto 176));
-					Channel2 <= unsigned(Bits(169 downto 160));
-					Channel3 <= unsigned(Bits(153 downto 144));
-					Channel4 <= unsigned(Bits(137 downto 128));
-					Channel5 <= unsigned(Bits(121 downto 112));
-					Channel6 <= unsigned(Bits(105 downto 96));
-					Channel7 <= unsigned(Bits(89 downto 80));
-					Channel8 <= unsigned(Bits(73 downto 64));
-					Channel9 <= unsigned(Bits(57 downto 48));
-					Channel10 <= unsigned(Bits(41 downto 32));
-					Channel11 <= unsigned(Bits(25 downto 16));
-					Channel12 <= unsigned(Bits(9 downto 0));
-					Good <= '1';
-				elsif BitsLeft /= 208 then
-					Good <= '0';
-				end if;
-				BitsLeft <= 208;
-			else
-				if SPICK = '1' and PrevSPICK = '0' then
-					Bits <= Bits(200 downto 0) & SPIDT;
+					if State = Channel0 then
+						State <= Channel1;
+					elsif State = Channel1 then
+						State <= Channel2;
+					elsif State = Channel2 then
+						State <= Channel3;
+					elsif State = Channel3 then
+						State <= Channel4;
+					elsif State = Channel4 then
+						State <= Channel5;
+					elsif State = Channel5 then
+						State <= Channel6;
+					elsif State = Channel6 then
+						State <= Channel7;
+					elsif State = Channel7 then
+						State <= Channel8;
+					elsif State = Channel8 then
+						State <= Channel9;
+					elsif State = Channel9 then
+						State <= Channel10;
+					elsif State = Channel10 then
+						State <= Channel11;
+					elsif State = Channel11 then
+						State <= Channel12;
+					elsif State = Channel12 then
+						State <= Idle;
+						VMon <= unsigned(Bits(8 downto 0) & SPIDT);
+					end if;
+					BitsLeft <= 15;
+				else
 					BitsLeft <= BitsLeft - 1;
 				end if;
+				Bits <= Bits(7 downto 0) & SPIDT;
 			end if;
-			PrevSPICK <= SPICK;
 		end if;
 	end process;
 end architecture Behavioural;

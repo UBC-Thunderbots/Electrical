@@ -13,7 +13,7 @@ architecture Behavioural of SerialReceiverTest is
 	signal Clock100 : std_ulogic := '0';
 	signal Serial : std_ulogic := '1';
 	signal Data : std_ulogic_vector(7 downto 0);
-	signal Good : std_ulogic := '0';
+	signal Strobe : std_ulogic := '0';
 	signal FErr : std_ulogic := '0';
 	signal Done : std_ulogic := '0';
 	signal FErrSeen : natural := 0;
@@ -25,7 +25,7 @@ begin
 		Clock1 => Clock1,
 		Clock100 => Clock100,
 		Data => Data,
-		Good => Good,
+		Strobe => Strobe,
 		FErr => FErr,
 		Serial => Serial
 	);
@@ -41,7 +41,7 @@ begin
 			wait for ClockPeriod / 2;
 		end loop;
 		Clock1 <= '0';
-		if Good = '1' then
+		if Strobe = '1' then
 			LastByte <= Data;
 			BytesSeen <= BytesSeen + 1;
 		elsif FErr = '1' then

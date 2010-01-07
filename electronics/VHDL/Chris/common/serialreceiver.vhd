@@ -10,7 +10,7 @@ entity SerialReceiver is
 		Serial : in std_ulogic;
 
 		Data : out std_ulogic_vector(7 downto 0) := X"00";
-		Good : out std_ulogic := '0';
+		Strobe : out std_ulogic := '0';
 		FErr : out std_ulogic := '0'
 	);
 end entity SerialReceiver;
@@ -19,6 +19,8 @@ architecture Behavioural of SerialReceiver is
 	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
 	signal BitClocks : natural range 0 to 399 := 399;
 	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
+	signal High : boolean;
+	signal Low : boolean;
 	signal FErrBuf : std_ulogic := '0';
 
 	signal DataBuffer : std_ulogic_vector(7 downto 0) := X"00";
@@ -26,6 +28,8 @@ architecture Behavioural of SerialReceiver is
 	signal DataBufferPolarity100 : std_ulogic := '0';
 begin
 	FErr <= FErrBuf;
+	High <= BitValue >= 22;
+	Low <= BitValue <= -22;
 
 	process(Clock100)
 		variable ResetBitClocks : boolean;
@@ -60,10 +64,10 @@ begin
 					-- Too late in the bit to take a stable sample. Do nothing.
 				else
 					-- End of bit. See what our sampling achieved.
-					if BitValue >= 22 then
+					if High then
 						-- Overwhelmingly high. Accept bit.
 						DBuf <= '1' & DBuf(9 downto 1);
-					elsif BitValue <= -22 then
+					elsif Low then
 						-- Overwhelmingly low. Accept bit.
 						DBuf <= '0' & DBuf(9 downto 1);
 					else
@@ -78,7 +82,7 @@ begin
 						-- We have more bits to receive.
 					else
 						-- We have finished receiving a full byte. Check polarity of stop bit.
-						if FErrBuf = '0' and BitValue >= 22 then
+						if FErrBuf = '0' and High then
 							DataBuffer <= DBuf(9 downto 2);
 							DataBufferPolarity100 <= not DataBufferPolarity100;
 						else
@@ -86,7 +90,7 @@ begin
 						end if;
 					end if;
 					-- Check if this is a false start bit.
-					if DBuf = "1111111111" and BitValue > -22 then
+					if DBuf = "1111111111" and not Low then
 						DBuf <= "0000000000";
 					end if;
 					ResetBitClocks := true;
@@ -112,7 +116,7 @@ begin
 	begin
 		if rising_edge(Clock1) then
 			Data <= DataBuffer;
-			Good <= DataBufferPolarity1 xor DataBufferPolarity100;
+			Strobe <= DataBufferPolarity1 xor DataBufferPolarity100;
 			DataBufferPolarity1 <= DataBufferPolarity100;
 		end if;
 	end process;

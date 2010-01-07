@@ -65,11 +65,11 @@ architecture Behavioural of Main is
 	signal FaultDL : std_ulogic := '1';
 
 	-- XBee-related stuff.
-	signal XBeeGood : std_ulogic;
+	signal XBeeRXStrobe : std_ulogic;
 	signal XBeeAddress : std_ulogic_vector(63 downto 0);
 	signal XBeeRSSI : std_ulogic_vector(7 downto 0);
 	signal XBeeCommandSeq : std_ulogic_vector(7 downto 0);
-	signal XBeeStartTransmitter : std_ulogic;
+	signal XBeeTXStrobe : std_ulogic;
 
 	-- Mode flags from the XBee.
 	signal FeedbackFlag : std_ulogic;
@@ -94,9 +94,12 @@ architecture Behavioural of Main is
 	signal Dir4T : std_ulogic := '0';
 
 	-- Dribbler stuff.
-	signal Dribble : signed(15 downto 0);
+	signal Dribble : signed(10 downto 0);
 	signal DutyCycleD : unsigned(9 downto 0);
 	signal DirDT : std_ulogic := '0';
+
+	-- Battery voltage.
+	signal VMon : unsigned(9 downto 0);
 begin
 	-- Pass the Oscillator pin through a DCM to get the final clocks.
 	ClockGenInstance : entity work.ClockGen(Behavioural)
@@ -115,7 +118,7 @@ begin
 			AppInL <= AppIn;
 			AppClkL <= AppClk;
 			-- Fault signals stay asserted until consumed by XBeeTransmitter.
-			if XBeeStartTransmitter = '1' then
+			if XBeeTXStrobe = '1' then
 				Fault1L <= '0';
 				Fault2L <= '0';
 				Fault3L <= '0';
@@ -142,7 +145,7 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Clock100 => Clock100,
-		Good => XBeeGood,
+		Strobe => XBeeRXStrobe,
 		Address => XBeeAddress,
 		RSSI => XBeeRSSI,
 		FeedbackFlag => FeedbackFlag,
@@ -158,17 +161,17 @@ begin
 		Serial => XBeeRXL
 	);
 
-	XBeeStartTransmitter <= XBeeGood and FeedbackFlag;
+	XBeeTXStrobe <= XBeeRXStrobe and FeedbackFlag;
 
 	XBeeTransmitterInstance : entity work.XBeeTransmitter(Behavioural)
 	port map(
 		Clock1 => Clock1,
-		Start => XBeeStartTransmitter,
+		Start => XBeeTXStrobe,
 		Busy => open,
 		Address => XBeeAddress,
 		RSSI => XBeeRSSI,
 		DribblerSpeed => to_unsigned(0, 16),
-		BatteryLevel => to_unsigned(0, 16),
+		BatteryLevel => VMon,
 		Fault1 => Fault1L,
 		Fault2 => Fault2L,
 		Fault3 => Fault3L,
@@ -256,7 +259,7 @@ begin
 		Width => 11
 	)
 	port map(
-		Value => Dribble(10 downto 0),
+		Value => Dribble,
 		Absolute => DutyCycleD,
 		Sign => DirDT
 	);
@@ -280,20 +283,7 @@ begin
 		SPICK => AppClkL,
 		SPIDT => AppInL,
 		SPISS => AppSSL,
-		Channel0 => open,
-		Channel1 => open,
-		Channel2 => open,
-		Channel3 => open,
-		Channel4 => open,
-		Channel5 => open,
-		Channel6 => open,
-		Channel7 => open,
-		Channel8 => open,
-		Channel9 => open,
-		Channel10 => open,
-		Channel11 => open,
-		Channel12 => open,
-		Good => open
+		VMon => VMon
 	);
 
 	AppOut <= '0';
