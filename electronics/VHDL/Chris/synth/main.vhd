@@ -125,12 +125,9 @@ begin
 	);
 
 	-- Latch the inputs into the local signals.
-	process(Clock10)
+	process(Clock1)
 	begin
-		if rising_edge(Clock10) then
-			AppSSL <= AppSS;
-			AppInL <= AppIn;
-			AppClkL <= AppClk;
+		if rising_edge(Clock1) then
 			-- Fault signals stay asserted until consumed by XBeeTransmitter.
 			if XBeeTXStrobe = '1' then
 				Fault1L <= '0';
@@ -145,6 +142,14 @@ begin
 				Fault4L <= Fault4L or not Fault4;
 				FaultDL <= FaultDL or not FaultD;
 			end if;
+		end if;
+	end process;
+	process(Clock10)
+	begin
+		if rising_edge(Clock10) then
+			AppSSL <= AppSS;
+			AppInL <= AppIn;
+			AppClkL <= AppClk;
 		end if;
 	end process;
 	process(Clock100)
