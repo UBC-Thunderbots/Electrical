@@ -5,6 +5,7 @@ electronics/VHDL/Chris/common/controller.vhd -text
 electronics/VHDL/Chris/common/graycounter.vhd -text
 electronics/VHDL/Chris/common/madd.vhd -text
 electronics/VHDL/Chris/common/pwm.vhd -text
+electronics/VHDL/Chris/common/rom.vhd -text
 electronics/VHDL/Chris/common/serialreceiver.smv -text
 electronics/VHDL/Chris/common/serialreceiver.vhd -text
 electronics/VHDL/Chris/common/serialtransmitter.vhd -text
@@ -12,6 +13,7 @@ electronics/VHDL/Chris/common/signmagnitude.vhd -text
 electronics/VHDL/Chris/common/ssmultiplier.vhd -text
 electronics/VHDL/Chris/common/sumultiplier.smv -text
 electronics/VHDL/Chris/common/sumultiplier.vhd -text
+electronics/VHDL/Chris/common/types.vhd -text
 electronics/VHDL/Chris/common/xbeebytereceiver.vhd -text
 electronics/VHDL/Chris/common/xbeebytetransmitter.vhd -text
 electronics/VHDL/Chris/common/xbeepacketreceiver.vhd -text
