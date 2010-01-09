@@ -75,6 +75,7 @@ architecture Behavioural of Main is
 	signal FeedbackFlag : std_ulogic;
 	signal DirectDriveFlag : std_ulogic;
 	signal ControlledDriveFlag : std_ulogic;
+	signal VelocitiesFlag : std_ulogic;
 
 	-- Drive levels from the XBee.
 	signal Drive1 : signed(15 downto 0);
@@ -164,6 +165,7 @@ begin
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
+		VelocitiesFlag => VelocitiesFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
@@ -196,30 +198,37 @@ begin
 	);
 
 	-- Braking stuff.
-	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') else '1';
-	BrakeDribbler <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') else '1';
+	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1' or VelocitiesFlag = '1') else '1';
+	BrakeDribbler <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1' or VelocitiesFlag = '1') else '1';
 
 	-- Wheel stuff.
 	ControllerInstance : entity work.Controller(Behavioural)
 	port map(
 		Clock1 => Clock1,
 		Clock100 => Clock100,
+		ControlledDriveFlag => ControlledDriveFlag,
+		VelocitiesFlag => VelocitiesFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
+		Drive4 => Drive4,
+		Encoder1 => to_signed(0, 18),
+		Encoder2 => to_signed(0, 18),
+		Encoder3 => to_signed(0, 18),
+		Encoder4 => to_signed(0, 18),
 		Motor1 => ControlM1,
 		Motor2 => ControlM2,
 		Motor3 => ControlM3,
 		Motor4 => ControlM4
 	);
-	process(DirectDriveFlag, ControlledDriveFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
+	process(DirectDriveFlag, ControlledDriveFlag, VelocitiesFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
 	begin
 		if DirectDriveFlag = '1' then
 			Motor1 <= Drive1(10 downto 0);
 			Motor2 <= Drive2(10 downto 0);
 			Motor3 <= Drive3(10 downto 0);
 			Motor4 <= Drive4(10 downto 0);
-		elsif ControlledDriveFlag = '1' then
+		elsif ControlledDriveFlag = '1' or VelocitiesFlag = '1' then
 			Motor1 <= ControlM1;
 			Motor2 <= ControlM2;
 			Motor3 <= ControlM3;

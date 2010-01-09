@@ -17,6 +17,7 @@ entity XBeePacketReceiver is
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
 		ControlledDriveFlag : out std_ulogic := '0';
+		VelocitiesFlag : out std_ulogic := '0';
 		Drive1 : out signed(15 downto 0) := to_signed(0, 16);
 		Drive2 : out signed(15 downto 0) := to_signed(0, 16);
 		Drive3 : out signed(15 downto 0) := to_signed(0, 16);
@@ -107,6 +108,7 @@ begin
 						FeedbackFlag <= Data(0)(6);
 						DirectDriveFlag <= Data(0)(0);
 						ControlledDriveFlag <= Data(0)(1);
+						VelocitiesFlag <= Data(0)(2);
 						Word := Data(2) & Data(1);
 						Drive1 <= signed(Word);
 						Word := Data(4) & Data(3);
