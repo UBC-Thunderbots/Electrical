@@ -75,13 +75,13 @@ architecture Behavioural of Main is
 	signal FeedbackFlag : std_ulogic;
 	signal DirectDriveFlag : std_ulogic;
 	signal ControlledDriveFlag : std_ulogic;
-	signal VelocitiesFlag : std_ulogic;
+	signal DribbleFlag : std_ulogic;
 
 	-- Drive levels from the XBee.
-	signal Drive1 : signed(15 downto 0);
-	signal Drive2 : signed(15 downto 0);
-	signal Drive3 : signed(15 downto 0);
-	signal Drive4 : signed(15 downto 0);
+	signal Drive1 : signed(10 downto 0);
+	signal Drive2 : signed(10 downto 0);
+	signal Drive3 : signed(10 downto 0);
+	signal Drive4 : signed(10 downto 0);
 
 	-- Controller outputs.
 	signal ControlM1 : signed(10 downto 0);
@@ -170,7 +170,7 @@ begin
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
-		VelocitiesFlag => VelocitiesFlag,
+		DribbleFlag => DribbleFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
@@ -188,7 +188,6 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Start => XBeeTXStrobe,
-		Busy => open,
 		Address => XBeeAddress,
 		RSSI => XBeeRSSI,
 		DribblerSpeed => to_unsigned(0, 16),
@@ -203,8 +202,8 @@ begin
 	);
 
 	-- Braking stuff.
-	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1' or VelocitiesFlag = '1') else '1';
-	BrakeDribbler <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1' or VelocitiesFlag = '1') else '1';
+	BrakeDrive <= '0' when DirectDriveFlag = '1' or ControlledDriveFlag = '1' else '1';
+	BrakeDribbler <= '0' when DribbleFlag = '1' else '1';
 
 	-- Wheel stuff.
 	ControllerInstance : entity work.Controller(Behavioural)
@@ -212,11 +211,10 @@ begin
 		Clock1 => Clock1,
 		Clock100 => Clock100,
 		ControlledDriveFlag => ControlledDriveFlag,
-		VelocitiesFlag => VelocitiesFlag,
-		Drive1 => Drive1,
-		Drive2 => Drive2,
-		Drive3 => Drive3,
-		Drive4 => Drive4,
+		Drive1 => Drive1(9 downto 0),
+		Drive2 => Drive2(9 downto 0),
+		Drive3 => Drive3(9 downto 0),
+		Drive4 => Drive4(9 downto 0),
 		Encoder1 => to_signed(0, 10),
 		Encoder2 => to_signed(0, 10),
 		Encoder3 => to_signed(0, 10),
@@ -226,14 +224,14 @@ begin
 		Motor3 => ControlM3,
 		Motor4 => ControlM4
 	);
-	process(DirectDriveFlag, ControlledDriveFlag, VelocitiesFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
+	process(DirectDriveFlag, ControlledDriveFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
 	begin
 		if DirectDriveFlag = '1' then
-			Motor1 <= Drive1(10 downto 0);
-			Motor2 <= Drive2(10 downto 0);
-			Motor3 <= Drive3(10 downto 0);
-			Motor4 <= Drive4(10 downto 0);
-		elsif ControlledDriveFlag = '1' or VelocitiesFlag = '1' then
+			Motor1 <= Drive1;
+			Motor2 <= Drive2;
+			Motor3 <= Drive3;
+			Motor4 <= Drive4;
+		elsif ControlledDriveFlag = '1' then
 			Motor1 <= ControlM1;
 			Motor2 <= ControlM2;
 			Motor3 <= ControlM3;

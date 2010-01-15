@@ -17,11 +17,11 @@ entity XBeePacketReceiver is
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
 		ControlledDriveFlag : out std_ulogic := '0';
-		VelocitiesFlag : out std_ulogic := '0';
-		Drive1 : out signed(15 downto 0) := to_signed(0, 16);
-		Drive2 : out signed(15 downto 0) := to_signed(0, 16);
-		Drive3 : out signed(15 downto 0) := to_signed(0, 16);
-		Drive4 : out signed(15 downto 0) := to_signed(0, 16);
+		DribbleFlag : out std_ulogic := '0';
+		Drive1 : out signed(10 downto 0) := to_signed(0, 11);
+		Drive2 : out signed(10 downto 0) := to_signed(0, 11);
+		Drive3 : out signed(10 downto 0) := to_signed(0, 11);
+		Drive4 : out signed(10 downto 0) := to_signed(0, 11);
 		Dribble : out signed(10 downto 0) := to_signed(0, 11);
 		CommandSeq : out std_ulogic_vector(7 downto 0) := X"00";
 		Command : out std_ulogic_vector(7 downto 0) := X"00";
@@ -41,7 +41,7 @@ begin
 	Address <= AddressBuf;
 
 	process(Clock1)
-		variable Word : std_ulogic_vector(15 downto 0);
+		variable Word : std_ulogic_vector(10 downto 0);
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
 		variable SetStrobe : boolean;
@@ -108,17 +108,17 @@ begin
 						FeedbackFlag <= Data(0)(6);
 						DirectDriveFlag <= Data(0)(0);
 						ControlledDriveFlag <= Data(0)(1);
-						VelocitiesFlag <= Data(0)(2);
-						Word := Data(2) & Data(1);
+						DribbleFlag <= Data(0)(2);
+						Word := Data(2)(2 downto 0) & Data(1);
 						Drive1 <= signed(Word);
-						Word := Data(4) & Data(3);
+						Word := Data(4)(2 downto 0) & Data(3);
 						Drive2 <= signed(Word);
-						Word := Data(6) & Data(5);
+						Word := Data(6)(2 downto 0) & Data(5);
 						Drive3 <= signed(Word);
-						Word := Data(8) & Data(7);
+						Word := Data(8)(2 downto 0) & Data(7);
 						Drive4 <= signed(Word);
-						Word := Data(10) & Data(9);
-						Dribble <= signed(Word(10 downto 0));
+						Word := Data(10)(2 downto 0) & Data(9);
+						Dribble <= signed(Word);
 						CommandSeq <= Data(11);
 						Command <= Data(12);
 						CommandData <= Data(14) & Data(13);

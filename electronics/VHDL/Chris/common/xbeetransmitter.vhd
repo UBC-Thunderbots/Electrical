@@ -7,7 +7,6 @@ entity XBeeTransmitter is
 		Clock1 : in std_ulogic;
 
 		Start : in std_ulogic;
-		Busy : out std_ulogic;
 
 		Address : in std_ulogic_vector(63 downto 0);
 		RSSI : in std_ulogic_vector(7 downto 0);
@@ -37,7 +36,6 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Start => Start,
-		Busy => Busy,
 		Address => Address,
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,

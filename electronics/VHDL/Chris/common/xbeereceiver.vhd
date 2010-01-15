@@ -13,11 +13,11 @@ entity XBeeReceiver is
 		FeedbackFlag : out std_ulogic;
 		DirectDriveFlag : out std_ulogic;
 		ControlledDriveFlag : out std_ulogic;
-		VelocitiesFlag : out std_ulogic;
-		Drive1 : out signed(15 downto 0);
-		Drive2 : out signed(15 downto 0);
-		Drive3 : out signed(15 downto 0);
-		Drive4 : out signed(15 downto 0);
+		DribbleFlag : out std_ulogic;
+		Drive1 : out signed(10 downto 0);
+		Drive2 : out signed(10 downto 0);
+		Drive3 : out signed(10 downto 0);
+		Drive4 : out signed(10 downto 0);
 		Dribble : out signed(10 downto 0);
 		CommandSeq : out std_ulogic_vector(7 downto 0);
 		Command : out std_ulogic_vector(7 downto 0);
@@ -71,7 +71,7 @@ begin
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
-		VelocitiesFlag => VelocitiesFlag,
+		DribbleFlag => DribbleFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,

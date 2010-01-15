@@ -7,7 +7,6 @@ entity XBeePacketTransmitter is
 		Clock1 : in std_ulogic;
 
 		Start : in std_ulogic;
-		Busy : out std_ulogic := '0';
 
 		Address : in std_ulogic_vector(63 downto 0);
 		RSSI : in std_ulogic_vector(7 downto 0);
@@ -28,19 +27,14 @@ entity XBeePacketTransmitter is
 end entity XBeePacketTransmitter;
 
 architecture Behavioural of XBeePacketTransmitter is
-	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFault12, SendFault34, SendFaultD, SendCommandAck, SendChecksum);
+	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendCommandAck, SendChecksum);
 	signal State : StateType := Idle;
-	signal FaultCount1 : unsigned(3 downto 0) := to_unsigned(0, 4);
-	signal FaultCount2 : unsigned(3 downto 0) := to_unsigned(0, 4);
-	signal FaultCount3 : unsigned(3 downto 0) := to_unsigned(0, 4);
-	signal FaultCount4 : unsigned(3 downto 0) := to_unsigned(0, 4);
-	signal FaultCountD : unsigned(3 downto 0) := to_unsigned(0, 4);
 	signal DataLeft : natural range 0 to 7;
 	signal Temp : std_ulogic_vector(7 downto 0);
 	signal Checksum : unsigned(7 downto 0);
-begin
-	Busy <= '0' when State = Idle and ByteBusy = '0' else '1';
 
+	signal Faults : std_ulogic_vector(4 downto 0);
+begin
 	process(Clock1)
 		variable AddressShifted : std_ulogic_vector(63 downto 0);
 		variable ShiftDistance : natural;
@@ -59,11 +53,11 @@ begin
 				if State = Idle then
 					if Start = '1' then
 						State <= SendSOP;
-						if Fault1 = '1' then FaultCount1 <= FaultCount1 + 1; end if;
-						if Fault2 = '1' then FaultCount2 <= FaultCount2 + 1; end if;
-						if Fault3 = '1' then FaultCount3 <= FaultCount3 + 1; end if;
-						if Fault4 = '1' then FaultCount4 <= FaultCount4 + 1; end if;
-						if FaultD = '1' then FaultCountD <= FaultCountD + 1; end if;
+						Faults(0) <= Fault1;
+						Faults(1) <= Fault2;
+						Faults(2) <= Fault3;
+						Faults(3) <= Fault4;
+						Faults(4) <= FaultD;
 						ClearChecksum := true;
 					end if;
 				elsif State = SendSOP then
@@ -75,7 +69,7 @@ begin
 					ByteLoad <= '1';
 				elsif State = SendLengthLSB then
 					State <= SendAPIID;
-					ByteData <= X"15";
+					ByteData <= X"13";
 					ByteLoad <= '1';
 				elsif State = SendAPIID then
 					State <= SendFrame;
@@ -128,25 +122,15 @@ begin
 					ChecksumByte := BatteryLevel(7 downto 0);
 					Temp <= std_ulogic_vector("000000" & BatteryLevel(9 downto 8));
 				elsif State = SendBatteryLevelMSB then
-					State <= SendFault12;
+					State <= SendFaults;
 					ByteData <= Temp;
 					ByteLoad <= '1';
 					ChecksumByte := unsigned(Temp);
-				elsif State = SendFault12 then
-					State <= SendFault34;
-					ByteData <= std_ulogic_vector(FaultCount2 & FaultCount1);
-					ByteLoad <= '1';
-					ChecksumByte := FaultCount2 & FaultCount1;
-				elsif State = SendFault34 then
-					State <= SendFaultD;
-					ByteData <= std_ulogic_vector(FaultCount4 & FaultCount3);
-					ByteLoad <= '1';
-					ChecksumByte := FaultCount4 & FaultCount3;
-				elsif State = SendFaultD then
+				elsif State = SendFaults then
 					State <= SendCommandAck;
-					ByteData <= std_ulogic_vector(X"0" & FaultCountD);
+					ByteData <= "000" & Faults;
 					ByteLoad <= '1';
-					ChecksumByte := X"0" & FaultCountD;
+					ChecksumByte := unsigned("000" & Faults);
 				elsif State = SendCommandAck then
 					State <= SendChecksum;
 					ByteData <= CommandAck;
