@@ -8,9 +8,10 @@ entity XBeePacketTransmitter is
 
 		Start : in std_ulogic;
 
-		Address : in std_ulogic_vector(63 downto 0);
+		AddressByte : in std_ulogic_vector(7 downto 0);
+		AddressStrobe : out std_ulogic;
 		RSSI : in std_ulogic_vector(7 downto 0);
-		DribblerSpeed : in unsigned(15 downto 0);
+		DribblerSpeed : in signed(15 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
@@ -36,8 +37,6 @@ architecture Behavioural of XBeePacketTransmitter is
 	signal Faults : std_ulogic_vector(4 downto 0);
 begin
 	process(Clock1)
-		variable AddressShifted : std_ulogic_vector(63 downto 0);
-		variable ShiftDistance : natural;
 		variable ClearChecksum : boolean;
 		variable UpdateChecksum : boolean;
 		variable ChecksumByte : unsigned(7 downto 0);
@@ -48,16 +47,19 @@ begin
 			ByteSOP <= '0';
 			ClearChecksum := false;
 			ChecksumByte := X"00";
+			AddressStrobe <= '0';
+
+			-- Accumulate faults on every clock cycle.
+			Faults(0) <= Faults(0) or not Fault1;
+			Faults(1) <= Faults(1) or not Fault2;
+			Faults(2) <= Faults(2) or not Fault3;
+			Faults(3) <= Faults(3) or not Fault4;
+			Faults(4) <= Faults(4) or not FaultD;
 
 			if ByteBusy = '0' then
 				if State = Idle then
 					if Start = '1' then
 						State <= SendSOP;
-						Faults(0) <= Fault1;
-						Faults(1) <= Fault2;
-						Faults(2) <= Fault3;
-						Faults(3) <= Fault4;
-						Faults(4) <= FaultD;
 						ClearChecksum := true;
 					end if;
 				elsif State = SendSOP then
@@ -81,11 +83,10 @@ begin
 					ByteLoad <= '1';
 					DataLeft <= 7;
 				elsif State = SendAddress then
-					ShiftDistance := 8 * DataLeft;
-					AddressShifted := std_ulogic_vector(unsigned(Address) srl ShiftDistance);
-					ChecksumByte := unsigned(AddressShifted(7 downto 0));
-					ByteData <= AddressShifted(7 downto 0);
+					ChecksumByte := unsigned(AddressByte);
+					ByteData <= AddressByte;
 					ByteLoad <= '1';
+					AddressStrobe <= '1';
 					if DataLeft = 0 then
 						State <= SendOptions;
 					end if;
@@ -108,7 +109,7 @@ begin
 					State <= SendDribblerSpeedMSB;
 					ByteData <= std_ulogic_vector(DribblerSpeed(7 downto 0));
 					ByteLoad <= '1';
-					ChecksumByte := DribblerSpeed(7 downto 0);
+					ChecksumByte := unsigned(DribblerSpeed(7 downto 0));
 					Temp <= std_ulogic_vector(DribblerSpeed(15 downto 8));
 				elsif State = SendDribblerSpeedMSB then
 					State <= SendBatteryLevelLSB;
@@ -131,6 +132,7 @@ begin
 					ByteData <= "000" & Faults;
 					ByteLoad <= '1';
 					ChecksumByte := unsigned("000" & Faults);
+					Faults <= "00000";
 				elsif State = SendCommandAck then
 					State <= SendChecksum;
 					ByteData <= CommandAck;

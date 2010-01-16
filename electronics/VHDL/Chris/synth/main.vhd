@@ -58,18 +58,6 @@ architecture Behavioural of Main is
 	signal AppSSL : std_ulogic := '1';
 	signal AppInL : std_ulogic := '0';
 	signal AppClkL : std_ulogic := '0';
-	signal Fault1L : std_ulogic := '1';
-	signal Fault2L : std_ulogic := '1';
-	signal Fault3L : std_ulogic := '1';
-	signal Fault4L : std_ulogic := '1';
-	signal FaultDL : std_ulogic := '1';
-
-	-- XBee-related stuff.
-	signal XBeeRXStrobe : std_ulogic;
-	signal XBeeAddress : std_ulogic_vector(63 downto 0);
-	signal XBeeRSSI : std_ulogic_vector(7 downto 0);
-	signal XBeeCommandSeq : std_ulogic_vector(7 downto 0);
-	signal XBeeTXStrobe : std_ulogic;
 
 	-- Mode flags from the XBee.
 	signal FeedbackFlag : std_ulogic;
@@ -125,25 +113,6 @@ begin
 	);
 
 	-- Latch the inputs into the local signals.
-	process(Clock1)
-	begin
-		if rising_edge(Clock1) then
-			-- Fault signals stay asserted until consumed by XBeeTransmitter.
-			if XBeeTXStrobe = '1' then
-				Fault1L <= '0';
-				Fault2L <= '0';
-				Fault3L <= '0';
-				Fault4L <= '0';
-				FaultDL <= '0';
-			else
-				Fault1L <= Fault1L or not Fault1;
-				Fault2L <= Fault2L or not Fault2;
-				Fault3L <= Fault3L or not Fault3;
-				Fault4L <= Fault4L or not Fault4;
-				FaultDL <= FaultDL or not FaultD;
-			end if;
-		end if;
-	end process;
 	process(Clock10)
 	begin
 		if rising_edge(Clock10) then
@@ -160,14 +129,10 @@ begin
 	end process;
 
 	-- Serial communication hardware.
-	XBeeReceiverInstance : entity work.XBeeReceiver(Behavioural)
+	XBeeInstance : entity work.XBee(Behavioural)
 	port map(
 		Clock1 => Clock1,
 		Clock100 => Clock100,
-		Strobe => XBeeRXStrobe,
-		Address => XBeeAddress,
-		RSSI => XBeeRSSI,
-		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
 		DribbleFlag => DribbleFlag,
@@ -176,29 +141,15 @@ begin
 		Drive3 => Drive3,
 		Drive4 => Drive4,
 		Dribble => Dribble,
-		CommandSeq => XBeeCommandSeq,
-		Command => open,
-		CommandData => open,
-		Serial => XBeeRXL
-	);
-
-	XBeeTXStrobe <= XBeeRXStrobe and FeedbackFlag;
-
-	XBeeTransmitterInstance : entity work.XBeeTransmitter(Behavioural)
-	port map(
-		Clock1 => Clock1,
-		Start => XBeeTXStrobe,
-		Address => XBeeAddress,
-		RSSI => XBeeRSSI,
-		DribblerSpeed => to_unsigned(0, 16),
-		BatteryLevel => VMon,
-		Fault1 => Fault1L,
-		Fault2 => Fault2L,
-		Fault3 => Fault3L,
-		Fault4 => Fault4L,
-		FaultD => FaultDL,
-		CommandAck => XBeeCommandSeq,
-		Serial => XBeeTX
+		DribblerSpeed => to_signed(0, 16),
+		VMon => VMon,
+		Fault1 => Fault1,
+		Fault2 => Fault2,
+		Fault3 => Fault3,
+		Fault4 => Fault4,
+		FaultD => FaultD,
+		SerialIn => XBeeRXL,
+		SerialOut => XBeeTX
 	);
 
 	-- Braking stuff.

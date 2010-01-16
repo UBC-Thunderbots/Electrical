@@ -8,7 +8,8 @@ entity XBeeReceiver is
 		Clock100 : in std_ulogic;
 
 		Strobe : out std_ulogic;
-		Address : out std_ulogic_vector(63 downto 0);
+		AddressByte : out std_ulogic_vector(7 downto 0);
+		AddressStrobe : out std_ulogic;
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic;
 		DirectDriveFlag : out std_ulogic;
@@ -66,7 +67,8 @@ begin
 		ByteStrobe => ByteStrobe,
 		ByteSOP => ByteSOP,
 		Strobe => Strobe,
-		Address => Address,
+		AddressByte => AddressByte,
+		AddressStrobe => AddressStrobe,
 		RSSI => RSSI,
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,

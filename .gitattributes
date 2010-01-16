@@ -1,6 +1,7 @@
 * text=auto !eol
 electronics/VHDL/Chris/Makefile -text
 electronics/VHDL/Chris/common/adc.vhd -text
+electronics/VHDL/Chris/common/byteshifter.vhd -text
 electronics/VHDL/Chris/common/controller.vhd -text
 electronics/VHDL/Chris/common/graycounter.vhd -text
 electronics/VHDL/Chris/common/madd.vhd -text
@@ -14,6 +15,7 @@ electronics/VHDL/Chris/common/ssmultiplier.vhd -text
 electronics/VHDL/Chris/common/sumultiplier.smv -text
 electronics/VHDL/Chris/common/sumultiplier.vhd -text
 electronics/VHDL/Chris/common/types.vhd -text
+electronics/VHDL/Chris/common/xbee.vhd -text
 electronics/VHDL/Chris/common/xbeebytereceiver.vhd -text
 electronics/VHDL/Chris/common/xbeebytetransmitter.vhd -text
 electronics/VHDL/Chris/common/xbeepacketreceiver.vhd -text

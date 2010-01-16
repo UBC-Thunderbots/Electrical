@@ -12,7 +12,8 @@ entity XBeePacketReceiver is
 		ByteSOP : in std_ulogic;
 
 		Strobe : out std_ulogic := '0';
-		Address : out std_ulogic_vector(63 downto 0);
+		AddressByte : out std_ulogic_vector(7 downto 0);
+		AddressStrobe : out std_ulogic := '0';
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
@@ -34,12 +35,9 @@ architecture Behavioural of XBeePacketReceiver is
 	signal State : StateType := ExpectSOP;
 	signal DataLeft : natural range 1 to 15;
 	signal Checksum : unsigned(7 downto 0);
-	signal AddressBuf : std_ulogic_vector(63 downto 0);
 	type DataType is array(0 to 14) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
 begin
-	Address <= AddressBuf;
-
 	process(Clock1)
 		variable Word : std_ulogic_vector(10 downto 0);
 		variable ClearChecksum : boolean;
@@ -50,6 +48,7 @@ begin
 			ClearChecksum := false;
 			AddChecksum := false;
 			SetStrobe := false;
+			AddressStrobe <= '0';
 			if ByteFErr = '1' then
 				State <= ExpectSOP;
 			elsif ByteSOP = '1' then
@@ -78,7 +77,8 @@ begin
 					end if;
 				elsif State = ExpectAddress then
 					AddChecksum := true;
-					AddressBuf <= AddressBuf(55 downto 0) & ByteData;
+					AddressByte <= ByteData;
+					AddressStrobe <= '1';
 					if DataLeft = 1 then
 						State <= ExpectRSSI;
 					end if;

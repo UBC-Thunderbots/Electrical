@@ -26,6 +26,7 @@ default : help
 controller.o : madd.o rom.o types.o
 rom.o : types.o
 ssmultiplier.o : sumultiplier.o
+xbee.o : byteshifter.o xbeereceiver.o xbeetransmitter.o
 xbeereceiver.o : serialreceiver.o xbeebytereceiver.o xbeepacketreceiver.o
 xbeetransmitter.o : serialtransmitter.o xbeebytetransmitter.o xbeepackettransmitter.o
 

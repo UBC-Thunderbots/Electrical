@@ -1,4 +1,5 @@
 vhdl work common/adc.vhd
+vhdl work common/byteshifter.vhd
 vhdl work common/controller.vhd
 vhdl work common/graycounter.vhd
 vhdl work common/madd.vhd
@@ -8,6 +9,7 @@ vhdl work common/serialreceiver.vhd
 vhdl work common/serialtransmitter.vhd
 vhdl work common/signmagnitude.vhd
 vhdl work common/types.vhd
+vhdl work common/xbee.vhd
 vhdl work common/xbeebytereceiver.vhd
 vhdl work common/xbeebytetransmitter.vhd
 vhdl work common/xbeepacketreceiver.vhd
