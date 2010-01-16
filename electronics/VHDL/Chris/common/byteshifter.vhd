@@ -26,28 +26,17 @@ architecture Behavioural of ByteShifter is
 	type DataType is array(7 downto 0) of std_ulogic_vector(NumBytes - 1 downto 0);
 	signal Data : DataType;
 begin
-	OutData(0) <= Data(0)(Data(0)'high);
-	OutData(1) <= Data(1)(Data(1)'high);
-	OutData(2) <= Data(2)(Data(2)'high);
-	OutData(3) <= Data(3)(Data(3)'high);
-	OutData(4) <= Data(4)(Data(4)'high);
-	OutData(5) <= Data(5)(Data(5)'high);
-	OutData(6) <= Data(6)(Data(6)'high);
-	OutData(7) <= Data(7)(Data(7)'high);
+BitwiseCode:
+	for I in 0 to 7 generate
+		OutData(I) <= Data(I)(Data(I)'high);
 
-	process(Clock)
-	begin
-		if rising_edge(Clock) then
-			if Strobe = '1' then
-				Data(0) <= Data(0)(Data(0)'high - 1 downto 0) & InData(0);
-				Data(1) <= Data(1)(Data(1)'high - 1 downto 0) & InData(1);
-				Data(2) <= Data(2)(Data(2)'high - 1 downto 0) & InData(2);
-				Data(3) <= Data(3)(Data(3)'high - 1 downto 0) & InData(3);
-				Data(4) <= Data(4)(Data(4)'high - 1 downto 0) & InData(4);
-				Data(5) <= Data(5)(Data(5)'high - 1 downto 0) & InData(5);
-				Data(6) <= Data(6)(Data(6)'high - 1 downto 0) & InData(6);
-				Data(7) <= Data(7)(Data(7)'high - 1 downto 0) & InData(7);
+		process(Clock)
+		begin
+			if rising_edge(Clock) then
+				if Strobe = '1' then
+					Data(I) <= Data(I)(Data(I)'high - 1 downto 0) & InData(I);
+				end if;
 			end if;
-		end if;
-	end process;
+		end process;
+	end generate;
 end architecture Behavioural;
