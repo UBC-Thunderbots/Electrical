@@ -15,7 +15,7 @@ entity ADC is
 end entity ADC;
 
 architecture Behavioural of ADC is
-	type StateType is (Idle, Channel0, Channel1, Channel2, Channel3, Channel4, Channel5, Channel6, Channel7, Channel8, Channel9, Channel10, Channel11, Channel12);
+	type StateType is (Idle, ReadingVMon);
 	signal State : StateType := Idle;
 	signal Bits : std_ulogic_vector(8 downto 0);
 	signal BitsLeft : natural range 0 to 15;
@@ -30,35 +30,11 @@ begin
 			if SPISS = '1' then
 				State <= Idle;
 			elsif State = Idle then
-				State <= Channel0;
+				State <= ReadingVMon;
 				BitsLeft <= 15;
 			elsif OK then
 				if BitsLeft = 0 then
-					if State = Channel0 then
-						State <= Channel1;
-					elsif State = Channel1 then
-						State <= Channel2;
-					elsif State = Channel2 then
-						State <= Channel3;
-					elsif State = Channel3 then
-						State <= Channel4;
-					elsif State = Channel4 then
-						State <= Channel5;
-					elsif State = Channel5 then
-						State <= Channel6;
-					elsif State = Channel6 then
-						State <= Channel7;
-					elsif State = Channel7 then
-						State <= Channel8;
-					elsif State = Channel8 then
-						State <= Channel9;
-					elsif State = Channel9 then
-						State <= Channel10;
-					elsif State = Channel10 then
-						State <= Channel11;
-					elsif State = Channel11 then
-						State <= Channel12;
-					elsif State = Channel12 then
+					if State = ReadingVMon then
 						State <= Idle;
 						VMon <= unsigned(Bits(8 downto 0) & SPIDT);
 					end if;
