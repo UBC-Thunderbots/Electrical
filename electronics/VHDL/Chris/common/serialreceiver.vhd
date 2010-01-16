@@ -17,7 +17,8 @@ end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
 	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
-	signal BitClocks : natural range 0 to 399 := 399;
+	subtype BitClocksType is natural range 0 to 399;
+	signal BitClocks : BitClocksType := BitClocksType'high;
 	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
 	signal High : boolean;
 	signal Low : boolean;
@@ -99,7 +100,7 @@ begin
 			end if;
 
 			if ResetBitClocks then
-				BitClocks <= 399;
+				BitClocks <= BitClocksType'high;
 			else
 				BitClocks <= BitClocks - 1;
 			end if;

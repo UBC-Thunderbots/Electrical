@@ -9,7 +9,7 @@ entity ROM is
 	);
 	port(
 		Clock : in std_ulogic;
-		Address : in natural range 0 to ROMLength - 1;
+		Address : in natural range ROMDataType'low to ROMDataType'high;
 		Data : out std_ulogic_vector(17 downto 0)
 	);
 end entity ROM;
