@@ -15,10 +15,12 @@ entity ROM is
 end entity ROM;
 
 architecture Behavioural of ROM is
-	signal Memory : ROMDataType := InitData;
+	signal Memory : ROMDataType;
 	attribute rom_style : string;
 	attribute rom_style of Memory : signal is "block";
 begin
+	Memory <= InitData;
+
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
