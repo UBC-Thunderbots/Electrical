@@ -60,7 +60,6 @@ architecture Behavioural of Main is
 	signal AppClkL : std_ulogic := '0';
 
 	-- Mode flags from the XBee.
-	signal FeedbackFlag : std_ulogic;
 	signal DirectDriveFlag : std_ulogic;
 	signal ControlledDriveFlag : std_ulogic;
 	signal DribbleFlag : std_ulogic;
