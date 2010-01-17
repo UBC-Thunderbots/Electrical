@@ -29,11 +29,11 @@ GPIO#	Name	Peer Loc	Purpose
   28	P21
   29	P20
   30	P19
-  31	P18
-  32	P16
-  33	P15
-  34	P13
-  35	P12
-  36	P11
-  37	P10
-  38	P8
+  31	P18 	Encoder 	E1A
+  32	P16 	Encoder 	E1B
+  33	P15 	Encoder 	E2A
+  34	P13 	Encoder 	E2B
+  35	P12 	Encoder 	E3A
+  36	P11 	Encoder 	E3B
+  37	P10 	Encoder 	E4A
+  38	P8  	Encoder 	E4B

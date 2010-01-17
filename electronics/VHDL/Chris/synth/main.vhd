@@ -40,6 +40,16 @@ entity Main is
 		FaultD : in std_ulogic;
 		DSense : in std_ulogic;
 
+		-- Optical encoder phase lines.
+		Encoder1A : in std_ulogic;
+		Encoder1B : in std_ulogic;
+		Encoder2A : in std_ulogic;
+		Encoder2B : in std_ulogic;
+		Encoder3A : in std_ulogic;
+		Encoder3B : in std_ulogic;
+		Encoder4A : in std_ulogic;
+		Encoder4B : in std_ulogic;
+
 		-- Control lines to the chicker.
 		Kick : out std_ulogic;
 		Chip : out std_ulogic;
@@ -58,6 +68,14 @@ architecture Behavioural of Main is
 	signal AppSSL : std_ulogic := '1';
 	signal AppInL : std_ulogic := '0';
 	signal AppClkL : std_ulogic := '0';
+	signal Encoder1AL : std_ulogic := '0';
+	signal Encoder1BL : std_ulogic := '0';
+	signal Encoder2AL : std_ulogic := '0';
+	signal Encoder2BL : std_ulogic := '0';
+	signal Encoder3AL : std_ulogic := '0';
+	signal Encoder3BL : std_ulogic := '0';
+	signal Encoder4AL : std_ulogic := '0';
+	signal Encoder4BL : std_ulogic := '0';
 
 	-- Mode flags from the XBee.
 	signal DirectDriveFlag : std_ulogic;
@@ -69,6 +87,12 @@ architecture Behavioural of Main is
 	signal Drive2 : signed(10 downto 0);
 	signal Drive3 : signed(10 downto 0);
 	signal Drive4 : signed(10 downto 0);
+
+	-- Encoder counts from the Gray counters.
+	signal Encoder1Count : signed(10 downto 0);
+	signal Encoder2Count : signed(10 downto 0);
+	signal Encoder3Count : signed(10 downto 0);
+	signal Encoder4Count : signed(10 downto 0);
 
 	-- Controller outputs.
 	signal ControlM1 : signed(10 downto 0);
@@ -112,6 +136,19 @@ begin
 	);
 
 	-- Latch the inputs into the local signals.
+	process(Clock1)
+	begin
+		if rising_edge(Clock1) then
+			Encoder1AL <= Encoder1A;
+			Encoder1BL <= Encoder1B;
+			Encoder2AL <= Encoder2A;
+			Encoder2BL <= Encoder2B;
+			Encoder3AL <= Encoder3A;
+			Encoder3BL <= Encoder3B;
+			Encoder4AL <= Encoder4A;
+			Encoder4BL <= Encoder4B;
+		end if;
+	end process;
 	process(Clock10)
 	begin
 		if rising_edge(Clock10) then
@@ -156,6 +193,50 @@ begin
 	BrakeDribbler <= '0' when DribbleFlag = '1' else '1';
 
 	-- Wheel stuff.
+	GrayCounterInstance1 : entity work.GrayCounter(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock1 => Clock1,
+		A => Encoder1AL,
+		B => Encoder1BL,
+		Reset => '0',
+		Count => Encoder1Count
+	);
+	GrayCounterInstance2 : entity work.GrayCounter(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock1 => Clock1,
+		A => Encoder2AL,
+		B => Encoder2BL,
+		Reset => '0',
+		Count => Encoder2Count
+	);
+	GrayCounterInstance3 : entity work.GrayCounter(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock1 => Clock1,
+		A => Encoder3AL,
+		B => Encoder3BL,
+		Reset => '0',
+		Count => Encoder3Count
+	);
+	GrayCounterInstance4 : entity work.GrayCounter(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock1 => Clock1,
+		A => Encoder4AL,
+		B => Encoder4BL,
+		Reset => '0',
+		Count => Encoder4Count
+	);
 	ControllerInstance : entity work.Controller(Behavioural)
 	port map(
 		Clock1 => Clock1,
