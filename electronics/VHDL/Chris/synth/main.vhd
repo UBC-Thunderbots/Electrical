@@ -48,12 +48,7 @@ entity Main is
 		Encoder3A : in std_ulogic;
 		Encoder3B : in std_ulogic;
 		Encoder4A : in std_ulogic;
-		Encoder4B : in std_ulogic;
-
-		-- Control lines to the chicker.
-		Kick : out std_ulogic;
-		Chip : out std_ulogic;
-		Charge : out std_ulogic
+		Encoder4B : in std_ulogic
 	);
 end entity Main;
 
@@ -393,7 +388,4 @@ begin
 	);
 
 	AppOut <= '0';
-	Kick <= '1';
-	Chip <= '1';
-	Charge <= '1';
 end architecture Behavioural;

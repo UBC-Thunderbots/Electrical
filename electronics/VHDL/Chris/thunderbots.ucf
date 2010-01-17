@@ -54,8 +54,3 @@ net "Encoder3A" iostandard=LVCMOS33 | loc=P12;
 net "Encoder3B" iostandard=LVCMOS33 | loc=P11;
 net "Encoder4A" iostandard=LVCMOS33 | loc=P10;
 net "Encoder4B" iostandard=LVCMOS33 | loc=P8;
-
-# Control lines to the chicker.
-net "Kick" iostandard=LVCMOS33 | loc=P29;
-net "Chip" iostandard=LVCMOS33 | loc=P27;
-net "Charge" iostandard=LVCMOS33 | loc=P24;
