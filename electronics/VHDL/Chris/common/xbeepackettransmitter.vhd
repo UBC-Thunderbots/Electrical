@@ -11,7 +11,7 @@ entity XBeePacketTransmitter is
 		AddressByte : in std_ulogic_vector(7 downto 0);
 		AddressStrobe : out std_ulogic;
 		RSSI : in std_ulogic_vector(7 downto 0);
-		DribblerSpeed : in signed(15 downto 0);
+		DribblerSpeed : in signed(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
@@ -110,7 +110,7 @@ begin
 					ByteData <= std_ulogic_vector(DribblerSpeed(7 downto 0));
 					ByteLoad <= '1';
 					ChecksumByte := unsigned(DribblerSpeed(7 downto 0));
-					Temp <= std_ulogic_vector(DribblerSpeed(15 downto 8));
+					Temp <= std_ulogic_vector(resize(DribblerSpeed(10 downto 8), 8));
 				elsif State = SendDribblerSpeedMSB then
 					State <= SendBatteryLevelLSB;
 					ByteData <= Temp;

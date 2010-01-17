@@ -177,7 +177,7 @@ begin
 		Drive3 => Drive3,
 		Drive4 => Drive4,
 		Dribble => Dribble,
-		DribblerSpeed => to_signed(0, 16),
+		DribblerSpeed => to_signed(0, 11),
 		VMon => VMon,
 		Fault1 => Fault1,
 		Fault2 => Fault2,

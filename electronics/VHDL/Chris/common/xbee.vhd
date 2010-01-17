@@ -16,7 +16,7 @@ entity XBee is
 		Drive4 : out signed(10 downto 0);
 		Dribble : out signed(10 downto 0);
 
-		DribblerSpeed : in signed(15 downto 0);
+		DribblerSpeed : in signed(10 downto 0);
 		VMon : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
