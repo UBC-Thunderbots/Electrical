@@ -7,6 +7,7 @@ datasheets/connectors/Encoder.pdf -text
 datasheets/connectors/FPC-52207.pdf -text
 datasheets/connectors/MHC40E-ND.pdf -text svneol=unset#application/octet-stream
 datasheets/connectors/Tyco[!!-~]643226-1.pdf -text
+datasheets/connectors/WM4306-ND.pdf -text
 datasheets/connectors/XF2L.pdf -text
 datasheets/diodes/BAT85.pdf -text
 datasheets/diodes/BZX79-C5V1.pdf -text
@@ -21,6 +22,7 @@ datasheets/ics/MIC7300.pdf -text
 datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/PIC18F4550/Errata.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
+datasheets/ics/TL072.pdf -text
 datasheets/ics/W25X16AVDAIZ.pdf -text
 datasheets/ics/XBee.pdf -text
 datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Configuration[!!-~]User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
