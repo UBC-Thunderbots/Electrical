@@ -18,8 +18,8 @@ datasheets/ics/LT3751.pdf -text
 datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
 datasheets/ics/MIC7300.pdf -text
-datasheets/ics/PIC18F4550/PIC18F2445[!!-~]2550[!!-~]4455[!!-~]4550[!!-~]Datasheet.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/PIC18F4550/PIC18F2445[!!-~]2550[!!-~]4455[!!-~]4550[!!-~]Errata.pdf -text
+datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/PIC18F4550/Errata.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
 datasheets/ics/W25X16AVDAIZ.pdf -text
 datasheets/ics/XBee.pdf -text
