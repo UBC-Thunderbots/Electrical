@@ -1,4 +1,46 @@
 * text=auto !eol
+datasheets/2N3904[!!-~]NPN.pdf -text
+datasheets/3900uF[!!-~]160V[!!-~]capacitor.pdf -text
+datasheets/GA3460[!!-~]Flyback[!!-~]Transformer.pdf -text
+datasheets/RL3264L4[!!-~]Series[!!-~]resistor.pdf -text
+datasheets/connectors/Encoder.pdf -text
+datasheets/connectors/FPC-52207.pdf -text
+datasheets/connectors/MHC40E-ND.pdf -text svneol=unset#application/octet-stream
+datasheets/connectors/Tyco[!!-~]643226-1.pdf -text
+datasheets/connectors/XF2L.pdf -text
+datasheets/diodes/BAT85.pdf -text
+datasheets/diodes/BZX79-C5V1.pdf -text
+datasheets/diodes/RURP860.pdf -text
+datasheets/electromechanical/EC16.pdf -text
+datasheets/electromechanical/EC45.pdf -text
+datasheets/ics/ACOL50.pdf -text
+datasheets/ics/LT3751.pdf -text
+datasheets/ics/M25P16.pdf -text
+datasheets/ics/MC33035.pdf -text
+datasheets/ics/MIC7300.pdf -text
+datasheets/ics/PIC18F4550/PIC18F2445[!!-~]2550[!!-~]4455[!!-~]4550[!!-~]Datasheet.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/PIC18F4550/PIC18F2445[!!-~]2550[!!-~]4455[!!-~]4550[!!-~]Errata.pdf -text
+datasheets/ics/SN74LVC1G80.pdf -text
+datasheets/ics/W25X16AVDAIZ.pdf -text
+datasheets/ics/XBee.pdf -text
+datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Configuration[!!-~]User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Datasheet.pdf -text
+datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Overview.pdf -text
+datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
+datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
+datasheets/mosfets/2N7000.pdf -text
+datasheets/mosfets/AOP605.pdf -text
+datasheets/mosfets/IRF5305.pdf -text
+datasheets/mosfets/IRFP90N20D.pdf -text
+datasheets/mosfets/SUM33N20.pdf -text
+datasheets/optoelectronics/4N33M.pdf -text
+datasheets/optoelectronics/E4P.pdf -text
+datasheets/optoelectronics/OPB733T.pdf -text
+datasheets/optoelectronics/OPV380.pdf -text
+datasheets/optoelectronics/PNA2602M.pdf -text
+datasheets/regulators/LD1117V33C.pdf -text
+datasheets/regulators/MCP1827S.pdf -text
+datasheets/regulators/PT78ST105.pdf -text
 electronics/VHDL/Chris/Makefile -text
 electronics/VHDL/Chris/common/adc.vhd -text
 electronics/VHDL/Chris/common/byteshifter.vhd -text
