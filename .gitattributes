@@ -51,6 +51,7 @@ electronics/VHDL/Chris/common/graycounter.vhd -text
 electronics/VHDL/Chris/common/madd.vhd -text
 electronics/VHDL/Chris/common/pwm.vhd -text
 electronics/VHDL/Chris/common/rom.vhd -text
+electronics/VHDL/Chris/common/saturatingadder.vhd -text
 electronics/VHDL/Chris/common/serialreceiver.smv -text
 electronics/VHDL/Chris/common/serialreceiver.vhd -text
 electronics/VHDL/Chris/common/serialtransmitter.vhd -text
@@ -67,6 +68,7 @@ electronics/VHDL/Chris/common/xbeepackettransmitter.vhd -text
 electronics/VHDL/Chris/common/xbeereceiver.vhd -text
 electronics/VHDL/Chris/common/xbeetransmitter.vhd -text
 electronics/VHDL/Chris/sim/graycountertest.vhd -text
+electronics/VHDL/Chris/sim/saturatingaddertest.vhd -text
 electronics/VHDL/Chris/sim/serialreceivertest.vhd -text
 electronics/VHDL/Chris/sim/serialtransmittertest.vhd -text
 electronics/VHDL/Chris/sim/ssmultipliertest.vhd -text

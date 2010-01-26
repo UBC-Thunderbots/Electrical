@@ -28,6 +28,7 @@ electronics/VHDL/Chris/*.xrpt
 electronics/VHDL/Chris/*_pad.csv
 electronics/VHDL/Chris/*_pad.txt
 electronics/VHDL/Chris/graycountertest
+electronics/VHDL/Chris/saturatingaddertest
 electronics/VHDL/Chris/serialreceivertest
 electronics/VHDL/Chris/serialtransmittertest
 electronics/VHDL/Chris/ssmultipliertest
