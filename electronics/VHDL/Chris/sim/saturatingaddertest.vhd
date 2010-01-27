@@ -55,7 +55,12 @@ begin
 		X <= -100;
 		Y <= -30;
 		wait for 1 ns;
-		assert Sum = -128;
+		assert Sum = -127;
+
+		X <= -64;
+		Y <= -64;
+		wait for 1 ns;
+		assert Sum = -127;
 
 		wait;
 	end process;
