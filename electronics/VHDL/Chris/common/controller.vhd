@@ -36,15 +36,15 @@ entity Controller is
 
 		ControlledDriveFlag : in std_ulogic;
 
-		Drive1 : in signed(9 downto 0);
-		Drive2 : in signed(9 downto 0);
-		Drive3 : in signed(9 downto 0);
-		Drive4 : in signed(9 downto 0);
+		Drive1 : in signed(10 downto 0);
+		Drive2 : in signed(10 downto 0);
+		Drive3 : in signed(10 downto 0);
+		Drive4 : in signed(10 downto 0);
 
-		Encoder1 : in signed(9 downto 0);
-		Encoder2 : in signed(9 downto 0);
-		Encoder3 : in signed(9 downto 0);
-		Encoder4 : in signed(9 downto 0);
+		Encoder1 : in signed(10 downto 0);
+		Encoder2 : in signed(10 downto 0);
+		Encoder3 : in signed(10 downto 0);
+		Encoder4 : in signed(10 downto 0);
 
 		Motor1 : out signed(10 downto 0);
 		Motor2 : out signed(10 downto 0);
@@ -62,11 +62,6 @@ architecture Behavioural of Controller is
 	signal Var2 : signed(17 downto 0);
 	signal Var3 : signed(17 downto 0);
 	signal Prod : signed(35 downto 0);
-
-	signal Setpoint1 : signed(9 downto 0);
-	signal Setpoint2 : signed(9 downto 0);
-	signal Setpoint3 : signed(9 downto 0);
-	signal Setpoint4 : signed(9 downto 0);
 
 	signal Error1 : signed(10 downto 0) := to_signed(0, 11);
 	signal Error2 : signed(10 downto 0) := to_signed(0, 11);
@@ -181,23 +176,6 @@ begin
 		Data => Coeff3
 	);
 
-	-- The PID loops take their inputs either from the drive values, or zero if
-	-- drive is disabled.
-	process(ControlledDriveFlag, Drive1, Drive2, Drive3, Drive4)
-	begin
-		if ControlledDriveFlag = '1' then
-			Setpoint1 <= resize(Drive1, Setpoint1'length);
-			Setpoint2 <= resize(Drive2, Setpoint2'length);
-			Setpoint3 <= resize(Drive3, Setpoint3'length);
-			Setpoint4 <= resize(Drive4, Setpoint4'length);
-		else
-			Setpoint1 <= to_signed(0, 10);
-			Setpoint2 <= to_signed(0, 10);
-			Setpoint3 <= to_signed(0, 10);
-			Setpoint4 <= to_signed(0, 10);
-		end if;
-	end process;
-
 	-- Depending on the state, we must select the proper address for the ROMs.
 	ROMAddress <=
 		     0 when ROMAddressState = PID1
@@ -276,10 +254,10 @@ begin
 	begin
 		if rising_edge(Clock1) then
 			if PIDTicks = 0 then
-				NewError1 := resize(Setpoint1, 11) - resize(Encoder1, 11);
-				NewError2 := resize(Setpoint2, 11) - resize(Encoder2, 11);
-				NewError3 := resize(Setpoint3, 11) - resize(Encoder3, 11);
-				NewError4 := resize(Setpoint4, 11) - resize(Encoder4, 11);
+				NewError1 := Drive1 - Encoder1;
+				NewError2 := Drive2 - Encoder2;
+				NewError3 := Drive3 - Encoder3;
+				NewError4 := Drive4 - Encoder4;
 				Integral1 <= Integrate(Integral1, NewError1, 131071);
 				Integral2 <= Integrate(Integral2, NewError2, 131071);
 				Integral3 <= Integrate(Integral3, NewError3, 131071);
