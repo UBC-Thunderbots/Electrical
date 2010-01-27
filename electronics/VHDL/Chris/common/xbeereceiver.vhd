@@ -20,9 +20,6 @@ entity XBeeReceiver is
 		Drive3 : out signed(10 downto 0);
 		Drive4 : out signed(10 downto 0);
 		Dribble : out signed(10 downto 0);
-		CommandSeq : out std_ulogic_vector(7 downto 0);
-		Command : out std_ulogic_vector(7 downto 0);
-		CommandData : out std_ulogic_vector(15 downto 0);
 
 		Serial : in std_ulogic
 	);
@@ -78,9 +75,6 @@ begin
 		Drive2 => Drive2,
 		Drive3 => Drive3,
 		Drive4 => Drive4,
-		Dribble => Dribble,
-		CommandSeq => CommandSeq,
-		Command => Command,
-		CommandData => CommandData
+		Dribble => Dribble
 	);
 end architecture Behavioural;

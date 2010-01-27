@@ -23,19 +23,16 @@ entity XBeePacketReceiver is
 		Drive2 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive3 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive4 : out signed(10 downto 0) := to_signed(0, 11);
-		Dribble : out signed(10 downto 0) := to_signed(0, 11);
-		CommandSeq : out std_ulogic_vector(7 downto 0) := X"00";
-		Command : out std_ulogic_vector(7 downto 0) := X"00";
-		CommandData : out std_ulogic_vector(15 downto 0) := X"0000"
+		Dribble : out signed(10 downto 0) := to_signed(0, 11)
 	);
 end entity XBeePacketReceiver;
 
 architecture Behavioural of XBeePacketReceiver is
 	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectAPIID, ExpectAddress, ExpectRSSI, ExpectOptions, ExpectData, ExpectChecksum, CheckChecksum);
 	signal State : StateType := ExpectSOP;
-	signal DataLeft : natural range 1 to 15;
+	signal DataLeft : natural range 1 to 11;
 	signal Checksum : unsigned(7 downto 0);
-	type DataType is array(0 to 14) of std_ulogic_vector(7 downto 0);
+	type DataType is array(0 to 10) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
 begin
 	process(Clock1)
@@ -62,7 +59,7 @@ begin
 					end if;
 				elsif State = ExpectLengthLSB then
 					ClearChecksum := true;
-					if ByteData = X"1A" then
+					if ByteData = X"16" then
 						State <= ExpectAPIID;
 					else
 						State <= ExpectSOP;
@@ -90,10 +87,10 @@ begin
 				elsif State = ExpectOptions then
 					AddChecksum := true;
 					State <= ExpectData;
-					DataLeft <= 15;
+					DataLeft <= 11;
 				elsif State = ExpectData then
 					AddChecksum := true;
-					Data <= Data(1 to 14) & ByteData;
+					Data <= Data(1 to 10) & ByteData;
 					if DataLeft = 1 then
 						State <= ExpectChecksum;
 					end if;
@@ -119,9 +116,6 @@ begin
 						Drive4 <= signed(Word);
 						Word := Data(10)(2 downto 0) & Data(9);
 						Dribble <= signed(Word);
-						CommandSeq <= Data(11);
-						Command <= Data(12);
-						CommandData <= Data(14) & Data(13);
 						SetStrobe := true;
 					end if;
 				end if;

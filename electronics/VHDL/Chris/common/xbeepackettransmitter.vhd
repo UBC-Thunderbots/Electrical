@@ -18,7 +18,6 @@ entity XBeePacketTransmitter is
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
-		CommandAck : in std_ulogic_vector(7 downto 0);
 
 		ByteData : out std_ulogic_vector(7 downto 0) := X"00";
 		ByteLoad : out std_ulogic := '0';
@@ -28,7 +27,7 @@ entity XBeePacketTransmitter is
 end entity XBeePacketTransmitter;
 
 architecture Behavioural of XBeePacketTransmitter is
-	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendCommandAck, SendChecksum);
+	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendChecksum);
 	signal State : StateType := Idle;
 	signal DataLeft : natural range 0 to 7;
 	signal Temp : std_ulogic_vector(7 downto 0);
@@ -71,7 +70,7 @@ begin
 					ByteLoad <= '1';
 				elsif State = SendLengthLSB then
 					State <= SendAPIID;
-					ByteData <= X"13";
+					ByteData <= X"12";
 					ByteLoad <= '1';
 				elsif State = SendAPIID then
 					State <= SendFrame;
@@ -128,16 +127,11 @@ begin
 					ByteLoad <= '1';
 					ChecksumByte := unsigned(Temp);
 				elsif State = SendFaults then
-					State <= SendCommandAck;
+					State <= SendChecksum;
 					ByteData <= "000" & Faults;
 					ByteLoad <= '1';
 					ChecksumByte := unsigned("000" & Faults);
 					Faults <= "00000";
-				elsif State = SendCommandAck then
-					State <= SendChecksum;
-					ByteData <= CommandAck;
-					ByteLoad <= '1';
-					ChecksumByte := unsigned(CommandAck);
 				elsif State = SendChecksum then
 					ByteData <= std_ulogic_vector(Checksum);
 					ByteLoad <= '1';

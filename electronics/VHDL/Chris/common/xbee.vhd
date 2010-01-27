@@ -40,7 +40,6 @@ architecture Behavioural of XBee is
 	signal RSSI : std_ulogic_vector(7 downto 0);
 	signal FeedbackFlag : std_ulogic;
 	signal TXStrobe : std_ulogic;
-	signal CommandSeq : std_ulogic_vector(7 downto 0);
 begin
 	AddressShifter : entity work.ByteShifter(Behavioural)
 	generic map(
@@ -72,9 +71,6 @@ begin
 		Drive3 => Drive3,
 		Drive4 => Drive4,
 		Dribble => Dribble,
-		CommandSeq => CommandSeq,
-		Command => open,
-		CommandData => open,
 		Serial => SerialIn
 	);
 
@@ -92,7 +88,6 @@ begin
 		Fault3 => Fault3,
 		Fault4 => Fault4,
 		FaultD => FaultD,
-		CommandAck => CommandSeq,
 		Serial => SerialOut
 	);
 
