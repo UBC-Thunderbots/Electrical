@@ -5,8 +5,12 @@ vhdl work common/graycounter.vhd
 vhdl work common/madd.vhd
 vhdl work common/pwm.vhd
 vhdl work common/rom.vhd
+vhdl work common/saturatingadder.vhd
+vhdl work common/saturatingsubtracter.vhd
 vhdl work common/serialreceiver.vhd
 vhdl work common/serialtransmitter.vhd
+vhdl work common/sharedsaturatingadder.vhd
+vhdl work common/sharedsaturatingsubtracter.vhd
 vhdl work common/signmagnitude.vhd
 vhdl work common/types.vhd
 vhdl work common/xbee.vhd

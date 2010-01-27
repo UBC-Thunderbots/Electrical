@@ -63,25 +63,35 @@ architecture Behavioural of Controller is
 	signal Var3 : signed(17 downto 0);
 	signal Prod : signed(35 downto 0);
 
+	signal NewError1 : signed(10 downto 0);
+	signal NewError2 : signed(10 downto 0);
+	signal NewError3 : signed(10 downto 0);
+	signal NewError4 : signed(10 downto 0);
+
 	signal Error1 : signed(10 downto 0) := to_signed(0, 11);
 	signal Error2 : signed(10 downto 0) := to_signed(0, 11);
 	signal Error3 : signed(10 downto 0) := to_signed(0, 11);
 	signal Error4 : signed(10 downto 0) := to_signed(0, 11);
 
-	signal Integral1 : signed(17 downto 0) := to_signed(0, 18);
-	signal Integral2 : signed(17 downto 0) := to_signed(0, 18);
-	signal Integral3 : signed(17 downto 0) := to_signed(0, 18);
-	signal Integral4 : signed(17 downto 0) := to_signed(0, 18);
+	signal NewIntegral1 : signed(10 downto 0);
+	signal NewIntegral2 : signed(10 downto 0);
+	signal NewIntegral3 : signed(10 downto 0);
+	signal NewIntegral4 : signed(10 downto 0);
+
+	signal Integral1 : signed(10 downto 0) := to_signed(0, 11);
+	signal Integral2 : signed(10 downto 0) := to_signed(0, 11);
+	signal Integral3 : signed(10 downto 0) := to_signed(0, 11);
+	signal Integral4 : signed(10 downto 0) := to_signed(0, 11);
 
 	signal LastError1 : signed(10 downto 0) := to_signed(0, 11);
 	signal LastError2 : signed(10 downto 0) := to_signed(0, 11);
 	signal LastError3 : signed(10 downto 0) := to_signed(0, 11);
 	signal LastError4 : signed(10 downto 0) := to_signed(0, 11);
 
-	signal Derivative1 : signed(11 downto 0);
-	signal Derivative2 : signed(11 downto 0);
-	signal Derivative3 : signed(11 downto 0);
-	signal Derivative4 : signed(11 downto 0);
+	signal Derivative1 : signed(10 downto 0);
+	signal Derivative2 : signed(10 downto 0);
+	signal Derivative3 : signed(10 downto 0);
+	signal Derivative4 : signed(10 downto 0);
 
 	type StateType is (PID1, PID2, PID3, PID4);
 	pure function NextState(State : StateType) return StateType is
@@ -188,19 +198,19 @@ begin
 	begin
 		if MuxInputState = PID1 then
 			Var1 <= resize(Error1, Var1'length);
-			Var2 <= Integral1;
+			Var2 <= resize(Integral1, Var2'length);
 			Var3 <= resize(Derivative1, Var3'length);
 		elsif MuxInputState = PID2 then
 			Var1 <= resize(Error2, Var1'length);
-			Var2 <= Integral2;
+			Var2 <= resize(Integral2, Var2'length);
 			Var3 <= resize(Derivative2, Var3'length);
 		elsif MuxInputState = PID3 then
 			Var1 <= resize(Error3, Var1'length);
-			Var2 <= Integral3;
+			Var2 <= resize(Integral3, Var2'length);
 			Var3 <= resize(Derivative3, Var3'length);
 		elsif MuxInputState = PID4 then
 			Var1 <= resize(Error4, Var1'length);
-			Var2 <= Integral4;
+			Var2 <= resize(Integral4, Var2'length);
 			Var3 <= resize(Derivative4, Var3'length);
 		end if;
 	end process;
@@ -224,44 +234,79 @@ begin
 		end if;
 	end process;
 
+	-- NewError is computed combinationally from setpoint and plant values.
+	-- NewError is injected into Error on each PID cycle.
+	SSubNewError : entity work.SharedSaturatingSubtracter(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock => Clock1,
+		X1 => Drive1,
+		Y1 => Encoder1,
+		Difference1 => NewError1,
+		X2 => Drive2,
+		Y2 => Encoder2,
+		Difference2 => NewError2,
+		X3 => Drive3,
+		Y3 => Encoder3,
+		Difference3 => NewError3,
+		X4 => Drive4,
+		Y4 => Encoder4,
+		Difference4 => NewError4
+	);
+
+	-- NewIntegral is computed combinationally from Integral and Error values.
+	-- NewIntegral is injected into Integral on each PID cycle.
+	SAddNewIntegral : entity work.SharedSaturatingAdder(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock => Clock1,
+		X1 => Integral1,
+		Y1 => Error1,
+		Sum1 => NewIntegral1,
+		X2 => Integral2,
+		Y2 => Error2,
+		Sum2 => NewIntegral2,
+		X3 => Integral3,
+		Y3 => Error3,
+		Sum3 => NewIntegral3,
+		X4 => Integral4,
+		Y4 => Error4,
+		Sum4 => NewIntegral4
+	);
+
+	-- Derivative is computed combinationally from Error and LastError.
+	-- Error is injected into LastError on each PID cycle.
+	SSubDerivative : entity work.SharedSaturatingSubtracter(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Clock => Clock1,
+		X1 => Error1,
+		Y1 => LastError1,
+		Difference1 => Derivative1,
+		X2 => Error2,
+		Y2 => LastError2,
+		Difference2 => Derivative2,
+		X3 => Error3,
+		Y3 => LastError3,
+		Difference3 => Derivative3,
+		X4 => Error4,
+		Y4 => LastError4,
+		Difference4 => Derivative4
+	);
+
 	-- Iterate the PID loops. All we really have to do here is advance the variables
 	-- over a timestep; everything else is done "combinationally" as far as we are
 	-- concerned (that is, sequentially but very fast).
 	process(Clock1)
-		-- Adds an error value to an integral value, clamping around the limit.
-		pure function Integrate(Orig : in signed(17 downto 0); Err : in signed(10 downto 0); Limit : integer)
-		return signed is
-			variable OrigExtended : signed(18 downto 0);
-			variable ErrExtended : signed(18 downto 0);
-			variable SumExtended : signed(18 downto 0);
-		begin
-			OrigExtended := resize(Orig, 19);
-			ErrExtended := resize(Err, 19);
-			SumExtended := OrigExtended + ErrExtended;
-			if SumExtended < -Limit then
-				return to_signed(-Limit, 18);
-			elsif SumExtended > Limit then
-				return to_signed(Limit, 18);
-			else
-				return SumExtended(17 downto 0);
-			end if;
-		end function Integrate;
-
-		variable NewError1 : signed(10 downto 0);
-		variable NewError2 : signed(10 downto 0);
-		variable NewError3 : signed(10 downto 0);
-		variable NewError4 : signed(10 downto 0);
 	begin
 		if rising_edge(Clock1) then
 			if PIDTicks = 0 then
-				NewError1 := Drive1 - Encoder1;
-				NewError2 := Drive2 - Encoder2;
-				NewError3 := Drive3 - Encoder3;
-				NewError4 := Drive4 - Encoder4;
-				Integral1 <= Integrate(Integral1, NewError1, 131071);
-				Integral2 <= Integrate(Integral2, NewError2, 131071);
-				Integral3 <= Integrate(Integral3, NewError3, 131071);
-				Integral4 <= Integrate(Integral4, NewError4, 131071);
 				LastError1 <= Error1;
 				LastError2 <= Error2;
 				LastError3 <= Error3;
@@ -270,13 +315,12 @@ begin
 				Error2 <= NewError2;
 				Error3 <= NewError3;
 				Error4 <= NewError4;
+				Integral1 <= NewIntegral1;
+				Integral2 <= NewIntegral2;
+				Integral3 <= NewIntegral3;
+				Integral4 <= NewIntegral4;
 			end if;
 			PIDTicks <= (PIDTicks + 1) mod 5000;
 		end if;
 	end process;
-
-	Derivative1 <= resize(Error1, 12) - resize(LastError1, 12);
-	Derivative2 <= resize(Error2, 12) - resize(LastError2, 12);
-	Derivative3 <= resize(Error3, 12) - resize(LastError3, 12);
-	Derivative4 <= resize(Error4, 12) - resize(LastError4, 12);
 end architecture Behavioural;
