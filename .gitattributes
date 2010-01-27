@@ -52,6 +52,7 @@ electronics/VHDL/Chris/common/madd.vhd -text
 electronics/VHDL/Chris/common/pwm.vhd -text
 electronics/VHDL/Chris/common/rom.vhd -text
 electronics/VHDL/Chris/common/saturatingadder.vhd -text
+electronics/VHDL/Chris/common/saturatingsubtracter.vhd -text
 electronics/VHDL/Chris/common/serialreceiver.smv -text
 electronics/VHDL/Chris/common/serialreceiver.vhd -text
 electronics/VHDL/Chris/common/serialtransmitter.vhd -text
