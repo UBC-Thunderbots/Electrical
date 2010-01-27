@@ -56,6 +56,8 @@ electronics/VHDL/Chris/common/saturatingsubtracter.vhd -text
 electronics/VHDL/Chris/common/serialreceiver.smv -text
 electronics/VHDL/Chris/common/serialreceiver.vhd -text
 electronics/VHDL/Chris/common/serialtransmitter.vhd -text
+electronics/VHDL/Chris/common/sharedsaturatingadder.vhd -text
+electronics/VHDL/Chris/common/sharedsaturatingsubtracter.vhd -text
 electronics/VHDL/Chris/common/signmagnitude.vhd -text
 electronics/VHDL/Chris/common/ssmultiplier.vhd -text
 electronics/VHDL/Chris/common/sumultiplier.smv -text
