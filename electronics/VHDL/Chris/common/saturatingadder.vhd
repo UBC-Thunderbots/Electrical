@@ -22,6 +22,7 @@ architecture Behavioural of SaturatingAdder is
 	signal RealSum : signed(Width - 1 downto 0);
 	signal SignRealSum : std_ulogic;
 	signal Overflow : std_ulogic;
+	signal SumBeforeBadNegCheck : signed(Width - 1 downto 0) := to_signed(0, Width);
 begin
 	SignX <= X(Width - 1);
 	SignY <= Y(Width - 1);
@@ -30,7 +31,9 @@ begin
 	SignRealSum <= RealSum(Width - 1);
 	Overflow <= SignsSame and (SignRealSum xor SignX);
 
-	Sum <= RealSum when Overflow = '0'
+	SumBeforeBadNegCheck <= RealSum when Overflow = '0'
 		else SaturateNegValue when SignX = '1'
 		else SaturatePosValue;
+
+	Sum <= SumBeforeBadNegCheck when SumBeforeBadNegCheck /= SaturateNegValue else SumBeforeBadNegCheck + 1;
 end architecture Behavioural;
