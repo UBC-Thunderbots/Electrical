@@ -25,6 +25,9 @@ default : help
 # It's also not necessary to define the dependency between a testbench file and its unit under test.
 controller.o : madd.o rom.o types.o
 rom.o : types.o
+saturatingsubtracter.o : saturatingadder.o
+sharedsaturatingadder.o : saturatingadder.o
+sharedsaturatingsubtracter.o : saturatingsubtracter.o
 ssmultiplier.o : sumultiplier.o
 xbee.o : byteshifter.o xbeereceiver.o xbeetransmitter.o
 xbeereceiver.o : serialreceiver.o xbeebytereceiver.o xbeepacketreceiver.o
