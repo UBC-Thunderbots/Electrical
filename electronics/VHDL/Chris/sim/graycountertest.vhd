@@ -18,7 +18,8 @@ architecture Behavioural of GrayCounterTest is
 begin
 	uut : entity work.GrayCounter(Behavioural)
 	generic map(
-		Width => Width
+		Width => Width,
+		Sign => 1
 	)
 	port map(
 		Clock1 => Clock1,

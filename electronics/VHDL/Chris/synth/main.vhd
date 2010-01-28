@@ -88,6 +88,7 @@ architecture Behavioural of Main is
 	signal Encoder2Count : signed(10 downto 0);
 	signal Encoder3Count : signed(10 downto 0);
 	signal Encoder4Count : signed(10 downto 0);
+	signal EncoderReset : std_ulogic;
 
 	-- Controller outputs.
 	signal ControlM1 : signed(10 downto 0);
@@ -190,46 +191,50 @@ begin
 	-- Wheel stuff.
 	GrayCounterInstance1 : entity work.GrayCounter(Behavioural)
 	generic map(
-		Width => 11
+		Width => 11,
+		Sign => 1
 	)
 	port map(
 		Clock1 => Clock1,
 		A => Encoder1AL,
 		B => Encoder1BL,
-		Reset => '0',
+		Reset => EncoderReset,
 		Count => Encoder1Count
 	);
 	GrayCounterInstance2 : entity work.GrayCounter(Behavioural)
 	generic map(
-		Width => 11
+		Width => 11,
+		Sign => 1
 	)
 	port map(
 		Clock1 => Clock1,
 		A => Encoder2AL,
 		B => Encoder2BL,
-		Reset => '0',
+		Reset => EncoderReset,
 		Count => Encoder2Count
 	);
 	GrayCounterInstance3 : entity work.GrayCounter(Behavioural)
 	generic map(
-		Width => 11
+		Width => 11,
+		Sign => -1
 	)
 	port map(
 		Clock1 => Clock1,
 		A => Encoder3AL,
 		B => Encoder3BL,
-		Reset => '0',
+		Reset => EncoderReset,
 		Count => Encoder3Count
 	);
 	GrayCounterInstance4 : entity work.GrayCounter(Behavioural)
 	generic map(
-		Width => 11
+		Width => 11,
+		Sign => 1
 	)
 	port map(
 		Clock1 => Clock1,
 		A => Encoder4AL,
 		B => Encoder4BL,
-		Reset => '0',
+		Reset => EncoderReset,
 		Count => Encoder4Count
 	);
 	ControllerInstance : entity work.Controller(Behavioural)
@@ -245,6 +250,7 @@ begin
 		Encoder2 => Encoder2Count,
 		Encoder3 => Encoder3Count,
 		Encoder4 => Encoder4Count,
+		EncoderReset => EncoderReset,
 		Motor1 => ControlM1,
 		Motor2 => ControlM2,
 		Motor3 => ControlM3,

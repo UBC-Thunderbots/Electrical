@@ -45,6 +45,7 @@ entity Controller is
 		Encoder2 : in signed(10 downto 0);
 		Encoder3 : in signed(10 downto 0);
 		Encoder4 : in signed(10 downto 0);
+		EncoderReset : out std_ulogic;
 
 		Motor1 : out signed(10 downto 0);
 		Motor2 : out signed(10 downto 0);
@@ -158,10 +159,10 @@ begin
 		InitData =>
 		(
 			-- Integral coefficients for motors 1, 2, 3, 4.
-			std_ulogic_vector(to_signed(0, 18)),
-			std_ulogic_vector(to_signed(0, 18)),
-			std_ulogic_vector(to_signed(0, 18)),
-			std_ulogic_vector(to_signed(0, 18))
+			std_ulogic_vector(to_signed(1, 18)),
+			std_ulogic_vector(to_signed(1, 18)),
+			std_ulogic_vector(to_signed(1, 18)),
+			std_ulogic_vector(to_signed(1, 18))
 		)
 	)
 	port map(
@@ -222,13 +223,13 @@ begin
 	begin
 		if rising_edge(Clock100) then
 			if LatchOutputState = PID1 then
-				Motor1 <= Prod(10 downto 0);
+				Motor1 <= Prod(11 downto 1);
 			elsif LatchOutputState = PID2 then
-				Motor2 <= Prod(10 downto 0);
+				Motor2 <= Prod(11 downto 1);
 			elsif LatchOutputState = PID3 then
-				Motor3 <= Prod(10 downto 0);
+				Motor3 <= Prod(11 downto 1);
 			elsif LatchOutputState = PID4 then
-				Motor4 <= Prod(10 downto 0);
+				Motor4 <= Prod(11 downto 1);
 			end if;
 			LatchOutputState <= NextState(LatchOutputState);
 		end if;
@@ -319,6 +320,9 @@ begin
 				Integral2 <= NewIntegral2;
 				Integral3 <= NewIntegral3;
 				Integral4 <= NewIntegral4;
+				EncoderReset <= '1';
+			else
+				EncoderReset <= '0';
 			end if;
 			PIDTicks <= (PIDTicks + 1) mod 5000;
 		end if;
