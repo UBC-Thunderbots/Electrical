@@ -15,6 +15,7 @@ entity XBee is
 		Drive3 : out signed(10 downto 0);
 		Drive4 : out signed(10 downto 0);
 		Dribble : out signed(10 downto 0);
+		Timeout : out std_ulogic;
 
 		DribblerSpeed : in signed(10 downto 0);
 		VMon : in unsigned(9 downto 0);
@@ -40,6 +41,8 @@ architecture Behavioural of XBee is
 	signal RSSI : std_ulogic_vector(7 downto 0);
 	signal FeedbackFlag : std_ulogic;
 	signal TXStrobe : std_ulogic;
+	subtype TimeoutCounterType is natural range 0 to 249999;
+	signal TimeoutCounter : TimeoutCounterType := 0;
 begin
 	AddressShifter : entity work.ByteShifter(Behavioural)
 	generic map(
@@ -92,4 +95,17 @@ begin
 	);
 
 	TXStrobe <= RXStrobe and FeedbackFlag;
+
+	process(Clock1)
+	begin
+		if rising_edge(Clock1) then
+			if RXStrobe = '1' then
+				TimeoutCounter <= TimeoutCounterType'high;
+			elsif TimeoutCounter /= 0 then
+				TimeoutCounter <= TimeoutCounter - 1;
+			end if;
+		end if;
+	end process;
+
+	Timeout <= '1' when TimeoutCounter = 0 else '0';
 end architecture Behavioural;
