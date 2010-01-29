@@ -194,7 +194,7 @@ begin
 	GrayCounterInstance1 : entity work.GrayCounter(Behavioural)
 	generic map(
 		Width => 11,
-		Sign => 1
+		Sign => -1
 	)
 	port map(
 		Clock1 => Clock1,
@@ -206,7 +206,7 @@ begin
 	GrayCounterInstance2 : entity work.GrayCounter(Behavioural)
 	generic map(
 		Width => 11,
-		Sign => 1
+		Sign => -1
 	)
 	port map(
 		Clock1 => Clock1,
@@ -230,7 +230,7 @@ begin
 	GrayCounterInstance4 : entity work.GrayCounter(Behavioural)
 	generic map(
 		Width => 11,
-		Sign => 1
+		Sign => -1
 	)
 	port map(
 		Clock1 => Clock1,
@@ -357,7 +357,7 @@ begin
 		DutyCycle => DutyCycle4,
 		PWM => PWM4
 	);
-	Dir1 <= 'Z' when Dir1T = '1' else '0';
+	Dir1 <= '0' when Dir1T = '1' else 'Z';
 	Dir2 <= 'Z' when Dir2T = '1' else '0';
 	Dir3 <= 'Z' when Dir3T = '1' else '0';
 	Dir4 <= 'Z' when Dir4T = '1' else '0';
