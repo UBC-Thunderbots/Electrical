@@ -30,13 +30,12 @@ end entity XBeePacketReceiver;
 architecture Behavioural of XBeePacketReceiver is
 	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectAPIID, ExpectAddress, ExpectRSSI, ExpectOptions, ExpectData, ExpectChecksum, CheckChecksum);
 	signal State : StateType := ExpectSOP;
-	signal DataLeft : natural range 1 to 11;
+	signal DataLeft : natural range 1 to 8;
 	signal Checksum : unsigned(7 downto 0);
-	type DataType is array(0 to 10) of std_ulogic_vector(7 downto 0);
+	type DataType is array(0 to 7) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
 begin
 	process(Clock1)
-		variable Word : std_ulogic_vector(10 downto 0);
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
 		variable SetStrobe : boolean;
@@ -59,7 +58,7 @@ begin
 					end if;
 				elsif State = ExpectLengthLSB then
 					ClearChecksum := true;
-					if ByteData = X"16" then
+					if ByteData = X"13" then
 						State <= ExpectAPIID;
 					else
 						State <= ExpectSOP;
@@ -87,10 +86,10 @@ begin
 				elsif State = ExpectOptions then
 					AddChecksum := true;
 					State <= ExpectData;
-					DataLeft <= 11;
+					DataLeft <= 8;
 				elsif State = ExpectData then
 					AddChecksum := true;
-					Data <= Data(1 to 10) & ByteData;
+					Data <= Data(1 to 7) & ByteData;
 					if DataLeft = 1 then
 						State <= ExpectChecksum;
 					end if;
@@ -106,16 +105,11 @@ begin
 						DirectDriveFlag <= Data(0)(0);
 						ControlledDriveFlag <= Data(0)(1);
 						DribbleFlag <= Data(0)(2);
-						Word := Data(2)(2 downto 0) & Data(1);
-						Drive1 <= signed(Word);
-						Word := Data(4)(2 downto 0) & Data(3);
-						Drive2 <= signed(Word);
-						Word := Data(6)(2 downto 0) & Data(5);
-						Drive3 <= signed(Word);
-						Word := Data(8)(2 downto 0) & Data(7);
-						Drive4 <= signed(Word);
-						Word := Data(10)(2 downto 0) & Data(9);
-						Dribble <= signed(Word);
+						Drive1 <= signed(std_ulogic_vector'(Data(2)(2 downto 0) & Data(1)(7 downto 0)));
+						Drive2 <= signed(std_ulogic_vector'(Data(3)(5 downto 0) & Data(2)(7 downto 3)));
+						Drive3 <= signed(std_ulogic_vector'(Data(5)(0) & Data(4)(7 downto 0) & Data(3)(7 downto 6)));
+						Drive4 <= signed(std_ulogic_vector'(Data(6)(3 downto 0) & Data(5)(7 downto 1)));
+						Dribble <= signed(std_ulogic_vector'(Data(7)(6 downto 0) & Data(6)(7 downto 4)));
 						SetStrobe := true;
 					end if;
 				end if;
