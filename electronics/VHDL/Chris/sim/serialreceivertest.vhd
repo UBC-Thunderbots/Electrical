@@ -6,11 +6,11 @@ entity SerialReceiverTest is
 end entity SerialReceiverTest;
 
 architecture Behavioural of SerialReceiverTest is
-	constant ClockPeriod : time := 10 ns;
+	constant ClockPeriod : time := 100 ns;
 	constant BitTime : time := 4 us;
 
 	signal Clock1 : std_ulogic := '0';
-	signal Clock100 : std_ulogic := '0';
+	signal Clock10 : std_ulogic := '0';
 	signal Serial : std_ulogic := '1';
 	signal Data : std_ulogic_vector(7 downto 0);
 	signal Strobe : std_ulogic := '0';
@@ -23,7 +23,7 @@ begin
 	uut : entity work.SerialReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
-		Clock100 => Clock100,
+		Clock10 => Clock10,
 		Data => Data,
 		Strobe => Strobe,
 		FErr => FErr,
@@ -34,10 +34,10 @@ begin
 		variable i : positive;
 	begin
 		Clock1 <= '1';
-		for i in 1 to 50 loop
-			Clock100 <= '1';
+		for i in 1 to 5 loop
+			Clock10 <= '1';
 			wait for ClockPeriod / 2;
-			Clock100 <= '0';
+			Clock10 <= '0';
 			wait for ClockPeriod / 2;
 		end loop;
 		Clock1 <= '0';
@@ -47,10 +47,10 @@ begin
 		elsif FErr = '1' then
 			FErrSeen <= FErrSeen + 1;
 		end if;
-		for i in 1 to 50 loop
-			Clock100 <= '1';
+		for i in 1 to 5 loop
+			Clock10 <= '1';
 			wait for ClockPeriod / 2;
-			Clock100 <= '0';
+			Clock10 <= '0';
 			wait for ClockPeriod / 2;
 		end loop;
 		if Done = '1' then

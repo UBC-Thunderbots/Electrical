@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity SerialReceiver is
 	port(
 		Clock1 : in std_ulogic;
-		Clock100 : in std_ulogic;
+		Clock10 : in std_ulogic;
 
 		Serial : in std_ulogic;
 
@@ -17,30 +17,30 @@ end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
 	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
-	subtype BitClocksType is natural range 0 to 399;
+	subtype BitClocksType is natural range 0 to 39;
 	signal BitClocks : BitClocksType := BitClocksType'high;
-	signal BitValue : signed(6 downto 0) := to_signed(0, 7);
+	signal BitValue : signed(4 downto 0) := to_signed(0, 5);
 	signal High : boolean;
 	signal Low : boolean;
 	signal FErrBuf : std_ulogic := '0';
 
 	signal DataBuffer : std_ulogic_vector(7 downto 0) := X"00";
 	signal DataBufferPolarity1 : std_ulogic := '0';
-	signal DataBufferPolarity100 : std_ulogic := '0';
+	signal DataBufferPolarity10 : std_ulogic := '0';
 begin
 	FErr <= FErrBuf;
-	High <= BitValue >= 22;
-	Low <= BitValue <= -22;
+	High <= BitValue >= 4;
+	Low <= BitValue <= -4;
 
-	process(Clock100)
+	process(Clock10)
 		variable ResetBitClocks : boolean;
 		variable ResetBitValue : boolean;
-		variable BitValueDelta : signed(6 downto 0);
+		variable BitValueDelta : signed(4 downto 0);
 	begin
-		if rising_edge(Clock100) then
+		if rising_edge(Clock10) then
 			ResetBitClocks := false;
 			ResetBitValue := false;
-			BitValueDelta := to_signed(0, 7);
+			BitValueDelta := to_signed(0, 5);
 			if DBuf(0) = '0' then
 				-- Not receiving right now.
 				if Serial = '0' then
@@ -52,14 +52,14 @@ begin
 				ResetBitValue := true;
 			else
 				-- Receive in progress. What do we do with the current bit?
-				if BitClocks > 232 then
+				if BitClocks > 27 then
 					-- Too early in the bit to take a stable sample. Do nothing.
-				elsif BitClocks > 169 then
-					-- Middle 63 clocks. Sample.
+				elsif BitClocks > 12 then
+					-- Middle 15 clocks. Sample.
 					if Serial = '1' then
-						BitValueDelta := to_signed(1, 7);
+						BitValueDelta := to_signed(1, 5);
 					else
-						BitValueDelta := to_signed(-1, 7);
+						BitValueDelta := to_signed(-1, 5);
 					end if;
 				elsif BitClocks > 0 then
 					-- Too late in the bit to take a stable sample. Do nothing.
@@ -85,7 +85,7 @@ begin
 						-- We have finished receiving a full byte. Check polarity of stop bit.
 						if FErrBuf = '0' and High then
 							DataBuffer <= DBuf(9 downto 2);
-							DataBufferPolarity100 <= not DataBufferPolarity100;
+							DataBufferPolarity10 <= not DataBufferPolarity10;
 						else
 							FErrBuf <= '1';
 						end if;
@@ -106,7 +106,7 @@ begin
 			end if;
 
 			if ResetBitValue then
-				BitValue <= to_signed(0, 7);
+				BitValue <= to_signed(0, 5);
 			else
 				BitValue <= BitValue + BitValueDelta;
 			end if;
@@ -117,8 +117,8 @@ begin
 	begin
 		if rising_edge(Clock1) then
 			Data <= DataBuffer;
-			Strobe <= DataBufferPolarity1 xor DataBufferPolarity100;
-			DataBufferPolarity1 <= DataBufferPolarity100;
+			Strobe <= DataBufferPolarity1 xor DataBufferPolarity10;
+			DataBufferPolarity1 <= DataBufferPolarity10;
 		end if;
 	end process;
 end architecture Behavioural;

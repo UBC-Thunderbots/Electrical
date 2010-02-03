@@ -152,11 +152,6 @@ begin
 			AppSSL <= AppSS;
 			AppInL <= AppIn;
 			AppClkL <= AppClk;
-		end if;
-	end process;
-	process(Clock100)
-	begin
-		if rising_edge(Clock100) then
 			XBeeRXL <= XBeeRX;
 		end if;
 	end process;
@@ -165,7 +160,7 @@ begin
 	XBeeInstance : entity work.XBee(Behavioural)
 	port map(
 		Clock1 => Clock1,
-		Clock100 => Clock100,
+		Clock10 => Clock10,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
 		DribbleFlag => DribbleFlag,
