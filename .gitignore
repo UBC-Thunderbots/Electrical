@@ -31,6 +31,7 @@ electronics/VHDL/Chris/graycountertest
 electronics/VHDL/Chris/saturatingaddertest
 electronics/VHDL/Chris/serialreceivertest
 electronics/VHDL/Chris/serialtransmittertest
+electronics/VHDL/Chris/signmagnitudetest
 electronics/VHDL/Chris/ssmultipliertest
 electronics/VHDL/Chris/sumultipliertest
 electronics/VHDL/Chris/thunderbots_vhdl.prj

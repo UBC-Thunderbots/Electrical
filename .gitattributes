@@ -74,6 +74,7 @@ electronics/VHDL/Chris/sim/graycountertest.vhd -text
 electronics/VHDL/Chris/sim/saturatingaddertest.vhd -text
 electronics/VHDL/Chris/sim/serialreceivertest.vhd -text
 electronics/VHDL/Chris/sim/serialtransmittertest.vhd -text
+electronics/VHDL/Chris/sim/signmagnitudetest.vhd -text
 electronics/VHDL/Chris/sim/ssmultipliertest.vhd -text
 electronics/VHDL/Chris/sim/sumultipliertest.vhd -text
 electronics/VHDL/Chris/sim/xbeebytereceivertest.vhd -text
