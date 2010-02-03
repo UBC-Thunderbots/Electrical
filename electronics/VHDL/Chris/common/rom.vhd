@@ -9,13 +9,13 @@ entity ROM is
 	);
 	port(
 		Clock : in std_ulogic;
-		Address : in natural range ROMDataType'low to ROMDataType'high;
+		Address : in natural range InitData'range;
 		Data : out std_ulogic_vector(17 downto 0)
 	);
 end entity ROM;
 
 architecture Behavioural of ROM is
-	signal Memory : ROMDataType;
+	signal Memory : ROMDataType(InitData'range);
 	attribute rom_style : string;
 	attribute rom_style of Memory : signal is "block";
 begin
