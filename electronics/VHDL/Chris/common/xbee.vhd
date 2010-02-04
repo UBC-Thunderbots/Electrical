@@ -41,7 +41,7 @@ architecture Behavioural of XBee is
 	signal RSSI : std_ulogic_vector(7 downto 0);
 	signal FeedbackFlag : std_ulogic;
 	signal TXStrobe : std_ulogic;
-	subtype TimeoutCounterType is natural range 0 to 249999;
+	subtype TimeoutCounterType is natural range 0 to 499999;
 	signal TimeoutCounter : TimeoutCounterType := 0;
 begin
 	AddressShifter : entity work.ByteShifter(Behavioural)
