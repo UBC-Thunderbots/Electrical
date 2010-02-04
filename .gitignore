@@ -27,7 +27,10 @@ electronics/VHDL/Chris/*.xpi
 electronics/VHDL/Chris/*.xrpt
 electronics/VHDL/Chris/*_pad.csv
 electronics/VHDL/Chris/*_pad.txt
+electronics/VHDL/Chris/common/controllerimpl.vhd
+electronics/VHDL/Chris/cputest
 electronics/VHDL/Chris/graycountertest
+electronics/VHDL/Chris/nanoasm
 electronics/VHDL/Chris/saturatingaddertest
 electronics/VHDL/Chris/serialreceivertest
 electronics/VHDL/Chris/serialtransmittertest

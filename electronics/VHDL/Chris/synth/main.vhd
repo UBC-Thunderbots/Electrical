@@ -237,7 +237,7 @@ begin
 	ControllerInstance : entity work.Controller(Behavioural)
 	port map(
 		Clock1 => Clock1,
-		Clock100 => Clock100,
+		Clock10 => Clock10,
 		ControlledDriveFlag => ControlledDriveFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
