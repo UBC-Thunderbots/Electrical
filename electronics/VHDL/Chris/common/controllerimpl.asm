@@ -39,6 +39,7 @@ NEG Error Encoder
 ADDS Error Setpoint
 ; Update integrator.
 ADDS Integral1 Error
+CLAMP Integral1 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
 MUL Error P
@@ -64,6 +65,7 @@ NEG Error Encoder
 ADDS Error Setpoint
 ; Update integrator.
 ADDS Integral2 Error
+CLAMP Integral2 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
 MUL Error P
@@ -89,6 +91,7 @@ NEG Error Encoder
 ADDS Error Setpoint
 ; Update integrator.
 ADDS Integral3 Error
+CLAMP Integral3 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
 MUL Error P
@@ -114,6 +117,7 @@ NEG Error Encoder
 ADDS Error Setpoint
 ; Update integrator.
 ADDS Integral4 Error
+CLAMP Integral4 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
 MUL Error P
