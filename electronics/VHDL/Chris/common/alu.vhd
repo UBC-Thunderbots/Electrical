@@ -37,16 +37,8 @@ begin
 	-- field.
 	--
 
-	-- O=0 means ADDS.
-	SaturatingAdderInstance : entity work.SaturatingAdder(Behavioural)
-	generic map(
-		Width => 16
-	)
-	port map(
-		X => RA,
-		Y => RB,
-		Sum => NewRAValues(0)
-	);
+	-- O=0 means ADD.
+	NewRAValues(0) <= RA + RB;
 	NewRBValues(0) <= RB;
 	-- O=1 means CLAMP.
 	NewRAValues(1) <= RB when RA > RB

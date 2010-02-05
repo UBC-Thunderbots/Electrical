@@ -6,7 +6,6 @@ vhdl work common/controllerimpl.vhd
 vhdl work common/cpu.vhd
 vhdl work common/graycounter.vhd
 vhdl work common/pwm.vhd
-vhdl work common/saturatingadder.vhd
 vhdl work common/serialreceiver.vhd
 vhdl work common/serialtransmitter.vhd
 vhdl work common/signmagnitude.vhd

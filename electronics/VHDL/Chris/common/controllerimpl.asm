@@ -36,9 +36,9 @@ IN Setpoint Setpoint1
 IN Encoder Encoder1
 ; Compute Error = Setpoint - Encoder.
 NEG Error Encoder
-ADDS Error Setpoint
+ADD Error Setpoint
 ; Update integrator.
-ADDS Integral1 Error
+ADD Integral1 Error
 CLAMP Integral1 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
@@ -49,10 +49,10 @@ MOV Error Integral1
 MUL Error I
 ; Compute Plant = (P + I) / 2.
 MOV Plant P
-ADDS Plant I
+ADD Plant I
 SEX P Plant
 SHR32_1 P Plant
-; Clamp to +/-1023 just in case.
+; Clamp to PWM range.
 CLAMP Plant 1023
 ; Write output.
 OUT Plant1 Plant
@@ -62,9 +62,9 @@ IN Setpoint Setpoint2
 IN Encoder Encoder2
 ; Compute Error = Setpoint - Encoder.
 NEG Error Encoder
-ADDS Error Setpoint
+ADD Error Setpoint
 ; Update integrator.
-ADDS Integral2 Error
+ADD Integral2 Error
 CLAMP Integral2 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
@@ -75,10 +75,10 @@ MOV Error Integral2
 MUL Error I
 ; Compute Plant = (P + I) / 2.
 MOV Plant P
-ADDS Plant I
+ADD Plant I
 SEX P Plant
 SHR32_1 P Plant
-; Clamp to +/-1023 just in case.
+; Clamp to PWM range.
 CLAMP Plant 1023
 ; Write output.
 OUT Plant2 Plant
@@ -88,9 +88,9 @@ IN Setpoint Setpoint3
 IN Encoder Encoder3
 ; Compute Error = Setpoint - Encoder.
 NEG Error Encoder
-ADDS Error Setpoint
+ADD Error Setpoint
 ; Update integrator.
-ADDS Integral3 Error
+ADD Integral3 Error
 CLAMP Integral3 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
@@ -101,10 +101,10 @@ MOV Error Integral3
 MUL Error I
 ; Compute Plant = (P + I) / 2.
 MOV Plant P
-ADDS Plant I
+ADD Plant I
 SEX P Plant
 SHR32_1 P Plant
-; Clamp to +/-1023 just in case.
+; Clamp to PWM range.
 CLAMP Plant 1023
 ; Write output.
 OUT Plant3 Plant
@@ -114,9 +114,9 @@ IN Setpoint Setpoint4
 IN Encoder Encoder4
 ; Compute Error = Setpoint - Encoder.
 NEG Error Encoder
-ADDS Error Setpoint
+ADD Error Setpoint
 ; Update integrator.
-ADDS Integral4 Error
+ADD Integral4 Error
 CLAMP Integral4 4095
 ; Compute (Error:P) = Error * 1.
 MOV P 1
@@ -127,10 +127,10 @@ MOV Error Integral4
 MUL Error I
 ; Compute Plant = (P + I) / 2.
 MOV Plant P
-ADDS Plant I
+ADD Plant I
 SEX P Plant
 SHR32_1 P Plant
-; Clamp to +/-1023 just in case.
+; Clamp to PWM range.
 CLAMP Plant 1023
 ; Write output.
 OUT Plant4 Plant

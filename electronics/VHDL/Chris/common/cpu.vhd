@@ -42,9 +42,8 @@ use work.types.all;
 --  are exactly equivalent in functionality.
 --
 -- Instruction Set:
---  ADDS RA RB (O=000000) - Add with Saturation
---   Adds the values of RA and RB. The result is clamped to the range +/-32767
---   and stored into RA.
+--  ADD RA RB (O=000000) - Add
+--   Adds the values of RA and RB. The result is stored into RA.
 --
 --  CLAMP RA RB (O=000001) - Clamp to Interval
 --   Clamps the value of RA to fall within +/-RB. The result is stored into RA.
