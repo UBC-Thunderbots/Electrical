@@ -63,6 +63,12 @@ architecture Behavioural of Main is
 	signal AppSSL : std_ulogic := '1';
 	signal AppInL : std_ulogic := '0';
 	signal AppClkL : std_ulogic := '0';
+	signal Fault1L : std_ulogic := '0';
+	signal Fault2L : std_ulogic := '0';
+	signal Fault3L : std_ulogic := '0';
+	signal Fault4L : std_ulogic := '0';
+	signal FaultDL : std_ulogic := '0';
+	signal DSenseL : std_ulogic := '0';
 	signal Encoder1AL : std_ulogic := '0';
 	signal Encoder1BL : std_ulogic := '0';
 	signal Encoder2AL : std_ulogic := '0';
@@ -136,6 +142,12 @@ begin
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
+			Fault1L <= Fault1;
+			Fault2L <= Fault2;
+			Fault3L <= Fault3;
+			Fault4L <= Fault4;
+			FaultDL <= FaultD;
+			DSenseL <= DSense;
 			Encoder1AL <= Encoder1A;
 			Encoder1BL <= Encoder1B;
 			Encoder2AL <= Encoder2A;
@@ -172,11 +184,11 @@ begin
 		Timeout => RXTimeout,
 		DribblerSpeed => to_signed(0, 11),
 		VMon => VMon,
-		Fault1 => Fault1,
-		Fault2 => Fault2,
-		Fault3 => Fault3,
-		Fault4 => Fault4,
-		FaultD => FaultD,
+		Fault1 => Fault1L,
+		Fault2 => Fault2L,
+		Fault3 => Fault3L,
+		Fault4 => Fault4L,
+		FaultD => FaultDL,
 		SerialIn => XBeeRXL,
 		SerialOut => XBeeTX
 	);
