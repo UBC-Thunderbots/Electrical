@@ -16,7 +16,7 @@ entity SerialReceiver is
 end entity SerialReceiver;
 
 architecture Behavioural of SerialReceiver is
-	signal DBuf : std_ulogic_vector(9 downto 0) := "0000000000";
+	signal DBuf : std_ulogic_vector(8 downto 0) := "000000000";
 	subtype BitClocksType is natural range 0 to 39;
 	signal BitClocks : BitClocksType := BitClocksType'high;
 	signal BitValue : signed(4 downto 0) := to_signed(0, 5);
@@ -46,7 +46,7 @@ begin
 				if Serial = '0' then
 					-- Start bit of new byte.
 					FErrBuf <= '0';
-					DBuf <= "1111111111";
+					DBuf <= "111111111";
 				end if;
 				ResetBitClocks := true;
 				ResetBitValue := true;
@@ -67,32 +67,32 @@ begin
 					-- End of bit. See what our sampling achieved.
 					if High then
 						-- Overwhelmingly high. Accept bit.
-						DBuf <= '1' & DBuf(9 downto 1);
+						DBuf <= '1' & DBuf(8 downto 1);
 					elsif Low then
 						-- Overwhelmingly low. Accept bit.
-						DBuf <= '0' & DBuf(9 downto 1);
+						DBuf <= '0' & DBuf(8 downto 1);
 					else
 						-- Unstable. Reject whole byte.
 						FErrBuf <= '1';
 						-- Still need to push the shift register to keep things moving.
-						DBuf <= '1' & DBuf(9 downto 1);
+						DBuf <= '1' & DBuf(8 downto 1);
 					end if;
 					-- Note: DBuf is a signal, so reflects the **OLD** value, in
 					-- which what is now DBuf(0) was then DBuf(1)!
 					if DBuf(1) = '1' then
 						-- We have more bits to receive.
 					else
-						-- We have finished receiving a full byte. Check polarity of stop bit.
-						if FErrBuf = '0' and High then
-							DataBuffer <= DBuf(9 downto 2);
-							DataBufferPolarity10 <= not DataBufferPolarity10;
+						-- We have finished receiving a full byte.
+						if High then
+							DataBuffer <= '1' & DBuf(8 downto 2);
 						else
-							FErrBuf <= '1';
+							DataBuffer <= '0' & DBuf(8 downto 2);
 						end if;
+						DataBufferPolarity10 <= not DataBufferPolarity10;
 					end if;
 					-- Check if this is a false start bit.
-					if DBuf = "1111111111" and not Low then
-						DBuf <= "0000000000";
+					if DBuf = "111111111" and not Low then
+						DBuf <= "000000000";
 					end if;
 					ResetBitClocks := true;
 					ResetBitValue := true;

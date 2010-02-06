@@ -5,14 +5,14 @@ VAR
 VAR
 	Dgood : boolean;
 	Ferr : boolean;
-	Dbuf : word[10];
+	Dbuf : word[9];
 	BitClocks : 0..39;
 	BitValue : -16..16;
 
 ASSIGN
 	init(Dgood) := 0;
 	init(Ferr) := 0;
-	init(Dbuf) := 0b10_0000000000;
+	init(Dbuf) := 0b9_000000000;
 	init(BitClocks) := 39;
 	init(BitValue) := 0;
 
@@ -35,17 +35,17 @@ ASSIGN
 		case
 			!bool(Dbuf[0:0]) :
 				case
-					!Din : 0b10_1111111111;
+					!Din : 0b9_111111111;
 					1 : Dbuf;
 				esac;
 			1 :
 				case
 					BitClocks = 0 :
 						case
-							Dbuf = 0b10_1111111111 & BitValue > -4 : 0b10_0000000000;
-							BitValue >= 4 : 0b1_1 :: Dbuf[9:1];
-							BitValue <= -4 : 0b1_0 :: Dbuf[9:1];
-							1 : 0b1_1 :: Dbuf[9:1];
+							Dbuf = 0b9_111111111 & BitValue > -4 : 0b9_000000000;
+							BitValue >= 4 : 0b1_1 :: Dbuf[8:1];
+							BitValue <= -4 : 0b1_0 :: Dbuf[8:1];
+							1 : 0b1_1 :: Dbuf[8:1];
 						esac;
 					1 : Dbuf;
 				esac;
@@ -105,8 +105,8 @@ INVARSPEC BitValue <= 15 & BitValue >= -15;
 -- Should never have a framing error and good data simultaneously.
 INVARSPEC !(Ferr & Dgood);
 
--- If good data is found, byte should be framed right (start bit and stop bit).
-INVARSPEC Dgood -> (!bool(Dbuf[0:0]) & bool(Dbuf[9:9]));
+-- If good data is found, byte should be framed right (start bit).
+INVARSPEC Dgood -> !bool(Dbuf[0:0]);
 
 -- Dgood should never stay high for more than one clock cycle.
 CTLSPEC AG (Dgood -> AX !Dgood);
