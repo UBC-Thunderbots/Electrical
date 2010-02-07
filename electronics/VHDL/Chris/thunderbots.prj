@@ -19,3 +19,4 @@ vhdl work common/xbeereceiver.vhd
 vhdl work common/xbeetransmitter.vhd
 vhdl work synth/clockgen.vhd
 vhdl work synth/main.vhd
+vhdl work synth/steptest.vhd

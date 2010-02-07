@@ -74,6 +74,7 @@ electronics/VHDL/Chris/sim/xbeebytereceivertest.vhd -text
 electronics/VHDL/Chris/sim/xbeebytetransmittertest.vhd -text
 electronics/VHDL/Chris/synth/clockgen.vhd -text
 electronics/VHDL/Chris/synth/main.vhd -text
+electronics/VHDL/Chris/synth/steptest.vhd -text
 electronics/VHDL/Chris/thunderbots.prj -text
 electronics/VHDL/Chris/thunderbots.ucf -text
 electronics/VHDL/Chris/thunderbots.xst -text
