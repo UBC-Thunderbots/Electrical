@@ -96,12 +96,6 @@ begin
 		assert BytesSeen = 2;
 		assert LastByte = X"55";
 
-		Serial <= '0';
-		wait for 10 * BitTime;
-		Serial <= '1';
-		wait for 3 * BitTime;
-		assert FErrSeen > 0;
-
 		Done <= '1';
 		wait;
 	end process;
