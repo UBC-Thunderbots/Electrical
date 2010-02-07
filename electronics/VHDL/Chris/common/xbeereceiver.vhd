@@ -28,8 +28,6 @@ end entity XBeeReceiver;
 architecture Behavioural of XBeeReceiver is
 	signal SerialData : std_ulogic_vector(7 downto 0);
 	signal SerialStrobe : std_ulogic;
-	signal SerialFErr : std_ulogic;
-	signal ByteFErr : std_ulogic;
 	signal ByteData : std_ulogic_vector(7 downto 0);
 	signal ByteStrobe : std_ulogic;
 	signal ByteSOP : std_ulogic;
@@ -40,8 +38,7 @@ begin
 		Clock10 => Clock10,
 		Serial => Serial,
 		Data => SerialData,
-		Strobe => SerialStrobe,
-		FErr => SerialFErr
+		Strobe => SerialStrobe
 	);
 
 	XBeeByteReceiverInstance : entity work.XBeeByteReceiver(Behavioural)
@@ -49,8 +46,6 @@ begin
 		Clock1 => Clock1,
 		SerialData => SerialData,
 		SerialStrobe => SerialStrobe,
-		SerialFErr => SerialFErr,
-		FErr => ByteFErr,
 		Data => ByteData,
 		Strobe => ByteStrobe,
 		SOP => ByteSOP
@@ -59,7 +54,6 @@ begin
 	XBeePacketReceiverInstance : entity work.XBeePacketReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
-		ByteFErr => ByteFErr,
 		ByteData => ByteData,
 		ByteStrobe => ByteStrobe,
 		ByteSOP => ByteSOP,

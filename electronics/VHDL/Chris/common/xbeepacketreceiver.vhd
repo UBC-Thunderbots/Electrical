@@ -6,7 +6,6 @@ entity XBeePacketReceiver is
 	port(
 		Clock1 : in std_ulogic;
 
-		ByteFErr : in std_ulogic;
 		ByteData : in std_ulogic_vector(7 downto 0);
 		ByteStrobe : in std_ulogic;
 		ByteSOP : in std_ulogic;
@@ -45,9 +44,7 @@ begin
 			AddChecksum := false;
 			SetStrobe := false;
 			AddressStrobe <= '0';
-			if ByteFErr = '1' then
-				State <= ExpectSOP;
-			elsif ByteSOP = '1' then
+			if ByteSOP = '1' then
 				State <= ExpectLengthMSB;
 			elsif ByteStrobe = '1' then
 				if State = ExpectLengthMSB then

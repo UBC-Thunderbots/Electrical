@@ -4,14 +4,12 @@ VAR
 	Din : boolean;
 VAR
 	Dgood : boolean;
-	Ferr : boolean;
 	Dbuf : word[9];
 	BitClocks : 0..39;
 	BitValue : -16..16;
 
 ASSIGN
 	init(Dgood) := 0;
-	init(Ferr) := 0;
 	init(Dbuf) := 0b9_000000000;
 	init(BitClocks) := 39;
 	init(BitValue) := 0;
@@ -19,16 +17,8 @@ ASSIGN
 
 	next(Dgood) :=
 		case
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !Ferr & BitValue >= 4 : 1;
+			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) : 1;
 			1 : 0;
-		esac;
-
-	next(Ferr) :=
-		case
-			!bool(Dbuf[0:0]) & !Din : 0;
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !(BitValue >= 4 | BitValue <= -4) : 1;
-			bool(Dbuf[0:0]) & (BitClocks = 0) & !bool(Dbuf[1:1]) & !(!Ferr & BitValue >= 4) : 1;
-			1 : Ferr;
 		esac;
 
 	next(Dbuf) :=
@@ -102,26 +92,14 @@ ASSIGN
 -- Should not overflow the bit value counter.
 INVARSPEC BitValue <= 15 & BitValue >= -15;
 
--- Should never have a framing error and good data simultaneously.
-INVARSPEC !(Ferr & Dgood);
-
 -- If good data is found, byte should be framed right (start bit).
 INVARSPEC Dgood -> !bool(Dbuf[0:0]);
 
 -- Dgood should never stay high for more than one clock cycle.
 CTLSPEC AG (Dgood -> AX !Dgood);
 
--- If you see a framing error, Ferr should stay true until the system goes idle.
--- CTLSPEC AG (Ferr -> A [Ferr W !bool(Dbuf[0:0])]);
-CTLSPEC AG (Ferr -> !E [bool(Dbuf[0:0]) U (!Ferr & bool(Dbuf[0:0]))]);
-
 -- No matter what happens, you can get back to an idle state.
 CTLSPEC AG EF !bool(Dbuf[0:0]);
 
 -- All errors are transient (if you wait long enough, you can start receiving again).
 CTLSPEC AG EF Dgood;
-
--- There is a path where you do sometime receive some data, but never see a framing
--- error (i.e. the receiver is capable of properly interpreting a perfect bitstream).
--- You can follow this path from any idle state.
-CTLSPEC AG((!bool(Dbuf[0:0]) & !Ferr) -> E [!Ferr U (Dgood & !Ferr)]);

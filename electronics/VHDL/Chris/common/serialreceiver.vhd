@@ -10,8 +10,7 @@ entity SerialReceiver is
 		Serial : in std_ulogic;
 
 		Data : out std_ulogic_vector(7 downto 0) := X"00";
-		Strobe : out std_ulogic := '0';
-		FErr : out std_ulogic := '0'
+		Strobe : out std_ulogic := '0'
 	);
 end entity SerialReceiver;
 
@@ -22,13 +21,11 @@ architecture Behavioural of SerialReceiver is
 	signal BitValue : signed(4 downto 0) := to_signed(0, 5);
 	signal High : boolean;
 	signal Low : boolean;
-	signal FErrBuf : std_ulogic := '0';
 
 	signal DataBuffer : std_ulogic_vector(7 downto 0) := X"00";
 	signal DataBufferPolarity1 : std_ulogic := '0';
 	signal DataBufferPolarity10 : std_ulogic := '0';
 begin
-	FErr <= FErrBuf;
 	High <= BitValue >= 4;
 	Low <= BitValue <= -4;
 
@@ -45,7 +42,6 @@ begin
 				-- Not receiving right now.
 				if Serial = '0' then
 					-- Start bit of new byte.
-					FErrBuf <= '0';
 					DBuf <= "111111111";
 				end if;
 				ResetBitClocks := true;
@@ -73,9 +69,7 @@ begin
 						DBuf <= '0' & DBuf(8 downto 1);
 					else
 						-- Unstable. Reject whole byte.
-						FErrBuf <= '1';
-						-- Still need to push the shift register to keep things moving.
-						DBuf <= '1' & DBuf(8 downto 1);
+						DBuf <= "000000000";
 					end if;
 					-- Note: DBuf is a signal, so reflects the **OLD** value, in
 					-- which what is now DBuf(0) was then DBuf(1)!
@@ -85,10 +79,13 @@ begin
 						-- We have finished receiving a full byte.
 						if High then
 							DataBuffer <= '1' & DBuf(8 downto 2);
-						else
+							DataBufferPolarity10 <= not DataBufferPolarity10;
+						elsif Low then
 							DataBuffer <= '0' & DBuf(8 downto 2);
+							DataBufferPolarity10 <= not DataBufferPolarity10;
+						else
+							DBuf <= "000000000";
 						end if;
-						DataBufferPolarity10 <= not DataBufferPolarity10;
 					end if;
 					-- Check if this is a false start bit.
 					if DBuf = "111111111" and not Low then
