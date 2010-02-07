@@ -37,7 +37,6 @@ architecture Behavioural of XBeePacketTransmitter is
 begin
 	process(Clock1)
 		variable ClearChecksum : boolean;
-		variable UpdateChecksum : boolean;
 		variable ChecksumByte : unsigned(7 downto 0);
 	begin
 		if rising_edge(Clock1) then
