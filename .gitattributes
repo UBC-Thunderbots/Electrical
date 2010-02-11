@@ -51,6 +51,7 @@ electronics/VHDL/Chris/common/controller.vhd -text
 electronics/VHDL/Chris/common/controllerimpl.asm -text
 electronics/VHDL/Chris/common/cpu.vhd -text
 electronics/VHDL/Chris/common/graycounter.vhd -text
+electronics/VHDL/Chris/common/lfsr10.vhd -text
 electronics/VHDL/Chris/common/pwm.vhd -text
 electronics/VHDL/Chris/common/serialreceiver.smv -text
 electronics/VHDL/Chris/common/serialreceiver.vhd -text
@@ -67,6 +68,7 @@ electronics/VHDL/Chris/common/xbeetransmitter.vhd -text
 electronics/VHDL/Chris/nanoasm.cpp -text
 electronics/VHDL/Chris/sim/cputest.vhd -text
 electronics/VHDL/Chris/sim/graycountertest.vhd -text
+electronics/VHDL/Chris/sim/lfsr10test.vhd -text
 electronics/VHDL/Chris/sim/serialreceivertest.vhd -text
 electronics/VHDL/Chris/sim/serialtransmittertest.vhd -text
 electronics/VHDL/Chris/sim/signmagnitudetest.vhd -text

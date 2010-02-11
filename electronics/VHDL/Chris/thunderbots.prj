@@ -5,6 +5,7 @@ vhdl work common/controller.vhd
 vhdl work common/controllerimpl.vhd
 vhdl work common/cpu.vhd
 vhdl work common/graycounter.vhd
+vhdl work common/lfsr10.vhd
 vhdl work common/pwm.vhd
 vhdl work common/serialreceiver.vhd
 vhdl work common/serialtransmitter.vhd

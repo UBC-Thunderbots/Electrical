@@ -30,6 +30,7 @@ electronics/VHDL/Chris/*_pad.txt
 electronics/VHDL/Chris/common/controllerimpl.vhd
 electronics/VHDL/Chris/cputest
 electronics/VHDL/Chris/graycountertest
+electronics/VHDL/Chris/lfsr10test
 electronics/VHDL/Chris/nanoasm
 electronics/VHDL/Chris/saturatingaddertest
 electronics/VHDL/Chris/serialreceivertest
