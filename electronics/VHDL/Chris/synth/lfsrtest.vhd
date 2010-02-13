@@ -53,12 +53,15 @@ architecture Behavioural of LFSRTest is
 	-- The address of the host XBee.
 	constant HostAddress : unsigned(63 downto 0) := X"0013a2004053a24c";
 
-	-- The duty cycles to use at high and low speeds.
-	constant LowSpeed : natural := 350;
-	constant HighSpeed : natural := 700;
+	-- The levels to use at high and low speeds.
+	constant LowSpeed : integer := -1023;
+	constant HighSpeed : integer := 1023;
+
+	-- The level to use at startup to stabilize the system.
+	constant BootSpeed : integer := 0;
 
 	-- Whether to write the PWM values or the encoder readings.
-	constant WritePWMs : boolean := true;
+	constant WritePWMs : boolean := false;
 
 	-- The state machine.
 	type StateType is (Init, Run, RecordingDone, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrameID, SendAddress, SendOptions, SendRAMAddressMSB, SendRAMAddressLSB, LoadData, SendDataMSB, SendDataLSB, SendChecksum, Sleep);
@@ -107,7 +110,9 @@ architecture Behavioural of LFSRTest is
 	signal Encoder4Count : signed(10 downto 0);
 	signal EncoderReset : std_ulogic;
 
-	-- PWM duty cycle.
+	-- PWM values.
+	signal Speed4 : signed(10 downto 0);
+	signal Direction4 : std_ulogic;
 	signal DutyCycle4 : unsigned(9 downto 0);
 begin
 	-- Constant pins.
@@ -121,7 +126,7 @@ begin
 	Dir1 <= '0';
 	Dir2 <= '0';
 	Dir3 <= '0';
-	Dir4 <= '0';
+	Dir4 <= 'Z' when Direction4 = '1' else '0';
 	DirD <= '0';
 
 	-- Pass the Oscillator pin through a DCM to get the final clocks.
@@ -154,6 +159,15 @@ begin
 		B => Encoder4BL,
 		Reset => EncoderReset,
 		Count => Encoder4Count
+	);
+	SignMagnitude4Instance : entity work.SignMagnitude(Behavioural)
+	generic map(
+		Width => 11
+	)
+	port map(
+		Value => Speed4,
+		Absolute => DutyCycle4,
+		Sign => Direction4
 	);
 	PWM4Instance : entity work.PWM(Behavioural)
 	generic map(
@@ -201,11 +215,17 @@ begin
 	process(Clock1)
 		variable ResetChecksum : boolean;
 		variable DeltaChecksum : unsigned(7 downto 0);
+		variable IncrementPIDTicks : boolean;
+		variable IncrementStateTicks : boolean;
+		variable ResetStateTicks : boolean;
 	begin
 		if rising_edge(Clock1) then
 			EncoderReset <= '0';
 			ResetChecksum := false;
 			DeltaChecksum := X"00";
+			IncrementPIDTicks := false;
+			IncrementStateTicks := false;
+			ResetStateTicks := false;
 			RAMWrite <= false;
 			RAMClearIndex <= false;
 			RAMIncrementIndex <= false;
@@ -213,39 +233,31 @@ begin
 			XBeeSOP <= '0';
 			LFSREnable <= '0';
 			if State = Init then
-				DutyCycle4 <= to_unsigned(HighSpeed, 10);
+				Speed4 <= to_signed(BootSpeed, Speed4'length);
 				RAMClearIndex <= true;
 				EncoderReset <= '1';
 				if PIDTicks = PIDTicksType'high then
 					if StateTicks = StateTicksType'high then
 						State <= Run;
-						StateTicks <= 0;
-					else
-						StateTicks <= StateTicks + 1;
 					end if;
-					PIDTicks <= 0;
-				else
-					PIDTicks <= PIDTicks + 1;
+					IncrementStateTicks := true;
 				end if;
+				IncrementPIDTicks := true;
 			elsif State = Run then
 				if LFSROut = '1' then
-					DutyCycle4 <= to_unsigned(HighSpeed, DutyCycle4'length);
+					Speed4 <= to_signed(HighSpeed, Speed4'length);
 				else
-					DutyCycle4 <= to_unsigned(LowSpeed, DutyCycle4'length);
+					Speed4 <= to_signed(LowSpeed, Speed4'length);
 				end if;
 				if PIDTicks = PIDTicksType'high then
 					if StateTicks = StateTicksType'high then
 						State <= RecordingDone;
-						StateTicks <= 0;
-					else
-						StateTicks <= StateTicks + 1;
 					end if;
-					PIDTicks <= 0;
+					IncrementStateTicks := true;
 					WriteNextCycle <= true;
 					LFSREnable <= '1';
-				else
-					PIDTicks <= PIDTicks + 1;
 				end if;
+				IncrementPIDTicks := true;
 				if WriteNextCycle then
 					WriteNextCycle <= false;
 					RAMWrite <= true;
@@ -334,25 +346,30 @@ begin
 					XBeeData <= std_ulogic_vector(Checksum);
 					XBeeLoad <= '1';
 					State <= Sleep;
-					PIDTicks <= 0;
-					StateTicks <= 25;
 				elsif State = Sleep then
-					if PIDTicks = 0 then
-						if StateTicks = 0 then
+					if PIDTicks = PIDTicksType'high then
+						if StateTicks = 25 then
 							State <= SendSOP;
+							ResetStateTicks := true;
 						else
-							StateTicks <= StateTicks - 1;
-							PIDTicks <= PIDTicksType'high;
+							IncrementStateTicks := true;
 						end if;
-					else
-						PIDTicks <= PIDTicks - 1;
 					end if;
+					IncrementPIDTicks := true;
 				end if;
 			end if;
 			if ResetChecksum then
 				Checksum <= X"FF";
 			else
 				Checksum <= Checksum - DeltaChecksum;
+			end if;
+			if IncrementPIDTicks then
+				PIDTicks <= (PIDTicks + 1) mod (PIDTicksType'high + 1);
+			end if;
+			if ResetStateTicks then
+				StateTicks <= 0;
+			elsif IncrementStateTicks then
+				StateTicks <= (StateTicks + 1) mod (StateTicksType'high + 1);
 			end if;
 		end if;
 	end process;
