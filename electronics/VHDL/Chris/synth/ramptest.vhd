@@ -239,6 +239,7 @@ begin
 						WriteNextCycle <= true;
 					else
 						IncrementStateTicks := true;
+						EncoderReset <= '1';
 					end if;
 					LFSREnable <= '1';
 				end if;
