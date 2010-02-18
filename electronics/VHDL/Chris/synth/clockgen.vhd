@@ -89,6 +89,6 @@ begin
 	);
 
 	Clock100 <= BufGOut100;
-	Clock10 <= BufGOut10DCM1;
+	Clock10 <= BufGOut10DCM2;
 	Clock1 <= BufGOut1;
 end architecture Behavioural;
