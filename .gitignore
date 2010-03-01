@@ -27,6 +27,7 @@ electronics/VHDL/Chris/*.xpi
 electronics/VHDL/Chris/*.xrpt
 electronics/VHDL/Chris/*_pad.csv
 electronics/VHDL/Chris/*_pad.txt
+electronics/VHDL/Chris/common/controllerimpl.asm
 electronics/VHDL/Chris/common/controllerimpl.vhd
 electronics/VHDL/Chris/cputest
 electronics/VHDL/Chris/graycountertest
