@@ -32,22 +32,26 @@ architecture Behavioural of CPUTest is
 		"0001110000010000", -- OUT 16, r0
 		"0010000011000000", -- SEX r6, r0
 		"0001110011010001", -- OUT 17, r6
+		"0000000100100111", -- ADD r9, r7
+		"0011000101001000", -- ADDC r10, r8
+		"0001110100110010", -- OUT 18, r9
+		"0001110101010011", -- OUT 19, r10
 		"0000100000000000", -- HALT
 		"0000100000000000", -- HALT
 		others => "0000000000000000"
 	);
 	constant Regs : RAMDataType := (
-		to_signed(0, 16),
-		to_signed(0, 16),
-		to_signed(31, 16),
-		to_signed(0, 16),
-		to_signed(10000, 16),
-		to_signed(30000, 16),
-		to_signed(0, 16),
-		to_signed(0, 16),
-		to_signed(0, 16),
-		to_signed(0, 16),
-		to_signed(0, 16),
+		to_signed(0, 16),     -- r0
+		to_signed(0, 16),     -- r1
+		to_signed(31, 16),    -- r2
+		to_signed(0, 16),     -- r3
+		to_signed(10000, 16), -- r4
+		to_signed(30000, 16), -- r5
+		to_signed(0, 16),     -- r6
+		X"ABCD",              -- r7
+		X"0001",              -- r8
+		X"ABCD",              -- r9
+		X"1234",              -- r10
 		to_signed(0, 16),
 		to_signed(0, 16),
 		to_signed(0, 16),
@@ -154,7 +158,7 @@ begin
 		Reset <= '0';
 		wait for ClockPeriod * 1000;
 
-		assert IOWriteCount = 8;
+		assert IOWriteCount = 10;
 		assert OutPorts(10) = to_signed(27656, 16);
 		assert OutPorts(11) = to_signed(0, 16);
 		assert OutPorts(12) = to_signed(-1, 16);
@@ -163,6 +167,8 @@ begin
 		assert OutPorts(15) = to_signed(27656, 16);
 		assert OutPorts(16) = to_signed(-27656, 16);
 		assert OutPorts(17) = to_signed(-1, 16);
+		assert OutPorts(18) = X"579A";
+		assert OutPorts(19) = X"1236";
 
 		Done <= true;
 		wait;

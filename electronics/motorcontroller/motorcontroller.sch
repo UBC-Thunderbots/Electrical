@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2010-01-07T15:52:30 PST
+EESchema Schematic File Version 2  date 2010-02-25T15:52:51 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 8
 Title ""
-Date "7 jan 2010"
+Date "26 jan 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,7 +13,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 2750 5400 "Warning Pin power_in not driven (Net 21)" F=1
+Connection ~ 1350 6050
+Wire Wire Line
+	850  6050 2850 6050
+Wire Wire Line
+	850  6050 850  5650
 Connection ~ 4550 750 
 Wire Wire Line
 	4550 550  4550 950 
@@ -21,8 +25,6 @@ Wire Wire Line
 	4550 550  4100 550 
 Wire Wire Line
 	4850 1750 4850 5550
-Wire Wire Line
-	5600 2700 3350 2700
 Wire Wire Line
 	7000 1200 8100 1200
 Wire Wire Line
@@ -33,9 +35,7 @@ Wire Wire Line
 	7000 2100 7500 2100
 Connection ~ 2500 6050
 Wire Wire Line
-	2850 5950 2850 6050
-Wire Wire Line
-	2850 6050 1350 6050
+	2850 6050 2850 5950
 Connection ~ 7200 6500
 Wire Bus Line
 	4250 6000 4250 1050
@@ -49,15 +49,6 @@ Wire Wire Line
 Connection ~ 1750 4850
 Wire Wire Line
 	1750 5250 1750 4850
-Wire Wire Line
-	3350 2700 3350 2750
-Connection ~ 5050 4700
-Wire Wire Line
-	5600 5700 5050 5700
-Wire Wire Line
-	5050 5700 5050 2700
-Wire Wire Line
-	5050 3700 5600 3700
 Wire Wire Line
 	7000 6800 7500 6800
 Wire Wire Line
@@ -187,14 +178,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 4800 2200 4900
 Wire Wire Line
-	5050 4700 5600 4700
-Connection ~ 5050 3700
-Connection ~ 5050 2700
-Wire Wire Line
-	3450 6900 3450 6850
-Wire Wire Line
-	2200 4850 1350 4850
-Wire Wire Line
 	1350 4850 1350 5250
 Connection ~ 2200 4850
 Wire Wire Line
@@ -226,20 +209,36 @@ Wire Wire Line
 Wire Wire Line
 	4100 6550 4100 950 
 Wire Wire Line
-	3450 6850 5600 6850
-Wire Wire Line
 	5150 1550 5150 1350
 Connection ~ 5150 1350
 Wire Wire Line
 	4550 750  4400 750 
 Wire Wire Line
 	4550 950  5350 950 
+Wire Wire Line
+	850  5250 850  4850
+Wire Wire Line
+	850  4850 2200 4850
+Connection ~ 1350 4850
+$Comp
+L CAPAPOL C27
+U 1 1 4B54F203
+P 850 5450
+F 0 "C27" H 900 5550 50  0000 L CNN
+F 1 "1mF" H 900 5350 50  0000 L CNN
+F 2 "CP12" H 850 5450 60  0001 C CNN
+F 4 "4040PHBK-ND" H 850 5450 60  0001 C CNN "Field1"
+	1    850  5450
+	1    0    0    -1  
+$EndComp
 $Comp
 L MOSFET_N Q6
 U 1 1 4B467314
 P 4200 750
 F 0 "Q6" H 4210 920 60  0000 R CNN
 F 1 "MOSFET_N" H 4210 600 60  0000 R CNN
+F 2 "TO92DGS" H 4200 750 60  0001 C CNN
+F 4 "2N7000" H 4200 750 60  0001 C CNN "Field1"
 	1    4200 750 
 	-1   0    0    1   
 $EndComp
@@ -249,6 +248,8 @@ U 1 1 4B46730D
 P 4950 1550
 F 0 "Q7" H 4960 1720 60  0000 R CNN
 F 1 "MOSFET_N" H 4960 1400 60  0000 R CNN
+F 2 "TO92DGS" H 4950 1550 60  0001 C CNN
+F 4 "2N7000" H 4950 1550 60  0001 C CNN "Field1"
 	1    4950 1550
 	-1   0    0    1   
 $EndComp
@@ -258,6 +259,7 @@ U 1 1 4B3DDCE6
 P 8300 1200
 F 0 "D49" H 8300 1300 40  0000 C CNN
 F 1 "DIODE" H 8300 1100 40  0000 C CNN
+F 2 "D2" H 8300 1200 60  0001 C CNN
 	1    8300 1200
 	1    0    0    -1  
 $EndComp
@@ -275,10 +277,6 @@ F7 "BRAKEDRIVE" O L 5350 1350 60
 $EndSheet
 Text Label 5550 2550 2    60   ~ 0
 BRAKE
-Text Label 5550 6850 2    60   ~ 0
-60120D
-Text Label 5550 2700 2    60   ~ 0
-60120W
 Text Label 7050 6800 0    60   ~ 0
 VREF5
 Text Label 7050 5800 0    60   ~ 0
@@ -355,6 +353,7 @@ U 1 1 4B136D47
 P 2850 5750
 F 0 "C26" H 2900 5850 50  0000 L CNN
 F 1 "0.1uF" H 2900 5650 50  0000 L CNN
+F 2 "C2" H 2850 5750 60  0001 C CNN
 	1    2850 5750
 	1    0    0    -1  
 $EndComp
@@ -366,6 +365,7 @@ U 1 1 4AE0D305
 P 1350 5450
 F 0 "C8" H 1400 5550 50  0000 L CNN
 F 1 "0.1uF" H 1400 5350 50  0000 L CNN
+F 2 "C2" H 1350 5450 60  0001 C CNN
 	1    1350 5450
 	1    0    0    -1  
 $EndComp
@@ -375,6 +375,7 @@ U 1 1 4AE0D2F4
 P 1750 5450
 F 0 "C3" H 1800 5550 50  0000 L CNN
 F 1 "0.1uF" H 1800 5350 50  0000 L CNN
+F 2 "C2" H 1750 5450 60  0001 C CNN
 	1    1750 5450
 	1    0    0    -1  
 $EndComp
@@ -384,24 +385,6 @@ Text Label 5300 1150 2    60   ~ 0
 DIR[1..5]
 Text Label 5300 1050 2    60   ~ 0
 FAULT[1..5]
-$Comp
-L GND #PWR01
-U 1 1 4ADBAD1E
-P 3450 6900
-F 0 "#PWR01" H 3450 6900 30  0001 C CNN
-F 1 "GND" H 3450 6830 30  0001 C CNN
-	1    3450 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 4ADBAD1B
-P 3350 2750
-F 0 "#PWR02" H 3350 2750 30  0001 C CNN
-F 1 "GND" H 3350 2680 30  0001 C CNN
-	1    3350 2750
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 7500 2050 2550 4800
 U 4ADA6DA3
@@ -518,6 +501,7 @@ U 1 1 4ADA5FCB
 P 2500 5750
 F 0 "R3" V 2580 5750 50  0000 C CNN
 F 1 "10kR" V 2500 5750 50  0000 C CNN
+F 2 "R1" H 2500 5750 60  0001 C CNN
 	1    2500 5750
 	1    0    0    -1  
 $EndComp
@@ -527,6 +511,7 @@ U 1 1 4ADA5FCA
 P 2500 5150
 F 0 "R2" V 2580 5150 50  0000 C CNN
 F 1 "11kR" V 2500 5150 50  0000 C CNN
+F 2 "R1" H 2500 5150 60  0001 C CNN
 	1    2500 5150
 	1    0    0    -1  
 $EndComp
@@ -536,6 +521,7 @@ U 1 1 4ADA5D38
 P 2200 5150
 F 0 "R1" V 2280 5150 50  0000 C CNN
 F 1 "1kR" V 2200 5150 50  0000 C CNN
+F 2 "R1" H 2200 5150 60  0001 C CNN
 	1    2200 5150
 	1    0    0    -1  
 $EndComp
@@ -545,23 +531,24 @@ U 1 1 4ADA5D2D
 P 2200 5700
 F 0 "D1" H 2200 5800 50  0000 C CNN
 F 1 "BZX79-C5V1" H 2200 5600 40  0000 C CNN
+F 2 "D2" H 2200 5700 60  0001 C CNN
 	1    2200 5700
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR01
 U 1 1 4ADA5D25
 P 2350 6100
-F 0 "#PWR03" H 2350 6100 30  0001 C CNN
+F 0 "#PWR01" H 2350 6100 30  0001 C CNN
 F 1 "GND" H 2350 6030 30  0001 C CNN
 	1    2350 6100
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR04
+L +BATT #PWR02
 U 1 1 4ADA5D23
 P 2200 4800
-F 0 "#PWR04" H 2200 4750 20  0001 C CNN
+F 0 "#PWR02" H 2200 4750 20  0001 C CNN
 F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    2200 4800
 	1    0    0    -1  
@@ -582,7 +569,6 @@ F9 "VREF" O R 7000 2800 60
 F10 "PWM" I L 5600 2400 60 
 F11 "FAULT" O L 5600 2100 60 
 F12 "BRAKE" I L 5600 2550 60 
-F13 "60120" I L 5600 2700 60 
 $EndSheet
 $Sheet
 S 5600 3050 1400 800 
@@ -600,7 +586,6 @@ F9 "VREF" O R 7000 3800 60
 F10 "PWM" I L 5600 3400 60 
 F11 "FAULT" O L 5600 3100 60 
 F12 "BRAKE" I L 5600 3550 60 
-F13 "60120" I L 5600 3700 60 
 $EndSheet
 $Sheet
 S 5600 4050 1400 800 
@@ -618,7 +603,6 @@ F9 "VREF" O R 7000 4800 60
 F10 "PWM" I L 5600 4400 60 
 F11 "FAULT" O L 5600 4100 60 
 F12 "BRAKE" I L 5600 4550 60 
-F13 "60120" I L 5600 4700 60 
 $EndSheet
 $Sheet
 S 5600 5050 1400 800 
@@ -636,7 +620,6 @@ F9 "VREF" O R 7000 5800 60
 F10 "PWM" I L 5600 5400 60 
 F11 "FAULT" O L 5600 5100 60 
 F12 "BRAKE" I L 5600 5550 60 
-F13 "60120" I L 5600 5700 60 
 $EndSheet
 $Sheet
 S 5600 6050 1400 900 
@@ -654,6 +637,5 @@ F9 "VREF" O R 7000 6800 60
 F10 "PWM" I L 5600 6400 60 
 F11 "FAULT" O L 5600 6100 60 
 F12 "BRAKE" I L 5600 6550 60 
-F13 "60120" I L 5600 6850 60 
 $EndSheet
 $EndSCHEMATC

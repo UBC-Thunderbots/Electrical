@@ -3,19 +3,19 @@ config part=xc3s50atq144-4;
 config vccaux=3.3;
 config post_crc=enable;
 
-# Connection to the canned 50MHz oscillator.
-timespec "TSOscillator" = PERIOD "Oscillator" 20 ns;
-net "Oscillator" iostandard=LVCMOS33 | loc=P127 | float | tnm_net="Oscillator";
+# Connection to the PIC's Fosc/4 output (at 2MHz).
+timespec "TSPICOscillator" = PERIOD "PICOscillator" 500 ns;
+net "PICOscillator" iostandard=LVCMOS33 | loc=P125 | float | tnm_net="PICOscillator";
 
 # Serial lines to and from the XBee.
 # Pullup on RX causes line to go idle by default.
-net "XBeeRX" iostandard=LVCMOS33 | loc=P110 | pullup;
-net "XBeeTX" iostandard=LVCMOS33 | loc=P111;
+net "XBeeRX" iostandard=LVCMOS33 | loc=P32 | pullup;
+net "XBeeTX" iostandard=LVCMOS33 | loc=P31;
 
 # SPI lines to and from the PIC.
 # Pullup on AppSS causes slave select to deassert by default.
 # Pulldowns on AppIn and AppClk prevent floating inputs.
-net "AppSS" iostandard=LVCMOS33 | loc=P112 | pullup;
+net "AppSS" iostandard=LVCMOS33 | loc=P64 | pullup;
 net "AppIn" iostandard=LVCMOS33 | loc=P62 | pulldown;
 net "AppOut" iostandard=LVCMOS33 | loc=P71;
 net "AppClk" iostandard=LVCMOS33 | loc=P72 | pulldown;
@@ -26,31 +26,55 @@ net "AppClk" iostandard=LVCMOS33 | loc=P72 | pulldown;
 # Pullups on Fault* are because the motor controllers have open-collector
 # outputs.
 # Pullup on DSense is because the Hall sensor has an open-collector output.
-net "BrakeDrive" iostandard=LVCMOS33 | loc=P104;
-net "BrakeDribbler" iostandard=LVCMOS33 | loc=P84;
-net "PWM1" iostandard=LVCMOS33 | loc=P102;
-net "PWM2" iostandard=LVCMOS33 | loc=P99;
-net "PWM4" iostandard=LVCMOS33 | loc=P93;
-net "PWM3" iostandard=LVCMOS33 | loc=P91;
-net "PWMD" iostandard=LVCMOS33 | loc=P88;
-net "Dir1" iostandard=LVCMOS33 | loc=P85 | pullup;
-net "Dir2" iostandard=LVCMOS33 | loc=P83 | pullup;
-net "Dir4" iostandard=LVCMOS33 | loc=P78 | pullup;
-net "Dir3" iostandard=LVCMOS33 | loc=P76 | pullup;
-net "DirD" iostandard=LVCMOS33 | loc=P31 | pullup;
-net "Fault1" iostandard=LVCMOS33 | loc=P103 | pullup;
-net "Fault2" iostandard=LVCMOS33 | loc=P101 | pullup;
-net "Fault4" iostandard=LVCMOS33 | loc=P98 | pullup;
-net "Fault3" iostandard=LVCMOS33 | loc=P92 | pullup;
-net "FaultD" iostandard=LVCMOS33 | loc=P90 | pullup;
-net "DSense" iostandard=LVCMOS33 | loc=P87 | pullup;
+net "BrakeDrive" iostandard=LVCMOS33 | loc=P117;
+net "BrakeDribbler" iostandard=LVCMOS33 | loc=P98;
+net "PWM1" iostandard=LVCMOS33 | loc=P115;
+net "PWM2" iostandard=LVCMOS33 | loc=P113;
+net "PWM3" iostandard=LVCMOS33 | loc=P104;
+net "PWM4" iostandard=LVCMOS33 | loc=P111;
+net "PWMD" iostandard=LVCMOS33 | loc=P102;
+net "Dir1" iostandard=LVCMOS33 | loc=P99 | pullup;
+net "Dir2" iostandard=LVCMOS33 | loc=P96 | pullup;
+net "Dir3" iostandard=LVCMOS33 | loc=P90 | pullup;
+net "Dir4" iostandard=LVCMOS33 | loc=P92 | pullup;
+net "DirD" iostandard=LVCMOS33 | loc=P87 | pullup;
+net "Fault1" iostandard=LVCMOS33 | loc=P116 | pullup;
+net "Fault2" iostandard=LVCMOS33 | loc=P114 | pullup;
+net "Fault3" iostandard=LVCMOS33 | loc=P110 | pullup;
+net "Fault4" iostandard=LVCMOS33 | loc=P112 | pullup;
+net "FaultD" iostandard=LVCMOS33 | loc=P103 | pullup;
+net "DSense" iostandard=LVCMOS33 | loc=P101 | pullup;
 
 # Optical encoder phase lines.
-net "Encoder1A" iostandard=LVCMOS33 | loc=P18;
-net "Encoder1B" iostandard=LVCMOS33 | loc=P16;
-net "Encoder2A" iostandard=LVCMOS33 | loc=P15;
-net "Encoder2B" iostandard=LVCMOS33 | loc=P13;
-net "Encoder3A" iostandard=LVCMOS33 | loc=P12;
-net "Encoder3B" iostandard=LVCMOS33 | loc=P11;
-net "Encoder4A" iostandard=LVCMOS33 | loc=P10;
-net "Encoder4B" iostandard=LVCMOS33 | loc=P8;
+net "Encoder1A" iostandard=LVCMOS33 | loc=P7;
+net "Encoder1B" iostandard=LVCMOS33 | loc=P8;
+net "Encoder2A" iostandard=LVCMOS33 | loc=P10;
+net "Encoder2B" iostandard=LVCMOS33 | loc=P11;
+net "Encoder3A" iostandard=LVCMOS33 | loc=P3;
+net "Encoder3B" iostandard=LVCMOS33 | loc=P4;
+net "Encoder4A" iostandard=LVCMOS33 | loc=P5;
+net "Encoder4B" iostandard=LVCMOS33 | loc=P6;
+
+# Chicker lines.
+net "ChickerCharge" iostandard=LVCMOS33 | loc=P12;
+net "ChickerDone" iostandard=LVCMOS33 | loc=P13 | pullup;
+net "ChickerFault" iostandard=LVCMOS33 | loc=P15 | pullup;
+net "ChickerKick" iostandard=LVCMOS33 | loc=P21;
+net "ChickerChip" iostandard=LVCMOS33 | loc=P25;
+
+# LED indicator line.
+net "LED" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P27;
+
+# Virtual rails.
+net "VGnd1" iostandard=LVCMOS33 | loc=P30;
+net "VGnd2" iostandard=LVCMOS33 | loc=P138;
+net "VGnd3" iostandard=LVCMOS33 | loc=P139;
+net "VGnd4" iostandard=LVCMOS33 | loc=P141;
+net "VGnd5" iostandard=LVCMOS33 | loc=P142;
+net "VGnd6" iostandard=LVCMOS33 | loc=P68;
+net "VGnd7" iostandard=LVCMOS33 | loc=P69;
+net "VGnd8" iostandard=LVCMOS33 | loc=P70;
+net "VVcc1" iostandard=LVCMOS33 | loc=P129;
+net "VVcc2" iostandard=LVCMOS33 | loc=P130;
+net "VVcc3" iostandard=LVCMOS33 | loc=P131;
+net "VVcc4" iostandard=LVCMOS33 | loc=P132;

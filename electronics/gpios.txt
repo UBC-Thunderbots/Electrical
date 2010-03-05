@@ -1,39 +1,31 @@
 GPIO#	Name	Peer Loc	Purpose
-   1	P104	Motorcon	BrakeDrive
-   2	P103	Motorcon	Fault1
-   3	P102	Motorcon	PWM1
-   4	P101	Motorcon	Fault2
-   5	P99 	Motorcon	PWM2
-   6	P98 	Motorcon	Fault3
-   7	P93 	Motorcon	PWM3
-   8	P92 	Motorcon	Fault4
-   9	P91 	Motorcon	PWM4
-  10	P90 	Motorcon	FaultD
-  11	P88 	Motorcon	PWMD
-  12	P87 	Motorcon	DSense
-  13	P85 	Motorcon	Dir1
-  14	P84 	Motorcon	BrakeDribbler
-  15	P83 	Motorcon	Dir2
-  16	P82
-  17	P78 	Motorcon	Dir3
-  18	P77
-  19	P76 	Motorcon	Dir4
-  20	P32
-  21	P31 	Motorcon	DirD
-  22	P30
-  23	P29 	Solenoids	Kick
-  24	P28
-  25	P27 	Solenoids	Chip
-  26	P25
-  27	P24 	Solenoids	Charge
-  28	P21
-  29	P20
-  30	P19
-  31	P18 	Encoder 	E1A
-  32	P16 	Encoder 	E1B
-  33	P15 	Encoder 	E2A
-  34	P13 	Encoder 	E2B
-  35	P12 	Encoder 	E3A
-  36	P11 	Encoder 	E3B
-  37	P10 	Encoder 	E4A
-  38	P8  	Encoder 	E4B
+   1	P117	Motorcon	BrakeDrive
+   2	P116	Motorcon	Fault1
+   3	P115	Motorcon	PWM1
+   4	P114	Motorcon	Fault2
+   5	P113	Motorcon	PWM2
+   6	P112	Motorcon	Fault3
+   7	P111	Motorcon	PWM3
+   8	P110	Motorcon	Fault4
+   9	P104	Motorcon	PWM4
+  10	P103	Motorcon	FaultD
+  11	P102	Motorcon	PWMD
+  12	P101	Motorcon	DSense
+  13	P99 	Motorcon	Dir1
+  14	P98 	Motorcon	BrakeDribbler
+  15	P96 	Motorcon	Dir2
+  16	P93
+  17	P92 	Motorcon	Dir3
+  18	P91
+  19	P90 	Motorcon	Dir4
+  20	P88
+  21	P87 	Motorcon	DirD
+  22	P85
+  23	P84
+  24	P83
+  25	P82
+  26	P79
+  27	P78
+  28	P77
+  29	P76
+  30	P75

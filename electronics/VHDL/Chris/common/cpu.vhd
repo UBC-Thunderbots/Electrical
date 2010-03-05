@@ -45,6 +45,10 @@ use work.types.all;
 --  ADD RA RB (O=000000) - Add
 --   Adds the values of RA and RB. The result is stored into RA.
 --
+--  ADDC RA RB (O=001100) - Add with Carry
+--   Adds the values of RA and RB. If the most recent ADD or ADDC experienced a
+--   carry, adds 1. The result is stored into RA.
+--
 --  CLAMP RA RB (O=000001) - Clamp to Interval
 --   Clamps the value of RA to fall within +/-RB. The result is stored into RA.
 --
@@ -117,6 +121,8 @@ architecture Behavioural of CPU is
 	signal NewRB : signed(15 downto 0);
 	signal ALUIOWrite : std_ulogic;
 	signal Halt : std_ulogic;
+	signal Carry : std_ulogic := '0';
+	signal CarryOut : std_ulogic;
 begin
 	ALUInstance : entity work.ALU(Behavioural)
 	port map(
@@ -130,7 +136,9 @@ begin
 		IOInData => IOInData,
 		IOOutData => IOOutData,
 		IOWrite => ALUIOWrite,
-		Halt => Halt
+		Halt => Halt,
+		CarryIn => Carry,
+		CarryOut => CarryOut
 	);
 
 	IOWrite <= '1' when ALUIOWrite = '1' and State = Executing else '0';
@@ -147,6 +155,7 @@ begin
 				PC <= ResetAddress;
 				LoadInstruction := true;
 				ROMAddress := ResetAddress;
+				Carry <= '0';
 			elsif State = Decoding then
 				State <= Executing;
 				PC <= PC + 1;
@@ -158,6 +167,7 @@ begin
 				end if;
 				LoadInstruction := true;
 				ROMAddress := PC;
+				Carry <= CarryOut;
 			end if;
 
 			if LoadInstruction then

@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2010-01-11T16:10:45 PST
+EESchema-DOCLIB  Version 2.0  Date: 2010-01-22T13:15:58 PST
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -10,9 +10,18 @@ D Oscillator 50MHz
 K OSCILLATOR
 $ENDCMP
 #
+$CMP AOP605
+F transistors/mos/*.*
+$ENDCMP
+#
 $CMP LD1117V33C
 D Linear Regulator +3.3V
 K POWER REGUL
+$ENDCMP
+#
+$CMP M25P16-8
+D Flash Memory
+K FLASH MEMORY
 $ENDCMP
 #
 $CMP MCP1827S-1202E/AB

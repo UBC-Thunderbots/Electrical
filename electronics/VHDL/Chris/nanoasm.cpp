@@ -41,6 +41,7 @@ namespace {
 
 	const instruction_pattern ALL_INSTRUCTIONS[] = {
 		instruction_pattern("ADD", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 0),
+		instruction_pattern("ADDC", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 12),
 		instruction_pattern("CLAMP", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 1),
 		instruction_pattern("HALT", instruction_pattern::ARG_NONE, instruction_pattern::ARG_NONE, 2),
 		instruction_pattern("IN", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_CB_IPORT, 3),

@@ -17,7 +17,10 @@ entity ALU is
 		IOOutData : out signed(15 downto 0);
 		IOWrite : out std_ulogic;
 
-		Halt : out std_ulogic
+		Halt : out std_ulogic;
+
+		CarryIn : in std_ulogic;
+		CarryOut : out std_ulogic
 	);
 end entity ALU;
 
@@ -26,13 +29,18 @@ architecture Behavioural of ALU is
 	signal Shifted1 : signed(31 downto 0);
 	signal Shifted2 : signed(31 downto 0);
 	signal Shifted4 : signed(31 downto 0);
+	signal Addend1 : signed(15 downto 0) := to_signed(0, 16);
+	signal Addend2 : signed(15 downto 0) := to_signed(0, 16);
+	signal AddendC : natural range 0 to 1 := 0;
+	signal Sum : std_ulogic_vector(16 downto 0);
 begin
 	Product <= RA * RB;
 	Shifted1 <= signed(to_stdulogicvector(to_bitvector(std_ulogic_vector(signed'(RA & RB))) sra 1));
 	Shifted2 <= signed(to_stdulogicvector(to_bitvector(std_ulogic_vector(signed'(RA & RB))) sra 2));
 	Shifted4 <= signed(to_stdulogicvector(to_bitvector(std_ulogic_vector(signed'(RA & RB))) sra 4));
+	Sum <= std_ulogic_vector(to_unsigned(to_integer(unsigned(std_ulogic_vector(Addend1))) + to_integer(unsigned(std_ulogic_vector(Addend2))) + AddendC, 17));
 
-	process(O, RA, RB, CB, IOInData, Product, Shifted1, Shifted2, Shifted4)
+	process(O, RA, RB, CB, IOInData, Product, Shifted1, Shifted2, Shifted4, Sum)
 		variable Opcode : natural range 0 to 15;
 	begin
 		Opcode := to_integer(O(3 downto 0));
@@ -42,15 +50,22 @@ begin
 		IOOutData <= RA;
 		IOWrite <= '0';
 		Halt <= '0';
+		CarryOut <= CarryIn;
+		Addend1 <= RA;
+		Addend2 <= RB;
+		AddendC <= 0;
 		if Opcode = 0 then
 			-- ADD
-			NewRA <= RA + RB;
+			NewRA <= signed(Sum(15 downto 0));
+			CarryOut <= Sum(16);
 		elsif Opcode = 1 then
 			-- CLAMP
+			Addend1 <= to_signed(1, 16);
+			Addend2 <= not RB;
 			if RA > RB then
 				NewRA <= RB;
-			elsif RA < -RB then
-				NewRA <= -RB;
+			elsif RA < signed(Sum(15 downto 0)) then
+				NewRA <= signed(Sum(15 downto 0));
 			end if;
 		elsif Opcode = 2 then
 			-- HALT
@@ -67,7 +82,9 @@ begin
 			NewRB <= Product(15 downto 0);
 		elsif Opcode = 6 then
 			-- NEG
-			NewRA <= -RB;
+			Addend1 <= to_signed(1, 16);
+			Addend2 <= not RB;
+			NewRA <= signed(Sum(15 downto 0));
 		elsif Opcode = 7 then
 			-- OUT
 			IOWrite <= '1';
@@ -86,6 +103,13 @@ begin
 			-- SHR32_4
 			NewRA <= Shifted4(31 downto 16);
 			NewRB <= Shifted4(15 downto 0);
+		elsif Opcode = 12 then
+			-- ADDC
+			if CarryIn = '1' then
+				AddendC <= 1;
+			end if;
+			NewRA <= signed(Sum(15 downto 0));
+			CarryOut <= Sum(16);
 		end if;
 	end process;
 end architecture Behavioural;

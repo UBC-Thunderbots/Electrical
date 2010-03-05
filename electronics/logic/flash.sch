@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2010-01-05T15:27:22 PST
+EESchema Schematic File Version 2  date 2010-03-01T12:17:35 PST
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 6 7
+Sheet 7 8
 Title ""
-Date "24 dec 2009"
+Date "20 jan 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,38 +13,50 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L W25X16AVDAIZ U6
-U 1 1 4B1353EA
-P 5850 4150
-F 0 "U6" H 5850 4150 60  0000 C CNN
-F 1 "W25X16AVDAIZ" H 5850 4450 60  0000 C CNN
-	1    5850 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7050 4300 6600 4300
-Wire Wire Line
-	4450 4200 5100 4200
-Wire Wire Line
-	4450 4000 5100 4000
-Connection ~ 6650 4000
-Wire Wire Line
-	6650 3950 6650 4100
 Wire Wire Line
 	6650 4100 6600 4100
 Wire Wire Line
-	6650 4000 6600 4000
+	5050 4300 5100 4300
 Wire Wire Line
-	5100 4300 5050 4300
+	7050 4300 6600 4300
 Wire Wire Line
-	5050 4300 5050 4350
+	4450 4000 5100 4000
 Wire Wire Line
 	4450 4100 5100 4100
 Wire Wire Line
 	6600 4200 7050 4200
-Text HLabel 4450 4200 0    60   Input ~ 0
-/WP
+Wire Wire Line
+	5100 4200 5050 4200
+Wire Wire Line
+	6600 4000 6650 4000
+$Comp
+L VCC #PWR080
+U 1 1 4B557990
+P 5050 4200
+F 0 "#PWR080" H 5050 4300 30  0001 C CNN
+F 1 "VCC" H 5050 4300 30  0000 C CNN
+	1    5050 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR081
+U 1 1 4B557970
+P 6650 4100
+F 0 "#PWR081" H 6650 4200 30  0001 C CNN
+F 1 "VCC" H 6650 4200 30  0000 C CNN
+	1    6650 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L M25P16-8 U6
+U 1 1 4B557951
+P 5850 4150
+F 0 "U6" H 5850 4150 60  0000 C CNN
+F 1 "M25P16-8" H 5850 4450 60  0000 C CNN
+F 2 "M25P16-VMN" H 5850 4150 60  0001 C CNN
+	1    5850 4150
+	1    0    0    -1  
+$EndComp
 Text HLabel 4450 4100 0    60   Output ~ 0
 DOUT
 Text HLabel 4450 4000 0    60   Input ~ 0
@@ -54,21 +66,21 @@ DIN
 Text HLabel 7050 4200 2    60   Input ~ 0
 CLK
 $Comp
-L GND #PWR39
+L GND #PWR082
 U 1 1 4ABE8D7B
-P 5050 4350
-F 0 "#PWR39" H 5050 4350 30  0001 C CNN
-F 1 "GND" H 5050 4280 30  0001 C CNN
-	1    5050 4350
-	1    0    0    -1  
+P 5050 4300
+F 0 "#PWR082" H 5050 4300 30  0001 C CNN
+F 1 "GND" H 5050 4230 30  0001 C CNN
+	1    5050 4300
+	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR40
+L VCC #PWR083
 U 1 1 4ABE8D6C
-P 6650 3950
-F 0 "#PWR40" H 6650 4050 30  0001 C CNN
-F 1 "VCC" H 6650 4050 30  0000 C CNN
-	1    6650 3950
-	1    0    0    -1  
+P 6650 4000
+F 0 "#PWR083" H 6650 4100 30  0001 C CNN
+F 1 "VCC" H 6650 4100 30  0000 C CNN
+	1    6650 4000
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC

@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2010-01-07T15:52:30 PST
+EESchema Schematic File Version 2  date 2010-02-25T15:52:51 PST
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 8
 Title ""
-Date "7 jan 2010"
+Date "26 jan 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -91,19 +91,19 @@ Text HLabel 3800 2100 2    60   Output ~ 0
 BRAKEDRIBBLER
 NoConn ~ 3050 2050
 $Comp
-L PWR_FLAG #FLG05
+L PWR_FLAG #FLG03
 U 1 1 4B132953
 P 5600 2750
-F 0 "#FLG05" H 5600 3020 30  0001 C CNN
+F 0 "#FLG03" H 5600 3020 30  0001 C CNN
 F 1 "PWR_FLAG" H 5600 2980 30  0000 C CNN
 	1    5600 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG06
+L PWR_FLAG #FLG04
 U 1 1 4B13294C
 P 5600 2050
-F 0 "#FLG06" H 5600 2320 30  0001 C CNN
+F 0 "#FLG04" H 5600 2320 30  0001 C CNN
 F 1 "PWR_FLAG" H 5600 2280 30  0000 C CNN
 	1    5600 2050
 	1    0    0    -1  
@@ -132,19 +132,19 @@ NoConn ~ 2250 2650
 NoConn ~ 2250 2550
 NoConn ~ 2250 2450
 $Comp
-L GND #PWR07
+L GND #PWR05
 U 1 1 4ADA585E
 P 5900 2850
-F 0 "#PWR07" H 5900 2850 30  0001 C CNN
+F 0 "#PWR05" H 5900 2850 30  0001 C CNN
 F 1 "GND" H 5900 2780 30  0001 C CNN
 	1    5900 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR08
+L +BATT #PWR06
 U 1 1 4ADA585A
 P 5800 2050
-F 0 "#PWR08" H 5800 2000 20  0001 C CNN
+F 0 "#PWR06" H 5800 2000 20  0001 C CNN
 F 1 "+BATT" H 5800 2150 30  0000 C CNN
 	1    5800 2050
 	1    0    0    -1  
@@ -155,6 +155,7 @@ U 1 1 4ADA582B
 P 6350 2700
 F 0 "P4" V 6300 2700 40  0000 C CNN
 F 1 "CONN_2" V 6400 2700 40  0000 C CNN
+F 2 "643226-1" H 6350 2700 60  0001 C CNN
 	1    6350 2700
 	1    0    0    -1  
 $EndComp
@@ -164,6 +165,7 @@ U 1 1 4ADA5828
 P 6350 2200
 F 0 "P3" V 6300 2200 40  0000 C CNN
 F 1 "CONN_2" V 6400 2200 40  0000 C CNN
+F 2 "643226-1" H 6350 2200 60  0001 C CNN
 	1    6350 2200
 	1    0    0    -1  
 $EndComp
@@ -241,6 +243,8 @@ U 1 1 4ADA3E2D
 P 2650 2300
 F 0 "P1" H 2650 3350 60  0000 C CNN
 F 1 "CONN_20X2" V 2650 2300 50  0000 C CNN
+F 2 "IDC-40" H 2650 2300 60  0001 C CNN
+F 4 "MHC40E-ND" H 2650 2300 60  0001 C CNN "Field1"
 	1    2650 2300
 	1    0    0    -1  
 $EndComp
