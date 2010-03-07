@@ -40,7 +40,7 @@ begin
 	Shifted4 <= signed(to_stdulogicvector(to_bitvector(std_ulogic_vector(signed'(RA & RB))) sra 4));
 	Sum <= std_ulogic_vector(to_unsigned(to_integer(unsigned(std_ulogic_vector(Addend1))) + to_integer(unsigned(std_ulogic_vector(Addend2))) + AddendC, 17));
 
-	process(O, RA, RB, CB, IOInData, Product, Shifted1, Shifted2, Shifted4, Sum)
+	process(O, RA, RB, CB, IOInData, CarryIn, Product, Shifted1, Shifted2, Shifted4, Sum)
 		variable Opcode : natural range 0 to 15;
 	begin
 		Opcode := to_integer(O(3 downto 0));
