@@ -93,14 +93,8 @@ architecture Behavioural of Main is
 	signal Fault4L : std_ulogic := '0';
 	signal FaultDL : std_ulogic := '0';
 	signal DSenseL : std_ulogic := '0';
-	signal Encoder1AL : std_ulogic := '0';
-	signal Encoder1BL : std_ulogic := '0';
-	signal Encoder2AL : std_ulogic := '0';
-	signal Encoder2BL : std_ulogic := '0';
-	signal Encoder3AL : std_ulogic := '0';
-	signal Encoder3BL : std_ulogic := '0';
-	signal Encoder4AL : std_ulogic := '0';
-	signal Encoder4BL : std_ulogic := '0';
+	signal EncoderAL : std_ulogic_vector(1 to 4) := "0000";
+	signal EncoderBL : std_ulogic_vector(1 to 4) := "0000";
 
 	-- Mode flags from the XBee.
 	signal DirectDriveFlag : std_ulogic;
@@ -115,10 +109,8 @@ architecture Behavioural of Main is
 	signal Drive4 : signed(10 downto 0);
 
 	-- Encoder counts from the Gray counters.
-	signal Encoder1Count : signed(10 downto 0);
-	signal Encoder2Count : signed(10 downto 0);
-	signal Encoder3Count : signed(10 downto 0);
-	signal Encoder4Count : signed(10 downto 0);
+	type EncoderCountType is array(1 to 4) of signed(10 downto 0);
+	signal EncoderCount : EncoderCountType;
 	signal EncoderReset : std_ulogic;
 
 	-- Controller outputs.
@@ -128,22 +120,18 @@ architecture Behavioural of Main is
 	signal ControlM4 : signed(10 downto 0);
 
 	-- Motor powers from the controller or direct drive.
-	signal Motor1 : signed(10 downto 0);
-	signal Motor2 : signed(10 downto 0);
-	signal Motor3 : signed(10 downto 0);
-	signal Motor4 : signed(10 downto 0);
+	type MotorType is array(1 to 4) of signed(10 downto 0);
+	signal Motor : MotorType;
 
 	-- Duty cycles from the sign-magnitude converters.
-	signal DutyCycle1 : unsigned(9 downto 0);
-	signal DutyCycle2 : unsigned(9 downto 0);
-	signal DutyCycle3 : unsigned(9 downto 0);
-	signal DutyCycle4 : unsigned(9 downto 0);
+	type DutyCycleType is array(1 to 4) of unsigned(9 downto 0);
+	signal DutyCycle : DutyCycleType;
 
 	-- Directions from the sign-magnitude converters.
-	signal Dir1T : std_ulogic := '0';
-	signal Dir2T : std_ulogic := '0';
-	signal Dir3T : std_ulogic := '0';
-	signal Dir4T : std_ulogic := '0';
+	signal DirT : std_ulogic_vector(1 to 4) := "0000";
+
+	-- PWM signals from the PWM generators.
+	signal PWM : std_ulogic_vector(1 to 4) := "0000";
 
 	-- Dribbler stuff.
 	signal Dribble : signed(10 downto 0);
@@ -172,14 +160,14 @@ begin
 			Fault4L <= Fault4;
 			FaultDL <= FaultD;
 			DSenseL <= DSense;
-			Encoder1AL <= Encoder1A;
-			Encoder1BL <= Encoder1B;
-			Encoder2AL <= Encoder2A;
-			Encoder2BL <= Encoder2B;
-			Encoder3AL <= Encoder3A;
-			Encoder3BL <= Encoder3B;
-			Encoder4AL <= Encoder4A;
-			Encoder4BL <= Encoder4B;
+			EncoderAL(1) <= Encoder1A;
+			EncoderAL(2) <= Encoder2A;
+			EncoderAL(3) <= Encoder3A;
+			EncoderAL(4) <= Encoder4A;
+			EncoderBL(1) <= Encoder1B;
+			EncoderBL(2) <= Encoder2B;
+			EncoderBL(3) <= Encoder3B;
+			EncoderBL(4) <= Encoder4B;
 		end if;
 	end process;
 	process(Clock10)
@@ -222,54 +210,22 @@ begin
 	BrakeDribbler <= '0' when DribbleFlag = '1' and RXTimeout = '0' else '1';
 
 	-- Wheel stuff.
-	GrayCounterInstance1 : entity work.GrayCounter(Behavioural)
-	generic map(
-		Width => 11,
-		Sign => -1
-	)
-	port map(
-		Clock1 => Clock1,
-		A => Encoder1AL,
-		B => Encoder1BL,
-		Reset => EncoderReset,
-		Count => Encoder1Count
-	);
-	GrayCounterInstance2 : entity work.GrayCounter(Behavioural)
-	generic map(
-		Width => 11,
-		Sign => -1
-	)
-	port map(
-		Clock1 => Clock1,
-		A => Encoder2AL,
-		B => Encoder2BL,
-		Reset => EncoderReset,
-		Count => Encoder2Count
-	);
-	GrayCounterInstance3 : entity work.GrayCounter(Behavioural)
-	generic map(
-		Width => 11,
-		Sign => -1
-	)
-	port map(
-		Clock1 => Clock1,
-		A => Encoder3AL,
-		B => Encoder3BL,
-		Reset => EncoderReset,
-		Count => Encoder3Count
-	);
-	GrayCounterInstance4 : entity work.GrayCounter(Behavioural)
-	generic map(
-		Width => 11,
-		Sign => -1
-	)
-	port map(
-		Clock1 => Clock1,
-		A => Encoder4AL,
-		B => Encoder4BL,
-		Reset => EncoderReset,
-		Count => Encoder4Count
-	);
+	GrayCounters : for I in 1 to 4 generate
+	begin
+		Instance : entity work.GrayCounter(Behavioural)
+		generic map(
+			Width => 11,
+			Sign => -1
+		)
+		port map(
+			Clock1 => Clock1,
+			A => EncoderAL(I),
+			B => EncoderBL(I),
+			Reset => EncoderReset,
+			Count => EncoderCount(I)
+		);
+	end generate;
+
 	ControllerInstance : entity work.Controller(Behavioural)
 	port map(
 		Clock1 => Clock1,
@@ -279,119 +235,73 @@ begin
 		Drive2 => Drive2,
 		Drive3 => Drive3,
 		Drive4 => Drive4,
-		Encoder1 => Encoder1Count,
-		Encoder2 => Encoder2Count,
-		Encoder3 => Encoder3Count,
-		Encoder4 => Encoder4Count,
+		Encoder1 => EncoderCount(1),
+		Encoder2 => EncoderCount(2),
+		Encoder3 => EncoderCount(3),
+		Encoder4 => EncoderCount(4),
 		EncoderReset => EncoderReset,
 		Motor1 => ControlM1,
 		Motor2 => ControlM2,
 		Motor3 => ControlM3,
 		Motor4 => ControlM4
 	);
+
 	process(DirectDriveFlag, ControlledDriveFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
 	begin
 		if DirectDriveFlag = '1' then
-			Motor1 <= Drive1;
-			Motor2 <= Drive2;
-			Motor3 <= Drive3;
-			Motor4 <= Drive4;
+			Motor(1) <= Drive1;
+			Motor(2) <= Drive2;
+			Motor(3) <= Drive3;
+			Motor(4) <= Drive4;
 		elsif ControlledDriveFlag = '1' then
-			Motor1 <= ControlM1;
-			Motor2 <= ControlM2;
-			Motor3 <= ControlM3;
-			Motor4 <= ControlM4;
+			Motor(1) <= ControlM1;
+			Motor(2) <= ControlM2;
+			Motor(3) <= ControlM3;
+			Motor(4) <= ControlM4;
 		else
-			Motor1 <= to_signed(0, 11);
-			Motor2 <= to_signed(0, 11);
-			Motor3 <= to_signed(0, 11);
-			Motor4 <= to_signed(0, 11);
+			Motor(1) <= to_signed(0, 11);
+			Motor(2) <= to_signed(0, 11);
+			Motor(3) <= to_signed(0, 11);
+			Motor(4) <= to_signed(0, 11);
 		end if;
 	end process;
-	SignMagnitude1Instance : entity work.SignMagnitude(Behavioural)
-	generic map(
-		Width => 11
-	)
-	port map(
-		Value => Motor1,
-		Absolute => DutyCycle1,
-		Sign => Dir1T
-	);
-	PWM1Instance : entity work.PWM(Behavioural)
-	generic map(
-		Width => 10,
-		Modulus => 1023,
-		Invert => true
-	)
-	port map(
-		Clock100 => Clock100,
-		DutyCycle => DutyCycle1,
-		PWM => PWM1
-	);
-	SignMagnitude2Instance : entity work.SignMagnitude(Behavioural)
-	generic map(
-		Width => 11
-	)
-	port map(
-		Value => Motor2,
-		Absolute => DutyCycle2,
-		Sign => Dir2T
-	);
-	PWM2Instance : entity work.PWM(Behavioural)
-	generic map(
-		Width => 10,
-		Modulus => 1023,
-		Invert => true
-	)
-	port map(
-		Clock100 => Clock100,
-		DutyCycle => DutyCycle2,
-		PWM => PWM2
-	);
-	SignMagnitude3Instance : entity work.SignMagnitude(Behavioural)
-	generic map(
-		Width => 11
-	)
-	port map(
-		Value => Motor3,
-		Absolute => DutyCycle3,
-		Sign => Dir3T
-	);
-	PWM3Instance : entity work.PWM(Behavioural)
-	generic map(
-		Width => 10,
-		Modulus => 1023,
-		Invert => true
-	)
-	port map(
-		Clock100 => Clock100,
-		DutyCycle => DutyCycle3,
-		PWM => PWM3
-	);
-	SignMagnitude4Instance : entity work.SignMagnitude(Behavioural)
-	generic map(
-		Width => 11
-	)
-	port map(
-		Value => Motor4,
-		Absolute => DutyCycle4,
-		Sign => Dir4T
-	);
-	PWM4Instance : entity work.PWM(Behavioural)
-	generic map(
-		Width => 10,
-		Modulus => 1023,
-		Invert => true
-	)
-	port map(
-		Clock100 => Clock100,
-		DutyCycle => DutyCycle4,
-		PWM => PWM4
-	);
-	Dir1 <= '0' when Dir1T = '1' else 'Z';
-	Dir2 <= 'Z' when Dir2T = '1' else '0';
-	Dir3 <= 'Z' when Dir3T = '1' else '0';
-	Dir4 <= 'Z' when Dir4T = '1' else '0';
+
+	SignMagnitudes : for I in 1 to 4 generate
+	begin
+		Instance : entity work.SignMagnitude(Behavioural)
+		generic map(
+			Width => 11
+		)
+		port map(
+			Value => Motor(I),
+			Absolute => DutyCycle(I),
+			Sign => DirT(I)
+		);
+	end generate;
+
+	PWMs : for I in 1 to 4 generate
+	begin
+		Instance : entity work.PWM(Behavioural)
+		generic map(
+			Width => 10,
+			Modulus => 1023,
+			Invert => true
+		)
+		port map(
+			Clock100 => Clock100,
+			DutyCycle => DutyCycle(I),
+			PWM => PWM(I)
+		);
+	end generate;
+	PWM1 <= PWM(1);
+	PWM2 <= PWM(2);
+	PWM3 <= PWM(3);
+	PWM4 <= PWM(4);
+
+	Dir1 <= '0' when DirT(1) = '1' else 'Z';
+	Dir2 <= 'Z' when DirT(2) = '1' else '0';
+	Dir3 <= 'Z' when DirT(3) = '1' else '0';
+	Dir4 <= 'Z' when DirT(4) = '1' else '0';
 
 	-- Dribbler stuff.
 	SMDInstance : entity work.SignMagnitude(Behavioural)
@@ -403,6 +313,7 @@ begin
 		Absolute => DutyCycleD,
 		Sign => DirDT
 	);
+
 	PWMDInstance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
@@ -414,6 +325,7 @@ begin
 		DutyCycle => DutyCycleD,
 		PWM => PWMD
 	);
+
 	DirD <= 'Z' when DirDT = '1' else '0';
 
 	-- The SPI receiver for the analogue to digital converters.
