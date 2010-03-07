@@ -26,8 +26,8 @@ architecture Behavioural of ByteShifter is
 	type DataType is array(7 downto 0) of std_ulogic_vector(NumBytes - 1 downto 0);
 	signal Data : DataType;
 begin
-BitwiseCode:
-	for I in 0 to 7 generate
+	BitwiseCode : for I in 0 to 7 generate
+	begin
 		OutData(I) <= Data(I)(Data(I)'high);
 
 		process(Clock)
