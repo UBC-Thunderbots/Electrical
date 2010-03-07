@@ -16,5 +16,5 @@ end entity SignMagnitude;
 architecture Behavioural of SignMagnitude is
 begin
 	Absolute <= to_unsigned(abs(to_integer(Value)), Width - 1);
-	Sign <= Value(Width - 1);
+	Sign <= '1' when to_integer(Value) < 0 else '0';
 end architecture Behavioural;
