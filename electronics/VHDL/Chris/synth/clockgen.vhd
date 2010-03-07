@@ -58,7 +58,7 @@ begin
 	DCM1 : DCM_SP
 	generic map(
 		CLKIN_PERIOD => 500.0,
-		CLK_FEEDBACK => "None",
+		CLK_FEEDBACK => "NONE",
 		CLKFX_MULTIPLY => 5,
 		CLKFX_DIVIDE => 1,
 		STARTUP_WAIT => true
