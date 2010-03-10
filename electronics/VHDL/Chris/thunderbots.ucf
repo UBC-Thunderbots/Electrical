@@ -46,14 +46,14 @@ net "FaultD" iostandard=LVCMOS33 | loc=P103 | pullup;
 net "DSense" iostandard=LVCMOS33 | loc=P101 | pullup;
 
 # Optical encoder phase lines.
-net "Encoder1A" iostandard=LVCMOS33 | loc=P7;
-net "Encoder1B" iostandard=LVCMOS33 | loc=P8;
-net "Encoder2A" iostandard=LVCMOS33 | loc=P10;
-net "Encoder2B" iostandard=LVCMOS33 | loc=P11;
-net "Encoder3A" iostandard=LVCMOS33 | loc=P3;
-net "Encoder3B" iostandard=LVCMOS33 | loc=P4;
-net "Encoder4A" iostandard=LVCMOS33 | loc=P5;
-net "Encoder4B" iostandard=LVCMOS33 | loc=P6;
+net "Encoder1A" iostandard=LVCMOS33 | loc=P7 | pullup;
+net "Encoder1B" iostandard=LVCMOS33 | loc=P8 | pullup;
+net "Encoder2A" iostandard=LVCMOS33 | loc=P10 | pullup;
+net "Encoder2B" iostandard=LVCMOS33 | loc=P11 | pullup;
+net "Encoder3A" iostandard=LVCMOS33 | loc=P3 | pullup;
+net "Encoder3B" iostandard=LVCMOS33 | loc=P4 | pullup;
+net "Encoder4A" iostandard=LVCMOS33 | loc=P5 | pullup;
+net "Encoder4B" iostandard=LVCMOS33 | loc=P6 | pullup;
 
 # Chicker lines.
 net "ChickerCharge" iostandard=LVCMOS33 | loc=P12;
