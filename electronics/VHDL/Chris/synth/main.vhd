@@ -340,7 +340,7 @@ begin
 	AppOut <= '0';
 
 	-- Chicker control stuff.
-	ChickerCharge <= '0';
+	ChickerCharge <= '1';
 	ChickerKick <= '0';
 	ChickerChip <= '0';
 
