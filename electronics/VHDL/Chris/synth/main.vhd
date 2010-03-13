@@ -99,7 +99,6 @@ architecture Behavioural of Main is
 	-- Mode flags from the XBee.
 	signal DirectDriveFlag : std_ulogic;
 	signal ControlledDriveFlag : std_ulogic;
-	signal DribbleFlag : std_ulogic;
 	signal RXTimeout : std_ulogic;
 
 	-- Drive levels from the XBee.
@@ -187,7 +186,6 @@ begin
 		Clock10 => Clock10,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
-		DribbleFlag => DribbleFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
@@ -207,7 +205,7 @@ begin
 
 	-- Braking stuff.
 	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') and RXTimeout = '0' else '1';
-	BrakeDribbler <= '0' when DribbleFlag = '1' and RXTimeout = '0' else '1';
+	BrakeDribbler <= '0' when Dribble /= to_signed(0, 11) and RXTimeout = '0' else '1';
 
 	-- Wheel stuff.
 	GrayCounters : for I in 1 to 4 generate
