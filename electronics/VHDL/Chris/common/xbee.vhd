@@ -9,6 +9,7 @@ entity XBee is
 
 		DirectDriveFlag : out std_ulogic;
 		ControlledDriveFlag : out std_ulogic;
+		ChickerEnableFlag : out std_ulogic;
 		Drive1 : out signed(10 downto 0);
 		Drive2 : out signed(10 downto 0);
 		Drive3 : out signed(10 downto 0);
@@ -67,6 +68,7 @@ begin
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
+		ChickerEnableFlag => ChickerEnableFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,

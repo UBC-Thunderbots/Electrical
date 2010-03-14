@@ -95,7 +95,8 @@ begin
 					ByteLoad <= '1';
 				elsif State = SendFlags then
 					State <= SendOutRSSI;
-					ByteData <= X"80";
+					ByteData(7) <= '1';
+					ByteData(6 downto 0) <= "0000000";
 					ByteLoad <= '1';
 					ChecksumByte := X"80";
 				elsif State = SendOutRSSI then

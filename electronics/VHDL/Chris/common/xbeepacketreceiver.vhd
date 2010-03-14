@@ -17,6 +17,7 @@ entity XBeePacketReceiver is
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
 		ControlledDriveFlag : out std_ulogic := '0';
+		ChickerEnableFlag : out std_ulogic := '0';
 		Drive1 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive2 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive3 : out signed(10 downto 0) := to_signed(0, 11);
@@ -28,9 +29,9 @@ end entity XBeePacketReceiver;
 architecture Behavioural of XBeePacketReceiver is
 	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectAPIID, ExpectAddress, ExpectRSSI, ExpectOptions, ExpectData, ExpectChecksum, CheckChecksum);
 	signal State : StateType := ExpectSOP;
-	signal DataLeft : natural range 0 to 7;
+	signal DataLeft : natural range 0 to 8;
 	signal Checksum : unsigned(7 downto 0);
-	type DataType is array(0 to 7) of std_ulogic_vector(7 downto 0);
+	type DataType is array(0 to 8) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
 begin
 	process(Clock1)
@@ -54,7 +55,7 @@ begin
 					end if;
 				elsif State = ExpectLengthLSB then
 					ClearChecksum := true;
-					if ByteData = X"13" then
+					if ByteData = X"14" then
 						State <= ExpectAPIID;
 					else
 						State <= ExpectSOP;
@@ -82,10 +83,10 @@ begin
 				elsif State = ExpectOptions then
 					AddChecksum := true;
 					State <= ExpectData;
-					DataLeft <= 7;
+					DataLeft <= 8;
 				elsif State = ExpectData then
 					AddChecksum := true;
-					Data <= Data(1 to 7) & ByteData;
+					Data <= Data(1 to 8) & ByteData;
 					if DataLeft = 0 then
 						State <= ExpectChecksum;
 					end if;
@@ -100,6 +101,7 @@ begin
 						FeedbackFlag <= Data(0)(6);
 						DirectDriveFlag <= Data(0)(0);
 						ControlledDriveFlag <= Data(0)(1);
+						ChickerEnableFlag <= Data(0)(2);
 						Drive1 <= signed(std_ulogic_vector'(Data(2)(2 downto 0) & Data(1)(7 downto 0)));
 						Drive2 <= signed(std_ulogic_vector'(Data(3)(5 downto 0) & Data(2)(7 downto 3)));
 						Drive3 <= signed(std_ulogic_vector'(Data(5)(0) & Data(4)(7 downto 0) & Data(3)(7 downto 6)));

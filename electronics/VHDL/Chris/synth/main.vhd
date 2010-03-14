@@ -99,6 +99,7 @@ architecture Behavioural of Main is
 	-- Mode flags from the XBee.
 	signal DirectDriveFlag : std_ulogic;
 	signal ControlledDriveFlag : std_ulogic;
+	signal ChickerEnableFlag : std_ulogic;
 	signal RXTimeout : std_ulogic;
 
 	-- Drive levels from the XBee.
@@ -186,6 +187,7 @@ begin
 		Clock10 => Clock10,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
+		ChickerEnableFlag => ChickerEnableFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
@@ -338,7 +340,7 @@ begin
 	AppOut <= '0';
 
 	-- Chicker control stuff.
-	ChickerCharge <= '1';
+	ChickerCharge <= '0' when ChickerEnableFlag = '1' and RXTimeout = '0' else '1';
 	ChickerKick <= '0';
 	ChickerChip <= '0';
 
