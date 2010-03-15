@@ -5,7 +5,6 @@ use ieee.numeric_std.all;
 entity PWM is
 	generic(
 		Width : positive;
-		Modulus : positive;
 		Invert : boolean
 	);
 	port(
@@ -18,6 +17,7 @@ entity PWM is
 end entity PWM;
 
 architecture Behavioural of PWM is
+	constant Modulus : positive := (2 ** Width) - 1; -- Minus 1 so we can have full-off AND full-on.
 	signal Count : unsigned(Width - 1 downto 0) := to_unsigned(0, Width);
 begin
 	PWM <= '1' when (Count < DutyCycle) xor Invert else '0';
