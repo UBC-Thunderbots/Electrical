@@ -294,7 +294,8 @@ begin
 		Instance : entity work.PWM(Behavioural)
 		generic map(
 			Width => 10,
-			Invert => true
+			Invert => true,
+			Offset => 83
 		)
 		port map(
 			Clock100 => Clock100,
@@ -326,7 +327,8 @@ begin
 	PWMDInstance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
-		Invert => true
+		Invert => true,
+		Offset => 83
 	)
 	port map(
 		Clock100 => Clock100,
