@@ -18,6 +18,8 @@ entity XBeePacketTransmitter is
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
+		ChickerReady : in std_ulogic;
+		ChickerFault : in std_ulogic;
 
 		ByteData : out std_ulogic_vector(7 downto 0) := X"00";
 		ByteLoad : out std_ulogic := '0';
@@ -96,9 +98,14 @@ begin
 				elsif State = SendFlags then
 					State <= SendOutRSSI;
 					ByteData(7) <= '1';
-					ByteData(6 downto 0) <= "0000000";
+					ByteData(6 downto 2) <= "00000";
+					ByteData(1) <= ChickerFault;
+					ByteData(0) <= ChickerReady;
 					ByteLoad <= '1';
-					ChecksumByte := X"80";
+					ChecksumByte(7) := '1';
+					ChecksumByte(6 downto 2) := "00000";
+					ChecksumByte(1) := ChickerFault;
+					ChecksumByte(0) := ChickerReady;
 				elsif State = SendOutRSSI then
 					State <= SendDribblerSpeedLSB;
 					ByteData <= RSSI;

@@ -95,6 +95,8 @@ architecture Behavioural of Main is
 	signal DSenseL : std_ulogic := '0';
 	signal EncoderAL : std_ulogic_vector(1 to 4) := "0000";
 	signal EncoderBL : std_ulogic_vector(1 to 4) := "0000";
+	signal ChickerDoneL : std_ulogic := '1';
+	signal ChickerFaultL : std_ulogic := '1';
 
 	-- Mode flags from the XBee.
 	signal DirectDriveFlag : std_ulogic;
@@ -138,6 +140,10 @@ architecture Behavioural of Main is
 	signal DutyCycleD : unsigned(9 downto 0);
 	signal DirDT : std_ulogic := '0';
 
+	-- Chicker stuff.
+	signal ChickerReadyFlag : std_ulogic;
+	signal ChickerFaultFlag : std_ulogic;
+
 	-- Battery voltage.
 	signal VMon : unsigned(9 downto 0);
 begin
@@ -168,6 +174,8 @@ begin
 			EncoderBL(2) <= Encoder2B;
 			EncoderBL(3) <= Encoder3B;
 			EncoderBL(4) <= Encoder4B;
+			ChickerDoneL <= ChickerDone;
+			ChickerFaultL <= ChickerFault;
 		end if;
 	end process;
 	process(Clock10)
@@ -201,6 +209,8 @@ begin
 		Fault3 => Fault3L,
 		Fault4 => Fault4L,
 		FaultD => FaultDL,
+		ChickerReady => ChickerReadyFlag,
+		ChickerFault => ChickerFaultFlag,
 		SerialIn => XBeeRXL,
 		SerialOut => XBeeTX
 	);
@@ -338,9 +348,21 @@ begin
 	AppOut <= '0';
 
 	-- Chicker control stuff.
-	ChickerCharge <= '0' when ChickerEnableFlag = '1' and RXTimeout = '0' else '1';
-	ChickerKick <= '0';
-	ChickerChip <= '0';
+	ChickerInstance : entity work.Chicker(Behavioural)
+	port map(
+		Clock1 => Clock1,
+		RXTimeout => RXTimeout,
+		ChickerEnableFlag => ChickerEnableFlag,
+		ChipFlag => '0',
+		Power => to_unsigned(0, 9),
+		ReadyFlag => ChickerReadyFlag,
+		FaultFlag => ChickerFaultFlag,
+		Charge => ChickerCharge,
+		Done => ChickerDoneL,
+		Fault => ChickerFaultL,
+		Kick => ChickerKick,
+		Chip => ChickerChip
+	);
 
 	-- The indicator LED.
 	LED <= '1';

@@ -50,6 +50,7 @@ electronics/VHDL/Chris/Makefile -text
 electronics/VHDL/Chris/common/adc.vhd -text
 electronics/VHDL/Chris/common/alu.vhd -text
 electronics/VHDL/Chris/common/byteshifter.vhd -text
+electronics/VHDL/Chris/common/chicker.vhd -text
 electronics/VHDL/Chris/common/controller.vhd -text
 electronics/VHDL/Chris/common/controllerimpl.asm.m4 -text
 electronics/VHDL/Chris/common/cpu.vhd -text

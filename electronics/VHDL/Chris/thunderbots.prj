@@ -1,6 +1,7 @@
 vhdl work common/adc.vhd
 vhdl work common/alu.vhd
 vhdl work common/byteshifter.vhd
+vhdl work common/chicker.vhd
 vhdl work common/controller.vhd
 vhdl work common/controllerimpl.vhd
 vhdl work common/cpu.vhd

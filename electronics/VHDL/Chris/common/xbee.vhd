@@ -24,6 +24,8 @@ entity XBee is
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
+		ChickerReady : in std_ulogic;
+		ChickerFault : in std_ulogic;
 
 		SerialIn : in std_ulogic;
 		SerialOut : out std_ulogic
@@ -91,6 +93,8 @@ begin
 		Fault3 => Fault3,
 		Fault4 => Fault4,
 		FaultD => FaultD,
+		ChickerReady => ChickerReady,
+		ChickerFault => ChickerFault,
 		Serial => SerialOut
 	);
 
