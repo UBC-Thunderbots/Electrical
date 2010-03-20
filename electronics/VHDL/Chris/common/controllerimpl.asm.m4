@@ -2,8 +2,8 @@
 Entity = ControllerImpl
 
 .VARS
-; Z^-1 and Z^-2 for each wheel, each over the interval ±4095, with 13 bits of
-; integer component and 3 bits of fractional component.
+; Z^-1 and Z^-2 for each wheel, each over the interval ±32000, with 16 bits of
+; integer component.
 W1Z1 = 0
 W1Z2 = 0
 W2Z1 = 0
@@ -69,72 +69,84 @@ NEG Error Encoder
 ADD Error Setpoint
 
 ; Z0 is the sum of Error, -A1 Z1, and -A2 Z2. Initialize to Error.
-; For now, we store Z0 as 16 bits integer and 16 bits fractional.
+; For now, we store Z0 in format 18.14.
 MOV Z0H Error
 MOV Z0L 0
+SHR32_2 Z0H Z0L
 ; Compute -A1 Z1.
 ; A1 = -1.7776 => -A1 = 1.7776.
-; Z1 in ±4095, formatted in 13.3.
-; Encode -A1 in 3.13, raw value 14562, error 0.0007%.
-; -A1 Z1 is in format 16.16.
+; Z1 in ±32000, formatted in 16.0.
+; Encode -A1 in 2.14, raw value 29124, error 0.0007%.
+; -A1 Z1 is in format 18.14.
 MOV TempH W'$1`Z1
-MOV TempL 14562
+MOV TempL 29124
 MUL TempH TempL
 ADD Z0L TempL
 ADDC Z0H TempH
 ; Compute -A2 Z2.
 ; A2 = 0.7776 => -A2 = -0.7776.
-; Z2 in ±4095, formatted in 13.3.
-; Encode -A2 in 3.13, raw value -6370, error 0.002%.
-; -A2 Z2 is in format 16.16.
+; Z2 in ±32000, formatted in 16.0.
+; Encode -A2 in 2.14, raw value -12740, error 0.002%.
+; -A2 Z2 is in format 18.14.
 MOV TempH W'$1`Z2
-MOV TempL -6370
+MOV TempL -12740
 MUL TempH TempL
 ADD Z0L TempL
 ADDC Z0H TempH
 
-; Z0 is in 16.16 format. First, clamp it to ±4095.
-CLAMP Z0H 4095
-; Now convert it to 13.3 by shifting right 13 bits.
+; Z0 is in 18.14 format. First, clamp it to ±32767.
+; Do this by clamping its upper byte to ±8192.
+CLAMP Z0H 8192
+; Now convert it to 16.0 by shifting right 14 bits.
 SHR32_4 Z0H Z0L
 SHR32_4 Z0H Z0L
 SHR32_4 Z0H Z0L
-SHR32_1 Z0H Z0L
+SHR32_2 Z0H Z0L
+; Reclamp to ±32000.
+CLAMP Z0L 32000
 
 ; Plant value is the sum of B0 Z0, B1 Z1, and B2 Z2.
 ; Compute B0 Z0.
 ; B0 = 1.0457.
-; Z0 in ±4095, formatted in 13.3.
-; Encode B0 in 3.13, raw value 8566, error 0.004%.
-; B0 Z0 is in format 16.16.
+; Z0 in ±32000, formatted in 16.0.
+; Encode B0 in 2.14, raw value 17133, error 0.001%.
+; B0 Z0 is in format 18.14.
 MOV PlantH Z0L
-MOV PlantL 8566
+MOV PlantL 17133
 MUL PlantH PlantL
 ; Compute B1 Z1.
 ; B1 = -0.0619.
-; Z1 in ±4095, formatted in 13.3.
-; Encode B1 in 3.13, raw value -507, error 0.02%.
-; B1 Z1 is in format 16.16.
+; Z1 in ±32000, formatted in 16.0.
+; Encode B1 in 2.14, raw value -1014, error 0.02%.
+; B1 Z1 is in format 18.14.
 MOV TempH W'$1`Z1
-MOV TempL -507
+MOV TempL -1014
 MUL TempH TempL
 ADD PlantL TempL
 ADDC PlantH TempH
 ; Compute B2 Z2.
 ; B2 = -0.9504.
-; Z2 in ±4095, formatted in 13.3.
-; Encode B2 in 3.13, raw value -7786, error 0.004%.
-; B2 Z2 is in format 16.16.
+; Z2 in ±32000, formatted in 16.0.
+; Encode B2 in 2.14, raw value -15571, error 0.002%.
+; B2 Z2 is in format 18.14.
 MOV TempH W'$1`Z2
-MOV TempL -7786
+MOV TempL -15571
 MUL TempH TempL
 ADD PlantL TempL
 ADDC PlantH TempH
 
-; Plant is in 16.16 format. First, clamp it to ±1023.
-CLAMP PlantH 1023
+; Plant is in 18.14 format. First, clamp it to ±1024.
+; Do this by clamping the upper byte to ±256.
+CLAMP PlantH 256
+; Now convert it to 16.0 by shifting right 14 bits.
+SHR32_4 PlantH PlantL
+SHR32_4 PlantH PlantL
+SHR32_4 PlantH PlantL
+SHR32_2 PlantH PlantL
+; Reclamp to precisely ±1023.
+CLAMP PlantL 1023
 ; Now output it.
-OUT Plant'$1` PlantH
+OUT Plant'$1` PlantL
 
 ; Perform the unit delays.
 MOV W'$1`Z2 W'$1`Z1
