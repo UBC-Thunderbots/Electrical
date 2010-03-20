@@ -55,9 +55,11 @@ namespace {
 		instruction_pattern("SHR32_4", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 11),
 	};
 
+	const unsigned int NUM_REGS = 32;
+
 	class parser {
 		public:
-			parser() : current_section(SECTION_NONE), line_number(0), var_init(32, 0), next_var(0), next_iport(0), next_oport(0), instructions(1024, 0), instructions_emitted(1024, false), address(-1) {
+			parser() : current_section(SECTION_NONE), line_number(0), var_init(NUM_REGS, 0), next_var(0), next_iport(0), next_oport(0), instructions(1024, 0), instructions_emitted(1024, false), address(-1) {
 			}
 
 			void parse_line(std::string line) {
@@ -116,6 +118,10 @@ namespace {
 						std::exit(1);
 					}
 					check_name(name);
+					if (next_var == NUM_REGS) {
+						std::cerr << "Error on line " << line_number << ": Too many registers!\n";
+						std::exit(1);
+					}
 					vars[name] = next_var++;
 					var_init[vars[name]] = value;
 				} else if (current_section == SECTION_IPORTS) {
@@ -329,6 +335,10 @@ namespace {
 					std::exit(1);
 				}
 				if (!literals.count(val)) {
+					if (next_var == NUM_REGS) {
+						std::cerr << "Error on line " << line_number << ": Too many registers!\n";
+						std::exit(1);
+					}
 					literals[val] = next_var++;
 					var_init[literals[val]] = val;
 				}
