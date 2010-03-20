@@ -55,7 +55,7 @@ namespace {
 		instruction_pattern("SHR32_4", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 11),
 	};
 
-	const unsigned int NUM_REGS = 32;
+	const unsigned int NUM_REGS = 64;
 
 	class parser {
 		public:
@@ -272,37 +272,37 @@ namespace {
 					std::cerr << "Error on line " << line_number << ": Expected " << num_args << " arguments to instruction '" << parts[0] << "' but found " << (parts.size() - 1) << "!\n";
 					std::exit(1);
 				}
-				unsigned int encoding = ipat.opcode << 10;
+				unsigned int encoding = ipat.opcode << 12;
 				for (unsigned int i = 0; i < num_args; ++i) {
 					if (args[i] == instruction_pattern::ARG_RA_RO) {
 						unsigned int reg = find_var_or_literal(parts[i + 1]);
-						encoding &= ~(0x1F << 5);
-						encoding |= reg << 5;
+						encoding &= ~(0x3F << 6);
+						encoding |= reg << 6;
 					} else if (args[i] == instruction_pattern::ARG_RA_RW) {
 						unsigned int reg = find_var(parts[i + 1]);
-						encoding &= ~(0x1F << 5);
-						encoding |= reg << 5;
+						encoding &= ~(0x3F << 6);
+						encoding |= reg << 6;
 					} else if (args[i] == instruction_pattern::ARG_RB_RO) {
 						unsigned int reg = find_var_or_literal(parts[i + 1]);
-						encoding &= ~0x1F;
+						encoding &= ~0x3F;
 						encoding |= reg;
 					} else if (args[i] == instruction_pattern::ARG_RB_RW) {
 						unsigned int reg = find_var(parts[i + 1]);
-						encoding &= ~0x1F;
+						encoding &= ~0x3F;
 						encoding |= reg;
 					} else if (args[i] == instruction_pattern::ARG_CB_IPORT) {
 						if (!iports.count(parts[i + 1])) {
 							std::cerr << "Error on line " << line_number << ": No such IPORT '" << parts[i + 1] << "'!\n";
 							std::exit(1);
 						}
-						encoding &= ~0x1F;
+						encoding &= ~0x3F;
 						encoding |= iports[parts[i + 1]];
 					} else if (args[i] == instruction_pattern::ARG_CB_OPORT) {
 						if (!oports.count(parts[i + 1])) {
 							std::cerr << "Error on line " << line_number << ": No such OPORT '" << parts[i + 1] << "'!\n";
 							std::exit(1);
 						}
-						encoding &= ~0x1F;
+						encoding &= ~0x3F;
 						encoding |= oports[parts[i + 1]];
 					}
 				}
@@ -439,13 +439,13 @@ int main() {
 		if (p.get_instructions_emitted()[i]) {
 			unsigned int instr = p.get_instructions()[i];
 			std::cout << i << " => \"";
-			for (unsigned int j = 16; j; --j) {
+			for (unsigned int j = 18; j; --j) {
 				std::cout << ((instr >> (j - 1)) & 1);
 			}
 			std::cout << "\",";
 		}
 	}
-	std::cout << "others => \"0000100000000000\");\n";
+	std::cout << "others => \"000010000000000000\");\n";
 	std::cout << "\tconstant InitRAM : RAMDataType := (";
 	for (unsigned int i = 0; i < NUM_REGS; ++i) {
 		int val = p.get_var_init()[i];
@@ -454,7 +454,7 @@ int main() {
 		}
 	}
 	std::cout << "others => to_signed(0, 16));\n";
-	std::cout << "\tsignal IOAddress : unsigned(4 downto 0);\n";
+	std::cout << "\tsignal IOAddress : unsigned(5 downto 0);\n";
 	std::cout << "\ttype IOInType is array(0 to " << (io_in_size - 1) << ") of signed(15 downto 0);\n";
 	std::cout << "\tsignal IOIn : IOInType;\n";
 	std::cout << "\tsignal IOInData : signed(15 downto 0);\n";

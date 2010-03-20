@@ -7,12 +7,12 @@ entity ALU is
 		O : in unsigned(5 downto 0);
 		RA : in signed(15 downto 0);
 		RB : in signed(15 downto 0);
-		CB : in unsigned(4 downto 0);
+		CB : in unsigned(5 downto 0);
 
 		NewRA : out signed(15 downto 0);
 		NewRB : out signed(15 downto 0);
 
-		IOAddress : out unsigned(4 downto 0) := to_unsigned(0, 5);
+		IOAddress : out unsigned(5 downto 0) := to_unsigned(0, 6);
 		IOInData : in signed(15 downto 0);
 		IOOutData : out signed(15 downto 0);
 		IOWrite : out std_ulogic;

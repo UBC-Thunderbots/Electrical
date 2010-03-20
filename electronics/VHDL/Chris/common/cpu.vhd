@@ -34,11 +34,11 @@ use work.types.all;
 -- Instruction Encoding:
 --  Each instruction is 16 bits wide and encoded as follows:
 --   6 bits - opcode (written as "O")
---   5 bits - register A (written as "RA")
---   5 bits - register B or constant (written as "RB" or "CB")
+--   6 bits - register A (written as "RA")
+--   6 bits - register B or constant (written as "RB" or "CB")
 --
 -- Register File:
---  The register file contains 32 registers, each 16 bits wide. All registers
+--  The register file contains 64 registers, each 16 bits wide. All registers
 --  are exactly equivalent in functionality.
 --
 -- Instruction Set:
@@ -101,7 +101,7 @@ entity CPU is
 		Reset : in std_ulogic;
 		ResetAddress : in unsigned(9 downto 0);
 
-		IOAddress : out unsigned(4 downto 0);
+		IOAddress : out unsigned(5 downto 0);
 		IOInData : in signed(15 downto 0);
 		IOOutData : out signed(15 downto 0);
 		IOWrite : out std_ulogic := '0'
@@ -112,7 +112,7 @@ architecture Behavioural of CPU is
 	type StateType is (Halted, Decoding, Executing);
 	signal State : StateType := Halted;
 	signal PC : unsigned(9 downto 0) := to_unsigned(0, 10);
-	signal Instruction : std_ulogic_vector(15 downto 0) := "0000100000000000";
+	signal Instruction : std_ulogic_vector(17 downto 0) := "000010000000000000";
 	signal ROMData : ROMDataType := InitROM;
 	shared variable RAMData : RAMDataType := InitRAM;
 	signal RA : signed(15 downto 0) := to_signed(0, 16);
@@ -126,10 +126,10 @@ architecture Behavioural of CPU is
 begin
 	ALUInstance : entity work.ALU(Behavioural)
 	port map(
-		O => unsigned(Instruction(15 downto 10)),
+		O => unsigned(Instruction(17 downto 12)),
 		RA => RA,
 		RB => RB,
-		CB => unsigned(Instruction(4 downto 0)),
+		CB => unsigned(Instruction(5 downto 0)),
 		NewRA => NewRA,
 		NewRB => NewRB,
 		IOAddress => IOAddress,
@@ -177,12 +177,12 @@ begin
 	end process;
 
 	process(Clock)
-		variable Address : natural range 0 to 31;
+		variable Address : natural range 0 to 63;
 		variable Enable : boolean;
 		variable Write : boolean;
 	begin
 		if rising_edge(Clock) then
-			Address := to_integer(unsigned(Instruction(9 downto 5)));
+			Address := to_integer(unsigned(Instruction(11 downto 6)));
 			Enable := false;
 			Write := false;
 			if State = Decoding then
@@ -202,14 +202,14 @@ begin
 	end process;
 
 	process(Clock)
-		variable Address : natural range 0 to 31;
-		variable OtherAddress : natural range 0 to 31;
+		variable Address : natural range 0 to 63;
+		variable OtherAddress : natural range 0 to 63;
 		variable Enable : boolean;
 		variable Write : boolean;
 	begin
 		if rising_edge(Clock) then
-			Address := to_integer(unsigned(Instruction(4 downto 0)));
-			OtherAddress := to_integer(unsigned(Instruction(9 downto 5)));
+			Address := to_integer(unsigned(Instruction(5 downto 0)));
+			OtherAddress := to_integer(unsigned(Instruction(11 downto 6)));
 			Enable := false;
 			Write := false;
 			if State = Decoding then
