@@ -87,7 +87,7 @@ use work.types.all;
 --
 --  SHR32_4 RA RB (O=001011) - Shift Right 4 Bits
 --   Shifts the 32-bit value whose high word is RA and whose low word is RB
---   right, with sign propagation, by 2 bits, storing the high word of the
+--   right, with sign propagation, by 4 bits, storing the high word of the
 --   result into RA and the low word of the result into RB.
 --
 entity CPU is
