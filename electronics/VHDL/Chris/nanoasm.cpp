@@ -126,7 +126,7 @@ namespace {
 					var_init[vars[name]] = value;
 				} else if (current_section == SECTION_IPORTS) {
 					check_name(line);
-					if (next_iport == 32) {
+					if (next_iport == NUM_REGS) {
 						std::cerr << "Error on line " << line_number << ": No more IPORTs available!\n";
 						std::exit(1);
 					}
@@ -146,7 +146,7 @@ namespace {
 						std::exit(1);
 					}
 					check_name(name);
-					if (next_oport == 32) {
+					if (next_oport == NUM_REGS) {
 						std::cerr << "Error on line " << line_number << ": No more OPORTs available!\n";
 						std::exit(1);
 					}
@@ -447,7 +447,7 @@ int main() {
 	}
 	std::cout << "others => \"0000100000000000\");\n";
 	std::cout << "\tconstant InitRAM : RAMDataType := (";
-	for (unsigned int i = 0; i < 32; ++i) {
+	for (unsigned int i = 0; i < NUM_REGS; ++i) {
 		int val = p.get_var_init()[i];
 		if (val) {
 			std::cout << i << " => to_signed(" << val << ", 16),";
