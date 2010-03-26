@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-02-27T14:58:42 PST
+EESchema Schematic File Version 2  date 2010-03-25T17:06:48 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L MC33035 U5
+U 1 1 4BABF8B2
+P 3200 3550
+F 0 "U5" H 3200 3550 60  0000 C CNN
+F 1 "MC33035" H 3200 4150 60  0000 C CNN
+F 2 "SO24L" H 3100 3450 60  0000 C CNN
+	1    3200 3550
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	10150 1800 10200 1800
 Wire Wire Line
@@ -490,16 +500,6 @@ F 0 "R19" V 980 3600 50  0000 C CNN
 F 1 "5.1kR" V 900 3600 50  0000 C CNN
 F 2 "R1" H 900 3600 60  0001 C CNN
 	1    900  3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L MC33035 U5
-U 1 1 4ADA3C79
-P 3200 3550
-F 0 "U5" H 3200 3650 60  0000 C CNN
-F 1 "MC33035" H 3200 3550 60  0000 C CNN
-F 2 "SO24E" H 3200 3550 60  0001 C CNN
-	1    3200 3550
 	1    0    0    -1  
 $EndComp
 $Comp
