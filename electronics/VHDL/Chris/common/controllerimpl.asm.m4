@@ -25,9 +25,15 @@ TempH = 0
 ; Output of left-hand adder.
 Z0L = 0
 Z0H = 0
-; Output of right-hand adder.
-PlantH = 0
-PlantL = 0
+; Outputs of right-hand adders.
+Plant1H = 0
+Plant1L = 0
+Plant2H = 0
+Plant2L = 0
+Plant3H = 0
+Plant3L = 0
+Plant4H = 0
+Plant4L = 0
 
 .IPORTS
 Setpoint1
@@ -111,9 +117,9 @@ CLAMP Z0L 32000
 ; Z0 in ±32000, formatted in 16.0.
 ; Encode B0 in 2.14, raw value 17133, error 0.001%.
 ; B0 Z0 is in format 18.14.
-MOV PlantH Z0L
-MOV PlantL 17133
-MUL PlantH PlantL
+MOV Plant'$1`H Z0L
+MOV Plant'$1`L 17133
+MUL Plant'$1`H Plant'$1`L
 ; Compute B1 Z1.
 ; B1 = -0.0619.
 ; Z1 in ±32000, formatted in 16.0.
@@ -122,8 +128,8 @@ MUL PlantH PlantL
 MOV TempH W'$1`Z1
 MOV TempL -1014
 MUL TempH TempL
-ADD PlantL TempL
-ADDC PlantH TempH
+ADD Plant'$1`L TempL
+ADDC Plant'$1`H TempH
 ; Compute B2 Z2.
 ; B2 = -0.9504.
 ; Z2 in ±32000, formatted in 16.0.
@@ -132,21 +138,19 @@ ADDC PlantH TempH
 MOV TempH W'$1`Z2
 MOV TempL -15571
 MUL TempH TempL
-ADD PlantL TempL
-ADDC PlantH TempH
+ADD Plant'$1`L TempL
+ADDC Plant'$1`H TempH
 
 ; Plant is in 18.14 format. First, clamp it to ±1024.
 ; Do this by clamping the upper byte to ±256.
-CLAMP PlantH 256
+CLAMP Plant'$1`H 256
 ; Now convert it to 16.0 by shifting right 14 bits.
-SHR32_4 PlantH PlantL
-SHR32_4 PlantH PlantL
-SHR32_4 PlantH PlantL
-SHR32_2 PlantH PlantL
+SHR32_4 Plant'$1`H Plant'$1`L
+SHR32_4 Plant'$1`H Plant'$1`L
+SHR32_4 Plant'$1`H Plant'$1`L
+SHR32_2 Plant'$1`H Plant'$1`L
 ; Reclamp to precisely ±1023.
-CLAMP PlantL 1023
-; Now output it.
-OUT Plant'$1` PlantL
+CLAMP Plant'$1`L 1023
 
 ; Perform the unit delays.
 MOV W'$1`Z2 W'$1`Z1
@@ -156,13 +160,17 @@ MOV W'$1`Z1 Z0L
 .CODE
 ORG 0
 
+; Execute the controllers.
 controller(1)
-
 controller(2)
-
 controller(3)
-
 controller(4)
+
+; Output the plant values.
+OUT Plant1 Plant1L
+OUT Plant2 Plant2L
+OUT Plant3 Plant3L
+OUT Plant4 Plant4L
 
 ; Done!
 HALT
