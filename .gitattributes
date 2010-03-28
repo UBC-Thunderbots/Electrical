@@ -11,6 +11,7 @@ datasheets/connectors/WM4306-ND.pdf -text
 datasheets/connectors/XF2L.pdf -text
 datasheets/diodes/BAT85.pdf -text
 datasheets/diodes/BZX79-C5V1.pdf -text
+datasheets/diodes/DPG60C300HB.pdf -text
 datasheets/diodes/NSR15DW1T1.pdf -text
 datasheets/diodes/RURP860.pdf -text
 datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
@@ -43,6 +44,7 @@ datasheets/optoelectronics/E4P.pdf -text
 datasheets/optoelectronics/OPB733T.pdf -text
 datasheets/optoelectronics/OPV380.pdf -text
 datasheets/optoelectronics/PNA2602M.pdf -text
+datasheets/optoelectronics/PS9552.pdf -text
 datasheets/regulators/LD1117V33C.pdf -text
 datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
