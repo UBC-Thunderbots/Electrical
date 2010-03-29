@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2010-03-28T18:14:02 PDT
+EESchema Schematic File Version 2  date 2010-03-28T18:31:40 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 8
 Title ""
-Date "20 jan 2010"
+Date "29 mar 2010"
 Rev ""
 Comp ""
 Comment1 ""
