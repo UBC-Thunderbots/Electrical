@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2010-03-25T16:52:27 PDT
+PCBNEW-LibDoc----V1  2010-03-28T17:10:15 PDT
 #
 $MODULE D2
 Li D2
@@ -68,6 +68,18 @@ $MODULE M25P16-VMN
 Li M25P16-VMN
 Cd Flash
 Kw SO8N
+$EndMODULE
+#
+$MODULE BRIDGEABLE
+Li BRIDGEABLE
+Cd Bridgeable 2 pins
+Kw CONN DEV
+$EndMODULE
+#
+$MODULE TESTPOINT
+Li TESTPOINT
+Cd module 1 pin (ou trou mecanique de percage)
+Kw DEV
 $EndMODULE
 #
 $EndLIBDOC
