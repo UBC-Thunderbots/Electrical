@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-03-28T18:31:40 PDT
+EESchema Schematic File Version 2  date 2010-03-28T18:35:47 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,30 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 10500 6200
+Connection ~ 9950 2400
+Wire Wire Line
+	9950 2400 9950 2250
+Wire Wire Line
+	9950 2250 11100 2250
+Wire Wire Line
+	11100 2250 11100 5800
+Wire Wire Line
+	10500 5800 11100 5800
+Wire Wire Line
+	10500 6250 10500 5800
+Wire Wire Line
+	10500 4450 10550 4450
+Wire Wire Line
+	9500 3200 10200 3200
+Connection ~ 7900 2400
+Wire Wire Line
+	7900 2150 7900 2600
+Wire Wire Line
+	7900 2150 9850 2150
+Connection ~ 9850 2800
+Wire Wire Line
+	9850 2150 9850 2800
 Wire Wire Line
 	7850 6250 7800 6250
 Connection ~ 9800 6450
@@ -33,15 +57,11 @@ Wire Wire Line
 Wire Wire Line
 	7850 2500 7950 2500
 Wire Wire Line
-	7950 2600 7900 2600
-Wire Wire Line
-	7900 2600 7900 2400
+	7900 2600 7950 2600
 Wire Wire Line
 	7900 2400 7950 2400
 Wire Wire Line
 	10500 4900 10500 4950
-Wire Wire Line
-	10500 4500 10500 4450
 Wire Wire Line
 	10500 6650 10500 6700
 Wire Wire Line
@@ -200,8 +220,6 @@ Wire Wire Line
 	4900 3700 4850 3700
 Wire Wire Line
 	1800 4350 1750 4350
-Wire Wire Line
-	10500 6250 10500 6200
 Connection ~ 7900 2500
 Wire Wire Line
 	7400 2900 7500 2900
@@ -217,6 +235,38 @@ Wire Wire Line
 	9800 6550 9800 6300
 Wire Wire Line
 	7800 6650 7850 6650
+Wire Wire Line
+	9900 2800 9800 2800
+Wire Wire Line
+	9500 2400 10200 2400
+Wire Wire Line
+	10500 6200 10550 6200
+Wire Wire Line
+	10500 4500 10500 4000
+Wire Wire Line
+	10500 4000 9850 4000
+Wire Wire Line
+	9850 4000 9850 3200
+Connection ~ 9850 3200
+Connection ~ 10500 4450
+$Comp
+L DPG60C300HB D10
+U 1 1 4BB00333
+P 9500 2800
+F 0 "D10" H 9950 2700 60  0000 C CNN
+F 1 "DPG60C300HB" H 9950 2900 60  0000 C CNN
+	1    9500 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L DPG60C300HB D9
+U 1 1 4BB00332
+P 10200 2800
+F 0 "D9" H 10650 2700 60  0000 C CNN
+F 1 "DPG60C300HB" H 10650 2900 60  0000 C CNN
+	1    10200 2800
+	1    0    0    -1  
+$EndComp
 $Comp
 L +BATT #PWR104
 U 1 1 4BAFFE9F
@@ -337,11 +387,11 @@ Text HLabel 7800 6650 0    60   Input ~ 0
 /CHIP
 Text HLabel 7800 4900 0    60   Input ~ 0
 /KICK
-Text HLabel 10500 6200 3    60   Output ~ 0
+Text HLabel 10550 6200 2    60   Output ~ 0
 CHIP-
 Text HLabel 7950 2500 2    60   Output ~ 0
 CHIP+
-Text HLabel 10500 4450 3    60   Output ~ 0
+Text HLabel 10550 4450 2    60   Output ~ 0
 KICK-
 Text HLabel 7950 2400 2    60   Output ~ 0
 KICK+
