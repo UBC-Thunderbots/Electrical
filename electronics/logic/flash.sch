@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-03-01T12:17:35 PST
+EESchema Schematic File Version 2  date 2010-03-28T17:17:00 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -30,19 +30,19 @@ Wire Wire Line
 Wire Wire Line
 	6600 4000 6650 4000
 $Comp
-L VCC #PWR080
+L VCC #PWR079
 U 1 1 4B557990
 P 5050 4200
-F 0 "#PWR080" H 5050 4300 30  0001 C CNN
+F 0 "#PWR079" H 5050 4300 30  0001 C CNN
 F 1 "VCC" H 5050 4300 30  0000 C CNN
 	1    5050 4200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VCC #PWR081
+L VCC #PWR080
 U 1 1 4B557970
 P 6650 4100
-F 0 "#PWR081" H 6650 4200 30  0001 C CNN
+F 0 "#PWR080" H 6650 4200 30  0001 C CNN
 F 1 "VCC" H 6650 4200 30  0000 C CNN
 	1    6650 4100
 	0    1    1    0   
@@ -66,19 +66,19 @@ DIN
 Text HLabel 7050 4200 2    60   Input ~ 0
 CLK
 $Comp
-L GND #PWR082
+L GND #PWR081
 U 1 1 4ABE8D7B
 P 5050 4300
-F 0 "#PWR082" H 5050 4300 30  0001 C CNN
+F 0 "#PWR081" H 5050 4300 30  0001 C CNN
 F 1 "GND" H 5050 4230 30  0001 C CNN
 	1    5050 4300
 	0    1    1    0   
 $EndComp
 $Comp
-L VCC #PWR083
+L VCC #PWR082
 U 1 1 4ABE8D6C
 P 6650 4000
-F 0 "#PWR083" H 6650 4100 30  0001 C CNN
+F 0 "#PWR082" H 6650 4100 30  0001 C CNN
 F 1 "VCC" H 6650 4100 30  0000 C CNN
 	1    6650 4000
 	0    1    1    0   
