@@ -56,10 +56,11 @@ namespace {
 	};
 
 	const unsigned int NUM_REGS = 64;
+	const unsigned int NUM_INSTRUCTIONS = 1024;
 
 	class parser {
 		public:
-			parser() : current_section(SECTION_NONE), line_number(0), var_init(NUM_REGS, 0), next_var(0), next_iport(0), next_oport(0), instructions(1024, 0), instructions_emitted(1024, false), address(-1) {
+			parser() : current_section(SECTION_NONE), line_number(0), var_init(NUM_REGS, 0), next_var(0), next_iport(0), next_oport(0), instructions(NUM_INSTRUCTIONS, 0), instructions_emitted(NUM_INSTRUCTIONS, false), address(-1) {
 			}
 
 			void parse_line(std::string line) {
@@ -215,6 +216,10 @@ namespace {
 				return oports;
 			}
 
+			unsigned int get_var_count() const {
+				return next_var;
+			}
+
 			const std::vector<int> &get_var_init() const {
 				return var_init;
 			}
@@ -237,6 +242,10 @@ namespace {
 
 			const std::vector<bool> &get_instructions_emitted() const {
 				return instructions_emitted;
+			}
+
+			unsigned int get_emitted_instruction_count() const {
+				return std::count(instructions_emitted.begin(), instructions_emitted.end(), true);
 			}
 
 			const std::string &get_entity_name() const {
@@ -435,7 +444,7 @@ int main() {
 	std::cout << '\n';
 	std::cout << "architecture Behavioural of " << p.get_entity_name() << " is\n";
 	std::cout << "\tconstant InitROM : ROMDataType := (";
-	for (unsigned int i = 0; i < 1024; ++i) {
+	for (unsigned int i = 0; i < NUM_INSTRUCTIONS; ++i) {
 		if (p.get_instructions_emitted()[i]) {
 			unsigned int instr = p.get_instructions()[i];
 			std::cout << i << " => \"";
@@ -501,6 +510,15 @@ int main() {
 		std::cout << "\tend process;\n";
 	}
 	std::cout << "end architecture Behavioural;\n";
+
+	std::cerr << '\n';
+	std::cerr << "   Resource Utilization Report   \n";
+	std::cerr << "---------------------------------\n";
+	std::cerr << "Input ports:  " << p.get_iports().size() << '/' << NUM_REGS << "\t= " << ((p.get_iports().size() * 100 + (NUM_REGS / 2)) / NUM_REGS) << "%\n";
+	std::cerr << "Output ports: " << p.get_oports().size() << '/' << NUM_REGS << "\t= " << ((p.get_oports().size() * 100 + (NUM_REGS / 2)) / NUM_REGS) << "%\n";
+	std::cerr << "Variables:    " << p.get_var_count() << '/' << NUM_REGS << "\t= " << ((p.get_var_count() * 100 + (NUM_REGS / 2)) / NUM_REGS) << "%\n";
+	std::cerr << "Instructions: " << p.get_emitted_instruction_count() << '/' << NUM_INSTRUCTIONS << "\t= " << ((p.get_emitted_instruction_count() * 100 + (NUM_INSTRUCTIONS / 2)) / NUM_INSTRUCTIONS) << "%\n";
+	std::cerr << '\n';
 	return 0;
 }
 
