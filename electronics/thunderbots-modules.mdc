@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2010-03-28T17:10:15 PDT
+PCBNEW-LibDoc----V1  2010-03-28T17:22:28 PDT
 #
 $MODULE D2
 Li D2
@@ -64,12 +64,6 @@ Cd Dual Diode
 Kw SO8N
 $EndMODULE
 #
-$MODULE M25P16-VMN
-Li M25P16-VMN
-Cd Flash
-Kw SO8N
-$EndMODULE
-#
 $MODULE BRIDGEABLE
 Li BRIDGEABLE
 Cd Bridgeable 2 pins
@@ -80,6 +74,12 @@ $MODULE TESTPOINT
 Li TESTPOINT
 Cd module 1 pin (ou trou mecanique de percage)
 Kw DEV
+$EndMODULE
+#
+$MODULE M25P16-VMN
+Li M25P16-VMN
+Cd Flash
+Kw SO8N
 $EndMODULE
 #
 $EndLIBDOC
