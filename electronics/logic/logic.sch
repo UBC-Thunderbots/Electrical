@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-02-14T00:43:06 PST
+EESchema Schematic File Version 2  date 2010-03-28T18:14:02 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -276,14 +276,14 @@ F1 "chicker.sch" 60
 F2 "CHARGE" I L 9200 4400 60 
 F3 "/DONE" O L 9200 4500 60 
 F4 "/FAULT" O L 9200 4600 60 
-F5 "CHIP" I L 9200 4700 60 
-F6 "KICK" I L 9200 4800 60 
-F7 "CHIP-" O R 10350 4400 60 
-F8 "CHIP+" O R 10350 4500 60 
-F9 "KICK-" O R 10350 4600 60 
-F10 "KICK+" O R 10350 4700 60 
-F11 "CAP-" O R 10350 4800 60 
-F12 "CAP+" O R 10350 4900 60 
+F5 "CHIP-" O R 10350 4400 60 
+F6 "CHIP+" O R 10350 4500 60 
+F7 "KICK-" O R 10350 4600 60 
+F8 "KICK+" O R 10350 4700 60 
+F9 "CAP-" O R 10350 4800 60 
+F10 "CAP+" O R 10350 4900 60 
+F11 "/CHIP" I L 9200 4700 60 
+F12 "/KICK" I L 9200 4800 60 
 $EndSheet
 Text Label 3700 2200 0    60   ~ 0
 /EMERG_ERASE
@@ -314,9 +314,9 @@ F20 "GPIO[1..30]" B L 7150 3350 60
 F21 "/CH_FAULT" I R 8500 4350 60 
 F22 "/CH_DONE" I R 8500 4250 60 
 F23 "CH_CHARGE" O R 8500 4150 60 
-F24 "CHIP" O R 8500 4500 60 
-F25 "KICK" O R 8500 4600 60 
-F26 "OSC" I L 7150 4550 60 
+F24 "OSC" I L 7150 4550 60 
+F25 "/CHIP" O R 8500 4500 60 
+F26 "/KICK" O R 8500 4600 60 
 $EndSheet
 $Sheet
 S 4600 1500 1350 1550

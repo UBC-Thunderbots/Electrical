@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-03-28T17:17:00 PDT
+EESchema Schematic File Version 2  date 2010-03-28T18:14:02 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -352,9 +352,9 @@ NoConn ~ 4150 3800
 NoConn ~ 4150 3900
 NoConn ~ 4150 3950
 Text HLabel 3800 4250 0    30   Output ~ 0
-CHIP
+/CHIP
 Text HLabel 3800 4050 0    30   Output ~ 0
-KICK
+/KICK
 Text HLabel 3800 3750 0    30   Input ~ 0
 /CH_FAULT
 Text HLabel 3800 3650 0    30   Input ~ 0
