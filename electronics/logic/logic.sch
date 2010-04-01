@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2010-03-28T18:31:40 PDT
+EESchema Schematic File Version 2  date 2010-04-01T16:15:12 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 8
 Title ""
-Date "29 mar 2010"
+Date "1 apr 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,6 +13,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	4600 4650 4450 4650
+Wire Wire Line
+	4450 4650 4450 2900
+Wire Wire Line
+	4450 2900 4600 2900
 Wire Wire Line
 	7150 4550 7050 4550
 Wire Wire Line
@@ -268,6 +274,12 @@ Wire Wire Line
 	7150 5550 7150 5100
 Wire Wire Line
 	7150 5100 8700 5100
+Wire Wire Line
+	5950 3100 6650 3100
+Wire Wire Line
+	6650 3100 6650 3450
+Wire Wire Line
+	6650 3450 7150 3450
 $Sheet
 S 9200 4350 1150 750 
 U 4B4D69E7
@@ -317,13 +329,14 @@ F23 "CH_CHARGE" O R 8500 4150 60
 F24 "OSC" I L 7150 4550 60 
 F25 "/CHIP" O R 8500 4500 60 
 F26 "/KICK" O R 8500 4600 60 
+F27 "BEAMOUT" O L 7150 3450 60 
 $EndSheet
 $Sheet
-S 4600 1500 1350 1550
+S 4600 1500 1350 1650
 U 4AD9040F
 F0 "connectors" 60
 F1 "connectors.sch" 60
-F2 "ADC[1..5]" O L 4600 2500 60 
+F2 "ADC[1..4]" O L 4600 2500 60 
 F3 "PGC" O L 4600 2600 60 
 F4 "PGD" B L 4600 2700 60 
 F5 "MCLR" O L 4600 2800 60 
@@ -343,6 +356,8 @@ F18 "KICK-" I R 5950 1850 60
 F19 "KICK+" I R 5950 1750 60 
 F20 "CAP-" I R 5950 1650 60 
 F21 "CAP+" I R 5950 1550 60 
+F22 "BEAMIN" O L 4600 2900 60 
+F23 "BEAMOUT" I R 5950 3100 60 
 $EndSheet
 $Sheet
 S 7450 5300 950  800 
@@ -366,7 +381,7 @@ F3 "PGD" B L 4600 4850 60
 F4 "BOOTLOAD" I R 6150 5850 60 
 F5 "FPGA_SS" O R 6150 4950 60 
 F6 "FLASH_SS" T R 6150 4850 60 
-F7 "ADC[1..5]" I L 4600 5050 60 
+F7 "ADC[1..4]" I L 4600 5050 60 
 F8 "DONE" I R 6150 5350 60 
 F9 "RX" I R 6150 5650 60 
 F10 "PROG_B" O R 6150 5150 60 
@@ -381,9 +396,10 @@ F18 "/RTS" O R 6150 5750 60
 F19 "/EMERG_ERASE" I R 6150 5950 60 
 F20 "XBEE_RST" O R 6150 6050 60 
 F21 "OSC" O R 6150 5450 60 
+F22 "BEAMIN" I L 4600 4650 60 
 $EndSheet
 $Sheet
-S 4750 3250 1050 950 
+S 4750 3350 1050 850 
 U 4AD90415
 F0 "flash" 60
 F1 "flash.sch" 60
