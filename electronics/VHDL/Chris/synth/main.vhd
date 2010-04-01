@@ -50,6 +50,9 @@ entity Main is
 		Encoder4A : in std_ulogic;
 		Encoder4B : in std_ulogic;
 
+		-- Break beam output line.
+		BeamOut : out std_ulogic;
+
 		-- Chicker control lines.
 		ChickerCharge : out std_ulogic;
 		ChickerDone : in std_ulogic;
@@ -348,6 +351,9 @@ begin
 		VMon => VMon
 	);
 	AppOut <= '0';
+
+	-- Break beam output line.
+	BeamOut <= '1';
 
 	-- Chicker control stuff.
 	ChickerInstance : entity work.Chicker(Behavioural)

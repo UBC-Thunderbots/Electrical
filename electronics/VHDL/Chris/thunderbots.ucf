@@ -55,6 +55,9 @@ net "Encoder3B" iostandard=LVCMOS33 | loc=P4 | pullup;
 net "Encoder4A" iostandard=LVCMOS33 | loc=P5 | pullup;
 net "Encoder4B" iostandard=LVCMOS33 | loc=P6 | pullup;
 
+# Break beam output line.
+net "BeamOut" iostandard=LVCMOS33 | loc=P19 | pullup;
+
 # Chicker lines.
 net "ChickerCharge" iostandard=LVCMOS33 | loc=P12;
 net "ChickerDone" iostandard=LVCMOS33 | loc=P13 | pullup;
