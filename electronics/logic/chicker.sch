@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-04-01T17:14:11 PDT
+EESchema Schematic File Version 2  date 2010-04-01T17:19:29 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -325,6 +325,7 @@ U 1 1 4BAFFE71
 P 8700 6450
 F 0 "U12" H 8700 6150 60  0000 C CNN
 F 1 "PS9552" H 8700 6800 60  0000 C CNN
+F 2 "PS9552L2" H 8700 6450 60  0001 C CNN
 	1    8700 6450
 	1    0    0    -1  
 $EndComp
@@ -343,6 +344,7 @@ U 1 1 4BAFFE00
 P 8700 4700
 F 0 "U11" H 8700 4400 60  0000 C CNN
 F 1 "PS9552" H 8700 5050 60  0000 C CNN
+F 2 "PS9552L2" H 8700 4700 60  0001 C CNN
 	1    8700 4700
 	1    0    0    -1  
 $EndComp
