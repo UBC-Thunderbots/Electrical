@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-04-01T16:15:12 PDT
+EESchema Schematic File Version 2  date 2010-04-01T17:14:11 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -13,8 +13,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 5900 1050 0    60   ~ 0
-Partial Galvanic Isolation Boundary
+Wire Wire Line
+	10500 6800 10500 6750
+Wire Wire Line
+	10500 5050 10500 5000
 Wire Notes Line
 	7000 1050 7000 4100
 Wire Notes Line
@@ -207,9 +209,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 4550 2100 4600
 Wire Wire Line
-	10500 6650 10500 6700
-Wire Wire Line
-	10500 4900 10500 4950
+	10750 5550 10750 5600
 Wire Wire Line
 	7900 2400 7950 2400
 Wire Wire Line
@@ -223,13 +223,9 @@ Wire Wire Line
 	7850 4900 7800 4900
 Wire Wire Line
 	9850 4300 9800 4300
-Wire Wire Line
-	10200 4700 9800 4700
 Connection ~ 9800 4700
 Wire Wire Line
 	9800 6800 9850 6800
-Wire Wire Line
-	10200 6450 9800 6450
 Connection ~ 9800 6450
 Wire Wire Line
 	7850 6250 7800 6250
@@ -257,6 +253,36 @@ Wire Wire Line
 	9950 2250 9950 2400
 Connection ~ 9950 2400
 Connection ~ 10500 6200
+Wire Wire Line
+	10150 4800 10150 4700
+Wire Wire Line
+	10150 4700 9800 4700
+Wire Wire Line
+	10150 6550 10150 6450
+Wire Wire Line
+	10150 6450 9800 6450
+$Comp
+L IGBT_N Q5
+U 1 1 4BB53677
+P 10400 6500
+F 0 "Q5" H 10550 6500 50  0000 C CNN
+F 1 "IGBT_N" H 10250 6650 50  0000 C CNN
+F 2 "TO247GCE" H 10400 6500 60  0001 C CNN
+	1    10400 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L IGBT_N Q4
+U 1 1 4BB53651
+P 10400 4750
+F 0 "Q4" H 10550 4750 50  0000 C CNN
+F 1 "IGBT_N" H 10250 4900 50  0000 C CNN
+F 2 "TO247GCE" H 10400 4750 60  0001 C CNN
+	1    10400 4750
+	1    0    0    -1  
+$EndComp
+Text Notes 5900 1050 0    60   ~ 0
+Partial Galvanic Isolation Boundary
 $Comp
 L DPG60C300HB D10
 U 1 1 4BB00333
@@ -352,43 +378,21 @@ F 1 "+BATT" H 9850 4400 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L MOS_N Q4
-U 1 1 4B53B880
-P 10400 4700
-F 0 "Q4" H 10410 4870 60  0000 R CNN
-F 1 "MOS_N" H 10410 4550 60  0000 R CNN
-F 2 "TO247GDS" H 10400 4700 60  0001 C CNN
-F 4 "IXFX180N25T" H 10400 4700 60  0001 C CNN "Field1"
-	1    10400 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L MOS_N Q5
-U 1 1 4B53B7C3
-P 10400 6450
-F 0 "Q5" H 10410 6620 60  0000 R CNN
-F 1 "MOS_N" H 10410 6300 60  0000 R CNN
-F 2 "TO247GDS" H 10400 6450 60  0001 C CNN
-F 4 "IXFX180N25T" H 10400 6450 60  0001 C CNN "Field1"
-	1    10400 6450
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR07
 U 1 1 4B53B883
-P 10500 4950
-F 0 "#PWR07" H 10500 4950 30  0001 C CNN
-F 1 "GND" H 10500 4880 30  0001 C CNN
-	1    10500 4950
+P 10500 5050
+F 0 "#PWR07" H 10500 5050 30  0001 C CNN
+F 1 "GND" H 10500 4980 30  0001 C CNN
+	1    10500 5050
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR08
 U 1 1 4B53B82D
-P 10500 6700
-F 0 "#PWR08" H 10500 6700 30  0001 C CNN
-F 1 "GND" H 10500 6630 30  0001 C CNN
-	1    10500 6700
+P 10500 6800
+F 0 "#PWR08" H 10500 6800 30  0001 C CNN
+F 1 "GND" H 10500 6730 30  0001 C CNN
+	1    10500 6800
 	1    0    0    -1  
 $EndComp
 Text HLabel 7800 6650 0    60   Input ~ 0
