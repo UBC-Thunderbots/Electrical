@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-04-10T14:01:11 PDT
+EESchema Schematic File Version 2  date 2010-04-10T14:02:57 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -317,6 +317,7 @@ U 1 1 4BB68DDB
 P 10650 6400
 F 0 "Q7" H 10800 6400 50  0000 C CNN
 F 1 "IGBT_N" H 10500 6550 50  0000 C CNN
+F 2 "TO247GCE" H 10650 6400 60  0001 C CNN
 	1    10650 6400
 	-1   0    0    -1  
 $EndComp
