@@ -312,9 +312,9 @@ begin
 	PWM4 <= PWM(4);
 
 	Dir1 <= '0' when DirT(1) = '1' else 'Z';
-	Dir2 <= 'Z' when DirT(2) = '1' else '0';
-	Dir3 <= 'Z' when DirT(3) = '1' else '0';
-	Dir4 <= 'Z' when DirT(4) = '1' else '0';
+	Dir2 <= '0' when DirT(2) = '1' else 'Z';
+	Dir3 <= '0' when DirT(3) = '1' else 'Z';
+	Dir4 <= '0' when DirT(4) = '1' else 'Z';
 
 	-- Dribbler stuff.
 	SMDInstance : entity work.SignMagnitude(Behavioural)
@@ -339,7 +339,7 @@ begin
 		PWM => PWMD
 	);
 
-	DirD <= 'Z' when DirDT = '1' else '0';
+	DirD <= '0' when DirDT = '1' else 'Z';
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADCInstance : entity work.ADC(Behavioural)
