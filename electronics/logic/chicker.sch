@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-04-10T14:06:35 PDT
+EESchema Schematic File Version 2  date 2010-04-15T14:05:08 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -363,7 +363,7 @@ F 0 "D10" H 9950 2700 60  0000 C CNN
 F 1 "DPG60C300HB" H 9950 2900 60  0000 C CNN
 F 2 "TO247" H 9500 2800 60  0001 C CNN
 	1    9500 2800
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L DPG60C300HB D9
