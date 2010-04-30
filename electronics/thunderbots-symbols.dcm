@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2010-04-01T17:24:39 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2010-04-30T14:00:26 PDT
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -14,6 +14,11 @@ $CMP AOP605
 F transistors/mos/*.*
 $ENDCMP
 #
+$CMP BAT54JW
+D Diode schottky ×2
+K DEV DIODE
+$ENDCMP
+#
 $CMP LD1117V33C
 D Linear Regulator +3.3V
 K POWER REGUL
@@ -27,11 +32,6 @@ $ENDCMP
 $CMP MCP1827S-1202E/AB
 D Linear Regulator +1.2V
 K POWER REGUL
-$ENDCMP
-#
-$CMP NSR15DW1T1
-D Diode schottky ×2
-K DEV DIODE
 $ENDCMP
 #
 $CMP PIC18F4550
