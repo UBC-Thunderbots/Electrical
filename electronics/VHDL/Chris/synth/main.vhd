@@ -298,7 +298,7 @@ begin
 		generic map(
 			Width => 10,
 			Invert => true,
-			Offset => 83
+			Offset => 30
 		)
 		port map(
 			Clock100 => Clock100,
@@ -331,7 +331,7 @@ begin
 	generic map(
 		Width => 10,
 		Invert => true,
-		Offset => 83
+		Offset => 30
 	)
 	port map(
 		Clock100 => Clock100,
