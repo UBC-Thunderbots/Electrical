@@ -112,7 +112,7 @@ architecture Behavioural of CPU is
 	type StateType is (Halted, Decoding, Executing);
 	signal State : StateType := Halted;
 	signal PC : unsigned(9 downto 0) := to_unsigned(0, 10);
-	signal Instruction : std_ulogic_vector(17 downto 0) := "000010000000000000";
+	signal Instruction : std_ulogic_vector(15 downto 0) := "0010000000000000";
 	signal ROMData : ROMDataType := InitROM;
 	shared variable RAMData : RAMDataType := InitRAM;
 	signal RA : signed(15 downto 0) := to_signed(0, 16);
@@ -126,7 +126,7 @@ architecture Behavioural of CPU is
 begin
 	ALUInstance : entity work.ALU(Behavioural)
 	port map(
-		O => unsigned(Instruction(17 downto 12)),
+		O => unsigned(Instruction(15 downto 12)),
 		RA => RA,
 		RB => RB,
 		CB => unsigned(Instruction(5 downto 0)),

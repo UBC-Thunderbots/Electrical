@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity ALU is
 	port(
-		O : in unsigned(5 downto 0);
+		O : in unsigned(3 downto 0);
 		RA : in signed(15 downto 0);
 		RB : in signed(15 downto 0);
 		CB : in unsigned(5 downto 0);
@@ -43,7 +43,7 @@ begin
 	process(O, RA, RB, CB, IOInData, CarryIn, Product, Shifted1, Shifted2, Shifted4, Sum)
 		variable Opcode : natural range 0 to 15;
 	begin
-		Opcode := to_integer(O(3 downto 0));
+		Opcode := to_integer(O);
 		NewRA <= RA;
 		NewRB <= RB;
 		IOAddress <= CB;

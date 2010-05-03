@@ -448,13 +448,13 @@ int main() {
 		if (p.get_instructions_emitted()[i]) {
 			unsigned int instr = p.get_instructions()[i];
 			std::cout << i << " => \"";
-			for (unsigned int j = 18; j; --j) {
+			for (unsigned int j = 16; j; --j) {
 				std::cout << ((instr >> (j - 1)) & 1);
 			}
 			std::cout << "\",";
 		}
 	}
-	std::cout << "others => \"000010000000000000\");\n";
+	std::cout << "others => \"0010000000000000\");\n";
 	std::cout << "\tconstant InitRAM : RAMDataType := (";
 	for (unsigned int i = 0; i < NUM_REGS; ++i) {
 		int val = p.get_var_init()[i];
