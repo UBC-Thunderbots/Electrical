@@ -15,35 +15,19 @@ entity ADC is
 end entity ADC;
 
 architecture Behavioural of ADC is
-	type StateType is (Idle, ReadingVMon);
-	signal State : StateType := Idle;
-	signal Bits : std_ulogic_vector(8 downto 0);
-	signal BitsLeft : natural range 0 to 15;
+	signal Bits : std_ulogic_vector(9 downto 0);
 	signal PrevSPICK : std_ulogic := '0';
 begin
 	process(Clock10)
 		variable OK : boolean;
 	begin
 		if rising_edge(Clock10) then
-			OK := SPICK = '1' and PrevSPICK = '0';
-			PrevSPICK <= SPICK;
 			if SPISS = '1' then
-				State <= Idle;
-			elsif State = Idle then
-				State <= ReadingVMon;
-				BitsLeft <= 15;
-			elsif OK then
-				if BitsLeft = 0 then
-					if State = ReadingVMon then
-						State <= Idle;
-						VMon <= unsigned(Bits(8 downto 0) & SPIDT);
-					end if;
-					BitsLeft <= 15;
-				else
-					BitsLeft <= BitsLeft - 1;
-				end if;
-				Bits <= Bits(7 downto 0) & SPIDT;
+				VMon <= unsigned(Bits);
+			elsif SPICK = '1' and PrevSPICK = '0' then
+				Bits <= Bits(8 downto 0) & SPIDT;
 			end if;
+			PrevSPICK <= SPICK;
 		end if;
 	end process;
 end architecture Behavioural;
