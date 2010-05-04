@@ -6,7 +6,7 @@ entity XBeeByteReceiverTest is
 end entity XBeeByteReceiverTest;
 
 architecture Behavioural of XBeeByteReceiverTest is
-	constant ClockPeriod : time := 100 ns;
+	constant ClockPeriod : time := 1 us;
 
 	signal Clock1 : std_ulogic := '0';
 	signal SerialData : std_ulogic_vector(7 downto 0) := X"00";
