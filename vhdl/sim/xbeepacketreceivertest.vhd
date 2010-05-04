@@ -138,9 +138,9 @@ begin
 		wait until rising_edge(Clock1);
 	end process;
 
-	process(Strobe)
+	process(Clock1)
 	begin
-		if rising_edge(Strobe) then
+		if rising_edge(Clock1) and Strobe = '1' then
 			StrobeCount <= StrobeCount + 1;
 			assert RSSI = X"28";
 			assert FeedbackFlag = '0';
