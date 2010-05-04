@@ -19,7 +19,6 @@ architecture Behavioural of ADC is
 	signal PrevSPICK : std_ulogic := '0';
 begin
 	process(Clock10)
-		variable OK : boolean;
 	begin
 		if rising_edge(Clock10) then
 			if SPISS = '1' then
