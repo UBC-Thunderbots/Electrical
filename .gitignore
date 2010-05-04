@@ -69,5 +69,6 @@ vhdl/thunderbots_vhdl.prj
 vhdl/work-obj93.cf
 vhdl/xbeebytereceivertest
 vhdl/xbeebytetransmittertest
+vhdl/xbeepacketreceivertest
 vhdl/xlnx_auto_0_xdb
 vhdl/xst

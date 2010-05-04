@@ -117,6 +117,7 @@ vhdl/sim/serialtransmittertest.vhd -text
 vhdl/sim/signmagnitudetest.vhd -text
 vhdl/sim/xbeebytereceivertest.vhd -text
 vhdl/sim/xbeebytetransmittertest.vhd -text
+vhdl/sim/xbeepacketreceivertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/lfsrtest.vhd -text
 vhdl/synth/main.vhd -text
