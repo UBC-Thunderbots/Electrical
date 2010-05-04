@@ -29,7 +29,7 @@ end entity XBeePacketReceiver;
 architecture Behavioural of XBeePacketReceiver is
 	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectAPIID, ExpectAddress, ExpectRSSI, ExpectOptions, ExpectData, ExpectChecksum, CheckChecksum);
 	signal State : StateType := ExpectSOP;
-	signal DataLeft : natural range 0 to 8;
+	signal DataLeft : natural range 0 to 15;
 	signal Checksum : unsigned(7 downto 0);
 	type DataType is array(0 to 8) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
@@ -75,7 +75,7 @@ begin
 					if DataLeft = 0 then
 						State <= ExpectRSSI;
 					end if;
-					DataLeft <= DataLeft - 1;
+					DataLeft <= (DataLeft - 1) mod 16;
 				elsif State = ExpectRSSI then
 					AddChecksum := true;
 					RSSI <= ByteData;
@@ -90,7 +90,7 @@ begin
 					if DataLeft = 0 then
 						State <= ExpectChecksum;
 					end if;
-					DataLeft <= DataLeft - 1;
+					DataLeft <= (DataLeft - 1) mod 16;
 				elsif State = ExpectChecksum then
 					AddChecksum := true;
 					State <= CheckChecksum;
