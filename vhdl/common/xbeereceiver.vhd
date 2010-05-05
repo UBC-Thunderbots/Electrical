@@ -6,6 +6,7 @@ entity XBeeReceiver is
 	port(
 		Clock1 : in std_ulogic;
 		Clock10 : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		Strobe : out std_ulogic;
 		AddressByte : out std_ulogic_vector(7 downto 0);
@@ -54,6 +55,7 @@ begin
 	XBeePacketReceiverInstance : entity work.XBeePacketReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
+		Clock100 => Clock100,
 		ByteData => ByteData,
 		ByteStrobe => ByteStrobe,
 		ByteSOP => ByteSOP,

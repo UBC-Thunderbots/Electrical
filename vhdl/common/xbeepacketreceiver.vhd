@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 entity XBeePacketReceiver is
 	port(
 		Clock1 : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		ByteData : in std_ulogic_vector(7 downto 0);
 		ByteStrobe : in std_ulogic;
@@ -33,18 +34,35 @@ architecture Behavioural of XBeePacketReceiver is
 	signal Checksum : unsigned(7 downto 0);
 	type DataType is array(0 to 8) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
+	signal Shadow : DataType;
+	signal Flag1 : boolean := false;
+	signal Flag2 : boolean := false;
+	signal Flag3 : boolean := false;
+	type CopyStateType is (ReadShadow, WriteData);
+	signal CopyState : CopyStateType := ReadShadow;
+	signal CopyCounter : natural range 0 to 15 := 8;
+	signal CopyBuffer : std_ulogic_vector(7 downto 0);
 begin
+	FeedbackFlag <= Data(0)(6);
+	DirectDriveFlag <= Data(0)(0);
+	ControlledDriveFlag <= Data(0)(1);
+	ChickerEnableFlag <= Data(0)(2);
+	Drive1 <= signed(std_ulogic_vector'(Data(2)(2 downto 0) & Data(1)(7 downto 0)));
+	Drive2 <= signed(std_ulogic_vector'(Data(3)(5 downto 0) & Data(2)(7 downto 3)));
+	Drive3 <= signed(std_ulogic_vector'(Data(5)(0) & Data(4)(7 downto 0) & Data(3)(7 downto 6)));
+	Drive4 <= signed(std_ulogic_vector'(Data(6)(3 downto 0) & Data(5)(7 downto 1)));
+	Dribble <= signed(std_ulogic_vector'(Data(7)(6 downto 0) & Data(6)(7 downto 4)));
+
 	process(Clock1)
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
-		variable SetStrobe : boolean;
 		variable ClearDataCounter : boolean;
 		variable IncrementDataCounter : boolean;
 	begin
 		if rising_edge(Clock1) then
 			ClearChecksum := false;
 			AddChecksum := false;
-			SetStrobe := false;
+			Strobe <= '0';
 			ClearDataCounter := false;
 			IncrementDataCounter := false;
 			AddressStrobe <= '0';
@@ -90,8 +108,10 @@ begin
 					ClearDataCounter := true;
 				elsif State = ExpectData then
 					AddChecksum := true;
-					Data <= Data(1 to 8) & ByteData;
-					if DataCounter = 8 then
+					Shadow(DataCounter) <= ByteData;
+					if DataCounter = 0 and ByteData(7) = '0' then
+						State <= ExpectSOP;
+					elsif DataCounter = 8 then
 						State <= ExpectChecksum;
 					end if;
 					IncrementDataCounter := true;
@@ -101,18 +121,7 @@ begin
 				end if;
 			elsif State = CheckChecksum then
 				if Checksum = X"FF" then
-					if Data(0)(7) = '1' then
-						FeedbackFlag <= Data(0)(6);
-						DirectDriveFlag <= Data(0)(0);
-						ControlledDriveFlag <= Data(0)(1);
-						ChickerEnableFlag <= Data(0)(2);
-						Drive1 <= signed(std_ulogic_vector'(Data(2)(2 downto 0) & Data(1)(7 downto 0)));
-						Drive2 <= signed(std_ulogic_vector'(Data(3)(5 downto 0) & Data(2)(7 downto 3)));
-						Drive3 <= signed(std_ulogic_vector'(Data(5)(0) & Data(4)(7 downto 0) & Data(3)(7 downto 6)));
-						Drive4 <= signed(std_ulogic_vector'(Data(6)(3 downto 0) & Data(5)(7 downto 1)));
-						Dribble <= signed(std_ulogic_vector'(Data(7)(6 downto 0) & Data(6)(7 downto 4)));
-						SetStrobe := true;
-					end if;
+					Flag1 <= not Flag1;
 				end if;
 				State <= ExpectSOP;
 			end if;
@@ -121,16 +130,37 @@ begin
 			elsif AddChecksum then
 				Checksum <= Checksum + unsigned(ByteData);
 			end if;
-			if SetStrobe then
-				Strobe <= '1';
-			else
-				Strobe <= '0';
-			end if;
 			if ClearDataCounter then
 				DataCounter <= 0;
 			elsif IncrementDataCounter then
 				DataCounter <= DataCounter + 1;
 			end if;
+			if Flag3 /= Flag2 then
+				Strobe <= '1';
+			else
+				Strobe <= '0';
+			end if;
+			Flag3 <= Flag2;
+		end if;
+	end process;
+
+	process(Clock100)
+	begin
+		if rising_edge(Clock100) then
+			if CopyCounter /= 8 then
+				if CopyState = ReadShadow then
+					CopyBuffer <= Shadow(CopyCounter);
+					CopyState <= WriteData;
+				elsif CopyState = WriteData then
+					Data(CopyCounter) <= CopyBuffer;
+					CopyCounter <= CopyCounter + 1;
+					CopyState <= ReadShadow;
+				end if;
+			elsif Flag2 /= Flag1 then
+				CopyState <= ReadShadow;
+				CopyCounter <= 0;
+			end if;
+			Flag2 <= Flag1;
 		end if;
 	end process;
 end architecture Behavioural;

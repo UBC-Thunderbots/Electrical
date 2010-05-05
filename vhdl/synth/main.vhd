@@ -196,6 +196,7 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Clock10 => Clock10,
+		Clock100 => Clock100,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
 		ChickerEnableFlag => ChickerEnableFlag,

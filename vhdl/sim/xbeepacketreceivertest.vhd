@@ -7,7 +7,7 @@ end entity XBeePacketReceiverTest;
 
 architecture Behavioural of XBeePacketReceiverTest is
 	signal Clock1 : std_ulogic := '0';
-	signal Clock10 : std_ulogic := '0';
+	signal Clock100 : std_ulogic := '0';
 	signal Done : boolean := false;
 	constant ReceiveHeaderLength : positive := 1 + 8 + 1 + 1;
 	constant RunDataLength : positive := 9;
@@ -43,6 +43,7 @@ begin
 	uut : entity work.XBeePacketReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
+		Clock100 => Clock100,
 		ByteData => ByteData,
 		ByteStrobe => ByteStrobe,
 		ByteSOP => ByteSOP,
@@ -74,10 +75,10 @@ begin
 
 	process
 	begin
-		Clock10 <= '1';
-		wait for 100 ns / 2;
-		Clock10 <= '0';
-		wait for 100 ns / 2;
+		Clock100 <= '1';
+		wait for 10 ns / 2;
+		Clock100 <= '0';
+		wait for 10 ns / 2;
 		if Done then
 			wait;
 		end if;

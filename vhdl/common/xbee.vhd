@@ -6,6 +6,7 @@ entity XBee is
 	port(
 		Clock1 : in std_ulogic;
 		Clock10 : in std_ulogic;
+		Clock100 : in std_ulogic;
 
 		DirectDriveFlag : out std_ulogic;
 		ControlledDriveFlag : out std_ulogic;
@@ -63,6 +64,7 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Clock10 => Clock10,
+		Clock100 => Clock100,
 		Strobe => RXStrobe,
 		AddressByte => AddressShifterIn,
 		AddressStrobe => AddressShifterRXStrobe,
