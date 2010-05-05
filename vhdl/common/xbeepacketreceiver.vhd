@@ -29,7 +29,7 @@ end entity XBeePacketReceiver;
 architecture Behavioural of XBeePacketReceiver is
 	type StateType is (ExpectSOP, ExpectLengthMSB, ExpectLengthLSB, ExpectAPIID, ExpectAddress, ExpectRSSI, ExpectOptions, ExpectData, ExpectChecksum, CheckChecksum);
 	signal State : StateType := ExpectSOP;
-	signal DataLeft : natural range 0 to 15;
+	signal DataCounter : natural range 0 to 15;
 	signal Checksum : unsigned(7 downto 0);
 	type DataType is array(0 to 8) of std_ulogic_vector(7 downto 0);
 	signal Data : DataType;
@@ -38,11 +38,15 @@ begin
 		variable ClearChecksum : boolean;
 		variable AddChecksum : boolean;
 		variable SetStrobe : boolean;
+		variable ClearDataCounter : boolean;
+		variable IncrementDataCounter : boolean;
 	begin
 		if rising_edge(Clock1) then
 			ClearChecksum := false;
 			AddChecksum := false;
 			SetStrobe := false;
+			ClearDataCounter := false;
+			IncrementDataCounter := false;
 			AddressStrobe <= '0';
 			if ByteSOP = '1' then
 				State <= ExpectLengthMSB;
@@ -64,7 +68,7 @@ begin
 					AddChecksum := true;
 					if ByteData = X"80" then
 						State <= ExpectAddress;
-						DataLeft <= 7;
+						ClearDataCounter := true;
 					else
 						State <= ExpectSOP;
 					end if;
@@ -72,10 +76,10 @@ begin
 					AddChecksum := true;
 					AddressByte <= ByteData;
 					AddressStrobe <= '1';
-					if DataLeft = 0 then
+					if DataCounter = 7 then
 						State <= ExpectRSSI;
 					end if;
-					DataLeft <= (DataLeft - 1) mod 16;
+					IncrementDataCounter := true;
 				elsif State = ExpectRSSI then
 					AddChecksum := true;
 					RSSI <= ByteData;
@@ -83,14 +87,14 @@ begin
 				elsif State = ExpectOptions then
 					AddChecksum := true;
 					State <= ExpectData;
-					DataLeft <= 8;
+					ClearDataCounter := true;
 				elsif State = ExpectData then
 					AddChecksum := true;
 					Data <= Data(1 to 8) & ByteData;
-					if DataLeft = 0 then
+					if DataCounter = 8 then
 						State <= ExpectChecksum;
 					end if;
-					DataLeft <= (DataLeft - 1) mod 16;
+					IncrementDataCounter := true;
 				elsif State = ExpectChecksum then
 					AddChecksum := true;
 					State <= CheckChecksum;
@@ -121,6 +125,11 @@ begin
 				Strobe <= '1';
 			else
 				Strobe <= '0';
+			end if;
+			if ClearDataCounter then
+				DataCounter <= 0;
+			elsif IncrementDataCounter then
+				DataCounter <= DataCounter + 1;
 			end if;
 		end if;
 	end process;
