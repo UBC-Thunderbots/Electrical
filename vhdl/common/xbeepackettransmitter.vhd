@@ -31,7 +31,7 @@ end entity XBeePacketTransmitter;
 architecture Behavioural of XBeePacketTransmitter is
 	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendChecksum);
 	signal State : StateType := Idle;
-	signal DataLeft : natural range 0 to 7;
+	signal DataLeftRing : std_ulogic_vector(7 downto 0) := "10000000";
 	signal Temp : std_ulogic_vector(7 downto 0);
 	signal Checksum : unsigned(7 downto 0);
 
@@ -81,16 +81,15 @@ begin
 					State <= SendAddress;
 					ByteData <= X"00";
 					ByteLoad <= '1';
-					DataLeft <= 7;
 				elsif State = SendAddress then
 					ChecksumByte := unsigned(AddressByte);
 					ByteData <= AddressByte;
 					ByteLoad <= '1';
 					AddressStrobe <= '1';
-					if DataLeft = 0 then
+					if DataLeftRing(0) = '1' then
 						State <= SendOptions;
 					end if;
-					DataLeft <= DataLeft - 1;
+					DataLeftRing <= std_ulogic_vector(unsigned(DataLeftRing) ror 1);
 				elsif State = SendOptions then
 					State <= SendFlags;
 					ByteData <= X"00";
