@@ -15,28 +15,25 @@ entity SerialTransmitter is
 end entity SerialTransmitter;
 
 architecture Behavioural of SerialTransmitter is
-	signal DBuf : std_ulogic_vector(8 downto 0) := "111111111";
-	signal Bits : natural range 0 to 10 := 0;
-	subtype BitClocksType is natural range 0 to 3;
-	signal BitClocks : BitClocksType := 0;
+	signal DBuf : std_ulogic_vector(9 downto 0) := "1111111111";
+	signal BitsRing : std_ulogic_vector(11 downto 0) := "000000000001";
+	signal BitClocksRing : std_ulogic_vector(3 downto 0) := "0001";
 begin
 	Serial <= DBuf(0);
-	Busy <= '1' when Load = '1' or Bits /= 0 or BitClocks /= 0 else '0';
+	Busy <= '1' when Load = '1' or BitsRing(0) = '0' else '0';
 
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
 			if Load = '1' then
-				DBuf <= Data & "0";
-				Bits <= 10;
-				BitClocks <= BitClocksType'high;
-			elsif BitClocks /= 0 then
-				BitClocks <= BitClocks - 1;
-			elsif Bits /= 0 then
-				Bits <= Bits - 1;
-				BitClocks <= BitClocksType'high;
-				DBuf <= "1" & DBuf(8 downto 1);
+				DBuf <= Data & "01";
+			elsif BitClocksRing(0) = '1' then
+				DBuf <= "1" & DBuf(9 downto 1);
 			end if;
+			if Load = '1' or (BitClocksRing(0) = '1' and BitsRing(0) = '0') then
+				BitsRing <= std_ulogic_vector(unsigned(BitsRing) rol 1);
+			end if;
+			BitClocksRing <= std_ulogic_vector(unsigned(BitClocksRing) rol 1);
 		end if;
 	end process;
 end architecture Behavioural;
