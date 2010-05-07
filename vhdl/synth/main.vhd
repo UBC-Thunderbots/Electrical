@@ -133,7 +133,7 @@ architecture Behavioural of Main is
 	signal DutyCycle : DutyCycleType;
 
 	-- Directions from the sign-magnitude converters.
-	signal DirT : std_ulogic_vector(1 to 4) := "0000";
+	signal Dir : std_ulogic_vector(1 to 4) := "0000";
 
 	-- PWM signals from the PWM generators.
 	signal PWM : std_ulogic_vector(1 to 4) := "0000";
@@ -289,7 +289,7 @@ begin
 		port map(
 			Value => Motor(I),
 			Absolute => DutyCycle(I),
-			Sign => DirT(I)
+			Sign => Dir(I)
 		);
 	end generate;
 
@@ -312,10 +312,10 @@ begin
 	PWM3 <= PWM(3);
 	PWM4 <= PWM(4);
 
-	Dir1 <= '0' when DirT(1) = '1' else 'Z';
-	Dir2 <= '0' when DirT(2) = '1' else 'Z';
-	Dir3 <= '0' when DirT(3) = '1' else 'Z';
-	Dir4 <= '0' when DirT(4) = '1' else 'Z';
+	Dir1 <= Dir(1);
+	Dir2 <= Dir(2);
+	Dir3 <= Dir(3);
+	Dir4 <= Dir(4);
 
 	-- Dribbler stuff.
 	SMDInstance : entity work.SignMagnitude(Behavioural)
@@ -325,7 +325,7 @@ begin
 	port map(
 		Value => Dribble,
 		Absolute => DutyCycleD,
-		Sign => DirDT
+		Sign => DirD
 	);
 
 	PWMDInstance : entity work.PWM(Behavioural)
@@ -339,8 +339,6 @@ begin
 		DutyCycle => DutyCycleD,
 		PWM => PWMD
 	);
-
-	DirD <= '0' when DirDT = '1' else 'Z';
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADCInstance : entity work.ADC(Behavioural)
