@@ -31,6 +31,8 @@ vhdl/*.bit
 vhdl/*.bld
 vhdl/*.cfi
 vhdl/*.drc
+vhdl/*.html
+vhdl/*.log
 vhdl/*.lso
 vhdl/*.lst
 vhdl/*.map
@@ -53,6 +55,7 @@ vhdl/*.xpi
 vhdl/*.xrpt
 vhdl/*_pad.csv
 vhdl/*_pad.txt
+vhdl/_xmsgs
 vhdl/common/controllerimpl.asm
 vhdl/common/controllerimpl.vhd
 vhdl/cputest
@@ -65,6 +68,7 @@ vhdl/serialtransmittertest
 vhdl/signmagnitudetest
 vhdl/ssmultipliertest
 vhdl/sumultipliertest
+vhdl/thunderbots_bitgen.xwbt
 vhdl/thunderbots_vhdl.prj
 vhdl/work-obj93.cf
 vhdl/xbeebytereceivertest
