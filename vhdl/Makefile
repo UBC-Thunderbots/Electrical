@@ -246,7 +246,7 @@ $(eval $(foreach smv,$(SMVs),$(call prove_target_template,$(smv))))
 #####################
 
 clean :
-	$(RM) *.bgn *.bit *.bld *.cfi *.drc *.lso *.lst *.map *.mcs *.mrp *.ncd *.ngc *.ngd *.ngm *.o *_pad.csv *_pad.txt *.pad *.par *.pcf *.prm *.ptwx *.srp *.unroutes *.xml *.xpi *.xrpt thunderbots_vhdl.prj work-obj93.cf $(SIM_TARGETS) nanoasm common/controllerimpl.asm common/controllerimpl.vhd
-	$(RM) -r xlnx_auto_0_xdb xst
+	$(RM) *.bgn *.bit *.bld *.cfi *.drc *.html *.log *.lso *.lst *.map *.mcs *.mrp *.ncd *.ngc *.ngd *.ngm *.o *_pad.csv *_pad.txt *.pad *.par *.pcf *.prm *.ptwx *.srp *.unroutes *.xml *.xpi *.xrpt $(PROJ)_bitgen.xwbt $(PROJ)_vhdl.prj work-obj93.cf $(SIM_TARGETS) nanoasm common/controllerimpl.asm common/controllerimpl.vhd
+	$(RM) -r xlnx_auto_0_xdb xst _xmsgs
 .PHONY : clean
 
