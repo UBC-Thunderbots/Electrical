@@ -19,22 +19,22 @@ entity Chicker is
 		Charge : out std_ulogic := '1';
 		Done : in std_ulogic;
 		Fault : in std_ulogic;
-		Kick : out std_ulogic := '0';
-		Chip : out std_ulogic := '0'
+		Kick : out std_ulogic := '1';
+		Chip : out std_ulogic := '1'
 	);
 end entity Chicker;
 
 architecture Behavioural of Chicker is
 	type StateType is (Disabled, Precharging, Charging, Idle, Firing, Quiescing, Faulted);
 	signal State : StateType := Disabled;
-	signal Ticks : natural range 0 to 999999 := 0;
+	signal Ticks : natural range 0 to 9999999 := 0;
 	signal ChargedOnce : boolean := false;
 begin
 	ReadyFlag <= '1' when ChargedOnce else '0';
-	FaultFlag <= '1' when State = Faulted else '0';
+	FaultFlag <= '1' when State = Faulted or Fault = '0' else '0';
 	Charge <= '0' when State = Precharging or State = Charging else '1';
-	Kick <= '1' when State = Firing and ChipFlag = '0' else '0';
-	Chip <= '1' when State = Firing and ChipFlag = '1' else '0';
+	Kick <= '0' when State = Firing and ChipFlag = '0' else '1';
+	Chip <= '0' when State = Firing and ChipFlag = '1' else '1';
 
 	process(Clock1)
 		variable CountTicks : boolean;
@@ -51,14 +51,14 @@ begin
 				State <= Precharging;
 				ResetTicks := true;
 			elsif State = Precharging then
-				if to_unsigned(Ticks, 20)(4) = '1' then
-					State <= Charging;
+				if to_unsigned(Ticks, 24)(19) = '1' then
+					State <= Idle;
 					ResetTicks := true;
 				else
 					CountTicks := true;
 				end if;
 			elsif Fault = '0' then
-				State <= Faulted;
+				State <= Idle;
 			elsif State = Charging then
 				if Power /= to_unsigned(0, 9) then
 					State <= Firing;
@@ -79,7 +79,7 @@ begin
 				end if;
 			elsif State = Firing then
 				ChargedOnce <= false;
-				if Ticks >= to_integer(Power) then
+				if Ticks = 999999 then
 					State <= Quiescing;
 					ResetTicks := true;
 				end if;

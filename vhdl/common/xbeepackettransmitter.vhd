@@ -8,8 +8,6 @@ entity XBeePacketTransmitter is
 
 		Start : in std_ulogic;
 
-		AddressByte : in std_ulogic_vector(7 downto 0);
-		AddressStrobe : out std_ulogic;
 		RSSI : in std_ulogic_vector(7 downto 0);
 		DribblerSpeed : in signed(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
@@ -29,9 +27,8 @@ entity XBeePacketTransmitter is
 end entity XBeePacketTransmitter;
 
 architecture Behavioural of XBeePacketTransmitter is
-	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddress, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendChecksum);
+	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddressHigh, SendAddressLow, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendChecksum);
 	signal State : StateType := Idle;
-	signal DataLeftRing : std_ulogic_vector(7 downto 0) := "10000000";
 	signal Temp : std_ulogic_vector(7 downto 0);
 	signal Checksum : unsigned(7 downto 0);
 
@@ -47,7 +44,6 @@ begin
 			ByteSOP <= '0';
 			ClearChecksum := false;
 			ChecksumByte := X"00";
-			AddressStrobe <= '0';
 
 			-- Accumulate faults on every clock cycle.
 			Faults(0) <= Faults(0) or not Fault1;
@@ -71,25 +67,25 @@ begin
 					ByteLoad <= '1';
 				elsif State = SendLengthLSB then
 					State <= SendAPIID;
-					ByteData <= X"12";
+					ByteData <= X"0C";
 					ByteLoad <= '1';
 				elsif State = SendAPIID then
 					State <= SendFrame;
-					ByteData <= X"00";
+					ByteData <= X"01";
 					ByteLoad <= '1';
+					ChecksumByte := X"01";
 				elsif State = SendFrame then
-					State <= SendAddress;
+					State <= SendAddressHigh;
 					ByteData <= X"00";
 					ByteLoad <= '1';
-				elsif State = SendAddress then
-					ChecksumByte := unsigned(AddressByte);
-					ByteData <= AddressByte;
+				elsif State = SendAddressHigh then
+					State <= SendAddressLow;
+					ByteData <= X"00";
 					ByteLoad <= '1';
-					AddressStrobe <= '1';
-					if DataLeftRing(0) = '1' then
-						State <= SendOptions;
-					end if;
-					DataLeftRing <= std_ulogic_vector(unsigned(DataLeftRing) ror 1);
+				elsif State = SendAddressLow then
+					State <= SendOptions;
+					ByteData <= X"00";
+					ByteLoad <= '1';
 				elsif State = SendOptions then
 					State <= SendFlags;
 					ByteData <= X"00";

@@ -146,6 +146,8 @@ architecture Behavioural of Main is
 	-- Chicker stuff.
 	signal ChickerReadyFlag : std_ulogic;
 	signal ChickerFaultFlag : std_ulogic;
+	signal ChickerPower : unsigned(8 downto 0);
+	signal ChipFlag : std_ulogic;
 
 	-- Battery voltage.
 	signal VMon : unsigned(9 downto 0);
@@ -205,6 +207,8 @@ begin
 		Drive3 => Drive3,
 		Drive4 => Drive4,
 		Dribble => Dribble,
+		ChickerPower => ChickerPower,
+		ChipFlag => ChipFlag,
 		Timeout => RXTimeout,
 		DribblerSpeed => to_signed(0, 11),
 		VMon => VMon,
@@ -360,8 +364,8 @@ begin
 		Clock1 => Clock1,
 		RXTimeout => RXTimeout,
 		ChickerEnableFlag => ChickerEnableFlag,
-		ChipFlag => '0',
-		Power => to_unsigned(0, 9),
+		ChipFlag => ChipFlag,
+		Power => ChickerPower,
 		ReadyFlag => ChickerReadyFlag,
 		FaultFlag => ChickerFaultFlag,
 		Charge => ChickerCharge,

@@ -9,18 +9,18 @@ entity XBeeReceiver is
 		Clock100 : in std_ulogic;
 
 		Strobe : out std_ulogic;
-		AddressByte : out std_ulogic_vector(7 downto 0);
-		AddressStrobe : out std_ulogic;
 		RSSI : out std_ulogic_vector(7 downto 0);
 		FeedbackFlag : out std_ulogic;
 		DirectDriveFlag : out std_ulogic;
 		ControlledDriveFlag : out std_ulogic;
 		ChickerEnableFlag : out std_ulogic;
+		ChipFlag : out std_ulogic;
 		Drive1 : out signed(10 downto 0);
 		Drive2 : out signed(10 downto 0);
 		Drive3 : out signed(10 downto 0);
 		Drive4 : out signed(10 downto 0);
 		Dribble : out signed(10 downto 0);
+		ChickerPower : out unsigned(8 downto 0);
 
 		Serial : in std_ulogic
 	);
@@ -60,17 +60,17 @@ begin
 		ByteStrobe => ByteStrobe,
 		ByteSOP => ByteSOP,
 		Strobe => Strobe,
-		AddressByte => AddressByte,
-		AddressStrobe => AddressStrobe,
 		RSSI => RSSI,
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
 		ChickerEnableFlag => ChickerEnableFlag,
+		ChipFlag => ChipFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
 		Drive4 => Drive4,
-		Dribble => Dribble
+		Dribble => Dribble,
+		ChickerPower => ChickerPower
 	);
 end architecture Behavioural;

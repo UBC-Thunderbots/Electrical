@@ -8,8 +8,6 @@ entity XBeeTransmitter is
 
 		Start : in std_ulogic;
 
-		AddressByte : in std_ulogic_vector(7 downto 0);
-		AddressStrobe : out std_ulogic;
 		RSSI : in std_ulogic_vector(7 downto 0);
 		DribblerSpeed : in signed(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
@@ -38,8 +36,6 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Start => Start,
-		AddressByte => AddressByte,
-		AddressStrobe => AddressStrobe,
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,
 		BatteryLevel => BatteryLevel,

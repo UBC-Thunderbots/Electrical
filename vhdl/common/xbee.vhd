@@ -16,6 +16,8 @@ entity XBee is
 		Drive3 : out signed(10 downto 0);
 		Drive4 : out signed(10 downto 0);
 		Dribble : out signed(10 downto 0);
+		ChickerPower : out unsigned(8 downto 0);
+		ChipFlag : out std_ulogic;
 		Timeout : out std_ulogic;
 
 		DribblerSpeed : in signed(10 downto 0);
@@ -34,12 +36,6 @@ entity XBee is
 end entity XBee;
 
 architecture Behavioural of XBee is
-	signal AddressShifterIn : std_ulogic_vector(7 downto 0);
-	signal AddressShifterOut : std_ulogic_vector(7 downto 0);
-	signal AddressShifterRXStrobe : std_ulogic;
-	signal AddressShifterTXStrobe : std_ulogic;
-	signal AddressShifterStrobe : std_ulogic;
-
 	signal RXStrobe : std_ulogic;
 	signal RSSI : std_ulogic_vector(7 downto 0);
 	signal FeedbackFlag : std_ulogic;
@@ -47,37 +43,24 @@ architecture Behavioural of XBee is
 	subtype TimeoutCounterType is natural range 0 to 499999;
 	signal TimeoutCounter : TimeoutCounterType := 0;
 begin
-	AddressShifter : entity work.ByteShifter(Behavioural)
-	generic map(
-		NumBytes => 8
-	)
-	port map(
-		Clock => Clock1,
-		InData => AddressShifterIn,
-		OutData => AddressShifterOut,
-		Strobe => AddressShifterStrobe
-	);
-
-	AddressShifterStrobe <= AddressShifterRXStrobe or AddressShifterTXStrobe;
-
 	XBeeReceiverInstance : entity work.XBeeReceiver(Behavioural)
 	port map(
 		Clock1 => Clock1,
 		Clock10 => Clock10,
 		Clock100 => Clock100,
 		Strobe => RXStrobe,
-		AddressByte => AddressShifterIn,
-		AddressStrobe => AddressShifterRXStrobe,
 		RSSI => RSSI,
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
 		ChickerEnableFlag => ChickerEnableFlag,
+		ChipFlag => ChipFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
 		Drive4 => Drive4,
 		Dribble => Dribble,
+		ChickerPower => ChickerPower,
 		Serial => SerialIn
 	);
 
@@ -85,8 +68,6 @@ begin
 	port map(
 		Clock1 => Clock1,
 		Start => TXStrobe,
-		AddressByte => AddressShifterOut,
-		AddressStrobe => AddressShifterTXStrobe,
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,
 		BatteryLevel => VMon,
