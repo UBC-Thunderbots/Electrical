@@ -46,22 +46,22 @@ net "FaultD" iostandard=LVCMOS33 | loc=P103 | pullup;
 net "DSense" iostandard=LVCMOS33 | loc=P101 | pullup;
 
 # Optical encoder phase lines.
-net "Encoder1A" iostandard=LVCMOS33 | loc=P7 | pullup;
-net "Encoder1B" iostandard=LVCMOS33 | loc=P8 | pullup;
-net "Encoder2A" iostandard=LVCMOS33 | loc=P10 | pullup;
-net "Encoder2B" iostandard=LVCMOS33 | loc=P11 | pullup;
+net "Encoder1A" iostandard=LVCMOS33 | loc=P12 | pullup;
+net "Encoder1B" iostandard=LVCMOS33 | loc=P13 | pullup;
+net "Encoder2A" iostandard=LVCMOS33 | loc=P15 | pullup;
+net "Encoder2B" iostandard=LVCMOS33 | loc=P16 | pullup;
 net "Encoder3A" iostandard=LVCMOS33 | loc=P3 | pullup;
 net "Encoder3B" iostandard=LVCMOS33 | loc=P4 | pullup;
 net "Encoder4A" iostandard=LVCMOS33 | loc=P5 | pullup;
 net "Encoder4B" iostandard=LVCMOS33 | loc=P6 | pullup;
 
 # Break beam output line.
-net "BeamOut" iostandard=LVCMOS33 | loc=P19 | pullup;
+net "BeamOut" iostandard=LVCMOS33 | loc=P7 | pullup;
 
 # Chicker lines.
-net "ChickerCharge" iostandard=LVCMOS33 | loc=P12;
-net "ChickerDone" iostandard=LVCMOS33 | loc=P13 | pullup;
-net "ChickerFault" iostandard=LVCMOS33 | loc=P15 | pullup;
+net "ChickerCharge" iostandard=LVCMOS33 | loc=P8;
+net "ChickerDone" iostandard=LVCMOS33 | loc=P10 | pullup;
+net "ChickerFault" iostandard=LVCMOS33 | loc=P11 | pullup;
 net "ChickerKick" iostandard=LVCMOS33 | loc=P21;
 net "ChickerChip" iostandard=LVCMOS33 | loc=P25;
 
