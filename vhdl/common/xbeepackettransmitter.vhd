@@ -33,6 +33,8 @@ architecture Behavioural of XBeePacketTransmitter is
 	signal Checksum : unsigned(7 downto 0);
 
 	signal Faults : std_ulogic_vector(4 downto 0);
+	signal ChickerReadyL : std_ulogic := '0';
+	signal ChickerFaultL : std_ulogic := '0';
 begin
 	process(Clock1)
 		variable ClearChecksum : boolean;
@@ -45,12 +47,14 @@ begin
 			ClearChecksum := false;
 			ChecksumByte := X"00";
 
-			-- Accumulate faults on every clock cycle.
+			-- Accumulate faults and chicker readiness on every clock cycle.
 			Faults(0) <= Faults(0) or not Fault1;
 			Faults(1) <= Faults(1) or not Fault2;
 			Faults(2) <= Faults(2) or not Fault3;
 			Faults(3) <= Faults(3) or not Fault4;
 			Faults(4) <= Faults(4) or not FaultD;
+			ChickerReadyL <= ChickerReadyL or ChickerReady;
+			ChickerFaultL <= ChickerFaultL or ChickerFault;
 
 			if ByteBusy = '0' then
 				if State = Idle then
@@ -94,13 +98,15 @@ begin
 					State <= SendOutRSSI;
 					ByteData(7) <= '1';
 					ByteData(6 downto 2) <= "00000";
-					ByteData(1) <= ChickerFault;
-					ByteData(0) <= ChickerReady;
+					ByteData(1) <= ChickerFaultL;
+					ByteData(0) <= ChickerReadyL;
 					ByteLoad <= '1';
 					ChecksumByte(7) := '1';
 					ChecksumByte(6 downto 2) := "00000";
-					ChecksumByte(1) := ChickerFault;
-					ChecksumByte(0) := ChickerReady;
+					ChecksumByte(1) := ChickerFaultL;
+					ChecksumByte(0) := ChickerReadyL;
+					ChickerReadyL <= '0';
+					ChickerFaultL <= '0';
 				elsif State = SendOutRSSI then
 					State <= SendDribblerSpeedLSB;
 					ByteData <= RSSI;
