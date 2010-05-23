@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-05-23T15:13:31 PDT
+EESchema Schematic File Version 2  date 2010-05-23T15:52:11 PDT
 LIBS:power,../thunderbots-symbols,device,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	6250 3850 6300 3850
+Wire Wire Line
+	6800 3850 6800 4200
+Wire Wire Line
+	6800 4200 4850 4200
+Connection ~ 4850 3850
+Wire Wire Line
+	4850 4200 4850 3850
 Connection ~ 2000 3550
 Wire Wire Line
 	2000 3550 2050 3550
@@ -119,17 +128,6 @@ Connection ~ 5850 3100
 Wire Wire Line
 	5850 3100 4850 3100
 Connection ~ 5850 3650
-Wire Wire Line
-	6250 3850 6650 3850
-Wire Wire Line
-	6650 3850 6650 4150
-Wire Wire Line
-	6650 4150 5050 4150
-Connection ~ 5050 3850
-Wire Wire Line
-	5050 4150 5050 3850
-Wire Wire Line
-	4300 3850 5450 3850
 Connection ~ 3650 2500
 Wire Wire Line
 	3650 2500 3650 2450
@@ -293,6 +291,30 @@ Connection ~ 2000 3100
 Wire Wire Line
 	2050 3400 2000 3400
 Connection ~ 2000 3400
+Wire Wire Line
+	4300 3850 4900 3850
+Wire Wire Line
+	5400 3850 5450 3850
+$Comp
+L R R21
+U 1 1 4BF9B0A0
+P 6550 3850
+F 0 "R21" V 6630 3850 50  0000 C CNN
+F 1 "22R" V 6550 3850 50  0000 C CNN
+F 2 "R1" H 6550 3850 60  0001 C CNN
+	1    6550 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R20
+U 1 1 4BF9B092
+P 5150 3850
+F 0 "R20" V 5230 3850 50  0000 C CNN
+F 1 "22R" V 5150 3850 50  0000 C CNN
+F 2 "R1" H 5150 3850 60  0001 C CNN
+	1    5150 3850
+	0    1    1    0   
+$EndComp
 $Comp
 L R R19
 U 1 1 4BF9A868
