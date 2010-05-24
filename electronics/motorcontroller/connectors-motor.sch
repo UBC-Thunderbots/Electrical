@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-05-24T15:56:27 PDT
+EESchema Schematic File Version 2  date 2010-05-24T16:44:18 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -222,8 +222,8 @@ L GND #PWR?
 U 1 1 4ADA7299
 P 6850 6150
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7299" Ref="#PWR80"  Part="1" 
-F 0 "#PWR80" H 6850 6150 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7299" Ref="#PWR82"  Part="1" 
+F 0 "#PWR82" H 6850 6150 30  0001 C CNN
 F 1 "GND" H 6850 6080 30  0001 C CNN
 	1    6850 6150
 	0    1    1    0   
@@ -233,8 +233,8 @@ L GND #PWR?
 U 1 1 4ADA7297
 P 6850 4950
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7297" Ref="#PWR79"  Part="1" 
-F 0 "#PWR79" H 6850 4950 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7297" Ref="#PWR81"  Part="1" 
+F 0 "#PWR81" H 6850 4950 30  0001 C CNN
 F 1 "GND" H 6850 4880 30  0001 C CNN
 	1    6850 4950
 	0    1    1    0   
@@ -244,8 +244,8 @@ L GND #PWR?
 U 1 1 4ADA7296
 P 6850 3750
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7296" Ref="#PWR78"  Part="1" 
-F 0 "#PWR78" H 6850 3750 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7296" Ref="#PWR80"  Part="1" 
+F 0 "#PWR80" H 6850 3750 30  0001 C CNN
 F 1 "GND" H 6850 3680 30  0001 C CNN
 	1    6850 3750
 	0    1    1    0   
@@ -255,17 +255,17 @@ L GND #PWR?
 U 1 1 4ADA7292
 P 6850 2550
 AR Path="/4ADA6DA3/4ADA728E" Ref="#PWR?"  Part="1" 
-AR Path="/4ADA6DA3/4ADA7292" Ref="#PWR77"  Part="1" 
-F 0 "#PWR77" H 6850 2550 30  0001 C CNN
+AR Path="/4ADA6DA3/4ADA7292" Ref="#PWR79"  Part="1" 
+F 0 "#PWR79" H 6850 2550 30  0001 C CNN
 F 1 "GND" H 6850 2480 30  0001 C CNN
 	1    6850 2550
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR76
+L GND #PWR78
 U 1 1 4ADA728E
 P 6850 1350
-F 0 "#PWR76" H 6850 1350 30  0001 C CNN
+F 0 "#PWR78" H 6850 1350 30  0001 C CNN
 F 1 "GND" H 6850 1280 30  0001 C CNN
 	1    6850 1350
 	0    1    1    0   

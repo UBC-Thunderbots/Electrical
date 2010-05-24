@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-05-24T15:49:31 PDT
+EESchema Schematic File Version 2  date 2010-05-24T16:44:18 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -13,6 +13,21 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 1250 3400
+Wire Wire Line
+	850  3400 850  3350
+Wire Wire Line
+	850  3400 2450 3400
+Connection ~ 2050 3400
+Wire Wire Line
+	2450 3400 2450 3350
+Wire Wire Line
+	1650 3350 1650 3450
+Wire Wire Line
+	2050 2900 2050 2950
+Connection ~ 1650 2900
+Wire Wire Line
+	1250 2900 1250 2950
 Wire Wire Line
 	5350 950  4100 950 
 Connection ~ 1350 6050
@@ -210,6 +225,89 @@ Wire Wire Line
 Connection ~ 1350 4850
 Wire Wire Line
 	4850 5550 4850 1350
+Wire Wire Line
+	1650 2950 1650 2850
+Wire Wire Line
+	850  2950 850  2900
+Connection ~ 1250 2900
+Wire Wire Line
+	850  2900 2450 2900
+Wire Wire Line
+	2450 2900 2450 2950
+Connection ~ 2050 2900
+Wire Wire Line
+	2050 3400 2050 3350
+Connection ~ 1650 3400
+Wire Wire Line
+	1250 3400 1250 3350
+$Comp
+L GND #PWR2
+U 1 1 4BFB0F37
+P 1650 3450
+F 0 "#PWR2" H 1650 3450 30  0001 C CNN
+F 1 "GND" H 1650 3380 30  0001 C CNN
+	1    1650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR1
+U 1 1 4BFB0F33
+P 1650 2850
+F 0 "#PWR1" H 1650 2800 20  0001 C CNN
+F 1 "+BATT" H 1650 2950 30  0000 C CNN
+	1    1650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C32
+U 1 1 4BFB0F2D
+P 2450 3150
+F 0 "C32" H 2500 3250 50  0000 L CNN
+F 1 "100nF" H 2500 3050 50  0000 L CNN
+F 2 "C1" H 2450 3150 60  0001 C CNN
+	1    2450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C31
+U 1 1 4BFB0F2B
+P 2050 3150
+F 0 "C31" H 2100 3250 50  0000 L CNN
+F 1 "100nF" H 2100 3050 50  0000 L CNN
+F 2 "C1" H 2050 3150 60  0001 C CNN
+	1    2050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C30
+U 1 1 4BFB0F28
+P 1650 3150
+F 0 "C30" H 1700 3250 50  0000 L CNN
+F 1 "100nF" H 1700 3050 50  0000 L CNN
+F 2 "C1" H 1650 3150 60  0001 C CNN
+	1    1650 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C29
+U 1 1 4BFB0F25
+P 1250 3150
+F 0 "C29" H 1300 3250 50  0000 L CNN
+F 1 "100nF" H 1300 3050 50  0000 L CNN
+F 2 "C1" H 1250 3150 60  0001 C CNN
+	1    1250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C28
+U 1 1 4BFB0F15
+P 850 3150
+F 0 "C28" H 900 3250 50  0000 L CNN
+F 1 "100nF" H 900 3050 50  0000 L CNN
+F 2 "C1" H 850 3150 60  0001 C CNN
+	1    850  3150
+	1    0    0    -1  
+$EndComp
 $Comp
 L CAPAPOL C27
 U 1 1 4B54F203
@@ -455,10 +553,10 @@ Entry Wire Line
 Entry Wire Line
 	4250 2000 4350 2100
 $Comp
-L VCOM #PWR3
+L VCOM #PWR5
 U 1 1 4ADA6088
 P 2750 5400
-F 0 "#PWR3" H 2750 5600 40  0001 C CNN
+F 0 "#PWR5" H 2750 5600 40  0001 C CNN
 F 1 "VCOM" H 2750 5550 40  0000 C CNN
 	1    2750 5400
 	1    0    0    -1  
@@ -504,19 +602,19 @@ F 2 "D2" H 2200 5700 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR2
+L GND #PWR4
 U 1 1 4ADA5D25
 P 2350 6100
-F 0 "#PWR2" H 2350 6100 30  0001 C CNN
+F 0 "#PWR4" H 2350 6100 30  0001 C CNN
 F 1 "GND" H 2350 6030 30  0001 C CNN
 	1    2350 6100
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR1
+L +BATT #PWR3
 U 1 1 4ADA5D23
 P 2200 4800
-F 0 "#PWR1" H 2200 4750 20  0001 C CNN
+F 0 "#PWR3" H 2200 4750 20  0001 C CNN
 F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    2200 4800
 	1    0    0    -1  
