@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-05-24T15:49:31 PDT
+EESchema Schematic File Version 2  date 2010-05-24T16:01:53 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
@@ -210,6 +210,7 @@ U 1 1 4BFAFF47
 P 5950 3000
 F 0 "R82" V 6030 3000 50  0000 C CNN
 F 1 "1kR" V 5950 3000 50  0000 C CNN
+F 2 "R1" H 5950 3000 60  0001 C CNN
 	1    5950 3000
 	0    1    1    0   
 $EndComp
@@ -219,6 +220,7 @@ U 1 1 4BFAFF45
 P 5650 2750
 F 0 "R81" V 5730 2750 50  0000 C CNN
 F 1 "1kR" V 5650 2750 50  0000 C CNN
+F 2 "R1" H 5650 2750 60  0001 C CNN
 	1    5650 2750
 	0    1    1    0   
 $EndComp
@@ -228,6 +230,7 @@ U 1 1 4BFAFF3A
 P 5350 2500
 F 0 "R80" V 5430 2500 50  0000 C CNN
 F 1 "1kR" V 5350 2500 50  0000 C CNN
+F 2 "R1" H 5350 2500 60  0001 C CNN
 	1    5350 2500
 	0    1    1    0   
 $EndComp
@@ -237,6 +240,7 @@ U 1 1 4BFAFE56
 P 9950 2400
 F 0 "R85" V 10030 2400 50  0000 C CNN
 F 1 "47R" V 9950 2400 50  0000 C CNN
+F 2 "R1" H 9950 2400 60  0001 C CNN
 	1    9950 2400
 	1    0    0    -1  
 $EndComp
@@ -246,6 +250,7 @@ U 1 1 4BFAFE54
 P 8650 2400
 F 0 "R84" V 8730 2400 50  0000 C CNN
 F 1 "47R" V 8650 2400 50  0000 C CNN
+F 2 "R1" H 8650 2400 60  0001 C CNN
 	1    8650 2400
 	1    0    0    -1  
 $EndComp
@@ -255,6 +260,7 @@ U 1 1 4BFAFE4E
 P 7350 2400
 F 0 "R83" V 7430 2400 50  0000 C CNN
 F 1 "47R" V 7350 2400 50  0000 C CNN
+F 2 "R1" H 7350 2400 60  0001 C CNN
 	1    7350 2400
 	1    0    0    -1  
 $EndComp
