@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date 2010-02-25T15:52:51 PST
+EESchema Schematic File Version 2  date 2010-05-24T15:49:31 PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 8
 Title ""
-Date "26 jan 2010"
+Date "24 may 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,18 +13,13 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	5350 950  4100 950 
 Connection ~ 1350 6050
 Wire Wire Line
 	850  6050 2850 6050
 Wire Wire Line
 	850  6050 850  5650
-Connection ~ 4550 750 
-Wire Wire Line
-	4550 550  4550 950 
-Wire Wire Line
-	4550 550  4100 550 
-Wire Wire Line
-	4850 1750 4850 5550
 Wire Wire Line
 	7000 1200 8100 1200
 Wire Wire Line
@@ -203,23 +198,18 @@ Wire Wire Line
 Wire Wire Line
 	10300 1200 8500 1200
 Wire Wire Line
-	4850 5550 5600 5550
+	5600 5550 4850 5550
 Wire Wire Line
 	5600 6550 4100 6550
 Wire Wire Line
 	4100 6550 4100 950 
 Wire Wire Line
-	5150 1550 5150 1350
-Connection ~ 5150 1350
-Wire Wire Line
-	4550 750  4400 750 
-Wire Wire Line
-	4550 950  5350 950 
-Wire Wire Line
 	850  5250 850  4850
 Wire Wire Line
 	850  4850 2200 4850
 Connection ~ 1350 4850
+Wire Wire Line
+	4850 5550 4850 1350
 $Comp
 L CAPAPOL C27
 U 1 1 4B54F203
@@ -230,28 +220,6 @@ F 2 "CP12" H 850 5450 60  0001 C CNN
 F 4 "4040PHBK-ND" H 850 5450 60  0001 C CNN "Field1"
 	1    850  5450
 	1    0    0    -1  
-$EndComp
-$Comp
-L MOSFET_N Q6
-U 1 1 4B467314
-P 4200 750
-F 0 "Q6" H 4210 920 60  0000 R CNN
-F 1 "MOSFET_N" H 4210 600 60  0000 R CNN
-F 2 "TO92DGS" H 4200 750 60  0001 C CNN
-F 4 "2N7000" H 4200 750 60  0001 C CNN "Field1"
-	1    4200 750 
-	-1   0    0    1   
-$EndComp
-$Comp
-L MOSFET_N Q7
-U 1 1 4B46730D
-P 4950 1550
-F 0 "Q7" H 4960 1720 60  0000 R CNN
-F 1 "MOSFET_N" H 4960 1400 60  0000 R CNN
-F 2 "TO92DGS" H 4950 1550 60  0001 C CNN
-F 4 "2N7000" H 4950 1550 60  0001 C CNN "Field1"
-	1    4950 1550
-	-1   0    0    1   
 $EndComp
 $Comp
 L DIODE D49
@@ -500,7 +468,7 @@ L R R3
 U 1 1 4ADA5FCB
 P 2500 5750
 F 0 "R3" V 2580 5750 50  0000 C CNN
-F 1 "10kR" V 2500 5750 50  0000 C CNN
+F 1 "1kR" V 2500 5750 50  0000 C CNN
 F 2 "R1" H 2500 5750 60  0001 C CNN
 	1    2500 5750
 	1    0    0    -1  
@@ -510,7 +478,7 @@ L R R2
 U 1 1 4ADA5FCA
 P 2500 5150
 F 0 "R2" V 2580 5150 50  0000 C CNN
-F 1 "11kR" V 2500 5150 50  0000 C CNN
+F 1 "1.2kR" V 2500 5150 50  0000 C CNN
 F 2 "R1" H 2500 5150 60  0001 C CNN
 	1    2500 5150
 	1    0    0    -1  
@@ -520,7 +488,7 @@ L R R1
 U 1 1 4ADA5D38
 P 2200 5150
 F 0 "R1" V 2280 5150 50  0000 C CNN
-F 1 "1kR" V 2200 5150 50  0000 C CNN
+F 1 "560R" V 2200 5150 50  0000 C CNN
 F 2 "R1" H 2200 5150 60  0001 C CNN
 	1    2200 5150
 	1    0    0    -1  
@@ -536,19 +504,19 @@ F 2 "D2" H 2200 5700 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR01
+L GND #PWR2
 U 1 1 4ADA5D25
 P 2350 6100
-F 0 "#PWR01" H 2350 6100 30  0001 C CNN
+F 0 "#PWR2" H 2350 6100 30  0001 C CNN
 F 1 "GND" H 2350 6030 30  0001 C CNN
 	1    2350 6100
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR02
+L +BATT #PWR1
 U 1 1 4ADA5D23
 P 2200 4800
-F 0 "#PWR02" H 2200 4750 20  0001 C CNN
+F 0 "#PWR1" H 2200 4750 20  0001 C CNN
 F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    2200 4800
 	1    0    0    -1  
