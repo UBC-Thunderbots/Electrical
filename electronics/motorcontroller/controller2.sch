@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2010-05-24T16:44:18 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
+EESchema Schematic File Version 2  date 2010-05-24T17:10:25 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -212,7 +212,7 @@ F 0 "R82" V 6030 3000 50  0000 C CNN
 F 1 "1kR" V 5950 3000 50  0000 C CNN
 F 2 "R1" H 5950 3000 60  0001 C CNN
 	1    5950 3000
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L R R81
@@ -222,7 +222,7 @@ F 0 "R81" V 5730 2750 50  0000 C CNN
 F 1 "1kR" V 5650 2750 50  0000 C CNN
 F 2 "R1" H 5650 2750 60  0001 C CNN
 	1    5650 2750
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L R R80
@@ -232,7 +232,7 @@ F 0 "R80" V 5430 2500 50  0000 C CNN
 F 1 "1kR" V 5350 2500 50  0000 C CNN
 F 2 "R1" H 5350 2500 60  0001 C CNN
 	1    5350 2500
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L R R85
@@ -275,73 +275,73 @@ F 2 "SO24L" H 3100 3450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR34
+L GND #PWR031
 U 1 1 4B89A26C
 P 7600 1800
-F 0 "#PWR34" H 7600 1800 30  0001 C CNN
+F 0 "#PWR031" H 7600 1800 30  0001 C CNN
 F 1 "GND" H 7600 1730 30  0001 C CNN
 	1    7600 1800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR36
+L GND #PWR032
 U 1 1 4B89A26A
 P 8900 1800
-F 0 "#PWR36" H 8900 1800 30  0001 C CNN
+F 0 "#PWR032" H 8900 1800 30  0001 C CNN
 F 1 "GND" H 8900 1730 30  0001 C CNN
 	1    8900 1800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR38
+L GND #PWR033
 U 1 1 4B89A267
 P 10200 1800
-F 0 "#PWR38" H 10200 1800 30  0001 C CNN
+F 0 "#PWR033" H 10200 1800 30  0001 C CNN
 F 1 "GND" H 10200 1730 30  0001 C CNN
 	1    10200 1800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR27
+L GND #PWR034
 U 1 1 4B89A24F
 P 1700 3800
-F 0 "#PWR27" H 1700 3800 30  0001 C CNN
+F 0 "#PWR034" H 1700 3800 30  0001 C CNN
 F 1 "GND" H 1700 3730 30  0001 C CNN
 	1    1700 3800
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR29
+L GND #PWR035
 U 1 1 4B7DCA62
 P 4700 3200
-F 0 "#PWR29" H 4700 3200 30  0001 C CNN
+F 0 "#PWR035" H 4700 3200 30  0001 C CNN
 F 1 "GND" H 4700 3130 30  0001 C CNN
 	1    4700 3200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR37
+L +BATT #PWR036
 U 1 1 4B53A947
 P 9200 1750
-F 0 "#PWR37" H 9200 1700 20  0001 C CNN
+F 0 "#PWR036" H 9200 1700 20  0001 C CNN
 F 1 "+BATT" H 9200 1850 30  0000 C CNN
 	1    9200 1750
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR35
+L +BATT #PWR037
 U 1 1 4B53A945
 P 7900 1750
-F 0 "#PWR35" H 7900 1700 20  0001 C CNN
+F 0 "#PWR037" H 7900 1700 20  0001 C CNN
 F 1 "+BATT" H 7900 1850 30  0000 C CNN
 	1    7900 1750
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR33
+L +BATT #PWR038
 U 1 1 4B53A943
 P 6600 1750
-F 0 "#PWR33" H 6600 1700 20  0001 C CNN
+F 0 "#PWR038" H 6600 1700 20  0001 C CNN
 F 1 "+BATT" H 6600 1850 30  0000 C CNN
 	1    6600 1750
 	1    0    0    -1  
@@ -450,19 +450,19 @@ F 2 "C1" H 3100 4700 60  0001 C CNN
 $EndComp
 NoConn ~ 1750 3600
 $Comp
-L +BATT #PWR30
+L +BATT #PWR039
 U 1 1 4ADA61C8
 P 4700 3650
-F 0 "#PWR30" H 4700 3600 20  0001 C CNN
+F 0 "#PWR039" H 4700 3600 20  0001 C CNN
 F 1 "+BATT" H 4700 3750 30  0000 C CNN
 	1    4700 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR31
+L GND #PWR040
 U 1 1 4ADA61B9
 P 4700 3900
-F 0 "#PWR31" H 4700 3900 30  0001 C CNN
+F 0 "#PWR040" H 4700 3900 30  0001 C CNN
 F 1 "GND" H 4700 3830 30  0001 C CNN
 	1    4700 3900
 	1    0    0    -1  
@@ -477,10 +477,10 @@ F 1 "VCOM" H 1700 4150 40  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR32
+L +BATT #PWR041
 U 1 1 4ADA5BFB
 P 5950 1200
-F 0 "#PWR32" H 5950 1150 20  0001 C CNN
+F 0 "#PWR041" H 5950 1150 20  0001 C CNN
 F 1 "+BATT" H 5950 1300 30  0000 C CNN
 	1    5950 1200
 	1    0    0    -1  
@@ -546,10 +546,10 @@ F 2 "R1" H 900 3600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR26
+L GND #PWR042
 U 1 1 4ADA3C78
 P 900 4400
-F 0 "#PWR26" H 900 4400 30  0001 C CNN
+F 0 "#PWR042" H 900 4400 30  0001 C CNN
 F 1 "GND" H 900 4330 30  0001 C CNN
 	1    900  4400
 	1    0    0    -1  

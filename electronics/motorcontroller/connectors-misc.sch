@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2010-05-24T16:44:18 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
+EESchema Schematic File Version 2  date 2010-05-24T17:10:25 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -15,7 +15,7 @@ Comment4 ""
 $EndDescr
 Connection ~ 4800 5700
 Wire Wire Line
-	4500 5700 4500 5650
+	4500 5650 4500 5700
 Wire Wire Line
 	4500 5700 5700 5700
 Connection ~ 5400 5700
@@ -156,10 +156,10 @@ Connection ~ 5100 5700
 Wire Wire Line
 	4800 5700 4800 5650
 $Comp
-L GND #PWR19
+L GND #PWR05
 U 1 1 4BFB0241
 P 5100 5750
-F 0 "#PWR19" H 5100 5750 30  0001 C CNN
+F 0 "#PWR05" H 5100 5750 30  0001 C CNN
 F 1 "GND" H 5100 5680 30  0001 C CNN
 	1    5100 5750
 	1    0    0    -1  
@@ -230,10 +230,10 @@ F 4 "1N5227B-TPCT-ND" H 5700 5450 60  0001 C CNN "Field1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR25
+L GND #PWR06
 U 1 1 4BFB012D
 P 7500 5250
-F 0 "#PWR25" H 7500 5250 30  0001 C CNN
+F 0 "#PWR06" H 7500 5250 30  0001 C CNN
 F 1 "GND" H 7500 5180 30  0001 C CNN
 	1    7500 5250
 	1    0    0    -1  
@@ -250,10 +250,10 @@ F 4 "1N5227B-TPCT-ND" H 7500 5000 60  0001 C CNN "Field1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR20
+L GND #PWR07
 U 1 1 4BFB00F6
 P 5300 4500
-F 0 "#PWR20" H 5300 4500 30  0001 C CNN
+F 0 "#PWR07" H 5300 4500 30  0001 C CNN
 F 1 "GND" H 5300 4430 30  0001 C CNN
 	1    5300 4500
 	1    0    0    -1  
@@ -270,19 +270,19 @@ F 4 "1N5227B-TPCT-ND" H 5300 4250 60  0001 C CNN "Field1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR24
+L GND #PWR08
 U 1 1 4BFAFBBA
 P 7000 5950
-F 0 "#PWR24" H 7000 5950 30  0001 C CNN
+F 0 "#PWR08" H 7000 5950 30  0001 C CNN
 F 1 "GND" H 7000 5880 30  0001 C CNN
 	1    7000 5950
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR22
+L +3.3V #PWR09
 U 1 1 4BFAFBB1
 P 5800 5850
-F 0 "#PWR22" H 5800 5810 30  0001 C CNN
+F 0 "#PWR09" H 5800 5810 30  0001 C CNN
 F 1 "+3.3V" H 5800 5960 30  0000 C CNN
 	1    5800 5850
 	1    0    0    -1  
@@ -291,19 +291,19 @@ Text HLabel 7550 4750 2    60   Output ~ 0
 BRAKEDRIBBLER
 NoConn ~ 6800 4700
 $Comp
-L PWR_FLAG #FLG2
+L PWR_FLAG #FLG010
 U 1 1 4B132953
 P 5600 2750
-F 0 "#FLG2" H 5600 3020 30  0001 C CNN
+F 0 "#FLG010" H 5600 3020 30  0001 C CNN
 F 1 "PWR_FLAG" H 5600 2980 30  0000 C CNN
 	1    5600 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG1
+L PWR_FLAG #FLG011
 U 1 1 4B13294C
 P 5600 2050
-F 0 "#FLG1" H 5600 2320 30  0001 C CNN
+F 0 "#FLG011" H 5600 2320 30  0001 C CNN
 F 1 "PWR_FLAG" H 5600 2280 30  0000 C CNN
 	1    5600 2050
 	1    0    0    -1  
@@ -330,19 +330,19 @@ NoConn ~ 6000 5300
 NoConn ~ 6000 5200
 NoConn ~ 6000 5100
 $Comp
-L GND #PWR23
+L GND #PWR012
 U 1 1 4ADA585E
 P 5900 2850
-F 0 "#PWR23" H 5900 2850 30  0001 C CNN
+F 0 "#PWR012" H 5900 2850 30  0001 C CNN
 F 1 "GND" H 5900 2780 30  0001 C CNN
 	1    5900 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR21
+L +BATT #PWR013
 U 1 1 4ADA585A
 P 5800 2050
-F 0 "#PWR21" H 5800 2000 20  0001 C CNN
+F 0 "#PWR013" H 5800 2000 20  0001 C CNN
 F 1 "+BATT" H 5800 2150 30  0000 C CNN
 	1    5800 2050
 	1    0    0    -1  

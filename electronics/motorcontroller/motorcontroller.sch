@@ -1,5 +1,5 @@
-EESchema Schematic File Version 2  date 2010-05-24T16:44:18 PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
+EESchema Schematic File Version 2  date 2010-05-24T17:10:25 PDT
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./motorcontroller.cache
 EELAYER 23  0
 EELAYER END
 $Descr A4 11700 8267
@@ -15,7 +15,7 @@ Comment4 ""
 $EndDescr
 Connection ~ 1250 3400
 Wire Wire Line
-	850  3400 850  3350
+	850  3350 850  3400
 Wire Wire Line
 	850  3400 2450 3400
 Connection ~ 2050 3400
@@ -241,19 +241,19 @@ Connection ~ 1650 3400
 Wire Wire Line
 	1250 3400 1250 3350
 $Comp
-L GND #PWR2
+L GND #PWR01
 U 1 1 4BFB0F37
 P 1650 3450
-F 0 "#PWR2" H 1650 3450 30  0001 C CNN
+F 0 "#PWR01" H 1650 3450 30  0001 C CNN
 F 1 "GND" H 1650 3380 30  0001 C CNN
 	1    1650 3450
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR1
+L +BATT #PWR02
 U 1 1 4BFB0F33
 P 1650 2850
-F 0 "#PWR1" H 1650 2800 20  0001 C CNN
+F 0 "#PWR02" H 1650 2800 20  0001 C CNN
 F 1 "+BATT" H 1650 2950 30  0000 C CNN
 	1    1650 2850
 	1    0    0    -1  
@@ -602,19 +602,19 @@ F 2 "D2" H 2200 5700 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR4
+L GND #PWR03
 U 1 1 4ADA5D25
 P 2350 6100
-F 0 "#PWR4" H 2350 6100 30  0001 C CNN
+F 0 "#PWR03" H 2350 6100 30  0001 C CNN
 F 1 "GND" H 2350 6030 30  0001 C CNN
 	1    2350 6100
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR3
+L +BATT #PWR04
 U 1 1 4ADA5D23
 P 2200 4800
-F 0 "#PWR3" H 2200 4750 20  0001 C CNN
+F 0 "#PWR04" H 2200 4750 20  0001 C CNN
 F 1 "+BATT" H 2200 4900 30  0000 C CNN
 	1    2200 4800
 	1    0    0    -1  
