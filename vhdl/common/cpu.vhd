@@ -90,6 +90,10 @@ use work.types.all;
 --   right, with sign propagation, by 4 bits, storing the high word of the
 --   result into RA and the low word of the result into RB.
 --
+--  SKIPZ RA (O=001101) - Skip if Zero
+--   If RA is equal to zero, replaces the next instruction with a NOP. This is
+--   not capable of skipping a HALT or OUT instruction!
+--
 entity CPU is
 	generic(
 		InitROM : ROMDataType;
@@ -121,6 +125,8 @@ architecture Behavioural of CPU is
 	signal NewRB : signed(15 downto 0);
 	signal ALUIOWrite : std_ulogic;
 	signal Halt : std_ulogic;
+	signal Skip : std_ulogic;
+	signal SkipDelayed : std_ulogic;
 	signal Carry : std_ulogic := '0';
 	signal CarryOut : std_ulogic;
 begin
@@ -137,6 +143,7 @@ begin
 		IOOutData => IOOutData,
 		IOWrite => ALUIOWrite,
 		Halt => Halt,
+		Skip => Skip,
 		CarryIn => Carry,
 		CarryOut => CarryOut
 	);
@@ -155,6 +162,7 @@ begin
 				PC <= ResetAddress;
 				LoadInstruction := true;
 				ROMAddress := ResetAddress;
+				SkipDelayed <= '0';
 				Carry <= '0';
 			elsif State = Decoding then
 				State <= Executing;
@@ -167,6 +175,7 @@ begin
 				end if;
 				LoadInstruction := true;
 				ROMAddress := PC;
+				SkipDelayed <= Skip;
 				Carry <= CarryOut;
 			end if;
 
@@ -187,7 +196,7 @@ begin
 			Write := false;
 			if State = Decoding then
 				Enable := true;
-			elsif State = Executing then
+			elsif State = Executing and SkipDelayed = '0' then
 				Enable := true;
 				Write := true;
 			end if;
@@ -214,7 +223,7 @@ begin
 			Write := false;
 			if State = Decoding then
 				Enable := true;
-			elsif State = Executing and Address /= OtherAddress then
+			elsif State = Executing and SkipDelayed = '0' and Address /= OtherAddress then
 				Enable := true;
 				Write := true;
 			end if;

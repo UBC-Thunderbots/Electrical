@@ -35,6 +35,8 @@ architecture Behavioural of CPUTest is
 		"0000001001000111", -- ADD r9, r7
 		"1100001010001000", -- ADDC r10, r8
 		"0111001001010010", -- OUT 18, r9
+		"1101001011000000", -- SKIPZ r11
+		"0100001010001011", -- MOV r10, r11
 		"0111001010010011", -- OUT 19, r10
 		"0010000000000000", -- HALT
 		"0010000000000000", -- HALT
@@ -52,7 +54,7 @@ architecture Behavioural of CPUTest is
 		X"0001",              -- r8
 		X"ABCD",              -- r9
 		X"1234",              -- r10
-		to_signed(0, 16),
+		to_signed(0, 16),     -- r11
 		to_signed(0, 16),
 		to_signed(0, 16),
 		to_signed(0, 16),

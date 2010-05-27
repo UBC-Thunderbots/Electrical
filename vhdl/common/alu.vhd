@@ -18,6 +18,7 @@ entity ALU is
 		IOWrite : out std_ulogic;
 
 		Halt : out std_ulogic;
+		Skip : out std_ulogic;
 
 		CarryIn : in std_ulogic;
 		CarryOut : out std_ulogic
@@ -50,6 +51,7 @@ begin
 		IOOutData <= RA;
 		IOWrite <= '0';
 		Halt <= '0';
+		Skip <= '0';
 		CarryOut <= CarryIn;
 		Addend1 <= RA;
 		Addend2 <= RB;
@@ -110,6 +112,11 @@ begin
 			end if;
 			NewRA <= signed(Sum(15 downto 0));
 			CarryOut <= Sum(16);
+		elsif Opcode = 13 then
+			-- SKIPZ
+			if RA = to_signed(0, 16) then
+				Skip <= '1';
+			end if;
 		end if;
 	end process;
 end architecture Behavioural;
