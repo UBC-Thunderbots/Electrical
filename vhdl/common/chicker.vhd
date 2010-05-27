@@ -32,8 +32,8 @@ begin
 	ReadyFlag <= '1' when Done = '0' else '0';
 	FaultFlag <= '1' when Fault = '0' else '0';
 	Charge <= '0' when ChickerEnableFlag = '1' and RXTimeout = '0' else '1';
-	Kick <= '0' when ChipFlag = '0' and CounterMSW /= Power else '1';
-	Chip <= '0' when ChipFlag = '1' and CounterMSW /= Power else '1';
+	Kick <= '0' when ChipFlag = '0' and Power /= 0 and CounterMSW /= Power else '1';
+	Chip <= '0' when ChipFlag = '1' and Power /= 0 and CounterMSW /= Power else '1';
 
 	process(Clock1)
 	begin
