@@ -148,8 +148,10 @@ $(PROJ).ncd : $(PROJ)_map.ncd
 #    possible.
 #  -w
 #    Overwrites any existing file.
+#  -detail
+#    Generates a more detailed report file.
 $(PROJ)_map.ncd : $(PROJ).ngd
-	( source $(XILINX_SETTINGS) && map -pr b $(PROJ).ngd -o $(PROJ)_map.ncd -w )
+	( source $(XILINX_SETTINGS) && map -pr b $(PROJ).ngd -o $(PROJ)_map.ncd -w -detail )
 
 # We can make an NGD file from an NGC file and a UCF file using Xilinx NGDBUILD.
 $(PROJ).ngd : $(PROJ).ngc $(PROJ).ucf
