@@ -141,7 +141,6 @@ architecture Behavioural of Main is
 	-- Dribbler stuff.
 	signal Dribble : signed(10 downto 0);
 	signal DutyCycleD : unsigned(9 downto 0);
-	signal DirDT : std_ulogic := '0';
 
 	-- Chicker stuff.
 	signal ChickerReadyFlag : std_ulogic;
