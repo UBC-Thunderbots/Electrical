@@ -45,7 +45,7 @@ architecture Behavioural of XBeePacketReceiver is
 	signal Flag3 : boolean := false;
 	type CopyStateType is (ReadShadow, WriteData);
 	signal CopyState : CopyStateType := ReadShadow;
-	signal CopyCounter : natural range 0 to 15 := 8;
+	signal CopyCounter : natural range 0 to 15 := 9;
 	signal CopyOffset : natural range 0 to 255;
 	signal CopyBuffer : std_ulogic_vector(7 downto 0);
 	signal CopyFirst : boolean := true;
@@ -178,13 +178,13 @@ begin
 		if rising_edge(Clock100) then
 			ClearCopyCounter := false;
 			IncrementCopyCounter := false;
-			if CopyCounter /= 8 then
+			if CopyCounter /= 9 then
 				if CopyState = ReadShadow then
 					CopyBuffer <= Shadow(CopyOffset);
 					CopyState <= WriteData;
 				elsif CopyState = WriteData then
 					if CopyFirst and CopyBuffer(7) = '0' then
-						CopyCounter <= 8;
+						CopyCounter <= 9;
 					else
 						Data(CopyCounter) <= CopyBuffer;
 						IncrementCopyCounter := true;
