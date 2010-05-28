@@ -54,6 +54,7 @@ namespace {
 		instruction_pattern("SHR32_2", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 10),
 		instruction_pattern("SHR32_4", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 11),
 		instruction_pattern("SKIPZ", instruction_pattern::ARG_RA_RO, instruction_pattern::ARG_NONE, 13),
+		instruction_pattern("SMAG", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 14),
 	};
 
 	const unsigned int NUM_REGS = 64;
