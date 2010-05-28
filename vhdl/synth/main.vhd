@@ -139,8 +139,7 @@ architecture Behavioural of Main is
 	signal PWM : std_ulogic_vector(1 to 4) := "0000";
 
 	-- Dribbler stuff.
-	signal Dribble : signed(10 downto 0);
-	signal DutyCycleD : unsigned(9 downto 0);
+	signal Dribble : unsigned(10 downto 0);
 
 	-- Chicker stuff.
 	signal ChickerReadyFlag : std_ulogic;
@@ -224,7 +223,7 @@ begin
 
 	-- Braking stuff.
 	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') and RXTimeout = '0' else '1';
-	BrakeDribbler <= '0' when Dribble /= to_signed(0, 11) and RXTimeout = '0' else '1';
+	BrakeDribbler <= '0' when Dribble(9 downto 0) /= to_unsigned(0, 10) and RXTimeout = '0' else '1';
 
 	-- Wheel stuff.
 	GrayCounters : for I in 1 to 4 generate
@@ -321,27 +320,18 @@ begin
 	Dir4 <= Dir(4);
 
 	-- Dribbler stuff.
-	SMDInstance : entity work.SignMagnitude(Behavioural)
-	generic map(
-		Width => 11
-	)
-	port map(
-		Value => Dribble,
-		Absolute => DutyCycleD,
-		Sign => DirD
-	);
-
 	PWMDInstance : entity work.PWM(Behavioural)
 	generic map(
 		Width => 10,
 		Invert => true,
-		Offset => 30
+		Offset => 0
 	)
 	port map(
 		Clock100 => Clock100,
-		DutyCycle => DutyCycleD,
+		DutyCycle => Dribble(9 downto 0),
 		PWM => PWMD
 	);
+	DirD <= Dribble(10);
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADCInstance : entity work.ADC(Behavioural)

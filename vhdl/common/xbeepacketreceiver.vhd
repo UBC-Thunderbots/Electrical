@@ -22,7 +22,7 @@ entity XBeePacketReceiver is
 		Drive2 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive3 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive4 : out signed(10 downto 0) := to_signed(0, 11);
-		Dribble : out signed(10 downto 0) := to_signed(0, 11);
+		Dribble : out unsigned(10 downto 0) := to_unsigned(0, 11);
 		ChickerPower : out unsigned(8 downto 0) := to_unsigned(0, 9)
 	);
 end entity XBeePacketReceiver;
@@ -59,7 +59,7 @@ begin
 	Drive2 <= signed(std_ulogic_vector'(Data(3)(5 downto 0) & Data(2)(7 downto 3)));
 	Drive3 <= signed(std_ulogic_vector'(Data(5)(0) & Data(4)(7 downto 0) & Data(3)(7 downto 6)));
 	Drive4 <= signed(std_ulogic_vector'(Data(6)(3 downto 0) & Data(5)(7 downto 1)));
-	Dribble <= signed(std_ulogic_vector'(Data(7)(6 downto 0) & Data(6)(7 downto 4)));
+	Dribble <= unsigned(std_ulogic_vector'(Data(7)(6 downto 0) & Data(6)(7 downto 4)));
 	ChickerPower <= unsigned(std_ulogic_vector'(Data(8) & Data(7)(7)));
 
 	process(Clock1)

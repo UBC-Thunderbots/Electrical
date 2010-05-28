@@ -15,7 +15,7 @@ entity XBee is
 		Drive2 : out signed(10 downto 0);
 		Drive3 : out signed(10 downto 0);
 		Drive4 : out signed(10 downto 0);
-		Dribble : out signed(10 downto 0);
+		Dribble : out unsigned(10 downto 0);
 		ChickerPower : out unsigned(8 downto 0);
 		ChipFlag : out std_ulogic;
 		Timeout : out std_ulogic;
