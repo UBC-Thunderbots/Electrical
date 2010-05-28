@@ -93,16 +93,9 @@ begin
 
 	process(ControlledDriveFlag, Drive1, Drive2, Drive3, Drive4, PIDPlant1, PIDPlant2, PIDPlant3, PIDPlant4)
 	begin
-		if ControlledDriveFlag = '1' then
-			Motor1 <= resize(PIDPlant1, Motor1'length);
-			Motor2 <= resize(PIDPlant2, Motor2'length);
-			Motor3 <= resize(PIDPlant3, Motor3'length);
-			Motor4 <= resize(PIDPlant4, Motor4'length);
-		else
-			Motor1 <= Drive1;
-			Motor2 <= Drive2;
-			Motor3 <= Drive3;
-			Motor4 <= Drive4;
-		end if;
+		Motor1 <= resize(PIDPlant1, Motor1'length);
+		Motor2 <= resize(PIDPlant2, Motor2'length);
+		Motor3 <= resize(PIDPlant3, Motor3'length);
+		Motor4 <= resize(PIDPlant4, Motor4'length);
 	end process;
 end architecture Behavioural;
