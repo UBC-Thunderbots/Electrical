@@ -94,6 +94,10 @@ use work.types.all;
 --   If RA is equal to zero, replaces the next instruction with a NOP. This is
 --   not capable of skipping a HALT or OUT instruction!
 --
+--  SMAG RA RB (O=001110) - Convert to Sign-Magnitude
+--   Writes the absolute value of RB to the lower 15 bits of RA, and the sign of
+--   RB to the upper bit of RA.
+--
 entity CPU is
 	generic(
 		InitROM : ROMDataType;

@@ -117,6 +117,15 @@ begin
 			if RA = to_signed(0, 16) then
 				Skip <= '1';
 			end if;
+		elsif Opcode = 14 then
+			-- SMAG
+			Addend1 <= to_signed(1, 16);
+			Addend2 <= not RB;
+			if RB(15) = '0' then
+				NewRA <= RB;
+			else
+				NewRA <= '1' & signed(Sum(14 downto 0));
+			end if;
 		end if;
 	end process;
 end architecture Behavioural;
