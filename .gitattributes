@@ -100,7 +100,6 @@ vhdl/common/pwm.vhd -text
 vhdl/common/serialreceiver.smv -text
 vhdl/common/serialreceiver.vhd -text
 vhdl/common/serialtransmitter.vhd -text
-vhdl/common/signmagnitude.vhd -text
 vhdl/common/types.vhd -text
 vhdl/common/xbee.vhd -text
 vhdl/common/xbeebytereceiver.vhd -text

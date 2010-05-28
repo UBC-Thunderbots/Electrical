@@ -151,6 +151,8 @@ SHR32_4 Plant'$1`H Plant'$1`L
 SHR32_2 Plant'$1`H Plant'$1`L
 ; Reclamp to precisely ±1023.
 CLAMP Plant'$1`L 1023
+; Convert to sign-magnitude representation.
+SMAG Plant'$1`L Plant'$1`L
 
 ; Perform the unit delays.
 MOV W'$1`Z2 W'$1`Z1

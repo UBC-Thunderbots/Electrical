@@ -23,10 +23,10 @@ entity Controller is
 		Encoder4 : in signed(10 downto 0);
 		EncoderReset : out std_ulogic;
 
-		Motor1 : out signed(10 downto 0);
-		Motor2 : out signed(10 downto 0);
-		Motor3 : out signed(10 downto 0);
-		Motor4 : out signed(10 downto 0)
+		Motor1 : out unsigned(10 downto 0);
+		Motor2 : out unsigned(10 downto 0);
+		Motor3 : out unsigned(10 downto 0);
+		Motor4 : out unsigned(10 downto 0)
 	);
 end entity Controller;
 
@@ -91,11 +91,11 @@ begin
 		Clock => Clock10
 	);
 
-	process(ControlledDriveFlag, Drive1, Drive2, Drive3, Drive4, PIDPlant1, PIDPlant2, PIDPlant3, PIDPlant4)
+	process(PIDPlant1, PIDPlant2, PIDPlant3, PIDPlant4)
 	begin
-		Motor1 <= resize(PIDPlant1, Motor1'length);
-		Motor2 <= resize(PIDPlant2, Motor2'length);
-		Motor3 <= resize(PIDPlant3, Motor3'length);
-		Motor4 <= resize(PIDPlant4, Motor4'length);
+		Motor1 <= unsigned(PIDPlant1(15) & PIDPlant1(9 downto 0));
+		Motor2 <= unsigned(PIDPlant2(15) & PIDPlant2(9 downto 0));
+		Motor3 <= unsigned(PIDPlant3(15) & PIDPlant3(9 downto 0));
+		Motor4 <= unsigned(PIDPlant4(15) & PIDPlant4(9 downto 0));
 	end process;
 end architecture Behavioural;

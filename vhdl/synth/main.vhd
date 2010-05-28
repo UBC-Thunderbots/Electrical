@@ -119,21 +119,14 @@ architecture Behavioural of Main is
 	signal EncoderReset : std_ulogic;
 
 	-- Controller outputs.
-	signal ControlM1 : signed(10 downto 0);
-	signal ControlM2 : signed(10 downto 0);
-	signal ControlM3 : signed(10 downto 0);
-	signal ControlM4 : signed(10 downto 0);
+	signal ControlM1 : unsigned(10 downto 0);
+	signal ControlM2 : unsigned(10 downto 0);
+	signal ControlM3 : unsigned(10 downto 0);
+	signal ControlM4 : unsigned(10 downto 0);
 
 	-- Motor powers from the controller or direct drive.
-	type MotorType is array(1 to 4) of signed(10 downto 0);
+	type MotorType is array(1 to 4) of unsigned(10 downto 0);
 	signal Motor : MotorType;
-
-	-- Duty cycles from the sign-magnitude converters.
-	type DutyCycleType is array(1 to 4) of unsigned(9 downto 0);
-	signal DutyCycle : DutyCycleType;
-
-	-- Directions from the sign-magnitude converters.
-	signal Dir : std_ulogic_vector(1 to 4) := "0000";
 
 	-- PWM signals from the PWM generators.
 	signal PWM : std_ulogic_vector(1 to 4) := "0000";
@@ -265,35 +258,22 @@ begin
 	process(DirectDriveFlag, ControlledDriveFlag, ControlM1, ControlM2, ControlM3, ControlM4, Drive1, Drive2, Drive3, Drive4)
 	begin
 		if DirectDriveFlag = '1' then
-			Motor(1) <= Drive1;
-			Motor(2) <= Drive2;
-			Motor(3) <= Drive3;
-			Motor(4) <= Drive4;
+			Motor(1) <= unsigned(Drive1);
+			Motor(2) <= unsigned(Drive2);
+			Motor(3) <= unsigned(Drive3);
+			Motor(4) <= unsigned(Drive4);
 		elsif ControlledDriveFlag = '1' then
 			Motor(1) <= ControlM1;
 			Motor(2) <= ControlM2;
 			Motor(3) <= ControlM3;
 			Motor(4) <= ControlM4;
 		else
-			Motor(1) <= to_signed(0, 11);
-			Motor(2) <= to_signed(0, 11);
-			Motor(3) <= to_signed(0, 11);
-			Motor(4) <= to_signed(0, 11);
+			Motor(1) <= to_unsigned(0, 11);
+			Motor(2) <= to_unsigned(0, 11);
+			Motor(3) <= to_unsigned(0, 11);
+			Motor(4) <= to_unsigned(0, 11);
 		end if;
 	end process;
-
-	SignMagnitudes : for I in 1 to 4 generate
-	begin
-		Instance : entity work.SignMagnitude(Behavioural)
-		generic map(
-			Width => 11
-		)
-		port map(
-			Value => Motor(I),
-			Absolute => DutyCycle(I),
-			Sign => Dir(I)
-		);
-	end generate;
 
 	PWMs : for I in 1 to 4 generate
 	begin
@@ -305,7 +285,7 @@ begin
 		)
 		port map(
 			Clock100 => Clock100,
-			DutyCycle => DutyCycle(I),
+			DutyCycle => Motor(I)(9 downto 0),
 			PWM => PWM(I)
 		);
 	end generate;
@@ -314,10 +294,10 @@ begin
 	PWM3 <= PWM(3);
 	PWM4 <= PWM(4);
 
-	Dir1 <= Dir(1);
-	Dir2 <= Dir(2);
-	Dir3 <= Dir(3);
-	Dir4 <= Dir(4);
+	Dir1 <= Motor(1)(10);
+	Dir2 <= Motor(2)(10);
+	Dir3 <= Motor(3)(10);
+	Dir4 <= Motor(4)(10);
 
 	-- Dribbler stuff.
 	PWMDInstance : entity work.PWM(Behavioural)
