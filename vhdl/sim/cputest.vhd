@@ -40,8 +40,10 @@ architecture Behavioural of CPUTest is
 		"0111001010010011", -- OUT 19, r10
 		"1110001011001000", -- SMAG r11, r8
 		"0111001011010100", -- OUT 20, r11
-		"1110001011000111", -- SMAG r11, r7
+		"1110001011000111", -- ABS r11, r7
 		"0111001011010101", -- OUT 21, r11
+		"1111001011000111", -- SIGN r11, r7
+		"0111001011010110", -- OUT 22, r11
 		"0010000000000000", -- HALT
 		"0010000000000000", -- HALT
 		others => "0000000000000000"
@@ -228,7 +230,7 @@ begin
 		Reset <= '0';
 		wait for ClockPeriod * 1000;
 
-		assert IOWriteCount = 12;
+		assert IOWriteCount = 13;
 		assert OutPorts(10) = to_signed(27656, 16);
 		assert OutPorts(11) = to_signed(0, 16);
 		assert OutPorts(12) = to_signed(-1, 16);
@@ -240,7 +242,8 @@ begin
 		assert OutPorts(18) = X"579A";
 		assert OutPorts(19) = X"1236";
 		assert OutPorts(20) = X"0001";
-		assert OutPorts(21) = (X"5433" or X"8000");
+		assert OutPorts(21) = X"5433";
+		assert OutPorts(22) = X"8000";
 
 		Done <= true;
 		wait;

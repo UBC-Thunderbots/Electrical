@@ -141,7 +141,7 @@ MUL TempH TempL
 ADD Plant'$1`L TempL
 ADDC Plant'$1`H TempH
 
-; Plant is in 18.14 format. First, clamp it to ±1024.
+; Plant is in 18.14 format. First, clamp it to approximately ±1024.
 ; Do this by clamping the upper byte to ±256.
 CLAMP Plant'$1`H 256
 ; Now convert it to 16.0 by shifting right 14 bits.
@@ -149,10 +149,16 @@ SHR32_4 Plant'$1`H Plant'$1`L
 SHR32_4 Plant'$1`H Plant'$1`L
 SHR32_4 Plant'$1`H Plant'$1`L
 SHR32_2 Plant'$1`H Plant'$1`L
-; Reclamp to precisely ±1023.
+; Extract sign and magnitude.
+SIGN Plant'$1`H Plant'$1`L
+ABS Plant'$1`L Plant'$1`L
+; Apply the linearization offset.
+SKIPZ Plant'$1`L
+ADD Plant'$1`L 30
+; Reclamp to precisely 1023.
 CLAMP Plant'$1`L 1023
-; Convert to sign-magnitude representation.
-SMAG Plant'$1`L Plant'$1`L
+; Combine sign with magnitude.
+ADD Plant'$1`L Plant'$1`H
 
 ; Perform the unit delays.
 MOV W'$1`Z2 W'$1`Z1

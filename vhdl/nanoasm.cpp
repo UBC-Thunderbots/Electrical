@@ -40,6 +40,7 @@ namespace {
 	};
 
 	const instruction_pattern ALL_INSTRUCTIONS[] = {
+		instruction_pattern("ABS", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 14),
 		instruction_pattern("ADD", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 0),
 		instruction_pattern("ADDC", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 12),
 		instruction_pattern("CLAMP", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 1),
@@ -53,8 +54,8 @@ namespace {
 		instruction_pattern("SHR32_1", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 9),
 		instruction_pattern("SHR32_2", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 10),
 		instruction_pattern("SHR32_4", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RW, 11),
+		instruction_pattern("SIGN", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 15),
 		instruction_pattern("SKIPZ", instruction_pattern::ARG_RA_RO, instruction_pattern::ARG_NONE, 13),
-		instruction_pattern("SMAG", instruction_pattern::ARG_RA_RW, instruction_pattern::ARG_RB_RO, 14),
 	};
 
 	const unsigned int NUM_REGS = 64;

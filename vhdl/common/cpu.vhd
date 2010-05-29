@@ -94,9 +94,11 @@ use work.types.all;
 --   If RA is equal to zero, replaces the next instruction with a NOP. This is
 --   not capable of skipping a HALT or OUT instruction!
 --
---  SMAG RA RB (O=001110) - Convert to Sign-Magnitude
---   Writes the absolute value of RB to the lower 15 bits of RA, and the sign of
---   RB to the upper bit of RA.
+--  ABS RA RB (O=001110) - Absolute Value
+--   Writes the absolute value of RB to RA.
+--
+--  SIGN RA RB (O=001111) - Sign
+--   Writes 0x8000 to RA if RB is negative, or 0x0000 otherwise.
 --
 entity CPU is
 	generic(
