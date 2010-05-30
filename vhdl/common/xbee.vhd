@@ -20,7 +20,7 @@ entity XBee is
 		ChipFlag : out std_ulogic;
 		Timeout : out std_ulogic;
 
-		DribblerSpeed : in signed(10 downto 0);
+		DribblerSpeed : in unsigned(10 downto 0);
 		VMon : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;

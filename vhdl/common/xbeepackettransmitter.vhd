@@ -9,7 +9,7 @@ entity XBeePacketTransmitter is
 		Start : in std_ulogic;
 
 		RSSI : in std_ulogic_vector(7 downto 0);
-		DribblerSpeed : in signed(10 downto 0);
+		DribblerSpeed : in unsigned(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;

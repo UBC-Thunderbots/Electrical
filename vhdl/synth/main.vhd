@@ -95,6 +95,7 @@ architecture Behavioural of Main is
 	signal Fault3L : std_ulogic := '0';
 	signal Fault4L : std_ulogic := '0';
 	signal FaultDL : std_ulogic := '0';
+	signal DSenseLPrev : std_ulogic := '0';
 	signal DSenseL : std_ulogic := '0';
 	signal EncoderAL : std_ulogic_vector(1 to 4) := "0000";
 	signal EncoderBL : std_ulogic_vector(1 to 4) := "0000";
@@ -133,6 +134,10 @@ architecture Behavioural of Main is
 
 	-- Dribbler stuff.
 	signal Dribble : unsigned(10 downto 0);
+	signal DSenseSpeed : unsigned(10 downto 0) := to_unsigned(0, 11);
+	signal DSenseSpeedBuf : unsigned(10 downto 0) := to_unsigned(0, 11);
+	subtype DSenseTimeType is natural range 0 to 99999;
+	signal DSenseTime : DSenseTimeType := 0;
 
 	-- Chicker stuff.
 	signal ChickerReadyFlag : std_ulogic;
@@ -161,6 +166,7 @@ begin
 			Fault3L <= Fault3;
 			Fault4L <= Fault4;
 			FaultDL <= FaultD;
+			DSenseLPrev <= DSenseL;
 			DSenseL <= DSense;
 			EncoderAL(1) <= Encoder1A;
 			EncoderAL(2) <= Encoder2A;
@@ -201,7 +207,7 @@ begin
 		ChickerPower => ChickerPower,
 		ChipFlag => ChipFlag,
 		Timeout => RXTimeout,
-		DribblerSpeed => to_signed(0, 11),
+		DribblerSpeed => DSenseSpeedBuf,
 		VMon => VMon,
 		Fault1 => Fault1L,
 		Fault2 => Fault2L,
@@ -310,6 +316,21 @@ begin
 		PWM => PWMD
 	);
 	DirD <= Dribble(10);
+	process(Clock1)
+	begin
+		if rising_edge(Clock1) then
+			if DSenseTime = DSenseTimeType'high then
+				DSenseSpeedBuf <= DSenseSpeed;
+				DSenseTime <= 0;
+				DSenseSpeed <= to_unsigned(0, 11);
+			else
+				DSenseTime <= DSenseTime + 1;
+				if DSenseL = '1' and DSenseLPrev = '0' then
+					DSenseSpeed <= DSenseSpeed + 1;
+				end if;
+			end if;
+		end if;
+	end process;
 
 	-- The SPI receiver for the analogue to digital converters.
 	ADCInstance : entity work.ADC(Behavioural)
