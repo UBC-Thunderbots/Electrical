@@ -95,7 +95,6 @@ vhdl/common/controller.vhd -text
 vhdl/common/controllerimpl.asm.m4 -text
 vhdl/common/cpu.vhd -text
 vhdl/common/graycounter.vhd -text
-vhdl/common/lfsr10.vhd -text
 vhdl/common/pwm.vhd -text
 vhdl/common/serialreceiver.smv -text
 vhdl/common/serialreceiver.vhd -text
@@ -119,10 +118,7 @@ vhdl/sim/xbeebytereceivertest.vhd -text
 vhdl/sim/xbeebytetransmittertest.vhd -text
 vhdl/sim/xbeepacketreceivertest.vhd -text
 vhdl/synth/clockgen.vhd -text
-vhdl/synth/lfsrtest.vhd -text
 vhdl/synth/main.vhd -text
-vhdl/synth/ramptest.vhd -text
-vhdl/synth/steptest.vhd -text
 vhdl/thunderbots.prj -text
 vhdl/thunderbots.ucf -text
 vhdl/thunderbots.xst -text
