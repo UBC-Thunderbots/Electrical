@@ -144,6 +144,9 @@ architecture Behavioural of Main is
 	signal ChickerFaultFlag : std_ulogic;
 	signal ChickerPower : unsigned(8 downto 0);
 	signal ChipFlag : std_ulogic;
+	signal Chicker0 : boolean;
+	signal Chicker110 : boolean;
+	signal Chicker150 : boolean;
 
 	-- Battery voltage.
 	signal VMon : unsigned(9 downto 0);
@@ -339,7 +342,10 @@ begin
 		SPICK => AppClkL,
 		SPIDT => AppInL,
 		SPISS => AppSSL,
-		VMon => VMon
+		VMon => VMon,
+		Chicker0 => Chicker0,
+		Chicker110 => Chicker110,
+		Chicker150 => Chicker150
 	);
 	AppOut <= '0';
 
@@ -360,7 +366,10 @@ begin
 		Done => ChickerDoneL,
 		Fault => ChickerFaultL,
 		Kick => ChickerKick,
-		Chip => ChickerChip
+		Chip => ChickerChip,
+		Chicker0 => Chicker0,
+		Chicker110 => Chicker110,
+		Chicker150 => Chicker150
 	);
 
 	-- The indicator LED.
