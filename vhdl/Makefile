@@ -71,10 +71,10 @@ nanoasm : nanoasm.cpp
 # RULE FOR COMPILING THE SOURCE CODE OF THE CONTROLLER #
 ########################################################
 common/controllerimpl.asm : common/controllerimpl.asm.m4
-	m4 < $< > $@
+	m4 < $< > $@ || { $(RM) $@; false; }
 
 common/controllerimpl.vhd : common/controllerimpl.asm nanoasm
-	./nanoasm < $< > $@
+	./nanoasm < $< > $@ || { $(RM) $@; false; }
 
 
 
