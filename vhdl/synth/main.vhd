@@ -147,6 +147,7 @@ architecture Behavioural of Main is
 	signal Chicker0 : boolean;
 	signal Chicker110 : boolean;
 	signal Chicker150 : boolean;
+	signal Debug : boolean;
 
 	-- Battery voltage.
 	signal VMon : unsigned(9 downto 0);
@@ -369,11 +370,12 @@ begin
 		Chip => ChickerChip,
 		Chicker0 => Chicker0,
 		Chicker110 => Chicker110,
-		Chicker150 => Chicker150
+		Chicker150 => Chicker150,
+		Debug => Debug
 	);
 
 	-- The indicator LED.
-	LED <= '1';
+	LED <= '0' when Debug else '1';
 
 	-- Virtual rail lines.
 	VGnd1 <= '0';

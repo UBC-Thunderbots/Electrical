@@ -25,7 +25,8 @@ entity Chicker is
 		-- ADC flags.
 		Chicker0 : in boolean;
 		Chicker110 : in boolean;
-		Chicker150 : in boolean
+		Chicker150 : in boolean;
+		Debug : out boolean
 	);
 end entity Chicker;
 
@@ -37,23 +38,27 @@ architecture Behavioural of Chicker is
 	signal ChargeCounter : ChargeCounterType := ChargeCounterType'high;
 	signal Latch150 : boolean := false;
 	signal LatchBad0 : boolean := false;
+	subtype DoneCounterType is natural range 0 to 255;
+	signal DoneCounter : DoneCounterType := DoneCounterType'high;
 begin
 	EffectiveEnableFlag <= ChickerEnableFlag = '1' and RXTimeout = '0' and not Latch150 and not LatchBad0;
 	CounterMSW <= Counter(Counter'high downto Counter'high - Power'length + 1);
+	ReadyFlag <= '1' when DoneCounter = 0 else '0';
 	FaultFlag <= '1' when Fault = '0' or Latch150 or LatchBad0 else '0';
-	Charge <= '0' when EffectiveEnableFlag and not (not Chicker110 and Done = '0') else '1';
+	Charge <= '0' when EffectiveEnableFlag and not (not Chicker110 and Done = '0') and Power = 0 else '1';
 	Kick <= '0' when ChipFlag = '0' and Power /= 0 and CounterMSW /= Power else '1';
 	Chip <= '0' when ChipFlag = '1' and Power /= 0 and CounterMSW /= Power else '1';
+	Debug <= Fault = '0';
 
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
 			Latch150 <= Latch150 or Chicker150;
 			LatchBad0 <= LatchBad0 or (ChargeCounter = 0 and Chicker0);
-			if Done = '0' and not Chicker0 then
-				ReadyFlag <= '1';
+			if Done = '0' and not Chicker0 and DoneCounter /= 0 then
+				DoneCounter <= DoneCounter - 1;
 			elsif Power /= 0 or not EffectiveEnableFlag then
-				ReadyFlag <= '0';
+				DoneCounter <= DoneCounterType'high;
 			end if;
 			if Power = 0 then
 				Counter <= to_unsigned(0, 14);
