@@ -45,14 +45,24 @@ begin
 	CounterMSW <= Counter(Counter'high downto Counter'high - Power'length + 1);
 	ReadyFlag <= '1' when DoneCounter = 0 else '0';
 	FaultFlag <= '1' when Fault = '0' or Latch150 or LatchBad0 else '0';
-	Charge <= '0' when EffectiveEnableFlag and not (not Chicker110 and Done = '0') and Power = 0 else '1';
-	Kick <= '0' when ChipFlag = '0' and Power /= 0 and CounterMSW /= Power else '1';
-	Chip <= '0' when ChipFlag = '1' and Power /= 0 and CounterMSW /= Power else '1';
+	Charge <= '0' when EffectiveEnableFlag and not (not Chicker110 and DoneCounter = 0) and Power = 0 else '1';
 	Debug <= Fault = '0';
 
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
+			if Power /= 0 and CounterMSW /= Power then
+				if ChipFlag = '1' then
+					Kick <= '1';
+					Chip <= '0';
+				else
+					Kick <= '0';
+					Chip <= '1';
+				end if;
+			else
+				Kick <= '1';
+				Chip <= '1';
+			end if;
 			Latch150 <= Latch150 or Chicker150;
 			LatchBad0 <= LatchBad0 or (ChargeCounter = 0 and Chicker0);
 			if Done = '0' and not Chicker0 and DoneCounter /= 0 then
