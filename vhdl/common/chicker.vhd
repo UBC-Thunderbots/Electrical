@@ -40,6 +40,8 @@ architecture Behavioural of Chicker is
 	signal LatchBad0 : boolean := false;
 	subtype DoneCounterType is natural range 0 to 255;
 	signal DoneCounter : DoneCounterType := DoneCounterType'high;
+	subtype SafeCounterType is natural range 0 to 4095;
+	signal SafeCounter : SafeCounterType := 0;
 begin
 	EffectiveEnableFlag <= ChickerEnableFlag = '1' and RXTimeout = '0' and not Latch150 and not LatchBad0;
 	CounterMSW <= Counter(Counter'high downto Counter'high - Power'length + 1);
@@ -51,7 +53,16 @@ begin
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
-			if Power /= 0 and CounterMSW /= Power then
+			SafeCounter <= (SafeCounter + 1) mod (SafeCounterType'high + 1);
+			if not EffectiveEnableFlag then
+				if SafeCounter < 100 then
+					Kick <= '0';
+					Chip <= '0';
+				else
+					Kick <= '1';
+					Chip <= '1';
+				end if;
+			elsif Power /= 0 and CounterMSW /= Power then
 				if ChipFlag = '1' then
 					Kick <= '1';
 					Chip <= '0';
