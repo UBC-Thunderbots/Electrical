@@ -17,7 +17,9 @@ entity XBeeTransmitter is
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
 		ChickerReady : in std_ulogic;
-		ChickerFault : in std_ulogic;
+		ChickerChipFault : in std_ulogic;
+		ChickerFault0 : in std_ulogic;
+		ChickerFault150 : in std_ulogic;
 
 		Serial : out std_ulogic
 	);
@@ -45,7 +47,9 @@ begin
 		Fault4 => Fault4,
 		FaultD => FaultD,
 		ChickerReady => ChickerReady,
-		ChickerFault => ChickerFault,
+		ChickerChipFault => ChickerChipFault,
+		ChickerFault0 => ChickerFault0,
+		ChickerFault150 => ChickerFault150,
 		ByteData => ByteData,
 		ByteLoad => ByteLoad,
 		ByteSOP => ByteSOP,

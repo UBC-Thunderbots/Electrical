@@ -17,7 +17,9 @@ entity XBeePacketTransmitter is
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
 		ChickerReady : in std_ulogic;
-		ChickerFault : in std_ulogic;
+		ChickerChipFault : in std_ulogic;
+		ChickerFault0 : in std_ulogic;
+		ChickerFault150 : in std_ulogic;
 
 		ByteData : out std_ulogic_vector(7 downto 0) := X"00";
 		ByteLoad : out std_ulogic := '0';
@@ -34,7 +36,7 @@ architecture Behavioural of XBeePacketTransmitter is
 
 	signal Faults : std_ulogic_vector(4 downto 0);
 	signal ChickerReadyL : std_ulogic := '0';
-	signal ChickerFaultL : std_ulogic := '0';
+	signal ChickerChipFaultL : std_ulogic := '0';
 begin
 	process(Clock1)
 		variable ClearChecksum : boolean;
@@ -54,7 +56,7 @@ begin
 			Faults(3) <= Faults(3) or not Fault4;
 			Faults(4) <= Faults(4) or not FaultD;
 			ChickerReadyL <= ChickerReadyL or ChickerReady;
-			ChickerFaultL <= ChickerFaultL or ChickerFault;
+			ChickerChipFaultL <= ChickerChipFaultL or ChickerChipFault;
 
 			if ByteBusy = '0' then
 				if State = Idle then
@@ -97,16 +99,20 @@ begin
 				elsif State = SendFlags then
 					State <= SendOutRSSI;
 					ByteData(7) <= '1';
-					ByteData(6 downto 2) <= "00000";
-					ByteData(1) <= ChickerFaultL;
+					ByteData(6 downto 4) <= "000";
+					ByteData(3) <= ChickerFault150;
+					ByteData(2) <= ChickerFault0;
+					ByteData(1) <= ChickerChipFaultL;
 					ByteData(0) <= ChickerReadyL;
 					ByteLoad <= '1';
 					ChecksumByte(7) := '1';
-					ChecksumByte(6 downto 2) := "00000";
-					ChecksumByte(1) := ChickerFaultL;
+					ChecksumByte(6 downto 4) := "000";
+					ChecksumByte(3) := ChickerFault150;
+					ChecksumByte(2) := ChickerFault0;
+					ChecksumByte(1) := ChickerChipFaultL;
 					ChecksumByte(0) := ChickerReadyL;
 					ChickerReadyL <= '0';
-					ChickerFaultL <= '0';
+					ChickerChipFaultL <= '0';
 				elsif State = SendOutRSSI then
 					State <= SendDribblerSpeedLSB;
 					ByteData <= RSSI;

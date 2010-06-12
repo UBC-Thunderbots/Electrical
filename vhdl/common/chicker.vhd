@@ -13,7 +13,9 @@ entity Chicker is
 		ChipFlag : in std_ulogic;
 		Power : in unsigned(8 downto 0);
 		ReadyFlag : out std_ulogic := '0';
-		FaultFlag : out std_ulogic := '0';
+		ChipFaultFlag : out std_ulogic := '0';
+		Fault0Flag : out std_ulogic := '0';
+		Fault150Flag : out std_ulogic := '0';
 
 		-- I/O lines.
 		Charge : out std_ulogic := '1';
@@ -46,7 +48,9 @@ begin
 	EffectiveEnableFlag <= ChickerEnableFlag = '1' and RXTimeout = '0' and not Latch150 and not LatchBad0;
 	CounterMSW <= Counter(Counter'high downto Counter'high - Power'length + 1);
 	ReadyFlag <= '1' when DoneCounter = 0 else '0';
-	FaultFlag <= '1' when Fault = '0' or Latch150 or LatchBad0 else '0';
+	ChipFaultFlag <= '1' when Fault = '0' else '0';
+	Fault0Flag <= '1' when LatchBad0 else '0';
+	Fault150Flag <= '1' when Latch150 else '0';
 	Charge <= '0' when EffectiveEnableFlag and not (not Chicker110 and DoneCounter = 0) and Power = 0 else '1';
 	Debug <= Fault = '0';
 
