@@ -150,6 +150,8 @@ architecture Behavioural of Main is
 	signal Chicker110 : boolean;
 	signal Chicker150 : boolean;
 	signal Debug : boolean;
+	subtype DebugCounterType is natural range 0 to 999999;
+	signal DebugCounter : DebugCounterType := DebugCounterType'high;
 
 	-- Battery voltage.
 	signal VMon : unsigned(9 downto 0);
@@ -377,11 +379,22 @@ begin
 		Chicker0 => Chicker0,
 		Chicker110 => Chicker110,
 		Chicker150 => Chicker150,
-		Debug => Debug
+--		Debug => Debug
+		Debug => open
 	);
 
 	-- The indicator LED.
-	LED <= '0' when Debug else '1';
+	process(Clock1)
+	begin
+		if rising_edge(Clock1) then
+			if RXTimeout = '1' then
+				DebugCounter <= DebugCounterType'high;
+			elsif DebugCounter /= 0 then
+				DebugCounter <= DebugCounter - 1;
+			end if;
+		end if;
+	end process;
+	LED <= '0' when DebugCounter /= 0 else '1';
 
 	-- Virtual rail lines.
 	VGnd1 <= '0';
