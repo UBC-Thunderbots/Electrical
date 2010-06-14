@@ -94,8 +94,9 @@ begin
 					ByteLoad <= '1';
 				elsif State = SendOptions then
 					State <= SendFlags;
-					ByteData <= X"00";
+					ByteData <= X"01";
 					ByteLoad <= '1';
+					ChecksumByte := X"01";
 				elsif State = SendFlags then
 					State <= SendOutRSSI;
 					ByteData(7) <= '1';
