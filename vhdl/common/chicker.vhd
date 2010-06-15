@@ -16,6 +16,7 @@ entity Chicker is
 		ChipFaultFlag : out std_ulogic := '0';
 		Fault0Flag : out std_ulogic := '0';
 		Fault150Flag : out std_ulogic := '0';
+		TimeoutFlag : out std_ulogic := '0';
 
 		-- I/O lines.
 		Charge : out std_ulogic := '1';
@@ -40,21 +41,35 @@ architecture Behavioural of Chicker is
 	signal ChargeCounter : ChargeCounterType := ChargeCounterType'high;
 	signal Latch150 : boolean := false;
 	signal LatchBad0 : boolean := false;
+	signal LatchTimeout : boolean := false;
 	subtype DoneCounterType is natural range 0 to 255;
 	signal DoneCounter : DoneCounterType := DoneCounterType'high;
+	signal ShouldCharge : boolean := false;
+	subtype TimeoutCounterType is natural range 0 to 4999999;
+	signal TimeoutCounter : TimeoutCounterType := TimeoutCounterType'high;
 begin
-	EffectiveEnableFlag <= ChickerEnableFlag = '1' and RXTimeout = '0' and not Latch150 and not LatchBad0;
+	EffectiveEnableFlag <= ChickerEnableFlag = '1' and RXTimeout = '0' and not Latch150 and not LatchBad0 and not LatchTimeout;
 	CounterMSW <= Counter(Counter'high downto Counter'high - Power'length + 1);
 	ReadyFlag <= '1' when DoneCounter = 0 else '0';
 	ChipFaultFlag <= '1' when Fault = '0' else '0';
 	Fault0Flag <= '1' when LatchBad0 else '0';
 	Fault150Flag <= '1' when Latch150 else '0';
-	Charge <= '0' when EffectiveEnableFlag and not (not Chicker110 and DoneCounter = 0) and Power = 0 else '1';
+	TimeoutFlag <= '1' when LatchTimeout else '0';
+	ShouldCharge <= EffectiveEnableFlag and not (not Chicker110 and DoneCounter = 0) and Power = 0;
+	Charge <= '0' when ShouldCharge else '1';
 	Debug <= Fault = '0';
 
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
+			if TimeoutCounter = 0 then
+				LatchTimeout <= true;
+			end if;
+			if ShouldCharge then
+				TimeoutCounter <= TimeoutCounter - 1;
+			else
+				TimeoutCounter <= TimeoutCounterType'high;
+			end if;
 			if Power /= 0 and CounterMSW /= Power then
 				if ChipFlag = '1' then
 					Kick <= '1';

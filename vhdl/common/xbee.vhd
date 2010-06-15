@@ -31,6 +31,7 @@ entity XBee is
 		ChickerChipFault : in std_ulogic;
 		ChickerFault0 : in std_ulogic;
 		ChickerFault150 : in std_ulogic;
+		ChickerTimeout : in std_ulogic;
 
 		SerialIn : in std_ulogic;
 		SerialOut : out std_ulogic
@@ -82,6 +83,7 @@ begin
 		ChickerChipFault => ChickerChipFault,
 		ChickerFault0 => ChickerFault0,
 		ChickerFault150 => ChickerFault150,
+		ChickerTimeout => ChickerTimeout,
 		Serial => SerialOut
 	);
 

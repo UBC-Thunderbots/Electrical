@@ -144,6 +144,7 @@ architecture Behavioural of Main is
 	signal ChickerChipFaultFlag : std_ulogic;
 	signal ChickerFault0Flag : std_ulogic;
 	signal ChickerFault150Flag : std_ulogic;
+	signal ChickerTimeoutFlag : std_ulogic;
 	signal ChickerPower : unsigned(8 downto 0);
 	signal ChipFlag : std_ulogic;
 	signal Chicker0 : boolean;
@@ -226,6 +227,7 @@ begin
 		ChickerChipFault => ChickerChipFaultFlag,
 		ChickerFault0 => ChickerFault0Flag,
 		ChickerFault150 => ChickerFault150Flag,
+		ChickerTimeout => ChickerTimeoutFlag,
 		SerialIn => XBeeRXL,
 		SerialOut => XBeeTX
 	);
@@ -371,6 +373,7 @@ begin
 		ChipFaultFlag => ChickerChipFaultFlag,
 		Fault0Flag => ChickerFault0Flag,
 		Fault150Flag => ChickerFault150Flag,
+		TimeoutFlag => ChickerTimeoutFlag,
 		Charge => ChickerCharge,
 		Done => ChickerDoneL,
 		Fault => ChickerFaultL,
@@ -379,7 +382,6 @@ begin
 		Chicker0 => Chicker0,
 		Chicker110 => Chicker110,
 		Chicker150 => Chicker150,
---		Debug => Debug
 		Debug => open
 	);
 
