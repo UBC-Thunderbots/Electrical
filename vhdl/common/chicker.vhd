@@ -36,7 +36,7 @@ architecture Behavioural of Chicker is
 	signal EffectiveEnableFlag : boolean := false;
 	signal Counter : unsigned(13 downto 0) := to_unsigned(0, 14);
 	signal CounterMSW : unsigned(Power'range) := to_unsigned(0, Power'length);
-	subtype ChargeCounterType is natural range 0 to 79999;
+	subtype ChargeCounterType is natural range 0 to 999999;
 	signal ChargeCounter : ChargeCounterType := ChargeCounterType'high;
 	signal Latch150 : boolean := false;
 	signal LatchBad0 : boolean := false;
