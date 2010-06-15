@@ -65,7 +65,7 @@ begin
 			if TimeoutCounter = 0 then
 				LatchTimeout <= true;
 			end if;
-			if ShouldCharge then
+			if ShouldCharge and Done = '1' then
 				TimeoutCounter <= TimeoutCounter - 1;
 			else
 				TimeoutCounter <= TimeoutCounterType'high;
