@@ -13,8 +13,8 @@ entity XBeeReceiver is
 		FeedbackFlag : out std_ulogic;
 		DirectDriveFlag : out std_ulogic;
 		ControlledDriveFlag : out std_ulogic;
-		ChickerEnableFlag : out std_ulogic;
-		ChipFlag : out std_ulogic;
+		ChickerEnable : out boolean;
+		ChipFlag : out boolean;
 		Drive1 : out signed(10 downto 0);
 		Drive2 : out signed(10 downto 0);
 		Drive3 : out signed(10 downto 0);
@@ -64,7 +64,7 @@ begin
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
-		ChickerEnableFlag => ChickerEnableFlag,
+		ChickerEnable => ChickerEnable,
 		ChipFlag => ChipFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,

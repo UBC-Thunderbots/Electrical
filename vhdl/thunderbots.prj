@@ -9,6 +9,7 @@ vhdl work common/graycounter.vhd
 vhdl work common/pwm.vhd
 vhdl work common/serialreceiver.vhd
 vhdl work common/serialtransmitter.vhd
+vhdl work common/srfilter.vhd
 vhdl work common/types.vhd
 vhdl work common/xbee.vhd
 vhdl work common/xbeebytereceiver.vhd

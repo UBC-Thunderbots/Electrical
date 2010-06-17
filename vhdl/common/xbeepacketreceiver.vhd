@@ -16,8 +16,8 @@ entity XBeePacketReceiver is
 		FeedbackFlag : out std_ulogic := '0';
 		DirectDriveFlag : out std_ulogic := '0';
 		ControlledDriveFlag : out std_ulogic := '0';
-		ChickerEnableFlag : out std_ulogic := '0';
-		ChipFlag : out std_ulogic := '0';
+		ChickerEnable : out boolean := false;
+		ChipFlag : out boolean := false;
 		Drive1 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive2 : out signed(10 downto 0) := to_signed(0, 11);
 		Drive3 : out signed(10 downto 0) := to_signed(0, 11);
@@ -53,8 +53,8 @@ begin
 	FeedbackFlag <= Data(0)(6);
 	DirectDriveFlag <= Data(0)(0);
 	ControlledDriveFlag <= Data(0)(1);
-	ChickerEnableFlag <= Data(0)(2);
-	ChipFlag <= Data(0)(3);
+	ChickerEnable <= Data(0)(2) = '1';
+	ChipFlag <= Data(0)(3) = '1';
 	Drive1 <= signed(std_ulogic_vector'(Data(2)(2 downto 0) & Data(1)(7 downto 0)));
 	Drive2 <= signed(std_ulogic_vector'(Data(3)(5 downto 0) & Data(2)(7 downto 3)));
 	Drive3 <= signed(std_ulogic_vector'(Data(5)(0) & Data(4)(7 downto 0) & Data(3)(7 downto 6)));

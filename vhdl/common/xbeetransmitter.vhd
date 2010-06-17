@@ -11,17 +11,17 @@ entity XBeeTransmitter is
 		RSSI : in std_ulogic_vector(7 downto 0);
 		DribblerSpeed : in unsigned(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
-		CapacitorLevel : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
-		ChickerReady : in std_ulogic;
-		ChickerChipFault : in std_ulogic;
-		ChickerFault0 : in std_ulogic;
-		ChickerFault150 : in std_ulogic;
-		ChickerTimeout : in std_ulogic;
+		ChickerReady : in boolean;
+		ChickerFaultLT3751 : in boolean;
+		ChickerFaultLow : in boolean;
+		ChickerFaultHigh : in boolean;
+		ChickerChargeTimeout : in boolean;
+		CapacitorVoltage : in unsigned(9 downto 0);
 
 		Serial : out std_ulogic
 	);
@@ -43,17 +43,17 @@ begin
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,
 		BatteryLevel => BatteryLevel,
-		CapacitorLevel => CapacitorLevel,
+		CapacitorVoltage => CapacitorVoltage,
 		Fault1 => Fault1,
 		Fault2 => Fault2,
 		Fault3 => Fault3,
 		Fault4 => Fault4,
 		FaultD => FaultD,
 		ChickerReady => ChickerReady,
-		ChickerChipFault => ChickerChipFault,
-		ChickerFault0 => ChickerFault0,
-		ChickerFault150 => ChickerFault150,
-		ChickerTimeout => ChickerTimeout,
+		ChickerFaultLT3751 => ChickerFaultLT3751,
+		ChickerFaultLow => ChickerFaultLow,
+		ChickerFaultHigh => ChickerFaultHigh,
+		ChickerChargeTimeout => ChickerChargeTimeout,
 		ByteData => ByteData,
 		ByteLoad => ByteLoad,
 		ByteSOP => ByteSOP,

@@ -11,17 +11,17 @@ entity XBeePacketTransmitter is
 		RSSI : in std_ulogic_vector(7 downto 0);
 		DribblerSpeed : in unsigned(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
-		CapacitorLevel : in unsigned(9 downto 0);
+		CapacitorVoltage : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
-		ChickerReady : in std_ulogic;
-		ChickerChipFault : in std_ulogic;
-		ChickerFault0 : in std_ulogic;
-		ChickerFault150 : in std_ulogic;
-		ChickerTimeout : in std_ulogic;
+		ChickerReady : in boolean;
+		ChickerFaultLT3751 : in boolean;
+		ChickerFaultLow : in boolean;
+		ChickerFaultHigh : in boolean;
+		ChickerChargeTimeout : in boolean;
 
 		ByteData : out std_ulogic_vector(7 downto 0) := X"00";
 		ByteLoad : out std_ulogic := '0';
@@ -37,12 +37,19 @@ architecture Behavioural of XBeePacketTransmitter is
 	signal Checksum : unsigned(7 downto 0);
 
 	signal Faults : std_ulogic_vector(4 downto 0);
-	signal ChickerReadyL : std_ulogic := '0';
-	signal ChickerChipFaultL : std_ulogic := '0';
 begin
 	process(Clock1)
 		variable ClearChecksum : boolean;
 		variable ChecksumByte : unsigned(7 downto 0);
+
+		pure function boolean_to_stdulogic(b : boolean) return std_ulogic is
+		begin
+			if b then
+				return '1';
+			else
+				return '0';
+			end if;
+		end function boolean_to_stdulogic;
 	begin
 		if rising_edge(Clock1) then
 			-- Clear these in case they aren't assigned later.
@@ -51,14 +58,12 @@ begin
 			ClearChecksum := false;
 			ChecksumByte := X"00";
 
-			-- Accumulate faults and chicker readiness on every clock cycle.
+			-- Accumulate faults on every clock cycle.
 			Faults(0) <= Faults(0) or not Fault1;
 			Faults(1) <= Faults(1) or not Fault2;
 			Faults(2) <= Faults(2) or not Fault3;
 			Faults(3) <= Faults(3) or not Fault4;
 			Faults(4) <= Faults(4) or not FaultD;
-			ChickerReadyL <= ChickerReadyL or ChickerReady;
-			ChickerChipFaultL <= ChickerChipFaultL or ChickerChipFault;
 
 			if ByteBusy = '0' then
 				if State = Idle then
@@ -103,21 +108,19 @@ begin
 					State <= SendOutRSSI;
 					ByteData(7) <= '1';
 					ByteData(6 downto 5) <= "00";
-					ByteData(4) <= ChickerTimeout;
-					ByteData(3) <= ChickerFault150;
-					ByteData(2) <= ChickerFault0;
-					ByteData(1) <= ChickerChipFaultL;
-					ByteData(0) <= ChickerReadyL;
+					ByteData(4) <= boolean_to_stdulogic(ChickerChargeTimeout);
+					ByteData(3) <= boolean_to_stdulogic(ChickerFaultHigh);
+					ByteData(2) <= boolean_to_stdulogic(ChickerFaultLow);
+					ByteData(1) <= boolean_to_stdulogic(ChickerFaultLT3751);
+					ByteData(0) <= boolean_to_stdulogic(ChickerReady);
 					ByteLoad <= '1';
 					ChecksumByte(7) := '1';
 					ChecksumByte(6 downto 5) := "00";
-					ChecksumByte(4) := ChickerTimeout;
-					ChecksumByte(3) := ChickerFault150;
-					ChecksumByte(2) := ChickerFault0;
-					ChecksumByte(1) := ChickerChipFaultL;
-					ChecksumByte(0) := ChickerReadyL;
-					ChickerReadyL <= '0';
-					ChickerChipFaultL <= '0';
+					ChecksumByte(4) := boolean_to_stdulogic(ChickerChargeTimeout);
+					ChecksumByte(3) := boolean_to_stdulogic(ChickerFaultHigh);
+					ChecksumByte(2) := boolean_to_stdulogic(ChickerFaultLow);
+					ChecksumByte(1) := boolean_to_stdulogic(ChickerFaultLT3751);
+					ChecksumByte(0) := boolean_to_stdulogic(ChickerReady);
 				elsif State = SendOutRSSI then
 					State <= SendDribblerSpeedLSB;
 					ByteData <= RSSI;
@@ -147,10 +150,10 @@ begin
 					ChecksumByte := unsigned("00000" & Temp);
 				elsif State = SendCapacitorLevelLSB then
 					State <= SendCapacitorLevelMSB;
-					ByteData <= std_ulogic_vector(CapacitorLevel(7 downto 0));
+					ByteData <= std_ulogic_vector(CapacitorVoltage(7 downto 0));
 					ByteLoad <= '1';
-					ChecksumByte := CapacitorLevel(7 downto 0);
-					Temp <= std_ulogic_vector("0" & CapacitorLevel(9 downto 8));
+					ChecksumByte := CapacitorVoltage(7 downto 0);
+					Temp <= std_ulogic_vector("0" & CapacitorVoltage(9 downto 8));
 				elsif State = SendCapacitorLevelMSB then
 					State <= SendFaults;
 					ByteData <= "00000" & Temp;

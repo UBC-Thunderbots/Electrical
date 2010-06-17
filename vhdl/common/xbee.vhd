@@ -10,15 +10,15 @@ entity XBee is
 
 		DirectDriveFlag : out std_ulogic;
 		ControlledDriveFlag : out std_ulogic;
-		ChickerEnableFlag : out std_ulogic;
+		ChickerEnable : out boolean;
 		Drive1 : out signed(10 downto 0);
 		Drive2 : out signed(10 downto 0);
 		Drive3 : out signed(10 downto 0);
 		Drive4 : out signed(10 downto 0);
 		Dribble : out unsigned(10 downto 0);
 		ChickerPower : out unsigned(8 downto 0);
-		ChipFlag : out std_ulogic;
-		Timeout : out std_ulogic;
+		ChipFlag : out boolean;
+		Timeout : out boolean;
 
 		DribblerSpeed : in unsigned(10 downto 0);
 		VMon : in unsigned(9 downto 0);
@@ -27,12 +27,12 @@ entity XBee is
 		Fault3 : in std_ulogic;
 		Fault4 : in std_ulogic;
 		FaultD : in std_ulogic;
-		ChickerReady : in std_ulogic;
-		ChickerChipFault : in std_ulogic;
-		ChickerFault0 : in std_ulogic;
-		ChickerFault150 : in std_ulogic;
-		ChickerTimeout : in std_ulogic;
-		CapacitorLevel : in unsigned(9 downto 0);
+		ChickerReady : in boolean;
+		ChickerFaultLT3751 : in boolean;
+		ChickerFaultLow : in boolean;
+		ChickerFaultHigh : in boolean;
+		ChickerChargeTimeout : in boolean;
+		CapacitorVoltage : in unsigned(9 downto 0);
 
 		SerialIn : in std_ulogic;
 		SerialOut : out std_ulogic
@@ -57,7 +57,7 @@ begin
 		FeedbackFlag => FeedbackFlag,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
-		ChickerEnableFlag => ChickerEnableFlag,
+		ChickerEnable => ChickerEnable,
 		ChipFlag => ChipFlag,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
@@ -75,17 +75,17 @@ begin
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,
 		BatteryLevel => VMon,
-		CapacitorLevel => CapacitorLevel,
 		Fault1 => Fault1,
 		Fault2 => Fault2,
 		Fault3 => Fault3,
 		Fault4 => Fault4,
 		FaultD => FaultD,
 		ChickerReady => ChickerReady,
-		ChickerChipFault => ChickerChipFault,
-		ChickerFault0 => ChickerFault0,
-		ChickerFault150 => ChickerFault150,
-		ChickerTimeout => ChickerTimeout,
+		ChickerFaultLT3751 => ChickerFaultLT3751,
+		ChickerFaultLow => ChickerFaultLow,
+		ChickerFaultHigh => ChickerFaultHigh,
+		ChickerChargeTimeout => ChickerChargeTimeout,
+		CapacitorVoltage => CapacitorVoltage,
 		Serial => SerialOut
 	);
 
@@ -102,5 +102,5 @@ begin
 		end if;
 	end process;
 
-	Timeout <= '1' when TimeoutCounter = 0 else '0';
+	Timeout <= TimeoutCounter = 0;
 end architecture Behavioural;

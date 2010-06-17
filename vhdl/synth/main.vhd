@@ -105,8 +105,8 @@ architecture Behavioural of Main is
 	-- Mode flags from the XBee.
 	signal DirectDriveFlag : std_ulogic;
 	signal ControlledDriveFlag : std_ulogic;
-	signal ChickerEnableFlag : std_ulogic;
-	signal RXTimeout : std_ulogic;
+	signal ChickerEnable : boolean;
+	signal RXTimeout : boolean;
 
 	-- Drive levels from the XBee.
 	signal Drive1 : signed(10 downto 0);
@@ -140,17 +140,15 @@ architecture Behavioural of Main is
 	signal DSenseTime : DSenseTimeType := 0;
 
 	-- Chicker stuff.
-	signal ChickerReadyFlag : std_ulogic;
-	signal ChickerChipFaultFlag : std_ulogic;
-	signal ChickerFault0Flag : std_ulogic;
-	signal ChickerFault150Flag : std_ulogic;
-	signal ChickerTimeoutFlag : std_ulogic;
+	signal ChickerReady : boolean;
+	signal ChickerFaultLT3751 : boolean;
+	signal ChickerFaultLow : boolean;
+	signal ChickerFaultHigh : boolean;
+	signal ChickerChargeTimeout : boolean;
 	signal ChickerPower : unsigned(8 downto 0);
-	signal ChipFlag : std_ulogic;
+	signal ChickerChipFlag : boolean;
+	signal ChickerVoltageRaw : unsigned(9 downto 0);
 	signal ChickerVoltage : unsigned(9 downto 0);
-	signal Debug : boolean;
-	subtype DebugCounterType is natural range 0 to 999999;
-	signal DebugCounter : DebugCounterType := DebugCounterType'high;
 
 	-- Battery voltage.
 	signal VMon : unsigned(9 downto 0);
@@ -205,14 +203,14 @@ begin
 		Clock100 => Clock100,
 		DirectDriveFlag => DirectDriveFlag,
 		ControlledDriveFlag => ControlledDriveFlag,
-		ChickerEnableFlag => ChickerEnableFlag,
+		ChickerEnable => ChickerEnable,
 		Drive1 => Drive1,
 		Drive2 => Drive2,
 		Drive3 => Drive3,
 		Drive4 => Drive4,
 		Dribble => Dribble,
 		ChickerPower => ChickerPower,
-		ChipFlag => ChipFlag,
+		ChipFlag => ChickerChipFlag,
 		Timeout => RXTimeout,
 		DribblerSpeed => DSenseSpeedBuf,
 		VMon => VMon,
@@ -221,19 +219,19 @@ begin
 		Fault3 => Fault3L,
 		Fault4 => Fault4L,
 		FaultD => FaultDL,
-		ChickerReady => ChickerReadyFlag,
-		ChickerChipFault => ChickerChipFaultFlag,
-		ChickerFault0 => ChickerFault0Flag,
-		ChickerFault150 => ChickerFault150Flag,
-		ChickerTimeout => ChickerTimeoutFlag,
-		CapacitorLevel => ChickerVoltage,
+		ChickerReady => ChickerReady,
+		ChickerFaultLT3751 => ChickerFaultLT3751,
+		ChickerFaultLow => ChickerFaultLow,
+		ChickerFaultHigh => ChickerFaultHigh,
+		ChickerChargeTimeout => ChickerChargeTimeout,
+		CapacitorVoltage => ChickerVoltage,
 		SerialIn => XBeeRXL,
 		SerialOut => XBeeTX
 	);
 
 	-- Braking stuff.
-	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') and RXTimeout = '0' else '1';
-	BrakeDribbler <= '0' when Dribble(9 downto 0) /= to_unsigned(0, 10) and RXTimeout = '0' else '1';
+	BrakeDrive <= '0' when (DirectDriveFlag = '1' or ControlledDriveFlag = '1') and not RXTimeout else '1';
+	BrakeDribbler <= '0' when Dribble(9 downto 0) /= to_unsigned(0, 10) and not RXTimeout else '1';
 
 	-- Wheel stuff.
 	GrayCounters : for I in 1 to 4 generate
@@ -351,7 +349,7 @@ begin
 		SPIDT => AppInL,
 		SPISS => AppSSL,
 		VMon => VMon,
-		ChickerVoltage => ChickerVoltage
+		ChickerVoltage => ChickerVoltageRaw
 	);
 	AppOut <= '0';
 
@@ -363,35 +361,25 @@ begin
 	port map(
 		Clock1 => Clock1,
 		RXTimeout => RXTimeout,
-		ChickerEnableFlag => ChickerEnableFlag,
-		ChipFlag => ChipFlag,
+		Enable => ChickerEnable,
+		ChipFlag => ChickerChipFlag,
 		Power => ChickerPower,
-		ReadyFlag => ChickerReadyFlag,
-		ChipFaultFlag => ChickerChipFaultFlag,
-		Fault0Flag => ChickerFault0Flag,
-		Fault150Flag => ChickerFault150Flag,
-		TimeoutFlag => ChickerTimeoutFlag,
+		Ready => ChickerReady,
+		FaultLT3751 => ChickerFaultLT3751,
+		FaultLow => ChickerFaultLow,
+		FaultHigh => ChickerFaultHigh,
+		ChargeTimeout => ChickerChargeTimeout,
+		Voltage => ChickerVoltage,
 		Charge => ChickerCharge,
 		Done => ChickerDoneL,
 		Fault => ChickerFaultL,
 		Kick => ChickerKick,
 		Chip => ChickerChip,
-		ChickerVoltage => ChickerVoltage,
-		Debug => open
+		VoltageRaw => ChickerVoltageRaw
 	);
 
 	-- The indicator LED.
-	process(Clock1)
-	begin
-		if rising_edge(Clock1) then
-			if RXTimeout = '1' then
-				DebugCounter <= DebugCounterType'high;
-			elsif DebugCounter /= 0 then
-				DebugCounter <= DebugCounter - 1;
-			end if;
-		end if;
-	end process;
-	LED <= '0' when DebugCounter /= 0 else '1';
+	LED <= '1';
 
 	-- Virtual rail lines.
 	VGnd1 <= '0';
