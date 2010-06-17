@@ -16,7 +16,7 @@ entity ADC is
 end entity ADC;
 
 architecture Behavioural of ADC is
-	signal Bits : std_ulogic_vector(31 downto 0);
+	signal Bits : std_ulogic_vector(25 downto 0);
 	signal PrevSPICK : std_ulogic := '0';
 begin
 	process(Clock10)

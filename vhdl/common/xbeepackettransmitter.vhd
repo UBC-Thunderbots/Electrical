@@ -33,7 +33,7 @@ end entity XBeePacketTransmitter;
 architecture Behavioural of XBeePacketTransmitter is
 	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddressHigh, SendAddressLow, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendCapacitorLevelLSB, SendCapacitorLevelMSB, SendFaults, SendChecksum);
 	signal State : StateType := Idle;
-	signal Temp : std_ulogic_vector(7 downto 0);
+	signal Temp : std_ulogic_vector(2 downto 0);
 	signal Checksum : unsigned(7 downto 0);
 
 	signal Faults : std_ulogic_vector(4 downto 0);
@@ -128,34 +128,34 @@ begin
 					ByteData <= std_ulogic_vector(DribblerSpeed(7 downto 0));
 					ByteLoad <= '1';
 					ChecksumByte := unsigned(DribblerSpeed(7 downto 0));
-					Temp <= std_ulogic_vector(resize(DribblerSpeed(10 downto 8), 8));
+					Temp <= std_ulogic_vector(DribblerSpeed(10 downto 8));
 				elsif State = SendDribblerSpeedMSB then
 					State <= SendBatteryLevelLSB;
-					ByteData <= Temp;
+					ByteData <= "00000" & Temp;
 					ByteLoad <= '1';
-					ChecksumByte := unsigned(Temp);
+					ChecksumByte := unsigned("00000" & Temp);
 				elsif State = SendBatteryLevelLSB then
 					State <= SendBatteryLevelMSB;
 					ByteData <= std_ulogic_vector(BatteryLevel(7 downto 0));
 					ByteLoad <= '1';
 					ChecksumByte := BatteryLevel(7 downto 0);
-					Temp <= std_ulogic_vector("000000" & BatteryLevel(9 downto 8));
+					Temp <= std_ulogic_vector("0" & BatteryLevel(9 downto 8));
 				elsif State = SendBatteryLevelMSB then
 					State <= SendCapacitorLevelLSB;
-					ByteData <= Temp;
+					ByteData <= "00000" & Temp;
 					ByteLoad <= '1';
-					ChecksumByte := unsigned(Temp);
+					ChecksumByte := unsigned("00000" & Temp);
 				elsif State = SendCapacitorLevelLSB then
 					State <= SendCapacitorLevelMSB;
 					ByteData <= std_ulogic_vector(CapacitorLevel(7 downto 0));
 					ByteLoad <= '1';
 					ChecksumByte := CapacitorLevel(7 downto 0);
-					Temp <= std_ulogic_vector("000000" & CapacitorLevel(9 downto 8));
+					Temp <= std_ulogic_vector("0" & CapacitorLevel(9 downto 8));
 				elsif State = SendCapacitorLevelMSB then
 					State <= SendFaults;
-					ByteData <= Temp;
+					ByteData <= "00000" & Temp;
 					ByteLoad <= '1';
-					ChecksumByte := unsigned(Temp);
+					ChecksumByte := unsigned("00000" & Temp);
 				elsif State = SendFaults then
 					State <= SendChecksum;
 					ByteData <= "000" & Faults;
