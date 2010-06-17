@@ -32,6 +32,7 @@ entity XBee is
 		ChickerFault0 : in std_ulogic;
 		ChickerFault150 : in std_ulogic;
 		ChickerTimeout : in std_ulogic;
+		CapacitorLevel : in unsigned(9 downto 0);
 
 		SerialIn : in std_ulogic;
 		SerialOut : out std_ulogic
@@ -74,6 +75,7 @@ begin
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,
 		BatteryLevel => VMon,
+		CapacitorLevel => CapacitorLevel,
 		Fault1 => Fault1,
 		Fault2 => Fault2,
 		Fault3 => Fault3,

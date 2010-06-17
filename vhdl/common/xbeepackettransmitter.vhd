@@ -11,6 +11,7 @@ entity XBeePacketTransmitter is
 		RSSI : in std_ulogic_vector(7 downto 0);
 		DribblerSpeed : in unsigned(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
+		CapacitorLevel : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
@@ -30,7 +31,7 @@ entity XBeePacketTransmitter is
 end entity XBeePacketTransmitter;
 
 architecture Behavioural of XBeePacketTransmitter is
-	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddressHigh, SendAddressLow, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendFaults, SendChecksum);
+	type StateType is (Idle, SendSOP, SendLengthMSB, SendLengthLSB, SendAPIID, SendFrame, SendAddressHigh, SendAddressLow, SendOptions, SendFlags, SendOutRSSI, SendDribblerSpeedLSB, SendDribblerSpeedMSB, SendBatteryLevelLSB, SendBatteryLevelMSB, SendCapacitorLevelLSB, SendCapacitorLevelMSB, SendFaults, SendChecksum);
 	signal State : StateType := Idle;
 	signal Temp : std_ulogic_vector(7 downto 0);
 	signal Checksum : unsigned(7 downto 0);
@@ -74,7 +75,7 @@ begin
 					ByteLoad <= '1';
 				elsif State = SendLengthLSB then
 					State <= SendAPIID;
-					ByteData <= X"0C";
+					ByteData <= X"0E";
 					ByteLoad <= '1';
 				elsif State = SendAPIID then
 					State <= SendFrame;
@@ -140,6 +141,17 @@ begin
 					ChecksumByte := BatteryLevel(7 downto 0);
 					Temp <= std_ulogic_vector("000000" & BatteryLevel(9 downto 8));
 				elsif State = SendBatteryLevelMSB then
+					State <= SendCapacitorLevelLSB;
+					ByteData <= Temp;
+					ByteLoad <= '1';
+					ChecksumByte := unsigned(Temp);
+				elsif State = SendCapacitorLevelLSB then
+					State <= SendCapacitorLevelMSB;
+					ByteData <= std_ulogic_vector(CapacitorLevel(7 downto 0));
+					ByteLoad <= '1';
+					ChecksumByte := CapacitorLevel(7 downto 0);
+					Temp <= std_ulogic_vector("000000" & CapacitorLevel(9 downto 8));
+				elsif State = SendCapacitorLevelMSB then
 					State <= SendFaults;
 					ByteData <= Temp;
 					ByteLoad <= '1';

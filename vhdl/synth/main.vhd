@@ -147,9 +147,7 @@ architecture Behavioural of Main is
 	signal ChickerTimeoutFlag : std_ulogic;
 	signal ChickerPower : unsigned(8 downto 0);
 	signal ChipFlag : std_ulogic;
-	signal Chicker0 : boolean;
-	signal Chicker110 : boolean;
-	signal Chicker150 : boolean;
+	signal ChickerVoltage : unsigned(9 downto 0);
 	signal Debug : boolean;
 	subtype DebugCounterType is natural range 0 to 999999;
 	signal DebugCounter : DebugCounterType := DebugCounterType'high;
@@ -228,6 +226,7 @@ begin
 		ChickerFault0 => ChickerFault0Flag,
 		ChickerFault150 => ChickerFault150Flag,
 		ChickerTimeout => ChickerTimeoutFlag,
+		CapacitorLevel => ChickerVoltage,
 		SerialIn => XBeeRXL,
 		SerialOut => XBeeTX
 	);
@@ -352,9 +351,7 @@ begin
 		SPIDT => AppInL,
 		SPISS => AppSSL,
 		VMon => VMon,
-		Chicker0 => Chicker0,
-		Chicker110 => Chicker110,
-		Chicker150 => Chicker150
+		ChickerVoltage => ChickerVoltage
 	);
 	AppOut <= '0';
 
@@ -379,9 +376,7 @@ begin
 		Fault => ChickerFaultL,
 		Kick => ChickerKick,
 		Chip => ChickerChip,
-		Chicker0 => Chicker0,
-		Chicker110 => Chicker110,
-		Chicker150 => Chicker150,
+		ChickerVoltage => ChickerVoltage,
 		Debug => open
 	);
 

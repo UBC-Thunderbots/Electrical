@@ -11,6 +11,7 @@ entity XBeeTransmitter is
 		RSSI : in std_ulogic_vector(7 downto 0);
 		DribblerSpeed : in unsigned(10 downto 0);
 		BatteryLevel : in unsigned(9 downto 0);
+		CapacitorLevel : in unsigned(9 downto 0);
 		Fault1 : in std_ulogic;
 		Fault2 : in std_ulogic;
 		Fault3 : in std_ulogic;
@@ -42,6 +43,7 @@ begin
 		RSSI => RSSI,
 		DribblerSpeed => DribblerSpeed,
 		BatteryLevel => BatteryLevel,
+		CapacitorLevel => CapacitorLevel,
 		Fault1 => Fault1,
 		Fault2 => Fault2,
 		Fault3 => Fault3,

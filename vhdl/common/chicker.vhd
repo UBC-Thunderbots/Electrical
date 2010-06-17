@@ -25,15 +25,26 @@ entity Chicker is
 		Kick : out std_ulogic := '1';
 		Chip : out std_ulogic := '1';
 
-		-- ADC flags.
-		Chicker0 : in boolean;
-		Chicker110 : in boolean;
-		Chicker150 : in boolean;
+		-- ADC value.
+		ChickerVoltage : in unsigned(9 downto 0);
+
 		Debug : out boolean
 	);
 end entity Chicker;
 
 architecture Behavioural of Chicker is
+	-- Divider is 220k and 2.2k.
+	-- Threshold for 0 is 10V: ADC reading = 10 / 222200 * 2200 / 3.3 * 1023 = 31
+	-- Threshold for 110V: ADC reading = 110 / 222200 * 2200 / 3.3 * 1023 = 338
+	-- Threshold for 150V: ADC reading = 150 / 222200 * 2200 / 3.3 * 1023 = 460
+	constant CHICKER0_THRESHOLD : unsigned(9 downto 0) := to_unsigned(31, 10);
+	constant CHICKER110_THRESHOLD : unsigned(9 downto 0) := to_unsigned(338, 10);
+	constant CHICKER150_THRESHOLD : unsigned(9 downto 0) := to_unsigned(460, 10);
+
+	signal Chicker0 : boolean := true;
+	signal Chicker110 : boolean := false;
+	signal Chicker150 : boolean := false;
+
 	signal EffectiveEnableFlag : boolean := false;
 	signal Counter : unsigned(13 downto 0) := to_unsigned(0, 14);
 	signal CounterMSW : unsigned(Power'range) := to_unsigned(0, Power'length);
@@ -48,6 +59,10 @@ architecture Behavioural of Chicker is
 	subtype TimeoutCounterType is natural range 0 to 4999999;
 	signal TimeoutCounter : TimeoutCounterType := TimeoutCounterType'high;
 begin
+	Chicker0 <= ChickerVoltage < CHICKER0_THRESHOLD;
+	Chicker110 <= ChickerVoltage > CHICKER110_THRESHOLD;
+	Chicker150 <= ChickerVoltage > CHICKER150_THRESHOLD;
+
 	EffectiveEnableFlag <= ChickerEnableFlag = '1' and RXTimeout = '0' and not Latch150 and not LatchBad0 and not LatchTimeout;
 	CounterMSW <= Counter(Counter'high downto Counter'high - Power'length + 1);
 	ReadyFlag <= '1' when DoneCounter = 0 else '0';
