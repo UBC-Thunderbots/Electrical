@@ -307,7 +307,6 @@ begin
 						PacketState <= SendData6;
 					elsif PacketState = SendData6 then
 						XBeeData <= std_ulogic_vector(resize(signed(RAM3Data(12 downto 0)), 16)(15 downto 8));
-						XBeeData <= "000" & RAM3Data(12 downto 8);
 						XBeeLoad <= '1';
 						PacketState <= SendData7;
 					elsif PacketState = SendData7 then
