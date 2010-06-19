@@ -20,7 +20,7 @@ begin
 		variable Same : boolean;
 	begin
 		if rising_edge(Clock) then
-			Shifter <= Shifter(Width - 1 downto 0) & Input;
+			Shifter <= Shifter(Width - 2 downto 0) & Input;
 			Same := true;
 			for I in 1 to Width - 1 loop
 				Same := Same and (Shifter(I) = Shifter(I - 1));
