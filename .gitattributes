@@ -120,6 +120,7 @@ vhdl/sim/xbeebytetransmittertest.vhd -text
 vhdl/sim/xbeepacketreceivertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/main.vhd -text
+vhdl/synth/tester.vhd -text
 vhdl/thunderbots.prj -text
 vhdl/thunderbots.ucf -text
 vhdl/thunderbots.xst -text
