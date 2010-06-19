@@ -71,7 +71,7 @@ begin
 	begin
 		if rising_edge(Clock1) then
 			if VoltageFilterCounter = 0 then
-				Voltage <= (Voltage * 117965 + VoltageRaw * 13107) srl 17;
+				Voltage <= resize((resize(Voltage, 17) * to_unsigned(117965, 17) + resize(VoltageRaw, 17) * to_unsigned(13107, 17) + to_unsigned(65536, 17)) srl 17, Voltage'length);
 			end if;
 			
 			VoltageFilterCounter <= (VoltageFilterCounter + 1) mod (VoltageFilterCounterType'high + 1);
@@ -115,6 +115,8 @@ begin
 	process(Clock1)
 	begin
 		if rising_edge(Clock1) then
+			ChargeCounter <= ChargeCounter - 1;
+
 			if RXTimeout or not Enable or Power /= 0 or FaultLow or FaultHigh or ChargeTimeout then
 				State <= Off;
 			elsif State = Off then
@@ -137,7 +139,7 @@ begin
 				end if;
 			elsif State = Idle then
 				if Voltage < CHICKER110_THRESHOLD then
-					State <= Topup;
+					State <= PreTopup;
 					ChargeCounter <= PRETOPUP_TIME - 1;
 				end if;
 			elsif State = PreTopup then
@@ -152,21 +154,21 @@ begin
 					State <= Idle;
 				end if;
 			end if;
-
-			ChargeCounter <= ChargeCounter - 1;
 		end if;
 	end process;
 
 	-- Generate the outputs from the charger state machine.
 	Ready <= State = Idle or State = PreTopup or State = Topup;
 	FaultLT3751 <= FaultFiltered = '0';
-	Charge <= '1' when State = LowCharging or State = HighCharging or State = Idle or State = Topup;
+	Charge <= '0' when State = LowCharging or State = HighCharging or State = Idle or State = Topup else '1';
 
 	-- Fire control.
 	process(Clock1)
+		variable CounterMSW : unsigned(Power'range);
 	begin
 		if rising_edge(Clock1) then
-			if FireCounter(FireCounter'high downto FireCounter'high - Power'length) < Power then
+			CounterMSW := FireCounter(FireCounter'high downto FireCounter'high - CounterMSW'length + 1);
+			if CounterMSW < Power then
 				if ChipFlag then
 					Chip <= '0';
 					Kick <= '1';
