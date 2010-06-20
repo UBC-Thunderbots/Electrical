@@ -111,13 +111,10 @@ vhdl/common/xbeetransmitter.vhd -text
 vhdl/nanoasm.cpp -text
 vhdl/sim/cputest.vhd -text
 vhdl/sim/graycountertest.vhd -text
-vhdl/sim/lfsr10test.vhd -text
 vhdl/sim/serialreceivertest.vhd -text
 vhdl/sim/serialtransmittertest.vhd -text
-vhdl/sim/signmagnitudetest.vhd -text
 vhdl/sim/xbeebytereceivertest.vhd -text
 vhdl/sim/xbeebytetransmittertest.vhd -text
-vhdl/sim/xbeepacketreceivertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/main.vhd -text
 vhdl/synth/tester.vhd -text
