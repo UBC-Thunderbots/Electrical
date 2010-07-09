@@ -1,13 +1,19 @@
-TARGETS := boost_model
+TARGET := boost_model
 SOURCES := $(wildcard *.cpp)
 OBJTS := $(SOURCES:.cpp=.o)
 DEPENDS := $(SOURCES:.cpp=.d)
 CC=g++
 LDFLAGS =
 CFLAGS = -c
+SAVE_FILE = plots.csv
+all: $(TARGET)
 
-$(TARGETS):$(OBJTS) $(DEPENDS)	
+$(TARGET):$(OBJTS) $(DEPENDS)	
 	$(CC) $(LDFLAGS) $(OBJTS) -o $@
+
+.PHONY: run
+run: $(TARGET)
+	./$(TARGET) $(SAVE_FILE)
 
 %.d:%.cpp
 	$(CC) -MM $< -o $@
@@ -18,9 +24,9 @@ $(TARGETS):$(OBJTS) $(DEPENDS)
 .PHONY:clean cleandep
 
 cleandep:
-	rm -f *.d
+	rm -f $(DEPENDS)
 
 clean: cleandep
-	rm -f *.o boost_model
+	rm -f $(OBJTS) $(TARGET)
 
 include $(DEPENDS)
