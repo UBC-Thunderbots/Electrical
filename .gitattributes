@@ -68,6 +68,7 @@ electronics/logic/logic.sch -text
 electronics/logic/pic.sch -text
 electronics/logic/power.sch -text
 electronics/logic/xbee.sch -text
+electronics/models/boost_test.m -text
 electronics/motorcontroller/Testing/TraceData.mat -text
 electronics/motorcontroller/connectors-misc.sch -text
 electronics/motorcontroller/connectors-motor.sch -text
