@@ -21,12 +21,15 @@ run: $(TARGET)
 %.o:%.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
-.PHONY:clean cleandep
+.PHONY:clean cleandep cleansave
 
 cleandep:
 	rm -f $(DEPENDS)
 
-clean: cleandep
+cleansave:
+	rm -f $(SAVE_FILE)
+
+clean: cleandep cleansave
 	rm -f $(OBJTS) $(TARGET)
 
 include $(DEPENDS)
