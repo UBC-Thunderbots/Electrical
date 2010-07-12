@@ -72,7 +72,7 @@ electronics/models/boost/Makefile -text
 electronics/models/boost/boost_test.m -text
 electronics/models/boost/main.cpp -text
 electronics/models/charge_pump/Makefile -text
-electronics/models/charge_pump/boost_test.m -text
+electronics/models/charge_pump/charge_pump.m -text
 electronics/models/charge_pump/main.cpp -text
 electronics/models/flyback/Makefile -text
 electronics/models/flyback/boost_test.m -text
