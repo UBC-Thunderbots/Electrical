@@ -4,29 +4,10 @@
 #include <iostream>
 #include <fstream>
 
-#define BOOST
 
-#ifdef FLYBACK
-const double Vin = 12;
-const double Vout_max = 240;
-const double transformer_ratio = 10;
-const double Vd = 0.7;
-const double L=5e-6;
-const double C=5.4e-3;
-const double Rpri = 7.7e-3;
-const double Rsec = 515e-3;
-const double f=68e3;
-const double Ipk = 6;
-const double sim_time = 10;
-const double D_P = 100;
-const double D_margin = 0.90;
-const unsigned int pwm_levels = 1024;
-#endif
 
-#ifdef BOOST 
 const double Vin = 17;
 const double Vout_max = 240;
-const double transformer_ratio = 1;
 const double Vd = 0.7;
 const double L=22e-6;
 const double C=5.4e-3;
@@ -38,7 +19,6 @@ const double D_P = 100;
 const double D_margin = 0.90;
 const double Ipk = 10;
 const unsigned int pwm_levels = 128;
-#endif
 
 double I_start;
 double Voltage_start;
@@ -64,13 +44,7 @@ int main(int argc, char* argv[]) {
 
 	I.push_back(0);
 	Iav.push_back(0);
-
-	#ifdef BOOST
 	Vout.push_back(Vin);
-	#else
-	Vout.push_back(0);
-	#endif
-
 	I_max.push_back(0);
 	time.push_back(0);
 	Dlist.push_back(0);
@@ -93,7 +67,7 @@ int main(int argc, char* argv[]) {
 		increase_rate = (Vin - I_start*Rpri)/L;
 		increase_rate = (increase_rate < 0)?0:increase_rate;
 
-		decrease_rate =  (Vin*transformer_ratio - Voltage_start - I_start/transformer_ratio*Rsec- Vd)/transformer_ratio/L;
+		decrease_rate =  (Vin - Voltage_start - I_start*Rsec- Vd)/L;
 		decrease_rate = (decrease_rate > 0)?0:decrease_rate;
 		
 		D_1 = decrease_rate/(decrease_rate - increase_rate)*D_margin;
@@ -132,11 +106,11 @@ int main(int argc, char* argv[]) {
 		I_end = Imax + decrease_rate*(1-D)/f;	
 
 		if(I_end < 0) {
-			Voltage_end = Voltage_start + 0.5*Imax/transformer_ratio/C * Imax/fabs(decrease_rate);
+			Voltage_end = Voltage_start + 0.5*Imax/C * Imax/fabs(decrease_rate);
 			I_av = (Imax + I_start) / 2 * D + Imax/2 * Imax/fabs(decrease_rate) * f; 
 			I_end = 0;
 		} else {
-			Voltage_end = Voltage_start + (1-D)/f/C * (1.5*I_end + 0.5*Imax)/transformer_ratio;
+			Voltage_end = Voltage_start + (1-D)/f/C * (1.5*I_end + 0.5*Imax);
 			I_av = (I_start + Imax)/2 * D + (Imax + I_end)/2 *(1-D);
 		}	
 		Iav.push_back(I_av);

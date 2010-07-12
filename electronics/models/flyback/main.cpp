@@ -4,9 +4,7 @@
 #include <iostream>
 #include <fstream>
 
-#define BOOST
 
-#ifdef FLYBACK
 const double Vin = 12;
 const double Vout_max = 240;
 const double transformer_ratio = 10;
@@ -15,30 +13,12 @@ const double L=5e-6;
 const double C=5.4e-3;
 const double Rpri = 7.7e-3;
 const double Rsec = 515e-3;
-const double f=68e3;
-const double Ipk = 6;
+const double f_max=250e3;
+const double Ipk = 12;
+const double D_P = 10;
+const double D_margin = 0.98;
 const double sim_time = 10;
-const double D_P = 100;
-const double D_margin = 0.90;
 const unsigned int pwm_levels = 1024;
-#endif
-
-#ifdef BOOST 
-const double Vin = 17;
-const double Vout_max = 240;
-const double transformer_ratio = 1;
-const double Vd = 0.7;
-const double L=22e-6;
-const double C=5.4e-3;
-const double Rpri = 14.6e-3;
-const double Rsec = 14.6e-3;
-const double f=68e3;
-const double sim_time = 10;
-const double D_P = 100;
-const double D_margin = 0.90;
-const double Ipk = 10;
-const unsigned int pwm_levels = 128;
-#endif
 
 double I_start;
 double Voltage_start;
@@ -65,80 +45,74 @@ int main(int argc, char* argv[]) {
 	I.push_back(0);
 	Iav.push_back(0);
 
-	#ifdef BOOST
-	Vout.push_back(Vin);
-	#else
 	Vout.push_back(0);
-	#endif
 
 	I_max.push_back(0);
 	time.push_back(0);
 	Dlist.push_back(0);
 
-	unsigned int loops = floor(f*sim_time);	
+	unsigned int loops = round(f_max*sim_time);	
 	
 	
 
 	double D;
 	double D_1;
 	double D_2;
+	double f;
+	double on_time;
+	double off_time;
+
 	bool changed = false;
+	bool controlled = false;
 	double I_av;
 	double decrease_rate;
 	double increase_rate;
 	for(unsigned int index =0; index < loops ; ++index) {
 		I_start = *(I.end()-1);
 		Voltage_start = *(Vout.end()-1);
-
 		increase_rate = (Vin - I_start*Rpri)/L;
 		increase_rate = (increase_rate < 0)?0:increase_rate;
 
-		decrease_rate =  (Vin*transformer_ratio - Voltage_start - I_start/transformer_ratio*Rsec- Vd)/transformer_ratio/L;
-		decrease_rate = (decrease_rate > 0)?0:decrease_rate;
+		decrease_rate =  (Voltage_start + I_start/transformer_ratio*Rsec + Vd)/transformer_ratio/L;
+		decrease_rate = (decrease_rate < 0)?0:decrease_rate;
+	
+		on_time = Ipk/increase_rate;
+		off_time = Ipk/decrease_rate;
+
+		D = on_time / (on_time + off_time);
+		f = 1/(on_time + off_time);
 		
-		D_1 = decrease_rate/(decrease_rate - increase_rate)*D_margin;
-
-		D_2 = (Vout_max - Voltage_start)/Vout_max*D_P;	
-		D_2 = floor(D_2*pwm_levels)/pwm_levels;
-
-		if(D_1 < 0.5/pwm_levels) {
-			D_1 = Ipk * f * L / Vin;	
-		}
-
-		D_1 = floor(D_1*pwm_levels)/pwm_levels;
-		
-		if(D_2 < D_1 && !changed) {
+			
+		if(f > f_max || changed) {
+			if(!changed) {
+				std::cout << "Transistion Voltage: " << Voltage_start << std::endl;
+			}
 			changed = true;
-			std::cout << "Transition Voltage: " << Voltage_start << std::endl;
-			std::cout << "Duty: " << D_2 << std::endl;
+			f = f_max;
+			D = on_time*f;
 		}
 
-		if(changed) {
-			D = D_2;
-		} else {
-			D = D_1;
+		if(Voltage_start > D_margin * Vout_max || controlled) {
+			controlled = true;
+			D = (Vout_max - Voltage_start)/Vout_max*D_P;
 		}
 
 		D = (D > 1)?1:D;
-		D = (D<0)?0:D;
-	
-		if(I_start > 0.1)
-			D=0;
+		D = (D < 0)?1:D;
 
-		Dlist.push_back(D);
-		
 		Imax = I_start + D/f*increase_rate;
 
-		I_end = Imax + decrease_rate*(1-D)/f;	
+		I_end = Imax - decrease_rate*(1-D)/f;	
 
 		if(I_end < 0) {
-			Voltage_end = Voltage_start + 0.5*Imax/transformer_ratio/C * Imax/fabs(decrease_rate);
-			I_av = (Imax + I_start) / 2 * D + Imax/2 * Imax/fabs(decrease_rate) * f; 
+			Voltage_end = Voltage_start + 0.5*Imax/transformer_ratio/C * Imax/decrease_rate;
+			I_av = (Imax + I_start) / 2 * D + Imax/2 * Imax/decrease_rate * f; 
 			I_end = 0;
 		} else {
 			Voltage_end = Voltage_start + (1-D)/f/C * (1.5*I_end + 0.5*Imax)/transformer_ratio;
 			I_av = (I_start + Imax)/2 * D + (Imax + I_end)/2 *(1-D);
 		}	
+		Dlist.push_back(D);
 		Iav.push_back(I_av);
 		I.push_back(I_end);
 		I_max.push_back(Imax);
