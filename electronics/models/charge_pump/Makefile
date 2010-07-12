@@ -1,4 +1,4 @@
-TARGET := boost_model
+TARGET := charge_model
 SOURCES := $(wildcard *.cpp)
 OBJTS := $(SOURCES:.cpp=.o)
 DEPENDS := $(SOURCES:.cpp=.d)
@@ -11,11 +11,8 @@ all: $(TARGET)
 $(TARGET):$(OBJTS) $(DEPENDS)	
 	$(CC) $(LDFLAGS) $(OBJTS) -o $@
 
-.PHONY: run plot
+.PHONY: run
 run: $(SAVE_FILE)
-
-plot: $(SAVE_FILE)
-	echo "load $(SAVE_FILE);plot(plots(:,1),plots(:,2:end));" | octave 
 
 $(SAVE_FILE): $(TARGET)
 	./$(TARGET) $(SAVE_FILE)
