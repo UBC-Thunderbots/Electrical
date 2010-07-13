@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
 	double f;
 	double on_time;
 	double off_time;
-
+	double Dc;
 	bool changed = false;
 	bool controlled = false;
 	double I_av;
@@ -92,9 +92,10 @@ int main(int argc, char* argv[]) {
 			D = on_time*f;
 		}
 
-		if(Voltage_start > D_margin * Vout_max || controlled) {
+		Dc =	(Vout_max - Voltage_start)/Vout_max*D_P; 
+		if(Dc < D || controlled) {
 			controlled = true;
-			D = (Vout_max - Voltage_start)/Vout_max*D_P;
+			D = Dc;
 		}
 
 		D = (D > 1)?1:D;
