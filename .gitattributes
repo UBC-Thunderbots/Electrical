@@ -57,6 +57,9 @@ datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
 electronics/adc.txt -text
 electronics/block[!!-~]diagram.fig -text
+electronics/flyback/flyback.pro -text
+electronics/flyback/flyback.sch -text
+electronics/flyback/uC.sch -text
 electronics/gpios.txt -text
 electronics/logic/chicker.sch -text
 electronics/logic/connectors.sch -text
