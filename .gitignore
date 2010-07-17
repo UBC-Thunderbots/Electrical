@@ -26,6 +26,10 @@ electronics/logic/*.mvl
 electronics/logic/*.net
 electronics/logic/*.pho
 electronics/logic/*.stf
+electronics/models/charge_pump/*.csv
+electronics/models/charge_pump/*.d
+electronics/models/charge_pump/*.o
+electronics/models/charge_pump/charge_model
 electronics/motorcontroller/$savepcb.*
 electronics/motorcontroller/*.000
 electronics/motorcontroller/*.bak
