@@ -11,7 +11,7 @@ const unsigned int num_stages = 21;
 const double Vd = 0.7;
 const double Ct=5.4e-3;
 const double Cs=220e-9;
-const double f=39e3;
+const double f=220e3;
 const double sim_time = 10;
 
 
