@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 19 Jul 2010 09:10:28 AM PDT
+EESchema Schematic File Version 2  date Mon 19 Jul 2010 10:06:23 AM PDT
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
@@ -406,7 +406,7 @@ L MOSFET_N Q1
 U 1 1 4C42009A
 P 5250 4550
 F 0 "Q1" H 5260 4720 60  0000 R CNN
-F 1 "MOSFET_N" H 5260 4400 60  0000 R CNN
+F 1 "SUM33N20" H 5260 4400 60  0000 R CNN
 	1    5250 4550
 	1    0    0    -1  
 $EndComp

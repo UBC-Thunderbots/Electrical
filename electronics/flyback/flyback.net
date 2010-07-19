@@ -1,54 +1,54 @@
-# EESchema Netlist Version 1.1 created  Mon 19 Jul 2010 09:21:24 AM PDT
+# EESchema Netlist Version 1.1 created  Mon 19 Jul 2010 10:06:20 AM PDT
 (
- ( /4C42357F $noname$ C1 1000uF
+ ( /4C42357F C2V8 C1 1000uF
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C423592 $noname$ C2 100nF
+ ( /4C423592 SM1206 C2 100nF
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C4200B3 $noname$ C3 100nF
+ ( /4C4200B3 SM1206 C3 100nF
   ( 1 ? )
   ( 2 GND )
  )
- ( /4C421173 $noname$ C4 10nF
+ ( /4C421173 SM1206 C4 10nF
   ( 1 N-000003 )
   ( 2 /uC/High_Voltage )
  )
- ( /4C4210A9 $noname$ C5 100nF
+ ( /4C4210A9 SM1206 C5 100nF
   ( 1 /uC/High_Voltage )
   ( 2 GND )
  )
- ( /4C41FE7F/4C4204E6 $noname$ C6 100nF
+ ( /4C41FE7F/4C4204E6 SM1206 C6 100nF
   ( 1 GND )
   ( 2 N-000038 )
  )
- ( /4C41FE7F/4C41FEDB $noname$ C7 22pf
+ ( /4C41FE7F/4C41FEDB SM1206 C7 22pf
   ( 1 GND )
   ( 2 N-000022 )
  )
- ( /4C41FE7F/4C41FEE3 $noname$ C8 22pf
+ ( /4C41FE7F/4C41FEE3 SM1206 C8 22pf
   ( 1 GND )
   ( 2 N-000043 )
  )
- ( /4C41FE7F/4C4207F0 $noname$ C9 10nF
+ ( /4C41FE7F/4C4207F0 SM1206 C9 10nF
   ( 1 N-000025 )
   ( 2 /uC/Emit1 )
  )
- ( /4C41FE7F/4C4207CC $noname$ C10 100nf
+ ( /4C41FE7F/4C4207CC SM1206 C10 100nf
   ( 1 GND )
   ( 2 N-000025 )
  )
- ( /4C41FE7F/4C423510 $noname$ C11 100nF
+ ( /4C41FE7F/4C423510 SM1206 C11 100nF
   ( 1 GND )
   ( 2 VDD )
  )
- ( /4C41FE7F/4C42351A $noname$ C12 100uF
+ ( /4C41FE7F/4C42351A C1V7 C12 100uF
   ( 1 VDD )
   ( 2 GND )
  )
- ( /4C420EB9 $noname$ D1 ZENER
+ ( /4C420EB9 SOT323 D1 ZENER
   ( 1 GND )
   ( 2 /uC/Emit1 )
  )
@@ -80,7 +80,7 @@
   ( 5 N-000051 )
   ( 6 ? )
  )
- ( /4C42009A DPAK2 Q1 MOSFET_N
+ ( /4C42009A DPAK2 Q1 SUM33N20
   ( D /uC/Emit1 )
   ( G /uC/Gate_Drive )
   ( S /uC/Curr2 )
