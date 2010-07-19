@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 19 Jul 2010 10:06:23 AM PDT
+EESchema Schematic File Version 2  date Mon 19 Jul 2010 04:01:23 PM PDT
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
@@ -44,102 +44,109 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 5400 1100
 Wire Wire Line
-	5400 950  5400 1100
+	7800 4150 7650 4150
 Wire Wire Line
-	5050 1500 5650 1500
+	7650 4150 7650 4050
+Connection ~ 5350 1500
 Wire Wire Line
-	8200 5250 8200 5150
-Connection ~ 8200 3650
-Wire Wire Line
-	8200 3900 8200 3650
-Connection ~ 8950 3650
-Wire Wire Line
-	9600 3650 7100 3650
-Connection ~ 2000 1500
-Wire Wire Line
-	2000 1400 2000 1500
-Wire Wire Line
-	2100 1500 1650 1500
-Connection ~ 8600 3650
-Wire Wire Line
-	8950 3650 8950 3950
-Connection ~ 8600 4500
-Wire Wire Line
-	8600 5100 8600 5200
-Wire Wire Line
-	8600 3650 8600 3900
-Wire Wire Line
-	5850 4250 4650 4250
-Wire Wire Line
-	5850 4250 5850 4850
-Wire Wire Line
-	3500 3700 4200 3700
-Wire Wire Line
-	4200 3700 4200 4550
-Wire Wire Line
-	4200 4550 5050 4550
-Wire Wire Line
-	5350 5450 5350 5600
-Wire Wire Line
-	6250 3650 6700 3650
-Wire Wire Line
-	5350 3950 5350 4350
-Wire Wire Line
-	6850 4050 6850 4200
-Connection ~ 6850 4050
-Wire Wire Line
-	5350 4950 5350 4750
-Wire Wire Line
-	3500 4050 3750 4050
-Wire Wire Line
-	3750 4050 3750 4850
-Wire Wire Line
-	3750 4850 5350 4850
-Connection ~ 5350 4850
-Wire Wire Line
-	3500 3400 4650 3400
-Wire Wire Line
-	4650 3400 4650 4250
-Connection ~ 5350 4250
-Wire Wire Line
-	5350 3700 5350 3150
-Wire Wire Line
-	5850 5250 5850 5600
-Wire Wire Line
-	8600 4600 8600 4400
-Wire Wire Line
-	8950 5050 8950 5200
-Wire Wire Line
-	8950 4350 8950 4650
-Connection ~ 8950 4500
-Wire Wire Line
-	8600 4500 10550 4500
-Wire Wire Line
-	10550 4500 10550 2750
-Wire Wire Line
-	10550 2750 3500 2750
-Wire Wire Line
-	1650 1300 1850 1300
-Wire Wire Line
-	1850 1100 2000 1100
-Wire Wire Line
-	1850 1300 1850 1000
-Connection ~ 1850 1100
-Wire Wire Line
-	7650 4050 6250 4050
-Wire Wire Line
-	9450 3900 9450 3850
-Wire Wire Line
-	9450 3850 9600 3850
-Wire Wire Line
-	8200 4400 8200 4550
+	5350 1700 5350 1500
 Wire Wire Line
 	5050 1100 5650 1100
 Wire Wire Line
-	5350 1700 5350 1500
-Connection ~ 5350 1500
+	8200 4400 8200 4550
+Wire Wire Line
+	9600 3850 9450 3850
+Wire Wire Line
+	9450 3850 9450 3900
+Wire Wire Line
+	7650 4050 6250 4050
+Connection ~ 1850 1100
+Wire Wire Line
+	1850 1000 1850 1300
+Wire Wire Line
+	1850 1100 2000 1100
+Wire Wire Line
+	1850 1300 1650 1300
+Wire Wire Line
+	3500 2750 10550 2750
+Wire Wire Line
+	10550 2750 10550 4500
+Wire Wire Line
+	10550 4500 8600 4500
+Connection ~ 8950 4500
+Wire Wire Line
+	8950 4350 8950 4650
+Wire Wire Line
+	8950 5050 8950 5200
+Wire Wire Line
+	8600 4600 8600 4400
+Wire Wire Line
+	5850 5250 5850 5600
+Wire Wire Line
+	5350 3700 5350 3150
+Connection ~ 5350 4250
+Wire Wire Line
+	4650 3400 4650 4250
+Wire Wire Line
+	4650 3400 3500 3400
+Connection ~ 5350 4850
+Wire Wire Line
+	5350 4850 3750 4850
+Wire Wire Line
+	3750 4850 3750 4050
+Wire Wire Line
+	3750 4050 3500 4050
+Wire Wire Line
+	5350 4950 5350 4750
+Connection ~ 6850 4050
+Wire Wire Line
+	6850 4050 6850 4200
+Wire Wire Line
+	5350 3950 5350 4350
+Wire Wire Line
+	6250 3650 6700 3650
+Wire Wire Line
+	5350 5450 5350 5600
+Wire Wire Line
+	5050 4550 4200 4550
+Wire Wire Line
+	4200 4550 4200 3700
+Wire Wire Line
+	4200 3700 3500 3700
+Wire Wire Line
+	5850 4850 5850 4250
+Wire Wire Line
+	5850 4250 4650 4250
+Wire Wire Line
+	8600 3650 8600 3900
+Wire Wire Line
+	8600 5100 8600 5200
+Connection ~ 8600 4500
+Wire Wire Line
+	8950 3650 8950 3950
+Connection ~ 8600 3650
+Wire Wire Line
+	2100 1500 1650 1500
+Wire Wire Line
+	2000 1400 2000 1500
+Connection ~ 2000 1500
+Wire Wire Line
+	9600 3650 7100 3650
+Connection ~ 8950 3650
+Wire Wire Line
+	8200 3900 8200 3650
+Connection ~ 8200 3650
+Wire Wire Line
+	8200 5250 8200 5150
+Wire Wire Line
+	5050 1500 5650 1500
+Wire Wire Line
+	5400 950  5400 1100
+Connection ~ 5400 1100
+Wire Wire Line
+	7800 3750 7800 3650
+Connection ~ 7800 3650
 $Comp
 L +BATT #PWR01
 U 1 1 4C4235AD
@@ -334,7 +341,7 @@ L ZENER D1
 U 1 1 4C420EB9
 P 5850 5050
 F 0 "D1" H 5850 5150 50  0000 C CNN
-F 1 "ZENER" H 5850 4950 40  0000 C CNN
+F 1 "BZX84C51-FDICT-ND" H 5850 4950 40  0000 C CNN
 	1    5850 5050
 	0    -1   -1   0   
 $EndComp
@@ -386,10 +393,10 @@ $EndComp
 $Comp
 L C C3
 U 1 1 4C4200B3
-P 7650 3850
-F 0 "C3" H 7700 3950 50  0000 L CNN
-F 1 "100nF" H 7700 3750 50  0000 L CNN
-	1    7650 3850
+P 7800 3950
+F 0 "C3" H 7850 4050 50  0000 L CNN
+F 1 "100nF" H 7850 3850 50  0000 L CNN
+	1    7800 3950
 	1    0    0    -1  
 $EndComp
 $Comp

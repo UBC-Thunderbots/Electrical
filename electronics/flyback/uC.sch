@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 19 Jul 2010 10:06:23 AM PDT
+EESchema Schematic File Version 2  date Mon 19 Jul 2010 04:01:23 PM PDT
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
@@ -44,6 +44,19 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 8500 2650
+Wire Wire Line
+	8500 2700 8500 2650
+Connection ~ 8500 3350
+Wire Wire Line
+	8500 3300 8500 3350
+Connection ~ 9350 3350
+Wire Wire Line
+	9200 3350 9350 3350
+Wire Wire Line
+	8400 600  8400 650 
+Wire Wire Line
+	9300 1250 9100 1250
 Wire Wire Line
 	7850 2700 7850 2800
 Wire Wire Line
@@ -116,37 +129,9 @@ Connection ~ 6650 6200
 Wire Wire Line
 	6650 6150 6650 6250
 Wire Wire Line
-	8200 1200 8200 1000
-Wire Wire Line
-	9350 3500 9350 2700
-Wire Wire Line
-	9350 2700 9250 2700
-Wire Wire Line
-	8850 3300 8200 3300
-Wire Wire Line
-	8200 3300 8200 3100
-Wire Wire Line
-	8200 3100 7700 3100
-Wire Wire Line
-	8200 2350 8200 2500
-Wire Wire Line
-	7900 1400 7700 1400
-Wire Wire Line
-	7900 2150 7700 2150
-Wire Wire Line
-	8200 1950 8200 1600
-Wire Wire Line
-	8750 1800 8200 1800
-Connection ~ 8200 1800
+	7700 3100 8200 3100
 Wire Wire Line
 	7700 3000 8250 3000
-Wire Wire Line
-	8250 3000 8250 2700
-Wire Wire Line
-	8250 2700 8850 2700
-Wire Wire Line
-	9250 3300 9350 3300
-Connection ~ 9350 3300
 Wire Wire Line
 	6650 5650 6650 5550
 Wire Wire Line
@@ -216,13 +201,6 @@ Wire Wire Line
 Wire Wire Line
 	10750 1550 10750 1450
 Wire Wire Line
-	6100 1400 6100 1150
-Wire Wire Line
-	6100 1150 7700 1150
-Wire Wire Line
-	7700 1150 7700 2150
-Connection ~ 7700 1400
-Wire Wire Line
 	3900 2800 1050 2800
 Wire Wire Line
 	1050 2800 1050 6100
@@ -244,6 +222,33 @@ Wire Wire Line
 	1550 4200 1550 4550
 Wire Wire Line
 	2150 4200 2150 4550
+Wire Wire Line
+	6100 1400 6100 1250
+Wire Wire Line
+	6100 1250 7700 1250
+Wire Wire Line
+	8400 1850 8400 1950
+Wire Wire Line
+	9200 2650 9350 2650
+Wire Wire Line
+	9350 2650 9350 3500
+Wire Wire Line
+	8800 3350 8200 3350
+Wire Wire Line
+	8200 3350 8200 3100
+Wire Wire Line
+	8250 3000 8250 2650
+Wire Wire Line
+	8250 2650 8800 2650
+$Comp
+L MCP1416 U3
+U 1 1 4C44CF6E
+P 8400 1250
+F 0 "U3" H 8400 1200 60  0000 C CNN
+F 1 "MCP1416" H 8400 1300 60  0000 C CNN
+	1    8400 1250
+	1    0    0    -1  
+$EndComp
 $Comp
 L VDD #PWR016
 U 1 1 4C447666
@@ -292,10 +297,10 @@ $EndComp
 $Comp
 L VDD #PWR019
 U 1 1 4C423373
-P 8200 1000
-F 0 "#PWR019" H 8200 1100 30  0001 C CNN
-F 1 "VDD" H 8200 1110 30  0000 C CNN
-	1    8200 1000
+P 8400 600
+F 0 "#PWR019" H 8400 700 30  0001 C CNN
+F 1 "VDD" H 8400 710 30  0000 C CNN
+	1    8400 600 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -641,31 +646,13 @@ $EndComp
 $Comp
 L GND #PWR041
 U 1 1 4C420304
-P 8200 2500
-F 0 "#PWR041" H 8200 2500 30  0001 C CNN
-F 1 "GND" H 8200 2430 30  0001 C CNN
-	1    8200 2500
+P 8400 1950
+F 0 "#PWR041" H 8400 1950 30  0001 C CNN
+F 1 "GND" H 8400 1880 30  0001 C CNN
+	1    8400 1950
 	1    0    0    -1  
 $EndComp
-$Comp
-L NPN Q2
-U 1 1 4C4202AA
-P 8100 1400
-F 0 "Q2" H 8250 1400 50  0000 C CNN
-F 1 "KN2222A" H 8002 1550 50  0000 C CNN
-	1    8100 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L PNP Q3
-U 1 1 4C4202A7
-P 8100 2150
-F 0 "Q3" H 8250 2150 60  0000 C CNN
-F 1 "PNP" H 8004 2300 60  0000 C CNN
-	1    8100 2150
-	1    0    0    1   
-$EndComp
-Text HLabel 8750 1800 2    60   Output ~ 0
+Text HLabel 9300 1250 2    60   Output ~ 0
 Gate Drive
 $Comp
 L CONN_6 P3
@@ -679,19 +666,19 @@ $EndComp
 $Comp
 L C C8
 U 1 1 4C41FEE3
-P 9050 3300
-F 0 "C8" H 9100 3400 50  0000 L CNN
-F 1 "22pf" H 9100 3200 50  0000 L CNN
-	1    9050 3300
+P 9000 3350
+F 0 "C8" H 9050 3450 50  0000 L CNN
+F 1 "22pf" H 9050 3250 50  0000 L CNN
+	1    9000 3350
 	0    1    1    0   
 $EndComp
 $Comp
 L C C7
 U 1 1 4C41FEDB
-P 9050 2700
-F 0 "C7" H 9100 2800 50  0000 L CNN
-F 1 "22pf" H 9100 2600 50  0000 L CNN
-	1    9050 2700
+P 9000 2650
+F 0 "C7" H 9050 2750 50  0000 L CNN
+F 1 "22pf" H 9050 2550 50  0000 L CNN
+	1    9000 2650
 	0    1    1    0   
 $EndComp
 $Comp

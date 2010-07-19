@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Mon 19 Jul 2010 10:06:20 AM PDT
+# EESchema Netlist Version 1.1 created  Mon 19 Jul 2010 04:00:14 PM PDT
 (
  ( /4C42357F C2V8 C1 1000uF
   ( 1 +BATT )
@@ -9,11 +9,11 @@
   ( 2 GND )
  )
  ( /4C4200B3 SM1206 C3 100nF
-  ( 1 ? )
+  ( 1 N-000001 )
   ( 2 GND )
  )
  ( /4C421173 SM1206 C4 10nF
-  ( 1 N-000003 )
+  ( 1 N-000001 )
   ( 2 /uC/High_Voltage )
  )
  ( /4C4210A9 SM1206 C5 100nF
@@ -22,7 +22,7 @@
  )
  ( /4C41FE7F/4C4204E6 SM1206 C6 100nF
   ( 1 GND )
-  ( 2 N-000038 )
+  ( 2 N-000033 )
  )
  ( /4C41FE7F/4C41FEDB SM1206 C7 22pf
   ( 1 GND )
@@ -30,7 +30,7 @@
  )
  ( /4C41FE7F/4C41FEE3 SM1206 C8 22pf
   ( 1 GND )
-  ( 2 N-000043 )
+  ( 2 N-000046 )
  )
  ( /4C41FE7F/4C4207F0 SM1206 C9 10nF
   ( 1 N-000025 )
@@ -48,107 +48,97 @@
   ( 1 VDD )
   ( 2 GND )
  )
- ( /4C420EB9 SOT323 D1 ZENER
+ ( /4C420EB9 BZX84C51 D1 ZENER
   ( 1 GND )
   ( 2 /uC/Emit1 )
  )
- ( /4C4200AD $noname$ D2 RURP860
-  ( 1 N-000012 )
-  ( 2 N-000003 )
+ ( /4C4200AD MUR860 D2 RURP860
+  ( 1 N-000013 )
+  ( 2 N-000001 )
  )
  ( /4C41FE7F/4C4222E8 LED-5MM D3 LED
-  ( 1 N-000049 )
+  ( 1 N-000044 )
   ( 2 GND )
  )
  ( /4C41FE7F/4C4222F6 LED-5MM D4 LED
-  ( 1 N-000047 )
+  ( 1 N-000042 )
   ( 2 GND )
  )
- ( /4C423144 $noname$ P1 CONN_2
+ ( /4C423144 SIL-2 P1 CONN_2
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C4232AE $noname$ P2 CONN_2
-  ( 1 N-000003 )
+ ( /4C4232AE SIL-2 P2 CONN_2
+  ( 1 N-000001 )
   ( 2 GND )
  )
- ( /4C41FE7F/4C41FF21 $noname$ P3 CONN_6
-  ( 1 N-000050 )
+ ( /4C41FE7F/4C41FF21 SIL-6 P3 CONN_6
+  ( 1 N-000045 )
   ( 2 VDD )
   ( 3 GND )
-  ( 4 N-000039 )
-  ( 5 N-000051 )
+  ( 4 N-000047 )
+  ( 5 N-000048 )
   ( 6 ? )
  )
- ( /4C42009A DPAK2 Q1 SUM33N20
+ ( /4C42009A D2PAKGDS Q1 SUM33N20
   ( D /uC/Emit1 )
   ( G /uC/Gate_Drive )
   ( S /uC/Curr2 )
  )
- ( /4C41FE7F/4C4202AA $noname$ Q2 KN2222A
-  ( 1 /uC/Gate_Drive )
-  ( 2 N-000041 )
-  ( 3 VDD )
- )
- ( /4C41FE7F/4C4202A7 $noname$ Q3 PNP
-  ( 1 /uC/Gate_Drive )
-  ( 2 N-000041 )
-  ( 3 GND )
- )
- ( /4C420984 $noname$ R1 0.03R
+ ( /4C420984 R4-LARGE_PADS R1 0.03R
   ( 1 /uC/Curr2 )
   ( 2 GND )
  )
- ( /4C4232D5 $noname$ R2 27R
-  ( 1 N-000003 )
-  ( 2 N-000004 )
+ ( /4C4232D5 R7 R2 27R
+  ( 1 N-000001 )
+  ( 2 N-000002 )
  )
- ( /4C42108A $noname$ R3 220kR
-  ( 1 N-000003 )
+ ( /4C42108A SM1206 R3 220kR
+  ( 1 N-000001 )
   ( 2 /uC/High_Voltage )
  )
- ( /4C421086 $noname$ R4 2.2kR
+ ( /4C421086 SM1206 R4 2.2kR
   ( 1 /uC/High_Voltage )
   ( 2 GND )
  )
- ( /4C41FE7F/4C42225C $noname$ R6 220R
-  ( 1 N-000048 )
-  ( 2 N-000049 )
+ ( /4C41FE7F/4C42225C SM1206 R6 220R
+  ( 1 N-000043 )
+  ( 2 N-000044 )
  )
- ( /4C41FE7F/4C422271 $noname$ R8 220R
-  ( 1 N-000046 )
-  ( 2 N-000047 )
+ ( /4C41FE7F/4C422271 SM1206 R8 220R
+  ( 1 N-000041 )
+  ( 2 N-000042 )
  )
- ( /4C41FE7F/4C421C95 $noname$ R9 10kR
-  ( 1 N-000050 )
+ ( /4C41FE7F/4C421C95 SM1206 R9 10kR
+  ( 1 N-000045 )
   ( 2 VDD )
  )
- ( /4C41FE7F/4C421C91 $noname$ R10 22kR
+ ( /4C41FE7F/4C421C91 SM1206 R10 22kR
   ( 1 +BATT )
-  ( 2 N-000038 )
+  ( 2 N-000033 )
  )
- ( /4C41FE7F/4C4204B3 $noname$ R11 2.5kR
-  ( 1 N-000038 )
+ ( /4C41FE7F/4C4204B3 SM1206 R11 2.5kR
+  ( 1 N-000033 )
   ( 2 GND )
  )
- ( /4C41FE7F/4C4207C9 $noname$ R12 100kR
+ ( /4C41FE7F/4C4207C9 SM1206 R12 100kR
   ( 1 /uC/Emit1 )
   ( 2 N-000025 )
  )
- ( /4C41FE7F/4C4207CA $noname$ R13 10kR
+ ( /4C41FE7F/4C4207CA SM1206 R13 10kR
   ( 1 N-000025 )
   ( 2 GND )
  )
  ( /4C423300 SW_SPDT SW1 SW_PUSH
   ( 1 GND )
-  ( 2 N-000004 )
+  ( 2 N-000002 )
  )
  ( /4C41FE7F/4C422437 SW_PUSH_SMALL SW2 SW_PUSH
-  ( 1 N-000019 )
+  ( 1 N-000040 )
   ( 2 GND )
  )
  ( /4C41FE7F/4C422443 SW_PUSH_SMALL SW3 SW_PUSH
-  ( 1 N-000018 )
+  ( 1 N-000019 )
   ( 2 GND )
  )
  ( /4C41FFC2 GA3460-BL T1 GA3460-BL
@@ -156,7 +146,7 @@
   ( 2 ? )
   ( 3 ? )
   ( 4 +BATT )
-  ( 6 N-000012 )
+  ( 6 N-000013 )
   ( 7 GND )
   ( 9 ? )
   ( 10 ? )
@@ -164,42 +154,42 @@
   ( 12 /uC/Emit1 )
  )
  ( /4C41FE7F/4C41FEB3 TQFP44 U1 PIC18F4550
-  ( 1 N-000051 )
+  ( 1 N-000048 )
   ( 2 ? )
   ( 3 ? )
   ( 4 ? )
   ( 5 ? )
   ( 6 GND )
   ( 7 VDD )
-  ( 8 N-000019 )
-  ( 9 N-000018 )
-  ( 10 N-000046 )
-  ( 11 N-000048 )
+  ( 8 N-000040 )
+  ( 9 N-000019 )
+  ( 10 N-000041 )
+  ( 11 N-000043 )
   ( 12 ? )
   ( 13 ? )
   ( 14 ? )
   ( 15 GND )
-  ( 16 N-000051 )
-  ( 17 N-000039 )
-  ( 18 N-000050 )
-  ( 19 N-000038 )
+  ( 16 N-000048 )
+  ( 17 N-000047 )
+  ( 18 N-000045 )
+  ( 19 N-000033 )
   ( 20 /uC/Curr2 )
   ( 21 ? )
   ( 22 N-000025 )
   ( 23 ? )
   ( 24 /uC/High_Voltage )
-  ( 25 N-000038 )
+  ( 25 N-000033 )
   ( 26 ? )
   ( 27 ? )
   ( 28 VDD )
   ( 29 GND )
-  ( 30 N-000043 )
+  ( 30 N-000046 )
   ( 31 N-000022 )
   ( 32 ? )
   ( 33 VDD )
   ( 34 ? )
   ( 35 ? )
-  ( 36 N-000041 )
+  ( 36 N-000036 )
   ( 37 ? )
   ( 38 ? )
   ( 39 ? )
@@ -207,16 +197,22 @@
   ( 41 ? )
   ( 42 ? )
   ( 43 ? )
-  ( 44 N-000039 )
+  ( 44 N-000047 )
  )
  ( /4C41FE7F/4C422FE2 LM78XX U2 LM7805
   ( GND GND )
   ( VI +BATT )
   ( VO VDD )
  )
+ ( /4C41FE7F/4C44CF6E SOT23-5 U3 MCP1416
+  ( 2 VDD )
+  ( 3 N-000036 )
+  ( 4 GND )
+  ( 5 /uC/Gate_Drive )
+ )
  ( /4C41FE7F/4C41FECB HC-18UV X1 CRYSTAL
-  ( 1 ? )
-  ( 2 ? )
+  ( 1 N-000022 )
+  ( 2 N-000046 )
  )
 )
 *
