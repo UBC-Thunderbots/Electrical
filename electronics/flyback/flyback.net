@@ -1,0 +1,382 @@
+# EESchema Netlist Version 1.1 created  Mon 19 Jul 2010 09:21:24 AM PDT
+(
+ ( /4C42357F $noname$ C1 1000uF
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4C423592 $noname$ C2 100nF
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4C4200B3 $noname$ C3 100nF
+  ( 1 ? )
+  ( 2 GND )
+ )
+ ( /4C421173 $noname$ C4 10nF
+  ( 1 N-000003 )
+  ( 2 /uC/High_Voltage )
+ )
+ ( /4C4210A9 $noname$ C5 100nF
+  ( 1 /uC/High_Voltage )
+  ( 2 GND )
+ )
+ ( /4C41FE7F/4C4204E6 $noname$ C6 100nF
+  ( 1 GND )
+  ( 2 N-000038 )
+ )
+ ( /4C41FE7F/4C41FEDB $noname$ C7 22pf
+  ( 1 GND )
+  ( 2 N-000022 )
+ )
+ ( /4C41FE7F/4C41FEE3 $noname$ C8 22pf
+  ( 1 GND )
+  ( 2 N-000043 )
+ )
+ ( /4C41FE7F/4C4207F0 $noname$ C9 10nF
+  ( 1 N-000025 )
+  ( 2 /uC/Emit1 )
+ )
+ ( /4C41FE7F/4C4207CC $noname$ C10 100nf
+  ( 1 GND )
+  ( 2 N-000025 )
+ )
+ ( /4C41FE7F/4C423510 $noname$ C11 100nF
+  ( 1 GND )
+  ( 2 VDD )
+ )
+ ( /4C41FE7F/4C42351A $noname$ C12 100uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C420EB9 $noname$ D1 ZENER
+  ( 1 GND )
+  ( 2 /uC/Emit1 )
+ )
+ ( /4C4200AD $noname$ D2 RURP860
+  ( 1 N-000012 )
+  ( 2 N-000003 )
+ )
+ ( /4C41FE7F/4C4222E8 LED-5MM D3 LED
+  ( 1 N-000049 )
+  ( 2 GND )
+ )
+ ( /4C41FE7F/4C4222F6 LED-5MM D4 LED
+  ( 1 N-000047 )
+  ( 2 GND )
+ )
+ ( /4C423144 $noname$ P1 CONN_2
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4C4232AE $noname$ P2 CONN_2
+  ( 1 N-000003 )
+  ( 2 GND )
+ )
+ ( /4C41FE7F/4C41FF21 $noname$ P3 CONN_6
+  ( 1 N-000050 )
+  ( 2 VDD )
+  ( 3 GND )
+  ( 4 N-000039 )
+  ( 5 N-000051 )
+  ( 6 ? )
+ )
+ ( /4C42009A DPAK2 Q1 MOSFET_N
+  ( D /uC/Emit1 )
+  ( G /uC/Gate_Drive )
+  ( S /uC/Curr2 )
+ )
+ ( /4C41FE7F/4C4202AA $noname$ Q2 KN2222A
+  ( 1 /uC/Gate_Drive )
+  ( 2 N-000041 )
+  ( 3 VDD )
+ )
+ ( /4C41FE7F/4C4202A7 $noname$ Q3 PNP
+  ( 1 /uC/Gate_Drive )
+  ( 2 N-000041 )
+  ( 3 GND )
+ )
+ ( /4C420984 $noname$ R1 0.03R
+  ( 1 /uC/Curr2 )
+  ( 2 GND )
+ )
+ ( /4C4232D5 $noname$ R2 27R
+  ( 1 N-000003 )
+  ( 2 N-000004 )
+ )
+ ( /4C42108A $noname$ R3 220kR
+  ( 1 N-000003 )
+  ( 2 /uC/High_Voltage )
+ )
+ ( /4C421086 $noname$ R4 2.2kR
+  ( 1 /uC/High_Voltage )
+  ( 2 GND )
+ )
+ ( /4C41FE7F/4C42225C $noname$ R6 220R
+  ( 1 N-000048 )
+  ( 2 N-000049 )
+ )
+ ( /4C41FE7F/4C422271 $noname$ R8 220R
+  ( 1 N-000046 )
+  ( 2 N-000047 )
+ )
+ ( /4C41FE7F/4C421C95 $noname$ R9 10kR
+  ( 1 N-000050 )
+  ( 2 VDD )
+ )
+ ( /4C41FE7F/4C421C91 $noname$ R10 22kR
+  ( 1 +BATT )
+  ( 2 N-000038 )
+ )
+ ( /4C41FE7F/4C4204B3 $noname$ R11 2.5kR
+  ( 1 N-000038 )
+  ( 2 GND )
+ )
+ ( /4C41FE7F/4C4207C9 $noname$ R12 100kR
+  ( 1 /uC/Emit1 )
+  ( 2 N-000025 )
+ )
+ ( /4C41FE7F/4C4207CA $noname$ R13 10kR
+  ( 1 N-000025 )
+  ( 2 GND )
+ )
+ ( /4C423300 SW_SPDT SW1 SW_PUSH
+  ( 1 GND )
+  ( 2 N-000004 )
+ )
+ ( /4C41FE7F/4C422437 SW_PUSH_SMALL SW2 SW_PUSH
+  ( 1 N-000019 )
+  ( 2 GND )
+ )
+ ( /4C41FE7F/4C422443 SW_PUSH_SMALL SW3 SW_PUSH
+  ( 1 N-000018 )
+  ( 2 GND )
+ )
+ ( /4C41FFC2 GA3460-BL T1 GA3460-BL
+  ( 1 ? )
+  ( 2 ? )
+  ( 3 ? )
+  ( 4 +BATT )
+  ( 6 N-000012 )
+  ( 7 GND )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 /uC/Emit1 )
+ )
+ ( /4C41FE7F/4C41FEB3 TQFP44 U1 PIC18F4550
+  ( 1 N-000051 )
+  ( 2 ? )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 GND )
+  ( 7 VDD )
+  ( 8 N-000019 )
+  ( 9 N-000018 )
+  ( 10 N-000046 )
+  ( 11 N-000048 )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 GND )
+  ( 16 N-000051 )
+  ( 17 N-000039 )
+  ( 18 N-000050 )
+  ( 19 N-000038 )
+  ( 20 /uC/Curr2 )
+  ( 21 ? )
+  ( 22 N-000025 )
+  ( 23 ? )
+  ( 24 /uC/High_Voltage )
+  ( 25 N-000038 )
+  ( 26 ? )
+  ( 27 ? )
+  ( 28 VDD )
+  ( 29 GND )
+  ( 30 N-000043 )
+  ( 31 N-000022 )
+  ( 32 ? )
+  ( 33 VDD )
+  ( 34 ? )
+  ( 35 ? )
+  ( 36 N-000041 )
+  ( 37 ? )
+  ( 38 ? )
+  ( 39 ? )
+  ( 40 ? )
+  ( 41 ? )
+  ( 42 ? )
+  ( 43 ? )
+  ( 44 N-000039 )
+ )
+ ( /4C41FE7F/4C422FE2 LM78XX U2 LM7805
+  ( GND GND )
+  ( VI +BATT )
+  ( VO VDD )
+ )
+ ( /4C41FE7F/4C41FECB HC-18UV X1 CRYSTAL
+  ( 1 ? )
+  ( 2 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
+ CP*
+ SM*
+$endlist
+$component D1
+ D?
+ SO*
+ SM*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R13
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component T1
+ GA3460-BL
+$endlist
+$component U1
+ TQFP44
+$endlist
+$endfootprintlist
+}

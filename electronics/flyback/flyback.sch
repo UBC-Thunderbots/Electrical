@@ -1,11 +1,42 @@
-EESchema Schematic File Version 2  date Sat 17 Jul 2010 04:23:21 PM PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves
-EELAYER 43  0
+EESchema Schematic File Version 2  date Mon 19 Jul 2010 09:10:28 AM PDT
+LIBS:power
+LIBS:thunderbots-symbols
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:flyback-cache
+EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 2
 Title ""
-Date "17 jul 2010"
+Date "19 jul 2010"
 Rev ""
 Comp ""
 Comment1 ""

@@ -1,5 +1,5 @@
-update=Sat 17 Jul 2010 11:53:18 AM PDT
-last_client=eeschema
+update=Mon 19 Jul 2010 09:12:27 AM PDT
+last_client=cvpcb
 [general]
 version=1
 RootSch=flyback.sch
@@ -69,3 +69,22 @@ LibName28=opto
 LibName29=atmel
 LibName30=contrib
 LibName31=valves
+[pcbnew]
+[pcbnew/libraries]
+LibName1=sockets
+LibName2=connect
+LibName3=discret
+LibName4=pin_array
+LibName5=divers
+LibName6=libcms
+LibName7=display
+LibName8=valves
+LibName9=led
+LibName10=dip_sockets
+LibName11=../thunderbots-modules
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

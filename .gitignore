@@ -10,7 +10,6 @@ electronics/flyback/*.drl
 electronics/flyback/*.erc
 electronics/flyback/*.lst
 electronics/flyback/*.mvl
-electronics/flyback/*.net
 electronics/flyback/*.pho
 electronics/flyback/*.stf
 electronics/logic/$savepcb.*
