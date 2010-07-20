@@ -27,6 +27,7 @@ datasheets/ics/ACOL50.pdf -text
 datasheets/ics/LT3751.pdf -text
 datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
+datasheets/ics/MCP1416.pdf -text svneol=unset#unset
 datasheets/ics/MIC7300.pdf -text
 datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/PIC18F4550/Errata.pdf -text
@@ -58,6 +59,7 @@ datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
 electronics/adc.txt -text
 electronics/block[!!-~]diagram.fig -text
+electronics/flyback/flyback.brd -text
 electronics/flyback/flyback.net -text
 electronics/flyback/flyback.pro -text
 electronics/flyback/flyback.sch -text

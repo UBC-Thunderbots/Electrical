@@ -7,10 +7,12 @@ electronics/flyback/*.bck
 electronics/flyback/*.cache.*
 electronics/flyback/*.cmp
 electronics/flyback/*.drl
+electronics/flyback/*.dsn
 electronics/flyback/*.erc
 electronics/flyback/*.lst
 electronics/flyback/*.mvl
 electronics/flyback/*.pho
+electronics/flyback/*.ses
 electronics/flyback/*.stf
 electronics/logic/$savepcb.*
 electronics/logic/*.000
