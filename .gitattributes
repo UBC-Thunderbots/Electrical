@@ -30,6 +30,7 @@ datasheets/ics/MC33035.pdf -text
 datasheets/ics/MIC7300.pdf -text
 datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/PIC18F4550/Errata.pdf -text
+datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
 datasheets/ics/TL072.pdf -text
 datasheets/ics/W25X16AVDAIZ.pdf -text
