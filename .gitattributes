@@ -31,6 +31,8 @@ datasheets/ics/MCP1416.pdf -text svneol=unset#unset
 datasheets/ics/MIC7300.pdf -text
 datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/PIC18F4550/Errata.pdf -text
+datasheets/ics/PIC18F65J50/Datasheet.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/PIC18F65J50/Errata.pdf -text
 datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
 datasheets/ics/TL072.pdf -text
