@@ -1,0 +1,47 @@
+EESchema-DOCLIB  Version 2.0  Wed 28 Jul 2010 03:06:47 PM PDT
+#
+$CMP 7805
+D Linear Regulator +5V
+K POWER REGUL
+F regulator/lm78*.*
+$ENDCMP
+#
+$CMP C
+D Condensateur non polarise
+$ENDCMP
+#
+$CMP CONN_6
+D ymbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP CONN_8
+D Symbole general de connecteur
+K CONN
+$ENDCMP
+#
+$CMP DIODE
+D Diode simple
+K DEV DIODE
+$ENDCMP
+#
+$CMP MOS_N
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP PIC18F4550
+D PICmicro 18F4550
+K PIC
+$ENDCMP
+#
+$CMP R
+D Resistance
+K R DEV
+$ENDCMP
+#
+$CMP SW_PUSH
+D Push Button
+K Switch
+$ENDCMP
+#
+#End Doc Library

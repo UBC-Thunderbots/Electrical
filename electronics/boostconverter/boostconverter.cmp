@@ -1,0 +1,164 @@
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = Wed 28 Jul 2010 02:45:44 PM PDT
+
+BeginCmp
+TimeStamp = /4C479371;
+Reference = 4MHz1;
+ValeurCmp = CRYSTAL;
+IdModule  = XT;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C478DFC;
+Reference = 220kR1;
+ValeurCmp = 220kR;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C479377;
+Reference = C1;
+ValeurCmp = 27pF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C479379;
+Reference = C2;
+ValeurCmp = 27pF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4DC8F8;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C5067FB;
+Reference = C5;
+ValeurCmp = 10uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4783EC;
+Reference = C_BYPASS1;
+ValeurCmp = 100nF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C478A9E;
+Reference = C_BYPASS2;
+ValeurCmp = 1uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C463827;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = DPAK2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C475811;
+Reference = GD1;
+ValeurCmp = MCP1416;
+IdModule  = SOT23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C476AE5;
+Reference = L1;
+ValeurCmp = 22uH;
+IdModule  = 22uH_INDUCTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C50745C;
+Reference = P1;
+ValeurCmp = CONN_8;
+IdModule  = SIL-8;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C461E15;
+Reference = PGMR1;
+ValeurCmp = CONN_6;
+IdModule  = SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C46380B;
+Reference = Q1;
+ValeurCmp = MOS_N;
+IdModule  = DPAK2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C44C547/4C44FA38;
+Reference = R1;
+ValeurCmp = 10kR;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C478DF8;
+Reference = R2;
+ValeurCmp = 2.2kR;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4DC731;
+Reference = R3;
+ValeurCmp = 1kR;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C44B4BC;
+Reference = REG1;
+ValeurCmp = 78L05;
+IdModule  = TO92;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4DD024;
+Reference = R_DSCHG1;
+ValeurCmp = 1kR;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4E0402;
+Reference = R_DSCHG2;
+ValeurCmp = 10kR;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4DC711;
+Reference = SW_CHG1;
+ValeurCmp = SW_PUSH;
+IdModule  = PUSH_BTTN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C4DD056;
+Reference = SW_DSCHG1;
+ValeurCmp = SW_PUSH;
+IdModule  = PUSH_BTTN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4C44C547/4C44C57A;
+Reference = U1;
+ValeurCmp = PIC18F4550;
+IdModule  = TQFP44;
+EndCmp
+
+EndListe

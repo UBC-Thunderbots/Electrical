@@ -1,0 +1,98 @@
+PCBNEW-BOARD Version 1 date Mon 26 Jul 2010 04:08:24 PM PDT
+
+$GENERAL
+LayerCount 2
+Ly 1FFF8001
+Links 0
+NoConn 0
+Di 15566 12597 24434 18403
+Ndraw 0
+Ntrack 0
+Nzone 0
+Nmodule 1
+Nnets 0
+$EndGENERAL
+
+$SHEETDESCR
+Sheet A4 11700 8267
+Title ""
+Date "26 jul 2010"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndSHEETDESCR
+
+$SETUP
+InternalUnit 0.000100 INCH
+ZoneGridSize 250
+Layers 2
+Layer[0] Copper signal
+Layer[15] Component signal
+TrackWidth 170
+TrackWidthHistory 170
+TrackClearence 60
+ZoneClearence 200
+DrawSegmWidth 150
+EdgeSegmWidth 150
+ViaSize 450
+ViaDrill 250
+ViaAltDrill 250
+ViaSizeHistory 450
+MicroViaSize 200
+MicroViaDrill 80
+MicroViasAllowed 0
+TextPcbWidth 120
+TextPcbSize 600 800
+EdgeModWidth 150
+TextModSize 600 600
+TextModWidth 120
+PadSize 748 2500
+PadDrill 0
+AuxiliaryAxisOrg 0 0
+$EndSETUP
+
+$MODULE 22uH_INDUCTOR
+Po 20000 15500 0 15 4C4E130A 4C4E1337 ~~
+Li 22uH_INDUCTOR
+Sc 4C4E1337
+AR 
+Op 0 0 0
+T0 0 3500 600 600 0 120 N V 21 N"22uH_INDUCTOR"
+T1 0 0 600 600 0 120 N V 21 N"VAL**"
+DS -2500 1500 -2000 2000 150 21
+DS 2500 1500 2000 2000 150 21
+DA 0 0 2000 2000 900 150 21
+DS 2000 -2000 2500 -1500 150 21
+DS -2500 -1500 -2000 -2000 150 21
+DA 0 0 -2000 -2000 900 150 21
+DS -2500 1500 -4000 1500 150 21
+DS -4000 1500 -4000 -1500 150 21
+DS -4000 -1500 -3500 -1500 150 21
+DS -3500 -1500 -2500 -1500 150 21
+DS 2500 -1500 3500 -1500 150 21
+DS 3500 -1500 4000 -1500 150 21
+DS 4000 -1500 4000 1500 150 21
+DS 4000 1500 2500 1500 150 21
+$PAD
+Sh "1" R 748 2500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3130 0
+$EndPAD
+$PAD
+Sh "2" R 748 2500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3130 0
+$EndPAD
+$EndMODULE  22uH_INDUCTOR
+$TRACK
+$EndTRACK
+$ZONE
+$EndZONE
+$EndBOARD

@@ -1,0 +1,223 @@
+# EESchema Netlist Version 1.1 created  Wed 28 Jul 2010 02:45:44 PM PDT
+(
+ ( /4C479371 XT 4MHz1 CRYSTAL
+  ( 1 /PIC/OSC1 )
+  ( 2 /PIC/OSC2 )
+ )
+ ( /4C478DFC C1 220kR1 220kR
+  ( 1 /CAP+ )
+  ( 2 /PIC/VCHMON )
+ )
+ ( /4C479377 C1 C1 27pF
+  ( 1 /PIC/OSC1 )
+  ( 2 /CAP- )
+ )
+ ( /4C479379 C1 C2 27pF
+  ( 1 /PIC/OSC2 )
+  ( 2 /CAP- )
+ )
+ ( /4C4DC8F8 C1 C3 10uF
+  ( 1 /CAP+ )
+  ( 2 /CAP- )
+ )
+ ( /4C5067FB C1 C5 10uF
+  ( 1 VCC )
+  ( 2 /CAP- )
+ )
+ ( /4C4783EC SM1206 C_BYPASS1 100nF
+  ( 1 +BATT )
+  ( 2 /CAP- )
+ )
+ ( /4C478A9E SM1206 C_BYPASS2 1uF
+  ( 1 +BATT )
+  ( 2 /CAP- )
+ )
+ ( /4C463827 DPAK2 D1 DIODE
+  ( 1 N-000012 )
+  ( 2 /CAP+ )
+ )
+ ( /4C475811 SOT23-5 GD1 MCP1416
+  ( 1 ? )
+  ( 2 +BATT )
+  ( 3 /PIC/PWM )
+  ( 4 N-000013 )
+  ( 5 /CAP- )
+ )
+ ( /4C476AE5 22uH_INDUCTOR L1 22uH
+  ( 1 +BATT )
+  ( 2 N-000012 )
+ )
+ ( /4C50745C SIL-8 P1 CONN_8
+  ( 1 +BATT )
+  ( 2 /CAP- )
+  ( 3 /CAP- )
+  ( 4 /CAP+ )
+  ( 5 ? )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+ )
+ ( /4C461E15 SIL-6 PGMR1 CONN_6
+  ( 1 /PIC/MCLR )
+  ( 2 VCC )
+  ( 3 /CAP- )
+  ( 4 /PIC/PGD )
+  ( 5 /PIC/PGC )
+  ( 6 ? )
+ )
+ ( /4C46380B DPAK2 Q1 MOS_N
+  ( D N-000012 )
+  ( G N-000013 )
+  ( S /CAP- )
+ )
+ ( /4C44C547/4C44FA38 R3 R1 10kR
+  ( 1 /PIC/MCLR )
+  ( 2 VCC )
+ )
+ ( /4C478DF8 R3 R2 2.2kR
+  ( 1 /PIC/VCHMON )
+  ( 2 /CAP- )
+ )
+ ( /4C4DC731 R3 R3 1kR
+  ( 1 /PIC/CHARGE )
+  ( 2 /CAP- )
+ )
+ ( /4C44B4BC TO92 REG1 78L05
+  ( 1 +BATT )
+  ( 2 /CAP- )
+  ( 3 VCC )
+ )
+ ( /4C4DD024 R3 R_DSCHG1 1kR
+  ( 1 N-000018 )
+  ( 2 /CAP- )
+ )
+ ( /4C4E0402 R3 R_DSCHG2 10kR
+  ( 1 /CAP+ )
+  ( 2 /CAP- )
+ )
+ ( /4C4DC711 PUSH_BTTN SW_CHG1 SW_PUSH
+  ( 1 /PIC/CHARGE )
+  ( 2 VCC )
+ )
+ ( /4C4DD056 PUSH_BTTN SW_DSCHG1 SW_PUSH
+  ( 1 /CAP+ )
+  ( 2 N-000018 )
+ )
+ ( /4C44C547/4C44C57A TQFP44 U1 PIC18F4550
+  ( 1 /CAP- )
+  ( 2 /CAP- )
+  ( 3 /CAP- )
+  ( 4 /CAP- )
+  ( 5 /CAP- )
+  ( 6 /CAP- )
+  ( 7 VCC )
+  ( 8 /CAP- )
+  ( 9 ? )
+  ( 10 /CAP- )
+  ( 11 /CAP- )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 /CAP- )
+  ( 16 /PIC/PGC )
+  ( 17 /PIC/PGD )
+  ( 18 /PIC/MCLR )
+  ( 19 ? )
+  ( 20 /PIC/CHARGE )
+  ( 21 ? )
+  ( 22 ? )
+  ( 23 /CAP- )
+  ( 24 /PIC/VCHMON )
+  ( 25 /CAP- )
+  ( 26 /CAP- )
+  ( 27 /CAP- )
+  ( 28 VCC )
+  ( 29 /CAP- )
+  ( 30 /PIC/OSC2 )
+  ( 31 /PIC/OSC1 )
+  ( 32 ? )
+  ( 33 ? )
+  ( 34 VCC )
+  ( 35 ? )
+  ( 36 /PIC/PWM )
+  ( 37 ? )
+  ( 38 ? )
+  ( 39 ? )
+  ( 40 ? )
+  ( 41 ? )
+  ( 42 ? )
+  ( 43 ? )
+  ( 44 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component 220kR1
+ R?
+ SM0603
+ SM0805
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C_BYPASS1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C_BYPASS2
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R_DSCHG1
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R_DSCHG2
+ R?
+ SM0603
+ SM0805
+$endlist
+$component U1
+ TQFP44
+$endlist
+$endfootprintlist
+}

@@ -1,0 +1,125 @@
+PCBNEW-BOARD Version 1 date Wed 28 Jul 2010 02:44:00 PM PDT
+
+$GENERAL
+LayerCount 2
+Ly 1FFF8001
+Links 53
+NoConn 53
+Di 0 0 117000 82670
+Ndraw 0
+Ntrack 0
+Nzone 0
+Nmodule 0
+Nnets 16
+$EndGENERAL
+
+$SHEETDESCR
+Sheet A4 11700 8267
+Title ""
+Date "28 jul 2010"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndSHEETDESCR
+
+$SETUP
+InternalUnit 0.000100 INCH
+ZoneGridSize 250
+Layers 2
+Layer[0] Copper signal
+Layer[15] Component signal
+TrackWidth 170
+TrackWidthHistory 170
+TrackClearence 60
+ZoneClearence 200
+DrawSegmWidth 150
+EdgeSegmWidth 150
+ViaSize 450
+ViaDrill 250
+ViaAltDrill 250
+ViaSizeHistory 450
+MicroViaSize 200
+MicroViaDrill 80
+MicroViasAllowed 0
+TextPcbWidth 120
+TextPcbSize 600 800
+EdgeModWidth 150
+TextModSize 600 600
+TextModWidth 120
+PadSize 748 2500
+PadDrill 0
+AuxiliaryAxisOrg 0 0
+$EndSETUP
+
+$EQUIPOT
+Na 0 ""
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 1 "VCC"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 2 "/CAP-"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 3 "/CAP+"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 4 "/PIC/OSC2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 5 "/PIC/OSC1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 6 "/PIC/VCHMON"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 7 "N-000008"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 8 "N-000014"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 9 "/PIC/CHARGE"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 10 "/PIC/MCLR"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 11 "/PIC/PGD"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 12 "/PIC/PGC"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 13 "+BATT"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 14 "/PIC/PWM"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 15 "N-000009"
+St ~
+$EndEQUIPOT
+$TRACK
+$EndTRACK
+$ZONE
+$EndZONE
+$EndBOARD
