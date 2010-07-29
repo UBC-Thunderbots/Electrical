@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Wed 28 Jul 2010 03:06:47 PM PDT
+EESchema-DOCLIB  Version 2.0  Wed 28 Jul 2010 05:45:10 PM PDT
 #
 $CMP 7805
 D Linear Regulator +5V
@@ -23,6 +23,10 @@ $ENDCMP
 $CMP DIODE
 D Diode simple
 K DEV DIODE
+$ENDCMP
+#
+$CMP LED
+K LED
 $ENDCMP
 #
 $CMP MOS_N

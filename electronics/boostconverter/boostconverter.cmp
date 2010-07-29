@@ -1,10 +1,10 @@
-Cmp-Mod V01 Created by CVpcb (20090216-final) date = Wed 28 Jul 2010 02:45:44 PM PDT
+Cmp-Mod V01 Created by CVpcb (20090216-final) date = Wed 28 Jul 2010 03:29:13 PM PDT
 
 BeginCmp
 TimeStamp = /4C479371;
 Reference = 4MHz1;
 ValeurCmp = CRYSTAL;
-IdModule  = XT;
+IdModule  = HC-18UV;
 EndCmp
 
 BeginCmp

@@ -1,6 +1,6 @@
-# EESchema Netlist Version 1.1 created  Wed 28 Jul 2010 02:45:44 PM PDT
+# EESchema Netlist Version 1.1 created  Wed 28 Jul 2010 03:29:13 PM PDT
 (
- ( /4C479371 XT 4MHz1 CRYSTAL
+ ( /4C479371 HC-18UV 4MHz1 CRYSTAL
   ( 1 /PIC/OSC1 )
   ( 2 /PIC/OSC2 )
  )
@@ -37,11 +37,10 @@
   ( 2 /CAP+ )
  )
  ( /4C475811 SOT23-5 GD1 MCP1416
-  ( 1 ? )
-  ( 2 +BATT )
-  ( 3 /PIC/PWM )
-  ( 4 N-000013 )
-  ( 5 /CAP- )
+  ( 2 ? )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 ? )
  )
  ( /4C476AE5 22uH_INDUCTOR L1 22uH
   ( 1 +BATT )
@@ -67,7 +66,7 @@
  )
  ( /4C46380B DPAK2 Q1 MOS_N
   ( D N-000012 )
-  ( G N-000013 )
+  ( G ? )
   ( S /CAP- )
  )
  ( /4C44C547/4C44FA38 R3 R1 10kR
@@ -139,7 +138,7 @@
   ( 33 ? )
   ( 34 VCC )
   ( 35 ? )
-  ( 36 /PIC/PWM )
+  ( 36 ? )
   ( 37 ? )
   ( 38 ? )
   ( 39 ? )
