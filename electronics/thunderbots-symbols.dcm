@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Mon 19 Jul 2010 03:19:13 PM PDT
+EESchema-DOCLIB  Version 2.0  Date: 2010-07-31T15:26:31 PDT
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -37,6 +37,10 @@ $ENDCMP
 $CMP PIC18F4550
 D PICmicro 18F4550
 K PIC
+$ENDCMP
+#
+$CMP PIC18F65J50
+F ../datasheets/ics/PIC18F65J50/Datasheet.pdf
 $ENDCMP
 #
 $CMP W25X16AVDAIZ
