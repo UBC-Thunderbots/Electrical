@@ -91,6 +91,9 @@ electronics/models/charge_pump/main.cpp -text
 electronics/models/flyback/Makefile -text
 electronics/models/flyback/boost_test.m -text
 electronics/models/flyback/main.cpp -text
+electronics/models/solenoid/Makefile -text
+electronics/models/solenoid/main.cpp -text
+electronics/models/solenoid/plotter.m -text
 electronics/motorcontroller/Testing/TraceData.mat -text
 electronics/motorcontroller/connectors-misc.sch -text
 electronics/motorcontroller/connectors-motor.sch -text
