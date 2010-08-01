@@ -1,161 +1,204 @@
-# EESchema Netlist Version 1.1 created  Wed 28 Jul 2010 03:29:13 PM PDT
+# EESchema Netlist Version 1.1 created  Sat 31 Jul 2010 05:10:24 PM PDT
 (
- ( /4C479371 HC-18UV 4MHz1 CRYSTAL
-  ( 1 /PIC/OSC1 )
-  ( 2 /PIC/OSC2 )
- )
- ( /4C478DFC C1 220kR1 220kR
-  ( 1 /CAP+ )
-  ( 2 /PIC/VCHMON )
- )
  ( /4C479377 C1 C1 27pF
   ( 1 /PIC/OSC1 )
-  ( 2 /CAP- )
+  ( 2 GND )
  )
- ( /4C479379 C1 C2 27pF
+ ( /4C536524 C1 C2 10uF
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4C479379 C1 C3 27pF
   ( 1 /PIC/OSC2 )
-  ( 2 /CAP- )
+  ( 2 GND )
  )
- ( /4C4DC8F8 C1 C3 10uF
-  ( 1 /CAP+ )
-  ( 2 /CAP- )
- )
- ( /4C5067FB C1 C5 10uF
+ ( /4C5067FB C1 C4 10uF
   ( 1 VCC )
-  ( 2 /CAP- )
+  ( 2 GND )
  )
- ( /4C4783EC SM1206 C_BYPASS1 100nF
+ ( /4C4783EC C1 C5 100nF
   ( 1 +BATT )
-  ( 2 /CAP- )
+  ( 2 GND )
  )
- ( /4C478A9E SM1206 C_BYPASS2 1uF
+ ( /4C478A9E C1 C6 1uF
   ( 1 +BATT )
-  ( 2 /CAP- )
+  ( 2 GND )
+ )
+ ( /4C50BA7A C1.5V8H C7 1000uF
+  ( 1 ? )
+  ( 2 GND )
+ )
+ ( /4C54B4BC C1 C8 10uF
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4C4DC8F8 C1 C9 10uF
+  ( 1 N-000020 )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C547C0C C1 C10 10uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C5474F4 C1 C11 .1uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C53655C C1 C12 .1uF
+  ( 1 VCC )
+  ( 2 GND )
  )
  ( /4C463827 DPAK2 D1 DIODE
-  ( 1 N-000012 )
-  ( 2 /CAP+ )
+  ( 1 N-000011 )
+  ( 2 N-000020 )
+ )
+ ( /4C44C547/4C50C683 LED-5MM D2 LED
+  ( 1 N-000023 )
+  ( 2 N-000024 )
+ )
+ ( /4C44C547/4C50C635 LED-5MM D3 LED
+  ( 1 N-000026 )
+  ( 2 N-000025 )
+ )
+ ( /4C44C547/4C549F5B LED-5MM D4 LED
+  ( 1 N-000027 )
+  ( 2 N-000022 )
  )
  ( /4C475811 SOT23-5 GD1 MCP1416
-  ( 2 ? )
-  ( 3 ? )
-  ( 4 ? )
-  ( 5 ? )
+  ( 2 +BATT )
+  ( 3 /PIC/PWM )
+  ( 4 GND )
+  ( 5 N-000008 )
  )
  ( /4C476AE5 22uH_INDUCTOR L1 22uH
   ( 1 +BATT )
-  ( 2 N-000012 )
+  ( 2 N-000011 )
  )
- ( /4C50745C SIL-8 P1 CONN_8
+ ( /4C54B386 SIL-8 P1 CONN_8
+  ( 1 /PIC/EXTRA1 )
+  ( 2 GND )
+  ( 3 /PIC/EXTRA2 )
+  ( 4 GND )
+  ( 5 /PIC/EXTRA3 )
+  ( 6 GND )
+  ( 7 /PIC/EXTRA4 )
+  ( 8 GND )
+ )
+ ( /4C549C6F 44441-2002 P2 CONN_2
   ( 1 +BATT )
-  ( 2 /CAP- )
-  ( 3 /CAP- )
-  ( 4 /CAP+ )
-  ( 5 ? )
-  ( 6 ? )
-  ( 7 ? )
-  ( 8 ? )
+  ( 2 GND )
+ )
+ ( /4C549C75 44441-2002 P3 CONN_2
+  ( 1 N-000020 )
+  ( 2 GND )
  )
  ( /4C461E15 SIL-6 PGMR1 CONN_6
   ( 1 /PIC/MCLR )
   ( 2 VCC )
-  ( 3 /CAP- )
+  ( 3 GND )
   ( 4 /PIC/PGD )
   ( 5 /PIC/PGC )
   ( 6 ? )
  )
  ( /4C46380B DPAK2 Q1 MOS_N
-  ( D N-000012 )
-  ( G ? )
-  ( S /CAP- )
+  ( D N-000011 )
+  ( G N-000008 )
+  ( S GND )
  )
- ( /4C44C547/4C44FA38 R3 R1 10kR
+ ( /4C50BC9C R3 R1 1kR
+  ( 1 /PIC/PWM )
+  ( 2 GND )
+ )
+ ( /4C478DFC R3 R2 220kR
+  ( 1 N-000020 )
+  ( 2 /PIC/VCHMON )
+ )
+ ( /4C478DF8 R3 R3 2.2kR
+  ( 1 /PIC/VCHMON )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C50C682 R3 R4 200R
+  ( 1 N-000024 )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C50C62F R3 R5 200R
+  ( 1 N-000025 )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C549F59 R3 R6 200R
+  ( 1 N-000022 )
+  ( 2 GND )
+ )
+ ( /4C44C547/4C44FA38 R3 R7 10kR
   ( 1 /PIC/MCLR )
   ( 2 VCC )
  )
- ( /4C478DF8 R3 R2 2.2kR
-  ( 1 /PIC/VCHMON )
-  ( 2 /CAP- )
- )
- ( /4C4DC731 R3 R3 1kR
-  ( 1 /PIC/CHARGE )
-  ( 2 /CAP- )
- )
  ( /4C44B4BC TO92 REG1 78L05
   ( 1 +BATT )
-  ( 2 /CAP- )
+  ( 2 GND )
   ( 3 VCC )
  )
- ( /4C4DD024 R3 R_DSCHG1 1kR
-  ( 1 N-000018 )
-  ( 2 /CAP- )
+ ( /4C54BAB7 PUSH_BTTN SW_CHG1 SW_PUSH
+  ( 1 GND )
+  ( 2 /PIC/CHARGE )
  )
- ( /4C4E0402 R3 R_DSCHG2 10kR
-  ( 1 /CAP+ )
-  ( 2 /CAP- )
- )
- ( /4C4DC711 PUSH_BTTN SW_CHG1 SW_PUSH
-  ( 1 /PIC/CHARGE )
-  ( 2 VCC )
- )
- ( /4C4DD056 PUSH_BTTN SW_DSCHG1 SW_PUSH
-  ( 1 /CAP+ )
-  ( 2 N-000018 )
+ ( /4C4DC711 PUSH_BTTN SW_CHG2 SW_PUSH
+  ( 1 GND )
+  ( 2 /PIC/PB2 )
  )
  ( /4C44C547/4C44C57A TQFP44 U1 PIC18F4550
-  ( 1 /CAP- )
-  ( 2 /CAP- )
-  ( 3 /CAP- )
-  ( 4 /CAP- )
-  ( 5 /CAP- )
-  ( 6 /CAP- )
+  ( 1 GND )
+  ( 2 N-000023 )
+  ( 3 N-000026 )
+  ( 4 N-000027 )
+  ( 5 GND )
+  ( 6 GND )
   ( 7 VCC )
-  ( 8 /CAP- )
-  ( 9 ? )
-  ( 10 /CAP- )
-  ( 11 /CAP- )
-  ( 12 ? )
-  ( 13 ? )
-  ( 14 ? )
-  ( 15 /CAP- )
+  ( 8 /PIC/CHARGE )
+  ( 9 /PIC/PB2 )
+  ( 10 GND )
+  ( 11 GND )
+  ( 12 GND )
+  ( 13 GND )
+  ( 14 GND )
+  ( 15 GND )
   ( 16 /PIC/PGC )
   ( 17 /PIC/PGD )
   ( 18 /PIC/MCLR )
-  ( 19 ? )
-  ( 20 /PIC/CHARGE )
-  ( 21 ? )
-  ( 22 ? )
-  ( 23 /CAP- )
-  ( 24 /PIC/VCHMON )
-  ( 25 /CAP- )
-  ( 26 /CAP- )
-  ( 27 /CAP- )
+  ( 19 /PIC/VCHMON )
+  ( 20 /PIC/EXTRA1 )
+  ( 21 /PIC/EXTRA2 )
+  ( 22 /PIC/EXTRA3 )
+  ( 23 /PIC/EXTRA4 )
+  ( 24 GND )
+  ( 25 GND )
+  ( 26 GND )
+  ( 27 GND )
   ( 28 VCC )
-  ( 29 /CAP- )
+  ( 29 GND )
   ( 30 /PIC/OSC2 )
   ( 31 /PIC/OSC1 )
-  ( 32 ? )
-  ( 33 ? )
+  ( 32 GND )
+  ( 33 GND )
   ( 34 VCC )
-  ( 35 ? )
-  ( 36 ? )
-  ( 37 ? )
-  ( 38 ? )
-  ( 39 ? )
-  ( 40 ? )
-  ( 41 ? )
-  ( 42 ? )
-  ( 43 ? )
-  ( 44 ? )
+  ( 35 GND )
+  ( 36 /PIC/PWM )
+  ( 37 GND )
+  ( 38 GND )
+  ( 39 GND )
+  ( 40 GND )
+  ( 41 GND )
+  ( 42 GND )
+  ( 43 GND )
+  ( 44 GND )
+ )
+ ( /4C479371 HC-18UV XT1 4MHz
+  ( 1 /PIC/OSC1 )
+  ( 2 /PIC/OSC2 )
  )
 )
 *
 { Allowed footprints by component:
-$component 220kR1
- R?
- SM0603
- SM0805
-$endlist
 $component C1
  SM*
  C?
@@ -171,17 +214,47 @@ $component C3
  C?
  C1-1
 $endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
 $component C5
  SM*
  C?
  C1-1
 $endlist
-$component C_BYPASS1
+$component C6
  SM*
  C?
  C1-1
 $endlist
-$component C_BYPASS2
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
  SM*
  C?
  C1-1
@@ -189,6 +262,33 @@ $endlist
 $component D1
  D?
  S*
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
 $endlist
 $component R1
  R?
@@ -205,12 +305,22 @@ $component R3
  SM0603
  SM0805
 $endlist
-$component R_DSCHG1
+$component R4
  R?
  SM0603
  SM0805
 $endlist
-$component R_DSCHG2
+$component R5
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R7
  R?
  SM0603
  SM0805

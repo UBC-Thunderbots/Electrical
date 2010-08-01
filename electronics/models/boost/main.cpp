@@ -61,17 +61,22 @@ int main(int argc, char* argv[]) {
 	double decrease_rate;
 	double increase_rate;
 	for(unsigned int index =0; index < loops ; ++index) {
+		// Setting iterator to last value
 		I_start = *(I.end()-1);
 		Voltage_start = *(Vout.end()-1);
 
+		//Get di/dt for when switch is on
 		increase_rate = (Vin - I_start*Rpri)/L;
 		increase_rate = (increase_rate < 0)?0:increase_rate;
 
+		//Get di/dt for when switch is off
 		decrease_rate =  (Vin - Voltage_start - I_start*Rsec- Vd)/L;
 		decrease_rate = (decrease_rate > 0)?0:decrease_rate;
 		
+		//Actual Duty Cycle
 		D_1 = decrease_rate/(decrease_rate - increase_rate)*D_margin;
 
+		//Theoretical Duty Cycle set point
 		D_2 = (Vout_max - Voltage_start)/Vout_max*D_P;	
 		D_2 = floor(D_2*pwm_levels)/pwm_levels;
 
