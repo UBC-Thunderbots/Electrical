@@ -23,7 +23,6 @@ datasheets/dribbler/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
 datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
 datasheets/electromechanical/EC16.pdf -text
 datasheets/electromechanical/EC45.pdf -text
-datasheets/ics/ACOL50.pdf -text
 datasheets/ics/LT3751.pdf -text
 datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
@@ -56,6 +55,9 @@ datasheets/optoelectronics/OPB733T.pdf -text
 datasheets/optoelectronics/OPV380.pdf -text
 datasheets/optoelectronics/PNA2602M.pdf -text
 datasheets/optoelectronics/PS9552.pdf -text
+datasheets/oscillators/ACOL50[!!-~]Oscillator.pdf -text
+datasheets/oscillators/FXO-HC735-4MHz[!!-~]Oscillator.pdf -text
+datasheets/oscillators/HC-49U[!!-~]Crystal.pdf -text
 datasheets/regulators/LD1117V33C.pdf -text
 datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
