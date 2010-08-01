@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-08-01T10:17:43 PDT
+EESchema Schematic File Version 2  date 2010-08-01T15:44:11 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -565,8 +565,8 @@ U 1 1 4C54F5AF
 P 2350 4750
 F 0 "P1" V 2300 4750 50  0000 C CNN
 F 1 "CONN_5" V 2400 4750 50  0000 C CNN
-F 2 "WM17536-ND" H 2350 4750 60  0001 C CNN
-F 4 "WM17536-ND" H 2350 4750 60  0001 C CNN "Digikey Part"
+F 2 "UX60SC-MB-5ST" H 2350 4750 60  0001 C CNN
+F 4 "H11671CT-ND" H 2350 4750 60  0001 C CNN "Digikey Part"
 	1    2350 4750
 	-1   0    0    -1  
 $EndComp
