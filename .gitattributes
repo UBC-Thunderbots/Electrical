@@ -69,6 +69,7 @@ electronics/boostconverter/boostconverter.brd -text
 electronics/boostconverter/boostconverter.net -text
 electronics/boostconverter/boostconverter.pro -text
 electronics/boostconverter/boostconverter.sch -text
+electronics/dongle/dongle.brd -text
 electronics/dongle/dongle.pro -text
 electronics/dongle/dongle.sch -text
 electronics/flyback/flyback.brd -text
