@@ -118,6 +118,7 @@ electronics/thunderbots-modules.mdc -text
 electronics/thunderbots-modules.mod -text
 electronics/thunderbots-symbols.dcm -text
 electronics/thunderbots-symbols.lib -text
+vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
 vhdl/common/alu.vhd -text

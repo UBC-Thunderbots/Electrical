@@ -106,6 +106,7 @@ vhdl/common/controllerimpl.asm
 vhdl/common/controllerimpl.vhd
 vhdl/cputest
 vhdl/graycountertest
+vhdl/html
 vhdl/lfsr10test
 vhdl/nanoasm
 vhdl/saturatingaddertest
