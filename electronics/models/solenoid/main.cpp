@@ -20,9 +20,12 @@ const double WINDING_AREA = SOLENOID_LENGTH * WINDING_HEIGHT;
 const unsigned int TURNS = floor(WINDING_AREA/(2*sqrt(2.5)*WIRE_DIAMETER*WIRE_DIAMETER))*4;
 const double FILL_EFFICENCY = TURNS * CORE_AREA / WINDING_AREA;
 
+
+//TODO: this needs to take into account the extra wire as the windings get thicker
 const double WINDING_RESISTIVITY = 1.68e-8; // ohm meters
 const double TURN_RESISTANCE = WINDING_RESISTIVITY*(SOLENOID_LENGTH*2 + 2*SOLENOID_HEIGHT)/CORE_AREA;
 const double SOLENOID_RESISTANCE = TURN_RESISTANCE * TURNS; // ohms
+
 
 const double SOLENOID_AREA = SOLENOID_HEIGHT * SOLENOID_WIDTH;  // in meters squared
 
@@ -99,14 +102,10 @@ int main(void) {
 		if(plunger_displacement.back() > SOLENOID_LENGTH) {
 			force = 0;
 		}
-	//`	force += -0.001*plunger_velocity.back();
 
 		plunger_force.push_back(force);
-
 		plunger_velocity.push_back(plunger_velocity.back() + force / PLUNGER_MASS * TIMESTEP);
-
 		plunger_displacement.push_back(plunger_displacement.back() + plunger_velocity.back()*TIMESTEP);
-
 		times.push_back(times.back() + TIMESTEP);
 
 		save_row();
