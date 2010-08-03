@@ -29,6 +29,7 @@ electronics/dongle/*.net
 electronics/dongle/*.pho
 electronics/dongle/*.stf
 electronics/flyback/$savepcb.*
+electronics/flyback/*-cache.lib
 electronics/flyback/*.000
 electronics/flyback/*.bak
 electronics/flyback/*.bck
@@ -59,6 +60,9 @@ electronics/models/charge_pump/*.csv
 electronics/models/charge_pump/*.d
 electronics/models/charge_pump/*.o
 electronics/models/charge_pump/charge_model
+electronics/models/solenoid/*.csv
+electronics/models/solenoid/*.o
+electronics/models/solenoid/solenoid
 electronics/motorcontroller/$savepcb.*
 electronics/motorcontroller/*.000
 electronics/motorcontroller/*.bak
