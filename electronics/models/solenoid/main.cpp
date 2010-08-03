@@ -5,7 +5,7 @@
 
 const double FILL_FACTOR = 0.9934; //this is the circle fill factor (not nessecary at this point)
 
-const unsigned int AWG = 22;
+const unsigned int AWG = 18;
 
 const double CLADDING_THICKNESS = 0.0;
 const double CORE_DIAMETER = 1.27e-4 * pow(92,(36.0-AWG)/39.0);
@@ -30,7 +30,7 @@ const double SOLENOID_RESISTANCE = TURN_RESISTANCE * TURNS; // ohms
 const double SOLENOID_AREA = SOLENOID_HEIGHT * SOLENOID_WIDTH;  // in meters squared
 
 
-//Sise of the capacitor storing the kicker charge
+//Size of the capacitor storing the kicker charge
 const double CAPACITOR_SIZE = 5.4e-3; // in farads
 const double CAPACITOR_INITAL_CHARGE = 240; // in volts
 
@@ -53,7 +53,7 @@ std::vector<double> capacitor_voltage; // in volts
 std::vector<double> solenoid_current;
 std::vector<double> inductance;
 std::vector<double> times;
-
+std::vector<double> diag;
 void save_row();
 
 int main(void) {
@@ -84,17 +84,22 @@ int main(void) {
 		double force;
 		double voltage;
 		double current;
+		double back_emf;
 
+		if(plunger_displacement.back() < SOLENOID_LENGTH) {
+				inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * (SOLENOID_LENGTH + (MU_R_IRON - 1)*plunger_displacement.back()) / (SOLENOID_LENGTH * SOLENOID_LENGTH));	
+		} else {
+				inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * MU_R_IRON / SOLENOID_LENGTH);		
+		}
 
-		inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * (SOLENOID_LENGTH + (MU_R_IRON - 1)*plunger_displacement.back()) / (SOLENOID_LENGTH * SOLENOID_LENGTH));	
-
-		voltage = capacitor_voltage.back() - solenoid_current.back() * TIMESTEP / CAPACITOR_SIZE;
+		voltage = capacitor_voltage.back() - solenoid_current.back() / CAPACITOR_SIZE * TIMESTEP;
 		if(voltage < 0.0) { // assume a diode snubber
 			voltage = -0.7;
 		}	
 		capacitor_voltage.push_back( voltage );	
 		
-		current = solenoid_current.back() + (capacitor_voltage.back() - SOLENOID_RESISTANCE * solenoid_current.back() )/inductance.back()*TIMESTEP;	
+		back_emf = TURNS * TURNS * MU_NOT * SOLENOID_AREA * (MU_R_IRON - 1) * plunger_velocity.back() / (SOLENOID_LENGTH * SOLENOID_LENGTH) * solenoid_current.back();
+		current = solenoid_current.back() + (capacitor_voltage.back() - SOLENOID_RESISTANCE * solenoid_current.back() - back_emf )/inductance.back()*TIMESTEP;	
 		solenoid_current.push_back(current);
 		
 		force = TURNS * TURNS * MU_NOT * SOLENOID_AREA * ( MU_R_IRON - 1) * solenoid_current.back() * solenoid_current.back() / (SOLENOID_LENGTH * SOLENOID_LENGTH); 	
