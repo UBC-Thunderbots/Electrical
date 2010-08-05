@@ -1,11 +1,11 @@
-EESchema Schematic File Version 2  date Sat 31 Jul 2010 05:12:15 PM PDT
+EESchema Schematic File Version 2  date Wed 04 Aug 2010 04:32:30 PM PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./boostconverter.cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 2
 Title ""
-Date "1 aug 2010"
+Date "4 aug 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -21,9 +21,9 @@ Connection ~ 5550 5150
 Wire Wire Line
 	5550 5150 5650 5150
 Wire Wire Line
-	5550 4750 5650 4750
+	5650 4750 5550 4750
 Wire Wire Line
-	5550 5550 5550 4750
+	5550 4750 5550 5550
 Wire Wire Line
 	5500 5250 5650 5250
 Wire Wire Line
@@ -55,7 +55,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 3450 6000 3550
 Wire Wire Line
-	6300 3050 6300 3350
+	6300 3350 6300 3050
 Wire Wire Line
 	4650 3100 4650 3050
 Wire Wire Line
@@ -122,7 +122,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 3350 7750 3400
 Wire Wire Line
-	5650 3050 6300 3050
+	6300 3050 5650 3050
 Wire Wire Line
 	5650 3450 5650 3550
 Wire Wire Line
@@ -298,7 +298,7 @@ L C C2
 U 1 1 4C536524
 P 3750 2850
 F 0 "C2" H 3800 2950 50  0000 L CNN
-F 1 "10uF" H 3800 2750 50  0000 L CNN
+F 1 ".33uF" H 3800 2750 50  0000 L CNN
 	1    3750 2850
 	1    0    0    -1  
 $EndComp
@@ -370,7 +370,7 @@ L C C4
 U 1 1 4C5067FB
 P 4650 2850
 F 0 "C4" H 4700 2950 50  0000 L CNN
-F 1 "10uF" H 4700 2750 50  0000 L CNN
+F 1 "100nF" H 4700 2750 50  0000 L CNN
 	1    4650 2850
 	1    0    0    -1  
 $EndComp
@@ -388,7 +388,7 @@ L C C9
 U 1 1 4C4DC8F8
 P 8600 4100
 F 0 "C9" H 8650 4200 50  0000 L CNN
-F 1 "10uF" H 8650 4000 50  0000 L CNN
+F 1 "22uF" H 8650 4000 50  0000 L CNN
 	1    8600 4100
 	1    0    0    -1  
 $EndComp
@@ -402,10 +402,10 @@ F 1 "GND" H 2450 4480 30  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L SW_PUSH SW_CHG2
+L SW_PUSH SW2
 U 1 1 4C4DC711
 P 2850 4550
-F 0 "SW_CHG2" H 3000 4660 50  0000 C CNN
+F 0 "SW2" H 3000 4660 50  0000 C CNN
 F 1 "SW_PUSH" H 2850 4470 50  0000 C CNN
 	1    2850 4550
 	1    0    0    1   

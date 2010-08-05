@@ -1,10 +1,10 @@
-# EESchema Netlist Version 1.1 created  Sat 31 Jul 2010 05:10:24 PM PDT
+# EESchema Netlist Version 1.1 created  Wed 04 Aug 2010 04:23:07 PM PDT
 (
  ( /4C479377 C1 C1 27pF
   ( 1 /PIC/OSC1 )
   ( 2 GND )
  )
- ( /4C536524 C1 C2 10uF
+ ( /4C536524 C1 C2 .33uF
   ( 1 +BATT )
   ( 2 GND )
  )
@@ -12,7 +12,7 @@
   ( 1 /PIC/OSC2 )
   ( 2 GND )
  )
- ( /4C5067FB C1 C4 10uF
+ ( /4C5067FB C1 C4 100nF
   ( 1 VCC )
   ( 2 GND )
  )
@@ -20,31 +20,31 @@
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C478A9E C1 C6 1uF
+ ( /4C478A9E C2 C6 1uF
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C50BA7A C1.5V8H C7 1000uF
+ ( /4C50BA7A C2V10 C7 1000uF
   ( 1 ? )
   ( 2 GND )
  )
- ( /4C54B4BC C1 C8 10uF
+ ( /4C54B4BC C2 C8 10uF
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C4DC8F8 C1 C9 10uF
+ ( /4C4DC8F8 C2V400 C9 22uF
   ( 1 N-000020 )
   ( 2 GND )
  )
- ( /4C44C547/4C547C0C C1 C10 10uF
+ ( /4C44C547/4C547C0C C2 C10 10uF
   ( 1 VCC )
   ( 2 GND )
  )
- ( /4C44C547/4C5474F4 C1 C11 .1uF
+ ( /4C44C547/4C5474F4 C1 C11 100nF
   ( 1 VCC )
   ( 2 GND )
  )
- ( /4C44C547/4C53655C C1 C12 .1uF
+ ( /4C44C547/4C53655C C1 C12 100nF
   ( 1 VCC )
   ( 2 GND )
  )
@@ -138,13 +138,17 @@
   ( 2 GND )
   ( 3 VCC )
  )
+ ( /4C44C547/4C59AD0E PUSH_BTTN SW1 SW_PUSH
+  ( 1 /PIC/MCLR )
+  ( 2 GND )
+ )
+ ( /4C4DC711 PUSH_BTTN SW2 SW_PUSH
+  ( 1 GND )
+  ( 2 /PIC/PB2 )
+ )
  ( /4C54BAB7 PUSH_BTTN SW_CHG1 SW_PUSH
   ( 1 GND )
   ( 2 /PIC/CHARGE )
- )
- ( /4C4DC711 PUSH_BTTN SW_CHG2 SW_PUSH
-  ( 1 GND )
-  ( 2 /PIC/PB2 )
  )
  ( /4C44C547/4C44C57A TQFP44 U1 PIC18F4550
   ( 1 GND )
