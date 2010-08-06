@@ -60,6 +60,9 @@ electronics/models/charge_pump/*.csv
 electronics/models/charge_pump/*.d
 electronics/models/charge_pump/*.o
 electronics/models/charge_pump/charge_model
+electronics/models/flyback/*.csv
+electronics/models/flyback/*.d
+electronics/models/flyback/flyback_model
 electronics/models/solenoid/*.csv
 electronics/models/solenoid/*.o
 electronics/models/solenoid/solenoid

@@ -36,9 +36,13 @@ const double CAPACITOR_INITAL_CHARGE = 240; // in volts
 
 const double MU_NOT = 1.25663706e-6;
 const double MU_R_IRON = 5000;
+const double MU_R_STEEL = 300;
+const double MU_R_CORE = MU_R_STEEL;
 
 const double CORE_DENSITY = 7870; // kg / meters cubed
 const double PLUNGER_MASS = SOLENOID_AREA * SOLENOID_LENGTH * CORE_DENSITY;
+
+const double SOLENOID_CONSTANT = MU_NOT * TURNS * TURNS * SOLENOID_AREA / (SOLENOID_LENGTH * SOLENOID_LENGTH);
 
 const char SAVE_FILENAME[] = "data.csv"; 
 
@@ -53,7 +57,6 @@ std::vector<double> capacitor_voltage; // in volts
 std::vector<double> solenoid_current;
 std::vector<double> inductance;
 std::vector<double> times;
-std::vector<double> diag;
 void save_row();
 
 int main(void) {
@@ -68,6 +71,7 @@ int main(void) {
 	std::cout << "SOLENOID RESISTANCE    " << SOLENOID_RESISTANCE << "(ohm)" << std::endl;
 	std::cout << "SOLENOID AREA          " << SOLENOID_AREA*1000*1000 << "(mm^2)" << std::endl;
 	std::cout << "PLUNGER MASS           " << PLUNGER_MASS *1000 << "(grams)" << std::endl;
+	std::cout << "SOLENOID CONSTANT      " << SOLENOID_CONSTANT << "(m Kg / s^2 / A^2" << std::endl;
 	
 	save_file.open(SAVE_FILENAME,std::fstream::out);		
 	times.push_back(0);
@@ -78,18 +82,27 @@ int main(void) {
 	plunger_force.push_back(0);
 	inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA/SOLENOID_LENGTH);
 	save_row();
+	bool exited=false;
 
-	//TODO: fix the code for the end of travel
+	//TODO: need better models for the end of trave
+	//TODO: add code to account for eddy loss in the core
+
 	while(times.back() < SIM_TIME) {
 		double force;
 		double voltage;
 		double current;
 		double back_emf;
 
+		if(!exited && plunger_displacement.back() > SOLENOID_LENGTH) {
+			exited = true;
+			std::cout << "Exit Velocity: " << plunger_velocity.back() << std::endl;
+		}
+
+
 		if(plunger_displacement.back() < SOLENOID_LENGTH) {
-				inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * (SOLENOID_LENGTH + (MU_R_IRON - 1)*plunger_displacement.back()) / (SOLENOID_LENGTH * SOLENOID_LENGTH));	
+				inductance.push_back(SOLENOID_CONSTANT*(SOLENOID_LENGTH + (MU_R_CORE -1)* plunger_displacement.back()));	
 		} else {
-				inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * MU_R_IRON / SOLENOID_LENGTH);		
+				inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * MU_R_CORE / SOLENOID_LENGTH);		
 		}
 
 		voltage = capacitor_voltage.back() - solenoid_current.back() / CAPACITOR_SIZE * TIMESTEP;
@@ -98,16 +111,15 @@ int main(void) {
 		}	
 		capacitor_voltage.push_back( voltage );	
 		
-		back_emf = TURNS * TURNS * MU_NOT * SOLENOID_AREA * (MU_R_IRON - 1) * plunger_velocity.back() / (SOLENOID_LENGTH * SOLENOID_LENGTH) * solenoid_current.back();
+		back_emf = SOLENOID_CONSTANT * (MU_R_CORE -1) * plunger_velocity.back();
 		current = solenoid_current.back() + (capacitor_voltage.back() - SOLENOID_RESISTANCE * solenoid_current.back() - back_emf )/inductance.back()*TIMESTEP;	
 		solenoid_current.push_back(current);
 		
-		force = TURNS * TURNS * MU_NOT * SOLENOID_AREA * ( MU_R_IRON - 1) * solenoid_current.back() * solenoid_current.back() / (SOLENOID_LENGTH * SOLENOID_LENGTH); 	
+		force = SOLENOID_CONSTANT * (MU_R_CORE-1) * solenoid_current.back() * solenoid_current.back() / 2; 	
 		
 		if(plunger_displacement.back() > SOLENOID_LENGTH) {
 			force = 0;
 		}
-
 		plunger_force.push_back(force);
 		plunger_velocity.push_back(plunger_velocity.back() + force / PLUNGER_MASS * TIMESTEP);
 		plunger_displacement.push_back(plunger_displacement.back() + plunger_velocity.back()*TIMESTEP);
