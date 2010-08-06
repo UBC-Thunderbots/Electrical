@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 04 Aug 2010 04:32:30 PM PDT
+EESchema Schematic File Version 2  date Thu 05 Aug 2010 05:43:28 PM PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./boostconverter.cache
 EELAYER 24  0
 EELAYER END
@@ -13,6 +13,21 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Kmarq B 6300 3350 "Warning Pin power_in not driven (Net 18)" F=1
+Kmarq B 1650 4450 "Warning Pin power_in not driven (Net 1)" F=1
+Wire Wire Line
+	1750 4450 1650 4450
+$Comp
+L GND #PWR01
+U 1 1 4C5AF52D
+P 1650 4450
+F 0 "#PWR01" H 1650 4450 30  0001 C CNN
+F 1 "GND" H 1650 4380 30  0001 C CNN
+	1    1650 4450
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6300 3050 6300 3350
 Wire Wire Line
 	2350 4450 4000 4450
 Wire Wire Line
@@ -21,9 +36,9 @@ Connection ~ 5550 5150
 Wire Wire Line
 	5550 5150 5650 5150
 Wire Wire Line
-	5650 4750 5550 4750
+	5550 4750 5650 4750
 Wire Wire Line
-	5550 4750 5550 5550
+	5550 5550 5550 4750
 Wire Wire Line
 	5500 5250 5650 5250
 Wire Wire Line
@@ -54,8 +69,6 @@ Wire Wire Line
 	7000 3950 7150 3950
 Wire Wire Line
 	6000 3450 6000 3550
-Wire Wire Line
-	6300 3350 6300 3050
 Wire Wire Line
 	4650 3100 4650 3050
 Wire Wire Line
@@ -122,7 +135,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 3350 7750 3400
 Wire Wire Line
-	6300 3050 5650 3050
+	5650 3050 6300 3050
 Wire Wire Line
 	5650 3450 5650 3550
 Wire Wire Line
@@ -144,16 +157,8 @@ Wire Wire Line
 Wire Wire Line
 	5600 4450 5500 4450
 Wire Wire Line
-	1750 4450 1650 4450
-$Comp
-L GND #PWR01
-U 1 1 4C54BAB8
-P 1650 4450
-F 0 "#PWR01" H 1650 4450 30  0001 C CNN
-F 1 "GND" H 1650 4380 30  0001 C CNN
-	1    1650 4450
-	0    1    -1   0   
-$EndComp
+	7750 2950 7750 2950
+Connection ~ 7750 2950
 $Comp
 L SW_PUSH SW_CHG1
 U 1 1 4C54BAB7
@@ -181,9 +186,6 @@ F 1 "MCP1416" H 6300 4050 60  0000 C CNN
 	1    6300 3950
 	1    0    0    -1  
 $EndComp
-Kmarq B 7750 2950 "Warning Pin passive Unconnected" F=1
-Kmarq B 6300 3350 "Warning Pin power_in not driven (Net 2)" F=1
-Kmarq B 8100 3400 "Warning Pin power_in not driven (Net 1)" F=1
 $Comp
 L GND #PWR02
 U 1 1 4C54B4D0
