@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 05 Aug 2010 05:43:28 PM PDT
+EESchema Schematic File Version 2  date Fri 06 Aug 2010 05:12:04 PM PDT
 LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./boostconverter.cache
 EELAYER 24  0
 EELAYER END
@@ -27,7 +27,7 @@ F 1 "GND" H 1650 4380 30  0001 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	6300 3050 6300 3350
+	6300 3350 6300 3050
 Wire Wire Line
 	2350 4450 4000 4450
 Wire Wire Line
@@ -36,9 +36,9 @@ Connection ~ 5550 5150
 Wire Wire Line
 	5550 5150 5650 5150
 Wire Wire Line
-	5550 4750 5650 4750
+	5650 4750 5550 4750
 Wire Wire Line
-	5550 5550 5550 4750
+	5550 4750 5550 5550
 Wire Wire Line
 	5500 5250 5650 5250
 Wire Wire Line
@@ -56,9 +56,9 @@ Wire Wire Line
 Wire Wire Line
 	3750 5800 3750 5850
 Wire Wire Line
-	8950 3950 9050 3950
+	8950 3550 9050 3550
 Wire Wire Line
-	8950 3500 9050 3500
+	9050 3100 9150 3100
 Wire Wire Line
 	3750 3100 3750 3050
 Wire Wire Line
@@ -131,11 +131,11 @@ Connection ~ 8600 3750
 Wire Wire Line
 	4650 2600 4650 2650
 Wire Wire Line
-	8900 3300 9050 3300
+	9000 2900 9150 2900
 Wire Wire Line
 	7750 3350 7750 3400
 Wire Wire Line
-	5650 3050 6300 3050
+	6300 3050 5650 3050
 Wire Wire Line
 	5650 3450 5650 3550
 Wire Wire Line
@@ -253,37 +253,37 @@ $EndComp
 $Comp
 L GND #PWR05
 U 1 1 4C549CA7
-P 8950 3950
-F 0 "#PWR05" H 8950 3950 30  0001 C CNN
-F 1 "GND" H 8950 3880 30  0001 C CNN
-	1    8950 3950
+P 8950 3550
+F 0 "#PWR05" H 8950 3550 30  0001 C CNN
+F 1 "GND" H 8950 3480 30  0001 C CNN
+	1    8950 3550
 	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR06
 U 1 1 4C549C7E
-P 8950 3500
-F 0 "#PWR06" H 8950 3500 30  0001 C CNN
-F 1 "GND" H 8950 3430 30  0001 C CNN
-	1    8950 3500
+P 9050 3100
+F 0 "#PWR06" H 9050 3100 30  0001 C CNN
+F 1 "GND" H 9050 3030 30  0001 C CNN
+	1    9050 3100
 	0    1    1    0   
 $EndComp
 $Comp
 L CONN_2 P3
 U 1 1 4C549C75
-P 9400 3850
-F 0 "P3" V 9350 3850 40  0000 C CNN
-F 1 "CONN_2" V 9450 3850 40  0000 C CNN
-	1    9400 3850
+P 9400 3650
+F 0 "P3" V 9350 3650 40  0000 C CNN
+F 1 "CONN_2" V 9450 3650 40  0000 C CNN
+	1    9400 3650
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_2 P2
 U 1 1 4C549C6F
-P 9400 3400
-F 0 "P2" V 9350 3400 40  0000 C CNN
-F 1 "CONN_2" V 9450 3400 40  0000 C CNN
-	1    9400 3400
+P 9500 3000
+F 0 "P2" V 9450 3000 40  0000 C CNN
+F 1 "CONN_2" V 9550 3000 40  0000 C CNN
+	1    9500 3000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -352,10 +352,10 @@ $EndComp
 $Comp
 L +BATT #PWR012
 U 1 1 4C506B15
-P 8900 3300
-F 0 "#PWR012" H 8900 3250 20  0001 C CNN
-F 1 "+BATT" H 8900 3400 30  0000 C CNN
-	1    8900 3300
+P 9000 2900
+F 0 "#PWR012" H 9000 2850 20  0001 C CNN
+F 1 "+BATT" H 9000 3000 30  0000 C CNN
+	1    9000 2900
 	1    0    0    -1  
 $EndComp
 $Comp

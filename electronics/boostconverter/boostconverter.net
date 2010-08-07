@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Thu 05 Aug 2010 12:04:23 PM PDT
+# EESchema Netlist Version 1.1 created  Fri 06 Aug 2010 05:09:03 PM PDT
 (
  ( /4C479377 C1 C1 27pF
   ( 1 /PIC/OSC1 )
@@ -89,8 +89,8 @@
   ( 2 GND )
  )
  ( /4C549C75 44441-2002 P3 CONN_2
-  ( 1 N-000019 )
-  ( 2 GND )
+  ( 1 GND )
+  ( 2 N-000019 )
  )
  ( /4C461E15 SIL-6 PGMR1 CONN_6
   ( 1 /PIC/MCLR )
@@ -117,19 +117,19 @@
   ( 1 /PIC/VCHMON )
   ( 2 GND )
  )
- ( /4C44C547/4C50C682 R3 R4 200R
+ ( /4C44C547/4C50C682 R1 R4 200R
   ( 1 N-000023 )
   ( 2 GND )
  )
- ( /4C44C547/4C50C62F R3 R5 200R
+ ( /4C44C547/4C50C62F R1 R5 200R
   ( 1 N-000024 )
   ( 2 GND )
  )
- ( /4C44C547/4C549F59 R3 R6 200R
+ ( /4C44C547/4C549F59 R1 R6 200R
   ( 1 N-000021 )
   ( 2 GND )
  )
- ( /4C44C547/4C44FA38 R3 R7 10kR
+ ( /4C44C547/4C44FA38 R1 R7 10kR
   ( 1 /PIC/MCLR )
   ( 2 VCC )
  )
