@@ -1,11 +1,42 @@
-EESchema Schematic File Version 2  date Fri 06 Aug 2010 05:12:04 PM PDT
-LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./boostconverter.cache
+EESchema Schematic File Version 2  date Tue 10 Aug 2010 05:20:50 PM PDT
+LIBS:power
+LIBS:thunderbots-symbols
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:boostconverter-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 2
 Title ""
-Date "4 aug 2010"
+Date "10 aug 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -13,8 +44,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Kmarq B 6300 3350 "Warning Pin power_in not driven (Net 18)" F=1
-Kmarq B 1650 4450 "Warning Pin power_in not driven (Net 1)" F=1
 Wire Wire Line
 	1750 4450 1650 4450
 $Comp
@@ -31,14 +60,22 @@ Wire Wire Line
 Wire Wire Line
 	2350 4450 4000 4450
 Wire Wire Line
-	8100 2950 7450 2950
+	8100 2950 7750 2950
+Wire Wire Line
+	7750 2950 7450 2950
 Connection ~ 5550 5150
 Wire Wire Line
 	5550 5150 5650 5150
 Wire Wire Line
 	5650 4750 5550 4750
 Wire Wire Line
-	5550 4750 5550 5550
+	5550 4750 5550 4950
+Wire Wire Line
+	5550 4950 5550 5150
+Wire Wire Line
+	5550 5150 5550 5350
+Wire Wire Line
+	5550 5350 5550 5550
 Wire Wire Line
 	5500 5250 5650 5250
 Wire Wire Line
@@ -94,15 +131,15 @@ Wire Wire Line
 Wire Wire Line
 	3800 2600 3750 2600
 Wire Wire Line
-	3750 4750 3650 4750
+	3750 4750 3700 4750
 Wire Wire Line
-	3650 5050 4000 5050
+	3700 5050 4000 5050
 Wire Wire Line
-	4000 4650 3650 4650
+	4000 4650 3700 4650
 Wire Wire Line
-	3650 4950 4000 4950
+	3700 4950 4000 4950
 Wire Wire Line
-	3800 4850 3650 4850
+	3800 4850 3700 4850
 Wire Wire Line
 	4600 2600 4650 2600
 Wire Wire Line
@@ -120,7 +157,11 @@ Wire Wire Line
 Connection ~ 6000 3050
 Connection ~ 6000 3050
 Wire Wire Line
-	7950 3750 9050 3750
+	7950 3750 8150 3750
+Wire Wire Line
+	8150 3750 8600 3750
+Wire Wire Line
+	8600 3750 9050 3750
 Connection ~ 8150 3750
 Connection ~ 8150 4250
 Wire Wire Line
@@ -135,7 +176,9 @@ Wire Wire Line
 Wire Wire Line
 	7750 3350 7750 3400
 Wire Wire Line
-	6300 3050 5650 3050
+	6300 3050 6000 3050
+Wire Wire Line
+	6000 3050 5650 3050
 Wire Wire Line
 	5650 3450 5650 3550
 Wire Wire Line
@@ -583,7 +626,7 @@ F 1 "VCC" H 4650 2700 30  0000 C CNN
 	1    4650 2600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3650 5150
+NoConn ~ 3700 5150
 $Comp
 L VCC #PWR025
 U 1 1 4C461ED1
@@ -605,19 +648,19 @@ $EndComp
 $Comp
 L CONN_6 PGMR1
 U 1 1 4C461E15
-P 3300 4900
-F 0 "PGMR1" V 3250 4900 60  0000 C CNN
-F 1 "CONN_6" V 3350 4900 60  0000 C CNN
-	1    3300 4900
+P 3350 4900
+F 0 "PGMR1" V 3300 4900 60  0000 C CNN
+F 1 "CONN_6" V 3400 4900 60  0000 C CNN
+	1    3350 4900
 	-1   0    0    -1  
 $EndComp
 $Comp
 L 78L05 REG1
 U 1 1 4C44B4BC
-P 4200 2600
-F 0 "REG1" H 4350 2360 60  0000 C CNN
-F 1 "78L05" H 4205 2740 60  0000 C CNN
-	1    4200 2600
+P 4200 2650
+F 0 "REG1" H 4350 2410 60  0000 C CNN
+F 1 "78L05" H 4205 2790 60  0000 C CNN
+	1    4200 2650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

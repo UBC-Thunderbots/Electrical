@@ -1,26 +1,26 @@
-# EESchema Netlist Version 1.1 created  Fri 06 Aug 2010 05:09:03 PM PDT
+# EESchema Netlist Version 1.1 created  Tue 10 Aug 2010 02:56:28 PM PDT
 (
- ( /4C479377 C1 C1 27pF
+ ( /4C479377 SM1206 C1 27pF
   ( 1 /PIC/OSC1 )
   ( 2 GND )
  )
- ( /4C536524 C1 C2 .33uF
+ ( /4C536524 SM1206 C2 .33uF
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C479379 C1 C3 27pF
+ ( /4C479379 SM1206 C3 27pF
   ( 1 /PIC/OSC2 )
   ( 2 GND )
  )
- ( /4C5067FB C1 C4 100nF
+ ( /4C5067FB SM1206 C4 100nF
   ( 1 VCC )
   ( 2 GND )
  )
- ( /4C4783EC C1 C5 100nF
+ ( /4C4783EC SM1206 C5 100nF
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C478A9E C2 C6 1uF
+ ( /4C478A9E SM1206 C6 1uF
   ( 1 +BATT )
   ( 2 GND )
  )
@@ -28,37 +28,37 @@
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4C54B4BC C2 C8 10uF
+ ( /4C54B4BC SM1206 C8 10uF
   ( 1 +BATT )
   ( 2 GND )
  )
  ( /4C4DC8F8 C2V400 C9 22uF
-  ( 1 N-000019 )
+  ( 1 N-000001 )
   ( 2 GND )
  )
- ( /4C44C547/4C547C0C C2 C10 10uF
+ ( /4C44C547/4C547C0C SM1206 C10 10uF
   ( 1 VCC )
   ( 2 GND )
  )
- ( /4C44C547/4C5474F4 C1 C11 100nF
+ ( /4C44C547/4C5474F4 SM1206 C11 100nF
   ( 1 VCC )
   ( 2 GND )
  )
- ( /4C44C547/4C53655C C1 C12 100nF
+ ( /4C44C547/4C53655C SM1206 C12 100nF
   ( 1 VCC )
   ( 2 GND )
  )
  ( /4C463827 D2PAK123 D1 DIODE
-  ( 1 N-000012 )
-  ( 2 N-000019 )
+  ( 1 N-000016 )
+  ( 2 N-000001 )
  )
  ( /4C44C547/4C50C683 LED-5MM D2 LED
-  ( 1 N-000022 )
+  ( 1 N-000024 )
   ( 2 N-000023 )
  )
  ( /4C44C547/4C50C635 LED-5MM D3 LED
   ( 1 N-000025 )
-  ( 2 N-000024 )
+  ( 2 N-000022 )
  )
  ( /4C44C547/4C549F5B LED-5MM D4 LED
   ( 1 N-000026 )
@@ -68,11 +68,11 @@
   ( 2 +BATT )
   ( 3 /PIC/PWM )
   ( 4 GND )
-  ( 5 N-000009 )
+  ( 5 N-000008 )
  )
  ( /4C476AE5 22uH_INDUCTOR L1 22uH
   ( 1 +BATT )
-  ( 2 N-000012 )
+  ( 2 N-000016 )
  )
  ( /4C54B386 SIL-8 P1 CONN_8
   ( 1 /PIC/EXTRA1 )
@@ -90,7 +90,7 @@
  )
  ( /4C549C75 44441-2002 P3 CONN_2
   ( 1 GND )
-  ( 2 N-000019 )
+  ( 2 N-000001 )
  )
  ( /4C461E15 SIL-6 PGMR1 CONN_6
   ( 1 /PIC/MCLR )
@@ -101,8 +101,8 @@
   ( 6 ? )
  )
  ( /4C46380B D2PAKGDS Q1 MOS_N
-  ( D N-000012 )
-  ( G N-000009 )
+  ( D N-000016 )
+  ( G N-000008 )
   ( S GND )
  )
  ( /4C50BC9C R3 R1 1kR
@@ -110,7 +110,7 @@
   ( 2 GND )
  )
  ( /4C478DFC R3 R2 220kR
-  ( 1 N-000019 )
+  ( 1 N-000001 )
   ( 2 /PIC/VCHMON )
  )
  ( /4C478DF8 R3 R3 2.2kR
@@ -122,7 +122,7 @@
   ( 2 GND )
  )
  ( /4C44C547/4C50C62F R1 R5 200R
-  ( 1 N-000024 )
+  ( 1 N-000022 )
   ( 2 GND )
  )
  ( /4C44C547/4C549F59 R1 R6 200R
@@ -133,10 +133,10 @@
   ( 1 /PIC/MCLR )
   ( 2 VCC )
  )
- ( /4C44B4BC TO92 REG1 78L05
-  ( 1 +BATT )
-  ( 2 GND )
-  ( 3 VCC )
+ ( /4C44B4BC SOT89 REG1 78L05
+  ( GND GND )
+  ( VI +BATT )
+  ( VO VCC )
  )
  ( /4C44C547/4C59AD0E PUSH_BTTN SW1 SW_PUSH
   ( 1 /PIC/MCLR )
@@ -152,7 +152,7 @@
  )
  ( /4C44C547/4C44C57A TQFP44 U1 PIC18F4550
   ( 1 GND )
-  ( 2 N-000022 )
+  ( 2 N-000024 )
   ( 3 N-000025 )
   ( 4 N-000026 )
   ( 5 GND )
@@ -196,7 +196,7 @@
   ( 43 GND )
   ( 44 GND )
  )
- ( /4C479371 HC-18UV XT1 4MHz
+ ( /4C479371 HC49US XT1 4MHz
   ( 1 /PIC/OSC1 )
   ( 2 /PIC/OSC2 )
  )
@@ -298,36 +298,43 @@ $component R1
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component R2
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component R3
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component R4
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component R5
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component R6
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component R7
  R?
  SM0603
  SM0805
+ R?-*
 $endlist
 $component U1
  TQFP44
