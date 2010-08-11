@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 10 Aug 2010 05:20:50 PM PDT
+EESchema Schematic File Version 2  date Wed 11 Aug 2010 12:03:07 PM PDT
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 2
 Title ""
-Date "10 aug 2010"
+Date "11 aug 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -60,22 +60,14 @@ Wire Wire Line
 Wire Wire Line
 	2350 4450 4000 4450
 Wire Wire Line
-	8100 2950 7750 2950
-Wire Wire Line
-	7750 2950 7450 2950
+	8100 2950 7450 2950
 Connection ~ 5550 5150
 Wire Wire Line
 	5550 5150 5650 5150
 Wire Wire Line
 	5650 4750 5550 4750
 Wire Wire Line
-	5550 4750 5550 4950
-Wire Wire Line
-	5550 4950 5550 5150
-Wire Wire Line
-	5550 5150 5550 5350
-Wire Wire Line
-	5550 5350 5550 5550
+	5550 4750 5550 5550
 Wire Wire Line
 	5500 5250 5650 5250
 Wire Wire Line
@@ -157,11 +149,7 @@ Wire Wire Line
 Connection ~ 6000 3050
 Connection ~ 6000 3050
 Wire Wire Line
-	7950 3750 8150 3750
-Wire Wire Line
-	8150 3750 8600 3750
-Wire Wire Line
-	8600 3750 9050 3750
+	7950 3750 9050 3750
 Connection ~ 8150 3750
 Connection ~ 8150 4250
 Wire Wire Line
@@ -176,9 +164,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 3350 7750 3400
 Wire Wire Line
-	6300 3050 6000 3050
-Wire Wire Line
-	6000 3050 5650 3050
+	6300 3050 5650 3050
 Wire Wire Line
 	5650 3450 5650 3550
 Wire Wire Line
