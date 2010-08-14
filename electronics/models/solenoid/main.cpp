@@ -50,13 +50,14 @@ const double SIM_TIME = 15e-3 ; // in seconds
 const double TIMESTEP = 10e-7; // in seconds
 
 std::fstream save_file;
-std::vector<double> plunger_displacement; // in meters
-std::vector<double> plunger_velocity;
-std::vector<double> plunger_force;
-std::vector<double> capacitor_voltage; // in volts
-std::vector<double> solenoid_current;
-std::vector<double> inductance;
-std::vector<double> times;
+std::vector<double> displacement; // in meters
+std::vector<double> velocity; // in meters/sec
+std::vector<double> force; // in newtons
+std::vector<double> voltage; // in volts
+std::vector<double> current; // in amps
+std::vector<double> flux;  //  in webers
+std::vector<double> times; // in seconds
+
 void save_row();
 
 int main(void) {
@@ -71,16 +72,19 @@ int main(void) {
 	std::cout << "SOLENOID RESISTANCE    " << SOLENOID_RESISTANCE << "(ohm)" << std::endl;
 	std::cout << "SOLENOID AREA          " << SOLENOID_AREA*1000*1000 << "(mm^2)" << std::endl;
 	std::cout << "PLUNGER MASS           " << PLUNGER_MASS *1000 << "(grams)" << std::endl;
-	std::cout << "SOLENOID CONSTANT      " << SOLENOID_CONSTANT << "(m Kg / s^2 / A^2" << std::endl;
+	std::cout << "SOLENOID CONSTANT      " << SOLENOID_CONSTANT << "(m Kg / s^2 / A^2)" << std::endl;
 	
 	save_file.open(SAVE_FILENAME,std::fstream::out);		
+	
+	//initialize the system
 	times.push_back(0);
-	plunger_displacement.push_back(0);
-	plunger_velocity.push_back(0);
-	capacitor_voltage.push_back(CAPACITOR_INITAL_CHARGE);
-	solenoid_current.push_back(0);
-	plunger_force.push_back(0);
-	inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA/SOLENOID_LENGTH);
+	force.push_back(0);
+	flux.push_back(0);
+	displacement.push_back(0);
+	velocity.push_back(0);
+	voltage.push_back(CAPACITOR_INITAL_CHARGE);
+	current.push_back(0);
+	
 	save_row();
 	bool exited=false;
 
@@ -88,41 +92,31 @@ int main(void) {
 	//TODO: add code to account for eddy loss in the core
 
 	while(times.back() < SIM_TIME) {
-		double force;
-		double voltage;
-		double current;
-		double back_emf;
 
-		if(!exited && plunger_displacement.back() > SOLENOID_LENGTH) {
-			exited = true;
-			std::cout << "Exit Velocity: " << plunger_velocity.back() << std::endl;
+		if(!exited && displacement.back() > SOLENOID_LENGTH) {
+			std::cout << "Exit Velocity: " << velocity.back() << std::endl;
+			break;
 		}
+		
+		double reluctance = SOLENOID_LENGTH/MU_NOT/MU_R_CORE/SOLENOID_AREA + (SOLENOID_LENGTH - displacement.back())/MU_NOT/SOLENOID_AREA;
+		double helper = SOLENOID_LENGTH + (SOLENOID_LENGTH - displacement.back())*MU_R_CORE;
+		double flux_temp = TURNS * current.back() * SOLENOID_AREA * MU_NOT * MU_R_CORE / helper;
+		double force_temp = flux.back()*flux.back() / 2/ MU_NOT/SOLENOID_AREA;
+		double current_temp = (reluctance*reluctance*SOLENOID_AREA*MU_NOT*(voltage.back() - current.back()*SOLENOID_RESISTANCE) - velocity.back() * current.back()*TURNS*TURNS)/MU_NOT/SOLENOID_AREA/TURNS/TURNS/reluctance*TIMESTEP + current.back();
+		double voltage_temp = voltage.back() - current.back()/CAPACITOR_SIZE *TIMESTEP;
+		double displacement_temp = velocity.back() * TIMESTEP + displacement.back();
+		double velocity_temp = force.back()/PLUNGER_MASS * TIMESTEP + velocity.back();
 
-
-		if(plunger_displacement.back() < SOLENOID_LENGTH) {
-				inductance.push_back(SOLENOID_CONSTANT*(SOLENOID_LENGTH + (MU_R_CORE -1)* plunger_displacement.back()));	
-		} else {
-				inductance.push_back(TURNS * TURNS * MU_NOT * SOLENOID_AREA * MU_R_CORE / SOLENOID_LENGTH);		
+		if(voltage_temp < 0.0) {
+			voltage_temp = 0;
 		}
-
-		voltage = capacitor_voltage.back() - solenoid_current.back() / CAPACITOR_SIZE * TIMESTEP;
-		if(voltage < 0.0) { // assume a diode snubber
-			voltage = -0.7;
-		}	
-		capacitor_voltage.push_back( voltage );	
 		
-		back_emf = SOLENOID_CONSTANT * (MU_R_CORE -1) * plunger_velocity.back();
-		current = solenoid_current.back() + (capacitor_voltage.back() - SOLENOID_RESISTANCE * solenoid_current.back() - back_emf )/inductance.back()*TIMESTEP;	
-		solenoid_current.push_back(current);
-		
-		force = SOLENOID_CONSTANT * (MU_R_CORE-1) * solenoid_current.back() * solenoid_current.back() / 2; 	
-		
-		if(plunger_displacement.back() > SOLENOID_LENGTH) {
-			force = 0;
-		}
-		plunger_force.push_back(force);
-		plunger_velocity.push_back(plunger_velocity.back() + force / PLUNGER_MASS * TIMESTEP);
-		plunger_displacement.push_back(plunger_displacement.back() + plunger_velocity.back()*TIMESTEP);
+		flux.push_back(flux_temp);
+		force.push_back(force_temp);
+		current.push_back(current_temp);
+		voltage.push_back(voltage_temp);
+		displacement.push_back(displacement_temp);
+		velocity.push_back(velocity_temp);
 		times.push_back(times.back() + TIMESTEP);
 
 		save_row();
@@ -130,12 +124,13 @@ int main(void) {
 	save_file.close();
 }
 
+
 void save_row() {
-	save_file << plunger_displacement.back() << ";";	// 1
-	save_file << plunger_velocity.back() << ";";			// 2
-	save_file << plunger_force.back() << ";";					// 3
-	save_file << capacitor_voltage.back() << ";";			// 4
-	save_file << solenoid_current.back() << ";";			// 5
-	save_file << inductance.back() << ";";						// 6
-	save_file << times.back() << std::endl;						// 7
+	save_file << displacement.back() << ";";  // 1
+	save_file << velocity.back() << ";";      // 2
+	save_file << force.back() << ";";         // 3
+	save_file << voltage.back() << ";";       // 4
+	save_file << current.back() << ";";       // 5
+	save_file << flux.back() << ";";          // 6
+	save_file << times.back() << std::endl;   // 7
 }
