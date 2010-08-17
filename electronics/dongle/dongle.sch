@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-08-01T18:13:30 PDT
+EESchema Schematic File Version 2  date 2010-08-16T22:50:35 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:dongle-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "2 aug 2010"
+Date "17 aug 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -931,7 +930,7 @@ P 6150 6700
 F 0 "D2" H 6150 6800 50  0000 C CNN
 F 1 "LED" H 6150 6600 50  0000 C CNN
 F 2 "LED-1206" H 6150 6700 60  0001 C CNN
-F 4 "475-1407-1-ND" H 6150 6700 60  0001 C CNN "Digikey Part"
+F 4 "160-1169-1-ND" H 6150 6700 60  0001 C CNN "Digikey Part"
 	1    6150 6700
 	0    1    1    0   
 $EndComp
