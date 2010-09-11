@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 14 Aug 2010 01:07:14 PM PDT
+EESchema Schematic File Version 2  date Fri 10 Sep 2010 10:21:55 AM PDT
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 2 2
 Title ""
-Date "14 aug 2010"
+Date "10 sep 2010"
 Rev ""
 Comp ""
 Comment1 ""
