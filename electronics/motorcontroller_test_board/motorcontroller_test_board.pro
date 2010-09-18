@@ -1,10 +1,10 @@
-update=Sat 18 Sep 2010 11:27:55 AM PDT
+update=Sat 18 Sep 2010 12:49:18 PM PDT
 last_client=eeschema
 [general]
 version=1
 [eeschema]
 version=1
-LibDir=../../electronics
+LibDir=
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -68,4 +68,4 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=thunderbots-symbols
+LibName31=/home/cyberfish/thunderbots/electronics/thunderbots-symbols
