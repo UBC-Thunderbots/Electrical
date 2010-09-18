@@ -86,6 +86,7 @@ electronics/motorcontroller/*.mvl
 electronics/motorcontroller/*.net
 electronics/motorcontroller/*.pho
 electronics/motorcontroller/*.stf
+electronics/motorcontroller_test_board/motorcontroller_test_board-cache.lib
 vhdl/*.bgn
 vhdl/*.bit
 vhdl/*.bld

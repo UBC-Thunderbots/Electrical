@@ -111,6 +111,8 @@ electronics/motorcontroller/controller5.sch -text
 electronics/motorcontroller/motorcontroller.brd -text
 electronics/motorcontroller/motorcontroller.pro -text
 electronics/motorcontroller/motorcontroller.sch -text
+electronics/motorcontroller_test_board/motorcontroller_test_board.pro -text
+electronics/motorcontroller_test_board/motorcontroller_test_board.sch -text
 electronics/sensor/Sensor.net -text
 electronics/sensor/Sensor.pro -text
 electronics/sensor/Sensor.sch -text
