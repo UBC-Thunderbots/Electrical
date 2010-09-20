@@ -1,0 +1,449 @@
+# EESchema Netlist Version 1.1 created  9/19/2010 11:49:51 PM
+(
+ ( /4C9525F3 C1V5 C1 330uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C951A33 C1 C2 20pF
+  ( 1 N-000024 )
+  ( 2 GND )
+ )
+ ( /4C951A39 C1 C3 20pF
+  ( 1 N-000037 )
+  ( 2 GND )
+ )
+ ( /4C951BF7 C1 C4 0.1uF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /4C9524E2 C1V5 C5 330uF
+  ( 1 N-000004 )
+  ( 2 GND )
+ )
+ ( /4C9526A5 C1 C6 10uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4C952A20 C1 C7 0.1uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C952841 C1 C8 10uF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /4C952A1C C1 C9 0.1uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C952A15 C1 C10 1.0uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C951C34 C1 C11 0.1uF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /4C9548D1 C1 C12 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4C96DD6A C1 C13 0.1uF
+  ( 1 N-000064 )
+  ( 2 GND )
+ )
+ ( /4C9703B0 C2V10 C14 1mF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C95263E D5 D1 1N4004
+  ( 1 VDD )
+  ( 2 N-000004 )
+ )
+ ( /4C954F5B D5 D2 1N5817
+  ( 1 N-000064 )
+  ( 2 /Vpp )
+ )
+ ( /4C96DEB0 LED-5MM D3 LED
+  ( 1 N-000054 )
+  ( 2 N-000061 )
+ )
+ ( /4C96DEB8 LED-5MM D4 LED
+  ( 1 N-000032 )
+  ( 2 N-000062 )
+ )
+ ( /4C96DEBF LED-5MM D5 LED
+  ( 1 N-000055 )
+  ( 2 N-000063 )
+ )
+ ( /4C952223 2PIN_6mm P1 PWR
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4C954EB1 SIL-6 P2 ICSP
+  ( 1 /Vpp )
+  ( 2 +3.3V )
+  ( 3 GND )
+  ( 4 N-000011 )
+  ( 5 N-000025 )
+  ( 6 ? )
+ )
+ ( /4C954857 SIL-8 P3 MOTOR
+  ( 1 +5V )
+  ( 2 /hall3 )
+  ( 3 /hall1 )
+  ( 4 /hall2 )
+  ( 5 GND )
+  ( 6 N-000053 )
+  ( 7 N-000056 )
+  ( 8 N-000059 )
+ )
+ ( /4C955275 SIL-2 P4 3.3V_UART
+  ( 1 /Rx )
+  ( 2 /Tx )
+ )
+ ( /4C954F23 R3 R1 10KR
+  ( 1 +3.3V )
+  ( 2 N-000064 )
+ )
+ ( /4C952B7D R3 R2 100R
+  ( 1 N-000009 )
+  ( 2 N-000008 )
+ )
+ ( /4C952BBD R3 R3 100R
+  ( 1 N-000010 )
+  ( 2 N-000048 )
+ )
+ ( /4C952BC3 R3 R4 100R
+  ( 1 N-000006 )
+  ( 2 N-000049 )
+ )
+ ( /4C952BC6 R3 R5 100R
+  ( 1 N-000057 )
+  ( 2 N-000050 )
+ )
+ ( /4C952BCA R3 R6 100R
+  ( 1 N-000007 )
+  ( 2 N-000041 )
+ )
+ ( /4C952BD0 R3 R7 100R
+  ( 1 N-000058 )
+  ( 2 N-000042 )
+ )
+ ( /4C96DF2C R3 R8 1KR
+  ( 1 GND )
+  ( 2 N-000061 )
+ )
+ ( /4C96DF3F R3 R9 1KR
+  ( 1 GND )
+  ( 2 N-000062 )
+ )
+ ( /4C96DF41 R3 R10 1KR
+  ( 1 GND )
+  ( 2 N-000063 )
+ )
+ ( /4C96DF63 SIL-3 RV1 POT
+  ( 1 +3.3V )
+  ( 2 N-000022 )
+  ( 3 GND )
+ )
+ ( /4C95248D LM78XX U1 7805
+  ( GND GND )
+  ( VI N-000004 )
+  ( VO +5V )
+ )
+ ( /4C9518B8 DIP-40__600 U2 PIC18F4550_40DIP
+  ( 1 /Vpp )
+  ( 2 N-000022 )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 +3.3V )
+  ( 12 GND )
+  ( 13 N-000024 )
+  ( 14 N-000037 )
+  ( 15 N-000055 )
+  ( 16 N-000032 )
+  ( 17 N-000054 )
+  ( 18 ? )
+  ( 19 ? )
+  ( 20 ? )
+  ( 21 N-000047 )
+  ( 22 N-000040 )
+  ( 23 ? )
+  ( 24 ? )
+  ( 25 /Tx )
+  ( 26 /Rx )
+  ( 27 N-000051 )
+  ( 28 N-000027 )
+  ( 29 N-000052 )
+  ( 30 N-000012 )
+  ( 31 GND )
+  ( 32 +3.3V )
+  ( 33 ? )
+  ( 34 ? )
+  ( 35 /hall2 )
+  ( 36 /hall1 )
+  ( 37 /hall3 )
+  ( 38 GND )
+  ( 39 N-000025 )
+  ( 40 N-000011 )
+ )
+ ( /4C952756 TO220_VERT U3 LD1117V33C
+  ( 1 GND )
+  ( 2 +3.3V )
+  ( 3 +5V )
+ )
+ ( /4C9521C4 SO16W U4 TC4469
+  ( 1 N-000012 )
+  ( 2 GND )
+  ( 3 N-000052 )
+  ( 4 GND )
+  ( 5 N-000027 )
+  ( 6 GND )
+  ( 7 GND )
+  ( 8 N-000051 )
+  ( 9 GND )
+  ( 10 N-000050 )
+  ( 11 N-000049 )
+  ( 12 N-000048 )
+  ( 13 N-000008 )
+  ( 14 VDD )
+ )
+ ( /4C9521D3 SO16W U5 TC4469
+  ( 1 N-000040 )
+  ( 2 GND )
+  ( 3 N-000047 )
+  ( 4 GND )
+  ( 5 ? )
+  ( 6 GND )
+  ( 7 GND )
+  ( 8 ? )
+  ( 9 GND )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 N-000042 )
+  ( 13 N-000041 )
+  ( 14 VDD )
+ )
+ ( /4C952B30 SO8E U6 FDS8858CZ
+  ( 1 GND )
+  ( 2 N-000009 )
+  ( 3 VDD )
+  ( 4 N-000010 )
+  ( 5 N-000053 )
+  ( 6 N-000053 )
+  ( 7 N-000053 )
+  ( 8 N-000053 )
+ )
+ ( /4C952B3C SO8E U7 FDS8858CZ
+  ( 1 GND )
+  ( 2 N-000006 )
+  ( 3 VDD )
+  ( 4 N-000057 )
+  ( 5 N-000056 )
+  ( 6 N-000056 )
+  ( 7 N-000056 )
+  ( 8 N-000056 )
+ )
+ ( /4C952B44 SO8E U8 FDS8858CZ
+  ( 1 GND )
+  ( 2 N-000007 )
+  ( 3 VDD )
+  ( 4 N-000058 )
+  ( 5 N-000059 )
+  ( 6 N-000059 )
+  ( 7 N-000059 )
+  ( 8 N-000059 )
+ )
+ ( /4C9519EC HC49U-S X1 4MHz
+  ( 1 N-000024 )
+  ( 2 N-000037 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ CP*
+ SM*
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
+ SM*
+ C?
+ C1-1
+$endlist
+$component C13
+ SM*
+ C?
+ C1-1
+$endlist
+$component C14
+ CP*
+ SM*
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D5
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component U2
+ DIP-40__600
+$endlist
+$component U3
+ TO220_VERT
+$endlist
+$endfootprintlist
+}
