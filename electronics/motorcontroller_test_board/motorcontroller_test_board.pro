@@ -68,8 +68,7 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=/home/cyberfish/thunderbots/electronics/thunderbots-symbols
-LibName32=C:\\thunderbots\\electronics\\thunderbots-symbols
+LibName31=../thunderbots-symbols
 [cvpcb]
 version=1
 NetIExt=net
