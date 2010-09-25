@@ -74,7 +74,6 @@ electronics/dongle/dongle.brd -text
 electronics/dongle/dongle.pro -text
 electronics/dongle/dongle.sch -text
 electronics/flyback/flyback.brd -text
-electronics/flyback/flyback.net -text
 electronics/flyback/flyback.pro -text
 electronics/flyback/flyback.sch -text
 electronics/flyback/uC.sch -text
