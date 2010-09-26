@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 25 Sep 2010 05:31:33 PM PDT
+EESchema Schematic File Version 2  date Sat 25 Sep 2010 07:09:35 PM PDT
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
