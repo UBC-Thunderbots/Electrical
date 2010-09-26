@@ -1,4 +1,4 @@
-update=9/21/2010 11:35:43 PM
+update=Sat 25 Sep 2010 12:44:35 PM PDT
 last_client=pcbnew
 [general]
 version=1
@@ -76,10 +76,14 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-PadDrlX=1200
-PadDimH=3500
-PadDimV=3500
+PadDrlX=420
+PadDimH=800
+PadDimV=800
 BoardThickness=630
+RouteTo=15
+RouteBo=0
+Segm45=1
+Racc45=1
 SgPcb45=1
 TxtPcbV=800
 TxtPcbH=600
@@ -91,7 +95,7 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=motorcontroller_test_board.net
+WpenSer=10
 [pcbnew/libraries]
 LibDir=
 LibName1=sockets
@@ -105,3 +109,4 @@ LibName8=valves
 LibName9=led
 LibName10=dip_sockets
 LibName11=C:\\thunderbots\\electronics\\thunderbots-modules
+LibName12=/home/cyberfish/thunderbots/electronics/thunderbots-modules
