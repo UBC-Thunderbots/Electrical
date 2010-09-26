@@ -42,11 +42,13 @@ electronics/flyback/*.bak
 electronics/flyback/*.bck
 electronics/flyback/*.cache.*
 electronics/flyback/*.cmp
+electronics/flyback/*.csv
 electronics/flyback/*.drl
 electronics/flyback/*.dsn
 electronics/flyback/*.erc
 electronics/flyback/*.lst
 electronics/flyback/*.mvl
+electronics/flyback/*.net
 electronics/flyback/*.pho
 electronics/flyback/*.ses
 electronics/flyback/*.stf

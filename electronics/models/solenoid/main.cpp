@@ -23,7 +23,7 @@ const double FILL_EFFICENCY = TURNS * CORE_AREA / WINDING_AREA;
 
 //TODO: this needs to take into account the extra wire as the windings get thicker
 const double WINDING_RESISTIVITY = 1.68e-8; // ohm meters
-const double TURN_RESISTANCE = WINDING_RESISTIVITY*(SOLENOID_LENGTH*2 + 2*SOLENOID_HEIGHT)/CORE_AREA;
+const double TURN_RESISTANCE = WINDING_RESISTIVITY*(SOLENOID_LENGTH + SOLENOID_HEIGHT + 2*WINDING_HEIGHT)/CORE_AREA;
 const double SOLENOID_RESISTANCE = TURN_RESISTANCE * TURNS; // ohms
 
 
@@ -32,7 +32,7 @@ const double SOLENOID_AREA = SOLENOID_HEIGHT * SOLENOID_WIDTH;  // in meters squ
 
 //Size of the capacitor storing the kicker charge
 const double CAPACITOR_SIZE = 5.4e-3; // in farads
-const double CAPACITOR_INITAL_CHARGE = 240; // in volts
+const double CAPACITOR_INITIAL_CHARGE = 240; // in volts
 
 const double MU_NOT = 1.25663706e-6;
 const double MU_R_IRON = 5000;
@@ -51,14 +51,11 @@ const double TIMESTEP = 10e-7; // in seconds
 
 std::fstream save_file;
 std::vector<double> displacement; // in meters
-std::vector<double> velocity; // in meters/sec
-std::vector<double> force; // in newtons
 std::vector<double> voltage; // in volts
-std::vector<double> current; // in amps
-std::vector<double> flux;  //  in webers
 std::vector<double> times; // in seconds
 
 void save_row();
+double inductance(double);
 
 int main(void) {
 	std::cout << "CONSTANT calculations: " << std::endl;
@@ -78,45 +75,52 @@ int main(void) {
 	
 	//initialize the system
 	times.push_back(0);
-	force.push_back(0);
-	flux.push_back(0);
+	times.push_back(TIMESTEP);
 	displacement.push_back(0);
-	velocity.push_back(0);
-	voltage.push_back(CAPACITOR_INITAL_CHARGE);
-	current.push_back(0);
+	displacement.push_back(0);
+	voltage.push_back(CAPACITOR_INITIAL_CHARGE);
+	voltage.push_back(CAPACITOR_INITIAL_CHARGE);
 	
 	save_row();
 	bool exited=false;
 
-	//TODO: need better models for the end of trave
+	//TODO: need better models for the end of travel
 	//TODO: add code to account for eddy loss in the core
 
 	while(times.back() < SIM_TIME) {
 
 		if(!exited && displacement.back() > SOLENOID_LENGTH) {
-			std::cout << "Exit Velocity: " << velocity.back() << std::endl;
 			break;
 		}
 		
-		double reluctance = SOLENOID_LENGTH/MU_NOT/MU_R_CORE/SOLENOID_AREA + (SOLENOID_LENGTH - displacement.back())/MU_NOT/SOLENOID_AREA;
-		double helper = SOLENOID_LENGTH + (SOLENOID_LENGTH - displacement.back())*MU_R_CORE;
-		double flux_temp = TURNS * current.back() * SOLENOID_AREA * MU_NOT * MU_R_CORE / helper;
-		double force_temp = flux.back()*flux.back() / 2/ MU_NOT/SOLENOID_AREA;
-		double current_temp = (reluctance*reluctance*SOLENOID_AREA*MU_NOT*(voltage.back() - current.back()*SOLENOID_RESISTANCE) - velocity.back() * current.back()*TURNS*TURNS)/MU_NOT/SOLENOID_AREA/TURNS/TURNS/reluctance*TIMESTEP + current.back();
-		double voltage_temp = voltage.back() - current.back()/CAPACITOR_SIZE *TIMESTEP;
-		double displacement_temp = velocity.back() * TIMESTEP + displacement.back();
-		double velocity_temp = force.back()/PLUNGER_MASS * TIMESTEP + velocity.back();
-
-		if(voltage_temp < 0.0) {
-			voltage_temp = 0;
-		}
+		double xc = displacement.back();
+		double xp = *(displacement.end()-2);
+		double vc = voltage.back();
+		double vp = *(voltage.end()-2);
+		double xf = xc;
+		double vf = vc;	
 		
-		flux.push_back(flux_temp);
-		force.push_back(force_temp);
-		current.push_back(current_temp);
-		voltage.push_back(voltage_temp);
-		displacement.push_back(displacement_temp);
-		velocity.push_back(velocity_temp);
+		double a1 = PLUNGER_MASS/TIMESTEP/TIMESTEP/TIMESTEP;
+		double a2 = (2*xc*xp - xp*xp);
+		double a3 = CAPACITOR_SIZE/2/TIMESTEP;
+		double a4 = -CAPACITOR_SIZE*CAPACITOR_SIZE/4/TIMESTEP/TIMESTEP;
+		double a5 = -inductance(xc)*CAPACITOR_SIZE*CAPACITOR_SIZE/2/TIMESTEP/TIMESTEP/TIMESTEP;
+		double a6 = -2*vc*vp - vp*vp;
+		
+		double J;	
+		do {
+		 	J = (a1*(xf*xf-2*xc*xf+a2) - a3*(vf-vp) - a4*(vf*vf - 2*vp*vf + vp*vp) - a5*(vf*vf - vc*vf + a6));
+			J = J*J;
+			double dJ_dv = 2*(-a3 - 2*a4*vf + a4*2*vp - a5*2*vf + a5*vc)*sqrt(J);
+			double dJ_dx = 2*(2*a1*xf - a1*2*xc)*sqrt(J);
+			vf = 1e-20 * -J/dJ_dv;
+			xf = 1e-20 * -J/dJ_dx;
+			std::cout << J <<std::endl;	
+		} while(J > 1e-6);
+	
+		
+		voltage.push_back(vf);
+		displacement.push_back(xf);
 		times.push_back(times.back() + TIMESTEP);
 
 		save_row();
@@ -125,12 +129,13 @@ int main(void) {
 }
 
 
+double inductance(double x) {
+		double reluctance = SOLENOID_LENGTH/MU_NOT/MU_R_CORE/SOLENOID_AREA + (SOLENOID_LENGTH - x)/MU_NOT/SOLENOID_AREA;
+		return	TURNS*TURNS/reluctance; 
+}
+
 void save_row() {
 	save_file << displacement.back() << ";";  // 1
-	save_file << velocity.back() << ";";      // 2
-	save_file << force.back() << ";";         // 3
-	save_file << voltage.back() << ";";       // 4
-	save_file << current.back() << ";";       // 5
-	save_file << flux.back() << ";";          // 6
-	save_file << times.back() << std::endl;   // 7
+	save_file << voltage.back() << ";";       // 2
+	save_file << times.back() << std::endl;   // 3
 }
