@@ -46,9 +46,17 @@ electronics/flyback/*.csv
 electronics/flyback/*.drl
 electronics/flyback/*.dsn
 electronics/flyback/*.erc
+electronics/flyback/*.gbl
+electronics/flyback/*.gbo
+electronics/flyback/*.gbr
+electronics/flyback/*.gbs
+electronics/flyback/*.gtl
+electronics/flyback/*.gto
+electronics/flyback/*.gts
 electronics/flyback/*.lst
 electronics/flyback/*.mvl
 electronics/flyback/*.net
+electronics/flyback/*.oln
 electronics/flyback/*.pho
 electronics/flyback/*.ses
 electronics/flyback/*.stf
