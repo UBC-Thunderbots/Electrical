@@ -112,16 +112,8 @@ electronics/motorcontroller/controller5.sch -text
 electronics/motorcontroller/motorcontroller.brd -text
 electronics/motorcontroller/motorcontroller.pro -text
 electronics/motorcontroller/motorcontroller.sch -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-Back.gbl -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-Front.gtl -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-Mask_Back.gbs -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-Mask_Front.gts -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-PCB_Edges.gbr -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-SilkS_Back.gbo -text
-electronics/motorcontroller_test_board/motorcontroller_test_board-SilkS_Front.gto -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.brd -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.cmp -text
-electronics/motorcontroller_test_board/motorcontroller_test_board.drl -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.net -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.pro -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.sch -text
