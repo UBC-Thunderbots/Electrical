@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-09-26T17:16:14 PDT
+EESchema Schematic File Version 2  date 2010-09-27T23:58:16 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "26 sep 2010"
+Date "28 sep 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -682,7 +682,7 @@ U 1 1 4C54F757
 P 9050 1500
 F 0 "P2" V 9000 1500 60  0000 C CNN
 F 1 "CONN_6" V 9100 1500 60  0000 C CNN
-F 2 "PIN_ARRAY-6X1" H 9050 1500 60  0001 C CNN
+F 2 "ICSP" H 9050 1500 60  0001 C CNN
 F 4 "(Made from Breakaway)" H 9050 1500 60  0001 C CNN "Digikey Part"
 	1    9050 1500
 	1    0    0    -1  
