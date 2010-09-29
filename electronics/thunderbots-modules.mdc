@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2010-09-28T00:00:24 PDT
+PCBNEW-LibDoc----V1  9/29/2010 9:15:30 AM
 #
 $MODULE D2
 Li D2
@@ -103,6 +103,12 @@ $MODULE EC16
 Li EC16
 Cd Connecteur 8 pins
 Kw CONN DEV
+$EndMODULE
+#
+$MODULE LED-5MM-fixed
+Li LED-5MM-fixed
+Cd LED 5mm - Lead pitch 100mil (2,54mm)
+Kw LED led 5mm 5MM 100mil 2,54mm
 $EndMODULE
 #
 $EndLIBDOC
