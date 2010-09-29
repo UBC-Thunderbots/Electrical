@@ -108,5 +108,4 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=C:\\thunderbots\\electronics\\thunderbots-modules
-LibName12=/home/cyberfish/thunderbots/electronics/thunderbots-modules
+LibName11=../thunderbots-modules
