@@ -1,4 +1,4 @@
-update=Sat 25 Sep 2010 12:44:35 PM PDT
+update=9/29/2010 9:19:29 AM
 last_client=pcbnew
 [general]
 version=1
@@ -76,14 +76,10 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-PadDrlX=420
-PadDimH=800
-PadDimV=800
+PadDrlX=320
+PadDimH=660
+PadDimV=660
 BoardThickness=630
-RouteTo=15
-RouteBo=0
-Segm45=1
-Racc45=1
 SgPcb45=1
 TxtPcbV=800
 TxtPcbH=600
@@ -95,7 +91,7 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-WpenSer=10
+LastNetListRead=motorcontroller_test_board.net
 [pcbnew/libraries]
 LibDir=
 LibName1=sockets
