@@ -35,6 +35,7 @@ electronics/dongle/*.mvl
 electronics/dongle/*.net
 electronics/dongle/*.oln
 electronics/dongle/*.stf
+electronics/dongle/*.zip
 electronics/flyback/$savepcb.*
 electronics/flyback/*-cache.lib
 electronics/flyback/*.000
@@ -60,6 +61,7 @@ electronics/flyback/*.oln
 electronics/flyback/*.pho
 electronics/flyback/*.ses
 electronics/flyback/*.stf
+electronics/flyback/*.zip
 electronics/logic/$savepcb.*
 electronics/logic/*.000
 electronics/logic/*.bak
@@ -116,6 +118,7 @@ electronics/motorcontroller_test_board/*.mvl
 electronics/motorcontroller_test_board/*.net
 electronics/motorcontroller_test_board/*.oln
 electronics/motorcontroller_test_board/*.stf
+electronics/motorcontroller_test_board/*.zip
 vhdl/*.bgn
 vhdl/*.bit
 vhdl/*.bld
