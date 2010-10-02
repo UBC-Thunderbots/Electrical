@@ -1,10 +1,15 @@
-update=9/29/2010 9:19:29 AM
+update=2010-10-02T14:01:47 PDT
 last_client=pcbnew
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
-LibDir=
+LibDir=../../electronics
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -68,18 +73,17 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=../thunderbots-symbols
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName31=thunderbots-symbols
 [pcbnew]
 version=1
 PadDrlX=320
 PadDimH=660
 PadDimV=660
 BoardThickness=630
+RouteTo=15
+RouteBo=0
+Segm45=1
+Racc45=1
 SgPcb45=1
 TxtPcbV=800
 TxtPcbH=600
@@ -91,9 +95,9 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=motorcontroller_test_board.net
+WpenSer=10
 [pcbnew/libraries]
-LibDir=
+LibDir=../../electronics
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -104,4 +108,4 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=../thunderbots-modules
+LibName11=thunderbots-modules
