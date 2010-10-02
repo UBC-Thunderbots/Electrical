@@ -74,6 +74,8 @@ electronics/boostconverter/boostconverter.sch -text
 electronics/dongle/dongle.brd -text
 electronics/dongle/dongle.pro -text
 electronics/dongle/dongle.sch -text
+electronics/estop/estop.pro -text
+electronics/estop/estop.sch -text
 electronics/flyback/flyback.brd -text
 electronics/flyback/flyback.pro -text
 electronics/flyback/flyback.sch -text
