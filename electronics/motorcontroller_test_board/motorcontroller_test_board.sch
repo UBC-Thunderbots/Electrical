@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 29 Sep 2010 11:41:16 PM PDT
+EESchema Schematic File Version 2  date Sat 09 Oct 2010 01:14:12 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,7 +35,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "30 sep 2010"
+Date "9 oct 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -551,9 +551,9 @@ $EndComp
 Text Label 5000 1850 0    60   ~ 0
 hall2
 Text Label 5000 1750 0    60   ~ 0
-hall1
-Text Label 5000 1950 0    60   ~ 0
 hall3
+Text Label 5000 1950 0    60   ~ 0
+hall1
 $Comp
 L GND #PWR014
 U 1 1 4C96DF7D
@@ -579,7 +579,7 @@ P 1200 1550
 F 0 "RV1" H 1200 1450 50  0000 C CNN
 F 1 "POT" H 1200 1550 50  0000 C CNN
 F 4 "3362P-203TLF-ND" H 1200 1550 60  0001 C CNN "Field1"
-F 5 "POT 20K OHM 1/4" SQ CERM SL ST" H 1200 1550 60  0001 C CNN "Field2"
+F 5 "POT 20K OHM 1/4" H 1200 1550 60  0001 C CNN " H 1200 1550 60  0001 C CNN "
 	1    1200 1550
 	0    1    1    0   
 $EndComp
@@ -787,9 +787,9 @@ $EndComp
 Text Label 10250 3450 2    60   ~ 0
 hall2
 Text Label 10250 3350 2    60   ~ 0
-hall1
-Text Label 10250 3550 2    60   ~ 0
 hall3
+Text Label 10250 3550 2    60   ~ 0
+hall1
 $Comp
 L GND #PWR024
 U 1 1 4C9548DD
