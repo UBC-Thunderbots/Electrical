@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Sun 26 Sep 2010 04:08:54 PM PDT
+EESchema-DOCLIB  Version 2.0  Date: 2010-10-23T17:50:37 PDT
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -36,6 +36,11 @@ $ENDCMP
 #
 $CMP MCP1827S-1202E/AB
 D Linear Regulator +1.2V
+K POWER REGUL
+$ENDCMP
+#
+$CMP OKI-78SR-5
+D Switching Regulator +5V
 K POWER REGUL
 $ENDCMP
 #
