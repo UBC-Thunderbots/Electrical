@@ -37,6 +37,7 @@ datasheets/ics/PIC18F65J50/Datasheet.pdf -text svneol=unset#application/octet-st
 datasheets/ics/PIC18F65J50/Errata.pdf -text
 datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
+datasheets/ics/TC4469[!!-~]Quad[!!-~]FET[!!-~]Driver.pdf -text
 datasheets/ics/TL072.pdf -text
 datasheets/ics/W25X16AVDAIZ.pdf -text
 datasheets/ics/XBee.pdf -text
@@ -47,6 +48,7 @@ datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
 datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
 datasheets/igbts/FGA180N33AT.pdf -text
 datasheets/mosfets/2N7000.pdf -text
+datasheets/mosfets/AO4616.pdf -text
 datasheets/mosfets/AOP605.pdf -text
 datasheets/mosfets/IRF5305.pdf -text
 datasheets/mosfets/IRFP90N20D.pdf -text
