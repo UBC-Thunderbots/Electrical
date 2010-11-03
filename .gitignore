@@ -14,6 +14,7 @@ electronics/boostconverter/*.mvl
 electronics/boostconverter/*.pho
 electronics/boostconverter/*.ses
 electronics/boostconverter/*.stf
+electronics/digibom/digibom
 electronics/dongle/$savepcb.*
 electronics/dongle/*-cache.*
 electronics/dongle/*.000
