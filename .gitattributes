@@ -39,6 +39,7 @@ datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
 datasheets/ics/TC4469[!!-~]Quad[!!-~]FET[!!-~]Driver.pdf -text
 datasheets/ics/TL072.pdf -text
+datasheets/ics/W25Q16BV.pdf -text
 datasheets/ics/W25X16AVDAIZ.pdf -text
 datasheets/ics/XBee.pdf -text
 datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Configuration[!!-~]User[!!-~]Guide.pdf -text
@@ -68,6 +69,7 @@ datasheets/regulators/LD1117V33C.pdf -text
 datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
+datasheets/regulators/V78XX-1000.pdf -text
 electronics/adc.txt -text
 electronics/block[!!-~]diagram.fig -text
 electronics/boostconverter/18FPIC.sch -text
