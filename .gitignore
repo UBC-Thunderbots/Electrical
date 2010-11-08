@@ -86,11 +86,10 @@ electronics/flyback/*.ses
 electronics/flyback/*.stf
 electronics/flyback/*.zip
 electronics/main/$savepcb.*
+electronics/main/*-cache.*
 electronics/main/*.000
 electronics/main/*.bak
 electronics/main/*.bck
-electronics/main/*.cache.*
-electronics/main/*.cmp
 electronics/main/*.drl
 electronics/main/*.erc
 electronics/main/*.lst
