@@ -82,6 +82,16 @@
 			<price>0.08000</price>
 		</part>
 
+		<!-- Resistors, through-hole -->
+		<part id="560EBK-ND">
+			<description>RES 560 OHM 1/6W 5% CARBON FILM</description>
+			<price>0.07600</price>
+		</part>
+		<part id="2.2KEBK-ND">
+			<description>RES 2.2K OHM 1/6W 5% CARBON FILM</description>
+			<price>0.07600</price>
+		</part>
+
 		<!-- Capacitors, general purpose 25V or 50V -->
 		<part id="490-1664-1-ND">
 			<description>CAP CER 10000PF 50V 10% X7R 0805</description>
@@ -155,6 +165,10 @@
 			<description>CONN HEADER 2POS RTANG .250 TIN</description>
 			<price>1.58000</price>
 		</part>
+		<part id="CP1-3513-ND">
+			<description>CONN JACK STEREO R/A 3PIN 3.5MM</description>
+			<price>0.83000</price>
+		</part>
 		<part id="H11671CT-ND">
 			<description>CONN RCPT USB MINI B R/A SMD</description>
 			<price>1.07000</price>
@@ -170,6 +184,12 @@
 		<part id="WM7971CT-ND">
 			<description>CONN FFC/FPC 11POS 1MM R/A SMD</description>
 			<price>2.34000</price>
+		</part>
+
+		<!-- Switches and Buttons -->
+		<part id="EG4815-ND">
+			<description>SWITCH TOGGLE SPST 20A SCREW</description>
+			<price>3.04000</price>
 		</part>
 	</parts>
 
