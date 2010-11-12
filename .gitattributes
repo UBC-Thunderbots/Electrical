@@ -94,6 +94,7 @@ electronics/main/chicker.sch -text
 electronics/main/dribblerconn.sch -text
 electronics/main/flash.sch -text
 electronics/main/fpga.sch -text
+electronics/main/main.brd -text
 electronics/main/main.cmp -text
 electronics/main/main.pro -text
 electronics/main/main.sch -text

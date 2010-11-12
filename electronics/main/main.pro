@@ -1,5 +1,5 @@
-update=2010-10-23T13:35:57 PDT
-last_client=eeschema
+update=Thu 11 Nov 2010 06:44:40 PM PST
+last_client=kicad
 [pcbnew]
 version=1
 PadDrlX=320
@@ -72,13 +72,9 @@ version=1
 NetIExt=.net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
-RootSch=
-BoardNm=
 [eeschema]
 version=1
-LibDir=../../electronics
+LibDir=../
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -140,3 +136,5 @@ LibName25=siliconi
 LibName26=contrib
 LibName27=valves
 LibName28=thunderbots-symbols
+[general]
+version=1
