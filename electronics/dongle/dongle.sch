@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-09-27T23:58:16 PDT
+EESchema Schematic File Version 2  date 2010-11-13T15:49:56 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "28 sep 2010"
+Date "13 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +44,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L LD1117V33C U4
+U 1 1 4CDF23F9
+P 1400 4750
+F 0 "U4" H 1550 4554 60  0000 C CNN
+F 1 "LD1117V33C" H 1400 4950 60  0000 C CNN
+F 2 "TO220_VERT" H 1450 4454 60  0001 C CNN
+	1    1400 4750
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	5650 5950 5650 5900
 Wire Wire Line
@@ -440,16 +450,6 @@ P 1400 5050
 F 0 "#PWR05" H 1400 5050 30  0001 C CNN
 F 1 "GND" H 1400 4980 30  0001 C CNN
 	1    1400 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L LD1117V33C U4
-U 1 1 4C9FCF81
-P 1400 4750
-F 0 "U4" H 1550 4554 60  0000 C CNN
-F 1 "LD1117V33C" H 1400 4950 60  0000 C CNN
-F 2 "TO220_VERT" H 1450 4454 60  0001 C CNN
-	1    1400 4750
 	1    0    0    -1  
 $EndComp
 $Comp
