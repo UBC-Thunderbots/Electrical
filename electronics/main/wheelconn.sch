@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-11-07T15:42:34 PST
+EESchema Schematic File Version 2  date Sat 13 Nov 2010 05:21:52 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 6 18
+Sheet 3 18
 Title ""
-Date "7 nov 2010"
+Date "14 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -110,7 +109,7 @@ AR Path="/4CD73053/4CD730A5" Ref="#PWR09"  Part="1"
 AR Path="/4CD73188/4CD730A5" Ref="#PWR03"  Part="1" 
 AR Path="/4CD7317F/4CD730A5" Ref="#PWR05"  Part="1" 
 AR Path="/4CD73172/4CD730A5" Ref="#PWR07"  Part="1" 
-F 0 "#PWR09" H 6450 3450 30  0001 C CNN
+F 0 "#PWR05" H 6450 3450 30  0001 C CNN
 F 1 "GND" H 6450 3380 30  0001 C CNN
 	1    6450 3450
 	0    1    1    0   
@@ -123,7 +122,7 @@ AR Path="/4CD73053/4CD73087" Ref="#PWR010"  Part="1"
 AR Path="/4CD73188/4CD73087" Ref="#PWR04"  Part="1" 
 AR Path="/4CD7317F/4CD73087" Ref="#PWR06"  Part="1" 
 AR Path="/4CD73172/4CD73087" Ref="#PWR08"  Part="1" 
-F 0 "#PWR010" H 6450 3140 20  0001 C CNN
+F 0 "#PWR06" H 6450 3140 20  0001 C CNN
 F 1 "+5V" H 6450 3140 30  0000 C CNN
 	1    6450 3050
 	0    -1   -1   0   
@@ -136,7 +135,7 @@ AR Path="/4CD73053/4CD73060" Ref="P10"  Part="1"
 AR Path="/4CD73188/4CD73060" Ref="P13"  Part="1" 
 AR Path="/4CD7317F/4CD73060" Ref="P12"  Part="1" 
 AR Path="/4CD73172/4CD73060" Ref="P11"  Part="1" 
-F 0 "P10" V 6800 3550 60  0000 C CNN
+F 0 "P12" V 6800 3550 60  0000 C CNN
 F 1 "CONN_11" V 6900 3550 60  0000 C CNN
 F 2 "FPC" H 6850 3550 60  0001 C CNN
 F 4 "WM7971CT-ND" H 6850 3550 60  0001 C CNN "Field1"

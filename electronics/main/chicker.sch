@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-11-07T15:42:34 PST
+EESchema Schematic File Version 2  date Sat 13 Nov 2010 05:21:52 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 15 18
 Title ""
-Date "7 nov 2010"
+Date "14 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -118,10 +117,10 @@ Wire Wire Line
 Wire Wire Line
 	8450 3800 8350 3800
 $Comp
-L GND #PWR090
+L GND #PWR091
 U 1 1 4CC4F450
 P 8400 3400
-F 0 "#PWR090" H 8400 3400 30  0001 C CNN
+F 0 "#PWR091" H 8400 3400 30  0001 C CNN
 F 1 "GND" H 8400 3330 30  0001 C CNN
 	1    8400 3400
 	0    -1   -1   0   
@@ -143,28 +142,28 @@ Text HLabel 7450 3500 0    60   Input ~ 0
 Text HLabel 8450 3500 2    60   Input ~ 0
 CLK
 $Comp
-L +3.3V #PWR091
+L +3.3V #PWR092
 U 1 1 4CC361B6
 P 7500 3400
-F 0 "#PWR091" H 7500 3360 30  0001 C CNN
+F 0 "#PWR092" H 7500 3360 30  0001 C CNN
 F 1 "+3.3V" H 7500 3510 30  0000 C CNN
 	1    7500 3400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR092
+L +BATT #PWR093
 U 1 1 4CC3600A
 P 4150 3350
-F 0 "#PWR092" H 4150 3300 20  0001 C CNN
+F 0 "#PWR093" H 4150 3300 20  0001 C CNN
 F 1 "+BATT" H 4150 3450 30  0000 C CNN
 	1    4150 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR093
+L GND #PWR094
 U 1 1 4CC36003
 P 3250 4250
-F 0 "#PWR093" H 3250 4250 30  0001 C CNN
+F 0 "#PWR094" H 3250 4250 30  0001 C CNN
 F 1 "GND" H 3250 4180 30  0001 C CNN
 	1    3250 4250
 	1    0    0    -1  

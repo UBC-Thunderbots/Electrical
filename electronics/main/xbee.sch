@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-11-07T15:42:34 PST
+EESchema Schematic File Version 2  date Sat 13 Nov 2010 05:21:52 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 16 18
 Title ""
-Date "7 nov 2010"
+Date "14 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -100,10 +99,10 @@ NoConn ~ 4550 5400
 NoConn ~ 4550 5500
 NoConn ~ 4550 5600
 $Comp
-L GND #PWR094
+L GND #PWR095
 U 1 1 4CC4753A
 P 4200 5800
-F 0 "#PWR094" H 4200 5800 30  0001 C CNN
+F 0 "#PWR095" H 4200 5800 30  0001 C CNN
 F 1 "GND" H 4200 5730 30  0001 C CNN
 	1    4200 5800
 	0    1    1    0   
@@ -119,10 +118,10 @@ Text HLabel 7800 5300 2    60   Input ~ 0
 Text HLabel 4200 5300 0    60   Input ~ 0
 /RESET2
 $Comp
-L +3.3V #PWR095
+L +3.3V #PWR096
 U 1 1 4CC47539
 P 4200 4900
-F 0 "#PWR095" H 4200 4860 30  0001 C CNN
+F 0 "#PWR096" H 4200 4860 30  0001 C CNN
 F 1 "+3.3V" H 4200 5010 30  0000 C CNN
 	1    4200 4900
 	0    -1   -1   0   
@@ -132,10 +131,10 @@ NoConn ~ 7150 4900
 NoConn ~ 7150 2700
 NoConn ~ 7150 2800
 $Comp
-L +3.3V #PWR096
+L +3.3V #PWR097
 U 1 1 4CC3843E
 P 4200 2700
-F 0 "#PWR096" H 4200 2660 30  0001 C CNN
+F 0 "#PWR097" H 4200 2660 30  0001 C CNN
 F 1 "+3.3V" H 4200 2810 30  0000 C CNN
 	1    4200 2700
 	0    -1   -1   0   
@@ -151,10 +150,10 @@ NoConn ~ 7150 3300
 NoConn ~ 7150 3400
 NoConn ~ 7150 3600
 $Comp
-L GND #PWR097
+L GND #PWR098
 U 1 1 4ABE98E5
 P 4200 3600
-F 0 "#PWR097" H 4200 3600 30  0001 C CNN
+F 0 "#PWR098" H 4200 3600 30  0001 C CNN
 F 1 "GND" H 4200 3530 30  0001 C CNN
 	1    4200 3600
 	0    1    1    0   
