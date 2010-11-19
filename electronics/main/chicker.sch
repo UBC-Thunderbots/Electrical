@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 13 Nov 2010 05:21:52 PM PST
+EESchema Schematic File Version 2  date Wed 17 Nov 2010 09:51:49 AM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 15 18
 Title ""
-Date "14 nov 2010"
+Date "17 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -40,6 +40,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7200 3900 7550 3900
 Wire Wire Line
 	8400 3400 8350 3400
 Wire Wire Line
@@ -116,6 +118,15 @@ Wire Wire Line
 	8350 3700 8450 3700
 Wire Wire Line
 	8450 3800 8350 3800
+$Comp
+L +BATT #PWR?
+U 1 1 4CE41623
+P 7200 3900
+F 0 "#PWR?" H 7200 3850 20  0001 C CNN
+F 1 "+BATT" H 7200 4000 30  0000 C CNN
+	1    7200 3900
+	0    -1   -1   0   
+$EndComp
 $Comp
 L GND #PWR091
 U 1 1 4CC4F450
