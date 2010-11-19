@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 17 Nov 2010 09:51:49 AM PST
+EESchema Schematic File Version 2  date Thu 18 Nov 2010 06:27:45 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,12 +27,13 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 12 18
 Title ""
-Date "17 nov 2010"
+Date "19 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -40,6 +41,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	5650 1800 5650 2450
 Connection ~ 9050 1900
 Wire Wire Line
 	8950 1900 9050 1900
@@ -807,6 +810,12 @@ Connection ~ 9050 2250
 Wire Wire Line
 	8950 1550 9050 1550
 Connection ~ 9050 1550
+Wire Wire Line
+	5500 1800 5500 2450
+Text HLabel 5500 1800 1    60   Input ~ 0
+DCM_Reset
+Text HLabel 5650 1800 1    60   Output ~ 0
+DCM_Locked
 $Comp
 L GND #PWR056
 U 1 1 4CDF34B5

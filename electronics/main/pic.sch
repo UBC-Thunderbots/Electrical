@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 17 Nov 2010 09:51:49 AM PST
+EESchema Schematic File Version 2  date Thu 18 Nov 2010 06:27:45 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,12 +27,13 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 17 18
 Title ""
-Date "17 nov 2010"
+Date "19 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -40,6 +41,28 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	4450 4450 3300 4450
+Wire Wire Line
+	3300 4450 3300 4150
+Wire Wire Line
+	3300 4150 2700 4150
+Wire Wire Line
+	2700 4150 2700 3950
+Wire Wire Line
+	2700 3950 2500 3950
+Wire Wire Line
+	4300 6550 4300 6850
+Wire Wire Line
+	4300 6850 4350 6850
+Wire Wire Line
+	3850 6850 3850 6950
+Wire Wire Line
+	3850 6950 4750 6950
+Wire Wire Line
+	6100 6800 5750 6800
+Wire Wire Line
+	4100 4850 4450 4850
 Connection ~ 9400 2600
 Wire Wire Line
 	9350 2600 9400 2600
@@ -60,14 +83,6 @@ Wire Wire Line
 	8700 3650 8050 3650
 Wire Wire Line
 	6500 5900 6500 6150
-Wire Wire Line
-	6000 5900 6000 6700
-Wire Wire Line
-	6000 6700 5700 6700
-Wire Wire Line
-	4750 6950 4700 6950
-Wire Wire Line
-	4700 6950 4700 6850
 Wire Wire Line
 	6050 1350 5800 1350
 Wire Wire Line
@@ -243,10 +258,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 6600 5900 5900
 Wire Wire Line
-	5700 6800 6100 6800
-Wire Wire Line
-	6100 6800 6100 5900
-Wire Wire Line
 	8050 3750 8850 3750
 Wire Wire Line
 	8850 3750 8850 3700
@@ -265,6 +276,70 @@ Wire Wire Line
 Wire Wire Line
 	9350 2900 9400 2900
 Connection ~ 9400 2900
+Wire Wire Line
+	8400 2050 8100 2050
+Wire Wire Line
+	8100 2050 8100 3350
+Wire Wire Line
+	8100 3350 8050 3350
+Wire Wire Line
+	3750 4100 4150 4100
+Wire Wire Line
+	4150 4100 4150 4050
+Wire Wire Line
+	4150 4050 4450 4050
+Wire Wire Line
+	5750 6700 6000 6700
+Wire Wire Line
+	6000 6700 6000 5900
+Wire Wire Line
+	4850 6850 6100 6850
+Wire Wire Line
+	6100 6850 6100 5900
+Connection ~ 6100 6800
+Wire Wire Line
+	2500 4050 2650 4050
+Wire Wire Line
+	2650 4050 2650 4200
+Wire Wire Line
+	2650 4200 3250 4200
+Wire Wire Line
+	3250 4200 3250 4500
+Wire Wire Line
+	3250 4500 4300 4500
+Wire Wire Line
+	4300 4500 4300 4550
+Wire Wire Line
+	4300 4550 4450 4550
+Text HLabel 2500 4050 0    60   Output ~ 0
+DCM_Reset
+Text HLabel 2500 3950 0    60   Input ~ 0
+DCM_Locked
+$Comp
+L +3.3V #PWR?
+U 1 1 4CE5D669
+P 4300 6550
+F 0 "#PWR?" H 4300 6510 30  0001 C CNN
+F 1 "+3.3V" H 4300 6660 30  0000 C CNN
+	1    4300 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 4CE5D65E
+P 4600 6850
+F 0 "R?" V 4680 6850 50  0000 C CNN
+F 1 "1.5kR" V 4600 6850 50  0000 C CNN
+F 4 "RNCP0805FTD1K50CT-ND" H 4600 6850 60  0001 C CNN "Digikey Part"
+	1    4600 6850
+	0    1    1    0   
+$EndComp
+Text HLabel 5750 6800 0    60   Input ~ 0
+Thermistor_In
+Text HLabel 5750 6700 0    60   Input ~ 0
+Breakbeam_in
+Text HLabel 8400 2050 2    60   Output ~ 0
+Breakbeam_drive
 $Comp
 L GND #PWR099
 U 1 1 4CDF379B
@@ -414,7 +489,7 @@ F 1 "100nF" H 6150 7300 50  0000 L CNN
 $EndComp
 Text HLabel 6050 1450 2    60   Output ~ 0
 XBEE2_SLEEP
-Text HLabel 5700 6800 0    60   Output ~ 0
+Text HLabel 4100 4850 0    60   Output ~ 0
 XBEE1_SLEEP
 $Comp
 L GND #PWR0104
@@ -428,10 +503,10 @@ $EndComp
 $Comp
 L +BATT #PWR0105
 U 1 1 4CC527C9
-P 4700 6850
-F 0 "#PWR0105" H 4700 6800 20  0001 C CNN
-F 1 "+BATT" H 4700 6950 30  0000 C CNN
-	1    4700 6850
+P 3850 6850
+F 0 "#PWR0105" H 3850 6800 20  0001 C CNN
+F 1 "+BATT" H 3850 6950 30  0000 C CNN
+	1    3850 6850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -471,7 +546,7 @@ Text HLabel 6050 1350 2    60   Output ~ 0
 /XBEE2_RTS
 Text HLabel 5700 6600 0    60   Input ~ 0
 /XBEE1_CTS
-Text HLabel 5700 6700 0    60   Output ~ 0
+Text HLabel 3750 4100 0    60   Output ~ 0
 /XBEE1_RTS
 Text HLabel 8350 4250 2    60   Input ~ 0
 OSC

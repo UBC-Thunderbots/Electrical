@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 17 Nov 2010 09:51:49 AM PST
+EESchema Schematic File Version 2  date Thu 18 Nov 2010 06:27:45 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,12 +27,13 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 14 18
 Title ""
-Date "17 nov 2010"
+Date "19 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
