@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  Sat 20 Nov 2010 12:33:38 PM PST
+PCBNEW-LibDoc----V1  Sat 20 Nov 2010 03:06:53 PM PST
 #
 $MODULE D2
 Li D2
@@ -109,6 +109,12 @@ $MODULE LED-5MM-fixed
 Li LED-5MM-fixed
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
+$EndMODULE
+#
+$MODULE SIL-16
+Li SIL-16
+Cd Connecteur 15 pins
+Kw CONN DEV
 $EndMODULE
 #
 $EndLIBDOC
