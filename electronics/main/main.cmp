@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 13 Nov 2010 05:14:45 PM PST
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 20 Nov 2010 12:34:25 PM PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -341,6 +341,13 @@ TimeStamp = /4CD73194/4CD731E0;
 Reference = P14;
 ValeurCmp = CONN_8;
 IdModule  = DRIBBLERCONN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE5DFE0;
+Reference = P15;
+ValeurCmp = CONN_6;
+IdModule  = WM7624CT-ND;
 EndCmp
 
 BeginCmp
@@ -753,6 +760,13 @@ BeginCmp
 TimeStamp = /4AD90413/4CDF3666;
 Reference = R44;
 ValeurCmp = 56R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD90413/4CE5D65E;
+Reference = R45;
+ValeurCmp = 1.5kR;
 IdModule  = SM0805;
 EndCmp
 

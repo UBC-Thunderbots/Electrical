@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 18 Nov 2010 06:27:45 PM PST
+EESchema Schematic File Version 2  date Sat 20 Nov 2010 12:37:30 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 13 18
 Title ""
-Date "19 nov 2010"
+Date "20 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -54,19 +54,19 @@ Wire Wire Line
 Wire Wire Line
 	4450 4300 4450 4250
 $Comp
-L GND #PWR083
+L GND #PWR085
 U 1 1 4CC50E98
 P 4450 4300
-F 0 "#PWR083" H 4450 4300 30  0001 C CNN
+F 0 "#PWR085" H 4450 4300 30  0001 C CNN
 F 1 "GND" H 4450 4230 30  0001 C CNN
 	1    4450 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR084
+L +3.3V #PWR086
 U 1 1 4CC50E96
 P 4450 3800
-F 0 "#PWR084" H 4450 3760 30  0001 C CNN
+F 0 "#PWR086" H 4450 3760 30  0001 C CNN
 F 1 "+3.3V" H 4450 3910 30  0000 C CNN
 	1    4450 3800
 	1    0    0    -1  
@@ -82,10 +82,10 @@ F 4 "" H 4450 4050 60  0001 C CNN "Digikey Part"
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR085
+L +3.3V #PWR087
 U 1 1 4CC50DFE
 P 5150 3900
-F 0 "#PWR085" H 5150 3860 30  0001 C CNN
+F 0 "#PWR087" H 5150 3860 30  0001 C CNN
 F 1 "+3.3V" H 5150 4010 30  0000 C CNN
 	1    5150 3900
 	0    -1   -1   0   
@@ -93,19 +93,19 @@ $EndComp
 Text HLabel 5150 4100 0    60   Output ~ 0
 OSC
 $Comp
-L +3.3V #PWR086
+L +3.3V #PWR088
 U 1 1 4CC50DEA
 P 5150 4200
-F 0 "#PWR086" H 5150 4160 30  0001 C CNN
+F 0 "#PWR088" H 5150 4160 30  0001 C CNN
 F 1 "+3.3V" H 5150 4310 30  0000 C CNN
 	1    5150 4200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR087
+L GND #PWR089
 U 1 1 4CC50DE7
 P 5150 4000
-F 0 "#PWR087" H 5150 4000 30  0001 C CNN
+F 0 "#PWR089" H 5150 4000 30  0001 C CNN
 F 1 "GND" H 5150 3930 30  0001 C CNN
 	1    5150 4000
 	0    1    1    0   

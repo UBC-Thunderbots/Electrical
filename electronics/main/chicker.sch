@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 18 Nov 2010 06:27:45 PM PST
+EESchema Schematic File Version 2  date Sat 20 Nov 2010 12:37:30 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 15 18
 Title ""
-Date "19 nov 2010"
+Date "20 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -41,8 +41,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	7200 3900 7550 3900
 Wire Wire Line
 	8400 3400 8350 3400
 Wire Wire Line
@@ -120,19 +118,10 @@ Wire Wire Line
 Wire Wire Line
 	8450 3800 8350 3800
 $Comp
-L +BATT #PWR?
-U 1 1 4CE41623
-P 7200 3900
-F 0 "#PWR?" H 7200 3850 20  0001 C CNN
-F 1 "+BATT" H 7200 4000 30  0000 C CNN
-	1    7200 3900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR091
+L GND #PWR093
 U 1 1 4CC4F450
 P 8400 3400
-F 0 "#PWR091" H 8400 3400 30  0001 C CNN
+F 0 "#PWR093" H 8400 3400 30  0001 C CNN
 F 1 "GND" H 8400 3330 30  0001 C CNN
 	1    8400 3400
 	0    -1   -1   0   
@@ -154,28 +143,28 @@ Text HLabel 7450 3500 0    60   Input ~ 0
 Text HLabel 8450 3500 2    60   Input ~ 0
 CLK
 $Comp
-L +3.3V #PWR092
+L +3.3V #PWR094
 U 1 1 4CC361B6
 P 7500 3400
-F 0 "#PWR092" H 7500 3360 30  0001 C CNN
+F 0 "#PWR094" H 7500 3360 30  0001 C CNN
 F 1 "+3.3V" H 7500 3510 30  0000 C CNN
 	1    7500 3400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR093
+L +BATT #PWR095
 U 1 1 4CC3600A
 P 4150 3350
-F 0 "#PWR093" H 4150 3300 20  0001 C CNN
+F 0 "#PWR095" H 4150 3300 20  0001 C CNN
 F 1 "+BATT" H 4150 3450 30  0000 C CNN
 	1    4150 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR094
+L GND #PWR096
 U 1 1 4CC36003
 P 3250 4250
-F 0 "#PWR094" H 3250 4250 30  0001 C CNN
+F 0 "#PWR096" H 3250 4250 30  0001 C CNN
 F 1 "GND" H 3250 4180 30  0001 C CNN
 	1    3250 4250
 	1    0    0    -1  

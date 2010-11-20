@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 18 Nov 2010 06:27:45 PM PST
+EESchema Schematic File Version 2  date Sat 20 Nov 2010 12:37:30 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 2 18
 Title ""
-Date "19 nov 2010"
+Date "20 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -82,29 +82,29 @@ Entry Wire Line
 Entry Wire Line
 	4800 3400 4900 3500
 $Comp
-L GND #PWR01
+L GND #PWR03
 U 1 1 4CD7321A
 P 5350 3900
-F 0 "#PWR01" H 5350 3900 30  0001 C CNN
+F 0 "#PWR03" H 5350 3900 30  0001 C CNN
 F 1 "GND" H 5350 3830 30  0001 C CNN
 	1    5350 3900
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR02
+L +5V #PWR04
 U 1 1 4CD73217
 P 5350 3800
-F 0 "#PWR02" H 5350 3890 20  0001 C CNN
+F 0 "#PWR04" H 5350 3890 20  0001 C CNN
 F 1 "+5V" H 5350 3890 30  0000 C CNN
 	1    5350 3800
 	0    -1   -1   0   
 $EndComp
 Text Label 4900 4200 0    60   ~ 0
-SENSOR3
+HALL3
 Text Label 4900 4100 0    60   ~ 0
-SENSOR2
+HALL2
 Text Label 4900 4000 0    60   ~ 0
-SENSOR1
+HALL1
 Text Label 4900 3700 0    60   ~ 0
 PHASE3
 Text Label 4900 3600 0    60   ~ 0
