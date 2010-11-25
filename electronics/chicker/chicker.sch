@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 20 Nov 2010 04:56:28 PM PST
+EESchema Schematic File Version 2  date 11/24/2010 6:03:28 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,12 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-EELAYER 43  0
+LIBS:chicker-cache
+EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "21 nov 2010"
+Date "25 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,7 +45,34 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	3950 1100 3950 1050
+	4100 1500 3950 1500
+Connection ~ 7850 5650
+Wire Wire Line
+	7650 5650 7850 5650
+Wire Wire Line
+	8150 5950 7850 5950
+Wire Wire Line
+	3950 5950 3950 5300
+Wire Wire Line
+	3950 5950 3650 5950
+Wire Wire Line
+	3600 1300 4100 1300
+Wire Wire Line
+	4100 1750 3600 1750
+Wire Wire Line
+	1650 6250 1450 6250
+Wire Wire Line
+	7200 6250 7500 6250
+Wire Wire Line
+	3050 6250 3300 6250
+Wire Wire Line
+	5350 4900 5450 4900
+Connection ~ 8000 6450
+Wire Wire Line
+	8000 6450 8000 6550
+Connection ~ 3800 6450
+Wire Wire Line
+	3800 6450 3800 6550
 Wire Wire Line
 	3950 2000 3950 1950
 Wire Wire Line
@@ -58,12 +86,6 @@ Wire Wire Line
 	1100 3500 1250 3500
 Wire Wire Line
 	750  950  750  1850
-Wire Wire Line
-	3950 1750 4100 1750
-Wire Wire Line
-	3950 1300 4100 1300
-Wire Wire Line
-	3950 850  4100 850 
 Wire Wire Line
 	3450 1350 3450 1400
 Wire Wire Line
@@ -117,10 +139,6 @@ Wire Wire Line
 Wire Wire Line
 	2950 1050 2850 1050
 Wire Wire Line
-	3950 1050 4100 1050
-Wire Wire Line
-	4100 1500 3950 1500
-Wire Wire Line
 	3950 1950 4100 1950
 Connection ~ 1550 950 
 Wire Wire Line
@@ -130,9 +148,190 @@ Wire Wire Line
 Wire Wire Line
 	3850 3700 3850 3800
 Wire Wire Line
-	3700 3200 3850 3200
+	3650 6450 3950 6450
 Wire Wire Line
-	3950 1500 3950 1550
+	7850 6450 8150 6450
+Wire Wire Line
+	4200 3200 3700 3200
+Connection ~ 3850 3200
+Wire Wire Line
+	4400 4900 4500 4900
+Wire Wire Line
+	4300 6250 4300 6700
+Wire Wire Line
+	4300 6700 3300 6700
+Wire Wire Line
+	3300 6700 3300 6250
+Wire Wire Line
+	7500 6250 7500 6750
+Wire Wire Line
+	7500 6750 8500 6750
+Wire Wire Line
+	8500 6750 8500 6250
+Wire Wire Line
+	5600 6250 5800 6250
+Wire Wire Line
+	3600 1750 3600 850 
+Wire Wire Line
+	3600 850  4100 850 
+Connection ~ 3600 1300
+Wire Wire Line
+	3950 5300 5750 5300
+Connection ~ 4800 5300
+Wire Wire Line
+	4800 4500 7850 4500
+Wire Wire Line
+	7850 4500 7850 5950
+Connection ~ 5750 4500
+Wire Wire Line
+	3750 5650 3950 5650
+Connection ~ 3950 5650
+Wire Wire Line
+	3950 1050 4100 1050
+Text Label 3950 1500 2    60   ~ 0
+KICK-
+Text Label 7650 5650 2    60   ~ 0
+KICK-
+Text Label 3750 5650 2    60   ~ 0
+CHIP-
+Text Label 5600 6250 2    60   ~ 0
+KICK-
+Text Label 1450 6250 2    60   ~ 0
+CHIP-
+$Comp
+L GND #PWR?
+U 1 1 4CEDC077
+P 6500 6850
+F 0 "#PWR?" H 6500 6850 30  0001 C CNN
+F 1 "GND" H 6500 6780 30  0001 C CNN
+	1    6500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4CEDC076
+P 2350 6850
+F 0 "#PWR?" H 2350 6850 30  0001 C CNN
+F 1 "GND" H 2350 6780 30  0001 C CNN
+	1    2350 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR?
+U 1 1 4CEDC06F
+P 6500 5650
+F 0 "#PWR?" H 6500 5600 20  0001 C CNN
+F 1 "+BATT" H 6500 5750 30  0000 C CNN
+	1    6500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR?
+U 1 1 4CEDC06C
+P 2350 5650
+F 0 "#PWR?" H 2350 5600 20  0001 C CNN
+F 1 "+BATT" H 2350 5750 30  0000 C CNN
+	1    2350 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1416 U?
+U 1 1 4CEDC048
+P 6500 6250
+F 0 "U?" H 6500 6200 60  0000 C CNN
+F 1 "MCP1416" H 6500 6300 60  0000 C CNN
+	1    6500 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1416 U?
+U 1 1 4CEDC042
+P 2350 6250
+F 0 "U?" H 2350 6200 60  0000 C CNN
+F 1 "MCP1416" H 2350 6300 60  0000 C CNN
+	1    2350 6250
+	1    0    0    -1  
+$EndComp
+Text Label 4400 4900 2    60   ~ 0
+CAP+
+Text Label 5350 4900 2    60   ~ 0
+CAP+
+Text Label 4200 3200 0    60   ~ 0
+CAP+
+$Comp
+L GND #PWR?
+U 1 1 4CEDBFD3
+P 8000 6550
+F 0 "#PWR?" H 8000 6550 30  0001 C CNN
+F 1 "GND" H 8000 6480 30  0001 C CNN
+	1    8000 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4CEDBFD0
+P 3800 6550
+F 0 "#PWR?" H 3800 6550 30  0001 C CNN
+F 1 "GND" H 3800 6480 30  0001 C CNN
+	1    3800 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L IGBT_N Q?
+U 1 1 4CEDBF99
+P 8250 6200
+F 0 "Q?" H 8400 6200 50  0000 C CNN
+F 1 "IGBT_N" H 8100 6350 50  0000 C CNN
+	1    8250 6200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L IGBT_N Q?
+U 1 1 4CEDBF96
+P 7750 6200
+F 0 "Q?" H 7900 6200 50  0000 C CNN
+F 1 "IGBT_N" H 7600 6350 50  0000 C CNN
+	1    7750 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L IGBT_N Q?
+U 1 1 4CEDBF93
+P 4050 6200
+F 0 "Q?" H 4200 6200 50  0000 C CNN
+F 1 "IGBT_N" H 3900 6350 50  0000 C CNN
+	1    4050 6200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L DPG60C300HB D?
+U 1 1 4CEDBF8B
+P 5750 4900
+F 0 "D?" H 6200 4800 60  0000 C CNN
+F 1 "DPG60C300HB" H 6200 5000 60  0000 C CNN
+F 2 "TO247" H 6100 4700 60  0000 C CNN
+	1    5750 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L DPG60C300HB D?
+U 1 1 4CEDBF85
+P 4800 4900
+F 0 "D?" H 5250 4800 60  0000 C CNN
+F 1 "DPG60C300HB" H 5250 5000 60  0000 C CNN
+F 2 "TO247" H 5150 4700 60  0000 C CNN
+	1    4800 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L IGBT_N Q?
+U 1 1 4CEDBD14
+P 3550 6200
+F 0 "Q?" H 3700 6200 50  0000 C CNN
+F 1 "IGBT_N" H 3400 6350 50  0000 C CNN
+	1    3550 6200
+	1    0    0    -1  
+$EndComp
 $Comp
 L GND #PWR?
 U 1 1 4CE86E2E
@@ -140,24 +339,6 @@ P 3950 2000
 F 0 "#PWR?" H 3950 2000 30  0001 C CNN
 F 1 "GND" H 3950 1930 30  0001 C CNN
 	1    3950 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 4CE86E2C
-P 3950 1550
-F 0 "#PWR?" H 3950 1550 30  0001 C CNN
-F 1 "GND" H 3950 1480 30  0001 C CNN
-	1    3950 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 4CE86E2A
-P 3950 1100
-F 0 "#PWR?" H 3950 1100 30  0001 C CNN
-F 1 "GND" H 3950 1030 30  0001 C CNN
-	1    3950 1100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -274,8 +455,6 @@ Text Label 3950 1050 2    60   ~ 0
 CHIP-
 Text Label 3950 850  2    60   ~ 0
 CHIP+
-Text Label 3950 1500 2    60   ~ 0
-KICK-
 Text Label 3950 1300 2    60   ~ 0
 KICK+
 Text Label 3950 1950 2    60   ~ 0
