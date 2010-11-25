@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Sat 20 Nov 2010 04:49:16 PM PST
+EESchema-DOCLIB  Version 2.0  Date: 11/24/2010 8:16:01 PM
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -19,7 +19,6 @@ F transistors/mos/*.*
 $ENDCMP
 #
 $CMP BAT54JW
-D Diode schottky ×2
 K DEV DIODE
 $ENDCMP
 #
