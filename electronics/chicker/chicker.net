@@ -1,50 +1,304 @@
-# EESchema Netlist Version 1.1 created  Sat 20 Nov 2010 04:38:00 PM PST
+# EESchema Netlist Version 1.1 created  11/25/2010 12:43:03 AM
 (
- ( /4CE869A3 SIL-18 P1 CONN_9X2
-  ( 1 GND )
-  ( 2 +BATT )
-  ( 3 GND )
-  ( 4 +BATT )
-  ( 5 GND )
-  ( 6 +BATT )
-  ( 7 GND )
-  ( 8 +BATT )
-  ( 9 GND )
-  ( 10 +BATT )
-  ( 11 GND )
-  ( 12 +BATT )
-  ( 13 GND )
-  ( 14 +BATT )
-  ( 15 GND )
-  ( 16 +BATT )
-  ( 17 GND )
-  ( 18 +BATT )
+ ( /4CEDE442 $noname  C5 0.1uF {Lib=C}
+  (    1 +BATT )
+  (    2 GND )
  )
- ( /4CE85D0A SIL-12 P2 CONN_6X2
-  ( 1 +3.3V )
-  ( 2 GND )
-  ( 3 ? )
-  ( 4 ? )
-  ( 5 ? )
-  ( 6 ? )
-  ( 7 ? )
-  ( 8 ? )
-  ( 9 ? )
-  ( 10 +3.3V )
-  ( 11 +BATT )
-  ( 12 ? )
+ ( /4CEDE42C $noname  C2 0.1uF {Lib=C}
+  (    1 +BATT )
+  (    2 GND )
  )
- ( /4CE85E9F SIL-2 P3 CONN_2
-  ( 1 ? )
-  ( 2 ? )
+ ( /4CEDE409 $noname  C4 0.1uF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
  )
- ( /4CE85EA2 SIL-2 P4 CONN_2
-  ( 1 ? )
-  ( 2 ? )
+ ( /4CEDE3F8 $noname  C3 10uF {Lib=CP}
+  (    1 +3.3V )
+  (    2 GND )
  )
- ( /4CE85EA5 SIL-2 P5 CONN_2
-  ( 1 ? )
-  ( 2 ? )
+ ( /4CEDE3E6 $noname  C1 0.1uF {Lib=C}
+  (    1 +BATT )
+  (    2 GND )
+ )
+ ( /4CEDE351 $noname  U3 ADC121S021 {Lib=ADC121S021}
+  (    1 +3.3V )
+  (    2 GND )
+  (    3 N-000017 )
+  (    4 /CLK )
+  (    5 /MISO )
+  (    6 /~CS )
+ )
+ ( /4CEDC048 $noname  U4 MCP1416 {Lib=MCP1416}
+  (    2 +BATT )
+  (    3 /KICK )
+  (    4 GND )
+  (    5 N-000002 )
+ )
+ ( /4CEDC042 $noname  U2 MCP1416 {Lib=MCP1416}
+  (    2 +BATT )
+  (    3 /CHIP )
+  (    4 GND )
+  (    5 N-000007 )
+ )
+ ( /4CEDBF99 $noname  Q5 IGBT_N {Lib=IGBT_N}
+  (    C /KICK- )
+  (    E GND )
+  (    G N-000002 )
+ )
+ ( /4CEDBF96 $noname  Q4 IGBT_N {Lib=IGBT_N}
+  (    C /KICK- )
+  (    E GND )
+  (    G N-000002 )
+ )
+ ( /4CEDBF93 $noname  Q3 IGBT_N {Lib=IGBT_N}
+  (    C /CHIP- )
+  (    E GND )
+  (    G N-000007 )
+ )
+ ( /4CEDBF8B TO247  D3 DPG60C300HB {Lib=DPG60C300HB}
+  (    1 /KICK- )
+  (    2 /CAP+ )
+  (    3 /CHIP- )
+ )
+ ( /4CEDBF85 TO247  D2 DPG60C300HB {Lib=DPG60C300HB}
+  (    1 /KICK- )
+  (    2 /CAP+ )
+  (    3 /CHIP- )
+ )
+ ( /4CEDBD14 $noname  Q2 IGBT_N {Lib=IGBT_N}
+  (    C /CHIP- )
+  (    E GND )
+  (    G N-000007 )
+ )
+ ( /4CE86DF9 $noname  R2 2.2KR {Lib=R}
+  (    1 N-000017 )
+  (    2 GND )
+ )
+ ( /4CE86DF3 $noname  R1 220KR {Lib=R}
+  (    1 /CAP+ )
+  (    2 N-000017 )
+ )
+ ( /4CE86DE7 $noname  D1 DIODE {Lib=DIODE}
+  (    1 N-000004 )
+  (    2 /CAP+ )
+ )
+ ( /4CE86DAF $noname  L1 22uH {Lib=INDUCTOR}
+  (    1 +BATT )
+  (    2 N-000004 )
+ )
+ ( /4CE86D82 $noname  Q1 MOS_N {Lib=MOS_N}
+  (    D N-000004 )
+  (    G N-000015 )
+  (    S GND )
+ )
+ ( /4CE86CEC $noname  U1 MCP1415 {Lib=MCP1415}
+  (    2 +BATT )
+  (    3 /~CHARGE )
+  (    4 GND )
+  (    5 N-000015 )
+ )
+ ( /4CE869A3 $noname  P1 CONN_9X2 {Lib=CONN_9X2}
+  (    1 GND )
+  (    2 +BATT )
+  (    3 GND )
+  (    4 +BATT )
+  (    5 GND )
+  (    6 +BATT )
+  (    7 GND )
+  (    8 +BATT )
+  (    9 GND )
+  (   10 +BATT )
+  (   11 GND )
+  (   12 +BATT )
+  (   13 GND )
+  (   14 +BATT )
+  (   15 GND )
+  (   16 +BATT )
+  (   17 GND )
+  (   18 +BATT )
+ )
+ ( /4CE85EA5 $noname  P5 CONN_2 {Lib=CONN_2}
+  (    1 /CAP+ )
+  (    2 GND )
+ )
+ ( /4CE85EA2 $noname  P4 CONN_2 {Lib=CONN_2}
+  (    1 /CAP+ )
+  (    2 /KICK- )
+ )
+ ( /4CE85E9F $noname  P3 CONN_2 {Lib=CONN_2}
+  (    1 /CAP+ )
+  (    2 /CHIP- )
+ )
+ ( /4CE85D0A $noname  P2 CONN_6X2 {Lib=CONN_6X2}
+  (    1 +3.3V )
+  (    2 /~CS )
+  (    3 /CLK )
+  (    4 GND )
+  (    5 GND )
+  (    6 /MISO )
+  (    7 /~CHARGE )
+  (    8 /KICK )
+  (    9 /CHIP )
+  (   10 +3.3V )
+  (   11 +BATT )
+  (   12 ? )
  )
 )
 *
+{ Allowed footprints by component:
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "GND" "GND"
+ P1 5
+ P1 7
+ P1 9
+ P1 11
+ P1 13
+ P1 15
+ P1 17
+ C3 2
+ Q1 S
+ U1 4
+ P1 1
+ P1 3
+ P2 5
+ P2 4
+ P5 2
+ C2 2
+ C4 2
+ C1 2
+ U3 2
+ Q2 E
+ C5 2
+ U2 4
+ R2 2
+ Q5 E
+ Q3 E
+ U4 4
+ Q4 E
+Net 2 "" ""
+ Q5 G
+ Q4 G
+ U4 5
+Net 3 "+BATT" "+BATT"
+ P1 12
+ P1 6
+ P1 8
+ P1 10
+ P1 4
+ P1 14
+ P1 16
+ C2 1
+ L1 1
+ C5 1
+ C1 1
+ P2 11
+ P1 2
+ U1 2
+ U4 2
+ U2 2
+ P1 18
+Net 4 "" ""
+ L1 2
+ Q1 D
+ D1 1
+Net 5 "/CAP+" "CAP+"
+ R1 1
+ P3 1
+ D1 2
+ D2 2
+ P5 1
+ P4 1
+ D3 2
+Net 6 "/~CS" "~CS"
+ U3 6
+ P2 2
+Net 7 "" ""
+ Q3 G
+ Q2 G
+ U2 5
+Net 8 "/CHIP" "CHIP"
+ P2 9
+ U2 3
+Net 9 "/KICK" "KICK"
+ U4 3
+ P2 8
+Net 10 "/KICK-" "KICK-"
+ D3 1
+ Q5 C
+ D2 1
+ P4 2
+ Q4 C
+Net 11 "/~CHARGE" "~CHARGE"
+ U1 3
+ P2 7
+Net 12 "/CLK" "CLK"
+ U3 4
+ P2 3
+Net 13 "/MISO" "MISO"
+ P2 6
+ U3 5
+Net 15 "" ""
+ Q1 G
+ U1 5
+Net 16 "+3.3V" "+3.3V"
+ P2 1
+ P2 10
+ U3 1
+ C4 1
+ C3 1
+Net 17 "" ""
+ U3 3
+ R2 1
+ R1 2
+Net 18 "/CHIP-" "CHIP-"
+ Q3 C
+ D3 3
+ D2 3
+ Q2 C
+ P3 2
+}
+#End

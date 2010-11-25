@@ -1,4 +1,67 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 20 Nov 2010 04:38:00 PM PST
+Cmp-Mod V01 Created by CvPCB (2010-05-05 BZR 2356)-stable date = 11/24/2010 9:41:16 PM
+
+BeginCmp
+TimeStamp = /4CEDE3E6;
+Reference = C1;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDE42C;
+Reference = C2;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDE3F8;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDE409;
+Reference = C4;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDE442;
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE86DE7;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = D2PAK123;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDBF85;
+Reference = D2;
+ValeurCmp = DPG60C300HB;
+IdModule  = TO247;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDBF8B;
+Reference = D3;
+ValeurCmp = DPG60C300HB;
+IdModule  = TO247;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE86DAF;
+Reference = L1;
+ValeurCmp = 22uH;
+IdModule  = 22uH_INDUCTOR;
+EndCmp
 
 BeginCmp
 TimeStamp = /4CE869A3;
@@ -33,6 +96,83 @@ TimeStamp = /4CE85EA5;
 Reference = P5;
 ValeurCmp = CONN_2;
 IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE86D82;
+Reference = Q1;
+ValeurCmp = MOS_N;
+IdModule  = D2PAKGDS;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDBD14;
+Reference = Q2;
+ValeurCmp = IGBT_N;
+IdModule  = TO247GCE;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDBF93;
+Reference = Q3;
+ValeurCmp = IGBT_N;
+IdModule  = TO247GCE;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDBF96;
+Reference = Q4;
+ValeurCmp = IGBT_N;
+IdModule  = TO247GCE;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDBF99;
+Reference = Q5;
+ValeurCmp = IGBT_N;
+IdModule  = TO247GCE;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE86DF3;
+Reference = R1;
+ValeurCmp = 220KR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE86DF9;
+Reference = R2;
+ValeurCmp = 2.2KR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CE86CEC;
+Reference = U1;
+ValeurCmp = MCP1415;
+IdModule  = SOT23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDC042;
+Reference = U2;
+ValeurCmp = MCP1416;
+IdModule  = SOT23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDE351;
+Reference = U3;
+ValeurCmp = ADC121S021;
+IdModule  = SOT23_6_DRCHACK;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CEDC048;
+Reference = U4;
+ValeurCmp = MCP1416;
+IdModule  = SOT23-5;
 EndCmp
 
 EndListe
