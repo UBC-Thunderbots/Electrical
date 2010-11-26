@@ -59,6 +59,14 @@
 			<description>RES 47 OHM 1/4W 5% 0805 SMD</description>
 			<price>0.16600</price>
 		</part>
+		<part id="RMCF0805JT56R0CT-ND">
+			<description>RES TF 56 OHM 5% 0.125W 0805</description>
+			<price>0.03000</price>
+		</part>
+		<part id="RMCF0805JT82R0CT-ND">
+			<description>RES TF 82 OHM 5% 0.125W 0805</description>
+			<price>0.03000</price>
+		</part>
 		<part id="RMCF0805JT1K00CT-ND">
 			<description>RES 1K OHM 1/8W 5% 0805 SMD</description>
 			<price>0.04000</price>
@@ -123,6 +131,14 @@
 			<description>IC SPARTAN-3A FPGA 50K 144TQFP</description>
 			<price>8.19000</price>
 		</part>
+		<part id="160-1167-1-ND">
+			<description>LED RED CLEAR 1206 SMD</description>
+			<price>0.42000</price>
+		</part>
+		<part id="160-1169-1-ND">
+			<description>LED GREEN CLEAR 1206 SMD</description>
+			<price>0.55000</price>
+		</part>
 		<part id="497-1492-5-ND">
 			<description>IC REG LDO 3.3V 950MA TO220</description>
 			<price>0.80000</price>
@@ -181,6 +197,10 @@
 			<description>CONN HEADER 4POS 1.25MM R/A TIN</description>
 			<price>0.97000</price>
 		</part>
+		<part id="WM7624CT-ND">
+			<description>CONN HEADER 6POS 1.25MM R/A SMD</description>
+			<price>1.58000</price>
+		</part>
 		<part id="WM7971CT-ND">
 			<description>CONN FFC/FPC 11POS 1MM R/A SMD</description>
 			<price>2.34000</price>
@@ -225,6 +245,8 @@
 	-->
 	<defaults>
 		<default value="47R" part="RHM47KCT-ND" />
+		<default value="56R" part="RMCF0805JT56R0CT-ND" />
+		<default value="82R" part="RMCF0805JT82R0CT-ND" />
 		<default value="1kR" part="RMCF0805JT1K00CT-ND" />
 		<default value="10kR" part="RMCF0805JT10K0CT-ND" />
 		<default value="100kR" part="RMCF0805JT100KCT-ND" />
