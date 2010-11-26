@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/25/2010 12:29:41 AM
+EESchema Schematic File Version 2  date 11/25/2010 5:28:04 PM
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -30,9 +30,9 @@ LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 12 18
+Sheet 2 18
 Title ""
-Date "25 nov 2010"
+Date "26 nov 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -109,8 +109,6 @@ Wire Wire Line
 	7250 3350 7250 3450
 Wire Wire Line
 	7250 3450 7350 3450
-Wire Wire Line
-	7100 3250 7350 3250
 Wire Wire Line
 	1650 2500 1750 2500
 Wire Wire Line
@@ -1275,8 +1273,6 @@ Text HLabel 6600 2200 1    60   Output ~ 0
 CHICKER_CHARGE
 Text HLabel 7350 3100 2    60   Input ~ 0
 CHICKER_MISO
-Text HLabel 7350 3250 2    60   Output ~ 0
-CHICKER_MOSI
 Text HLabel 7350 3350 2    60   Output ~ 0
 CHICKER_CLK
 Text HLabel 7350 3450 2    60   Output ~ 0
