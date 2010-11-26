@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/25/2010 5:28:04 PM
+EESchema Schematic File Version 2  date 2010-11-26T00:16:14 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -313,6 +313,7 @@ U 1 1 4CE5DFE0
 P 1000 2800
 F 0 "P15" V 950 2800 60  0000 C CNN
 F 1 "CONN_6" V 1050 2800 60  0000 C CNN
+F 4 "WM7624CT-ND" H 1000 2800 60  0001 C CNN "Field1"
 	1    1000 2800
 	-1   0    0    1   
 $EndComp
