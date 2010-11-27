@@ -70,8 +70,6 @@ datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
 datasheets/regulators/V78XX-1000.pdf -text
-electronics/adc.txt -text
-electronics/block[!!-~]diagram.fig -text
 electronics/boostconverter/18FPIC.sch -text
 electronics/boostconverter/boostconverter.brd -text
 electronics/boostconverter/boostconverter.net -text
@@ -98,7 +96,6 @@ electronics/flyback/flyback.brd -text
 electronics/flyback/flyback.pro -text
 electronics/flyback/flyback.sch -text
 electronics/flyback/uC.sch -text
-electronics/gpios.txt -text
 electronics/main/chicker.sch -text
 electronics/main/dribblerconn.sch -text
 electronics/main/flash.sch -text
@@ -125,17 +122,6 @@ electronics/models/flyback/main.cpp -text
 electronics/models/solenoid/Makefile -text
 electronics/models/solenoid/main.cpp -text
 electronics/models/solenoid/plotter.m -text
-electronics/motorcontroller/Testing/TraceData.mat -text
-electronics/motorcontroller/connectors-misc.sch -text
-electronics/motorcontroller/connectors-motor.sch -text
-electronics/motorcontroller/controller1.sch -text
-electronics/motorcontroller/controller2.sch -text
-electronics/motorcontroller/controller3.sch -text
-electronics/motorcontroller/controller4.sch -text
-electronics/motorcontroller/controller5.sch -text
-electronics/motorcontroller/motorcontroller.brd -text
-electronics/motorcontroller/motorcontroller.pro -text
-electronics/motorcontroller/motorcontroller.sch -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.brd -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.cmp -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.net -text
