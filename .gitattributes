@@ -72,16 +72,10 @@ datasheets/regulators/PT78ST105.pdf -text
 datasheets/regulators/V78XX-1000.pdf -text
 electronics/boostconverter/18FPIC.sch -text
 electronics/boostconverter/boostconverter.brd -text
-electronics/boostconverter/boostconverter.net -text
 electronics/boostconverter/boostconverter.pro -text
 electronics/boostconverter/boostconverter.sch -text
-electronics/chicker/$savepcb.brd -text
-electronics/chicker/chicker-cache.bak -text
-electronics/chicker/chicker-cache.lib -text
-electronics/chicker/chicker.bak -text
 electronics/chicker/chicker.brd -text
 electronics/chicker/chicker.cmp -text
-electronics/chicker/chicker.net -text
 electronics/chicker/chicker.pro -text
 electronics/chicker/chicker.sch -text
 electronics/digibom/Makefile -text
@@ -124,10 +118,8 @@ electronics/models/solenoid/main.cpp -text
 electronics/models/solenoid/plotter.m -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.brd -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.cmp -text
-electronics/motorcontroller_test_board/motorcontroller_test_board.net -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.pro -text
 electronics/motorcontroller_test_board/motorcontroller_test_board.sch -text
-electronics/sensor/Sensor.net -text
 electronics/sensor/Sensor.pro -text
 electronics/sensor/Sensor.sch -text
 electronics/thunderbots-modules.mdc -text
