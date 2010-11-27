@@ -1,9 +1,9 @@
-Cmp-Mod V01 Created by CvPCB (2010-05-05 BZR 2356)-stable date = 9/29/2010 9:18:20 AM
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2010-11-27T12:11:52 PST
 
 BeginCmp
 TimeStamp = /4C9525F3;
 Reference = C1;
-ValeurCmp = 330uF;
+ValeurCmp = 100uF;
 IdModule  = C1V5;
 EndCmp
 
@@ -31,7 +31,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4C9524E2;
 Reference = C5;
-ValeurCmp = 330uF;
+ValeurCmp = 100uF;
 IdModule  = C1V5;
 EndCmp
 
@@ -66,7 +66,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4C952A15;
 Reference = C10;
-ValeurCmp = 1.0uF;
+ValeurCmp = 100uF;
 IdModule  = C1;
 EndCmp
 
@@ -351,35 +351,35 @@ IdModule  = TO220_VERT;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C9521C4;
+TimeStamp = /4CCC85B3;
 Reference = U4;
 ValeurCmp = TC4469;
 IdModule  = SO16W;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C9521D3;
+TimeStamp = /4CCC86DF;
 Reference = U5;
 ValeurCmp = TC4469;
 IdModule  = SO16W;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C9FC3BF;
+TimeStamp = /4CC7C718;
 Reference = U6;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C9FC3BC;
+TimeStamp = /4CC7C748;
 Reference = U7;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C9FC3BA;
+TimeStamp = /4CC7C783;
 Reference = U8;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
