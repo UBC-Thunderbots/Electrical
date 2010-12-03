@@ -2,10 +2,12 @@
 #include <cerrno>
 #include <cstddef>
 #include <cstring>
+#include <getopt.h>
 #include <iostream>
 #include <libgen.h>
 #include <locale>
 #include <queue>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 #include <unistd.h>
@@ -28,14 +30,39 @@ namespace std {
 }
 
 namespace {
+	unsigned int do_atoui(const char *str) {
+		char *endptr;
+		errno = 0;
+		unsigned long ul = strtoul(str, &endptr, 10);
+		if (errno) {
+			const char *msg = std::strerror(errno);
+			const std::string &msg_str = msg;
+			throw std::runtime_error(msg_str);
+		} else if (*endptr) {
+			std::ostringstream oss;
+			oss << "Error parsing integer, trailing text \"" << endptr << '"';
+			throw std::runtime_error(oss.str());
+		} else {
+			return static_cast<unsigned int>(ul);
+		}
+	}
+
+	unsigned int round_up(unsigned int x, unsigned int mod) {
+		if (x % mod) {
+			x += mod - (x % mod);
+		}
+		return x;
+	}
+
 	struct part_info {
 		Glib::ustring description;
 		Glib::ustring price;
+		unsigned int minqty;
 
 		part_info() {
 		}
 
-		part_info(const Glib::ustring &description, const Glib::ustring &price) : description(description), price(price) {
+		part_info(const Glib::ustring &description, const Glib::ustring &price, unsigned int minqty) : description(description), price(price), minqty(minqty) {
 		}
 	};
 
@@ -138,9 +165,54 @@ namespace {
 	}
 }
 
-int main(void) {
+#define OPT_VAL_IGNORE_MIN_QTY 256
+
+int main(int argc, char **argv) {
 	// Set to use the system's locale from environment variables.
 	std::locale::global(std::locale(""));
+
+	// Parse command-line options.
+	unsigned int qty = 1;
+	bool ignore_minqty = false;
+	{
+		bool help = false;
+		static const char SHORT_OPTIONS[] = "hq:";
+		static const option LONG_OPTIONS[] = {
+			{ "help", no_argument, 0, 'h' },
+			{ "quantity", required_argument, 0, 'q' },
+			{ "ignore-min-qty", no_argument, 0, OPT_VAL_IGNORE_MIN_QTY },
+			{ 0, 0, 0, 0 }
+		};
+		int ch;
+		while ((ch = getopt_long(argc, argv, SHORT_OPTIONS, LONG_OPTIONS, 0)) != -1) {
+			switch (ch) {
+				case 'h':
+					help = true;
+					break;
+
+				case 'q':
+					qty = do_atoui(optarg);
+					break;
+
+				case OPT_VAL_IGNORE_MIN_QTY:
+					ignore_minqty = true;
+					break;
+
+				default:
+					help = true;
+					break;
+			}
+		}
+
+		if (help) {
+			std::cerr << "Usage:\n" << argv[0] << " [options] < infile > outfile\n";
+			std::cerr << '\n';
+			std::cerr << "Options:\n";
+			std::cerr << "{-q|--quantity} N      Generates an order sheet for N copies of the board\n";
+			std::cerr << "--ignore-min-qty       Ignores the minimum order quantities (suitable for partial sheets that will be merged later)\n";
+			return 1;
+		}
+	}
 
 	// Parse the XML file into the hashtables.
 	{
@@ -163,10 +235,23 @@ int main(void) {
 				}
 				const Glib::ustring &description = get_only_child_element(part_elt, "description")->get_child_text()->get_content();
 				const Glib::ustring &price = get_only_child_element(part_elt, "price")->get_child_text()->get_content();
+				const Glib::ustring &minqty_str = part_elt->get_attribute_value("minqty");
+				if (minqty_str.empty()) {
+					throw std::runtime_error("attribute minqty of element part must be nonempty");
+				}
+				unsigned int minqty;
+				if (ignore_minqty) {
+					minqty = 1;
+				} else {
+					minqty = do_atoui(minqty_str.c_str());
+				}
+				if (!minqty) {
+					throw std::runtime_error("attribute minqty of element part must be nonzero");
+				}
 				if (parts.count(id)) {
 					throw std::runtime_error(Glib::ustring::compose("duplicate part \"%1\"", id));
 				}
-				parts[id] = part_info(description, price);
+				parts[id] = part_info(description, price, minqty);
 			}
 		}
 		{
@@ -281,7 +366,9 @@ int main(void) {
 	// Generate output.
 	for (typeof(quantities.begin()) i = quantities.begin(), iend = quantities.end(); i != iend; ++i) {
 		const part_info &pi = parts[i->first];
-		std::cout << pi.description << '\t' << i->first << "\thttp://search.digikey.com/scripts/DkSearch/dksus.dll?Detail&name=" << i->first << '\t' << i->second << '\t' << pi.price << '\n';
+		unsigned int req_qty = i->second * qty;
+		unsigned int order_qty = round_up(req_qty, pi.minqty);
+		std::cout << pi.description << '\t' << i->first << "\thttp://search.digikey.com/scripts/DkSearch/dksus.dll?Detail&name=" << i->first << '\t' << order_qty << '\t' << pi.price << '\n';
 	}
 
 	return 0;

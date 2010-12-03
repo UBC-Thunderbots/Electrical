@@ -3,7 +3,7 @@
 <!ELEMENT partinfo (parts,multiparts,defaults)>
 <!ELEMENT parts (part*)>
 <!ELEMENT part (description,price)>
-<!ATTLIST part id CDATA #REQUIRED>
+<!ATTLIST part id CDATA #REQUIRED minqty CDATA #REQUIRED>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT price (#PCDATA)>
 <!ELEMENT multiparts (multipart*)>
@@ -55,159 +55,159 @@
 	-->
 	<parts>
 		<!-- Resistors, general purpose 5% -->
-		<part id="RHM47KCT-ND">
+		<part id="RHM47KCT-ND" minqty="10">
 			<description>RES 47 OHM 1/4W 5% 0805 SMD</description>
 			<price>0.16600</price>
 		</part>
-		<part id="RMCF0805JT56R0CT-ND">
+		<part id="RMCF0805JT56R0CT-ND" minqty="1">
 			<description>RES TF 56 OHM 5% 0.125W 0805</description>
 			<price>0.03000</price>
 		</part>
-		<part id="RMCF0805JT82R0CT-ND">
+		<part id="RMCF0805JT82R0CT-ND" minqty="1">
 			<description>RES TF 82 OHM 5% 0.125W 0805</description>
 			<price>0.03000</price>
 		</part>
-		<part id="RMCF0805JT1K00CT-ND">
+		<part id="RMCF0805JT1K00CT-ND" minqty="1">
 			<description>RES 1K OHM 1/8W 5% 0805 SMD</description>
 			<price>0.04000</price>
 		</part>
-		<part id="RMCF0805JT10K0CT-ND">
+		<part id="RMCF0805JT10K0CT-ND" minqty="1">
 			<description>RES 10K OHM 1/8W 5% 0805 SMD</description>
 			<price>0.04000</price>
 		</part>
-		<part id="RMCF0805JT100KCT-ND">
+		<part id="RMCF0805JT100KCT-ND" minqty="1">
 			<description>RES 100K OHM 1/8W 5% 0805 SMD</description>
 			<price>0.04000</price>
 		</part>
 
 		<!-- Resistors, 1% -->
-		<part id="RHM330AECT-ND">
+		<part id="RHM330AECT-ND" minqty="10">
 			<description>RES 330 OHM 1/4W 1% 0805 SMD</description>
 			<price>0.26800</price>
 		</part>
-		<part id="RNCP0805FTD1K50CT-ND">
+		<part id="RNCP0805FTD1K50CT-ND" minqty="1">
 			<description>RES 1.5K OHM 1/4W 1% 0805 SMD</description>
 			<price>0.08000</price>
 		</part>
 
 		<!-- Resistors, through-hole -->
-		<part id="560EBK-ND">
+		<part id="560EBK-ND" minqty="5">
 			<description>RES 560 OHM 1/6W 5% CARBON FILM</description>
 			<price>0.07600</price>
 		</part>
-		<part id="2.2KEBK-ND">
+		<part id="2.2KEBK-ND" minqty="5">
 			<description>RES 2.2K OHM 1/6W 5% CARBON FILM</description>
 			<price>0.07600</price>
 		</part>
 
 		<!-- Capacitors, general purpose 25V or 50V -->
-		<part id="490-1664-1-ND">
+		<part id="490-1664-1-ND" minqty="10">
 			<description>CAP CER 10000PF 50V 10% X7R 0805</description>
 			<price>0.03100</price>
 		</part>
-		<part id="311-1361-1-ND">
+		<part id="311-1361-1-ND" minqty="10">
 			<description>CAP CERAMIC .1UF 50V Y5V 0805</description>
 			<price>0.03100</price>
 		</part>
-		<part id="445-3463-1-ND">
+		<part id="445-3463-1-ND" minqty="10">
 			<description>CAP CER 1.0UF 50V Y5V 0805</description>
 			<price>0.10900</price>
 		</part>
-		<part id="445-3469-1-ND">
+		<part id="445-3469-1-ND" minqty="10">
 			<description>CAP CER 10UF 25V Y5V 1206</description>
 			<price>0.37000</price>
 		</part>
-		<part id="P5182-ND">
+		<part id="P5182-ND" minqty="1">
 			<description>CAP 100UF 50V ALUM LYTIC RADIAL</description>
 			<price>0.36000</price>
 		</part>
 
 		<!-- Silicon and packaged units -->
-		<part id="102-1715-ND">
+		<part id="102-1715-ND" minqty="1">
 			<description>CONVERTER DC/DC REG 5V 1A</description>
 			<price>7.58000</price>
 		</part>
-		<part id="122-1541-ND">
+		<part id="122-1541-ND" minqty="1">
 			<description>IC SPARTAN-3A FPGA 50K 144TQFP</description>
 			<price>8.19000</price>
 		</part>
-		<part id="160-1167-1-ND">
+		<part id="160-1167-1-ND" minqty="1">
 			<description>LED RED CLEAR 1206 SMD</description>
 			<price>0.42000</price>
 		</part>
-		<part id="160-1169-1-ND">
+		<part id="160-1169-1-ND" minqty="1">
 			<description>LED GREEN CLEAR 1206 SMD</description>
 			<price>0.55000</price>
 		</part>
-		<part id="497-1492-5-ND">
+		<part id="497-1492-5-ND" minqty="1">
 			<description>IC REG LDO 3.3V 950MA TO220</description>
 			<price>0.80000</price>
 		</part>
-		<part id="631-1125-1-ND">
+		<part id="631-1125-1-ND" minqty="1">
 			<description>OSC 8.0000 MHZ 3.3V HCMOS SMT</description>
 			<price>2.02000</price>
 		</part>
-		<part id="785-1043-1-ND">
+		<part id="785-1043-1-ND" minqty="1">
 			<description>MOSFET N/P-CH COMPL 30V 8-SOIC</description>
 			<price>0.95000</price>
 		</part>
-		<part id="BAT54JW-FDICT-ND">
+		<part id="BAT54JW-FDICT-ND" minqty="1">
 			<description>DIODE SCHOTTKY ARRAY 30V SC70-6</description>
 			<price>0.61000</price>
 		</part>
-		<part id="MCP1827S-1202E/AB-ND">
+		<part id="MCP1827S-1202E/AB-ND" minqty="1">
 			<description>IC REG LDO 1.5A 1.2V TO-220-3</description>
 			<price>1.36000</price>
 		</part>
-		<part id="PIC18F65J50-I/PT-ND">
+		<part id="PIC18F65J50-I/PT-ND" minqty="1">
 			<description>IC PIC MCU FLASH 16KX16 64TQFP</description>
 			<price>4.49000</price>
 		</part>
-		<part id="TC4469COE-ND">
+		<part id="TC4469COE-ND" minqty="1">
 			<description>IC MOSFET DVR AND/INV 16SOIC</description>
 			<price>3.44000</price>
 		</part>
-		<part id="W25Q16BVSSIG-ND">
+		<part id="W25Q16BVSSIG-ND" minqty="1">
 			<description>IC SPI FLASH 16MBIT 8SOIC</description>
 			<price>2.80000</price>
 		</part>
-		<part id="XB24-AWI-001-ND">
+		<part id="XB24-AWI-001-ND" minqty="1">
 			<description>MODULE 802.15.4 1MW W/WIRE ANT</description>
 			<price>21.32000</price>
 		</part>
 
 		<!-- Connectors -->
-		<part id="A25213-ND">
+		<part id="A25213-ND" minqty="1">
 			<description>CONN HEADER 2POS RTANG .250 TIN</description>
 			<price>1.58000</price>
 		</part>
-		<part id="CP1-3513-ND">
+		<part id="CP1-3513-ND" minqty="1">
 			<description>CONN JACK STEREO R/A 3PIN 3.5MM</description>
 			<price>0.83000</price>
 		</part>
-		<part id="H11671CT-ND">
+		<part id="H11671CT-ND" minqty="1">
 			<description>CONN RCPT USB MINI B R/A SMD</description>
 			<price>1.07000</price>
 		</part>
-		<part id="S5751-10-ND">
+		<part id="S5751-10-ND" minqty="1">
 			<description>CONN RECEPT 2MM SINGLE STR 10POS</description>
 			<price>1.18000</price>
 		</part>
-		<part id="WM1744-ND">
+		<part id="WM1744-ND" minqty="1">
 			<description>CONN HEADER 4POS 1.25MM R/A TIN</description>
 			<price>0.97000</price>
 		</part>
-		<part id="WM7624CT-ND">
+		<part id="WM7624CT-ND" minqty="1">
 			<description>CONN HEADER 6POS 1.25MM R/A SMD</description>
 			<price>1.58000</price>
 		</part>
-		<part id="WM7971CT-ND">
+		<part id="WM7971CT-ND" minqty="1">
 			<description>CONN FFC/FPC 11POS 1MM R/A SMD</description>
 			<price>2.34000</price>
 		</part>
 
 		<!-- Switches and Buttons -->
-		<part id="EG4815-ND">
+		<part id="EG4815-ND" minqty="1">
 			<description>SWITCH TOGGLE SPST 20A SCREW</description>
 			<price>3.04000</price>
 		</part>
