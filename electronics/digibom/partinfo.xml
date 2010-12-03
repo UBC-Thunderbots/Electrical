@@ -131,6 +131,10 @@
 			<description>IC SPARTAN-3A FPGA 50K 144TQFP</description>
 			<price>8.19000</price>
 		</part>
+		<part id="122-1555-ND" minqty="1">
+			<description>IC SPARTAN-3AN FPGA 50K 144TQFP</description>
+			<price>9.84000</price>
+		</part>
 		<part id="160-1167-1-ND" minqty="1">
 			<description>LED RED CLEAR 1206 SMD</description>
 			<price>0.42000</price>
@@ -266,6 +270,6 @@
 		<default value="V7805-1000" part="102-1715-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
 		<default value="XBEE" part="XBEE" />
-		<default value="XC3S50A-TQ144" part="122-1541-ND" />
+		<default value="XC3S50A-TQ144" part="122-1555-ND" />
 	</defaults>
 </partinfo>
