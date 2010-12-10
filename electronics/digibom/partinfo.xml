@@ -81,9 +81,17 @@
 		</part>
 
 		<!-- Resistors, 1% -->
+		<part id="541-2.20KTCT-ND" minqty="10">
+			<description>RES 2.20K OHM .33W 1% 0805 SMD</description>
+			<price>0.27000</price>
+		</part>
 		<part id="RHM330AECT-ND" minqty="10">
 			<description>RES 330 OHM 1/4W 1% 0805 SMD</description>
 			<price>0.26800</price>
+		</part>
+		<part id="RHM220KAECT-ND" minqty="10">
+			<description>RES 220K OHM 1/4W 1% 0805 SMD</description>
+			<price>0.22900</price>
 		</part>
 		<part id="RNCP0805FTD1K50CT-ND" minqty="1">
 			<description>RES 1.5K OHM 1/4W 1% 0805 SMD</description>
@@ -121,6 +129,10 @@
 			<description>CAP 100UF 50V ALUM LYTIC RADIAL</description>
 			<price>0.36000</price>
 		</part>
+		<part id="493-1065-ND" minqty="1">
+			<description>CAP 1000UF 25V ELECT VR RADIAL</description>
+			<price>0.63000</price>
+		</part>
 
 		<!-- Silicon and packaged units -->
 		<part id="102-1715-ND" minqty="1">
@@ -147,6 +159,14 @@
 			<description>IC REG LDO 3.3V 950MA TO220</description>
 			<price>0.80000</price>
 		</part>
+		<part id="497-5312-1-ND" minqty="1">
+			<description>MOSFET N-CH 550V 20A D2PAK</description>
+			<price>5.04000</price>
+		</part>
+		<part id="497-7575-1-ND" minqty="1">
+			<description>DIODE ULT FAST 400V 10A D2PAK</description>
+			<price>1.80000</price>
+		</part>
 		<part id="631-1125-1-ND" minqty="1">
 			<description>OSC 8.0000 MHZ 3.3V HCMOS SMT</description>
 			<price>2.02000</price>
@@ -155,9 +175,25 @@
 			<description>MOSFET N/P-CH COMPL 30V 8-SOIC</description>
 			<price>0.95000</price>
 		</part>
+		<part id="ADC121S021CIMFCT-ND" minqty="1">
+			<description>ADC 12BIT 1CH 50-200KSPS SOT23-6</description>
+			<price>3.30000</price>
+		</part>
 		<part id="BAT54JW-FDICT-ND" minqty="1">
 			<description>DIODE SCHOTTKY ARRAY 30V SC70-6</description>
 			<price>0.61000</price>
+		</part>
+		<part id="FGA180N33ATDTU-ND" minqty="1">
+			<description>IGBT PDP TRENCH 330V 180A TO-3P</description>
+			<price>3.94000</price>
+		</part>
+		<part id="MCP1415T-E/OTCT-ND" minqty="1">
+			<description>IC MOSFET DVR 1.5A HS TSOT23-5</description>
+			<price>0.77000</price>
+		</part>
+		<part id="MCP1416T-E/OTCT-ND" minqty="1">
+			<description>IC MOSFET DVR 1.5A HS TSOT23-5</description>
+			<price>0.77000</price>
 		</part>
 		<part id="MCP1827S-1202E/AB-ND" minqty="1">
 			<description>IC REG LDO 1.5A 1.2V TO-220-3</description>
@@ -166,6 +202,10 @@
 		<part id="PIC18F65J50-I/PT-ND" minqty="1">
 			<description>IC PIC MCU FLASH 16KX16 64TQFP</description>
 			<price>4.49000</price>
+		</part>
+		<part id="RURG3060CC-ND" minqty="1">
+			<description>DIODE UFAST DUAL 600V 30A TO-247</description>
+			<price>4.33000</price>
 		</part>
 		<part id="TC4469COE-ND" minqty="1">
 			<description>IC MOSFET DVR AND/INV 16SOIC</description>
@@ -201,6 +241,10 @@
 			<description>CONN HEADER 4POS 1.25MM R/A TIN</description>
 			<price>0.97000</price>
 		</part>
+		<part id="WM4300-ND" minqty="1">
+			<description>CONN HEADER 2POS .100 R/A TIN</description>
+			<price>0.50000</price>
+		</part>
 		<part id="WM7624CT-ND" minqty="1">
 			<description>CONN HEADER 6POS 1.25MM R/A SMD</description>
 			<price>1.58000</price>
@@ -231,6 +275,9 @@
 		<multipart id="dribbler-header" />
 		<multipart id="ICSP" />
 
+		<!-- Chicker boost regulator inductor is not ordered from Digikey. -->
+		<multipart id="chicker-charge-inductor" />
+
 		<!-- XBees require both the radio and two headers with the unusual pin spacing of 2mm. -->
 		<multipart id="XBEE">
 			<subpart>XB24-AWI-001-ND</subpart>
@@ -259,13 +306,17 @@
 		<default value="1uF" part="445-3463-1-ND" />
 		<default value="10uF" part="445-3469-1-ND" />
 		<default value="100uF" part="P5182-ND" />
+		<default value="ADC121S021" part="ADC121S021CIMFCT-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
 		<default value="BAT54JW" part="BAT54JW-FDICT-ND" />
 		<default value="FXO-HC73" part="631-1125-1-ND" />
 		<default value="ICSP" part="ICSP" />
 		<default value="LD1117V33C" part="497-1492-5-ND" />
+		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
+		<default value="MCP1416" part="MCP1416T-E/OTCT-ND" />
 		<default value="MCP1827S-1202E/AB" part="MCP1827S-1202E/AB-ND" />
 		<default value="PIC18F65J50" part="PIC18F65J50-I/PT-ND" />
+		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="V7805-1000" part="102-1715-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
