@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.6"
+    ComputedModelVersion    "1.19"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -44,9 +44,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "binaryblade"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sat Dec 18 20:46:28 2010"
+  LastModifiedDate	  "Sat Dec 18 22:07:45 2010"
   RTWModifiedTimeStamp	  0
-  ModelVersionFormat	  "1.%<AutoIncrement:6>"
+  ModelVersionFormat	  "1.%<AutoIncrement:19>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -104,7 +104,7 @@ Model {
 	  $ObjectID		  2
 	  Version		  "1.3.0"
 	  StartTime		  "0.0"
-	  StopTime		  "0.010"
+	  StopTime		  "0.03"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -136,7 +136,7 @@ Model {
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
 	  InitialState		  "xInitial"
-	  LimitDataPoints	  on
+	  LimitDataPoints	  off
 	  MaxDataPoints		  "1000"
 	  LoadExternalInput	  off
 	  LoadInitialState	  off
@@ -207,7 +207,7 @@ Model {
 	  ReadBeforeWriteMsg	  "UseLocalSettings"
 	  WriteAfterWriteMsg	  "UseLocalSettings"
 	  WriteAfterReadMsg	  "UseLocalSettings"
-	  AlgebraicLoopMsg	  "warning"
+	  AlgebraicLoopMsg	  "none"
 	  ArtificialAlgebraicLoopMsg "warning"
 	  SaveWithDisabledLinksMsg "warning"
 	  SaveWithParameterizedLinksMsg	"warning"
@@ -461,7 +461,7 @@ Model {
 	PropName		"Components"
       }
       Name		      "Configuration"
-      CurrentDlgPage	      "Solver"
+      CurrentDlgPage	      "Diagnostics"
     }
     PropName		    "ConfigurationSets"
   }
@@ -600,6 +600,14 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+    Block {
       BlockType		      Constant
       Value		      "1"
       VectorParams1D	      on
@@ -634,7 +642,7 @@ Model {
   }
   System {
     Name		    "solenoid"
-    Location		    [90, 188, 1638, 961]
+    Location		    [27, 142, 1656, 909]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -651,7 +659,7 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "1/2"
-      Position		      [910, 205, 940, 235]
+      Position		      [1090, 210, 1120, 240]
       Gain		      "0.5"
       ParameterDataTypeMode   "Inherit via internal rule"
       ParameterDataType	      "sfix(16)"
@@ -664,7 +672,7 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "1/C"
-      Position		      [355, 300, 385, 330]
+      Position		      [535, 305, 565, 335]
       Gain		      "1/(4e-3)"
       ParameterDataTypeMode   "Inherit via internal rule"
       ParameterDataType	      "sfix(16)"
@@ -677,7 +685,7 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "1/R"
-      Position		      [130, 155, 160, 185]
+      Position		      [310, 160, 340, 190]
       Orientation	      "left"
       Gain		      "1/0.5"
       ParameterDataTypeMode   "Inherit via internal rule"
@@ -692,7 +700,7 @@ Model {
       BlockType		      Sum
       Name		      "Add"
       Ports		      [2, 1]
-      Position		      [520, 307, 550, 338]
+      Position		      [700, 312, 730, 343]
       Inputs		      "-+"
       CollapseMode	      "All dimensions"
       InputSameDT	      off
@@ -705,7 +713,7 @@ Model {
       BlockType		      Sum
       Name		      "Add1"
       Ports		      [2, 1]
-      Position		      [590, 157, 620, 188]
+      Position		      [770, 162, 800, 193]
       Orientation	      "left"
       Inputs		      "-+"
       CollapseMode	      "All dimensions"
@@ -719,7 +727,7 @@ Model {
       BlockType		      Sum
       Name		      "Add2"
       Ports		      [2, 1]
-      Position		      [395, 152, 425, 183]
+      Position		      [575, 157, 605, 188]
       Orientation	      "left"
       Inputs		      "-+"
       CollapseMode	      "All dimensions"
@@ -730,13 +738,20 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      Fcn
+      Name		      "Ball From Plunger"
+      Position		      [1055, 385, 1115, 415]
+      Orientation	      "left"
+      Expr		      "(1.8)*u[2]*u[1]/(u[2] + 0.046)"
+    }
+    Block {
       BlockType		      Scope
       Name		      "Ball Velocity"
       Ports		      [1]
-      Position		      [795, 389, 825, 421]
+      Position		      [975, 394, 1005, 426]
       Orientation	      "left"
       Floating		      off
-      Location		      [526, 678, 1467, 1052]
+      Location		      [517, 471, 1458, 845]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -749,23 +764,9 @@ Model {
     }
     Block {
       BlockType		      Constant
-      Name		      "Constant"
-      Position		      [50, 330, 80, 360]
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant1"
-      Position		      [25, 25, 55, 55]
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-    }
-    Block {
-      BlockType		      Constant
       Name		      "Constant2"
-      Position		      [385, 370, 415, 400]
-      Value		      "220"
+      Position		      [565, 375, 595, 405]
+      Value		      "110"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
     }
@@ -773,9 +774,9 @@ Model {
       BlockType		      Scope
       Name		      "Current"
       Ports		      [1]
-      Position		      [160, 259, 190, 291]
+      Position		      [340, 264, 370, 296]
       Floating		      off
-      Location		      [85, 378, 1593, 870]
+      Location		      [140, 371, 1648, 863]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -788,65 +789,75 @@ Model {
     Block {
       BlockType		      Derivative
       Name		      "Derivative"
-      Position		      [550, 90, 580, 120]
+      Position		      [730, 95, 760, 125]
       Orientation	      "left"
     }
     Block {
-      BlockType		      Gain
-      Name		      "Gain"
-      Position		      [190, 27, 235, 63]
-      Gain		      "0.7"
-      ParameterDataTypeMode   "Inherit via internal rule"
-      ParameterDataType	      "sfix(16)"
-      ParameterScaling	      "2^0"
-      OutDataTypeMode	      "Inherit via internal rule"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-      SaturateOnIntegerOverflow	off
+      BlockType		      Fcn
+      Name		      "Diode Drop"
+      Position		      [330, 35, 390, 65]
+      Expr		      "(1-u[1])*0.7"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Duty Cycle"
+      Ports		      [1]
+      Position		      [350, 519, 380, 551]
+      Floating		      off
+      Location		      [352, 351, 1337, 829]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Duty Cycle Limiter"
+      Position		      [145, 310, 205, 340]
+      Expr		      "(tanh(2*u[1] -1)+1)/2;"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Duty Cycle Limiter1"
+      Position		      [600, 665, 660, 695]
+      Orientation	      "left"
+      Expr		      "(u[1]/0.035)^(1/1.5)+0.01"
     }
     Block {
       BlockType		      Integrator
       Name		      "Integrator"
       Ports		      [1, 1]
-      Position		      [420, 300, 450, 330]
+      Position		      [600, 305, 630, 335]
     }
     Block {
       BlockType		      Integrator
       Name		      "Integrator1"
       Ports		      [1, 1]
-      Position		      [1075, 215, 1105, 245]
+      Position		      [1255, 220, 1285, 250]
     }
     Block {
       BlockType		      Integrator
       Name		      "Integrator2"
       Ports		      [1, 1]
-      Position		      [1145, 215, 1175, 245]
+      Position		      [1325, 220, 1355, 250]
     }
     Block {
       BlockType		      Fcn
       Name		      "L"
-      Position		      [955, 80, 1015, 110]
+      Position		      [1135, 85, 1195, 115]
       Orientation	      "left"
       Expr		      "1.5e-3/(3.83 - 99*u[1])"
-    }
-    Block {
-      BlockType		      Fcn
-      Name		      "L1"
-      Position		      [875, 380, 935, 410]
-      Orientation	      "left"
-      Expr		      "(1.8)*u[2]*u[1]/(u[2] + 0.046)"
-    }
-    Block {
-      BlockType		      Fcn
-      Name		      "L2"
-      Position		      [1210, 215, 1270, 245]
-      Expr		      "0.0035 / pi * 2 * atan(u[1] * pi /2 / 0.0035);"
     }
     Block {
       BlockType		      Math
       Name		      "Math\nFunction"
       Ports		      [1, 1]
-      Position		      [725, 220, 755, 250]
+      Position		      [905, 225, 935, 255]
       Operator		      "square"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
@@ -855,7 +866,7 @@ Model {
       BlockType		      Mux
       Name		      "Mux"
       Ports		      [2, 1]
-      Position		      [975, 366, 980, 404]
+      Position		      [1155, 371, 1160, 409]
       Orientation	      "left"
       ShowName		      off
       Inputs		      "2"
@@ -865,7 +876,7 @@ Model {
       BlockType		      Scope
       Name		      "Plunger Position"
       Ports		      [1]
-      Position		      [1375, 144, 1405, 176]
+      Position		      [1555, 149, 1585, 181]
       Floating		      off
       Location		      [188, 390, 1208, 792]
       Open		      off
@@ -883,7 +894,7 @@ Model {
       BlockType		      Scope
       Name		      "Plunger Velocity"
       Ports		      [1]
-      Position		      [1250, 294, 1280, 326]
+      Position		      [1430, 299, 1460, 331]
       Floating		      off
       Location		      [371, 577, 1222, 974]
       Open		      off
@@ -899,16 +910,22 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "Plunger mass"
-      Position		      [845, 295, 875, 325]
+      Position		      [1025, 300, 1055, 330]
       Value		      "0.076"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
     }
     Block {
+      BlockType		      Fcn
+      Name		      "Position limiter"
+      Position		      [1390, 220, 1450, 250]
+      Expr		      "0.035 * tanh(u[1]  / 0.035);"
+    }
+    Block {
       BlockType		      Product
       Name		      "Product"
       Ports		      [2, 1]
-      Position		      [285, 297, 315, 328]
+      Position		      [465, 302, 495, 333]
       CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
@@ -920,7 +937,7 @@ Model {
       BlockType		      Product
       Name		      "Product1"
       Ports		      [2, 1]
-      Position		      [600, 317, 630, 348]
+      Position		      [780, 322, 810, 353]
       CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
@@ -932,7 +949,7 @@ Model {
       BlockType		      Product
       Name		      "Product2"
       Ports		      [2, 1]
-      Position		      [830, 212, 860, 243]
+      Position		      [1010, 217, 1040, 248]
       CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
@@ -944,7 +961,7 @@ Model {
       BlockType		      Product
       Name		      "Product3"
       Ports		      [2, 1]
-      Position		      [680, 87, 710, 118]
+      Position		      [860, 92, 890, 123]
       Orientation	      "left"
       CollapseMode	      "All dimensions"
       InputSameDT	      off
@@ -957,7 +974,7 @@ Model {
       BlockType		      Product
       Name		      "Product4"
       Ports		      [2, 1]
-      Position		      [1010, 212, 1040, 243]
+      Position		      [1190, 217, 1220, 248]
       Inputs		      "*/"
       CollapseMode	      "All dimensions"
       InputSameDT	      off
@@ -967,25 +984,67 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Sum
-      Name		      "Subtract"
-      Ports		      [2, 1]
-      Position		      [120, 27, 150, 58]
-      Inputs		      "+-"
-      CollapseMode	      "All dimensions"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^-10"
-      SaturateOnIntegerOverflow	off
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [1545, 200, 1605, 230]
+      VariableName	      "Position"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [1420, 365, 1480, 395]
+      VariableName	      "PlungerVel"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      Position		      [1065, 460, 1125, 490]
+      VariableName	      "BallVel"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      Position		      [320, 580, 380, 610]
+      VariableName	      "Dutycycle"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace4"
+      Position		      [655, 260, 715, 290]
+      Orientation	      "left"
+      VariableName	      "Voltage"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace5"
+      Position		      [425, 255, 485, 285]
+      VariableName	      "Current"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
     }
     Block {
       BlockType		      Scope
       Name		      "Voltage"
       Ports		      [1]
-      Position		      [605, 259, 635, 291]
+      Position		      [785, 264, 815, 296]
       Floating		      off
-      Location		      [299, 226, 1284, 704]
+      Location		      [352, 351, 1337, 829]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -999,44 +1058,9 @@ Model {
     Block {
       BlockType		      Fcn
       Name		      "dL_dx"
-      Position		      [955, 150, 1015, 180]
+      Position		      [1135, 155, 1195, 185]
       Orientation	      "left"
       Expr		      "99*1.5e-3/(3.83 - 99*u[1])^2"
-    }
-    Line {
-      SrcBlock		      "Constant1"
-      SrcPort		      1
-      Points		      [10, 0; 0, -5]
-      DstBlock		      "Subtract"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Constant"
-      SrcPort		      1
-      Points		      [0, -25]
-      Branch {
-	Points			[0, -270]
-	DstBlock		"Subtract"
-	DstPort			2
-      }
-      Branch {
-	Points			[160, 0]
-	Branch {
-	  DstBlock		  "Product"
-	  DstPort		  2
-	}
-	Branch {
-	  Points		  [0, 125; 320, 0; 0, -105]
-	  DstBlock		  "Product1"
-	  DstPort		  2
-	}
-      }
-    }
-    Line {
-      SrcBlock		      "Subtract"
-      SrcPort		      1
-      DstBlock		      "Gain"
-      DstPort		      1
     }
     Line {
       SrcBlock		      "Product"
@@ -1072,9 +1096,17 @@ Model {
 	DstPort			1
       }
       Branch {
-	Points			[0, -50]
-	DstBlock		"Voltage"
-	DstPort			1
+	Points			[0, -45]
+	Branch {
+	  Points		  [0, -5]
+	  DstBlock		  "Voltage"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -10]
+	  DstBlock		  "To Workspace4"
+	  DstPort		  1
+	}
       }
     }
     Line {
@@ -1085,9 +1117,9 @@ Model {
       DstPort		      2
     }
     Line {
-      SrcBlock		      "Gain"
+      SrcBlock		      "Diode Drop"
       SrcPort		      1
-      Points		      [415, 0; 0, 120]
+      Points		      [440, 0; 0, 120]
       DstBlock		      "Add1"
       DstPort		      1
     }
@@ -1120,15 +1152,23 @@ Model {
 	}
       }
       Branch {
-	Points			[575, 0]
+	Points			[110, 0]
 	Branch {
-	  DstBlock		  "Math\nFunction"
-	  DstPort		  1
+	  Points		  [465, 0]
+	  Branch {
+	    DstBlock		    "Math\nFunction"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -40; 70, 0; 0, -85]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
 	}
 	Branch {
-	  Points		  [0, -40; 70, 0; 0, -85]
-	  DstBlock		  "Product3"
-	  DstPort		  2
+	  Points		  [0, 30]
+	  DstBlock		  "To Workspace5"
+	  DstPort		  1
 	}
       }
     }
@@ -1174,9 +1214,16 @@ Model {
 	  DstPort		  1
 	}
 	Branch {
-	  Points		  [0, 5]
-	  DstBlock		  "Plunger Velocity"
-	  DstPort		  1
+	  Points		  [0, 5; 55, 0]
+	  Branch {
+	    DstBlock		    "Plunger Velocity"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
 	}
       }
     }
@@ -1215,17 +1262,24 @@ Model {
       }
     }
     Line {
-      SrcBlock		      "L1"
+      SrcBlock		      "Ball From Plunger"
       SrcPort		      1
-      Points		      [-15, 0; 0, 10]
-      DstBlock		      "Ball Velocity"
-      DstPort		      1
+      Points		      [-15, 0; 0, 10; -5, 0]
+      Branch {
+	DstBlock		"Ball Velocity"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 65]
+	DstBlock		"To Workspace2"
+	DstPort			1
+      }
     }
     Line {
       SrcBlock		      "Mux"
       SrcPort		      1
       Points		      [-10, 0; 0, 10]
-      DstBlock		      "L1"
+      DstBlock		      "Ball From Plunger"
       DstPort		      1
     }
     Line {
@@ -1237,29 +1291,88 @@ Model {
     Line {
       SrcBlock		      "Integrator2"
       SrcPort		      1
-      DstBlock		      "L2"
+      DstBlock		      "Position limiter"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "L2"
+      SrcBlock		      "Position limiter"
       SrcPort		      1
-      Points		      [40, 0; 0, -65]
+      Points		      [40, 0]
       Branch {
-	Points			[0, -5]
+	Points			[0, -20]
 	Branch {
-	  DstBlock		  "Plunger Position"
-	  DstPort		  1
+	  Points		  [0, -45]
+	  Branch {
+	    Points		    [0, -5]
+	    Branch {
+	      DstBlock		      "Plunger Position"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -65]
+	      DstBlock		      "L"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "dL_dx"
+	    DstPort		    1
+	  }
 	}
 	Branch {
-	  Points		  [0, -65]
-	  DstBlock		  "L"
+	  DstBlock		  "To Workspace"
 	  DstPort		  1
 	}
       }
       Branch {
-	DstBlock		"dL_dx"
+	Points			[0, 445]
+	DstBlock		"Duty Cycle Limiter1"
 	DstPort			1
       }
+    }
+    Line {
+      SrcBlock		      "Duty Cycle Limiter"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	Points			[5, 0]
+	Branch {
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, -270; 60, 0]
+	  DstBlock		  "Diode Drop"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 120]
+	Branch {
+	  Points		  [495, 0; 0, -100]
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 90; 15, 0]
+	  Branch {
+	    DstBlock		    "Duty Cycle"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 60]
+	    DstBlock		    "To Workspace3"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Duty Cycle Limiter1"
+      SrcPort		      1
+      Points		      [-490, 0; 0, -355]
+      DstBlock		      "Duty Cycle Limiter"
+      DstPort		      1
     }
   }
 }
