@@ -72,6 +72,7 @@ datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
 datasheets/regulators/V78XX-1000.pdf -text
+electronics/models/solenoid/solenoid.mdl -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
