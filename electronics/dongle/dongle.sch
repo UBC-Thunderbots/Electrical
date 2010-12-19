@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-11-13T15:49:56 PST
+EESchema Schematic File Version 2  date 2010-12-18T16:15:43 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:dongle-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "13 nov 2010"
+Date "19 dec 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +43,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 8550 2900 0    60   ~ 0
+R
+Text Notes 8550 2800 0    60   ~ 0
+T
+Text Notes 8550 2700 0    60   ~ 0
+S
 $Comp
 L LD1117V33C U4
 U 1 1 4CDF23F9

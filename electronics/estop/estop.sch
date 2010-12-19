@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-11-07T16:07:45 PST
+EESchema Schematic File Version 2  date 2010-12-18T16:16:28 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:estop-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "8 nov 2010"
+Date "19 dec 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +43,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 6100 3900 0    60   ~ 0
+R
+Text Notes 6100 3800 0    60   ~ 0
+T
+Text Notes 6100 3700 0    60   ~ 0
+S
 Wire Wire Line
 	5100 6050 6100 6050
 Wire Wire Line
