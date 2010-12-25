@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2010-12-24T17:12:14 PST
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2010-12-24T17:54:27 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -788,7 +788,7 @@ BeginCmp
 TimeStamp = /4AD90415/4CD66182;
 Reference = U6;
 ValeurCmp = W25Q16BV;
-IdModule  = SO8N;
+IdModule  = SO8S;
 EndCmp
 
 BeginCmp
