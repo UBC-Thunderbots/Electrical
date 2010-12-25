@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2010-12-21T15:34:35 PST
+PCBNEW-BOARD Version 1 date 2010-12-24T17:22:11 PST
 
 # Created by Pcbnew(2010-03-13)-final
 
@@ -10,7 +10,7 @@ Links 529
 NoConn 0
 Di 6213 8546 59024 49326
 Ndraw 4
-Ntrack 2606
+Ntrack 2617
 Nzone 0
 BoardThickness 630
 Nmodule 131
@@ -20,7 +20,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11700 8267
 Title ""
-Date "21 dec 2010"
+Date "25 dec 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -58,7 +58,7 @@ EdgeModWidth 150
 TextModSize 600 600
 TextModWidth 120
 PadSize 600 600
-PadDrill 320
+PadDrill 350
 Pad2MaskClearance 100
 AuxiliaryAxisOrg 0 0
 $EndSETUP
@@ -100,19 +100,19 @@ Na 8 "/chicker/PRESENT"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 9 "/dribblerconn/HALL2"
+Na 9 "/dribble19"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 10 "/dribblerconn/HALL3"
+Na 10 "/dribble20"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 11 "/dribblerconn/PHASE1"
+Na 11 "/dribble22"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 12 "/dribblerconn/PHASE2"
+Na 12 "/dribble23"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -120,11 +120,11 @@ Na 13 "/flash//CS"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 14 "/fpga/CHICKER_CHARGE"
+Na 14 "/fpga/CH5"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 15 "/fpga/CHICKER_CLK"
+Na 15 "/fpga/CH6"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -264,91 +264,91 @@ Na 49 "/fpga/PARBUS_D5"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 50 "/motordriver1/CTRL+1"
+Na 50 "/motordr11"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 51 "/motordriver1/CTRL+3"
+Na 51 "/motordr12"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 52 "/motordriver1/CTRL-2"
+Na 52 "/motordr13"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 53 "/motordriver1/PHASE1"
+Na 53 "/motordr14"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 54 "/motordriver1/PHASE3"
+Na 54 "/motordr15"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 55 "/motordriver2/CTRL+1"
+Na 55 "/motordr21"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 56 "/motordriver2/CTRL+2"
+Na 56 "/motordr27"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 57 "/motordriver2/CTRL+3"
+Na 57 "/motordr28"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 58 "/motordriver2/PHASE1"
+Na 58 "/motordr29"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 59 "/motordriver2/PHASE2"
+Na 59 "/motordr30"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 60 "/motordriver3/CTRL-2"
+Na 60 "/motordr31"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 61 "/motordriver3/PHASE1"
+Na 61 "/motordr32"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 62 "/motordriver3/PHASE2"
+Na 62 "/motordr33"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 63 "/motordriver3/PHASE3"
+Na 63 "/motordr34"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 64 "/motordriver5/CTRL+1"
+Na 64 "/motordr35"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 65 "/motordriver5/CTRL+2"
+Na 65 "/motordr36"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 66 "/motordriver5/CTRL+3"
+Na 66 "/motordr37"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 67 "/motordriver5/CTRL-2"
+Na 67 "/motordr7"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 68 "/motordriver5/PHASE3"
+Na 68 "/motordr9"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 69 "/pic//XBEE1_CTS"
+Na 69 "/pic//XB38"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 70 "/pic//XBEE1_RTS"
+Na 70 "/pic//XBEE1_CTS"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 71 "/pic//XBEE2_RESET"
+Na 71 "/pic//XBEE1_RTS"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -356,11 +356,11 @@ Na 72 "/pic//XBEE2_RTS"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 73 "/pic/Breakbeam_In"
+Na 73 "/pic/Bre25"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 74 "/pic/Breakbeam_drive"
+Na 74 "/pic/Bre26"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -408,7 +408,7 @@ Na 85 "/pic/PARBUS_WR"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 86 "/pic/Thermistor_In"
+Na 86 "/pic/The24"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -420,39 +420,39 @@ Na 88 "/pic/XBEE1_TX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 89 "/wheelconn1/PHASE2"
+Na 89 "/wheelco1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 90 "/wheelconn2/HALL2"
+Na 90 "/wheelco10"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 91 "/wheelconn2/PHASE3"
+Na 91 "/wheelco16"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 92 "/wheelconn3/HALL1"
+Na 92 "/wheelco17"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 93 "/wheelconn3/HALL2"
+Na 93 "/wheelco18"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 94 "/wheelconn4/HALL3"
+Na 94 "/wheelco2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 95 "/wheelconn4/PHASE1"
+Na 95 "/wheelco3"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 96 "/wheelconn4/PHASE2"
+Na 96 "/wheelco4"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 97 "/wheelconn4/PHASE3"
+Na 97 "/wheelco8"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -948,13 +948,13 @@ AddNet "/chicker//CS"
 AddNet "/chicker/KICK"
 AddNet "/chicker/MISO"
 AddNet "/chicker/PRESENT"
-AddNet "/dribblerconn/HALL2"
-AddNet "/dribblerconn/HALL3"
-AddNet "/dribblerconn/PHASE1"
-AddNet "/dribblerconn/PHASE2"
+AddNet "/dribble19"
+AddNet "/dribble20"
+AddNet "/dribble22"
+AddNet "/dribble23"
 AddNet "/flash//CS"
-AddNet "/fpga/CHICKER_CHARGE"
-AddNet "/fpga/CHICKER_CLK"
+AddNet "/fpga/CH5"
+AddNet "/fpga/CH6"
 AddNet "/fpga/CHIP"
 AddNet "/fpga/DCM_Locked"
 AddNet "/fpga/DCM_Reset"
@@ -989,28 +989,31 @@ AddNet "/fpga/PARBUS_D2"
 AddNet "/fpga/PARBUS_D3"
 AddNet "/fpga/PARBUS_D4"
 AddNet "/fpga/PARBUS_D5"
-AddNet "/motordriver1/CTRL+1"
-AddNet "/motordriver1/CTRL+3"
-AddNet "/motordriver1/CTRL-2"
-AddNet "/motordriver1/PHASE3"
-AddNet "/motordriver2/CTRL+1"
-AddNet "/motordriver2/CTRL+2"
-AddNet "/motordriver2/CTRL+3"
-AddNet "/motordriver2/PHASE2"
-AddNet "/motordriver3/CTRL-2"
-AddNet "/motordriver3/PHASE1"
-AddNet "/motordriver3/PHASE2"
-AddNet "/motordriver3/PHASE3"
-AddNet "/motordriver5/CTRL+1"
-AddNet "/motordriver5/CTRL+2"
-AddNet "/motordriver5/CTRL+3"
-AddNet "/motordriver5/CTRL-2"
+AddNet "/motordr11"
+AddNet "/motordr12"
+AddNet "/motordr13"
+AddNet "/motordr14"
+AddNet "/motordr15"
+AddNet "/motordr21"
+AddNet "/motordr27"
+AddNet "/motordr28"
+AddNet "/motordr29"
+AddNet "/motordr30"
+AddNet "/motordr31"
+AddNet "/motordr32"
+AddNet "/motordr33"
+AddNet "/motordr34"
+AddNet "/motordr35"
+AddNet "/motordr36"
+AddNet "/motordr37"
+AddNet "/motordr7"
+AddNet "/motordr9"
+AddNet "/pic//XB38"
 AddNet "/pic//XBEE1_CTS"
 AddNet "/pic//XBEE1_RTS"
-AddNet "/pic//XBEE2_RESET"
 AddNet "/pic//XBEE2_RTS"
-AddNet "/pic/Breakbeam_In"
-AddNet "/pic/Breakbeam_drive"
+AddNet "/pic/Bre25"
+AddNet "/pic/Bre26"
 AddNet "/pic/FLASH_CLK"
 AddNet "/pic/FLASH_MISO"
 AddNet "/pic/FPGA_PROG_B"
@@ -1022,18 +1025,18 @@ AddNet "/pic/PARBUS_D6"
 AddNet "/pic/PARBUS_D7"
 AddNet "/pic/PARBUS_RD"
 AddNet "/pic/PARBUS_WR"
-AddNet "/pic/Thermistor_In"
+AddNet "/pic/The24"
 AddNet "/pic/XBEE1_SLEEP"
 AddNet "/pic/XBEE1_TX"
-AddNet "/wheelconn1/PHASE2"
-AddNet "/wheelconn2/HALL2"
-AddNet "/wheelconn2/PHASE3"
-AddNet "/wheelconn3/HALL1"
-AddNet "/wheelconn3/HALL2"
-AddNet "/wheelconn4/HALL3"
-AddNet "/wheelconn4/PHASE1"
-AddNet "/wheelconn4/PHASE2"
-AddNet "/wheelconn4/PHASE3"
+AddNet "/wheelco1"
+AddNet "/wheelco10"
+AddNet "/wheelco16"
+AddNet "/wheelco17"
+AddNet "/wheelco18"
+AddNet "/wheelco2"
+AddNet "/wheelco3"
+AddNet "/wheelco4"
+AddNet "/wheelco8"
 AddNet "/xbee//CTS2"
 AddNet "/xbee//RESET1"
 AddNet "/xbee/DIN2"
@@ -1174,9 +1177,6 @@ ViaDia 350
 ViaDrill 250
 uViaDia 200
 uViaDrill 50
-AddNet "/motordriver1/PHASE1"
-AddNet "/motordriver2/PHASE1"
-AddNet "/motordriver5/PHASE3"
 $EndNCLASS
 $MODULE C1.5V8V
 Po 41500 37000 2700 15 4512B232 4CDC9BBA ~~
@@ -1209,290 +1209,6 @@ Of 0.000000 0.000000 0.000000
 Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  C1.5V8V
-$MODULE SIL-18
-Po 38000 40000 2700 15 00200000 4CDC9BC0 ~~
-Li SIL-18
-Cd Connecteur 18 pins
-Kw CONN DEV
-Sc 4CDC9BC0
-AR /4B4D69E7/4CC35F90
-Op 0 0 0
-T0 -5000 -1000 681 428 2700 107 N V 21 N"P8"
-T1 3500 -1000 600 400 2700 100 N V 21 N"CONN_9X2"
-DS -9000 -500 9000 -500 120 21
-DS 9000 -500 9000 500 120 21
-DS 9000 500 -9000 500 120 21
-DS -9000 500 -9000 -500 120 21
-DS -8000 -500 -8000 500 120 21
-$PAD
-Sh "1" R 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -8500 0
-$EndPAD
-$PAD
-Sh "2" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po -7500 0
-$EndPAD
-$PAD
-Sh "3" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -6500 0
-$EndPAD
-$PAD
-Sh "4" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po -5500 0
-$EndPAD
-$PAD
-Sh "5" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -4500 0
-$EndPAD
-$PAD
-Sh "6" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po -3500 0
-$EndPAD
-$PAD
-Sh "7" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -2500 0
-$EndPAD
-$PAD
-Sh "8" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po -1500 0
-$EndPAD
-$PAD
-Sh "9" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -500 0
-$EndPAD
-$PAD
-Sh "10" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po 500 0
-$EndPAD
-$PAD
-Sh "11" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po 1500 0
-$EndPAD
-$PAD
-Sh "12" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po 2500 0
-$EndPAD
-$PAD
-Sh "13" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po 3500 0
-$EndPAD
-$PAD
-Sh "14" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po 4500 0
-$EndPAD
-$PAD
-Sh "15" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po 5500 0
-$EndPAD
-$PAD
-Sh "16" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po 6500 0
-$EndPAD
-$PAD
-Sh "17" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po 7500 0
-$EndPAD
-$PAD
-Sh "18" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 4 "+BATT"
-Po 8500 0
-$EndPAD
-$EndMODULE  SIL-18
-$MODULE SIL-18
-Po 20000 40000 2700 15 00200000 4CDC9BC2 ~~
-Li SIL-18
-Cd Connecteur 18 pins
-Kw CONN DEV
-Sc 4CDC9BC2
-AR /4B4D69E7/4CC35F96
-Op 0 0 0
-T0 -5000 -1000 681 428 2700 107 N V 21 N"P9"
-T1 3500 -1000 600 400 2700 100 N V 21 N"CONN_9X2"
-DS -9000 -500 9000 -500 120 21
-DS 9000 -500 9000 500 120 21
-DS 9000 500 -9000 500 120 21
-DS -9000 500 -9000 -500 120 21
-DS -8000 -500 -8000 500 120 21
-$PAD
-Sh "1" R 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 2 "+3.3V"
-Po -8500 0
-$EndPAD
-$PAD
-Sh "2" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 5 "/chicker//CS"
-Po -7500 0
-$EndPAD
-$PAD
-Sh "3" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 15 "/fpga/CHICKER_CLK"
-Po -6500 0
-$EndPAD
-$PAD
-Sh "4" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -5500 0
-$EndPAD
-$PAD
-Sh "5" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 104 "GND"
-Po -4500 0
-$EndPAD
-$PAD
-Sh "6" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 7 "/chicker/MISO"
-Po -3500 0
-$EndPAD
-$PAD
-Sh "7" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 14 "/fpga/CHICKER_CHARGE"
-Po -2500 0
-$EndPAD
-$PAD
-Sh "8" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 6 "/chicker/KICK"
-Po -1500 0
-$EndPAD
-$PAD
-Sh "9" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 16 "/fpga/CHIP"
-Po -500 0
-$EndPAD
-$PAD
-Sh "10" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 8 "/chicker/PRESENT"
-Po 500 0
-$EndPAD
-$PAD
-Sh "11" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 1500 0
-$EndPAD
-$PAD
-Sh "12" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 2500 0
-$EndPAD
-$PAD
-Sh "13" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 3500 0
-$EndPAD
-$PAD
-Sh "14" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 4500 0
-$EndPAD
-$PAD
-Sh "15" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 5500 0
-$EndPAD
-$PAD
-Sh "16" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 6500 0
-$EndPAD
-$PAD
-Sh "17" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 7500 0
-$EndPAD
-$PAD
-Sh "18" C 550 550 0 0 2700
-Dr 320 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 8500 0
-$EndPAD
-$EndMODULE  SIL-18
 $MODULE SM0805
 Po 38000 27000 2700 0 42806E04 4CDC9BC3 ~~
 Li SM0805
@@ -3374,7 +3090,7 @@ $PAD
 Sh "3" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 52 "/motordriver1/CTRL-2"
+Ne 56 "/motordr27"
 Po -750 2000
 $EndPAD
 $PAD
@@ -3388,7 +3104,7 @@ $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "/motordriver1/CTRL+1"
+Ne 57 "/motordr28"
 Po 250 2000
 $EndPAD
 $PAD
@@ -3497,7 +3213,7 @@ $PAD
 Sh "1" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 66 "/motordriver5/CTRL+3"
+Ne 64 "/motordr35"
 Po -1750 2000
 $EndPAD
 $PAD
@@ -3525,7 +3241,7 @@ $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/motordriver1/CTRL+3"
+Ne 58 "/motordr29"
 Po 250 2000
 $EndPAD
 $PAD
@@ -3634,7 +3350,7 @@ $PAD
 Sh "1" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 57 "/motordriver2/CTRL+3"
+Ne 60 "/motordr31"
 Po -1750 2000
 $EndPAD
 $PAD
@@ -3662,7 +3378,7 @@ $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/motordriver2/CTRL+2"
+Ne 61 "/motordr32"
 Po 250 2000
 $EndPAD
 $PAD
@@ -3785,7 +3501,7 @@ $PAD
 Sh "3" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "/motordriver3/CTRL-2"
+Ne 59 "/motordr30"
 Po -750 2000
 $EndPAD
 $PAD
@@ -4182,7 +3898,7 @@ $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "/motordriver5/CTRL+1"
+Ne 66 "/motordr37"
 Po -1750 2000
 $EndPAD
 $PAD
@@ -4210,7 +3926,7 @@ $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "/motordriver5/CTRL+2"
+Ne 65 "/motordr36"
 Po 250 2000
 $EndPAD
 $PAD
@@ -4238,7 +3954,7 @@ $PAD
 Sh "9" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 67 "/motordriver5/CTRL-2"
+Ne 63 "/motordr34"
 Po 1750 -2000
 $EndPAD
 $PAD
@@ -4319,7 +4035,7 @@ $PAD
 Sh "1" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/motordriver2/CTRL+1"
+Ne 62 "/motordr33"
 Po -1750 2000
 $EndPAD
 $PAD
@@ -4457,7 +4173,7 @@ $PAD
 Sh "8" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE1"
+Ne 68 "/motordr9"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4471,21 +4187,21 @@ $PAD
 Sh "7" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE1"
+Ne 68 "/motordr9"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE1"
+Ne 68 "/motordr9"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE1"
+Ne 68 "/motordr9"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4539,7 +4255,7 @@ $PAD
 Sh "8" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 89 "/wheelconn1/PHASE2"
+Ne 97 "/wheelco8"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4553,21 +4269,21 @@ $PAD
 Sh "7" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 89 "/wheelconn1/PHASE2"
+Ne 97 "/wheelco8"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 89 "/wheelconn1/PHASE2"
+Ne 97 "/wheelco8"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 89 "/wheelconn1/PHASE2"
+Ne 97 "/wheelco8"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4621,7 +4337,7 @@ $PAD
 Sh "8" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 54 "/motordriver1/PHASE3"
+Ne 67 "/motordr7"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4635,21 +4351,21 @@ $PAD
 Sh "7" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 54 "/motordriver1/PHASE3"
+Ne 67 "/motordr7"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 54 "/motordriver1/PHASE3"
+Ne 67 "/motordr7"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 54 "/motordriver1/PHASE3"
+Ne 67 "/motordr7"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4703,7 +4419,7 @@ $PAD
 Sh "8" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 58 "/motordriver2/PHASE1"
+Ne 51 "/motordr12"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4717,21 +4433,21 @@ $PAD
 Sh "7" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 58 "/motordriver2/PHASE1"
+Ne 51 "/motordr12"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 58 "/motordriver2/PHASE1"
+Ne 51 "/motordr12"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 58 "/motordriver2/PHASE1"
+Ne 51 "/motordr12"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4785,7 +4501,7 @@ $PAD
 Sh "8" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver2/PHASE2"
+Ne 50 "/motordr11"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4799,21 +4515,21 @@ $PAD
 Sh "7" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver2/PHASE2"
+Ne 50 "/motordr11"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver2/PHASE2"
+Ne 50 "/motordr11"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver2/PHASE2"
+Ne 50 "/motordr11"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4867,7 +4583,7 @@ $PAD
 Sh "8" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 91 "/wheelconn2/PHASE3"
+Ne 90 "/wheelco10"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4881,21 +4597,21 @@ $PAD
 Sh "7" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 91 "/wheelconn2/PHASE3"
+Ne 90 "/wheelco10"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 91 "/wheelconn2/PHASE3"
+Ne 90 "/wheelco10"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 91 "/wheelconn2/PHASE3"
+Ne 90 "/wheelco10"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4949,7 +4665,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE1"
+Ne 54 "/motordr15"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4963,21 +4679,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE1"
+Ne 54 "/motordr15"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE1"
+Ne 54 "/motordr15"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE1"
+Ne 54 "/motordr15"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5031,7 +4747,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE2"
+Ne 53 "/motordr14"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5045,21 +4761,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE2"
+Ne 53 "/motordr14"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE2"
+Ne 53 "/motordr14"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE2"
+Ne 53 "/motordr14"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5113,7 +4829,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 63 "/motordriver3/PHASE3"
+Ne 52 "/motordr13"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5127,21 +4843,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 63 "/motordriver3/PHASE3"
+Ne 52 "/motordr13"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 63 "/motordriver3/PHASE3"
+Ne 52 "/motordr13"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 63 "/motordriver3/PHASE3"
+Ne 52 "/motordr13"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5195,7 +4911,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn4/PHASE1"
+Ne 93 "/wheelco18"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5209,21 +4925,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn4/PHASE1"
+Ne 93 "/wheelco18"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn4/PHASE1"
+Ne 93 "/wheelco18"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn4/PHASE1"
+Ne 93 "/wheelco18"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5277,7 +4993,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn4/PHASE2"
+Ne 92 "/wheelco17"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5291,21 +5007,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn4/PHASE2"
+Ne 92 "/wheelco17"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn4/PHASE2"
+Ne 92 "/wheelco17"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn4/PHASE2"
+Ne 92 "/wheelco17"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5359,7 +5075,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn4/PHASE3"
+Ne 91 "/wheelco16"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5373,21 +5089,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn4/PHASE3"
+Ne 91 "/wheelco16"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn4/PHASE3"
+Ne 91 "/wheelco16"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn4/PHASE3"
+Ne 91 "/wheelco16"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5441,7 +5157,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE1"
+Ne 9 "/dribble19"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5455,21 +5171,21 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE1"
+Ne 9 "/dribble19"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE1"
+Ne 9 "/dribble19"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE1"
+Ne 9 "/dribble19"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5523,7 +5239,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 12 "/dribblerconn/PHASE2"
+Ne 10 "/dribble20"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5537,21 +5253,21 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 12 "/dribblerconn/PHASE2"
+Ne 10 "/dribble20"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 12 "/dribblerconn/PHASE2"
+Ne 10 "/dribble20"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 12 "/dribblerconn/PHASE2"
+Ne 10 "/dribble20"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5605,7 +5321,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 68 "/motordriver5/PHASE3"
+Ne 55 "/motordr21"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5619,21 +5335,21 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 68 "/motordriver5/PHASE3"
+Ne 55 "/motordr21"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 68 "/motordriver5/PHASE3"
+Ne 55 "/motordr21"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 68 "/motordriver5/PHASE3"
+Ne 55 "/motordr21"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5986,7 +5702,7 @@ $PAD
 Sh "19" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 52 "/motordriver1/CTRL-2"
+Ne 56 "/motordr27"
 Po -100 -4325
 $EndPAD
 $PAD
@@ -6000,7 +5716,7 @@ $PAD
 Sh "21" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "/motordriver1/CTRL+1"
+Ne 57 "/motordr28"
 Po -495 -4325
 $EndPAD
 $PAD
@@ -6028,7 +5744,7 @@ $PAD
 Sh "25" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/motordriver1/CTRL+3"
+Ne 58 "/motordr29"
 Po -1280 -4325
 $EndPAD
 $PAD
@@ -6175,7 +5891,7 @@ $PAD
 Sh "116" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 67 "/motordriver5/CTRL-2"
+Ne 63 "/motordr34"
 Po 4325 2065
 $EndPAD
 $PAD
@@ -6203,14 +5919,14 @@ $PAD
 Sh "120" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 66 "/motordriver5/CTRL+3"
+Ne 64 "/motordr35"
 Po 4325 1280
 $EndPAD
 $PAD
 Sh "121" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "/motordriver5/CTRL+2"
+Ne 65 "/motordr36"
 Po 4325 1085
 $EndPAD
 $PAD
@@ -6231,7 +5947,7 @@ $PAD
 Sh "124" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "/motordriver5/CTRL+1"
+Ne 66 "/motordr37"
 Po 4325 495
 $EndPAD
 $PAD
@@ -6280,14 +5996,14 @@ $PAD
 Sh "131" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 9 "/dribblerconn/HALL2"
+Ne 11 "/dribble22"
 Po 4325 -885
 $EndPAD
 $PAD
 Sh "132" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 10 "/dribblerconn/HALL3"
+Ne 12 "/dribble23"
 Po 4325 -1085
 $EndPAD
 $PAD
@@ -6532,7 +6248,7 @@ $PAD
 Sh "59" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "/motordriver3/CTRL-2"
+Ne 59 "/motordr30"
 Po -4325 885
 $EndPAD
 $PAD
@@ -6567,7 +6283,7 @@ $PAD
 Sh "64" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "/motordriver3/CTRL-2"
+Ne 59 "/motordr30"
 Po -4325 1870
 $EndPAD
 $PAD
@@ -6581,14 +6297,14 @@ $PAD
 Sh "78" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 57 "/motordriver2/CTRL+3"
+Ne 60 "/motordr31"
 Po -2460 4325
 $EndPAD
 $PAD
 Sh "79" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/motordriver2/CTRL+2"
+Ne 61 "/motordr32"
 Po -2265 4325
 $EndPAD
 $PAD
@@ -6609,7 +6325,7 @@ $PAD
 Sh "82" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/motordriver2/CTRL+1"
+Ne 62 "/motordr33"
 Po -1675 4325
 $EndPAD
 $PAD
@@ -6756,7 +6472,7 @@ $PAD
 Sh "103" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 15 "/fpga/CHICKER_CLK"
+Ne 14 "/fpga/CH5"
 Po 2460 4325
 $EndPAD
 $PAD
@@ -6840,7 +6556,7 @@ $PAD
 Sh "110" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 14 "/fpga/CHICKER_CHARGE"
+Ne 15 "/fpga/CH6"
 Po 4325 3245
 $EndPAD
 $PAD
@@ -6939,7 +6655,7 @@ $PAD
 Sh "8" O 98 600 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 70 "/pic//XBEE1_RTS"
+Ne 71 "/pic//XBEE1_RTS"
 Po -98 -2311
 $EndPAD
 $PAD
@@ -7037,14 +6753,14 @@ $PAD
 Sh "22" O 600 98 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 73 "/pic/Breakbeam_In"
+Ne 73 "/pic/Bre25"
 Po 2375 -492
 $EndPAD
 $PAD
 Sh "23" O 600 98 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 86 "/pic/Thermistor_In"
+Ne 86 "/pic/The24"
 Po 2375 -295
 $EndPAD
 $PAD
@@ -7079,7 +6795,7 @@ $PAD
 Sh "28" O 600 98 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 69 "/pic//XBEE1_CTS"
+Ne 70 "/pic//XBEE1_CTS"
 Po 2375 689
 $EndPAD
 $PAD
@@ -7219,7 +6935,7 @@ $PAD
 Sh "48" O 98 600 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 74 "/pic/Breakbeam_drive"
+Ne 74 "/pic/Bre26"
 Po -1476 2375
 $EndPAD
 $PAD
@@ -7296,7 +7012,7 @@ $PAD
 Sh "59" O 600 98 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 71 "/pic//XBEE2_RESET"
+Ne 69 "/pic//XB38"
 Po -2311 -489
 $EndPAD
 $PAD
@@ -7567,21 +7283,21 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 11 "/dribblerconn/PHASE1"
+Ne 9 "/dribble19"
 Po -3500 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 12 "/dribblerconn/PHASE2"
+Ne 10 "/dribble20"
 Po -2500 0
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 68 "/motordriver5/PHASE3"
+Ne 55 "/motordr21"
 Po -1500 0
 $EndPAD
 $PAD
@@ -7609,14 +7325,14 @@ $PAD
 Sh "7" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 9 "/dribblerconn/HALL2"
+Ne 11 "/dribble22"
 Po 2500 0
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 10 "/dribblerconn/HALL3"
+Ne 12 "/dribble23"
 Po 3500 0
 $EndPAD
 $EndMODULE  DRIBBLERCONN
@@ -7640,42 +7356,42 @@ $PAD
 Sh "11" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE1"
+Ne 68 "/motordr9"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE1"
+Ne 68 "/motordr9"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 89 "/wheelconn1/PHASE2"
+Ne 97 "/wheelco8"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 89 "/wheelconn1/PHASE2"
+Ne 97 "/wheelco8"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 54 "/motordriver1/PHASE3"
+Ne 67 "/motordr7"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 54 "/motordriver1/PHASE3"
+Ne 67 "/motordr7"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7748,42 +7464,42 @@ $PAD
 Sh "11" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 58 "/motordriver2/PHASE1"
+Ne 51 "/motordr12"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 58 "/motordriver2/PHASE1"
+Ne 51 "/motordr12"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver2/PHASE2"
+Ne 50 "/motordr11"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver2/PHASE2"
+Ne 50 "/motordr11"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 91 "/wheelconn2/PHASE3"
+Ne 90 "/wheelco10"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 91 "/wheelconn2/PHASE3"
+Ne 90 "/wheelco10"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7797,7 +7513,7 @@ $PAD
 Sh "4" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 90 "/wheelconn2/HALL2"
+Ne 96 "/wheelco4"
 Po 787 1968
 $EndPAD
 $PAD
@@ -7856,42 +7572,42 @@ $PAD
 Sh "11" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE1"
+Ne 54 "/motordr15"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE1"
+Ne 54 "/motordr15"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE2"
+Ne 53 "/motordr14"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE2"
+Ne 53 "/motordr14"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 63 "/motordriver3/PHASE3"
+Ne 52 "/motordr13"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 63 "/motordriver3/PHASE3"
+Ne 52 "/motordr13"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7905,14 +7621,14 @@ $PAD
 Sh "4" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 93 "/wheelconn3/HALL2"
+Ne 89 "/wheelco1"
 Po 787 1968
 $EndPAD
 $PAD
 Sh "3" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 92 "/wheelconn3/HALL1"
+Ne 94 "/wheelco2"
 Po 1181 1968
 $EndPAD
 $PAD
@@ -7964,42 +7680,42 @@ $PAD
 Sh "11" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn4/PHASE1"
+Ne 93 "/wheelco18"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn4/PHASE1"
+Ne 93 "/wheelco18"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn4/PHASE2"
+Ne 92 "/wheelco17"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn4/PHASE2"
+Ne 92 "/wheelco17"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn4/PHASE3"
+Ne 91 "/wheelco16"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn4/PHASE3"
+Ne 91 "/wheelco16"
 Po 0 1968
 $EndPAD
 $PAD
@@ -8027,7 +7743,7 @@ $PAD
 Sh "2" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 94 "/wheelconn4/HALL3"
+Ne 95 "/wheelco3"
 Po 1575 1968
 $EndPAD
 $PAD
@@ -8596,7 +8312,7 @@ $PAD
 Sh "12" C 600 600 0 0 900
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 69 "/pic//XBEE1_CTS"
+Ne 70 "/pic//XBEE1_CTS"
 Po 8661 6299
 $EndPAD
 $PAD
@@ -8624,7 +8340,7 @@ $PAD
 Sh "16" C 600 600 0 0 900
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 70 "/pic//XBEE1_RTS"
+Ne 71 "/pic//XBEE1_RTS"
 Po 8661 3150
 $EndPAD
 $PAD
@@ -8683,7 +8399,7 @@ $PAD
 Sh "5" C 600 600 0 0 2700
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 71 "/pic//XBEE2_RESET"
+Ne 69 "/pic//XB38"
 Po 0 3150
 $EndPAD
 $PAD
@@ -9098,7 +8814,7 @@ $PAD
 Sh "4" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 90 "/wheelconn2/HALL2"
+Ne 96 "/wheelco4"
 Po 400 250
 $EndPAD
 $PAD
@@ -9142,7 +8858,7 @@ $PAD
 Sh "6" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 92 "/wheelconn3/HALL1"
+Ne 94 "/wheelco2"
 Po 400 -250
 $EndPAD
 $PAD
@@ -9156,7 +8872,7 @@ $PAD
 Sh "4" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 93 "/wheelconn3/HALL2"
+Ne 89 "/wheelco1"
 Po 400 250
 $EndPAD
 $PAD
@@ -9200,7 +8916,7 @@ $PAD
 Sh "6" R 200 157 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 94 "/wheelconn4/HALL3"
+Ne 95 "/wheelco3"
 Po 400 -250
 $EndPAD
 $PAD
@@ -9945,7 +9661,7 @@ $PAD
 Sh "1" R 350 550 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 86 "/pic/Thermistor_In"
+Ne 86 "/pic/The24"
 Po -375 0
 $EndPAD
 $PAD
@@ -9981,14 +9697,14 @@ $PAD
 Sh "5" R 315 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 74 "/pic/Breakbeam_drive"
+Ne 74 "/pic/Bre26"
 Po 1969 0
 $EndPAD
 $PAD
 Sh "4" R 315 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 73 "/pic/Breakbeam_In"
+Ne 73 "/pic/Bre25"
 Po 1477 0
 $EndPAD
 $PAD
@@ -10009,7 +9725,7 @@ $PAD
 Sh "1" R 315 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 86 "/pic/Thermistor_In"
+Ne 86 "/pic/The24"
 Po 0 0
 $EndPAD
 $PAD
@@ -10027,6 +9743,290 @@ Ne 0 ""
 Po -1004 1220
 $EndPAD
 $EndMODULE  WM7624CT-ND
+$MODULE SIL-18-BIGPINS
+Po 38000 40000 2700 15 4D1544CC 4CDC9BC0 ~~
+Li SIL-18-BIGPINS
+Cd Connecteur 18 pins
+Kw CONN DEV
+Sc 4CDC9BC0
+AR /4B4D69E7/4CC35F90
+Op 0 0 0
+T0 -5000 -1000 681 428 2700 107 N V 21 N"P8"
+T1 3500 -1000 600 400 2700 100 N V 21 N"CONN_9X2"
+DS -9000 -500 9000 -500 120 21
+DS 9000 -500 9000 500 120 21
+DS 9000 500 -9000 500 120 21
+DS -9000 500 -9000 -500 120 21
+DS -8000 -500 -8000 500 120 21
+$PAD
+Sh "1" R 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -8500 0
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po -7500 0
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -6500 0
+$EndPAD
+$PAD
+Sh "4" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po -5500 0
+$EndPAD
+$PAD
+Sh "5" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -4500 0
+$EndPAD
+$PAD
+Sh "6" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po -3500 0
+$EndPAD
+$PAD
+Sh "7" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -2500 0
+$EndPAD
+$PAD
+Sh "8" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po -1500 0
+$EndPAD
+$PAD
+Sh "9" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -500 0
+$EndPAD
+$PAD
+Sh "10" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po 500 0
+$EndPAD
+$PAD
+Sh "11" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po 1500 0
+$EndPAD
+$PAD
+Sh "12" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po 2500 0
+$EndPAD
+$PAD
+Sh "13" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po 3500 0
+$EndPAD
+$PAD
+Sh "14" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po 4500 0
+$EndPAD
+$PAD
+Sh "15" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po 5500 0
+$EndPAD
+$PAD
+Sh "16" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po 6500 0
+$EndPAD
+$PAD
+Sh "17" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po 7500 0
+$EndPAD
+$PAD
+Sh "18" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 4 "+BATT"
+Po 8500 0
+$EndPAD
+$EndMODULE  SIL-18-BIGPINS
+$MODULE SIL-18-BIGPINS
+Po 20000 40000 2700 15 4D1544CC 4CDC9BC2 ~~
+Li SIL-18-BIGPINS
+Cd Connecteur 18 pins
+Kw CONN DEV
+Sc 4CDC9BC2
+AR /4B4D69E7/4CC35F96
+Op 0 0 0
+T0 -5000 -1000 681 428 2700 107 N V 21 N"P9"
+T1 3500 -1000 600 400 2700 100 N V 21 N"CONN_9X2"
+DS -9000 -500 9000 -500 120 21
+DS 9000 -500 9000 500 120 21
+DS 9000 500 -9000 500 120 21
+DS -9000 500 -9000 -500 120 21
+DS -8000 -500 -8000 500 120 21
+$PAD
+Sh "1" R 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 2 "+3.3V"
+Po -8500 0
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 5 "/chicker//CS"
+Po -7500 0
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 14 "/fpga/CH5"
+Po -6500 0
+$EndPAD
+$PAD
+Sh "4" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -5500 0
+$EndPAD
+$PAD
+Sh "5" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 104 "GND"
+Po -4500 0
+$EndPAD
+$PAD
+Sh "6" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 7 "/chicker/MISO"
+Po -3500 0
+$EndPAD
+$PAD
+Sh "7" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 15 "/fpga/CH6"
+Po -2500 0
+$EndPAD
+$PAD
+Sh "8" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 6 "/chicker/KICK"
+Po -1500 0
+$EndPAD
+$PAD
+Sh "9" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 16 "/fpga/CHIP"
+Po -500 0
+$EndPAD
+$PAD
+Sh "10" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 8 "/chicker/PRESENT"
+Po 500 0
+$EndPAD
+$PAD
+Sh "11" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1500 0
+$EndPAD
+$PAD
+Sh "12" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2500 0
+$EndPAD
+$PAD
+Sh "13" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3500 0
+$EndPAD
+$PAD
+Sh "14" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4500 0
+$EndPAD
+$PAD
+Sh "15" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5500 0
+$EndPAD
+$PAD
+Sh "16" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6500 0
+$EndPAD
+$PAD
+Sh "17" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 7500 0
+$EndPAD
+$PAD
+Sh "18" C 600 600 0 0 2700
+Dr 350 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 8500 0
+$EndPAD
+$EndMODULE  SIL-18-BIGPINS
 $DRAWSEGMENT
 Po 0 10000 49250 10000 10000 150
 De 28 0 900 0 0
@@ -10506,6 +10506,12 @@ Po 0 44625 14000 44625 13791 80 -1
 De 15 0 2 0 800
 Po 0 25625 32279 25803 32279 80 -1
 De 0 0 2 0 800
+Po 0 31500 48000 32500 49000 80 -1
+De 15 0 3 0 800
+Po 0 43661 49000 45342 47319 80 -1
+De 15 0 3 0 0
+Po 0 32500 49000 43661 49000 80 -1
+De 15 0 3 0 0
 Po 3 34184 13221 34184 13221 350 -1
 De 15 1 3 0 0
 Po 3 12630 36605 12630 36605 350 -1
@@ -10520,16 +10526,16 @@ Po 0 32499 12000 32181 11682 80 -1
 De 15 0 3 0 800
 Po 0 47115 47319 45342 47319 80 -1
 De 15 0 3 0 0
-Po 0 48544 45890 47115 47319 80 -1
-De 15 0 3 0 0
-Po 0 48544 44394 48544 45890 80 -1
+Po 0 48000 43850 48000 44293 80 -1
+De 15 0 3 0 800
+Po 0 48000 44293 48443 44293 80 -1
 De 15 0 3 0 0
 Po 0 48443 44293 48544 44394 80 -1
 De 15 0 3 0 0
-Po 0 48000 44293 48443 44293 80 -1
+Po 0 48544 44394 48544 45890 80 -1
 De 15 0 3 0 0
-Po 0 48000 43850 48000 44293 80 -1
-De 15 0 3 0 800
+Po 0 48544 45890 47115 47319 80 -1
+De 15 0 3 0 0
 Po 0 45342 47000 45342 47319 80 -1
 De 15 0 3 0 0
 Po 0 45501 47000 45342 47000 80 -1
@@ -10547,12 +10553,6 @@ De 0 0 3 0 0
 Po 0 19969 11968 20256 11681 80 -1
 De 0 0 3 0 800
 Po 0 12000 44001 12318 44001 80 -1
-De 15 0 3 0 800
-Po 0 43732 48929 45342 47319 80 -1
-De 15 0 3 0 0
-Po 0 32429 48929 43732 48929 80 -1
-De 15 0 3 0 0
-Po 0 31500 48000 32429 48929 80 -1
 De 15 0 3 0 800
 Po 0 40000 26552 40000 26500 80 -1
 De 15 0 3 0 400
@@ -10884,72 +10884,72 @@ Po 0 22928 37572 23848 37572 80 -1
 De 15 0 8 0 0
 Po 0 20000 40500 22928 37572 80 -1
 De 15 0 8 0 800
-Po 0 29385 35010 29385 34325 80 -1
-De 15 0 9 0 400
-Po 0 33897 39522 29385 35010 80 -1
-De 15 0 9 0 0
-Po 0 33897 47397 33897 39522 80 -1
-De 15 0 9 0 0
-Po 0 34500 48000 33897 47397 80 -1
-De 15 0 9 0 800
-Po 0 29585 34854 29585 34325 80 -1
-De 15 0 10 0 400
-Po 0 34103 39372 29585 34854 80 -1
-De 15 0 10 0 0
-Po 0 34103 46603 34103 39372 80 -1
-De 15 0 10 0 0
-Po 0 35500 48000 34103 46603 80 -1
-De 15 0 10 0 800
 Po 0 27750 45550 27750 45978 200 -1
-De 0 0 11 0 800
+De 0 0 9 0 800
 Po 0 26750 45921 26750 45550 200 -1
-De 0 0 11 0 400
+De 0 0 9 0 400
 Po 0 27750 46747 27750 45978 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 28500 47497 27750 46747 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 28500 48000 28500 47497 200 -1
-De 0 0 11 0 800
+De 0 0 9 0 800
 Po 0 27250 45550 27250 45921 200 -1
-De 0 0 11 0 800
+De 0 0 9 0 800
 Po 0 27307 45978 27250 45921 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 27750 45978 27307 45978 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 26807 45978 26750 45921 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 27250 45978 26807 45978 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 27250 45921 27250 45978 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 26250 45978 26250 45550 200 -1
-De 0 0 11 0 400
+De 0 0 9 0 400
 Po 0 26693 45978 26250 45978 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 26750 45921 26693 45978 200 -1
-De 0 0 11 0 0
+De 0 0 9 0 0
 Po 0 28750 45978 28750 45550 200 -1
-De 0 0 12 0 400
+De 0 0 10 0 400
 Po 0 29036 45978 28750 45978 200 -1
-De 0 0 12 0 0
+De 0 0 10 0 0
 Po 0 29250 45764 29036 45978 200 -1
-De 0 0 12 0 0
+De 0 0 10 0 0
 Po 0 29250 45550 29250 45764 200 -1
-De 0 0 12 0 800
+De 0 0 10 0 800
 Po 0 29500 46228 29750 45978 200 -1
-De 0 0 12 0 0
+De 0 0 10 0 0
 Po 0 29500 48000 29500 46228 200 -1
-De 0 0 12 0 800
+De 0 0 10 0 800
 Po 0 29750 45550 29750 45978 200 -1
-De 0 0 12 0 800
+De 0 0 10 0 800
 Po 0 29250 45978 29250 45764 200 -1
-De 0 0 12 0 0
+De 0 0 10 0 0
 Po 0 29500 46228 29250 45978 200 -1
-De 0 0 12 0 0
+De 0 0 10 0 0
 Po 0 30250 45978 29750 45978 200 -1
-De 0 0 12 0 0
+De 0 0 10 0 0
 Po 0 30250 45550 30250 45978 200 -1
-De 0 0 12 0 800
+De 0 0 10 0 800
+Po 0 29385 35010 29385 34325 80 -1
+De 15 0 11 0 400
+Po 0 33897 39522 29385 35010 80 -1
+De 15 0 11 0 0
+Po 0 33897 47397 33897 39522 80 -1
+De 15 0 11 0 0
+Po 0 34500 48000 33897 47397 80 -1
+De 15 0 11 0 800
+Po 0 29585 34854 29585 34325 80 -1
+De 15 0 12 0 400
+Po 0 34103 39372 29585 34854 80 -1
+De 15 0 12 0 0
+Po 0 34103 46603 34103 39372 80 -1
+De 15 0 12 0 0
+Po 0 35500 48000 34103 46603 80 -1
+De 15 0 12 0 800
 Po 3 26194 28487 26194 28487 350 -1
 De 15 1 13 0 0
 Po 0 26202 28495 26194 28487 80 -1
@@ -10976,23 +10976,23 @@ Po 0 26285 28578 29561 28578 80 -1
 De 15 0 13 0 0
 Po 0 26194 28487 26285 28578 80 -1
 De 15 0 13 0 0
-Po 0 22383 35117 20000 37500 80 -1
-De 15 0 14 0 400
-Po 0 24822 35117 22383 35117 80 -1
-De 15 0 14 0 0
-Po 0 25255 34684 24822 35117 80 -1
-De 15 0 14 0 0
-Po 0 25255 34325 25255 34684 80 -1
-De 15 0 14 0 800
 Po 0 21700 33500 20000 33500 80 -1
-De 15 0 15 0 400
+De 15 0 14 0 400
 Po 0 21900 33300 21700 33500 80 -1
-De 15 0 15 0 0
+De 15 0 14 0 0
 Po 0 22900 33300 21900 33300 80 -1
-De 15 0 15 0 0
+De 15 0 14 0 0
 Po 0 23740 32460 22900 33300 80 -1
-De 15 0 15 0 0
+De 15 0 14 0 0
 Po 0 24175 32460 23740 32460 80 -1
+De 15 0 14 0 800
+Po 0 22383 35117 20000 37500 80 -1
+De 15 0 15 0 400
+Po 0 24822 35117 22383 35117 80 -1
+De 15 0 15 0 0
+Po 0 25255 34684 24822 35117 80 -1
+De 15 0 15 0 0
+Po 0 25255 34325 25255 34684 80 -1
 De 15 0 15 0 800
 Po 0 20986 38514 20000 39500 80 -1
 De 15 0 16 0 400
@@ -11112,23 +11112,23 @@ Po 0 26040 26719 27007 27686 80 -1
 De 15 0 21 0 0
 Po 0 26040 25675 26040 26719 80 -1
 De 15 0 21 0 800
+Po 0 39738 33070 39738 32232 80 -1
+De 15 0 22 0 0
+Po 0 38288 30782 37335 30782 80 -1
+De 15 0 22 0 0
+Po 0 39738 32232 38288 30782 80 -1
+De 15 0 22 0 0
 Po 0 33268 28915 32825 28915 80 -1
 De 15 0 22 0 400
-Po 0 33297 28886 33268 28915 80 -1
-De 15 0 22 0 0
-Po 0 33613 28886 33297 28886 80 -1
-De 15 0 22 0 0
-Po 0 33849 29122 33613 28886 80 -1
+Po 0 37335 30782 35675 29122 80 -1
 De 15 0 22 0 0
 Po 0 35675 29122 33849 29122 80 -1
 De 15 0 22 0 0
-Po 0 37335 30782 35675 29122 80 -1
+Po 0 33849 29122 33613 28886 80 -1
 De 15 0 22 0 0
-Po 0 38054 30782 37335 30782 80 -1
+Po 0 33613 28886 33297 28886 80 -1
 De 15 0 22 0 0
-Po 0 39738 32466 38054 30782 80 -1
-De 15 0 22 0 0
-Po 0 39738 33070 39738 32466 80 -1
+Po 0 33297 28886 33268 28915 80 -1
 De 15 0 22 0 0
 Po 0 46051 39383 39738 33070 80 -1
 De 15 0 22 0 0
@@ -11138,25 +11138,29 @@ Po 0 45868 43250 46051 43067 80 -1
 De 15 0 22 0 0
 Po 0 45500 43250 45868 43250 80 -1
 De 15 0 22 0 800
+Po 0 38547 36454 38547 36297 80 -1
+De 15 0 23 0 0
+Po 0 37649 36000 36803 35154 80 -1
+De 15 0 23 0 0
+Po 0 38250 36000 37649 36000 80 -1
+De 15 0 23 0 0
+Po 0 38547 36297 38250 36000 80 -1
+De 15 0 23 0 0
 Po 0 33268 30100 32825 30100 80 -1
 De 15 0 23 0 400
-Po 0 35190 32022 33268 30100 80 -1
-De 15 0 23 0 0
-Po 0 35574 32022 35190 32022 80 -1
-De 15 0 23 0 0
-Po 0 35596 32044 35574 32022 80 -1
-De 15 0 23 0 0
-Po 0 35596 32949 35596 32044 80 -1
+Po 0 36803 35154 36803 34156 80 -1
 De 15 0 23 0 0
 Po 0 36803 34156 35596 32949 80 -1
 De 15 0 23 0 0
-Po 0 36803 35154 36803 34156 80 -1
+Po 0 35596 32949 35596 32044 80 -1
 De 15 0 23 0 0
-Po 0 37583 35934 36803 35154 80 -1
+Po 0 35596 32044 35574 32022 80 -1
 De 15 0 23 0 0
-Po 0 38027 35934 37583 35934 80 -1
+Po 0 35574 32022 35190 32022 80 -1
 De 15 0 23 0 0
-Po 0 41132 39039 38027 35934 80 -1
+Po 0 35190 32022 33268 30100 80 -1
+De 15 0 23 0 0
+Po 0 41132 39039 38547 36454 80 -1
 De 15 0 23 0 0
 Po 0 41132 39750 41132 39039 80 -1
 De 15 0 23 0 0
@@ -11236,54 +11240,58 @@ Po 0 23434 28915 23114 28595 80 -1
 De 15 0 25 0 0
 Po 0 24175 28915 23434 28915 80 -1
 De 15 0 25 0 800
-Po 3 26486 30386 26486 30386 350 -1
-De 15 1 26 0 0
-Po 3 25640 36212 25640 36212 350 -1
-De 15 1 26 0 0
-Po 0 26207 30386 26486 30386 80 -1
+Po 0 19750 41000 20500 41000 80 -1
 De 15 0 26 0 0
-Po 0 24618 28797 26207 30386 80 -1
-De 15 0 26 0 0
-Po 0 24618 28720 24618 28797 80 -1
-De 15 0 26 0 0
-Po 0 24175 28720 24618 28720 80 -1
-De 15 0 26 0 800
-Po 0 25208 36212 25640 36212 80 -1
-De 15 0 26 0 0
-Po 0 24825 36595 25208 36212 80 -1
-De 15 0 26 0 0
-Po 0 24825 37421 24825 36595 80 -1
-De 15 0 26 0 0
-Po 0 24414 37832 24825 37421 80 -1
-De 15 0 26 0 0
-Po 0 23262 37832 24414 37832 80 -1
-De 15 0 26 0 0
-Po 0 20028 41066 23262 37832 80 -1
-De 15 0 26 0 0
-Po 0 19603 41066 20028 41066 80 -1
-De 15 0 26 0 0
-Po 0 18419 42250 19603 41066 80 -1
-De 15 0 26 0 0
-Po 0 18000 42250 18419 42250 80 -1
-De 15 0 26 0 800
-Po 0 25551 36123 25640 36212 80 -1
-De 0 0 26 0 0
-Po 0 25551 34168 25551 36123 80 -1
-De 0 0 26 0 0
-Po 0 26045 33674 25551 34168 80 -1
-De 0 0 26 0 0
-Po 0 26045 32698 26045 33674 80 -1
-De 0 0 26 0 0
-Po 0 26534 32209 26045 32698 80 -1
-De 0 0 26 0 0
-Po 0 26534 31735 26534 32209 80 -1
-De 0 0 26 0 0
-Po 0 26712 31557 26534 31735 80 -1
+Po 0 26486 30386 26712 30612 80 -1
 De 0 0 26 0 0
 Po 0 26712 30612 26712 31557 80 -1
 De 0 0 26 0 0
-Po 0 26486 30386 26712 30612 80 -1
+Po 0 26712 31557 26534 31735 80 -1
 De 0 0 26 0 0
+Po 0 26534 31735 26534 32209 80 -1
+De 0 0 26 0 0
+Po 0 26534 32209 26045 32698 80 -1
+De 0 0 26 0 0
+Po 0 26045 32698 26045 33674 80 -1
+De 0 0 26 0 0
+Po 0 26045 33674 25551 34168 80 -1
+De 0 0 26 0 0
+Po 0 25551 34168 25551 36123 80 -1
+De 0 0 26 0 0
+Po 0 25551 36123 25640 36212 80 -1
+De 0 0 26 0 0
+Po 0 23262 37832 24414 37832 80 -1
+De 15 0 26 0 0
+Po 0 24414 37832 24825 37421 80 -1
+De 15 0 26 0 0
+Po 0 24825 37421 24825 36595 80 -1
+De 15 0 26 0 0
+Po 0 24825 36595 25208 36212 80 -1
+De 15 0 26 0 0
+Po 0 25208 36212 25640 36212 80 -1
+De 15 0 26 0 0
+Po 0 24175 28720 24618 28720 80 -1
+De 15 0 26 0 800
+Po 0 24618 28720 24618 28797 80 -1
+De 15 0 26 0 0
+Po 0 24618 28797 26207 30386 80 -1
+De 15 0 26 0 0
+Po 0 26207 30386 26486 30386 80 -1
+De 15 0 26 0 0
+Po 3 25640 36212 25640 36212 350 -1
+De 15 1 26 0 0
+Po 3 26486 30386 26486 30386 350 -1
+De 15 1 26 0 0
+Po 0 18500 42250 19750 41000 80 -1
+De 15 0 26 0 0
+Po 0 18500 42250 18000 42250 80 -1
+De 15 0 26 0 400
+Po 0 21000 40094 23262 37832 80 -1
+De 15 0 26 0 0
+Po 0 21000 40500 21000 40094 80 -1
+De 15 0 26 0 0
+Po 0 20500 41000 21000 40500 80 -1
+De 15 0 26 0 0
 Po 0 23304 28525 24175 28525 80 -1
 De 15 0 27 0 400
 Po 0 23191 28412 23304 28525 80 -1
@@ -11488,6 +11496,12 @@ Po 0 26093 35818 26371 35540 80 -1
 De 15 0 34 0 0
 Po 0 26093 35967 26093 35818 80 -1
 De 15 0 34 0 0
+Po 0 42250 33500 42250 34581 80 -1
+De 15 0 35 0 0
+Po 0 37695 30233 38983 30233 80 -1
+De 15 0 35 0 0
+Po 0 38983 30233 42250 33500 80 -1
+De 15 0 35 0 0
 Po 3 49810 39506 49810 39506 350 -1
 De 15 1 35 0 0
 Po 0 49886 41681 49032 41681 80 -1
@@ -11502,18 +11516,18 @@ Po 0 47990 37686 49810 39506 80 -1
 De 15 0 35 0 0
 Po 0 45355 37686 47990 37686 80 -1
 De 15 0 35 0 0
-Po 0 42244 34575 45355 37686 80 -1
-De 15 0 35 0 0
-Po 0 42244 34061 42244 34575 80 -1
-De 15 0 35 0 0
-Po 0 38416 30233 42244 34061 80 -1
-De 15 0 35 0 0
-Po 0 37695 30233 38416 30233 80 -1
+Po 0 42250 34581 45355 37686 80 -1
 De 15 0 35 0 0
 Po 0 35212 27750 37695 30233 80 -1
 De 15 0 35 0 0
 Po 0 34900 27750 35212 27750 80 -1
 De 15 0 35 0 800
+Po 0 40135 32730 40135 31885 80 -1
+De 15 0 36 0 0
+Po 0 38666 30416 37618 30416 80 -1
+De 15 0 36 0 0
+Po 0 40135 31885 38666 30416 80 -1
+De 15 0 36 0 0
 Po 3 49689 41297 49689 41297 350 -1
 De 15 1 36 0 0
 Po 0 46539 38147 49689 41297 80 -1
@@ -11521,12 +11535,6 @@ De 15 0 36 0 0
 Po 0 45552 38147 46539 38147 80 -1
 De 15 0 36 0 0
 Po 0 40135 32730 45552 38147 80 -1
-De 15 0 36 0 0
-Po 0 40135 32340 40135 32730 80 -1
-De 15 0 36 0 0
-Po 0 38211 30416 40135 32340 80 -1
-De 15 0 36 0 0
-Po 0 37618 30416 38211 30416 80 -1
 De 15 0 36 0 0
 Po 0 35174 27972 37618 30416 80 -1
 De 15 0 36 0 0
@@ -11544,6 +11552,12 @@ Po 0 49559 41297 49549 41287 80 -1
 De 0 0 36 0 0
 Po 0 49689 41297 49559 41297 80 -1
 De 0 0 36 0 0
+Po 0 39943 32798 39943 32193 80 -1
+De 15 0 37 0 0
+Po 0 38349 30599 37492 30599 80 -1
+De 15 0 37 0 0
+Po 0 39943 32193 38349 30599 80 -1
+De 15 0 37 0 0
 Po 3 48363 41151 48363 41151 350 -1
 De 15 1 37 0 0
 Po 0 48363 41923 48363 41151 80 -1
@@ -11555,12 +11569,6 @@ De 0 0 37 0 800
 Po 0 48296 41151 48363 41151 80 -1
 De 15 0 37 0 0
 Po 0 39943 32798 48296 41151 80 -1
-De 15 0 37 0 0
-Po 0 39943 32409 39943 32798 80 -1
-De 15 0 37 0 0
-Po 0 38133 30599 39943 32409 80 -1
-De 15 0 37 0 0
-Po 0 37492 30599 38133 30599 80 -1
 De 15 0 37 0 0
 Po 0 35143 28250 37492 30599 80 -1
 De 15 0 37 0 0
@@ -11588,6 +11596,14 @@ Po 0 12936 37319 15925 34330 80 -1
 De 0 0 38 0 0
 Po 0 11968 37319 12936 37319 80 -1
 De 0 0 38 0 800
+Po 0 15607 31815 18685 31815 80 -1
+De 15 0 39 0 0
+Po 0 21057 31000 21557 31500 80 -1
+De 15 0 39 0 0
+Po 0 19500 31000 21057 31000 80 -1
+De 15 0 39 0 0
+Po 0 18685 31815 19500 31000 80 -1
+De 15 0 39 0 0
 Po 3 15607 31815 15607 31815 350 -1
 De 15 1 39 0 0
 Po 0 15607 34387 15607 31815 80 -1
@@ -11596,14 +11612,6 @@ Po 0 13069 36925 15607 34387 80 -1
 De 0 0 39 0 0
 Po 0 11968 36925 13069 36925 80 -1
 De 0 0 39 0 800
-Po 0 18847 31815 15607 31815 80 -1
-De 15 0 39 0 0
-Po 0 19581 31081 18847 31815 80 -1
-De 15 0 39 0 0
-Po 0 21138 31081 19581 31081 80 -1
-De 15 0 39 0 0
-Po 0 21557 31500 21138 31081 80 -1
-De 15 0 39 0 0
 Po 0 22100 31500 21557 31500 80 -1
 De 15 0 39 0 800
 Po 3 22751 18073 22751 18073 350 -1
@@ -11844,437 +11852,429 @@ Po 0 29422 29917 29092 30247 80 -1
 De 0 0 49 0 0
 Po 0 30318 29917 29422 29917 80 -1
 De 0 0 49 0 800
-Po 0 45088 41250 45500 41250 80 -1
-De 15 0 50 0 400
-Po 0 44632 40794 45088 41250 80 -1
-De 15 0 50 0 0
-Po 0 44632 38279 44632 40794 80 -1
-De 15 0 50 0 0
-Po 0 38272 31919 44632 38279 80 -1
-De 15 0 50 0 0
-Po 0 37506 31919 38272 31919 80 -1
-De 15 0 50 0 0
-Po 0 35531 29944 37506 31919 80 -1
-De 15 0 50 0 0
-Po 0 33707 29944 35531 29944 80 -1
-De 15 0 50 0 0
-Po 0 33268 29505 33707 29944 80 -1
-De 15 0 50 0 0
-Po 0 32825 29505 33268 29505 80 -1
-De 15 0 50 0 800
-Po 3 32623 34561 32623 34561 350 -1
-De 15 1 51 0 0
-Po 3 30150 37415 30150 37415 350 -1
-De 15 1 51 0 0
-Po 0 32623 34942 30150 37415 80 -1
-De 0 0 51 0 0
-Po 0 32623 34561 32623 34942 80 -1
-De 0 0 51 0 0
-Po 0 32767 40032 30150 37415 80 -1
-De 15 0 51 0 0
-Po 0 32767 43351 32767 40032 80 -1
-De 15 0 51 0 0
-Po 0 32368 43750 32767 43351 80 -1
-De 15 0 51 0 0
-Po 0 32000 43750 32368 43750 80 -1
-De 15 0 51 0 800
-Po 0 32341 28720 32825 28720 80 -1
-De 15 0 51 0 400
-Po 0 32330 28731 32341 28720 80 -1
-De 15 0 51 0 0
-Po 0 30221 28731 32330 28731 80 -1
-De 15 0 51 0 0
-Po 0 28555 30397 30221 28731 80 -1
-De 15 0 51 0 0
-Po 0 28555 31141 28555 30397 80 -1
-De 15 0 51 0 0
-Po 0 29883 32469 28555 31141 80 -1
-De 15 0 51 0 0
-Po 0 31173 32469 29883 32469 80 -1
-De 15 0 51 0 0
-Po 0 31801 33097 31173 32469 80 -1
-De 15 0 51 0 0
-Po 0 31801 33279 31801 33097 80 -1
-De 15 0 51 0 0
-Po 0 32623 34101 31801 33279 80 -1
-De 15 0 51 0 0
-Po 0 32623 34561 32623 34101 80 -1
-De 15 0 51 0 0
-Po 0 44974 42250 45500 42250 80 -1
-De 15 0 52 0 400
-Po 0 44307 41583 44974 42250 80 -1
-De 15 0 52 0 0
-Po 0 44307 39809 44307 41583 80 -1
-De 15 0 52 0 0
-Po 0 38419 33921 44307 39809 80 -1
-De 15 0 52 0 0
-Po 0 38419 33088 38419 33921 80 -1
-De 15 0 52 0 0
-Po 0 38397 33066 38419 33088 80 -1
-De 15 0 52 0 0
-Po 0 37974 33066 38397 33066 80 -1
-De 15 0 52 0 0
-Po 0 36577 31669 37974 33066 80 -1
-De 15 0 52 0 0
-Po 0 35098 31669 36577 31669 80 -1
-De 15 0 52 0 0
-Po 0 33329 29900 35098 31669 80 -1
-De 15 0 52 0 0
-Po 0 32825 29900 33329 29900 80 -1
-De 15 0 52 0 800
-Po 0 45764 39750 45764 40250 200 -1
-De 0 0 53 0 0
-Po 0 45550 39750 45764 39750 200 -1
-De 0 0 53 0 800
-Po 0 45550 40250 45764 40250 200 -1
-De 0 0 53 0 800
-Po 0 48455 38531 48455 38925 200 -1
-De 0 0 53 0 0
-Po 0 49032 38531 48455 38531 200 -1
-De 0 0 53 0 800
-Po 0 49032 38925 48455 38925 200 -1
-De 0 0 53 0 800
-Po 0 45978 41250 45550 41250 200 -1
-De 0 0 53 0 400
-Po 0 45978 40964 45978 41250 200 -1
-De 0 0 53 0 0
-Po 0 45764 40750 45978 40964 200 -1
-De 0 0 53 0 0
-Po 0 45550 40750 45764 40750 200 -1
-De 0 0 53 0 800
-Po 0 45764 40250 45764 40750 200 -1
-De 0 0 53 0 0
-Po 0 46803 38925 48455 38925 200 -1
-De 0 0 53 0 0
-Po 0 45978 39750 46803 38925 200 -1
-De 0 0 53 0 0
-Po 0 45764 39750 45978 39750 200 -1
-De 0 0 53 0 0
-Po 0 44050 45250 44264 45250 200 -1
-De 0 0 54 0 800
-Po 0 47672 41283 48455 40500 200 -1
-De 0 0 54 0 0
-Po 0 47672 42647 47672 41283 200 -1
-De 0 0 54 0 0
-Po 0 45569 44750 47672 42647 200 -1
-De 0 0 54 0 0
-Po 0 44478 44750 45569 44750 200 -1
-De 0 0 54 0 0
-Po 0 44478 45036 44264 45250 200 -1
-De 0 0 54 0 0
-Po 0 44478 44750 44478 45036 200 -1
-De 0 0 54 0 0
-Po 0 44050 44750 44478 44750 200 -1
-De 0 0 54 0 800
-Po 0 44264 45250 44264 45750 200 -1
-De 0 0 54 0 0
-Po 0 48455 40106 48455 40500 200 -1
-De 0 0 54 0 0
-Po 0 49032 40106 48455 40106 200 -1
-De 0 0 54 0 800
-Po 0 49032 40500 48455 40500 200 -1
-De 0 0 54 0 800
-Po 0 44478 45964 44264 45750 200 -1
-De 0 0 54 0 0
-Po 0 44478 46250 44478 45964 200 -1
-De 0 0 54 0 0
-Po 0 44050 46250 44478 46250 200 -1
-De 0 0 54 0 800
-Po 0 44264 45750 44050 45750 200 -1
-De 0 0 54 0 400
-Po 3 20774 24894 20774 24894 350 -1
-De 15 1 55 0 0
-Po 3 24773 28054 24773 28054 350 -1
-De 15 1 55 0 0
-Po 0 21613 24894 20774 24894 80 -1
-De 0 0 55 0 0
-Po 0 24773 28054 21613 24894 80 -1
-De 0 0 55 0 0
-Po 0 24618 28209 24773 28054 80 -1
-De 15 0 55 0 0
-Po 0 24618 28325 24618 28209 80 -1
-De 15 0 55 0 0
-Po 0 24175 28325 24618 28325 80 -1
-De 15 0 55 0 800
-Po 0 13632 43250 14000 43250 80 -1
-De 15 0 55 0 400
-Po 0 13244 42862 13632 43250 80 -1
-De 15 0 55 0 0
-Po 0 13244 36665 13244 42862 80 -1
-De 15 0 55 0 0
-Po 0 12515 35936 13244 36665 80 -1
-De 15 0 55 0 0
-Po 0 10542 35936 12515 35936 80 -1
-De 15 0 55 0 0
-Po 0 10520 35914 10542 35936 80 -1
-De 15 0 55 0 0
-Po 0 10520 29153 10520 35914 80 -1
-De 15 0 55 0 0
-Po 0 14505 25168 10520 29153 80 -1
-De 15 0 55 0 0
-Po 0 20500 25168 14505 25168 80 -1
-De 15 0 55 0 0
-Po 0 20774 24894 20500 25168 80 -1
-De 15 0 55 0 0
-Po 0 13632 40750 14000 40750 80 -1
-De 15 0 56 0 400
-Po 0 13435 40553 13632 40750 80 -1
-De 15 0 56 0 0
-Po 0 13435 36595 13435 40553 80 -1
-De 15 0 56 0 0
-Po 0 12588 35748 13435 36595 80 -1
-De 15 0 56 0 0
-Po 0 10729 35748 12588 35748 80 -1
-De 15 0 56 0 0
-Po 0 10707 35726 10729 35748 80 -1
-De 15 0 56 0 0
-Po 0 10707 29902 10707 35726 80 -1
-De 15 0 56 0 0
-Po 0 11665 28944 10707 29902 80 -1
-De 15 0 56 0 0
-Po 0 19611 28944 11665 28944 80 -1
-De 15 0 56 0 0
-Po 0 19858 28697 19611 28944 80 -1
-De 15 0 56 0 0
-Po 0 21162 28697 19858 28697 80 -1
-De 15 0 56 0 0
-Po 0 21636 28223 21162 28697 80 -1
-De 15 0 56 0 0
-Po 0 22981 28223 21636 28223 80 -1
-De 15 0 56 0 0
-Po 0 23469 27735 22981 28223 80 -1
-De 15 0 56 0 0
-Po 0 24175 27735 23469 27735 80 -1
-De 15 0 56 0 800
-Po 3 24761 27385 24761 27385 350 -1
-De 15 1 57 0 0
-Po 3 13433 35672 13433 35672 350 -1
-De 15 1 57 0 0
-Po 0 10607 32846 13433 35672 80 -1
-De 0 0 57 0 0
-Po 0 10607 20530 10607 32846 80 -1
-De 0 0 57 0 0
-Po 0 11763 19374 10607 20530 80 -1
-De 0 0 57 0 0
-Po 0 19433 19374 11763 19374 80 -1
-De 0 0 57 0 0
-Po 0 24443 24384 19433 19374 80 -1
-De 0 0 57 0 0
-Po 0 24443 27067 24443 24384 80 -1
-De 0 0 57 0 0
-Po 0 24761 27385 24443 27067 80 -1
-De 0 0 57 0 0
-Po 0 14000 36239 13433 35672 80 -1
-De 15 0 57 0 0
-Po 0 14000 38750 14000 36239 80 -1
-De 15 0 57 0 800
-Po 0 24618 27528 24761 27385 80 -1
-De 15 0 57 0 0
-Po 0 24618 27540 24618 27528 80 -1
-De 15 0 57 0 0
-Po 0 24175 27540 24618 27540 80 -1
-De 15 0 57 0 800
-Po 0 13522 43750 13736 43750 200 -1
-De 0 0 58 0 0
-Po 0 13522 44167 13522 43750 200 -1
-De 0 0 58 0 0
-Po 0 13605 44250 13522 44167 200 -1
-De 0 0 58 0 0
-Po 0 13950 44250 13605 44250 200 -1
-De 0 0 58 0 800
-Po 0 11968 40469 12545 40469 200 -1
-De 0 0 58 0 800
-Po 0 13522 44250 13605 44250 200 -1
-De 0 0 58 0 0
-Po 0 13522 44750 13522 44250 200 -1
-De 0 0 58 0 0
-Po 0 13950 44750 13522 44750 200 -1
-De 0 0 58 0 800
-Po 0 12545 40075 12545 40469 200 -1
-De 0 0 58 0 0
-Po 0 11968 40075 12545 40075 200 -1
-De 0 0 58 0 800
-Po 0 13522 43250 13736 43250 200 -1
-De 0 0 58 0 0
-Po 0 12545 42273 13522 43250 200 -1
-De 0 0 58 0 0
-Po 0 12545 40469 12545 42273 200 -1
-De 0 0 58 0 0
-Po 0 13736 43250 13950 43250 200 -1
-De 0 0 58 0 400
-Po 0 13950 43750 13736 43750 200 -1
-De 0 0 58 0 800
-Po 0 13736 43750 13736 43250 200 -1
-De 0 0 58 0 0
 Po 0 13950 41750 13736 41750 200 -1
-De 0 0 59 0 800
+De 0 0 50 0 800
 Po 0 12469 39681 11968 39681 200 -1
-De 0 0 59 0 400
+De 0 0 50 0 400
 Po 0 12545 39605 12469 39681 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13950 40750 13736 40750 200 -1
-De 0 0 59 0 800
+De 0 0 50 0 800
 Po 0 13522 42250 13950 42250 200 -1
-De 0 0 59 0 400
+De 0 0 50 0 400
 Po 0 13522 41750 13522 42250 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13736 41750 13522 41750 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13736 41250 13736 40750 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 12545 39287 12545 39605 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 11968 39287 12545 39287 200 -1
-De 0 0 59 0 800
+De 0 0 50 0 800
 Po 0 13522 40750 13736 40750 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13522 40582 13522 40750 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 12545 39605 13522 40582 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13522 41250 13736 41250 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13522 41536 13522 41250 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13736 41750 13522 41536 200 -1
-De 0 0 59 0 0
+De 0 0 50 0 0
 Po 0 13736 41250 13950 41250 200 -1
-De 0 0 59 0 400
-Po 0 26630 24182 26630 25675 80 -1
-De 15 0 60 0 400
-Po 0 26666 24146 26630 24182 80 -1
-De 15 0 60 0 0
-Po 0 26666 21262 26666 24146 80 -1
-De 15 0 60 0 0
-Po 0 26847 21081 26666 21262 80 -1
-De 15 0 60 0 0
-Po 0 27858 21081 26847 21081 80 -1
-De 15 0 60 0 0
-Po 0 27944 21167 27858 21081 80 -1
-De 15 0 60 0 0
-Po 0 27944 24489 27944 21167 80 -1
-De 15 0 60 0 0
-Po 0 27615 24818 27944 24489 80 -1
-De 15 0 60 0 0
-Po 0 27615 25675 27615 24818 80 -1
-De 15 0 60 0 800
-Po 0 17250 13632 17250 14000 80 -1
-De 15 0 60 0 400
-Po 0 19036 13632 17250 13632 80 -1
-De 15 0 60 0 0
-Po 0 26666 21262 19036 13632 80 -1
-De 15 0 60 0 0
-Po 0 14250 13522 14250 13950 200 -1
-De 0 0 61 0 400
-Po 0 14750 13522 14250 13522 200 -1
-De 0 0 61 0 0
-Po 0 14750 13736 14750 13522 200 -1
-De 0 0 61 0 0
-Po 0 15250 13736 15750 13736 200 -1
-De 0 0 61 0 0
-Po 0 16031 11968 16031 12545 200 -1
-De 0 0 61 0 800
-Po 0 14750 13950 14750 13736 200 -1
-De 0 0 61 0 800
-Po 0 16425 12545 16031 12545 200 -1
-De 0 0 61 0 0
-Po 0 16425 11968 16425 12545 200 -1
-De 0 0 61 0 800
-Po 0 15750 13522 15750 13736 200 -1
-De 0 0 61 0 0
-Po 0 16031 13241 15750 13522 200 -1
-De 0 0 61 0 0
-Po 0 16031 12545 16031 13241 200 -1
-De 0 0 61 0 0
-Po 0 15750 13736 15750 13950 200 -1
-De 0 0 61 0 400
-Po 0 15250 13950 15250 13736 200 -1
-De 0 0 61 0 800
-Po 0 14964 13522 14750 13736 200 -1
-De 0 0 61 0 0
-Po 0 15250 13522 14964 13522 200 -1
-De 0 0 61 0 0
-Po 0 15250 13736 15250 13522 200 -1
-De 0 0 61 0 0
-Po 0 16978 12545 16978 13522 200 -1
-De 0 0 62 0 0
-Po 0 17250 13522 16978 13522 200 -1
-De 0 0 62 0 0
-Po 0 17250 13736 17250 13522 200 -1
-De 0 0 62 0 0
-Po 0 17250 13950 17250 13736 200 -1
-De 0 0 62 0 800
-Po 0 16947 13553 16978 13522 200 -1
-De 0 0 62 0 0
-Po 0 16947 13554 16947 13553 200 -1
-De 0 0 62 0 0
-Po 0 16907 13554 16947 13554 200 -1
-De 0 0 62 0 0
-Po 0 16875 13522 16907 13554 200 -1
-De 0 0 62 0 0
-Po 0 16750 13522 16875 13522 200 -1
-De 0 0 62 0 0
-Po 0 16750 13950 16750 13522 200 -1
-De 0 0 62 0 800
-Po 0 16819 12545 16978 12545 200 -1
-De 0 0 62 0 0
-Po 0 16819 11968 16819 12545 200 -1
-De 0 0 62 0 800
-Po 0 18250 13522 18250 13950 200 -1
-De 0 0 62 0 400
-Po 0 17964 13522 18250 13522 200 -1
-De 0 0 62 0 0
-Po 0 17750 13736 17964 13522 200 -1
-De 0 0 62 0 0
-Po 0 17750 13950 17750 13736 200 -1
-De 0 0 62 0 800
-Po 0 17213 12545 16978 12545 200 -1
-De 0 0 62 0 0
-Po 0 17213 11968 17213 12545 200 -1
-De 0 0 62 0 800
-Po 0 17250 13736 17750 13736 200 -1
-De 0 0 62 0 0
+De 0 0 50 0 400
+Po 0 13522 43750 13736 43750 200 -1
+De 0 0 51 0 0
+Po 0 13522 44167 13522 43750 200 -1
+De 0 0 51 0 0
+Po 0 13605 44250 13522 44167 200 -1
+De 0 0 51 0 0
+Po 0 13950 44250 13605 44250 200 -1
+De 0 0 51 0 800
+Po 0 11968 40469 12545 40469 200 -1
+De 0 0 51 0 800
+Po 0 13522 44250 13605 44250 200 -1
+De 0 0 51 0 0
+Po 0 13522 44750 13522 44250 200 -1
+De 0 0 51 0 0
+Po 0 13950 44750 13522 44750 200 -1
+De 0 0 51 0 800
+Po 0 12545 40075 12545 40469 200 -1
+De 0 0 51 0 0
+Po 0 11968 40075 12545 40075 200 -1
+De 0 0 51 0 800
+Po 0 13522 43250 13736 43250 200 -1
+De 0 0 51 0 0
+Po 0 12545 42273 13522 43250 200 -1
+De 0 0 51 0 0
+Po 0 12545 40469 12545 42273 200 -1
+De 0 0 51 0 0
+Po 0 13736 43250 13950 43250 200 -1
+De 0 0 51 0 400
+Po 0 13950 43750 13736 43750 200 -1
+De 0 0 51 0 800
+Po 0 13736 43750 13736 43250 200 -1
+De 0 0 51 0 0
 Po 0 19750 13736 20250 13736 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 20250 13950 20250 13736 200 -1
-De 0 0 63 0 800
+De 0 0 52 0 800
 Po 0 19750 13950 19750 13736 200 -1
-De 0 0 63 0 800
+De 0 0 52 0 800
 Po 0 19250 13736 19750 13736 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 19250 13950 19250 13736 200 -1
-De 0 0 63 0 800
+De 0 0 52 0 800
 Po 0 17606 12545 18000 12545 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 17606 11968 17606 12545 200 -1
-De 0 0 63 0 800
+De 0 0 52 0 800
 Po 0 18000 11968 18000 12545 200 -1
-De 0 0 63 0 800
+De 0 0 52 0 800
 Po 0 19191 13736 19250 13736 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 18000 12545 19191 13736 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 20464 13522 20250 13736 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 20750 13522 20464 13522 200 -1
-De 0 0 63 0 0
+De 0 0 52 0 0
 Po 0 20750 13950 20750 13522 200 -1
-De 0 0 63 0 800
-Po 0 26750 46039 26750 45500 80 -1
+De 0 0 52 0 800
+Po 0 16978 12545 16978 13522 200 -1
+De 0 0 53 0 0
+Po 0 17250 13522 16978 13522 200 -1
+De 0 0 53 0 0
+Po 0 17250 13736 17250 13522 200 -1
+De 0 0 53 0 0
+Po 0 17250 13950 17250 13736 200 -1
+De 0 0 53 0 800
+Po 0 16947 13553 16978 13522 200 -1
+De 0 0 53 0 0
+Po 0 16947 13554 16947 13553 200 -1
+De 0 0 53 0 0
+Po 0 16907 13554 16947 13554 200 -1
+De 0 0 53 0 0
+Po 0 16875 13522 16907 13554 200 -1
+De 0 0 53 0 0
+Po 0 16750 13522 16875 13522 200 -1
+De 0 0 53 0 0
+Po 0 16750 13950 16750 13522 200 -1
+De 0 0 53 0 800
+Po 0 16819 12545 16978 12545 200 -1
+De 0 0 53 0 0
+Po 0 16819 11968 16819 12545 200 -1
+De 0 0 53 0 800
+Po 0 18250 13522 18250 13950 200 -1
+De 0 0 53 0 400
+Po 0 17964 13522 18250 13522 200 -1
+De 0 0 53 0 0
+Po 0 17750 13736 17964 13522 200 -1
+De 0 0 53 0 0
+Po 0 17750 13950 17750 13736 200 -1
+De 0 0 53 0 800
+Po 0 17213 12545 16978 12545 200 -1
+De 0 0 53 0 0
+Po 0 17213 11968 17213 12545 200 -1
+De 0 0 53 0 800
+Po 0 17250 13736 17750 13736 200 -1
+De 0 0 53 0 0
+Po 0 14250 13522 14250 13950 200 -1
+De 0 0 54 0 400
+Po 0 14750 13522 14250 13522 200 -1
+De 0 0 54 0 0
+Po 0 14750 13736 14750 13522 200 -1
+De 0 0 54 0 0
+Po 0 15250 13736 15750 13736 200 -1
+De 0 0 54 0 0
+Po 0 16031 11968 16031 12545 200 -1
+De 0 0 54 0 800
+Po 0 14750 13950 14750 13736 200 -1
+De 0 0 54 0 800
+Po 0 16425 12545 16031 12545 200 -1
+De 0 0 54 0 0
+Po 0 16425 11968 16425 12545 200 -1
+De 0 0 54 0 800
+Po 0 15750 13522 15750 13736 200 -1
+De 0 0 54 0 0
+Po 0 16031 13241 15750 13522 200 -1
+De 0 0 54 0 0
+Po 0 16031 12545 16031 13241 200 -1
+De 0 0 54 0 0
+Po 0 15750 13736 15750 13950 200 -1
+De 0 0 54 0 400
+Po 0 15250 13950 15250 13736 200 -1
+De 0 0 54 0 800
+Po 0 14964 13522 14750 13736 200 -1
+De 0 0 54 0 0
+Po 0 15250 13522 14964 13522 200 -1
+De 0 0 54 0 0
+Po 0 15250 13736 15250 13522 200 -1
+De 0 0 54 0 0
+Po 0 32250 45550 32250 45764 200 -1
+De 0 0 55 0 800
+Po 0 31250 45550 31250 45764 200 -1
+De 0 0 55 0 800
+Po 0 31750 45978 31750 45764 200 -1
+De 0 0 55 0 0
+Po 0 32036 45978 31750 45978 200 -1
+De 0 0 55 0 0
+Po 0 32250 45764 32036 45978 200 -1
+De 0 0 55 0 0
+Po 0 32750 45978 32750 45550 200 -1
+De 0 0 55 0 400
+Po 0 32250 45978 32750 45978 200 -1
+De 0 0 55 0 0
+Po 0 32250 45764 32250 45978 200 -1
+De 0 0 55 0 0
+Po 0 31250 45978 31250 45764 200 -1
+De 0 0 55 0 0
+Po 0 30500 46728 31250 45978 200 -1
+De 0 0 55 0 0
+Po 0 30500 48000 30500 46728 200 -1
+De 0 0 55 0 800
+Po 0 31750 45550 31750 45764 200 -1
+De 0 0 55 0 800
+Po 0 31750 45764 31250 45764 200 -1
+De 0 0 55 0 0
+Po 0 38250 33000 38500 33250 80 -1
+De 15 0 56 0 0
+Po 0 38250 33000 37750 33000 80 -1
+De 15 0 56 0 0
+Po 0 36419 31669 37750 33000 80 -1
+De 15 0 56 0 0
+Po 0 38500 33250 38500 34002 80 -1
+De 15 0 56 0 0
+Po 0 44974 42250 45500 42250 80 -1
+De 15 0 56 0 400
+Po 0 38500 34002 44307 39809 80 -1
+De 15 0 56 0 0
+Po 0 44307 39809 44307 41583 80 -1
+De 15 0 56 0 0
+Po 0 44307 41583 44974 42250 80 -1
+De 15 0 56 0 0
+Po 0 35098 31669 36419 31669 80 -1
+De 15 0 56 0 0
+Po 0 33329 29900 35098 31669 80 -1
+De 15 0 56 0 0
+Po 0 32825 29900 33329 29900 80 -1
+De 15 0 56 0 800
+Po 0 38802 32449 38699 32449 80 -1
+De 15 0 57 0 0
+Po 0 37587 32000 35531 29944 80 -1
+De 15 0 57 0 0
+Po 0 38250 32000 37587 32000 80 -1
+De 15 0 57 0 0
+Po 0 38699 32449 38250 32000 80 -1
+De 15 0 57 0 0
+Po 0 45088 41250 45500 41250 80 -1
+De 15 0 57 0 400
+Po 0 44632 40794 45088 41250 80 -1
+De 15 0 57 0 0
+Po 0 44632 38279 44632 40794 80 -1
+De 15 0 57 0 0
+Po 0 38802 32449 44632 38279 80 -1
+De 15 0 57 0 0
+Po 0 33707 29944 35531 29944 80 -1
+De 15 0 57 0 0
+Po 0 33268 29505 33707 29944 80 -1
+De 15 0 57 0 0
+Po 0 32825 29505 33268 29505 80 -1
+De 15 0 57 0 800
+Po 3 32623 34561 32623 34561 350 -1
+De 15 1 58 0 0
+Po 3 30150 37415 30150 37415 350 -1
+De 15 1 58 0 0
+Po 0 32623 34942 30150 37415 80 -1
+De 0 0 58 0 0
+Po 0 32623 34561 32623 34942 80 -1
+De 0 0 58 0 0
+Po 0 32767 40032 30150 37415 80 -1
+De 15 0 58 0 0
+Po 0 32767 43351 32767 40032 80 -1
+De 15 0 58 0 0
+Po 0 32368 43750 32767 43351 80 -1
+De 15 0 58 0 0
+Po 0 32000 43750 32368 43750 80 -1
+De 15 0 58 0 800
+Po 0 32341 28720 32825 28720 80 -1
+De 15 0 58 0 400
+Po 0 32330 28731 32341 28720 80 -1
+De 15 0 58 0 0
+Po 0 30221 28731 32330 28731 80 -1
+De 15 0 58 0 0
+Po 0 28555 30397 30221 28731 80 -1
+De 15 0 58 0 0
+Po 0 28555 31141 28555 30397 80 -1
+De 15 0 58 0 0
+Po 0 29883 32469 28555 31141 80 -1
+De 15 0 58 0 0
+Po 0 31173 32469 29883 32469 80 -1
+De 15 0 58 0 0
+Po 0 31801 33097 31173 32469 80 -1
+De 15 0 58 0 0
+Po 0 31801 33279 31801 33097 80 -1
+De 15 0 58 0 0
+Po 0 32623 34101 31801 33279 80 -1
+De 15 0 58 0 0
+Po 0 32623 34561 32623 34101 80 -1
+De 15 0 58 0 0
+Po 0 26630 24182 26630 25675 80 -1
+De 15 0 59 0 400
+Po 0 26666 24146 26630 24182 80 -1
+De 15 0 59 0 0
+Po 0 26666 21262 26666 24146 80 -1
+De 15 0 59 0 0
+Po 0 26847 21081 26666 21262 80 -1
+De 15 0 59 0 0
+Po 0 27858 21081 26847 21081 80 -1
+De 15 0 59 0 0
+Po 0 27944 21167 27858 21081 80 -1
+De 15 0 59 0 0
+Po 0 27944 24489 27944 21167 80 -1
+De 15 0 59 0 0
+Po 0 27615 24818 27944 24489 80 -1
+De 15 0 59 0 0
+Po 0 27615 25675 27615 24818 80 -1
+De 15 0 59 0 800
+Po 0 17250 13632 17250 14000 80 -1
+De 15 0 59 0 400
+Po 0 19036 13632 17250 13632 80 -1
+De 15 0 59 0 0
+Po 0 26666 21262 19036 13632 80 -1
+De 15 0 59 0 0
+Po 3 24761 27385 24761 27385 350 -1
+De 15 1 60 0 0
+Po 3 13433 35672 13433 35672 350 -1
+De 15 1 60 0 0
+Po 0 10607 32846 13433 35672 80 -1
+De 0 0 60 0 0
+Po 0 10607 20530 10607 32846 80 -1
+De 0 0 60 0 0
+Po 0 11763 19374 10607 20530 80 -1
+De 0 0 60 0 0
+Po 0 19433 19374 11763 19374 80 -1
+De 0 0 60 0 0
+Po 0 24443 24384 19433 19374 80 -1
+De 0 0 60 0 0
+Po 0 24443 27067 24443 24384 80 -1
+De 0 0 60 0 0
+Po 0 24761 27385 24443 27067 80 -1
+De 0 0 60 0 0
+Po 0 14000 36239 13433 35672 80 -1
+De 15 0 60 0 0
+Po 0 14000 38750 14000 36239 80 -1
+De 15 0 60 0 800
+Po 0 24618 27528 24761 27385 80 -1
+De 15 0 60 0 0
+Po 0 24618 27540 24618 27528 80 -1
+De 15 0 60 0 0
+Po 0 24175 27540 24618 27540 80 -1
+De 15 0 60 0 800
+Po 0 13632 40750 14000 40750 80 -1
+De 15 0 61 0 400
+Po 0 13435 40553 13632 40750 80 -1
+De 15 0 61 0 0
+Po 0 13435 36595 13435 40553 80 -1
+De 15 0 61 0 0
+Po 0 12588 35748 13435 36595 80 -1
+De 15 0 61 0 0
+Po 0 10729 35748 12588 35748 80 -1
+De 15 0 61 0 0
+Po 0 10707 35726 10729 35748 80 -1
+De 15 0 61 0 0
+Po 0 10707 29902 10707 35726 80 -1
+De 15 0 61 0 0
+Po 0 11665 28944 10707 29902 80 -1
+De 15 0 61 0 0
+Po 0 19611 28944 11665 28944 80 -1
+De 15 0 61 0 0
+Po 0 19858 28697 19611 28944 80 -1
+De 15 0 61 0 0
+Po 0 21162 28697 19858 28697 80 -1
+De 15 0 61 0 0
+Po 0 21636 28223 21162 28697 80 -1
+De 15 0 61 0 0
+Po 0 22981 28223 21636 28223 80 -1
+De 15 0 61 0 0
+Po 0 23469 27735 22981 28223 80 -1
+De 15 0 61 0 0
+Po 0 24175 27735 23469 27735 80 -1
+De 15 0 61 0 800
+Po 3 20774 24894 20774 24894 350 -1
+De 15 1 62 0 0
+Po 3 24773 28054 24773 28054 350 -1
+De 15 1 62 0 0
+Po 0 21613 24894 20774 24894 80 -1
+De 0 0 62 0 0
+Po 0 24773 28054 21613 24894 80 -1
+De 0 0 62 0 0
+Po 0 24618 28209 24773 28054 80 -1
+De 15 0 62 0 0
+Po 0 24618 28325 24618 28209 80 -1
+De 15 0 62 0 0
+Po 0 24175 28325 24618 28325 80 -1
+De 15 0 62 0 800
+Po 0 13632 43250 14000 43250 80 -1
+De 15 0 62 0 400
+Po 0 13244 42862 13632 43250 80 -1
+De 15 0 62 0 0
+Po 0 13244 36665 13244 42862 80 -1
+De 15 0 62 0 0
+Po 0 12515 35936 13244 36665 80 -1
+De 15 0 62 0 0
+Po 0 10542 35936 12515 35936 80 -1
+De 15 0 62 0 0
+Po 0 10520 35914 10542 35936 80 -1
+De 15 0 62 0 0
+Po 0 10520 29153 10520 35914 80 -1
+De 15 0 62 0 0
+Po 0 14505 25168 10520 29153 80 -1
+De 15 0 62 0 0
+Po 0 20500 25168 14505 25168 80 -1
+De 15 0 62 0 0
+Po 0 20774 24894 20500 25168 80 -1
+De 15 0 62 0 0
+Po 3 25000 33736 25000 33736 350 -1
+De 15 1 63 0 0
+Po 3 25000 39364 25000 39364 350 -1
+De 15 1 63 0 0
+Po 0 30250 41045 30250 41500 80 -1
+De 15 0 63 0 400
+Po 0 29656 40451 30250 41045 80 -1
+De 15 0 63 0 0
+Po 0 26087 40451 29656 40451 80 -1
+De 15 0 63 0 0
+Po 0 25000 39364 26087 40451 80 -1
+De 15 0 63 0 0
+Po 0 25000 33736 25000 39364 80 -1
+De 0 0 63 0 0
+Po 0 25146 33882 25000 33736 80 -1
+De 15 0 63 0 0
+Po 0 26435 33882 25146 33882 80 -1
+De 15 0 63 0 0
+Po 0 26435 34325 26435 33882 80 -1
+De 15 0 63 0 800
+Po 0 27220 35226 27220 34325 80 -1
 De 15 0 64 0 400
-Po 0 26772 46061 26750 46039 80 -1
+Po 0 26892 35554 27220 35226 80 -1
 De 15 0 64 0 0
-Po 0 32802 46061 26772 46061 80 -1
+Po 0 26892 36522 26892 35554 80 -1
 De 15 0 64 0 0
-Po 0 33316 45547 32802 46061 80 -1
+Po 0 27806 37436 26892 36522 80 -1
 De 15 0 64 0 0
-Po 0 33316 39464 33316 45547 80 -1
+Po 0 28272 37436 27806 37436 80 -1
 De 15 0 64 0 0
-Po 0 28620 34768 33316 39464 80 -1
+Po 0 28707 37871 28272 37436 80 -1
 De 15 0 64 0 0
-Po 0 28005 34768 28620 34768 80 -1
+Po 0 28707 38825 28707 37871 80 -1
 De 15 0 64 0 0
-Po 0 28005 34325 28005 34768 80 -1
+Po 0 31632 41750 28707 38825 80 -1
+De 15 0 64 0 0
+Po 0 32000 41750 31632 41750 80 -1
 De 15 0 64 0 800
 Po 0 28750 45868 28750 45500 80 -1
 De 15 0 65 0 400
@@ -12292,149 +12292,161 @@ Po 0 27415 34941 27437 34963 80 -1
 De 15 0 65 0 0
 Po 0 27415 34325 27415 34941 80 -1
 De 15 0 65 0 800
-Po 0 27220 35226 27220 34325 80 -1
+Po 0 26750 46039 26750 45500 80 -1
 De 15 0 66 0 400
-Po 0 26892 35554 27220 35226 80 -1
+Po 0 26772 46061 26750 46039 80 -1
 De 15 0 66 0 0
-Po 0 26892 36522 26892 35554 80 -1
+Po 0 32802 46061 26772 46061 80 -1
 De 15 0 66 0 0
-Po 0 27806 37436 26892 36522 80 -1
+Po 0 33316 45547 32802 46061 80 -1
 De 15 0 66 0 0
-Po 0 28272 37436 27806 37436 80 -1
+Po 0 33316 39464 33316 45547 80 -1
 De 15 0 66 0 0
-Po 0 28707 37871 28272 37436 80 -1
+Po 0 28620 34768 33316 39464 80 -1
 De 15 0 66 0 0
-Po 0 28707 38825 28707 37871 80 -1
+Po 0 28005 34768 28620 34768 80 -1
 De 15 0 66 0 0
-Po 0 31632 41750 28707 38825 80 -1
-De 15 0 66 0 0
-Po 0 32000 41750 31632 41750 80 -1
+Po 0 28005 34325 28005 34768 80 -1
 De 15 0 66 0 800
-Po 3 25000 33736 25000 33736 350 -1
-De 15 1 67 0 0
-Po 3 25000 39364 25000 39364 350 -1
-De 15 1 67 0 0
-Po 0 30250 41045 30250 41500 80 -1
-De 15 0 67 0 400
-Po 0 29656 40451 30250 41045 80 -1
-De 15 0 67 0 0
-Po 0 26087 40451 29656 40451 80 -1
-De 15 0 67 0 0
-Po 0 25000 39364 26087 40451 80 -1
-De 15 0 67 0 0
-Po 0 25000 33736 25000 39364 80 -1
+Po 0 44050 45250 44264 45250 200 -1
+De 0 0 67 0 800
+Po 0 47672 41283 48455 40500 200 -1
 De 0 0 67 0 0
-Po 0 25146 33882 25000 33736 80 -1
-De 15 0 67 0 0
-Po 0 26435 33882 25146 33882 80 -1
-De 15 0 67 0 0
-Po 0 26435 34325 26435 33882 80 -1
-De 15 0 67 0 800
-Po 0 32250 45550 32250 45764 200 -1
+Po 0 47672 42647 47672 41283 200 -1
+De 0 0 67 0 0
+Po 0 45569 44750 47672 42647 200 -1
+De 0 0 67 0 0
+Po 0 44478 44750 45569 44750 200 -1
+De 0 0 67 0 0
+Po 0 44478 45036 44264 45250 200 -1
+De 0 0 67 0 0
+Po 0 44478 44750 44478 45036 200 -1
+De 0 0 67 0 0
+Po 0 44050 44750 44478 44750 200 -1
+De 0 0 67 0 800
+Po 0 44264 45250 44264 45750 200 -1
+De 0 0 67 0 0
+Po 0 48455 40106 48455 40500 200 -1
+De 0 0 67 0 0
+Po 0 49032 40106 48455 40106 200 -1
+De 0 0 67 0 800
+Po 0 49032 40500 48455 40500 200 -1
+De 0 0 67 0 800
+Po 0 44478 45964 44264 45750 200 -1
+De 0 0 67 0 0
+Po 0 44478 46250 44478 45964 200 -1
+De 0 0 67 0 0
+Po 0 44050 46250 44478 46250 200 -1
+De 0 0 67 0 800
+Po 0 44264 45750 44050 45750 200 -1
+De 0 0 67 0 400
+Po 0 45764 39750 45764 40250 200 -1
+De 0 0 68 0 0
+Po 0 45550 39750 45764 39750 200 -1
 De 0 0 68 0 800
-Po 0 31250 45550 31250 45764 200 -1
+Po 0 45550 40250 45764 40250 200 -1
 De 0 0 68 0 800
-Po 0 31750 45978 31750 45764 200 -1
+Po 0 48455 38531 48455 38925 200 -1
 De 0 0 68 0 0
-Po 0 32036 45978 31750 45978 200 -1
-De 0 0 68 0 0
-Po 0 32250 45764 32036 45978 200 -1
-De 0 0 68 0 0
-Po 0 32750 45978 32750 45550 200 -1
+Po 0 49032 38531 48455 38531 200 -1
+De 0 0 68 0 800
+Po 0 49032 38925 48455 38925 200 -1
+De 0 0 68 0 800
+Po 0 45978 41250 45550 41250 200 -1
 De 0 0 68 0 400
-Po 0 32250 45978 32750 45978 200 -1
+Po 0 45978 40964 45978 41250 200 -1
 De 0 0 68 0 0
-Po 0 32250 45764 32250 45978 200 -1
+Po 0 45764 40750 45978 40964 200 -1
 De 0 0 68 0 0
-Po 0 31250 45978 31250 45764 200 -1
-De 0 0 68 0 0
-Po 0 30500 46728 31250 45978 200 -1
-De 0 0 68 0 0
-Po 0 30500 48000 30500 46728 200 -1
+Po 0 45550 40750 45764 40750 200 -1
 De 0 0 68 0 800
-Po 0 31750 45550 31750 45764 200 -1
-De 0 0 68 0 800
-Po 0 31750 45764 31250 45764 200 -1
+Po 0 45764 40250 45764 40750 200 -1
 De 0 0 68 0 0
-Po 3 20561 28379 20561 28379 350 -1
-De 15 1 69 0 0
-Po 3 18687 27192 18687 27192 350 -1
-De 15 1 69 0 0
-Po 0 25072 30311 25625 30311 80 -1
-De 0 0 69 0 400
-Po 0 24965 30418 25072 30311 80 -1
-De 0 0 69 0 0
-Po 0 22600 30418 24965 30418 80 -1
-De 0 0 69 0 0
-Po 0 20561 28379 22600 30418 80 -1
-De 0 0 69 0 0
-Po 0 18687 20227 18687 27192 80 -1
-De 0 0 69 0 0
-Po 0 18299 19839 18687 20227 80 -1
-De 0 0 69 0 800
-Po 0 19374 27192 20561 28379 80 -1
-De 15 0 69 0 0
-Po 0 18687 27192 19374 27192 80 -1
-De 15 0 69 0 0
-Po 0 28098 33809 28098 33311 80 -1
-De 0 0 70 0 400
-Po 0 29726 35437 28098 33809 80 -1
-De 0 0 70 0 0
-Po 0 29726 36773 29726 35437 80 -1
-De 0 0 70 0 0
-Po 0 28310 38189 29726 36773 80 -1
-De 0 0 70 0 0
-Po 0 28310 42109 28310 38189 80 -1
-De 0 0 70 0 0
-Po 0 27994 42425 28310 42109 80 -1
-De 0 0 70 0 0
-Po 0 27994 44328 27994 42425 80 -1
-De 0 0 70 0 0
-Po 0 27972 44350 27994 44328 80 -1
-De 0 0 70 0 0
-Po 0 26120 44350 27972 44350 80 -1
-De 0 0 70 0 0
-Po 0 24849 45621 26120 44350 80 -1
-De 0 0 70 0 0
-Po 0 24128 45621 24849 45621 80 -1
-De 0 0 70 0 0
-Po 0 20419 41912 24128 45621 80 -1
-De 0 0 70 0 0
-Po 0 20419 35088 20419 41912 80 -1
-De 0 0 70 0 0
-Po 0 20397 35066 20419 35088 80 -1
-De 0 0 70 0 0
-Po 0 19380 35066 20397 35066 80 -1
-De 0 0 70 0 0
-Po 0 18062 33748 19380 35066 80 -1
-De 0 0 70 0 0
-Po 0 18062 31742 18062 33748 80 -1
-De 0 0 70 0 0
-Po 0 16425 30105 18062 31742 80 -1
-De 0 0 70 0 0
-Po 0 11976 30105 16425 30105 80 -1
-De 0 0 70 0 0
-Po 0 10973 29102 11976 30105 80 -1
-De 0 0 70 0 0
-Po 0 10973 24016 10973 29102 80 -1
-De 0 0 70 0 0
-Po 0 15150 19839 10973 24016 80 -1
-De 0 0 70 0 800
+Po 0 46803 38925 48455 38925 200 -1
+De 0 0 68 0 0
+Po 0 45978 39750 46803 38925 200 -1
+De 0 0 68 0 0
+Po 0 45764 39750 45978 39750 200 -1
+De 0 0 68 0 0
 Po 0 31687 31489 30311 31489 80 -1
-De 0 0 71 0 400
+De 0 0 69 0 400
 Po 0 38588 24588 31687 31489 80 -1
-De 0 0 71 0 0
+De 0 0 69 0 0
 Po 0 39131 24588 38588 24588 80 -1
-De 0 0 71 0 0
+De 0 0 69 0 0
 Po 0 41969 21750 39131 24588 80 -1
-De 0 0 71 0 0
+De 0 0 69 0 0
 Po 0 41969 15076 41969 21750 80 -1
-De 0 0 71 0 0
+De 0 0 69 0 0
 Po 0 41991 15054 41969 15076 80 -1
-De 0 0 71 0 0
+De 0 0 69 0 0
 Po 0 45904 15054 41991 15054 80 -1
-De 0 0 71 0 0
+De 0 0 69 0 0
 Po 0 46350 15500 45904 15054 80 -1
+De 0 0 69 0 800
+Po 3 20561 28379 20561 28379 350 -1
+De 15 1 70 0 0
+Po 3 18687 27192 18687 27192 350 -1
+De 15 1 70 0 0
+Po 0 25072 30311 25625 30311 80 -1
+De 0 0 70 0 400
+Po 0 24965 30418 25072 30311 80 -1
+De 0 0 70 0 0
+Po 0 22600 30418 24965 30418 80 -1
+De 0 0 70 0 0
+Po 0 20561 28379 22600 30418 80 -1
+De 0 0 70 0 0
+Po 0 18687 20227 18687 27192 80 -1
+De 0 0 70 0 0
+Po 0 18299 19839 18687 20227 80 -1
+De 0 0 70 0 800
+Po 0 19374 27192 20561 28379 80 -1
+De 15 0 70 0 0
+Po 0 18687 27192 19374 27192 80 -1
+De 15 0 70 0 0
+Po 0 19282 34968 20468 34968 80 -1
+De 0 0 71 0 0
+Po 0 20500 35000 20500 41993 80 -1
+De 0 0 71 0 0
+Po 0 20468 34968 20500 35000 80 -1
+De 0 0 71 0 0
+Po 0 28098 33809 28098 33311 80 -1
+De 0 0 71 0 400
+Po 0 20500 41993 24128 45621 80 -1
+De 0 0 71 0 0
+Po 0 24128 45621 24849 45621 80 -1
+De 0 0 71 0 0
+Po 0 24849 45621 26120 44350 80 -1
+De 0 0 71 0 0
+Po 0 26120 44350 27972 44350 80 -1
+De 0 0 71 0 0
+Po 0 27972 44350 27994 44328 80 -1
+De 0 0 71 0 0
+Po 0 27994 44328 27994 42425 80 -1
+De 0 0 71 0 0
+Po 0 27994 42425 28310 42109 80 -1
+De 0 0 71 0 0
+Po 0 28310 42109 28310 38189 80 -1
+De 0 0 71 0 0
+Po 0 28310 38189 29726 36773 80 -1
+De 0 0 71 0 0
+Po 0 29726 36773 29726 35437 80 -1
+De 0 0 71 0 0
+Po 0 29726 35437 28098 33809 80 -1
+De 0 0 71 0 0
+Po 0 18062 33748 19282 34968 80 -1
+De 0 0 71 0 0
+Po 0 18062 31742 18062 33748 80 -1
+De 0 0 71 0 0
+Po 0 16425 30105 18062 31742 80 -1
+De 0 0 71 0 0
+Po 0 11976 30105 16425 30105 80 -1
+De 0 0 71 0 0
+Po 0 10973 29102 11976 30105 80 -1
+De 0 0 71 0 0
+Po 0 10973 24016 10973 29102 80 -1
+De 0 0 71 0 0
+Po 0 15150 19839 10973 24016 80 -1
 De 0 0 71 0 800
 Po 0 45603 24908 46350 24161 80 -1
 De 0 0 72 0 400
@@ -12468,21 +12480,57 @@ Po 0 24477 46463 24762 46178 80 -1
 De 15 0 73 0 0
 Po 0 24477 47000 24477 46463 80 -1
 De 15 0 73 0 800
-Po 3 29011 22449 29011 22449 350 -1
-De 15 1 74 0 0
+Po 0 37163 35750 37163 35587 80 -1
+De 0 0 74 0 0
+Po 0 29476 27935 29476 28625 80 -1
+De 0 0 74 0 400
+Po 0 29476 27935 29193 27652 80 -1
+De 0 0 74 0 0
+Po 0 29193 27652 29193 25648 80 -1
+De 0 0 74 0 0
+Po 0 29193 25648 29677 25164 80 -1
+De 0 0 74 0 0
+Po 0 29677 25164 29677 23115 80 -1
+De 0 0 74 0 0
+Po 0 29677 23115 29011 22449 80 -1
+De 0 0 74 0 0
+Po 0 39017 29926 38506 29415 80 -1
+De 15 0 74 0 0
+Po 0 38506 29415 38506 23192 80 -1
+De 15 0 74 0 0
+Po 0 38506 23192 38704 22994 80 -1
+De 15 0 74 0 0
+Po 0 38704 22994 42808 22994 80 -1
+De 15 0 74 0 0
+Po 0 42808 22994 49944 15858 80 -1
+De 15 0 74 0 0
+Po 0 49944 15858 49944 14514 80 -1
+De 15 0 74 0 0
+Po 0 49944 14514 47076 11646 80 -1
+De 15 0 74 0 0
+Po 0 47076 11646 36219 11646 80 -1
+De 15 0 74 0 0
+Po 0 36219 11646 29859 18006 80 -1
+De 15 0 74 0 0
+Po 0 29859 18006 29859 21601 80 -1
+De 15 0 74 0 0
+Po 0 29859 21601 29011 22449 80 -1
+De 15 0 74 0 0
+Po 0 39017 34483 39017 29926 80 -1
+De 0 0 74 0 0
 Po 3 39017 29926 39017 29926 350 -1
 De 15 1 74 0 0
+Po 3 29011 22449 29011 22449 350 -1
+De 15 1 74 0 0
+Po 0 37750 35000 38500 35000 80 -1
+De 0 0 74 0 0
+Po 0 38500 35000 39017 34483 80 -1
+De 0 0 74 0 0
+Po 0 37163 35587 37750 35000 80 -1
+De 0 0 74 0 0
 Po 3 24784 47671 24784 47671 350 -1
 De 15 1 74 0 0
-Po 0 39017 34307 39017 29926 80 -1
-De 0 0 74 0 0
-Po 0 38397 34927 39017 34307 80 -1
-De 0 0 74 0 0
-Po 0 37921 34927 38397 34927 80 -1
-De 0 0 74 0 0
-Po 0 37163 35685 37921 34927 80 -1
-De 0 0 74 0 0
-Po 0 37163 41388 37163 35685 80 -1
+Po 0 37163 41388 37163 35750 80 -1
 De 0 0 74 0 0
 Po 0 33907 44644 37163 41388 80 -1
 De 0 0 74 0 0
@@ -12498,40 +12546,6 @@ Po 0 24969 47536 24919 47536 80 -1
 De 15 0 74 0 0
 Po 0 24969 47000 24969 47536 80 -1
 De 15 0 74 0 800
-Po 0 29859 21601 29011 22449 80 -1
-De 15 0 74 0 0
-Po 0 29859 18006 29859 21601 80 -1
-De 15 0 74 0 0
-Po 0 36219 11646 29859 18006 80 -1
-De 15 0 74 0 0
-Po 0 47076 11646 36219 11646 80 -1
-De 15 0 74 0 0
-Po 0 49944 14514 47076 11646 80 -1
-De 15 0 74 0 0
-Po 0 49944 15858 49944 14514 80 -1
-De 15 0 74 0 0
-Po 0 42808 22994 49944 15858 80 -1
-De 15 0 74 0 0
-Po 0 38704 22994 42808 22994 80 -1
-De 15 0 74 0 0
-Po 0 38506 23192 38704 22994 80 -1
-De 15 0 74 0 0
-Po 0 38506 29415 38506 23192 80 -1
-De 15 0 74 0 0
-Po 0 39017 29926 38506 29415 80 -1
-De 15 0 74 0 0
-Po 0 29677 23115 29011 22449 80 -1
-De 0 0 74 0 0
-Po 0 29677 25164 29677 23115 80 -1
-De 0 0 74 0 0
-Po 0 29193 25648 29677 25164 80 -1
-De 0 0 74 0 0
-Po 0 29193 27652 29193 25648 80 -1
-De 0 0 74 0 0
-Po 0 29476 27935 29193 27652 80 -1
-De 0 0 74 0 0
-Po 0 29476 28625 29476 27935 80 -1
-De 0 0 74 0 800
 Po 3 26689 27819 26689 27819 350 -1
 De 15 1 75 0 0
 Po 0 26630 27819 26689 27819 80 -1
@@ -12796,237 +12810,237 @@ Po 0 14035 28040 22230 28040 80 -1
 De 0 0 88 0 0
 Po 0 13575 28500 14035 28040 80 -1
 De 0 0 88 0 800
-Po 0 45550 43250 45764 43250 200 -1
-De 0 0 89 0 800
-Po 0 45764 42750 45764 43250 200 -1
-De 0 0 89 0 0
-Po 0 48531 39319 49032 39319 200 -1
-De 0 0 89 0 400
-Po 0 48456 39394 48531 39319 200 -1
-De 0 0 89 0 0
-Po 0 48456 39638 48456 39394 200 -1
-De 0 0 89 0 0
-Po 0 45764 42250 45764 42750 200 -1
-De 0 0 89 0 0
-Po 0 45550 42750 45764 42750 200 -1
-De 0 0 89 0 800
-Po 0 45978 43464 45764 43250 200 -1
-De 0 0 89 0 0
-Po 0 45978 43750 45978 43464 200 -1
-De 0 0 89 0 0
-Po 0 45550 43750 45978 43750 200 -1
-De 0 0 89 0 800
-Po 0 48531 39713 48456 39638 200 -1
-De 0 0 89 0 0
-Po 0 49032 39713 48531 39713 200 -1
-De 0 0 89 0 800
-Po 0 45550 42250 45764 42250 200 -1
-De 0 0 89 0 800
-Po 0 45978 42116 48456 39638 200 -1
-De 0 0 89 0 0
-Po 0 45978 42250 45978 42116 200 -1
-De 0 0 89 0 0
-Po 0 45764 42250 45978 42250 200 -1
-De 0 0 89 0 0
-Po 3 16427 30607 16427 30607 350 -1
-De 15 1 90 0 0
-Po 0 16179 30855 16427 30607 80 -1
-De 0 0 90 0 0
-Po 0 16179 34347 16179 30855 80 -1
-De 0 0 90 0 0
-Po 0 12813 37713 16179 34347 80 -1
-De 0 0 90 0 0
-Po 0 11968 37713 12813 37713 80 -1
-De 0 0 90 0 800
-Po 0 17540 29494 16427 30607 80 -1
-De 15 0 90 0 0
-Po 0 20102 29494 17540 29494 80 -1
-De 15 0 90 0 0
-Po 0 20350 29246 20102 29494 80 -1
-De 15 0 90 0 0
-Po 0 21394 29246 20350 29246 80 -1
-De 15 0 90 0 0
-Po 0 21640 29000 21394 29246 80 -1
-De 15 0 90 0 0
-Po 0 21850 29000 21640 29000 80 -1
-De 15 0 90 0 800
-Po 0 13950 38750 13736 38750 200 -1
-De 0 0 91 0 800
-Po 0 13522 39250 13736 39250 200 -1
-De 0 0 91 0 0
-Po 0 13522 39750 13522 39250 200 -1
-De 0 0 91 0 0
-Po 0 13950 39750 13522 39750 200 -1
-De 0 0 91 0 800
-Po 0 12545 38500 12545 38697 200 -1
-De 0 0 91 0 0
-Po 0 11968 38500 12545 38500 200 -1
-De 0 0 91 0 800
-Po 0 12545 38894 12545 38697 200 -1
-De 0 0 91 0 0
-Po 0 11968 38894 12545 38894 200 -1
-De 0 0 91 0 800
-Po 0 12545 38697 13522 38697 200 -1
-De 0 0 91 0 0
-Po 0 13522 38464 13522 38697 200 -1
-De 0 0 91 0 0
-Po 0 13736 38250 13522 38464 200 -1
-De 0 0 91 0 0
-Po 0 13950 38250 13736 38250 200 -1
-De 0 0 91 0 800
-Po 0 13522 38750 13736 38750 200 -1
-De 0 0 91 0 0
-Po 0 13522 38697 13522 38750 200 -1
-De 0 0 91 0 0
-Po 0 13950 39250 13736 39250 200 -1
-De 0 0 91 0 800
-Po 0 13736 39250 13736 38750 200 -1
-De 0 0 91 0 0
-Po 3 22142 17964 22142 17964 350 -1
-De 15 1 92 0 0
-Po 0 22843 18665 22142 17964 80 -1
-De 15 0 92 0 0
-Po 0 22843 23750 22843 18665 80 -1
-De 15 0 92 0 0
-Po 0 22600 23750 22843 23750 80 -1
-De 15 0 92 0 800
-Po 0 19181 12660 19181 11968 80 -1
-De 0 0 92 0 400
-Po 0 19203 12682 19181 12660 80 -1
-De 0 0 92 0 0
-Po 0 20617 12682 19203 12682 80 -1
-De 0 0 92 0 0
-Po 0 22142 14207 20617 12682 80 -1
-De 0 0 92 0 0
-Po 0 22142 17964 22142 14207 80 -1
-De 0 0 92 0 0
 Po 3 21532 17977 21532 17977 350 -1
-De 15 1 93 0 0
+De 15 1 89 0 0
 Po 0 21532 21961 21532 17977 80 -1
-De 15 0 93 0 0
+De 15 0 89 0 0
 Po 0 22600 23029 21532 21961 80 -1
-De 15 0 93 0 0
+De 15 0 89 0 0
 Po 0 22600 23250 22600 23029 80 -1
-De 15 0 93 0 800
+De 15 0 89 0 800
 Po 0 21532 13858 21532 17977 80 -1
-De 0 0 93 0 0
+De 0 0 89 0 0
 Po 0 20871 13197 21532 13858 80 -1
-De 0 0 93 0 0
+De 0 0 89 0 0
 Po 0 19419 13197 20871 13197 80 -1
-De 0 0 93 0 0
+De 0 0 89 0 0
 Po 0 18787 12565 19419 13197 80 -1
-De 0 0 93 0 0
+De 0 0 89 0 0
 Po 0 18787 11968 18787 12565 80 -1
-De 0 0 93 0 800
-Po 3 36535 14840 36535 14840 350 -1
-De 15 1 94 0 0
-Po 0 30750 20625 36535 14840 80 -1
-De 15 0 94 0 0
-Po 0 30750 22100 30750 20625 80 -1
-De 15 0 94 0 800
-Po 0 38075 12485 38075 11968 80 -1
-De 0 0 94 0 400
-Po 0 38152 12485 38075 12485 80 -1
-De 0 0 94 0 0
-Po 0 39076 13409 38152 12485 80 -1
-De 0 0 94 0 0
-Po 0 39076 14190 39076 13409 80 -1
-De 0 0 94 0 0
-Po 0 38426 14840 39076 14190 80 -1
-De 0 0 94 0 0
-Po 0 36535 14840 38426 14840 80 -1
-De 0 0 94 0 0
-Po 0 32750 13950 32750 13736 200 -1
-De 0 0 95 0 800
-Po 0 33750 13037 33750 13522 200 -1
-De 0 0 95 0 0
-Po 0 34531 12256 33750 13037 200 -1
-De 0 0 95 0 0
-Po 0 32750 13736 33250 13736 200 -1
-De 0 0 95 0 0
-Po 0 32750 13522 32750 13736 200 -1
-De 0 0 95 0 0
-Po 0 32250 13522 32750 13522 200 -1
-De 0 0 95 0 0
-Po 0 32250 13950 32250 13522 200 -1
-De 0 0 95 0 800
-Po 0 33750 13950 33750 13522 200 -1
-De 0 0 95 0 800
-Po 0 34531 11968 34531 12256 200 -1
-De 0 0 95 0 800
-Po 0 34925 12545 34925 11968 200 -1
-De 0 0 95 0 400
-Po 0 34531 12545 34925 12545 200 -1
-De 0 0 95 0 0
-Po 0 34531 12256 34531 12545 200 -1
-De 0 0 95 0 0
-Po 0 33250 13522 33250 13736 200 -1
-De 0 0 95 0 0
-Po 0 33750 13522 33250 13522 200 -1
-De 0 0 95 0 0
-Po 0 33250 13736 33250 13950 200 -1
-De 0 0 95 0 400
-Po 0 35713 12545 35713 13485 200 -1
-De 0 0 96 0 0
-Po 0 35462 13736 35713 13485 200 -1
-De 0 0 96 0 0
-Po 0 35250 13736 35462 13736 200 -1
-De 0 0 96 0 0
-Po 0 35713 11968 35713 12545 200 -1
-De 0 0 96 0 800
-Po 0 35319 12545 35319 11968 200 -1
-De 0 0 96 0 400
-Po 0 35713 12545 35319 12545 200 -1
-De 0 0 96 0 0
-Po 0 35750 13950 35750 13522 200 -1
-De 0 0 96 0 800
-Po 0 35250 13950 35250 13736 200 -1
-De 0 0 96 0 800
-Po 0 36250 13522 35750 13522 200 -1
-De 0 0 96 0 0
-Po 0 36250 13950 36250 13522 200 -1
-De 0 0 96 0 800
-Po 0 35713 13485 35750 13522 200 -1
-De 0 0 96 0 0
-Po 0 34750 13522 34750 13950 200 -1
-De 0 0 96 0 400
-Po 0 35250 13522 34750 13522 200 -1
-De 0 0 96 0 0
-Po 0 35250 13736 35250 13522 200 -1
-De 0 0 96 0 0
+De 0 0 89 0 800
+Po 0 13950 38750 13736 38750 200 -1
+De 0 0 90 0 800
+Po 0 13522 39250 13736 39250 200 -1
+De 0 0 90 0 0
+Po 0 13522 39750 13522 39250 200 -1
+De 0 0 90 0 0
+Po 0 13950 39750 13522 39750 200 -1
+De 0 0 90 0 800
+Po 0 12545 38500 12545 38697 200 -1
+De 0 0 90 0 0
+Po 0 11968 38500 12545 38500 200 -1
+De 0 0 90 0 800
+Po 0 12545 38894 12545 38697 200 -1
+De 0 0 90 0 0
+Po 0 11968 38894 12545 38894 200 -1
+De 0 0 90 0 800
+Po 0 12545 38697 13522 38697 200 -1
+De 0 0 90 0 0
+Po 0 13522 38464 13522 38697 200 -1
+De 0 0 90 0 0
+Po 0 13736 38250 13522 38464 200 -1
+De 0 0 90 0 0
+Po 0 13950 38250 13736 38250 200 -1
+De 0 0 90 0 800
+Po 0 13522 38750 13736 38750 200 -1
+De 0 0 90 0 0
+Po 0 13522 38697 13522 38750 200 -1
+De 0 0 90 0 0
+Po 0 13950 39250 13736 39250 200 -1
+De 0 0 90 0 800
+Po 0 13736 39250 13736 38750 200 -1
+De 0 0 90 0 0
 Po 0 37250 13736 37750 13736 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 38250 13950 38250 13930 200 -1
-De 0 0 97 0 800
+De 0 0 91 0 800
 Po 0 37250 13522 37250 13736 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 36500 12772 37250 13522 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 36500 12545 36500 12772 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 37944 13930 38250 13930 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 37750 13736 37944 13930 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 36500 11968 36500 12545 200 -1
-De 0 0 97 0 800
+De 0 0 91 0 800
 Po 0 38250 13736 38250 13930 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 38464 13522 38250 13736 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 38750 13522 38464 13522 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 38750 13950 38750 13522 200 -1
-De 0 0 97 0 800
+De 0 0 91 0 800
 Po 0 37750 13950 37750 13736 200 -1
-De 0 0 97 0 800
+De 0 0 91 0 800
 Po 0 37250 13950 37250 13736 200 -1
-De 0 0 97 0 800
+De 0 0 91 0 800
 Po 0 36106 12469 36106 11968 200 -1
-De 0 0 97 0 400
+De 0 0 91 0 400
 Po 0 36182 12545 36106 12469 200 -1
-De 0 0 97 0 0
+De 0 0 91 0 0
 Po 0 36500 12545 36182 12545 200 -1
+De 0 0 91 0 0
+Po 0 35713 12545 35713 13485 200 -1
+De 0 0 92 0 0
+Po 0 35462 13736 35713 13485 200 -1
+De 0 0 92 0 0
+Po 0 35250 13736 35462 13736 200 -1
+De 0 0 92 0 0
+Po 0 35713 11968 35713 12545 200 -1
+De 0 0 92 0 800
+Po 0 35319 12545 35319 11968 200 -1
+De 0 0 92 0 400
+Po 0 35713 12545 35319 12545 200 -1
+De 0 0 92 0 0
+Po 0 35750 13950 35750 13522 200 -1
+De 0 0 92 0 800
+Po 0 35250 13950 35250 13736 200 -1
+De 0 0 92 0 800
+Po 0 36250 13522 35750 13522 200 -1
+De 0 0 92 0 0
+Po 0 36250 13950 36250 13522 200 -1
+De 0 0 92 0 800
+Po 0 35713 13485 35750 13522 200 -1
+De 0 0 92 0 0
+Po 0 34750 13522 34750 13950 200 -1
+De 0 0 92 0 400
+Po 0 35250 13522 34750 13522 200 -1
+De 0 0 92 0 0
+Po 0 35250 13736 35250 13522 200 -1
+De 0 0 92 0 0
+Po 0 32750 13950 32750 13736 200 -1
+De 0 0 93 0 800
+Po 0 33750 13037 33750 13522 200 -1
+De 0 0 93 0 0
+Po 0 34531 12256 33750 13037 200 -1
+De 0 0 93 0 0
+Po 0 32750 13736 33250 13736 200 -1
+De 0 0 93 0 0
+Po 0 32750 13522 32750 13736 200 -1
+De 0 0 93 0 0
+Po 0 32250 13522 32750 13522 200 -1
+De 0 0 93 0 0
+Po 0 32250 13950 32250 13522 200 -1
+De 0 0 93 0 800
+Po 0 33750 13950 33750 13522 200 -1
+De 0 0 93 0 800
+Po 0 34531 11968 34531 12256 200 -1
+De 0 0 93 0 800
+Po 0 34925 12545 34925 11968 200 -1
+De 0 0 93 0 400
+Po 0 34531 12545 34925 12545 200 -1
+De 0 0 93 0 0
+Po 0 34531 12256 34531 12545 200 -1
+De 0 0 93 0 0
+Po 0 33250 13522 33250 13736 200 -1
+De 0 0 93 0 0
+Po 0 33750 13522 33250 13522 200 -1
+De 0 0 93 0 0
+Po 0 33250 13736 33250 13950 200 -1
+De 0 0 93 0 400
+Po 3 22142 17964 22142 17964 350 -1
+De 15 1 94 0 0
+Po 0 22843 18665 22142 17964 80 -1
+De 15 0 94 0 0
+Po 0 22843 23750 22843 18665 80 -1
+De 15 0 94 0 0
+Po 0 22600 23750 22843 23750 80 -1
+De 15 0 94 0 800
+Po 0 19181 12660 19181 11968 80 -1
+De 0 0 94 0 400
+Po 0 19203 12682 19181 12660 80 -1
+De 0 0 94 0 0
+Po 0 20617 12682 19203 12682 80 -1
+De 0 0 94 0 0
+Po 0 22142 14207 20617 12682 80 -1
+De 0 0 94 0 0
+Po 0 22142 17964 22142 14207 80 -1
+De 0 0 94 0 0
+Po 3 36535 14840 36535 14840 350 -1
+De 15 1 95 0 0
+Po 0 30750 20625 36535 14840 80 -1
+De 15 0 95 0 0
+Po 0 30750 22100 30750 20625 80 -1
+De 15 0 95 0 800
+Po 0 38075 12485 38075 11968 80 -1
+De 0 0 95 0 400
+Po 0 38152 12485 38075 12485 80 -1
+De 0 0 95 0 0
+Po 0 39076 13409 38152 12485 80 -1
+De 0 0 95 0 0
+Po 0 39076 14190 39076 13409 80 -1
+De 0 0 95 0 0
+Po 0 38426 14840 39076 14190 80 -1
+De 0 0 95 0 0
+Po 0 36535 14840 38426 14840 80 -1
+De 0 0 95 0 0
+Po 3 16427 30607 16427 30607 350 -1
+De 15 1 96 0 0
+Po 0 16179 30855 16427 30607 80 -1
+De 0 0 96 0 0
+Po 0 16179 34347 16179 30855 80 -1
+De 0 0 96 0 0
+Po 0 12813 37713 16179 34347 80 -1
+De 0 0 96 0 0
+Po 0 11968 37713 12813 37713 80 -1
+De 0 0 96 0 800
+Po 0 17540 29494 16427 30607 80 -1
+De 15 0 96 0 0
+Po 0 20102 29494 17540 29494 80 -1
+De 15 0 96 0 0
+Po 0 20350 29246 20102 29494 80 -1
+De 15 0 96 0 0
+Po 0 21394 29246 20350 29246 80 -1
+De 15 0 96 0 0
+Po 0 21640 29000 21394 29246 80 -1
+De 15 0 96 0 0
+Po 0 21850 29000 21640 29000 80 -1
+De 15 0 96 0 800
+Po 0 45550 43250 45764 43250 200 -1
+De 0 0 97 0 800
+Po 0 45764 42750 45764 43250 200 -1
+De 0 0 97 0 0
+Po 0 48531 39319 49032 39319 200 -1
+De 0 0 97 0 400
+Po 0 48456 39394 48531 39319 200 -1
+De 0 0 97 0 0
+Po 0 48456 39638 48456 39394 200 -1
+De 0 0 97 0 0
+Po 0 45764 42250 45764 42750 200 -1
+De 0 0 97 0 0
+Po 0 45550 42750 45764 42750 200 -1
+De 0 0 97 0 800
+Po 0 45978 43464 45764 43250 200 -1
+De 0 0 97 0 0
+Po 0 45978 43750 45978 43464 200 -1
+De 0 0 97 0 0
+Po 0 45550 43750 45978 43750 200 -1
+De 0 0 97 0 800
+Po 0 48531 39713 48456 39638 200 -1
+De 0 0 97 0 0
+Po 0 49032 39713 48531 39713 200 -1
+De 0 0 97 0 800
+Po 0 45550 42250 45764 42250 200 -1
+De 0 0 97 0 800
+Po 0 45978 42116 48456 39638 200 -1
+De 0 0 97 0 0
+Po 0 45978 42250 45978 42116 200 -1
+De 0 0 97 0 0
+Po 0 45764 42250 45978 42250 200 -1
 De 0 0 97 0 0
 Po 3 39793 25678 39793 25678 350 -1
 De 15 1 98 0 0
@@ -13918,15 +13932,19 @@ Po 0 32750 25856 33268 26374 80 -1
 De 15 0 107 0 0
 Po 0 32750 24150 32750 25856 80 -1
 De 15 0 107 0 800
+Po 0 20500 36739 20500 36750 80 -1
+De 15 0 108 0 0
+Po 0 17085 37000 14557 34472 80 -1
+De 15 0 108 0 0
+Po 0 20250 37000 17085 37000 80 -1
+De 15 0 108 0 0
+Po 0 20500 36750 20250 37000 80 -1
+De 15 0 108 0 0
 Po 0 14557 33000 14875 33000 80 -1
 De 15 0 108 0 400
 Po 0 14557 34472 14557 33000 80 -1
 De 15 0 108 0 0
-Po 0 17004 36919 14557 34472 80 -1
-De 15 0 108 0 0
-Po 0 20320 36919 17004 36919 80 -1
-De 15 0 108 0 0
-Po 0 23299 33940 20320 36919 80 -1
+Po 0 23299 33940 20500 36739 80 -1
 De 15 0 108 0 0
 Po 0 24291 33940 23299 33940 80 -1
 De 15 0 108 0 0
@@ -14078,6 +14096,16 @@ Po 0 35107 32750 35012 32655 80 -1
 De 15 0 119 0 0
 Po 0 35350 32750 35107 32750 80 -1
 De 15 0 119 0 800
+Po 0 38619 35750 38619 35119 80 -1
+De 15 0 120 0 0
+Po 0 37250 34500 37250 34340 80 -1
+De 15 0 120 0 0
+Po 0 37750 35000 37250 34500 80 -1
+De 15 0 120 0 0
+Po 0 38500 35000 37750 35000 80 -1
+De 15 0 120 0 0
+Po 0 38619 35119 38500 35000 80 -1
+De 15 0 120 0 0
 Po 0 45993 46207 45993 47000 80 -1
 De 15 0 120 0 400
 Po 0 43516 43730 45993 46207 80 -1
@@ -14086,13 +14114,9 @@ Po 0 43516 40752 43516 43730 80 -1
 De 15 0 120 0 0
 Po 0 38619 35855 43516 40752 80 -1
 De 15 0 120 0 0
-Po 0 38619 35458 38619 35855 80 -1
+Po 0 38619 35750 38619 35855 80 -1
 De 15 0 120 0 0
-Po 0 38094 34933 38619 35458 80 -1
-De 15 0 120 0 0
-Po 0 37843 34933 38094 34933 80 -1
-De 15 0 120 0 0
-Po 0 36150 33240 37843 34933 80 -1
+Po 0 36150 33240 37250 34340 80 -1
 De 15 0 120 0 0
 Po 0 36150 32750 36150 33240 80 -1
 De 15 0 120 0 800
@@ -14606,6 +14630,10 @@ Po 0 12827 22870 12827 22216 80 -1
 De 15 0 153 0 0
 Po 0 11902 22870 12827 22870 80 -1
 De 15 0 153 0 800
+Po 0 20750 34250 20750 33411 80 -1
+De 0 0 154 0 0
+Po 0 20750 33411 20404 33065 80 -1
+De 0 0 154 0 0
 Po 3 25870 35330 25870 35330 350 -1
 De 15 1 154 0 0
 Po 3 23003 36059 23003 36059 350 -1
@@ -14646,11 +14674,7 @@ Po 0 21100 35800 21359 36059 80 -1
 De 0 0 154 0 0
 Po 0 21100 34600 21100 35800 80 -1
 De 0 0 154 0 0
-Po 0 20426 33926 21100 34600 80 -1
-De 0 0 154 0 0
-Po 0 20426 33087 20426 33926 80 -1
-De 0 0 154 0 0
-Po 0 20404 33065 20426 33087 80 -1
+Po 0 20750 34250 21100 34600 80 -1
 De 0 0 154 0 0
 Po 0 19913 33065 20404 33065 80 -1
 De 0 0 154 0 0
@@ -14708,18 +14732,18 @@ Po 0 41785 13265 41785 21673 80 -1
 De 0 0 156 0 0
 Po 0 42550 12500 41785 13265 80 -1
 De 0 0 156 0 800
-Po 3 39666 44919 39666 44919 350 -1
+Po 0 39000 45000 39750 45000 80 -1
+De 15 0 157 0 0
+Po 0 39750 45000 40125 45000 80 -1
+De 0 0 157 0 400
+Po 3 39750 45000 39750 45000 350 -1
 De 15 1 157 0 0
-Po 0 39747 45000 39666 44919 80 -1
-De 0 0 157 0 0
-Po 0 40125 45000 39747 45000 80 -1
-De 0 0 157 0 800
-Po 0 37520 44919 39666 44919 80 -1
-De 15 0 157 0 0
-Po 0 36851 44250 37520 44919 80 -1
-De 15 0 157 0 0
-Po 0 36000 44250 36851 44250 80 -1
+Po 0 36000 44250 36750 44250 80 -1
 De 15 0 157 0 800
+Po 0 37500 45000 39000 45000 80 -1
+De 15 0 157 0 0
+Po 0 36750 44250 37500 45000 80 -1
+De 15 0 157 0 0
 Po 0 41193 46000 40875 46000 80 -1
 De 0 0 158 0 400
 Po 0 41443 45750 41193 46000 80 -1
@@ -14806,22 +14830,20 @@ Po 0 41132 42250 41132 42383 80 -1
 De 15 0 167 0 0
 Po 0 41500 42250 41132 42250 80 -1
 De 15 0 167 0 800
-Po 3 37668 44046 37668 44046 350 -1
+Po 0 36000 43750 37000 43750 80 -1
+De 15 0 168 0 800
+Po 0 39807 45557 39807 46000 80 -1
+De 0 0 168 0 0
+Po 0 38250 44000 39807 45557 80 -1
+De 0 0 168 0 0
+Po 0 37250 44000 38250 44000 80 -1
+De 0 0 168 0 0
+Po 3 37250 44000 37250 44000 350 -1
 De 15 1 168 0 0
+Po 0 37000 43750 37250 44000 80 -1
+De 15 0 168 0 0
 Po 0 39807 46000 40125 46000 80 -1
 De 0 0 168 0 400
-Po 0 39807 45682 39807 46000 80 -1
-De 0 0 168 0 0
-Po 0 38171 44046 39807 45682 80 -1
-De 0 0 168 0 0
-Po 0 37668 44046 38171 44046 80 -1
-De 0 0 168 0 0
-Po 0 36664 44046 37668 44046 80 -1
-De 15 0 168 0 0
-Po 0 36368 43750 36664 44046 80 -1
-De 15 0 168 0 0
-Po 0 36000 43750 36368 43750 80 -1
-De 15 0 168 0 800
 Po 0 17307 41000 17625 41000 80 -1
 De 0 0 169 0 400
 Po 0 17057 41250 17307 41000 80 -1
@@ -17863,245 +17885,243 @@ $POLYSCORNERS
 18648 45474 0 0
 18566 45489 0 1
 18566 48975 0 0
-19778 48975 0 0
-19743 48959 0 0
-19658 48901 0 0
-19587 48827 0 0
-19532 48740 0 0
-19494 48645 0 0
-19475 48544 0 0
-19477 48441 0 0
-19498 48340 0 0
-19539 48246 0 0
-19597 48161 0 0
-19670 48089 0 0
-19756 48033 0 0
-19836 48000 0 0
-19743 47959 0 0
-19658 47901 0 0
-19587 47827 0 0
-19532 47740 0 0
-19494 47645 0 0
-19475 47544 0 0
-19477 47441 0 0
-19498 47340 0 0
-19539 47246 0 0
-19597 47161 0 0
-19670 47089 0 0
-19756 47033 0 0
-19836 47000 0 0
-19743 46959 0 0
-19658 46901 0 0
-19587 46827 0 0
-19532 46740 0 0
-19494 46645 0 0
-19475 46544 0 0
-19477 46441 0 0
-19498 46340 0 0
-19539 46246 0 0
-19597 46161 0 0
-19670 46089 0 0
-19756 46033 0 0
-19836 46000 0 0
-19743 45959 0 0
-19658 45901 0 0
-19587 45827 0 0
-19532 45740 0 0
-19494 45645 0 0
-19475 45544 0 0
-19477 45441 0 0
-19498 45340 0 0
-19539 45246 0 0
-19597 45161 0 0
-19670 45089 0 0
-19756 45033 0 0
-19836 45000 0 0
-19743 44959 0 0
-19658 44901 0 0
-19587 44827 0 0
-19532 44740 0 0
-19494 44645 0 0
-19475 44544 0 0
-19477 44441 0 0
-19498 44340 0 0
-19539 44246 0 0
-19597 44161 0 0
-19670 44089 0 0
-19756 44033 0 0
-19836 44000 0 0
-19743 43959 0 0
-19658 43901 0 0
-19587 43827 0 0
-19532 43740 0 0
-19494 43645 0 0
-19475 43544 0 0
-19477 43441 0 0
-19498 43340 0 0
-19539 43246 0 0
-19597 43161 0 0
-19670 43089 0 0
-19756 43033 0 0
-19836 43000 0 0
-19743 42959 0 0
-19658 42901 0 0
-19587 42827 0 0
-19532 42740 0 0
-19494 42645 0 0
-19475 42544 0 0
-19477 42441 0 0
-19498 42340 0 0
-19539 42246 0 0
-19597 42161 0 0
-19670 42089 0 0
-19756 42033 0 0
-19836 42000 0 0
-19743 41959 0 0
-19658 41901 0 0
-19587 41827 0 0
-19532 41740 0 0
-19494 41645 0 0
-19475 41544 0 0
-19477 41441 0 0
-19498 41340 0 0
-19539 41246 0 0
-19597 41161 0 0
-19670 41089 0 0
-19756 41033 0 0
-19836 41000 0 0
-19743 40959 0 0
-19658 40901 0 0
-19587 40827 0 0
-19532 40740 0 0
-19494 40645 0 0
-19475 40544 0 0
-19477 40441 0 0
-19498 40340 0 0
-19539 40246 0 0
-19597 40161 0 0
-19670 40089 0 0
-19756 40033 0 0
-19836 40000 0 0
-19743 39959 0 0
-19658 39901 0 0
-19587 39827 0 0
-19532 39740 0 0
-19494 39645 0 0
-19475 39544 0 0
-19477 39441 0 0
-19498 39340 0 0
-19539 39246 0 0
-19597 39161 0 0
-19670 39089 0 0
-19756 39033 0 0
-19836 39000 0 0
-19743 38959 0 0
-19658 38901 0 0
-19587 38827 0 0
-19532 38740 0 0
-19494 38645 0 0
-19475 38544 0 0
-19477 38441 0 0
-19498 38340 0 0
-19539 38246 0 0
-19597 38161 0 0
-19670 38089 0 0
-19756 38033 0 0
-19836 38000 0 0
-19743 37959 0 0
-19658 37901 0 0
-19587 37827 0 0
-19532 37740 0 0
-19494 37645 0 0
-19475 37544 0 0
-19477 37441 0 0
-19498 37340 0 0
-19539 37246 0 0
-19597 37161 0 0
-19670 37089 0 0
-19756 37033 0 0
-19836 37000 0 0
-19743 36959 0 0
-19658 36901 0 0
-19587 36827 0 0
-19532 36740 0 0
-19494 36645 0 0
-19475 36544 0 0
-19477 36441 0 0
-19498 36340 0 0
-19539 36246 0 0
-19597 36161 0 0
-19670 36089 0 0
-19756 36033 0 0
-19836 36000 0 0
-19743 35959 0 0
-19658 35901 0 0
-19587 35827 0 0
-19532 35740 0 0
-19494 35645 0 0
-19475 35544 0 0
-19477 35441 0 0
-19498 35340 0 0
-19539 35246 0 0
-19597 35161 0 0
-19670 35089 0 0
-19756 35033 0 0
-19836 35000 0 0
-19743 34959 0 0
-19658 34901 0 0
-19587 34827 0 0
-19532 34740 0 0
-19494 34645 0 0
-19475 34544 0 0
-19477 34441 0 0
-19498 34340 0 0
-19539 34246 0 0
-19597 34161 0 0
-19670 34089 0 0
-19756 34033 0 0
-19836 34000 0 0
-19743 33959 0 0
-19658 33901 0 0
-19587 33827 0 0
-19532 33740 0 0
-19494 33645 0 0
-19475 33544 0 0
-19477 33441 0 0
-19498 33340 0 0
-19539 33246 0 0
-19597 33161 0 0
-19670 33089 0 0
-19756 33033 0 0
-19836 33000 0 0
-19743 32959 0 0
-19658 32901 0 0
-19587 32827 0 0
-19532 32740 0 0
-19494 32645 0 0
-19475 32544 0 0
-19477 32441 0 0
-19498 32340 0 0
-19539 32246 0 0
-19597 32161 0 0
-19670 32089 0 0
-19756 32033 0 0
-19776 32025 0 0
-19698 32025 0 0
-19650 32015 0 0
-19605 31996 0 0
-19565 31968 0 0
-19530 31933 0 0
-19503 31892 0 0
-19484 31847 0 0
-19475 31799 0 0
-19475 31198 0 0
-19485 31150 0 0
-19504 31105 0 0
-19532 31065 0 0
-19567 31030 0 0
-19608 31003 0 0
-19653 30984 0 0
-19701 30975 0 0
-19947 30975 0 1
+19721 48975 0 0
+19643 48920 0 0
+19568 48843 0 0
+19509 48752 0 0
+19470 48652 0 0
+19450 48546 0 0
+19452 48439 0 0
+19474 48333 0 0
+19517 48234 0 0
+19577 48146 0 0
+19654 48070 0 0
+19744 48011 0 0
+19771 47999 0 0
+19731 47982 0 0
+19643 47920 0 0
+19568 47843 0 0
+19509 47752 0 0
+19470 47652 0 0
+19450 47546 0 0
+19452 47439 0 0
+19474 47333 0 0
+19517 47234 0 0
+19577 47146 0 0
+19654 47070 0 0
+19744 47011 0 0
+19771 46999 0 0
+19731 46982 0 0
+19643 46920 0 0
+19568 46843 0 0
+19509 46752 0 0
+19470 46652 0 0
+19450 46546 0 0
+19452 46439 0 0
+19474 46333 0 0
+19517 46234 0 0
+19577 46146 0 0
+19654 46070 0 0
+19744 46011 0 0
+19771 45999 0 0
+19731 45982 0 0
+19643 45920 0 0
+19568 45843 0 0
+19509 45752 0 0
+19470 45652 0 0
+19450 45546 0 0
+19452 45439 0 0
+19474 45333 0 0
+19517 45234 0 0
+19577 45146 0 0
+19654 45070 0 0
+19744 45011 0 0
+19771 44999 0 0
+19731 44982 0 0
+19643 44920 0 0
+19568 44843 0 0
+19509 44752 0 0
+19470 44652 0 0
+19450 44546 0 0
+19452 44439 0 0
+19474 44333 0 0
+19517 44234 0 0
+19577 44146 0 0
+19654 44070 0 0
+19744 44011 0 0
+19771 43999 0 0
+19731 43982 0 0
+19643 43920 0 0
+19568 43843 0 0
+19509 43752 0 0
+19470 43652 0 0
+19450 43546 0 0
+19452 43439 0 0
+19474 43333 0 0
+19517 43234 0 0
+19577 43146 0 0
+19654 43070 0 0
+19744 43011 0 0
+19771 42999 0 0
+19731 42982 0 0
+19643 42920 0 0
+19568 42843 0 0
+19509 42752 0 0
+19470 42652 0 0
+19450 42546 0 0
+19452 42439 0 0
+19474 42333 0 0
+19517 42234 0 0
+19577 42146 0 0
+19654 42070 0 0
+19744 42011 0 0
+19771 41999 0 0
+19731 41982 0 0
+19643 41920 0 0
+19568 41843 0 0
+19509 41752 0 0
+19470 41652 0 0
+19450 41546 0 0
+19452 41439 0 0
+19474 41333 0 0
+19517 41234 0 0
+19577 41146 0 0
+19654 41070 0 0
+19744 41011 0 0
+19771 40999 0 0
+19731 40982 0 0
+19643 40920 0 0
+19568 40843 0 0
+19509 40752 0 0
+19470 40652 0 0
+19450 40546 0 0
+19452 40439 0 0
+19474 40333 0 0
+19517 40234 0 0
+19577 40146 0 0
+19654 40070 0 0
+19744 40011 0 0
+19771 39999 0 0
+19731 39982 0 0
+19643 39920 0 0
+19568 39843 0 0
+19509 39752 0 0
+19470 39652 0 0
+19450 39546 0 0
+19452 39439 0 0
+19474 39333 0 0
+19517 39234 0 0
+19577 39146 0 0
+19654 39070 0 0
+19744 39011 0 0
+19771 38999 0 0
+19731 38982 0 0
+19643 38920 0 0
+19568 38843 0 0
+19509 38752 0 0
+19470 38652 0 0
+19450 38546 0 0
+19452 38439 0 0
+19474 38333 0 0
+19517 38234 0 0
+19577 38146 0 0
+19654 38070 0 0
+19744 38011 0 0
+19771 37999 0 0
+19731 37982 0 0
+19643 37920 0 0
+19568 37843 0 0
+19509 37752 0 0
+19470 37652 0 0
+19450 37546 0 0
+19452 37439 0 0
+19474 37333 0 0
+19517 37234 0 0
+19577 37146 0 0
+19654 37070 0 0
+19744 37011 0 0
+19771 36999 0 0
+19731 36982 0 0
+19643 36920 0 0
+19568 36843 0 0
+19509 36752 0 0
+19470 36652 0 0
+19450 36546 0 0
+19452 36439 0 0
+19474 36333 0 0
+19517 36234 0 0
+19577 36146 0 0
+19654 36070 0 0
+19744 36011 0 0
+19771 35999 0 0
+19731 35982 0 0
+19643 35920 0 0
+19568 35843 0 0
+19509 35752 0 0
+19470 35652 0 0
+19450 35546 0 0
+19452 35439 0 0
+19474 35333 0 0
+19517 35234 0 0
+19577 35146 0 0
+19654 35070 0 0
+19744 35011 0 0
+19771 34999 0 0
+19731 34982 0 0
+19643 34920 0 0
+19568 34843 0 0
+19509 34752 0 0
+19470 34652 0 0
+19450 34546 0 0
+19452 34439 0 0
+19474 34333 0 0
+19517 34234 0 0
+19577 34146 0 0
+19654 34070 0 0
+19744 34011 0 0
+19771 33999 0 0
+19731 33982 0 0
+19643 33920 0 0
+19568 33843 0 0
+19509 33752 0 0
+19470 33652 0 0
+19450 33546 0 0
+19452 33439 0 0
+19474 33333 0 0
+19517 33234 0 0
+19577 33146 0 0
+19654 33070 0 0
+19744 33011 0 0
+19771 32999 0 0
+19731 32982 0 0
+19643 32920 0 0
+19568 32843 0 0
+19509 32752 0 0
+19470 32652 0 0
+19450 32546 0 0
+19452 32439 0 0
+19474 32333 0 0
+19517 32234 0 0
+19577 32146 0 0
+19654 32070 0 0
+19684 32050 0 0
+19673 32050 0 0
+19625 32040 0 0
+19580 32021 0 0
+19540 31993 0 0
+19505 31958 0 0
+19478 31917 0 0
+19459 31872 0 0
+19450 31824 0 0
+19450 31173 0 0
+19460 31125 0 0
+19479 31080 0 0
+19507 31040 0 0
+19542 31005 0 0
+19583 30978 0 0
+19628 30959 0 0
+19676 30950 0 0
+19947 30950 0 1
 19947 25275 0 0
 19864 25273 0 0
 19782 25255 0 0
@@ -18135,245 +18155,243 @@ $POLYSCORNERS
 20107 25230 0 0
 20029 25260 0 0
 19947 25275 0 1
-19947 30975 0 0
-20302 30975 0 0
-20350 30985 0 0
-20395 31004 0 0
-20435 31032 0 0
-20470 31067 0 0
-20497 31108 0 0
-20516 31153 0 0
-20525 31201 0 0
-20525 31802 0 0
-20515 31850 0 0
-20496 31895 0 0
-20468 31935 0 0
-20433 31970 0 0
-20392 31997 0 0
-20347 32016 0 0
-20299 32025 0 0
-20222 32025 0 0
-20251 32037 0 0
-20336 32095 0 0
-20408 32168 0 0
-20465 32253 0 0
-20504 32348 0 0
-20524 32449 0 0
-20522 32566 0 0
-20499 32667 0 0
-20458 32760 0 0
-20398 32844 0 0
-20324 32915 0 0
-20237 32970 0 0
-20161 32999 0 0
-20251 33037 0 0
-20336 33095 0 0
-20408 33168 0 0
-20465 33253 0 0
-20504 33348 0 0
-20524 33449 0 0
-20522 33566 0 0
-20499 33667 0 0
-20458 33760 0 0
-20398 33844 0 0
-20324 33915 0 0
-20237 33970 0 0
-20161 33999 0 0
-20251 34037 0 0
-20336 34095 0 0
-20408 34168 0 0
-20465 34253 0 0
-20504 34348 0 0
-20524 34449 0 0
-20522 34566 0 0
-20499 34667 0 0
-20458 34760 0 0
-20398 34844 0 0
-20324 34915 0 0
-20237 34970 0 0
-20161 34999 0 0
-20251 35037 0 0
-20336 35095 0 0
-20408 35168 0 0
-20465 35253 0 0
-20504 35348 0 0
-20524 35449 0 0
-20522 35566 0 0
-20499 35667 0 0
-20458 35760 0 0
-20398 35844 0 0
-20324 35915 0 0
-20237 35970 0 0
-20161 35999 0 0
-20251 36037 0 0
-20336 36095 0 0
-20408 36168 0 0
-20465 36253 0 0
-20504 36348 0 0
-20524 36449 0 0
-20522 36566 0 0
-20499 36667 0 0
-20458 36760 0 0
-20398 36844 0 0
-20324 36915 0 0
-20237 36970 0 0
-20161 36999 0 0
-20251 37037 0 0
-20336 37095 0 0
-20408 37168 0 0
-20465 37253 0 0
-20504 37348 0 0
-20524 37449 0 0
-20522 37566 0 0
-20499 37667 0 0
-20458 37760 0 0
-20398 37844 0 0
-20324 37915 0 0
-20237 37970 0 0
-20161 37999 0 0
-20251 38037 0 0
-20336 38095 0 0
-20408 38168 0 0
-20465 38253 0 0
-20504 38348 0 0
-20524 38449 0 0
-20522 38566 0 0
-20499 38667 0 0
-20458 38760 0 0
-20398 38844 0 0
-20324 38915 0 0
-20237 38970 0 0
-20161 38999 0 0
-20251 39037 0 0
-20336 39095 0 0
-20408 39168 0 0
-20465 39253 0 0
-20504 39348 0 0
-20524 39449 0 0
-20522 39566 0 0
-20499 39667 0 0
-20458 39760 0 0
-20398 39844 0 0
-20324 39915 0 0
-20237 39970 0 0
-20161 39999 0 0
-20251 40037 0 0
-20336 40095 0 0
-20408 40168 0 0
-20465 40253 0 0
-20504 40348 0 0
-20524 40449 0 0
-20522 40566 0 0
-20499 40667 0 0
-20458 40760 0 0
-20398 40844 0 0
-20324 40915 0 0
-20237 40970 0 0
-20161 40999 0 0
-20251 41037 0 0
-20336 41095 0 0
-20408 41168 0 0
-20465 41253 0 0
-20504 41348 0 0
-20524 41449 0 0
-20522 41566 0 0
-20499 41667 0 0
-20458 41760 0 0
-20398 41844 0 0
-20324 41915 0 0
-20237 41970 0 0
-20161 41999 0 0
-20251 42037 0 0
-20336 42095 0 0
-20408 42168 0 0
-20465 42253 0 0
-20504 42348 0 0
-20524 42449 0 0
-20522 42566 0 0
-20499 42667 0 0
-20458 42760 0 0
-20398 42844 0 0
-20324 42915 0 0
-20237 42970 0 0
-20161 42999 0 0
-20251 43037 0 0
-20336 43095 0 0
-20408 43168 0 0
-20465 43253 0 0
-20504 43348 0 0
-20524 43449 0 0
-20522 43566 0 0
-20499 43667 0 0
-20458 43760 0 0
-20398 43844 0 0
-20324 43915 0 0
-20237 43970 0 0
-20161 43999 0 0
-20251 44037 0 0
-20336 44095 0 0
-20408 44168 0 0
-20465 44253 0 0
-20504 44348 0 0
-20524 44449 0 0
-20522 44566 0 0
-20499 44667 0 0
-20458 44760 0 0
-20398 44844 0 0
-20324 44915 0 0
-20237 44970 0 0
-20161 44999 0 0
-20251 45037 0 0
-20336 45095 0 0
-20408 45168 0 0
-20465 45253 0 0
-20504 45348 0 0
-20524 45449 0 0
-20522 45566 0 0
-20499 45667 0 0
-20458 45760 0 0
-20398 45844 0 0
-20324 45915 0 0
-20237 45970 0 0
-20161 45999 0 0
-20251 46037 0 0
-20336 46095 0 0
-20408 46168 0 0
-20465 46253 0 0
-20504 46348 0 0
-20524 46449 0 0
-20522 46566 0 0
-20499 46667 0 0
-20458 46760 0 0
-20398 46844 0 0
-20324 46915 0 0
-20237 46970 0 0
-20161 46999 0 0
-20251 47037 0 0
-20336 47095 0 0
-20408 47168 0 0
-20465 47253 0 0
-20504 47348 0 0
-20524 47449 0 0
-20522 47566 0 0
-20499 47667 0 0
-20458 47760 0 0
-20398 47844 0 0
-20324 47915 0 0
-20237 47970 0 0
-20161 47999 0 0
-20251 48037 0 0
-20336 48095 0 0
-20408 48168 0 0
-20465 48253 0 0
-20504 48348 0 0
-20524 48449 0 0
-20522 48566 0 0
-20499 48667 0 0
-20458 48760 0 0
-20398 48844 0 0
-20324 48915 0 0
-20237 48970 0 0
-20224 48975 0 0
+19947 30950 0 0
+20327 30950 0 0
+20375 30960 0 0
+20420 30979 0 0
+20460 31007 0 0
+20495 31042 0 0
+20522 31083 0 0
+20541 31128 0 0
+20550 31176 0 0
+20550 31827 0 0
+20540 31875 0 0
+20521 31920 0 0
+20493 31960 0 0
+20458 31995 0 0
+20417 32022 0 0
+20372 32041 0 0
+20324 32050 0 0
+20314 32050 0 0
+20352 32075 0 0
+20427 32151 0 0
+20487 32241 0 0
+20528 32340 0 0
+20549 32446 0 0
+20547 32569 0 0
+20524 32674 0 0
+20480 32772 0 0
+20418 32860 0 0
+20340 32935 0 0
+20249 32992 0 0
+20227 33000 0 0
+20262 33015 0 0
+20352 33075 0 0
+20427 33151 0 0
+20487 33241 0 0
+20528 33340 0 0
+20549 33446 0 0
+20547 33569 0 0
+20524 33674 0 0
+20480 33772 0 0
+20418 33860 0 0
+20340 33935 0 0
+20249 33992 0 0
+20227 34000 0 0
+20262 34015 0 0
+20352 34075 0 0
+20427 34151 0 0
+20487 34241 0 0
+20528 34340 0 0
+20549 34446 0 0
+20547 34569 0 0
+20524 34674 0 0
+20480 34772 0 0
+20418 34860 0 0
+20340 34935 0 0
+20249 34992 0 0
+20227 35000 0 0
+20262 35015 0 0
+20352 35075 0 0
+20427 35151 0 0
+20487 35241 0 0
+20528 35340 0 0
+20549 35446 0 0
+20547 35569 0 0
+20524 35674 0 0
+20480 35772 0 0
+20418 35860 0 0
+20340 35935 0 0
+20249 35992 0 0
+20227 36000 0 0
+20262 36015 0 0
+20352 36075 0 0
+20427 36151 0 0
+20487 36241 0 0
+20528 36340 0 0
+20549 36446 0 0
+20547 36569 0 0
+20524 36674 0 0
+20480 36772 0 0
+20418 36860 0 0
+20340 36935 0 0
+20249 36992 0 0
+20227 37000 0 0
+20262 37015 0 0
+20352 37075 0 0
+20427 37151 0 0
+20487 37241 0 0
+20528 37340 0 0
+20549 37446 0 0
+20547 37569 0 0
+20524 37674 0 0
+20480 37772 0 0
+20418 37860 0 0
+20340 37935 0 0
+20249 37992 0 0
+20227 38000 0 0
+20262 38015 0 0
+20352 38075 0 0
+20427 38151 0 0
+20487 38241 0 0
+20528 38340 0 0
+20549 38446 0 0
+20547 38569 0 0
+20524 38674 0 0
+20480 38772 0 0
+20418 38860 0 0
+20340 38935 0 0
+20249 38992 0 0
+20227 39000 0 0
+20262 39015 0 0
+20352 39075 0 0
+20427 39151 0 0
+20487 39241 0 0
+20528 39340 0 0
+20549 39446 0 0
+20547 39569 0 0
+20524 39674 0 0
+20480 39772 0 0
+20418 39860 0 0
+20340 39935 0 0
+20249 39992 0 0
+20227 40000 0 0
+20262 40015 0 0
+20352 40075 0 0
+20427 40151 0 0
+20487 40241 0 0
+20528 40340 0 0
+20549 40446 0 0
+20547 40569 0 0
+20524 40674 0 0
+20480 40772 0 0
+20418 40860 0 0
+20340 40935 0 0
+20249 40992 0 0
+20227 41000 0 0
+20262 41015 0 0
+20352 41075 0 0
+20427 41151 0 0
+20487 41241 0 0
+20528 41340 0 0
+20549 41446 0 0
+20547 41569 0 0
+20524 41674 0 0
+20480 41772 0 0
+20418 41860 0 0
+20340 41935 0 0
+20249 41992 0 0
+20227 42000 0 0
+20262 42015 0 0
+20352 42075 0 0
+20427 42151 0 0
+20487 42241 0 0
+20528 42340 0 0
+20549 42446 0 0
+20547 42569 0 0
+20524 42674 0 0
+20480 42772 0 0
+20418 42860 0 0
+20340 42935 0 0
+20249 42992 0 0
+20227 43000 0 0
+20262 43015 0 0
+20352 43075 0 0
+20427 43151 0 0
+20487 43241 0 0
+20528 43340 0 0
+20549 43446 0 0
+20547 43569 0 0
+20524 43674 0 0
+20480 43772 0 0
+20418 43860 0 0
+20340 43935 0 0
+20249 43992 0 0
+20227 44000 0 0
+20262 44015 0 0
+20352 44075 0 0
+20427 44151 0 0
+20487 44241 0 0
+20528 44340 0 0
+20549 44446 0 0
+20547 44569 0 0
+20524 44674 0 0
+20480 44772 0 0
+20418 44860 0 0
+20340 44935 0 0
+20249 44992 0 0
+20227 45000 0 0
+20262 45015 0 0
+20352 45075 0 0
+20427 45151 0 0
+20487 45241 0 0
+20528 45340 0 0
+20549 45446 0 0
+20547 45569 0 0
+20524 45674 0 0
+20480 45772 0 0
+20418 45860 0 0
+20340 45935 0 0
+20249 45992 0 0
+20227 46000 0 0
+20262 46015 0 0
+20352 46075 0 0
+20427 46151 0 0
+20487 46241 0 0
+20528 46340 0 0
+20549 46446 0 0
+20547 46569 0 0
+20524 46674 0 0
+20480 46772 0 0
+20418 46860 0 0
+20340 46935 0 0
+20249 46992 0 0
+20227 47000 0 0
+20262 47015 0 0
+20352 47075 0 0
+20427 47151 0 0
+20487 47241 0 0
+20528 47340 0 0
+20549 47446 0 0
+20547 47569 0 0
+20524 47674 0 0
+20480 47772 0 0
+20418 47860 0 0
+20340 47935 0 0
+20249 47992 0 0
+20227 48000 0 0
+20262 48015 0 0
+20352 48075 0 0
+20427 48151 0 0
+20487 48241 0 0
+20528 48340 0 0
+20549 48446 0 0
+20547 48569 0 0
+20524 48674 0 0
+20480 48772 0 0
+20418 48860 0 0
+20340 48935 0 0
+20276 48975 0 0
 20783 48975 0 1
 20783 30244 0 0
 20700 30242 0 0
@@ -22876,651 +22894,649 @@ $POLYSCORNERS
 36624 45133 0 0
 36542 45148 0 1
 36542 48975 0 0
-37639 48975 0 1
-37639 48790 0 0
-37548 48767 0 0
-37526 48726 0 0
-37491 48630 0 0
-37475 48528 0 0
-37480 48426 0 0
-37505 48326 0 0
-37548 48233 0 0
-37639 48210 0 0
+37622 48975 0 1
+37622 48808 0 0
+37528 48781 0 0
+37503 48734 0 0
+37467 48633 0 0
+37451 48527 0 0
+37456 48420 0 0
+37482 48316 0 0
+37528 48219 0 0
+37622 48192 0 0
 37929 48500 0 0
-37639 48790 0 1
-37639 48975 0 0
-37782 48975 0 0
-37733 48952 0 0
-37710 48861 0 0
+37622 48808 0 1
+37622 48975 0 0
+37725 48975 0 0
+37719 48972 0 0
+37692 48878 0 0
 38000 48571 0 1
 38000 48429 0 0
-37710 48139 0 0
-37733 48048 0 0
-37774 48026 0 0
-37840 48001 0 0
-37837 48001 0 0
-37743 47959 0 0
-37658 47901 0 0
-37587 47827 0 0
-37532 47740 0 0
-37494 47645 0 0
-37475 47544 0 0
-37477 47441 0 0
-37498 47340 0 0
-37539 47246 0 0
-37597 47161 0 0
-37639 47119 0 1
-37639 46790 0 0
-37548 46767 0 0
-37526 46726 0 0
-37491 46630 0 0
-37475 46528 0 0
-37480 46426 0 0
-37505 46326 0 0
-37548 46233 0 0
-37639 46210 0 0
+37692 48122 0 0
+37719 48028 0 0
+37766 48003 0 0
+37773 48000 0 0
+37731 47982 0 0
+37643 47920 0 0
+37568 47843 0 0
+37509 47752 0 0
+37470 47652 0 0
+37450 47546 0 0
+37452 47439 0 0
+37474 47333 0 0
+37517 47234 0 0
+37577 47146 0 0
+37622 47101 0 1
+37622 46808 0 0
+37528 46781 0 0
+37503 46734 0 0
+37467 46633 0 0
+37451 46527 0 0
+37456 46420 0 0
+37482 46316 0 0
+37528 46219 0 0
+37622 46192 0 0
 37929 46500 0 0
-37639 46790 0 1
-37639 47119 0 0
-37670 47089 0 0
-37756 47033 0 0
-37841 46998 0 0
-37826 46995 0 0
-37733 46952 0 0
-37710 46861 0 0
+37622 46808 0 1
+37622 47101 0 0
+37654 47070 0 0
+37744 47011 0 0
+37775 46998 0 0
+37719 46972 0 0
+37692 46878 0 0
 38000 46571 0 1
 38000 46429 0 0
-37710 46139 0 0
-37733 46048 0 0
-37774 46026 0 0
-37840 46001 0 0
-37837 46001 0 0
-37743 45959 0 0
-37658 45901 0 0
-37587 45827 0 0
-37532 45740 0 0
-37494 45645 0 0
-37475 45544 0 0
-37477 45441 0 0
-37498 45340 0 0
-37539 45246 0 0
-37597 45161 0 0
-37639 45119 0 1
-37639 44790 0 0
-37548 44767 0 0
-37526 44726 0 0
-37491 44630 0 0
-37475 44528 0 0
-37479 44427 0 0
-37460 44419 0 0
-37391 44371 0 0
-37334 44312 0 0
-37288 44242 0 0
-37258 44164 0 0
-37242 44082 0 0
-37244 43999 0 0
-37261 43917 0 0
-37294 43841 0 0
-37341 43772 0 0
-37400 43713 0 0
-37470 43668 0 0
-37498 43656 0 0
-37494 43645 0 0
-37475 43544 0 0
-37477 43441 0 0
-37498 43340 0 0
-37539 43246 0 0
-37597 43161 0 0
-37639 43119 0 1
-37639 42790 0 0
-37548 42767 0 0
-37526 42726 0 0
-37491 42630 0 0
-37475 42528 0 0
-37480 42426 0 0
-37505 42326 0 0
-37548 42233 0 0
-37639 42210 0 0
+37692 46122 0 0
+37719 46028 0 0
+37766 46003 0 0
+37773 46000 0 0
+37731 45982 0 0
+37643 45920 0 0
+37568 45843 0 0
+37509 45752 0 0
+37470 45652 0 0
+37450 45546 0 0
+37452 45439 0 0
+37474 45333 0 0
+37517 45234 0 0
+37577 45146 0 0
+37622 45101 0 1
+37622 44808 0 0
+37528 44781 0 0
+37503 44734 0 0
+37467 44633 0 0
+37451 44527 0 0
+37456 44420 0 0
+37470 44363 0 0
+37443 44381 0 0
+37365 44411 0 0
+37283 44426 0 0
+37200 44424 0 0
+37118 44406 0 0
+37042 44373 0 0
+36973 44325 0 0
+36916 44266 0 0
+36870 44196 0 0
+36840 44118 0 0
+36824 44036 0 0
+36826 43953 0 0
+36843 43871 0 0
+36876 43795 0 0
+36923 43726 0 0
+36982 43667 0 0
+37052 43622 0 0
+37129 43590 0 0
+37211 43575 0 0
+37294 43575 0 0
+37376 43592 0 0
+37453 43624 0 0
+37466 43633 0 0
+37450 43546 0 0
+37452 43439 0 0
+37474 43333 0 0
+37517 43234 0 0
+37577 43146 0 0
+37622 43101 0 1
+37622 42808 0 0
+37528 42781 0 0
+37503 42734 0 0
+37467 42633 0 0
+37451 42527 0 0
+37456 42420 0 0
+37482 42316 0 0
+37528 42219 0 0
+37622 42192 0 0
 37929 42500 0 0
-37639 42790 0 1
-37639 43119 0 0
-37670 43089 0 0
-37756 43033 0 0
-37841 42998 0 0
-37826 42995 0 0
-37733 42952 0 0
-37710 42861 0 0
+37622 42808 0 1
+37622 43101 0 0
+37654 43070 0 0
+37744 43011 0 0
+37775 42998 0 0
+37719 42972 0 0
+37692 42878 0 0
 38000 42571 0 1
 38000 42429 0 0
-37710 42139 0 0
-37733 42048 0 0
-37774 42026 0 0
-37840 42001 0 0
-37837 42001 0 0
-37743 41959 0 0
-37658 41901 0 0
-37587 41827 0 0
-37532 41740 0 0
-37494 41645 0 0
-37475 41544 0 0
-37477 41441 0 0
-37498 41340 0 0
-37539 41246 0 0
-37597 41161 0 0
-37639 41119 0 1
-37639 40790 0 0
-37548 40767 0 0
-37526 40726 0 0
-37491 40630 0 0
-37475 40528 0 0
-37480 40426 0 0
-37505 40326 0 0
-37548 40233 0 0
-37639 40210 0 0
+37692 42122 0 0
+37719 42028 0 0
+37766 42003 0 0
+37773 42000 0 0
+37731 41982 0 0
+37643 41920 0 0
+37568 41843 0 0
+37509 41752 0 0
+37470 41652 0 0
+37450 41546 0 0
+37452 41439 0 0
+37474 41333 0 0
+37517 41234 0 0
+37577 41146 0 0
+37622 41101 0 1
+37622 40808 0 0
+37528 40781 0 0
+37503 40734 0 0
+37467 40633 0 0
+37451 40527 0 0
+37456 40420 0 0
+37482 40316 0 0
+37528 40219 0 0
+37622 40192 0 0
 37929 40500 0 0
-37639 40790 0 1
-37639 41119 0 0
-37670 41089 0 0
-37756 41033 0 0
-37841 40998 0 0
-37826 40995 0 0
-37733 40952 0 0
-37710 40861 0 0
+37622 40808 0 1
+37622 41101 0 0
+37654 41070 0 0
+37744 41011 0 0
+37775 40998 0 0
+37719 40972 0 0
+37692 40878 0 0
 38000 40571 0 1
 38000 40429 0 0
-37710 40139 0 0
-37733 40048 0 0
-37774 40026 0 0
-37840 40001 0 0
-37837 40001 0 0
-37743 39959 0 0
-37658 39901 0 0
-37587 39827 0 0
-37532 39740 0 0
-37494 39645 0 0
-37475 39544 0 0
-37477 39441 0 0
-37498 39340 0 0
-37539 39246 0 0
-37597 39161 0 0
-37639 39119 0 1
-37639 38790 0 0
-37548 38767 0 0
-37526 38726 0 0
-37491 38630 0 0
-37475 38528 0 0
-37480 38426 0 0
-37505 38326 0 0
-37548 38233 0 0
-37639 38210 0 0
+37692 40122 0 0
+37719 40028 0 0
+37766 40003 0 0
+37773 40000 0 0
+37731 39982 0 0
+37643 39920 0 0
+37568 39843 0 0
+37509 39752 0 0
+37470 39652 0 0
+37450 39546 0 0
+37452 39439 0 0
+37474 39333 0 0
+37517 39234 0 0
+37577 39146 0 0
+37622 39101 0 1
+37622 38808 0 0
+37528 38781 0 0
+37503 38734 0 0
+37467 38633 0 0
+37451 38527 0 0
+37456 38420 0 0
+37482 38316 0 0
+37528 38219 0 0
+37622 38192 0 0
 37929 38500 0 0
-37639 38790 0 1
-37639 39119 0 0
-37670 39089 0 0
-37756 39033 0 0
-37841 38998 0 0
-37826 38995 0 0
-37733 38952 0 0
-37710 38861 0 0
+37622 38808 0 1
+37622 39101 0 0
+37654 39070 0 0
+37744 39011 0 0
+37775 38998 0 0
+37719 38972 0 0
+37692 38878 0 0
 38000 38571 0 1
 38000 38429 0 0
-37710 38139 0 0
-37733 38048 0 0
-37774 38026 0 0
-37840 38001 0 0
-37837 38001 0 0
-37743 37959 0 0
-37658 37901 0 0
-37587 37827 0 0
-37532 37740 0 0
-37494 37645 0 0
-37475 37544 0 0
-37477 37441 0 0
-37498 37340 0 0
-37539 37246 0 0
-37597 37161 0 0
-37639 37119 0 1
-37639 36790 0 0
-37548 36767 0 0
-37526 36726 0 0
-37491 36630 0 0
-37475 36528 0 0
-37480 36426 0 0
-37505 36326 0 0
-37548 36233 0 0
-37639 36210 0 0
+37692 38122 0 0
+37719 38028 0 0
+37766 38003 0 0
+37773 38000 0 0
+37731 37982 0 0
+37643 37920 0 0
+37568 37843 0 0
+37509 37752 0 0
+37470 37652 0 0
+37450 37546 0 0
+37452 37439 0 0
+37474 37333 0 0
+37517 37234 0 0
+37577 37146 0 0
+37622 37101 0 1
+37622 36808 0 0
+37528 36781 0 0
+37503 36734 0 0
+37467 36633 0 0
+37451 36527 0 0
+37456 36420 0 0
+37482 36316 0 0
+37528 36219 0 0
+37622 36192 0 0
 37929 36500 0 0
-37639 36790 0 1
-37639 37119 0 0
-37670 37089 0 0
-37756 37033 0 0
-37841 36998 0 0
-37826 36995 0 0
-37733 36952 0 0
-37710 36861 0 0
+37622 36808 0 1
+37622 37101 0 0
+37654 37070 0 0
+37744 37011 0 0
+37775 36998 0 0
+37719 36972 0 0
+37692 36878 0 0
 38000 36571 0 1
 38000 36429 0 0
-37710 36139 0 0
-37733 36048 0 0
-37774 36026 0 0
-37840 36001 0 0
-37837 36001 0 0
-37743 35959 0 0
-37658 35901 0 0
-37587 35827 0 0
-37532 35740 0 0
-37494 35645 0 0
-37475 35544 0 0
-37477 35441 0 0
-37498 35340 0 0
-37539 35246 0 0
-37597 35161 0 0
-37639 35119 0 1
-37639 34790 0 0
-37548 34767 0 0
-37526 34726 0 0
-37491 34630 0 0
-37475 34528 0 0
-37480 34426 0 0
-37505 34326 0 0
-37548 34233 0 0
-37639 34210 0 0
+37692 36122 0 0
+37719 36028 0 0
+37766 36003 0 0
+37773 36000 0 0
+37731 35982 0 0
+37643 35920 0 0
+37568 35843 0 0
+37509 35752 0 0
+37470 35652 0 0
+37450 35546 0 0
+37452 35439 0 0
+37474 35333 0 0
+37517 35234 0 0
+37577 35146 0 0
+37622 35101 0 1
+37622 34808 0 0
+37528 34781 0 0
+37503 34734 0 0
+37467 34633 0 0
+37451 34527 0 0
+37456 34420 0 0
+37482 34316 0 0
+37528 34219 0 0
+37622 34192 0 0
 37929 34500 0 0
-37639 34790 0 1
-37639 35119 0 0
-37670 35089 0 0
-37756 35033 0 0
-37841 34998 0 0
-37826 34995 0 0
-37733 34952 0 0
-37710 34861 0 0
+37622 34808 0 1
+37622 35101 0 0
+37654 35070 0 0
+37744 35011 0 0
+37775 34998 0 0
+37719 34972 0 0
+37692 34878 0 0
 38000 34571 0 1
 38000 34429 0 0
-37710 34139 0 0
-37733 34048 0 0
-37774 34026 0 0
-37840 34001 0 0
-37837 34001 0 0
-37743 33959 0 0
-37658 33901 0 0
-37587 33827 0 0
-37532 33740 0 0
-37494 33645 0 0
-37475 33544 0 0
-37477 33441 0 0
-37498 33340 0 0
-37539 33246 0 0
-37597 33161 0 0
-37639 33119 0 1
-37639 32790 0 0
-37548 32767 0 0
-37526 32726 0 0
-37491 32630 0 0
-37475 32528 0 0
-37480 32426 0 0
-37505 32326 0 0
-37548 32233 0 0
-37639 32210 0 0
+37692 34122 0 0
+37719 34028 0 0
+37766 34003 0 0
+37773 34000 0 0
+37731 33982 0 0
+37643 33920 0 0
+37568 33843 0 0
+37509 33752 0 0
+37470 33652 0 0
+37450 33546 0 0
+37452 33439 0 0
+37474 33333 0 0
+37517 33234 0 0
+37577 33146 0 0
+37622 33101 0 1
+37622 32808 0 0
+37528 32781 0 0
+37503 32734 0 0
+37467 32633 0 0
+37451 32527 0 0
+37456 32420 0 0
+37482 32316 0 0
+37528 32219 0 0
+37622 32192 0 0
+37673 32243 0 0
 37929 32500 0 0
-37639 32790 0 1
-37639 33119 0 0
-37670 33089 0 0
-37698 33070 0 0
-37756 33033 0 0
-37841 32998 0 0
-37826 32995 0 0
-37733 32952 0 0
-37710 32861 0 0
+37673 32756 0 0
+37622 32808 0 1
+37622 33101 0 0
+37654 33070 0 0
+37673 33057 0 0
+37744 33011 0 0
+37775 32998 0 0
+37719 32972 0 0
+37692 32878 0 0
 38000 32571 0 1
 38000 32429 0 0
-37710 32139 0 0
-37733 32048 0 0
-37774 32026 0 0
-37776 32025 0 0
-37698 32025 0 0
-37650 32015 0 0
-37605 31996 0 0
-37565 31968 0 0
-37530 31933 0 0
-37503 31892 0 0
-37484 31847 0 0
-37475 31799 0 0
-37475 31198 0 0
-37485 31150 0 0
-37504 31105 0 0
-37532 31065 0 0
-37567 31030 0 0
-37608 31003 0 0
-37653 30984 0 0
-37701 30975 0 0
-38302 30975 0 0
-38350 30985 0 0
-38395 31004 0 0
-38435 31032 0 0
-38470 31067 0 0
-38497 31108 0 0
-38516 31153 0 0
-38525 31201 0 0
-38525 31802 0 0
-38515 31850 0 0
-38496 31895 0 0
-38468 31935 0 0
-38433 31970 0 0
-38392 31997 0 0
-38347 32016 0 0
-38299 32025 0 0
-38217 32025 0 0
-38267 32048 0 0
-38290 32139 0 0
+37692 32122 0 0
+37712 32050 0 0
+37673 32050 0 0
+37625 32040 0 0
+37580 32021 0 0
+37540 31993 0 0
+37505 31958 0 0
+37478 31917 0 0
+37459 31872 0 0
+37450 31824 0 0
+37450 31173 0 0
+37460 31125 0 0
+37479 31080 0 0
+37507 31040 0 0
+37542 31005 0 0
+37583 30978 0 0
+37628 30959 0 0
+37676 30950 0 0
+38327 30950 0 0
+38375 30960 0 0
+38420 30979 0 0
+38460 31007 0 0
+38495 31042 0 0
+38522 31083 0 0
+38541 31128 0 0
+38550 31176 0 0
+38550 31827 0 0
+38540 31875 0 0
+38521 31920 0 0
+38493 31960 0 0
+38458 31995 0 0
+38417 32022 0 0
+38372 32041 0 0
+38324 32050 0 0
+38287 32050 0 0
+38308 32122 0 0
 38000 32429 0 1
 38000 32571 0 0
-38290 32861 0 0
-38267 32952 0 0
-38226 32974 0 0
-38159 32998 0 0
-38251 33037 0 0
-38336 33095 0 0
-38361 33120 0 1
-38361 32790 0 0
+38308 32878 0 0
+38281 32972 0 0
+38234 32997 0 0
+38226 32999 0 0
+38262 33015 0 0
+38352 33075 0 0
+38378 33101 0 1
+38378 32808 0 0
 38071 32500 0 0
-38361 32210 0 0
-38452 32233 0 0
-38474 32274 0 0
-38509 32370 0 0
-38525 32472 0 0
-38520 32574 0 0
-38495 32674 0 0
-38452 32767 0 0
-38361 32790 0 1
-38361 33120 0 0
-38408 33168 0 0
-38465 33253 0 0
-38504 33348 0 0
-38524 33449 0 0
-38522 33566 0 0
-38499 33667 0 0
-38458 33760 0 0
-38398 33844 0 0
-38324 33915 0 0
-38237 33970 0 0
-38157 34000 0 0
-38174 34005 0 0
-38267 34048 0 0
-38290 34139 0 0
+38378 32192 0 0
+38472 32219 0 0
+38497 32266 0 0
+38533 32367 0 0
+38549 32473 0 0
+38544 32580 0 0
+38518 32684 0 0
+38472 32781 0 0
+38378 32808 0 1
+38378 33101 0 0
+38427 33151 0 0
+38487 33241 0 0
+38528 33340 0 0
+38549 33446 0 0
+38547 33569 0 0
+38524 33674 0 0
+38480 33772 0 0
+38418 33860 0 0
+38340 33935 0 0
+38249 33992 0 0
+38224 34001 0 0
+38281 34028 0 0
+38308 34122 0 0
+38042 34387 0 0
 38000 34429 0 1
 38000 34571 0 0
-38290 34861 0 0
-38267 34952 0 0
-38226 34974 0 0
-38159 34998 0 0
-38251 35037 0 0
-38336 35095 0 0
-38361 35120 0 1
-38361 34790 0 0
+38042 34612 0 0
+38308 34878 0 0
+38281 34972 0 0
+38234 34997 0 0
+38226 34999 0 0
+38262 35015 0 0
+38352 35075 0 0
+38378 35101 0 1
+38378 34808 0 0
 38071 34500 0 0
-38361 34210 0 0
-38452 34233 0 0
-38474 34274 0 0
-38509 34370 0 0
-38525 34472 0 0
-38520 34574 0 0
-38495 34674 0 0
-38452 34767 0 0
-38361 34790 0 1
-38361 35120 0 0
-38408 35168 0 0
-38465 35253 0 0
-38504 35348 0 0
-38524 35449 0 0
-38522 35566 0 0
-38499 35667 0 0
-38458 35760 0 0
-38398 35844 0 0
-38324 35915 0 0
-38237 35970 0 0
-38157 36000 0 0
-38174 36005 0 0
-38267 36048 0 0
-38290 36139 0 0
+38378 34192 0 0
+38472 34219 0 0
+38497 34266 0 0
+38533 34367 0 0
+38549 34473 0 0
+38544 34580 0 0
+38518 34684 0 0
+38472 34781 0 0
+38378 34808 0 1
+38378 35101 0 0
+38427 35151 0 0
+38487 35241 0 0
+38528 35340 0 0
+38549 35446 0 0
+38547 35569 0 0
+38524 35674 0 0
+38480 35772 0 0
+38418 35860 0 0
+38340 35935 0 0
+38249 35992 0 0
+38224 36001 0 0
+38281 36028 0 0
+38308 36122 0 0
+38042 36387 0 0
 38000 36429 0 1
 38000 36571 0 0
-38290 36861 0 0
-38267 36952 0 0
-38226 36974 0 0
-38159 36998 0 0
-38251 37037 0 0
-38336 37095 0 0
-38361 37120 0 1
-38361 36790 0 0
+38042 36612 0 0
+38308 36878 0 0
+38281 36972 0 0
+38234 36997 0 0
+38226 36999 0 0
+38262 37015 0 0
+38352 37075 0 0
+38378 37101 0 1
+38378 36808 0 0
 38071 36500 0 0
-38361 36210 0 0
-38452 36233 0 0
-38474 36274 0 0
-38509 36370 0 0
-38525 36472 0 0
-38520 36574 0 0
-38495 36674 0 0
-38452 36767 0 0
-38361 36790 0 1
-38361 37120 0 0
-38408 37168 0 0
-38465 37253 0 0
-38504 37348 0 0
-38524 37449 0 0
-38522 37566 0 0
-38499 37667 0 0
-38458 37760 0 0
-38398 37844 0 0
-38324 37915 0 0
-38237 37970 0 0
-38157 38000 0 0
-38174 38005 0 0
-38267 38048 0 0
-38290 38139 0 0
+38378 36192 0 0
+38472 36219 0 0
+38497 36266 0 0
+38533 36367 0 0
+38549 36473 0 0
+38544 36580 0 0
+38518 36684 0 0
+38472 36781 0 0
+38378 36808 0 1
+38378 37101 0 0
+38427 37151 0 0
+38487 37241 0 0
+38528 37340 0 0
+38549 37446 0 0
+38547 37569 0 0
+38524 37674 0 0
+38480 37772 0 0
+38418 37860 0 0
+38340 37935 0 0
+38249 37992 0 0
+38224 38001 0 0
+38281 38028 0 0
+38308 38122 0 0
+38042 38387 0 0
 38000 38429 0 1
 38000 38571 0 0
-38290 38861 0 0
-38267 38952 0 0
-38226 38974 0 0
-38159 38998 0 0
-38251 39037 0 0
-38336 39095 0 0
-38361 39120 0 1
-38361 38790 0 0
+38042 38612 0 0
+38308 38878 0 0
+38281 38972 0 0
+38234 38997 0 0
+38226 38999 0 0
+38262 39015 0 0
+38352 39075 0 0
+38378 39101 0 1
+38378 38808 0 0
 38071 38500 0 0
-38361 38210 0 0
-38452 38233 0 0
-38474 38274 0 0
-38509 38370 0 0
-38525 38472 0 0
-38520 38574 0 0
-38495 38674 0 0
-38452 38767 0 0
-38361 38790 0 1
-38361 39120 0 0
-38408 39168 0 0
-38465 39253 0 0
-38504 39348 0 0
-38524 39449 0 0
-38522 39566 0 0
-38499 39667 0 0
-38458 39760 0 0
-38398 39844 0 0
-38324 39915 0 0
-38237 39970 0 0
-38157 40000 0 0
-38174 40005 0 0
-38267 40048 0 0
-38290 40139 0 0
+38378 38192 0 0
+38472 38219 0 0
+38497 38266 0 0
+38533 38367 0 0
+38549 38473 0 0
+38544 38580 0 0
+38518 38684 0 0
+38472 38781 0 0
+38378 38808 0 1
+38378 39101 0 0
+38427 39151 0 0
+38487 39241 0 0
+38528 39340 0 0
+38549 39446 0 0
+38547 39569 0 0
+38524 39674 0 0
+38480 39772 0 0
+38418 39860 0 0
+38340 39935 0 0
+38249 39992 0 0
+38224 40001 0 0
+38281 40028 0 0
+38308 40122 0 0
+38042 40387 0 0
 38000 40429 0 1
 38000 40571 0 0
-38290 40861 0 0
-38267 40952 0 0
-38226 40974 0 0
-38159 40998 0 0
-38251 41037 0 0
-38336 41095 0 0
-38361 41120 0 1
-38361 40790 0 0
+38042 40612 0 0
+38308 40878 0 0
+38281 40972 0 0
+38234 40997 0 0
+38226 40999 0 0
+38262 41015 0 0
+38352 41075 0 0
+38378 41101 0 1
+38378 40808 0 0
 38071 40500 0 0
-38361 40210 0 0
-38452 40233 0 0
-38474 40274 0 0
-38509 40370 0 0
-38525 40472 0 0
-38520 40574 0 0
-38495 40674 0 0
-38452 40767 0 0
-38361 40790 0 1
-38361 41120 0 0
-38408 41168 0 0
-38465 41253 0 0
-38504 41348 0 0
-38524 41449 0 0
-38522 41566 0 0
-38499 41667 0 0
-38458 41760 0 0
-38398 41844 0 0
-38324 41915 0 0
-38237 41970 0 0
-38157 42000 0 0
-38174 42005 0 0
-38267 42048 0 0
-38290 42139 0 0
+38378 40192 0 0
+38472 40219 0 0
+38497 40266 0 0
+38533 40367 0 0
+38549 40473 0 0
+38544 40580 0 0
+38518 40684 0 0
+38472 40781 0 0
+38378 40808 0 1
+38378 41101 0 0
+38427 41151 0 0
+38487 41241 0 0
+38528 41340 0 0
+38549 41446 0 0
+38547 41569 0 0
+38524 41674 0 0
+38480 41772 0 0
+38418 41860 0 0
+38340 41935 0 0
+38249 41992 0 0
+38224 42001 0 0
+38281 42028 0 0
+38308 42122 0 0
+38042 42387 0 0
 38000 42429 0 1
 38000 42571 0 0
-38290 42861 0 0
-38267 42952 0 0
-38226 42974 0 0
-38159 42998 0 0
-38251 43037 0 0
-38336 43095 0 0
-38361 43120 0 1
-38361 42790 0 0
+38042 42612 0 0
+38308 42878 0 0
+38281 42972 0 0
+38234 42997 0 0
+38226 42999 0 0
+38262 43015 0 0
+38352 43075 0 0
+38378 43101 0 1
+38378 42808 0 0
 38071 42500 0 0
-38361 42210 0 0
-38452 42233 0 0
-38474 42274 0 0
-38509 42370 0 0
-38525 42472 0 0
-38520 42574 0 0
-38495 42674 0 0
-38452 42767 0 0
-38361 42790 0 1
-38361 43120 0 0
-38408 43168 0 0
-38465 43253 0 0
-38504 43348 0 0
-38524 43449 0 0
-38522 43566 0 0
-38499 43667 0 0
-38458 43760 0 0
-38398 43844 0 0
-38324 43915 0 0
-38237 43970 0 0
-38157 44000 0 0
-38174 44005 0 0
-38267 44048 0 0
-38290 44139 0 0
+38378 42192 0 0
+38472 42219 0 0
+38497 42266 0 0
+38533 42367 0 0
+38549 42473 0 0
+38544 42580 0 0
+38518 42684 0 0
+38472 42781 0 0
+38378 42808 0 1
+38378 43101 0 0
+38427 43151 0 0
+38487 43241 0 0
+38528 43340 0 0
+38549 43446 0 0
+38547 43569 0 0
+38524 43674 0 0
+38480 43772 0 0
+38418 43860 0 0
+38340 43935 0 0
+38249 43992 0 0
+38224 44001 0 0
+38281 44028 0 0
+38308 44122 0 0
 38000 44429 0 0
 37929 44500 0 0
-37639 44790 0 1
-37639 45119 0 0
-37670 45089 0 0
-37701 45068 0 0
-37756 45033 0 0
-37841 44998 0 0
-37826 44995 0 0
-37733 44952 0 0
-37710 44861 0 0
+37622 44808 0 1
+37622 45101 0 0
+37654 45070 0 0
+37744 45011 0 0
+37775 44998 0 0
+37719 44972 0 0
+37692 44878 0 0
 38000 44571 0 0
-38290 44861 0 0
-38267 44952 0 0
-38226 44974 0 0
-38159 44998 0 0
-38251 45037 0 0
-38336 45095 0 0
-38361 45120 0 1
-38361 44790 0 0
+38308 44878 0 0
+38281 44972 0 0
+38234 44997 0 0
+38226 44999 0 0
+38262 45015 0 0
+38352 45075 0 0
+38378 45101 0 1
+38378 44808 0 0
 38071 44500 0 0
-38361 44210 0 0
-38452 44233 0 0
-38474 44274 0 0
-38509 44370 0 0
-38525 44472 0 0
-38520 44574 0 0
-38495 44674 0 0
-38452 44767 0 0
-38361 44790 0 1
-38361 45120 0 0
-38408 45168 0 0
-38465 45253 0 0
-38504 45348 0 0
-38524 45449 0 0
-38522 45566 0 0
-38499 45667 0 0
-38458 45760 0 0
-38398 45844 0 0
-38324 45915 0 0
-38237 45970 0 0
-38157 46000 0 0
-38174 46005 0 0
-38267 46048 0 0
-38290 46139 0 0
+38378 44192 0 0
+38472 44219 0 0
+38497 44266 0 0
+38533 44367 0 0
+38549 44473 0 0
+38544 44580 0 0
+38518 44684 0 0
+38472 44781 0 0
+38378 44808 0 1
+38378 45101 0 0
+38427 45151 0 0
+38487 45241 0 0
+38528 45340 0 0
+38549 45446 0 0
+38547 45569 0 0
+38524 45674 0 0
+38480 45772 0 0
+38418 45860 0 0
+38340 45935 0 0
+38249 45992 0 0
+38224 46001 0 0
+38281 46028 0 0
+38308 46122 0 0
+38042 46387 0 0
 38000 46429 0 1
 38000 46571 0 0
-38290 46861 0 0
-38267 46952 0 0
-38226 46974 0 0
-38159 46998 0 0
-38251 47037 0 0
-38336 47095 0 0
-38361 47120 0 1
-38361 46790 0 0
+38042 46612 0 0
+38308 46878 0 0
+38281 46972 0 0
+38234 46997 0 0
+38226 46999 0 0
+38262 47015 0 0
+38352 47075 0 0
+38378 47101 0 1
+38378 46808 0 0
 38071 46500 0 0
-38361 46210 0 0
-38452 46233 0 0
-38474 46274 0 0
-38509 46370 0 0
-38525 46472 0 0
-38520 46574 0 0
-38495 46674 0 0
-38452 46767 0 0
-38361 46790 0 1
-38361 47120 0 0
-38408 47168 0 0
-38465 47253 0 0
-38504 47348 0 0
-38524 47449 0 0
-38522 47566 0 0
-38499 47667 0 0
-38458 47760 0 0
-38398 47844 0 0
-38324 47915 0 0
-38237 47970 0 0
-38157 48000 0 0
-38174 48005 0 0
-38267 48048 0 0
-38290 48139 0 0
+38378 46192 0 0
+38472 46219 0 0
+38497 46266 0 0
+38533 46367 0 0
+38549 46473 0 0
+38544 46580 0 0
+38518 46684 0 0
+38472 46781 0 0
+38378 46808 0 1
+38378 47101 0 0
+38427 47151 0 0
+38487 47241 0 0
+38528 47340 0 0
+38549 47446 0 0
+38547 47569 0 0
+38524 47674 0 0
+38480 47772 0 0
+38418 47860 0 0
+38340 47935 0 0
+38249 47992 0 0
+38224 48001 0 0
+38281 48028 0 0
+38308 48122 0 0
+38042 48387 0 0
 38000 48429 0 1
 38000 48571 0 0
-38290 48861 0 0
-38267 48952 0 0
-38226 48974 0 0
-38223 48975 0 0
-38361 48975 0 1
-38361 48790 0 0
+38042 48612 0 0
+38308 48878 0 0
+38281 48972 0 0
+38275 48975 0 0
+38378 48975 0 1
+38378 48808 0 0
 38071 48500 0 0
-38361 48210 0 0
-38452 48233 0 0
-38474 48274 0 0
-38509 48370 0 0
-38525 48472 0 0
-38520 48574 0 0
-38495 48674 0 0
-38452 48767 0 0
-38361 48790 0 1
-38361 48975 0 0
+38378 48192 0 0
+38472 48219 0 0
+38497 48266 0 0
+38533 48367 0 0
+38549 48473 0 0
+38544 48580 0 0
+38518 48684 0 0
+38472 48781 0 0
+38378 48808 0 1
+38378 48975 0 0
 39050 48975 0 1
 39050 30352 0 0
 38967 30350 0 0
@@ -23739,24 +23755,22 @@ $POLYSCORNERS
 39132 30337 0 0
 39050 30352 0 1
 39050 48975 0 0
-39699 48975 0 1
-39699 45345 0 0
-39616 45343 0 0
-39534 45325 0 0
-39458 45292 0 0
-39389 45244 0 0
-39332 45185 0 0
-39286 45115 0 0
-39256 45037 0 0
-39240 44955 0 0
-39242 44872 0 0
-39259 44790 0 0
-39292 44714 0 0
-39339 44645 0 0
-39398 44586 0 0
-39468 44541 0 0
-39545 44509 0 0
-39551 44507 0 1
+39783 48975 0 1
+39783 45426 0 0
+39700 45424 0 0
+39618 45406 0 0
+39542 45373 0 0
+39473 45325 0 0
+39416 45266 0 0
+39370 45196 0 0
+39340 45118 0 0
+39324 45036 0 0
+39326 44953 0 0
+39343 44871 0 0
+39376 44795 0 0
+39423 44726 0 0
+39482 44667 0 0
+39551 44622 0 1
 39551 28878 0 0
 39446 28840 0 0
 39408 28769 0 0
@@ -23768,14 +23782,15 @@ $POLYSCORNERS
 39551 28122 0 0
 39929 28500 0 0
 39551 28878 0 1
-39551 44507 0 0
-39627 44494 0 0
-39710 44494 0 0
-39792 44511 0 0
-39869 44543 0 0
-39938 44590 0 0
-39997 44649 0 0
-40023 44688 0 1
+39551 44622 0 0
+39552 44622 0 0
+39629 44590 0 0
+39711 44575 0 0
+39794 44575 0 0
+39876 44592 0 0
+39953 44624 0 0
+40022 44671 0 0
+40023 44672 0 1
 40023 29150 0 0
 39897 29142 0 0
 39774 29110 0 0
@@ -23860,20 +23875,20 @@ $POLYSCORNERS
 40149 29133 0 0
 40050 29146 0 0
 40023 29150 0 1
-40023 44688 0 0
-40043 44718 0 0
-40050 44734 0 0
-40075 44795 0 0
-40091 44877 0 0
-40090 44972 0 0
-40071 45053 0 0
-40037 45130 0 0
-39990 45198 0 0
-39929 45255 0 0
-39859 45300 0 0
-39781 45330 0 0
-39699 45345 0 1
-39699 48975 0 0
+40023 44672 0 0
+40081 44730 0 0
+40127 44799 0 0
+40159 44876 0 0
+40175 44958 0 0
+40174 45053 0 0
+40155 45134 0 0
+40121 45211 0 0
+40074 45279 0 0
+40013 45336 0 0
+39943 45381 0 0
+39865 45411 0 0
+39783 45426 0 1
+39783 48975 0 0
 40603 48975 0 1
 40603 43371 0 0
 40520 43369 0 0
@@ -26961,7 +26976,252 @@ $POLYSCORNERS
 18621 45377 0 0
 18558 45388 0 1
 18558 49075 0 0
-19465 49075 0 1
+20035 49075 0 1
+20035 48951 0 0
+19946 48949 0 0
+19860 48930 0 0
+19779 48895 0 0
+19707 48844 0 0
+19646 48781 0 0
+19598 48707 0 0
+19565 48625 0 0
+19549 48538 0 0
+19551 48449 0 0
+19569 48363 0 0
+19604 48282 0 0
+19654 48209 0 0
+19717 48148 0 0
+19791 48099 0 0
+19872 48066 0 0
+19959 48050 0 0
+20035 48050 0 1
+20035 47951 0 0
+19946 47949 0 0
+19860 47930 0 0
+19779 47895 0 0
+19707 47844 0 0
+19646 47781 0 0
+19598 47707 0 0
+19565 47625 0 0
+19549 47538 0 0
+19551 47449 0 0
+19569 47363 0 0
+19604 47282 0 0
+19654 47209 0 0
+19717 47148 0 0
+19791 47099 0 0
+19872 47066 0 0
+19959 47050 0 0
+20035 47050 0 1
+20035 46951 0 0
+19946 46949 0 0
+19860 46930 0 0
+19779 46895 0 0
+19707 46844 0 0
+19646 46781 0 0
+19598 46707 0 0
+19565 46625 0 0
+19549 46538 0 0
+19551 46449 0 0
+19569 46363 0 0
+19604 46282 0 0
+19654 46209 0 0
+19717 46148 0 0
+19791 46099 0 0
+19872 46066 0 0
+19959 46050 0 0
+20035 46050 0 1
+20035 45951 0 0
+19946 45949 0 0
+19860 45930 0 0
+19779 45895 0 0
+19707 45844 0 0
+19646 45781 0 0
+19598 45707 0 0
+19565 45625 0 0
+19549 45538 0 0
+19551 45449 0 0
+19569 45363 0 0
+19604 45282 0 0
+19654 45209 0 0
+19717 45148 0 0
+19791 45099 0 0
+19872 45066 0 0
+19959 45050 0 0
+20035 45050 0 1
+20035 44951 0 0
+19946 44949 0 0
+19860 44930 0 0
+19779 44895 0 0
+19707 44844 0 0
+19646 44781 0 0
+19598 44707 0 0
+19565 44625 0 0
+19549 44538 0 0
+19551 44449 0 0
+19569 44363 0 0
+19604 44282 0 0
+19654 44209 0 0
+19717 44148 0 0
+19791 44099 0 0
+19872 44066 0 0
+19959 44050 0 0
+20035 44050 0 1
+20035 43951 0 0
+19946 43949 0 0
+19860 43930 0 0
+19779 43895 0 0
+19707 43844 0 0
+19646 43781 0 0
+19598 43707 0 0
+19565 43625 0 0
+19549 43538 0 0
+19551 43449 0 0
+19569 43363 0 0
+19604 43282 0 0
+19654 43209 0 0
+19717 43148 0 0
+19791 43099 0 0
+19872 43066 0 0
+19959 43050 0 0
+20035 43050 0 1
+20035 42951 0 0
+19946 42949 0 0
+19860 42930 0 0
+19779 42895 0 0
+19707 42844 0 0
+19646 42781 0 0
+19598 42707 0 0
+19565 42625 0 0
+19549 42538 0 0
+19551 42449 0 0
+19569 42363 0 0
+19604 42282 0 0
+19654 42209 0 0
+19717 42148 0 0
+19791 42099 0 0
+19872 42066 0 0
+19959 42050 0 0
+20035 42050 0 1
+20035 41951 0 0
+19946 41949 0 0
+19860 41930 0 0
+19779 41895 0 0
+19707 41844 0 0
+19646 41781 0 0
+19598 41707 0 0
+19565 41625 0 0
+19549 41538 0 0
+19551 41449 0 0
+19569 41363 0 0
+19604 41282 0 0
+19654 41209 0 0
+19717 41148 0 0
+19791 41099 0 0
+19872 41066 0 0
+19959 41050 0 0
+20035 41050 0 1
+20035 40951 0 0
+19946 40949 0 0
+19860 40930 0 0
+19779 40895 0 0
+19707 40844 0 0
+19646 40781 0 0
+19598 40707 0 0
+19565 40625 0 0
+19549 40538 0 0
+19551 40449 0 0
+19569 40363 0 0
+19604 40282 0 0
+19654 40209 0 0
+19717 40148 0 0
+19791 40099 0 0
+19872 40066 0 0
+19959 40050 0 0
+20035 40050 0 1
+20035 39951 0 0
+19946 39949 0 0
+19860 39930 0 0
+19779 39895 0 0
+19707 39844 0 0
+19646 39781 0 0
+19598 39707 0 0
+19565 39625 0 0
+19549 39538 0 0
+19551 39449 0 0
+19569 39363 0 0
+19604 39282 0 0
+19654 39209 0 0
+19717 39148 0 0
+19791 39099 0 0
+19872 39066 0 0
+19959 39050 0 0
+20035 39050 0 1
+20035 38951 0 0
+19946 38949 0 0
+19860 38930 0 0
+19779 38895 0 0
+19707 38844 0 0
+19646 38781 0 0
+19598 38707 0 0
+19565 38625 0 0
+19549 38538 0 0
+19551 38449 0 0
+19569 38363 0 0
+19604 38282 0 0
+19654 38209 0 0
+19717 38148 0 0
+19791 38099 0 0
+19872 38066 0 0
+19959 38050 0 0
+20035 38050 0 1
+20035 37951 0 0
+19946 37949 0 0
+19860 37930 0 0
+19779 37895 0 0
+19707 37844 0 0
+19646 37781 0 0
+19598 37707 0 0
+19565 37625 0 0
+19549 37538 0 0
+19551 37449 0 0
+19569 37363 0 0
+19604 37282 0 0
+19654 37209 0 0
+19717 37148 0 0
+19791 37099 0 0
+19872 37066 0 0
+19959 37050 0 0
+20035 37050 0 1
+20035 36951 0 0
+19946 36949 0 0
+19860 36930 0 0
+19779 36895 0 0
+19707 36844 0 0
+19646 36781 0 0
+19598 36707 0 0
+19565 36625 0 0
+19549 36538 0 0
+19551 36449 0 0
+19569 36363 0 0
+19604 36282 0 0
+19622 36255 0 1
+19622 35808 0 0
+19528 35781 0 0
+19503 35734 0 0
+19467 35633 0 0
+19451 35527 0 0
+19456 35420 0 0
+19482 35316 0 0
+19528 35219 0 0
+19622 35192 0 1
+19622 34808 0 0
+19528 34781 0 0
+19503 34734 0 0
+19467 34633 0 0
+19451 34527 0 0
+19456 34420 0 0
+19465 34384 0 1
 19465 28808 0 0
 19292 28634 0 0
 19158 28500 0 0
@@ -26975,338 +27235,92 @@ $POLYSCORNERS
 19605 28684 0 0
 19559 28781 0 0
 19465 28808 0 1
-19465 49075 0 0
-20033 49075 0 1
-20033 48926 0 0
-19950 48924 0 0
-19868 48906 0 0
-19792 48873 0 0
-19723 48825 0 0
-19666 48766 0 0
-19620 48696 0 0
-19590 48618 0 0
-19574 48536 0 0
-19576 48453 0 0
-19593 48371 0 0
-19626 48295 0 0
-19673 48226 0 0
-19732 48167 0 0
-19802 48122 0 0
-19879 48090 0 0
-19961 48075 0 0
-20033 48075 0 1
-20033 47926 0 0
-19950 47924 0 0
-19868 47906 0 0
-19792 47873 0 0
-19723 47825 0 0
-19666 47766 0 0
-19620 47696 0 0
-19590 47618 0 0
-19574 47536 0 0
-19576 47453 0 0
-19593 47371 0 0
-19626 47295 0 0
-19673 47226 0 0
-19732 47167 0 0
-19802 47122 0 0
-19879 47090 0 0
-19961 47075 0 0
-20033 47075 0 1
-20033 46926 0 0
-19950 46924 0 0
-19868 46906 0 0
-19792 46873 0 0
-19723 46825 0 0
-19666 46766 0 0
-19620 46696 0 0
-19590 46618 0 0
-19574 46536 0 0
-19576 46453 0 0
-19593 46371 0 0
-19626 46295 0 0
-19673 46226 0 0
-19732 46167 0 0
-19802 46122 0 0
-19879 46090 0 0
-19961 46075 0 0
-20033 46075 0 1
-20033 45926 0 0
-19950 45924 0 0
-19868 45906 0 0
-19792 45873 0 0
-19723 45825 0 0
-19666 45766 0 0
-19620 45696 0 0
-19590 45618 0 0
-19574 45536 0 0
-19576 45453 0 0
-19593 45371 0 0
-19626 45295 0 0
-19673 45226 0 0
-19732 45167 0 0
-19802 45122 0 0
-19879 45090 0 0
-19961 45075 0 0
-20033 45075 0 1
-20033 44926 0 0
-19950 44924 0 0
-19868 44906 0 0
-19792 44873 0 0
-19723 44825 0 0
-19666 44766 0 0
-19620 44696 0 0
-19590 44618 0 0
-19574 44536 0 0
-19576 44453 0 0
-19593 44371 0 0
-19626 44295 0 0
-19673 44226 0 0
-19732 44167 0 0
-19802 44122 0 0
-19879 44090 0 0
-19961 44075 0 0
-20033 44075 0 1
-20033 43926 0 0
-19950 43924 0 0
-19868 43906 0 0
-19792 43873 0 0
-19723 43825 0 0
-19666 43766 0 0
-19620 43696 0 0
-19590 43618 0 0
-19574 43536 0 0
-19576 43453 0 0
-19593 43371 0 0
-19626 43295 0 0
-19673 43226 0 0
-19732 43167 0 0
-19802 43122 0 0
-19879 43090 0 0
-19961 43075 0 0
-20033 43075 0 1
-20033 42926 0 0
-19950 42924 0 0
-19868 42906 0 0
-19792 42873 0 0
-19723 42825 0 0
-19666 42766 0 0
-19620 42696 0 0
-19590 42618 0 0
-19574 42536 0 0
-19576 42453 0 0
-19593 42371 0 0
-19626 42295 0 0
-19673 42226 0 0
-19732 42167 0 0
-19802 42122 0 0
-19879 42090 0 0
-19961 42075 0 0
-20033 42075 0 1
-20033 41926 0 0
-19950 41924 0 0
-19868 41906 0 0
-19792 41873 0 0
-19723 41825 0 0
-19666 41766 0 0
-19620 41696 0 0
-19590 41618 0 0
-19574 41536 0 0
-19576 41453 0 0
-19593 41371 0 0
-19626 41295 0 0
-19673 41226 0 0
-19732 41167 0 0
-19802 41122 0 0
-19879 41090 0 0
-19961 41075 0 0
-20033 41075 0 1
-20033 40926 0 0
-19950 40924 0 0
-19868 40906 0 0
-19792 40873 0 0
-19723 40825 0 0
-19666 40766 0 0
-19620 40696 0 0
-19590 40618 0 0
-19574 40536 0 0
-19576 40453 0 0
-19593 40371 0 0
-19626 40295 0 0
-19673 40226 0 0
-19732 40167 0 0
-19802 40122 0 0
-19879 40090 0 0
-19961 40075 0 0
-20033 40075 0 1
-20033 39926 0 0
-19950 39924 0 0
-19868 39906 0 0
-19792 39873 0 0
-19723 39825 0 0
-19666 39766 0 0
-19620 39696 0 0
-19590 39618 0 0
-19574 39536 0 0
-19576 39453 0 0
-19593 39371 0 0
-19626 39295 0 0
-19673 39226 0 0
-19732 39167 0 0
-19802 39122 0 0
-19879 39090 0 0
-19961 39075 0 0
-20033 39075 0 1
-20033 38926 0 0
-19950 38924 0 0
-19868 38906 0 0
-19792 38873 0 0
-19723 38825 0 0
-19666 38766 0 0
-19620 38696 0 0
-19590 38618 0 0
-19574 38536 0 0
-19576 38453 0 0
-19593 38371 0 0
-19626 38295 0 0
-19673 38226 0 0
-19732 38167 0 0
-19802 38122 0 0
-19879 38090 0 0
-19961 38075 0 0
-20033 38075 0 1
-20033 37926 0 0
-19950 37924 0 0
-19868 37906 0 0
-19792 37873 0 0
-19723 37825 0 0
-19666 37766 0 0
-19620 37696 0 0
-19590 37618 0 0
-19574 37536 0 0
-19576 37453 0 0
-19593 37371 0 0
-19626 37295 0 0
-19673 37226 0 0
-19732 37167 0 0
-19802 37122 0 0
-19879 37090 0 0
-19961 37075 0 0
-20033 37075 0 1
-20033 36926 0 0
-19950 36924 0 0
-19868 36906 0 0
-19792 36873 0 0
-19723 36825 0 0
-19666 36766 0 0
-19620 36696 0 0
-19590 36618 0 0
-19574 36536 0 0
-19576 36453 0 0
-19593 36371 0 0
-19626 36295 0 0
-19639 36275 0 1
-19639 35790 0 0
-19548 35767 0 0
-19526 35726 0 0
-19491 35630 0 0
-19475 35528 0 0
-19480 35426 0 0
-19505 35326 0 0
-19548 35233 0 0
-19639 35210 0 1
-19639 34790 0 0
-19548 34767 0 0
-19526 34726 0 0
-19491 34630 0 0
-19475 34528 0 0
-19480 34426 0 0
-19505 34326 0 0
-19548 34233 0 0
-19639 34210 0 0
+19465 34384 0 0
+19482 34316 0 0
+19528 34219 0 0
+19622 34192 0 0
 19929 34500 0 0
-19639 34790 0 1
-19639 35210 0 0
+19622 34808 0 1
+19622 35192 0 0
 19929 35500 0 0
-19639 35790 0 1
-19639 36275 0 0
-19673 36226 0 0
-19732 36167 0 0
-19802 36122 0 0
-19879 36090 0 0
-19961 36075 0 0
-20028 36075 0 1
-20028 36025 0 0
-19926 36020 0 0
-19826 35995 0 0
-19733 35952 0 0
-19710 35861 0 0
+19622 35808 0 1
+19622 36255 0 0
+19654 36209 0 0
+19717 36148 0 0
+19791 36099 0 0
+19872 36066 0 0
+19959 36050 0 0
+20027 36050 0 1
+20027 36049 0 0
+19920 36044 0 0
+19816 36018 0 0
+19719 35972 0 0
+19692 35878 0 0
 20000 35571 0 1
 20000 35429 0 0
-19710 35139 0 0
-19733 35048 0 0
-19774 35026 0 0
-19845 34999 0 0
-19826 34995 0 0
-19733 34952 0 0
-19710 34861 0 0
+19692 35122 0 0
+19719 35028 0 0
+19766 35003 0 0
+19776 34999 0 0
+19719 34972 0 0
+19692 34878 0 0
 20000 34571 0 1
 20000 34429 0 0
-19710 34139 0 0
-19733 34048 0 0
-19774 34026 0 0
-19870 33991 0 0
-19972 33975 0 0
-20033 33977 0 1
-20033 33926 0 0
-19950 33924 0 0
-19868 33906 0 0
-19792 33873 0 0
-19723 33825 0 0
-19666 33766 0 0
-19620 33696 0 0
-19590 33618 0 0
-19574 33536 0 0
-19576 33453 0 0
-19593 33371 0 0
-19626 33295 0 0
-19673 33226 0 0
-19732 33167 0 0
-19802 33122 0 0
-19879 33090 0 0
-19961 33075 0 0
-20033 33075 0 1
-20033 32926 0 0
-19950 32924 0 0
-19868 32906 0 0
-19792 32873 0 0
-19723 32825 0 0
-19666 32766 0 0
-19620 32696 0 0
-19590 32618 0 0
-19574 32536 0 0
-19576 32453 0 0
-19593 32371 0 0
-19626 32295 0 0
-19673 32226 0 0
-19710 32189 0 1
-19710 31924 0 0
-19681 31918 0 0
-19654 31907 0 0
-19630 31891 0 0
-19609 31870 0 0
-19593 31846 0 0
-19582 31819 0 0
-19576 31790 0 0
-19576 31210 0 0
-19582 31181 0 0
-19593 31154 0 0
-19609 31130 0 0
-19630 31109 0 0
-19654 31093 0 0
-19681 31082 0 0
-19710 31076 0 0
-19939 31076 0 1
+19692 34122 0 0
+19719 34028 0 0
+19766 34003 0 0
+19867 33967 0 0
+19973 33951 0 0
+20035 33953 0 1
+20035 33951 0 0
+19946 33949 0 0
+19860 33930 0 0
+19779 33895 0 0
+19707 33844 0 0
+19646 33781 0 0
+19598 33707 0 0
+19565 33625 0 0
+19549 33538 0 0
+19551 33449 0 0
+19569 33363 0 0
+19604 33282 0 0
+19654 33209 0 0
+19717 33148 0 0
+19791 33099 0 0
+19872 33066 0 0
+19959 33050 0 0
+20035 33050 0 1
+20035 32951 0 0
+19946 32949 0 0
+19860 32930 0 0
+19779 32895 0 0
+19707 32844 0 0
+19646 32781 0 0
+19598 32707 0 0
+19565 32625 0 0
+19549 32538 0 0
+19551 32449 0 0
+19569 32363 0 0
+19604 32282 0 0
+19654 32209 0 0
+19685 32178 0 1
+19685 31949 0 0
+19656 31943 0 0
+19629 31932 0 0
+19605 31916 0 0
+19584 31895 0 0
+19568 31871 0 0
+19557 31844 0 0
+19551 31815 0 0
+19551 31185 0 0
+19557 31156 0 0
+19568 31129 0 0
+19584 31105 0 0
+19605 31084 0 0
+19629 31068 0 0
+19656 31057 0 0
+19685 31051 0 0
+19939 31051 0 1
 19939 25174 0 0
 19876 25172 0 0
 19814 25159 0 0
@@ -27375,331 +27389,334 @@ $POLYSCORNERS
 20061 25140 0 0
 20002 25163 0 0
 19939 25174 0 1
-19939 31076 0 0
-20290 31076 0 0
-20319 31082 0 0
-20346 31093 0 0
-20370 31109 0 0
-20391 31130 0 0
-20407 31154 0 0
-20418 31181 0 0
-20424 31210 0 0
-20424 31790 0 0
-20418 31819 0 0
-20407 31846 0 0
-20391 31870 0 0
-20370 31891 0 0
-20346 31907 0 0
-20319 31918 0 0
-20290 31924 0 0
-19710 31924 0 1
-19710 32189 0 0
-19732 32167 0 0
-19802 32122 0 0
-19879 32090 0 0
-19961 32075 0 0
-20044 32075 0 0
-20126 32092 0 0
-20203 32124 0 0
-20272 32171 0 0
-20331 32230 0 0
-20377 32299 0 0
-20409 32376 0 0
-20425 32458 0 0
-20424 32553 0 0
-20405 32634 0 0
-20371 32711 0 0
-20324 32779 0 0
-20263 32836 0 0
-20193 32881 0 0
-20115 32911 0 0
-20033 32926 0 1
-20033 33075 0 0
-20044 33075 0 0
-20126 33092 0 0
-20203 33124 0 0
-20272 33171 0 0
-20331 33230 0 0
-20377 33299 0 0
-20409 33376 0 0
-20425 33458 0 0
-20424 33553 0 0
-20405 33634 0 0
-20371 33711 0 0
-20324 33779 0 0
-20263 33836 0 0
-20193 33881 0 0
-20115 33911 0 0
-20033 33926 0 1
-20033 33977 0 0
-20074 33980 0 0
-20174 34005 0 0
-20267 34048 0 0
-20290 34139 0 0
+19939 31051 0 0
+20315 31051 0 0
+20344 31057 0 0
+20371 31068 0 0
+20395 31084 0 0
+20416 31105 0 0
+20432 31129 0 0
+20443 31156 0 0
+20449 31185 0 0
+20449 31815 0 0
+20443 31844 0 0
+20432 31871 0 0
+20416 31895 0 0
+20395 31916 0 0
+20371 31932 0 0
+20344 31943 0 0
+20315 31949 0 0
+19685 31949 0 1
+19685 32178 0 0
+19717 32148 0 0
+19791 32099 0 0
+19872 32066 0 0
+19959 32050 0 0
+20047 32050 0 0
+20134 32068 0 0
+20215 32102 0 0
+20288 32152 0 0
+20350 32214 0 0
+20399 32288 0 0
+20433 32369 0 0
+20450 32456 0 0
+20449 32557 0 0
+20429 32643 0 0
+20393 32723 0 0
+20342 32796 0 0
+20278 32856 0 0
+20204 32904 0 0
+20121 32936 0 0
+20035 32951 0 1
+20035 33050 0 0
+20047 33050 0 0
+20134 33068 0 0
+20215 33102 0 0
+20288 33152 0 0
+20350 33214 0 0
+20399 33288 0 0
+20433 33369 0 0
+20450 33456 0 0
+20449 33557 0 0
+20429 33643 0 0
+20393 33723 0 0
+20342 33796 0 0
+20278 33856 0 0
+20204 33904 0 0
+20121 33936 0 0
+20035 33951 0 1
+20035 33953 0 0
+20080 33956 0 0
+20184 33982 0 0
+20281 34028 0 0
+20308 34122 0 0
+20035 34394 0 0
 20000 34429 0 1
 20000 34571 0 0
-20290 34861 0 0
-20267 34952 0 0
-20226 34974 0 0
-20154 35000 0 0
-20174 35005 0 0
-20267 35048 0 0
-20290 35139 0 0
+20035 34605 0 0
+20308 34878 0 0
+20281 34972 0 0
+20234 34997 0 0
+20223 35000 0 0
+20281 35028 0 0
+20308 35122 0 0
+20035 35394 0 0
 20000 35429 0 1
 20000 35571 0 0
-20290 35861 0 0
-20267 35952 0 0
-20226 35974 0 0
-20130 36009 0 0
-20033 36024 0 0
-20028 36025 0 1
-20028 36075 0 0
-20044 36075 0 0
-20126 36092 0 0
-20203 36124 0 0
-20272 36171 0 0
-20331 36230 0 0
-20361 36275 0 1
-20361 35790 0 0
+20035 35605 0 0
+20308 35878 0 0
+20281 35972 0 0
+20234 35997 0 0
+20133 36033 0 0
+20035 36047 0 0
+20027 36049 0 1
+20027 36050 0 0
+20047 36050 0 0
+20134 36068 0 0
+20215 36102 0 0
+20288 36152 0 0
+20350 36214 0 0
+20378 36256 0 1
+20378 35808 0 0
 20071 35500 0 0
-20361 35210 0 1
-20361 34790 0 0
+20378 35192 0 1
+20378 34808 0 0
 20071 34500 0 0
-20361 34210 0 0
-20452 34233 0 0
-20474 34274 0 0
-20509 34370 0 0
-20525 34472 0 0
-20520 34574 0 0
-20495 34674 0 0
-20452 34767 0 0
-20361 34790 0 1
-20361 35210 0 0
-20452 35233 0 0
-20474 35274 0 0
-20509 35370 0 0
-20525 35472 0 0
-20520 35574 0 0
-20495 35674 0 0
-20452 35767 0 0
-20361 35790 0 1
-20361 36275 0 0
-20377 36299 0 0
-20409 36376 0 0
-20425 36458 0 0
-20424 36553 0 0
-20405 36634 0 0
-20371 36711 0 0
-20324 36779 0 0
-20263 36836 0 0
-20193 36881 0 0
-20115 36911 0 0
-20033 36926 0 1
-20033 37075 0 0
-20044 37075 0 0
-20126 37092 0 0
-20203 37124 0 0
-20272 37171 0 0
-20331 37230 0 0
-20377 37299 0 0
-20409 37376 0 0
-20425 37458 0 0
-20424 37553 0 0
-20405 37634 0 0
-20371 37711 0 0
-20324 37779 0 0
-20263 37836 0 0
-20193 37881 0 0
-20115 37911 0 0
-20033 37926 0 1
-20033 38075 0 0
-20044 38075 0 0
-20126 38092 0 0
-20203 38124 0 0
-20272 38171 0 0
-20331 38230 0 0
-20377 38299 0 0
-20409 38376 0 0
-20425 38458 0 0
-20424 38553 0 0
-20405 38634 0 0
-20371 38711 0 0
-20324 38779 0 0
-20263 38836 0 0
-20193 38881 0 0
-20115 38911 0 0
-20033 38926 0 1
-20033 39075 0 0
-20044 39075 0 0
-20126 39092 0 0
-20203 39124 0 0
-20272 39171 0 0
-20331 39230 0 0
-20377 39299 0 0
-20409 39376 0 0
-20425 39458 0 0
-20424 39553 0 0
-20405 39634 0 0
-20371 39711 0 0
-20324 39779 0 0
-20263 39836 0 0
-20193 39881 0 0
-20115 39911 0 0
-20033 39926 0 1
-20033 40075 0 0
-20044 40075 0 0
-20126 40092 0 0
-20203 40124 0 0
-20272 40171 0 0
-20331 40230 0 0
-20377 40299 0 0
-20409 40376 0 0
-20425 40458 0 0
-20424 40553 0 0
-20405 40634 0 0
-20371 40711 0 0
-20324 40779 0 0
-20263 40836 0 0
-20193 40881 0 0
-20115 40911 0 0
-20033 40926 0 1
-20033 41075 0 0
-20044 41075 0 0
-20126 41092 0 0
-20203 41124 0 0
-20272 41171 0 0
-20331 41230 0 0
-20377 41299 0 0
-20409 41376 0 0
-20425 41458 0 0
-20424 41553 0 0
-20405 41634 0 0
-20371 41711 0 0
-20324 41779 0 0
-20263 41836 0 0
-20193 41881 0 0
-20115 41911 0 0
-20033 41926 0 1
-20033 42075 0 0
-20044 42075 0 0
-20126 42092 0 0
-20203 42124 0 0
-20272 42171 0 0
-20331 42230 0 0
-20377 42299 0 0
-20409 42376 0 0
-20425 42458 0 0
-20424 42553 0 0
-20405 42634 0 0
-20371 42711 0 0
-20324 42779 0 0
-20263 42836 0 0
-20193 42881 0 0
-20115 42911 0 0
-20033 42926 0 1
-20033 43075 0 0
-20044 43075 0 0
-20126 43092 0 0
-20203 43124 0 0
-20272 43171 0 0
-20331 43230 0 0
-20377 43299 0 0
-20409 43376 0 0
-20425 43458 0 0
-20424 43553 0 0
-20405 43634 0 0
-20371 43711 0 0
-20324 43779 0 0
-20263 43836 0 0
-20193 43881 0 0
-20115 43911 0 0
-20033 43926 0 1
-20033 44075 0 0
-20044 44075 0 0
-20126 44092 0 0
-20203 44124 0 0
-20272 44171 0 0
-20331 44230 0 0
-20377 44299 0 0
-20409 44376 0 0
-20425 44458 0 0
-20424 44553 0 0
-20405 44634 0 0
-20371 44711 0 0
-20324 44779 0 0
-20263 44836 0 0
-20193 44881 0 0
-20115 44911 0 0
-20033 44926 0 1
-20033 45075 0 0
-20044 45075 0 0
-20126 45092 0 0
-20203 45124 0 0
-20272 45171 0 0
-20331 45230 0 0
-20377 45299 0 0
-20409 45376 0 0
-20425 45458 0 0
-20424 45553 0 0
-20405 45634 0 0
-20371 45711 0 0
-20324 45779 0 0
-20263 45836 0 0
-20193 45881 0 0
-20115 45911 0 0
-20033 45926 0 1
-20033 46075 0 0
-20044 46075 0 0
-20126 46092 0 0
-20203 46124 0 0
-20272 46171 0 0
-20331 46230 0 0
-20377 46299 0 0
-20409 46376 0 0
-20425 46458 0 0
-20424 46553 0 0
-20405 46634 0 0
-20371 46711 0 0
-20324 46779 0 0
-20263 46836 0 0
-20193 46881 0 0
-20115 46911 0 0
-20033 46926 0 1
-20033 47075 0 0
-20044 47075 0 0
-20126 47092 0 0
-20203 47124 0 0
-20272 47171 0 0
-20331 47230 0 0
-20377 47299 0 0
-20409 47376 0 0
-20425 47458 0 0
-20424 47553 0 0
-20405 47634 0 0
-20371 47711 0 0
-20324 47779 0 0
-20263 47836 0 0
-20193 47881 0 0
-20115 47911 0 0
-20033 47926 0 1
-20033 48075 0 0
-20044 48075 0 0
-20126 48092 0 0
-20203 48124 0 0
-20272 48171 0 0
-20331 48230 0 0
-20377 48299 0 0
-20409 48376 0 0
-20425 48458 0 0
-20424 48553 0 0
-20405 48634 0 0
-20371 48711 0 0
-20324 48779 0 0
-20263 48836 0 0
-20193 48881 0 0
-20115 48911 0 0
-20033 48926 0 1
-20033 49075 0 0
+20378 34192 0 0
+20472 34219 0 0
+20497 34266 0 0
+20533 34367 0 0
+20549 34473 0 0
+20544 34580 0 0
+20518 34684 0 0
+20472 34781 0 0
+20378 34808 0 1
+20378 35192 0 0
+20472 35219 0 0
+20497 35266 0 0
+20533 35367 0 0
+20549 35473 0 0
+20544 35580 0 0
+20518 35684 0 0
+20472 35781 0 0
+20378 35808 0 1
+20378 36256 0 0
+20399 36288 0 0
+20433 36369 0 0
+20450 36456 0 0
+20449 36557 0 0
+20429 36643 0 0
+20393 36723 0 0
+20342 36796 0 0
+20278 36856 0 0
+20204 36904 0 0
+20121 36936 0 0
+20035 36951 0 1
+20035 37050 0 0
+20047 37050 0 0
+20134 37068 0 0
+20215 37102 0 0
+20288 37152 0 0
+20350 37214 0 0
+20399 37288 0 0
+20433 37369 0 0
+20450 37456 0 0
+20449 37557 0 0
+20429 37643 0 0
+20393 37723 0 0
+20342 37796 0 0
+20278 37856 0 0
+20204 37904 0 0
+20121 37936 0 0
+20035 37951 0 1
+20035 38050 0 0
+20047 38050 0 0
+20134 38068 0 0
+20215 38102 0 0
+20288 38152 0 0
+20350 38214 0 0
+20399 38288 0 0
+20433 38369 0 0
+20450 38456 0 0
+20449 38557 0 0
+20429 38643 0 0
+20393 38723 0 0
+20342 38796 0 0
+20278 38856 0 0
+20204 38904 0 0
+20121 38936 0 0
+20035 38951 0 1
+20035 39050 0 0
+20047 39050 0 0
+20134 39068 0 0
+20215 39102 0 0
+20288 39152 0 0
+20350 39214 0 0
+20399 39288 0 0
+20433 39369 0 0
+20450 39456 0 0
+20449 39557 0 0
+20429 39643 0 0
+20393 39723 0 0
+20342 39796 0 0
+20278 39856 0 0
+20204 39904 0 0
+20121 39936 0 0
+20035 39951 0 1
+20035 40050 0 0
+20047 40050 0 0
+20134 40068 0 0
+20215 40102 0 0
+20288 40152 0 0
+20350 40214 0 0
+20399 40288 0 0
+20433 40369 0 0
+20450 40456 0 0
+20449 40557 0 0
+20429 40643 0 0
+20393 40723 0 0
+20342 40796 0 0
+20278 40856 0 0
+20204 40904 0 0
+20121 40936 0 0
+20035 40951 0 1
+20035 41050 0 0
+20047 41050 0 0
+20134 41068 0 0
+20215 41102 0 0
+20288 41152 0 0
+20350 41214 0 0
+20399 41288 0 0
+20433 41369 0 0
+20450 41456 0 0
+20449 41557 0 0
+20429 41643 0 0
+20393 41723 0 0
+20342 41796 0 0
+20278 41856 0 0
+20204 41904 0 0
+20121 41936 0 0
+20035 41951 0 1
+20035 42050 0 0
+20047 42050 0 0
+20134 42068 0 0
+20215 42102 0 0
+20288 42152 0 0
+20350 42214 0 0
+20399 42288 0 0
+20433 42369 0 0
+20450 42456 0 0
+20449 42557 0 0
+20429 42643 0 0
+20393 42723 0 0
+20342 42796 0 0
+20278 42856 0 0
+20204 42904 0 0
+20121 42936 0 0
+20035 42951 0 1
+20035 43050 0 0
+20047 43050 0 0
+20134 43068 0 0
+20215 43102 0 0
+20288 43152 0 0
+20350 43214 0 0
+20399 43288 0 0
+20433 43369 0 0
+20450 43456 0 0
+20449 43557 0 0
+20429 43643 0 0
+20393 43723 0 0
+20342 43796 0 0
+20278 43856 0 0
+20204 43904 0 0
+20121 43936 0 0
+20035 43951 0 1
+20035 44050 0 0
+20047 44050 0 0
+20134 44068 0 0
+20215 44102 0 0
+20288 44152 0 0
+20350 44214 0 0
+20399 44288 0 0
+20433 44369 0 0
+20450 44456 0 0
+20449 44557 0 0
+20429 44643 0 0
+20393 44723 0 0
+20342 44796 0 0
+20278 44856 0 0
+20204 44904 0 0
+20121 44936 0 0
+20035 44951 0 1
+20035 45050 0 0
+20047 45050 0 0
+20134 45068 0 0
+20215 45102 0 0
+20288 45152 0 0
+20350 45214 0 0
+20399 45288 0 0
+20433 45369 0 0
+20450 45456 0 0
+20449 45557 0 0
+20429 45643 0 0
+20393 45723 0 0
+20342 45796 0 0
+20278 45856 0 0
+20204 45904 0 0
+20121 45936 0 0
+20035 45951 0 1
+20035 46050 0 0
+20047 46050 0 0
+20134 46068 0 0
+20215 46102 0 0
+20288 46152 0 0
+20350 46214 0 0
+20399 46288 0 0
+20433 46369 0 0
+20450 46456 0 0
+20449 46557 0 0
+20429 46643 0 0
+20393 46723 0 0
+20342 46796 0 0
+20278 46856 0 0
+20204 46904 0 0
+20121 46936 0 0
+20035 46951 0 1
+20035 47050 0 0
+20047 47050 0 0
+20134 47068 0 0
+20215 47102 0 0
+20288 47152 0 0
+20350 47214 0 0
+20399 47288 0 0
+20433 47369 0 0
+20450 47456 0 0
+20449 47557 0 0
+20429 47643 0 0
+20393 47723 0 0
+20342 47796 0 0
+20278 47856 0 0
+20204 47904 0 0
+20121 47936 0 0
+20035 47951 0 1
+20035 48050 0 0
+20047 48050 0 0
+20134 48068 0 0
+20215 48102 0 0
+20288 48152 0 0
+20350 48214 0 0
+20399 48288 0 0
+20433 48369 0 0
+20450 48456 0 0
+20449 48557 0 0
+20429 48643 0 0
+20393 48723 0 0
+20342 48796 0 0
+20278 48856 0 0
+20204 48904 0 0
+20121 48936 0 0
+20035 48951 0 1
+20035 49075 0 0
 20775 49075 0 1
 20775 30143 0 0
 20712 30141 0 0
@@ -31448,395 +31465,443 @@ $POLYSCORNERS
 36635 23484 0 0
 36539 23501 0 1
 36539 49075 0 0
-38033 49075 0 1
-38033 48926 0 0
-37950 48924 0 0
-37868 48906 0 0
-37792 48873 0 0
-37723 48825 0 0
-37666 48766 0 0
-37620 48696 0 0
-37590 48618 0 0
-37574 48536 0 0
-37576 48453 0 0
-37593 48371 0 0
-37626 48295 0 0
-37639 48275 0 1
-37639 47790 0 0
-37548 47767 0 0
-37526 47726 0 0
-37491 47630 0 0
-37475 47528 0 0
-37480 47426 0 0
-37505 47326 0 0
-37548 47233 0 0
-37639 47210 0 0
+37275 49075 0 1
+37275 44325 0 0
+37212 44323 0 0
+37150 44310 0 0
+37091 44284 0 0
+37039 44248 0 0
+36995 44202 0 0
+36961 44149 0 0
+36937 44090 0 0
+36926 44027 0 0
+36926 43964 0 0
+36940 43902 0 0
+36965 43843 0 0
+37000 43791 0 0
+37046 43746 0 0
+37099 43712 0 0
+37158 43688 0 0
+37220 43676 0 0
+37284 43676 0 0
+37346 43689 0 0
+37405 43713 0 0
+37457 43749 0 0
+37502 43794 0 0
+37537 43847 0 0
+37562 43906 0 0
+37574 43968 0 0
+37573 44041 0 0
+37559 44103 0 0
+37533 44161 0 0
+37497 44213 0 0
+37451 44256 0 0
+37397 44291 0 0
+37338 44314 0 0
+37275 44325 0 1
+37275 49075 0 0
+38035 49075 0 1
+38035 48951 0 0
+37946 48949 0 0
+37860 48930 0 0
+37779 48895 0 0
+37707 48844 0 0
+37646 48781 0 0
+37598 48707 0 0
+37565 48625 0 0
+37549 48538 0 0
+37551 48449 0 0
+37569 48363 0 0
+37604 48282 0 0
+37622 48255 0 1
+37622 47808 0 0
+37528 47781 0 0
+37503 47734 0 0
+37467 47633 0 0
+37451 47527 0 0
+37456 47420 0 0
+37482 47316 0 0
+37528 47219 0 0
+37622 47192 0 0
 37929 47500 0 0
-37639 47790 0 1
-37639 48275 0 0
-37673 48226 0 0
-37732 48167 0 0
-37802 48122 0 0
-37879 48090 0 0
-37961 48075 0 0
-38028 48075 0 1
-38028 48025 0 0
-37926 48020 0 0
-37826 47995 0 0
-37733 47952 0 0
-37710 47861 0 0
+37622 47808 0 1
+37622 48255 0 0
+37654 48209 0 0
+37717 48148 0 0
+37791 48099 0 0
+37872 48066 0 0
+37959 48050 0 0
+38027 48050 0 1
+38027 48049 0 0
+37920 48044 0 0
+37816 48018 0 0
+37719 47972 0 0
+37692 47878 0 0
 38000 47571 0 1
 38000 47429 0 0
-37710 47139 0 0
-37733 47048 0 0
-37774 47026 0 0
-37870 46991 0 0
-37972 46975 0 0
-38033 46977 0 1
-38033 46926 0 0
-37950 46924 0 0
-37868 46906 0 0
-37792 46873 0 0
-37723 46825 0 0
-37666 46766 0 0
-37620 46696 0 0
-37590 46618 0 0
-37574 46536 0 0
-37576 46453 0 0
-37593 46371 0 0
-37626 46295 0 0
-37639 46275 0 1
-37639 45790 0 0
-37548 45767 0 0
-37526 45726 0 0
-37491 45630 0 0
-37475 45528 0 0
-37480 45426 0 0
-37505 45326 0 0
-37548 45233 0 0
-37639 45210 0 0
+37692 47122 0 0
+37719 47028 0 0
+37766 47003 0 0
+37867 46967 0 0
+37973 46951 0 0
+38035 46953 0 1
+38035 46951 0 0
+37946 46949 0 0
+37860 46930 0 0
+37779 46895 0 0
+37707 46844 0 0
+37646 46781 0 0
+37598 46707 0 0
+37565 46625 0 0
+37549 46538 0 0
+37551 46449 0 0
+37569 46363 0 0
+37604 46282 0 0
+37622 46255 0 1
+37622 45808 0 0
+37528 45781 0 0
+37503 45734 0 0
+37467 45633 0 0
+37451 45527 0 0
+37456 45420 0 0
+37482 45316 0 0
+37528 45219 0 0
+37622 45192 0 0
 37929 45500 0 0
-37639 45790 0 1
-37639 46275 0 0
-37673 46226 0 0
-37732 46167 0 0
-37802 46122 0 0
-37879 46090 0 0
-37961 46075 0 0
-38028 46075 0 1
-38028 46025 0 0
-37926 46020 0 0
-37826 45995 0 0
-37733 45952 0 0
-37710 45861 0 0
+37622 45808 0 1
+37622 46255 0 0
+37654 46209 0 0
+37717 46148 0 0
+37791 46099 0 0
+37872 46066 0 0
+37959 46050 0 0
+38027 46050 0 1
+38027 46049 0 0
+37920 46044 0 0
+37816 46018 0 0
+37719 45972 0 0
+37692 45878 0 0
 38000 45571 0 1
 38000 45429 0 0
-37710 45139 0 0
-37733 45048 0 0
-37774 45026 0 0
-37870 44991 0 0
-37972 44975 0 0
-38033 44977 0 1
-38033 44926 0 0
-37950 44924 0 0
-37868 44906 0 0
-37792 44873 0 0
-37723 44825 0 0
-37666 44766 0 0
-37620 44696 0 0
-37590 44618 0 0
-37574 44536 0 0
-37576 44453 0 0
-37593 44371 0 0
-37596 44362 0 0
-37568 44356 0 0
-37509 44330 0 0
-37457 44294 0 0
-37413 44248 0 0
-37379 44195 0 0
-37355 44136 0 0
-37344 44073 0 0
-37344 44010 0 0
-37358 43948 0 0
-37383 43889 0 0
-37418 43837 0 0
-37464 43792 0 0
-37517 43758 0 0
-37538 43749 0 0
-37526 43726 0 0
-37491 43630 0 0
-37475 43528 0 0
-37480 43426 0 0
-37505 43326 0 0
-37548 43233 0 0
-37639 43210 0 0
+37692 45122 0 0
+37719 45028 0 0
+37766 45003 0 0
+37867 44967 0 0
+37973 44951 0 0
+38035 44953 0 1
+38035 44951 0 0
+37946 44949 0 0
+37860 44930 0 0
+37779 44895 0 0
+37707 44844 0 0
+37646 44781 0 0
+37598 44707 0 0
+37565 44625 0 0
+37549 44538 0 0
+37551 44449 0 0
+37569 44363 0 0
+37604 44282 0 0
+37622 44255 0 1
+37622 43808 0 0
+37528 43781 0 0
+37503 43734 0 0
+37467 43633 0 0
+37451 43527 0 0
+37456 43420 0 0
+37482 43316 0 0
+37528 43219 0 0
+37622 43192 0 0
 37929 43500 0 0
+37622 43808 0 1
+37622 44255 0 0
+37654 44209 0 0
+37717 44148 0 0
+37791 44099 0 0
+37872 44066 0 0
+37959 44050 0 0
+38027 44050 0 1
+38027 44049 0 0
+37920 44044 0 0
+37816 44018 0 0
+37719 43972 0 0
+37692 43878 0 0
 38000 43571 0 1
 38000 43429 0 0
-37710 43139 0 0
-37733 43048 0 0
-37774 43026 0 0
-37870 42991 0 0
-37972 42975 0 0
-38033 42977 0 1
-38033 42926 0 0
-37950 42924 0 0
-37868 42906 0 0
-37792 42873 0 0
-37723 42825 0 0
-37666 42766 0 0
-37620 42696 0 0
-37590 42618 0 0
-37574 42536 0 0
-37576 42453 0 0
-37593 42371 0 0
-37626 42295 0 0
-37639 42275 0 1
-37639 41790 0 0
-37548 41767 0 0
-37526 41726 0 0
-37491 41630 0 0
-37475 41528 0 0
-37480 41426 0 0
-37505 41326 0 0
-37548 41233 0 0
-37639 41210 0 0
+37692 43122 0 0
+37719 43028 0 0
+37766 43003 0 0
+37867 42967 0 0
+37973 42951 0 0
+38035 42953 0 1
+38035 42951 0 0
+37946 42949 0 0
+37860 42930 0 0
+37779 42895 0 0
+37707 42844 0 0
+37646 42781 0 0
+37598 42707 0 0
+37565 42625 0 0
+37549 42538 0 0
+37551 42449 0 0
+37569 42363 0 0
+37604 42282 0 0
+37622 42255 0 1
+37622 41808 0 0
+37528 41781 0 0
+37503 41734 0 0
+37467 41633 0 0
+37451 41527 0 0
+37456 41420 0 0
+37482 41316 0 0
+37528 41219 0 0
+37622 41192 0 0
 37929 41500 0 0
-37639 41790 0 1
-37639 42275 0 0
-37673 42226 0 0
-37732 42167 0 0
-37802 42122 0 0
-37879 42090 0 0
-37961 42075 0 0
-38028 42075 0 1
-38028 42025 0 0
-37926 42020 0 0
-37826 41995 0 0
-37733 41952 0 0
-37710 41861 0 0
+37622 41808 0 1
+37622 42255 0 0
+37654 42209 0 0
+37717 42148 0 0
+37791 42099 0 0
+37872 42066 0 0
+37959 42050 0 0
+38027 42050 0 1
+38027 42049 0 0
+37920 42044 0 0
+37816 42018 0 0
+37719 41972 0 0
+37692 41878 0 0
 38000 41571 0 1
 38000 41429 0 0
-37710 41139 0 0
-37733 41048 0 0
-37774 41026 0 0
-37870 40991 0 0
-37972 40975 0 0
-38033 40977 0 1
-38033 40926 0 0
-37950 40924 0 0
-37868 40906 0 0
-37792 40873 0 0
-37723 40825 0 0
-37666 40766 0 0
-37620 40696 0 0
-37590 40618 0 0
-37574 40536 0 0
-37576 40453 0 0
-37593 40371 0 0
-37626 40295 0 0
-37639 40275 0 1
-37639 39790 0 0
-37548 39767 0 0
-37526 39726 0 0
-37491 39630 0 0
-37475 39528 0 0
-37480 39426 0 0
-37505 39326 0 0
-37548 39233 0 0
-37639 39210 0 0
+37692 41122 0 0
+37719 41028 0 0
+37766 41003 0 0
+37867 40967 0 0
+37973 40951 0 0
+38035 40953 0 1
+38035 40951 0 0
+37946 40949 0 0
+37860 40930 0 0
+37779 40895 0 0
+37707 40844 0 0
+37646 40781 0 0
+37598 40707 0 0
+37565 40625 0 0
+37549 40538 0 0
+37551 40449 0 0
+37569 40363 0 0
+37604 40282 0 0
+37622 40255 0 1
+37622 39808 0 0
+37528 39781 0 0
+37503 39734 0 0
+37467 39633 0 0
+37451 39527 0 0
+37456 39420 0 0
+37482 39316 0 0
+37528 39219 0 0
+37622 39192 0 0
 37929 39500 0 0
-37639 39790 0 1
-37639 40275 0 0
-37673 40226 0 0
-37732 40167 0 0
-37802 40122 0 0
-37879 40090 0 0
-37961 40075 0 0
-38028 40075 0 1
-38028 40025 0 0
-37926 40020 0 0
-37826 39995 0 0
-37733 39952 0 0
-37710 39861 0 0
+37622 39808 0 1
+37622 40255 0 0
+37654 40209 0 0
+37717 40148 0 0
+37791 40099 0 0
+37872 40066 0 0
+37959 40050 0 0
+38027 40050 0 1
+38027 40049 0 0
+37920 40044 0 0
+37816 40018 0 0
+37719 39972 0 0
+37692 39878 0 0
 38000 39571 0 1
 38000 39429 0 0
-37710 39139 0 0
-37733 39048 0 0
-37774 39026 0 0
-37870 38991 0 0
-37972 38975 0 0
-38033 38977 0 1
-38033 38926 0 0
-37950 38924 0 0
-37868 38906 0 0
-37792 38873 0 0
-37723 38825 0 0
-37666 38766 0 0
-37620 38696 0 0
-37590 38618 0 0
-37574 38536 0 0
-37576 38453 0 0
-37593 38371 0 0
-37626 38295 0 0
-37639 38275 0 1
-37639 37790 0 0
-37548 37767 0 0
-37526 37726 0 0
-37491 37630 0 0
-37475 37528 0 0
-37480 37426 0 0
-37505 37326 0 0
-37548 37233 0 0
-37639 37210 0 0
+37692 39122 0 0
+37719 39028 0 0
+37766 39003 0 0
+37867 38967 0 0
+37973 38951 0 0
+38035 38953 0 1
+38035 38951 0 0
+37946 38949 0 0
+37860 38930 0 0
+37779 38895 0 0
+37707 38844 0 0
+37646 38781 0 0
+37598 38707 0 0
+37565 38625 0 0
+37549 38538 0 0
+37551 38449 0 0
+37569 38363 0 0
+37604 38282 0 0
+37622 38255 0 1
+37622 37808 0 0
+37528 37781 0 0
+37503 37734 0 0
+37467 37633 0 0
+37451 37527 0 0
+37456 37420 0 0
+37482 37316 0 0
+37528 37219 0 0
+37622 37192 0 0
 37929 37500 0 0
-37639 37790 0 1
-37639 38275 0 0
-37673 38226 0 0
-37732 38167 0 0
-37802 38122 0 0
-37879 38090 0 0
-37961 38075 0 0
-38028 38075 0 1
-38028 38025 0 0
-37926 38020 0 0
-37826 37995 0 0
-37733 37952 0 0
-37710 37861 0 0
+37622 37808 0 1
+37622 38255 0 0
+37654 38209 0 0
+37717 38148 0 0
+37791 38099 0 0
+37872 38066 0 0
+37959 38050 0 0
+38027 38050 0 1
+38027 38049 0 0
+37920 38044 0 0
+37816 38018 0 0
+37719 37972 0 0
+37692 37878 0 0
 38000 37571 0 1
 38000 37429 0 0
-37710 37139 0 0
-37733 37048 0 0
-37774 37026 0 0
-37870 36991 0 0
-37972 36975 0 0
-38033 36977 0 1
-38033 36926 0 0
-37950 36924 0 0
-37868 36906 0 0
-37792 36873 0 0
-37723 36825 0 0
-37666 36766 0 0
-37620 36696 0 0
-37590 36618 0 0
-37574 36536 0 0
-37576 36453 0 0
-37593 36371 0 0
-37626 36295 0 0
-37639 36275 0 1
-37639 35790 0 0
-37548 35767 0 0
-37526 35726 0 0
-37491 35630 0 0
-37475 35528 0 0
-37480 35426 0 0
-37505 35326 0 0
-37548 35233 0 0
-37639 35210 0 0
+37692 37122 0 0
+37719 37028 0 0
+37766 37003 0 0
+37867 36967 0 0
+37973 36951 0 0
+38035 36953 0 1
+38035 36951 0 0
+37946 36949 0 0
+37860 36930 0 0
+37779 36895 0 0
+37707 36844 0 0
+37646 36781 0 0
+37598 36707 0 0
+37565 36625 0 0
+37549 36538 0 0
+37551 36449 0 0
+37569 36363 0 0
+37604 36282 0 0
+37622 36255 0 1
+37622 35808 0 0
+37528 35781 0 0
+37503 35734 0 0
+37467 35633 0 0
+37451 35527 0 0
+37456 35420 0 0
+37482 35316 0 0
+37528 35219 0 0
+37622 35192 0 0
 37929 35500 0 0
-37639 35790 0 1
-37639 36275 0 0
-37673 36226 0 0
-37732 36167 0 0
-37802 36122 0 0
-37879 36090 0 0
-37961 36075 0 0
-38028 36075 0 1
-38028 36025 0 0
-37926 36020 0 0
-37826 35995 0 0
-37733 35952 0 0
-37710 35861 0 0
+37622 35808 0 1
+37622 36255 0 0
+37654 36209 0 0
+37717 36148 0 0
+37791 36099 0 0
+37872 36066 0 0
+37959 36050 0 0
+38027 36050 0 1
+38027 36049 0 0
+37920 36044 0 0
+37816 36018 0 0
+37719 35972 0 0
+37692 35878 0 0
 38000 35571 0 1
 38000 35429 0 0
-37710 35139 0 0
-37733 35048 0 0
-37774 35026 0 0
-37870 34991 0 0
-37972 34975 0 0
-38033 34977 0 1
-38033 34926 0 0
-37950 34924 0 0
-37868 34906 0 0
-37792 34873 0 0
-37723 34825 0 0
-37666 34766 0 0
-37620 34696 0 0
-37590 34618 0 0
-37574 34536 0 0
-37576 34453 0 0
-37593 34371 0 0
-37626 34295 0 0
-37639 34275 0 1
-37639 33790 0 0
-37548 33767 0 0
-37526 33726 0 0
-37491 33630 0 0
-37475 33528 0 0
-37480 33426 0 0
-37505 33326 0 0
-37548 33233 0 0
-37639 33210 0 0
+37692 35122 0 0
+37719 35028 0 0
+37766 35003 0 0
+37867 34967 0 0
+37973 34951 0 0
+38035 34953 0 1
+38035 34951 0 0
+37946 34949 0 0
+37860 34930 0 0
+37779 34895 0 0
+37707 34844 0 0
+37646 34781 0 0
+37598 34707 0 0
+37565 34625 0 0
+37549 34538 0 0
+37551 34449 0 0
+37569 34363 0 0
+37604 34282 0 0
+37622 34255 0 1
+37622 33808 0 0
+37528 33781 0 0
+37503 33734 0 0
+37467 33633 0 0
+37451 33527 0 0
+37456 33420 0 0
+37482 33316 0 0
+37528 33219 0 0
+37622 33192 0 0
 37929 33500 0 0
-37639 33790 0 1
-37639 34275 0 0
-37673 34226 0 0
-37732 34167 0 0
-37802 34122 0 0
-37879 34090 0 0
-37961 34075 0 0
-38028 34075 0 1
-38028 34025 0 0
-37926 34020 0 0
-37826 33995 0 0
-37733 33952 0 0
-37710 33861 0 0
+37622 33808 0 1
+37622 34255 0 0
+37654 34209 0 0
+37717 34148 0 0
+37791 34099 0 0
+37872 34066 0 0
+37959 34050 0 0
+38027 34050 0 1
+38027 34049 0 0
+37920 34044 0 0
+37816 34018 0 0
+37719 33972 0 0
+37692 33878 0 0
 38000 33571 0 1
 38000 33429 0 0
-37710 33139 0 0
-37733 33048 0 0
-37774 33026 0 0
-37870 32991 0 0
-37972 32975 0 0
-38033 32977 0 1
-38033 32926 0 0
-37950 32924 0 0
-37868 32906 0 0
-37792 32873 0 0
-37723 32825 0 0
-37666 32766 0 0
-37620 32696 0 0
-37590 32618 0 0
-37574 32536 0 0
-37576 32453 0 0
-37593 32371 0 0
-37626 32295 0 0
-37669 32231 0 0
-37673 32226 0 0
-37698 32201 0 1
-37698 32025 0 0
-37669 32018 0 0
-37650 32015 0 0
-37605 31996 0 0
-37565 31968 0 0
-37530 31933 0 0
-37503 31892 0 0
-37484 31847 0 0
-37475 31799 0 0
-37475 31612 0 0
-37537 31550 0 0
+37692 33122 0 0
+37719 33028 0 0
+37766 33003 0 0
+37867 32967 0 0
+37973 32951 0 0
+38035 32953 0 1
+38035 32951 0 0
+37946 32949 0 0
+37860 32930 0 0
+37779 32895 0 0
+37707 32844 0 0
+37646 32781 0 0
+37598 32707 0 0
+37565 32625 0 0
+37549 32538 0 0
+37551 32449 0 0
+37569 32363 0 0
+37604 32282 0 0
+37654 32209 0 0
+37673 32190 0 0
+37717 32148 0 0
+37791 32099 0 0
+37872 32066 0 0
+37959 32050 0 0
+38047 32050 0 0
+38112 32063 0 1
+38112 32050 0 0
+38050 31988 0 0
+38050 32000 0 0
+37950 32000 0 0
+37950 31988 0 0
+37888 32050 0 0
+37673 32050 0 0
+37669 32049 0 0
+37625 32040 0 0
+37580 32021 0 0
+37540 31993 0 0
+37505 31958 0 0
+37478 31917 0 0
+37459 31872 0 0
+37450 31824 0 0
+37450 31612 0 0
+37512 31550 0 0
 37669 31550 0 1
 37669 31450 0 0
-37537 31450 0 0
-37475 31388 0 0
-37475 31201 0 0
-37484 31153 0 0
-37503 31108 0 0
-37530 31067 0 0
-37565 31032 0 0
-37605 31004 0 0
-37650 30985 0 0
-37669 30981 0 1
+37512 31450 0 0
+37450 31388 0 0
+37450 31176 0 0
+37459 31128 0 0
+37478 31083 0 0
+37505 31042 0 0
+37540 31007 0 0
+37580 30979 0 0
+37625 30960 0 0
+37669 30950 0 1
 37669 30057 0 0
 37606 30055 0 0
 37544 30042 0 0
@@ -31975,415 +32040,417 @@ $POLYSCORNERS
 37791 30023 0 0
 37732 30046 0 0
 37669 30057 0 1
-37669 30981 0 0
-37698 30975 0 0
-37888 30975 0 0
-37950 31037 0 0
+37669 30950 0 0
+37888 30950 0 0
+37950 31012 0 0
 37950 31450 0 0
 37669 31450 0 1
 37669 31550 0 0
 37950 31550 0 0
-37950 31963 0 0
-37888 32025 0 0
-37698 32025 0 1
-37698 32201 0 0
-37732 32167 0 0
-37802 32122 0 0
-37879 32090 0 0
-37961 32075 0 0
-38044 32075 0 0
-38112 32089 0 1
-38112 32025 0 0
-38050 31963 0 0
 38050 31550 0 1
 38050 31450 0 0
-38050 31037 0 0
-38112 30975 0 0
-38302 30975 0 0
-38350 30985 0 0
-38395 31004 0 0
-38435 31032 0 0
-38470 31067 0 0
-38497 31108 0 0
-38516 31153 0 0
-38525 31201 0 0
-38525 31388 0 0
-38463 31450 0 0
+38050 31012 0 0
+38112 30950 0 0
+38327 30950 0 0
+38375 30960 0 0
+38420 30979 0 0
+38460 31007 0 0
+38495 31042 0 0
+38522 31083 0 0
+38541 31128 0 0
+38550 31176 0 0
+38550 31388 0 0
+38488 31450 0 0
 38050 31450 0 1
 38050 31550 0 0
-38463 31550 0 0
-38525 31612 0 0
-38525 31799 0 0
-38516 31847 0 0
-38497 31892 0 0
-38470 31933 0 0
-38435 31968 0 0
-38395 31996 0 0
-38350 32015 0 0
-38302 32025 0 0
-38112 32025 0 1
-38112 32089 0 0
-38126 32092 0 0
-38203 32124 0 0
-38272 32171 0 0
-38331 32230 0 0
-38377 32299 0 0
-38409 32376 0 0
-38425 32458 0 0
-38424 32553 0 0
-38405 32634 0 0
-38371 32711 0 0
-38324 32779 0 0
-38263 32836 0 0
-38193 32881 0 0
-38115 32911 0 0
-38033 32926 0 1
-38033 32977 0 0
-38074 32980 0 0
-38174 33005 0 0
-38267 33048 0 0
-38290 33139 0 0
+38488 31550 0 0
+38550 31612 0 0
+38550 31824 0 0
+38541 31872 0 0
+38522 31917 0 0
+38495 31958 0 0
+38460 31993 0 0
+38420 32021 0 0
+38375 32040 0 0
+38327 32050 0 0
+38112 32050 0 1
+38112 32063 0 0
+38134 32068 0 0
+38215 32102 0 0
+38288 32152 0 0
+38350 32214 0 0
+38399 32288 0 0
+38433 32369 0 0
+38450 32456 0 0
+38449 32557 0 0
+38429 32643 0 0
+38393 32723 0 0
+38342 32796 0 0
+38278 32856 0 0
+38204 32904 0 0
+38121 32936 0 0
+38035 32951 0 1
+38035 32953 0 0
+38080 32956 0 0
+38184 32982 0 0
+38281 33028 0 0
+38308 33122 0 0
+38035 33394 0 0
 38000 33429 0 1
 38000 33571 0 0
-38290 33861 0 0
-38267 33952 0 0
-38226 33974 0 0
-38130 34009 0 0
-38033 34024 0 0
-38028 34025 0 1
-38028 34075 0 0
-38044 34075 0 0
-38126 34092 0 0
-38203 34124 0 0
-38272 34171 0 0
-38331 34230 0 0
-38361 34275 0 1
-38361 33790 0 0
+38035 33605 0 0
+38308 33878 0 0
+38281 33972 0 0
+38234 33997 0 0
+38133 34033 0 0
+38035 34047 0 0
+38027 34049 0 1
+38027 34050 0 0
+38047 34050 0 0
+38134 34068 0 0
+38215 34102 0 0
+38288 34152 0 0
+38350 34214 0 0
+38378 34256 0 1
+38378 33808 0 0
 38071 33500 0 0
-38361 33210 0 0
-38452 33233 0 0
-38474 33274 0 0
-38509 33370 0 0
-38525 33472 0 0
-38520 33574 0 0
-38495 33674 0 0
-38452 33767 0 0
-38361 33790 0 1
-38361 34275 0 0
-38377 34299 0 0
-38409 34376 0 0
-38425 34458 0 0
-38424 34553 0 0
-38405 34634 0 0
-38371 34711 0 0
-38324 34779 0 0
-38263 34836 0 0
-38193 34881 0 0
-38115 34911 0 0
-38033 34926 0 1
-38033 34977 0 0
-38074 34980 0 0
-38174 35005 0 0
-38267 35048 0 0
-38290 35139 0 0
+38378 33192 0 0
+38472 33219 0 0
+38497 33266 0 0
+38533 33367 0 0
+38549 33473 0 0
+38544 33580 0 0
+38518 33684 0 0
+38472 33781 0 0
+38378 33808 0 1
+38378 34256 0 0
+38399 34288 0 0
+38433 34369 0 0
+38450 34456 0 0
+38449 34557 0 0
+38429 34643 0 0
+38393 34723 0 0
+38342 34796 0 0
+38278 34856 0 0
+38204 34904 0 0
+38121 34936 0 0
+38035 34951 0 1
+38035 34953 0 0
+38080 34956 0 0
+38184 34982 0 0
+38281 35028 0 0
+38308 35122 0 0
+38035 35394 0 0
 38000 35429 0 1
 38000 35571 0 0
-38290 35861 0 0
-38267 35952 0 0
-38226 35974 0 0
-38130 36009 0 0
-38033 36024 0 0
-38028 36025 0 1
-38028 36075 0 0
-38044 36075 0 0
-38126 36092 0 0
-38203 36124 0 0
-38272 36171 0 0
-38331 36230 0 0
-38361 36275 0 1
-38361 35790 0 0
+38035 35605 0 0
+38308 35878 0 0
+38281 35972 0 0
+38234 35997 0 0
+38133 36033 0 0
+38035 36047 0 0
+38027 36049 0 1
+38027 36050 0 0
+38047 36050 0 0
+38134 36068 0 0
+38215 36102 0 0
+38288 36152 0 0
+38350 36214 0 0
+38378 36256 0 1
+38378 35808 0 0
 38071 35500 0 0
-38361 35210 0 0
-38452 35233 0 0
-38474 35274 0 0
-38509 35370 0 0
-38525 35472 0 0
-38520 35574 0 0
-38495 35674 0 0
-38452 35767 0 0
-38361 35790 0 1
-38361 36275 0 0
-38377 36299 0 0
-38409 36376 0 0
-38425 36458 0 0
-38424 36553 0 0
-38405 36634 0 0
-38371 36711 0 0
-38324 36779 0 0
-38263 36836 0 0
-38193 36881 0 0
-38115 36911 0 0
-38033 36926 0 1
-38033 36977 0 0
-38074 36980 0 0
-38174 37005 0 0
-38267 37048 0 0
-38290 37139 0 0
+38378 35192 0 0
+38472 35219 0 0
+38497 35266 0 0
+38533 35367 0 0
+38549 35473 0 0
+38544 35580 0 0
+38518 35684 0 0
+38472 35781 0 0
+38378 35808 0 1
+38378 36256 0 0
+38399 36288 0 0
+38433 36369 0 0
+38450 36456 0 0
+38449 36557 0 0
+38429 36643 0 0
+38393 36723 0 0
+38342 36796 0 0
+38278 36856 0 0
+38204 36904 0 0
+38121 36936 0 0
+38035 36951 0 1
+38035 36953 0 0
+38080 36956 0 0
+38184 36982 0 0
+38281 37028 0 0
+38308 37122 0 0
+38035 37394 0 0
 38000 37429 0 1
 38000 37571 0 0
-38290 37861 0 0
-38267 37952 0 0
-38226 37974 0 0
-38130 38009 0 0
-38033 38024 0 0
-38028 38025 0 1
-38028 38075 0 0
-38044 38075 0 0
-38126 38092 0 0
-38203 38124 0 0
-38272 38171 0 0
-38331 38230 0 0
-38361 38275 0 1
-38361 37790 0 0
+38035 37605 0 0
+38308 37878 0 0
+38281 37972 0 0
+38234 37997 0 0
+38133 38033 0 0
+38035 38047 0 0
+38027 38049 0 1
+38027 38050 0 0
+38047 38050 0 0
+38134 38068 0 0
+38215 38102 0 0
+38288 38152 0 0
+38350 38214 0 0
+38378 38256 0 1
+38378 37808 0 0
 38071 37500 0 0
-38361 37210 0 0
-38452 37233 0 0
-38474 37274 0 0
-38509 37370 0 0
-38525 37472 0 0
-38520 37574 0 0
-38495 37674 0 0
-38452 37767 0 0
-38361 37790 0 1
-38361 38275 0 0
-38377 38299 0 0
-38409 38376 0 0
-38425 38458 0 0
-38424 38553 0 0
-38405 38634 0 0
-38371 38711 0 0
-38324 38779 0 0
-38263 38836 0 0
-38193 38881 0 0
-38115 38911 0 0
-38033 38926 0 1
-38033 38977 0 0
-38074 38980 0 0
-38174 39005 0 0
-38267 39048 0 0
-38290 39139 0 0
+38378 37192 0 0
+38472 37219 0 0
+38497 37266 0 0
+38533 37367 0 0
+38549 37473 0 0
+38544 37580 0 0
+38518 37684 0 0
+38472 37781 0 0
+38378 37808 0 1
+38378 38256 0 0
+38399 38288 0 0
+38433 38369 0 0
+38450 38456 0 0
+38449 38557 0 0
+38429 38643 0 0
+38393 38723 0 0
+38342 38796 0 0
+38278 38856 0 0
+38204 38904 0 0
+38121 38936 0 0
+38035 38951 0 1
+38035 38953 0 0
+38080 38956 0 0
+38184 38982 0 0
+38281 39028 0 0
+38308 39122 0 0
+38035 39394 0 0
 38000 39429 0 1
 38000 39571 0 0
-38290 39861 0 0
-38267 39952 0 0
-38226 39974 0 0
-38130 40009 0 0
-38033 40024 0 0
-38028 40025 0 1
-38028 40075 0 0
-38044 40075 0 0
-38126 40092 0 0
-38203 40124 0 0
-38272 40171 0 0
-38331 40230 0 0
-38361 40275 0 1
-38361 39790 0 0
+38035 39605 0 0
+38308 39878 0 0
+38281 39972 0 0
+38234 39997 0 0
+38133 40033 0 0
+38035 40047 0 0
+38027 40049 0 1
+38027 40050 0 0
+38047 40050 0 0
+38134 40068 0 0
+38215 40102 0 0
+38288 40152 0 0
+38350 40214 0 0
+38378 40256 0 1
+38378 39808 0 0
 38071 39500 0 0
-38361 39210 0 0
-38452 39233 0 0
-38474 39274 0 0
-38509 39370 0 0
-38525 39472 0 0
-38520 39574 0 0
-38495 39674 0 0
-38452 39767 0 0
-38361 39790 0 1
-38361 40275 0 0
-38377 40299 0 0
-38409 40376 0 0
-38425 40458 0 0
-38424 40553 0 0
-38405 40634 0 0
-38371 40711 0 0
-38324 40779 0 0
-38263 40836 0 0
-38193 40881 0 0
-38115 40911 0 0
-38033 40926 0 1
-38033 40977 0 0
-38074 40980 0 0
-38174 41005 0 0
-38267 41048 0 0
-38290 41139 0 0
+38378 39192 0 0
+38472 39219 0 0
+38497 39266 0 0
+38533 39367 0 0
+38549 39473 0 0
+38544 39580 0 0
+38518 39684 0 0
+38472 39781 0 0
+38378 39808 0 1
+38378 40256 0 0
+38399 40288 0 0
+38433 40369 0 0
+38450 40456 0 0
+38449 40557 0 0
+38429 40643 0 0
+38393 40723 0 0
+38342 40796 0 0
+38278 40856 0 0
+38204 40904 0 0
+38121 40936 0 0
+38035 40951 0 1
+38035 40953 0 0
+38080 40956 0 0
+38184 40982 0 0
+38281 41028 0 0
+38308 41122 0 0
+38035 41394 0 0
 38000 41429 0 1
 38000 41571 0 0
-38290 41861 0 0
-38267 41952 0 0
-38226 41974 0 0
-38130 42009 0 0
-38033 42024 0 0
-38028 42025 0 1
-38028 42075 0 0
-38044 42075 0 0
-38126 42092 0 0
-38203 42124 0 0
-38272 42171 0 0
-38331 42230 0 0
-38361 42275 0 1
-38361 41790 0 0
+38035 41605 0 0
+38308 41878 0 0
+38281 41972 0 0
+38234 41997 0 0
+38133 42033 0 0
+38035 42047 0 0
+38027 42049 0 1
+38027 42050 0 0
+38047 42050 0 0
+38134 42068 0 0
+38215 42102 0 0
+38288 42152 0 0
+38350 42214 0 0
+38378 42256 0 1
+38378 41808 0 0
 38071 41500 0 0
-38361 41210 0 0
-38452 41233 0 0
-38474 41274 0 0
-38509 41370 0 0
-38525 41472 0 0
-38520 41574 0 0
-38495 41674 0 0
-38452 41767 0 0
-38361 41790 0 1
-38361 42275 0 0
-38377 42299 0 0
-38409 42376 0 0
-38425 42458 0 0
-38424 42553 0 0
-38405 42634 0 0
-38371 42711 0 0
-38324 42779 0 0
-38263 42836 0 0
-38193 42881 0 0
-38115 42911 0 0
-38033 42926 0 1
-38033 42977 0 0
-38074 42980 0 0
-38174 43005 0 0
-38267 43048 0 0
-38290 43139 0 0
+38378 41192 0 0
+38472 41219 0 0
+38497 41266 0 0
+38533 41367 0 0
+38549 41473 0 0
+38544 41580 0 0
+38518 41684 0 0
+38472 41781 0 0
+38378 41808 0 1
+38378 42256 0 0
+38399 42288 0 0
+38433 42369 0 0
+38450 42456 0 0
+38449 42557 0 0
+38429 42643 0 0
+38393 42723 0 0
+38342 42796 0 0
+38278 42856 0 0
+38204 42904 0 0
+38121 42936 0 0
+38035 42951 0 1
+38035 42953 0 0
+38080 42956 0 0
+38184 42982 0 0
+38281 43028 0 0
+38308 43122 0 0
+38035 43394 0 0
 38000 43429 0 1
 38000 43571 0 0
-38290 43861 0 0
-38267 43952 0 0
-38226 43974 0 0
-38130 44009 0 0
-38033 44024 0 0
-38028 44025 0 0
-37991 44023 0 0
-37991 44075 0 0
-38044 44075 0 0
-38126 44092 0 0
-38203 44124 0 0
-38272 44171 0 0
-38331 44230 0 0
-38361 44275 0 1
-38361 43790 0 0
+38035 43605 0 0
+38308 43878 0 0
+38281 43972 0 0
+38234 43997 0 0
+38133 44033 0 0
+38035 44047 0 0
+38027 44049 0 1
+38027 44050 0 0
+38047 44050 0 0
+38134 44068 0 0
+38215 44102 0 0
+38288 44152 0 0
+38350 44214 0 0
+38378 44256 0 1
+38378 43808 0 0
 38071 43500 0 0
-38361 43210 0 0
-38452 43233 0 0
-38474 43274 0 0
-38509 43370 0 0
-38525 43472 0 0
-38520 43574 0 0
-38495 43674 0 0
-38452 43767 0 0
-38361 43790 0 1
-38361 44275 0 0
-38377 44299 0 0
-38409 44376 0 0
-38425 44458 0 0
-38424 44553 0 0
-38405 44634 0 0
-38371 44711 0 0
-38324 44779 0 0
-38263 44836 0 0
-38193 44881 0 0
-38115 44911 0 0
-38033 44926 0 1
-38033 44977 0 0
-38074 44980 0 0
-38174 45005 0 0
-38267 45048 0 0
-38290 45139 0 0
+38378 43192 0 0
+38472 43219 0 0
+38497 43266 0 0
+38533 43367 0 0
+38549 43473 0 0
+38544 43580 0 0
+38518 43684 0 0
+38472 43781 0 0
+38378 43808 0 1
+38378 44256 0 0
+38399 44288 0 0
+38433 44369 0 0
+38450 44456 0 0
+38449 44557 0 0
+38429 44643 0 0
+38393 44723 0 0
+38342 44796 0 0
+38278 44856 0 0
+38204 44904 0 0
+38121 44936 0 0
+38035 44951 0 1
+38035 44953 0 0
+38080 44956 0 0
+38184 44982 0 0
+38281 45028 0 0
+38308 45122 0 0
+38035 45394 0 0
 38000 45429 0 1
 38000 45571 0 0
-38290 45861 0 0
-38267 45952 0 0
-38226 45974 0 0
-38130 46009 0 0
-38033 46024 0 0
-38028 46025 0 1
-38028 46075 0 0
-38044 46075 0 0
-38126 46092 0 0
-38203 46124 0 0
-38272 46171 0 0
-38331 46230 0 0
-38361 46275 0 1
-38361 45790 0 0
+38035 45605 0 0
+38308 45878 0 0
+38281 45972 0 0
+38234 45997 0 0
+38133 46033 0 0
+38035 46047 0 0
+38027 46049 0 1
+38027 46050 0 0
+38047 46050 0 0
+38134 46068 0 0
+38215 46102 0 0
+38288 46152 0 0
+38350 46214 0 0
+38378 46256 0 1
+38378 45808 0 0
 38071 45500 0 0
-38361 45210 0 0
-38452 45233 0 0
-38474 45274 0 0
-38509 45370 0 0
-38525 45472 0 0
-38520 45574 0 0
-38495 45674 0 0
-38452 45767 0 0
-38361 45790 0 1
-38361 46275 0 0
-38377 46299 0 0
-38409 46376 0 0
-38425 46458 0 0
-38424 46553 0 0
-38405 46634 0 0
-38371 46711 0 0
-38324 46779 0 0
-38263 46836 0 0
-38193 46881 0 0
-38115 46911 0 0
-38033 46926 0 1
-38033 46977 0 0
-38074 46980 0 0
-38174 47005 0 0
-38267 47048 0 0
-38290 47139 0 0
+38378 45192 0 0
+38472 45219 0 0
+38497 45266 0 0
+38533 45367 0 0
+38549 45473 0 0
+38544 45580 0 0
+38518 45684 0 0
+38472 45781 0 0
+38378 45808 0 1
+38378 46256 0 0
+38399 46288 0 0
+38433 46369 0 0
+38450 46456 0 0
+38449 46557 0 0
+38429 46643 0 0
+38393 46723 0 0
+38342 46796 0 0
+38278 46856 0 0
+38204 46904 0 0
+38121 46936 0 0
+38035 46951 0 1
+38035 46953 0 0
+38080 46956 0 0
+38184 46982 0 0
+38281 47028 0 0
+38308 47122 0 0
+38035 47394 0 0
 38000 47429 0 1
 38000 47571 0 0
-38290 47861 0 0
-38267 47952 0 0
-38226 47974 0 0
-38130 48009 0 0
-38033 48024 0 0
-38028 48025 0 1
-38028 48075 0 0
-38044 48075 0 0
-38126 48092 0 0
-38203 48124 0 0
-38272 48171 0 0
-38331 48230 0 0
-38361 48275 0 1
-38361 47790 0 0
+38035 47605 0 0
+38308 47878 0 0
+38281 47972 0 0
+38234 47997 0 0
+38133 48033 0 0
+38035 48047 0 0
+38027 48049 0 1
+38027 48050 0 0
+38047 48050 0 0
+38134 48068 0 0
+38215 48102 0 0
+38288 48152 0 0
+38350 48214 0 0
+38378 48256 0 1
+38378 47808 0 0
 38071 47500 0 0
-38361 47210 0 0
-38452 47233 0 0
-38474 47274 0 0
-38509 47370 0 0
-38525 47472 0 0
-38520 47574 0 0
-38495 47674 0 0
-38452 47767 0 0
-38361 47790 0 1
-38361 48275 0 0
-38377 48299 0 0
-38409 48376 0 0
-38425 48458 0 0
-38424 48553 0 0
-38405 48634 0 0
-38371 48711 0 0
-38324 48779 0 0
-38263 48836 0 0
-38193 48881 0 0
-38115 48911 0 0
-38033 48926 0 1
-38033 49075 0 0
+38378 47192 0 0
+38472 47219 0 0
+38497 47266 0 0
+38533 47367 0 0
+38549 47473 0 0
+38544 47580 0 0
+38518 47684 0 0
+38472 47781 0 0
+38378 47808 0 1
+38378 48256 0 0
+38399 48288 0 0
+38433 48369 0 0
+38450 48456 0 0
+38449 48557 0 0
+38429 48643 0 0
+38393 48723 0 0
+38342 48796 0 0
+38278 48856 0 0
+38204 48904 0 0
+38121 48936 0 0
+38035 48951 0 1
+38035 49075 0 0
 39042 49075 0 1
 39042 30251 0 0
 38979 30249 0 0
@@ -32609,42 +32676,31 @@ $POLYSCORNERS
 39105 30240 0 0
 39042 30251 0 1
 39042 49075 0 0
-39691 49075 0 1
-39691 45244 0 0
-39628 45242 0 0
-39566 45229 0 0
-39507 45203 0 0
-39455 45167 0 0
-39411 45121 0 0
-39377 45068 0 0
-39353 45009 0 0
-39342 44946 0 0
-39342 44883 0 0
-39356 44821 0 0
-39381 44762 0 0
-39416 44710 0 0
-39462 44665 0 0
-39515 44631 0 0
-39574 44607 0 0
-39636 44595 0 0
-39700 44595 0 0
-39762 44608 0 0
-39821 44632 0 0
-39873 44668 0 0
-39918 44713 0 0
-39953 44766 0 0
-39978 44825 0 0
-39990 44887 0 0
-39989 44960 0 0
-39975 45022 0 0
-39949 45080 0 0
-39913 45132 0 0
-39867 45175 0 0
-39813 45210 0 0
-39754 45233 0 0
-39691 45244 0 1
-39691 49075 0 0
-40042 49075 0 1
+39775 49075 0 1
+39775 45325 0 0
+39712 45323 0 0
+39650 45310 0 0
+39591 45284 0 0
+39539 45248 0 0
+39495 45202 0 0
+39461 45149 0 0
+39437 45090 0 0
+39426 45027 0 0
+39426 44964 0 0
+39440 44902 0 0
+39465 44843 0 0
+39500 44791 0 0
+39546 44746 0 0
+39599 44712 0 0
+39658 44688 0 0
+39720 44676 0 0
+39784 44676 0 0
+39846 44689 0 0
+39905 44713 0 0
+39957 44749 0 0
+40002 44794 0 0
+40037 44847 0 0
+40042 44858 0 1
 40042 29050 0 0
 39935 29048 0 0
 39830 29025 0 0
@@ -32769,7 +32825,18 @@ $POLYSCORNERS
 40249 28992 0 0
 40149 29031 0 0
 40042 29050 0 1
-40042 49075 0 0
+40042 44858 0 0
+40062 44906 0 0
+40074 44968 0 0
+40073 45041 0 0
+40059 45103 0 0
+40033 45161 0 0
+39997 45213 0 0
+39951 45256 0 0
+39897 45291 0 0
+39838 45314 0 0
+39775 45325 0 1
+39775 49075 0 0
 40595 49075 0 1
 40595 43270 0 0
 40532 43268 0 0
