@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2010-12-24T17:55:46 PST
+PCBNEW-LibDoc----V1  2010-12-28T12:55:26 PST
 #
 $MODULE D2
 Li D2
@@ -128,16 +128,16 @@ Cd Connecteur 18 pins
 Kw CONN DEV
 $EndMODULE
 #
-$MODULE SO8S
-Li SO8S
-Cd Module CMS SOJ 8 pins large
-Kw CMS SOJ
-$EndMODULE
-#
 $MODULE TO220_123
 Li TO220_123
 Cd Regulateur TO220 serie LM78xx
 Kw TR TO220
+$EndMODULE
+#
+$MODULE SO8S
+Li SO8S
+Cd Module CMS SOJ 8 pins large
+Kw CMS SOJ
 $EndMODULE
 #
 $EndLIBDOC
