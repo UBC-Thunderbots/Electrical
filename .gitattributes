@@ -28,6 +28,7 @@ datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text sv
 datasheets/electromechanical/EC16.pdf -text
 datasheets/electromechanical/EC45.pdf -text
 datasheets/electromechanical/maxon_brushless_commutation.pdf -text svneol=unset#unset
+datasheets/ics/ADC121S021.pdf -text
 datasheets/ics/LT3751.pdf -text
 datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
