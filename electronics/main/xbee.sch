@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/25/2010 5:28:04 PM
+EESchema Schematic File Version 2  date 2010-12-30T14:01:48 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 16 18
 Title ""
-Date "26 nov 2010"
+Date "30 dec 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -73,11 +73,11 @@ Wire Wire Line
 Wire Wire Line
 	4200 3500 4550 3500
 Text HLabel 4200 5700 0    60   Input ~ 0
-SLEEP2
+SLEEP0
 Text HLabel 4200 3500 0    60   Input ~ 0
 SLEEP1
 Text HLabel 7800 5700 2    60   Output ~ 0
-/CTS2
+/CTS0
 Text HLabel 7800 3500 2    60   Output ~ 0
 /CTS1
 $Comp
@@ -91,9 +91,9 @@ F 2 "XBee" H 5850 5350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 4200 5000 0    60   Output ~ 0
-DOUT2
+DOUT0
 Text HLabel 4200 5100 0    60   Input ~ 0
-DIN2
+DIN0
 NoConn ~ 4550 5200
 NoConn ~ 4550 5400
 NoConn ~ 4550 5500
@@ -114,9 +114,9 @@ NoConn ~ 7150 5400
 NoConn ~ 7150 5200
 NoConn ~ 7150 5100
 Text HLabel 7800 5300 2    60   Input ~ 0
-/RTS2
+/RTS0
 Text HLabel 4200 5300 0    60   Input ~ 0
-/RESET2
+/RESET0
 $Comp
 L +3.3V #PWR098
 U 1 1 4CC47539

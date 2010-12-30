@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/25/2010 5:28:04 PM
+EESchema Schematic File Version 2  date 2010-12-30T14:01:48 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 17 18
 Title ""
-Date "26 nov 2010"
+Date "30 dec 2010"
 Rev ""
 Comp ""
 Comment1 ""
@@ -433,7 +433,7 @@ F 4 "160-1167-1-ND" H 9150 2300 60  0001 C CNN "Field1"
 	1    0    0    -1  
 $EndComp
 Text HLabel 6050 1550 2    60   Output ~ 0
-/XBEE2_RESET
+/XBEE0_RESET
 Text HLabel 6500 6150 3    60   Output ~ 0
 /XBEE1_RESET
 $Comp
@@ -491,7 +491,7 @@ F 1 "100nF" H 6150 7300 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 6050 1450 2    60   Output ~ 0
-XBEE2_SLEEP
+XBEE0_SLEEP
 Text HLabel 4100 4850 0    60   Output ~ 0
 XBEE1_SLEEP
 $Comp
@@ -544,9 +544,9 @@ FPGA_INIT_B
 Text HLabel 8350 4850 2    60   BiDi ~ 0
 /FLASH_CS
 Text HLabel 6050 1250 2    60   Input ~ 0
-/XBEE2_CTS
+/XBEE0_CTS
 Text HLabel 6050 1350 2    60   Output ~ 0
-/XBEE2_RTS
+/XBEE0_RTS
 Text HLabel 6600 6250 3    60   Input ~ 0
 /XBEE1_CTS
 Text HLabel 3750 4100 0    60   Output ~ 0
@@ -671,9 +671,9 @@ XBEE1_RX
 Text HLabel 6900 6250 3    60   Output ~ 0
 XBEE1_TX
 Text HLabel 4050 3650 0    60   Output ~ 0
-XBEE2_TX
+XBEE0_TX
 Text HLabel 4050 3750 0    60   Input ~ 0
-XBEE2_RX
+XBEE0_RX
 $Comp
 L +3.3V #PWR0115
 U 1 1 4CC4C9AF
