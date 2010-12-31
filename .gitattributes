@@ -79,6 +79,7 @@ vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
 vhdl/common/alu.vhd -text
+vhdl/common/boostcontroller.vhd -text
 vhdl/common/brushlesscontroller.vhd -text
 vhdl/common/byteshifter.vhd -text
 vhdl/common/chicker.vhd -text
