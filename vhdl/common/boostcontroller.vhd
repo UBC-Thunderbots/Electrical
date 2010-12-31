@@ -12,20 +12,29 @@ port (
 	Clock : in std_logic); --I'm expecting this to be 256 MHz
 end entity;
 
-architecture Behaviour of BoostController is
-	constant countermax : natural := 3148381; -- 22uH * 256 MHz * 10 Amps * 1023 bits / 18.3 Volts
-	constant maxvoltage : natural := 2854; -- 230 volts / 330 volts * 4095 bits
-	constant dangervoltage : natural := 2978; -- 240 volts / 330 volts * 4095 bits 
-	constant recharge : natural := 2730; -- 220 volts / 330 volts * 4095 bits
-	constant diode : natural := 39; -- 0.7 volts / 18.3 volts * 4095 bits
-	constant ratio : natural := 4; -- 330 volts * 1023 bits / 18.3 volts / 4095 bits
+architecture Behavioural of BoostController is
+	constant inductance : real := 22.0e-6;
+	constant frequency : real := 1.0e6;
+	constant Battbits : real := 1023.0;
+	constant Capbits : real := 4095.0;
+	constant maxcurrent : real := 10.0;
+	constant maxBatt : real := 18.3;
+	constant maxCap : real := 330.0;
+
+	constant countermax : natural := natural(inductance * frequency * maxcurrent * Battbits / maxbatt);
+	constant maxvoltage : natural := natural(230.0 / maxCap * Capbits);
+	constant dangervoltage : natural := natural(240.0 / maxCap * Capbits);
+	constant recharge : natural := natural(220.0 / maxCap * Capbits); 
+	constant diode : natural := natural(0.7 / maxBatt * Battbits);
+	constant ratio : natural := natural(maxCap * Battbits / maxBatt / Capbits); -- we should make sure this is power of 2
+
 	type top_state is (disabled,charging,waiting,faulted);
 	type bottom_state is (ontime,offtime,waiting);
 	signal counter_state : bottom_state;
 	signal main_state : top_state;
 	signal FaultActive : std_logic;
 	signal OverVoltage : std_logic;
-	signal Increment : natural range diode to ratio*4095+diode;
+	signal Increment : natural range 1 to ratio*4095+diode;
 begin
 
 	FaultActive <= OverVoltage; -- Or the faultlines together here
@@ -33,8 +42,12 @@ begin
 	--Compute increment based on current voltages;
 	process(Clock)
 	begin
-		if(Clock'event AND Clock = '1') then
-			Increment <= CapVoltage*ratio + diode - BattVoltage;
+		if rising_edge(Clock) then
+			if(CapVoltage*ratio - BattVoltage > 0) then
+				Increment <= CapVoltage*ratio + diode - BattVoltage;
+			else
+				Increment <= diode;
+			end if;
 			if(CapVoltage > dangervoltage) then
 				OverVoltage <= '1';
 			else
@@ -46,7 +59,7 @@ begin
 	--Main Controlling State Machine to control the levels of the system;
 	process(Clock)
 	begin
-		if(Clock'Event AND Clock = '1') then
+		if rising_edge(Clock) then
 			case main_state is
 				when disabled =>
 					if(CapVoltage < maxvoltage) then
@@ -81,17 +94,15 @@ begin
 	end if;
 	end process;
 
-	if(main_state = faulted) then
-		Fault <= '1';
-	else
-		Fault <= '0';
-	end if;
+	with main_state select
+		Fault <= 	'1' when faulted,
+							'0' when others;
 
 	-- This process controls the actual switch timing;
 	process(Clock)
 		variable counter : natural range 0 to countermax;
 	begin
-		if(Clock'event AND Clock ='1') then
+		if rising_edge(Clock) then
 			case counter_state is
 				when ontime =>
 						if(counter + BattVoltage > countermax) then
@@ -120,10 +131,7 @@ begin
 		end if;
 	end process;
 	
-	if(counter_state = ontime) then
-		Switch <= '1';
-	else
-		Switch <= '0';
-	end if;
-
+	with counter_state select
+		Switch <= '1' when ontime,
+							'0' when others;
 end;

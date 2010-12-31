@@ -2,7 +2,7 @@
 PROJ := thunderbots
 
 # The names of all the top-level test targets.
-SIM_TARGETS := cputest graycountertest serialreceivertest serialtransmittertest xbeebytereceivertest xbeebytetransmittertest
+SIM_TARGETS := cputest graycountertest serialreceivertest serialtransmittertest xbeebytereceivertest xbeebytetransmittertest boostcontrollertest
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
