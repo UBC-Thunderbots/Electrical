@@ -8,7 +8,8 @@ port (
 	CapVoltage : in natural range 0 to 4095; --full range = 330 volts
 	BattVoltage : in natural range 0 to 1023; --full range = 18.3 volts
 	Switch : out std_logic; --this is the output to the mosfet right now its positive sense
-	Fault : out std_logic; 
+	Fault : out std_logic;
+	Activity :  out std_logic; 
 	Clock : in std_logic); --I'm expecting this to be 256 MHz
 end entity;
 
@@ -34,12 +35,13 @@ architecture Behavioural of BoostController is
 	signal main_state : top_state;
 	signal FaultActive : std_logic;
 	signal OverVoltage : std_logic;
-	signal Increment : natural range 1 to ratio*4095+diode;
+	signal Increment : natural range 1 to ratio*natural(capbits)+diode;
 begin
 
 	FaultActive <= OverVoltage; -- Or the faultlines together here
 
 	--Compute increment based on current voltages;
+	--this really only needs to be trigged when we get new data
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
@@ -93,6 +95,10 @@ begin
 			end if;
 	end if;
 	end process;
+
+	with main_state select
+		Activity <= '1' when charging,
+								'0' when others;
 
 	with main_state select
 		Fault <= 	'1' when faulted,

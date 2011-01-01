@@ -14,7 +14,8 @@ architecture Behavioural of BoostControllerTest is
 	signal BattVoltage : natural range 0 to 1023;
 	signal Fault : std_logic := '0';
 	signal Charge : std_logic := '0';
-	signal Switch : std_logic := '0'; 
+	signal Switch : std_logic := '0';
+	signal Activity : std_logic := '0'; 
 begin
 	UUT : entity work.BoostController(Behavioural)
 		port map(
@@ -24,6 +25,7 @@ begin
 			BattVoltage => BattVoltage,
 			Switch => Switch,
 			Fault => Fault,
+			Activity => Activity,
 			Clock => Clock
 		);
 
@@ -49,10 +51,17 @@ begin
 		Reset <= '0';
 		Charge <= '1';
 		Done <= '0';
-		charge_loop: while CapVoltage < 2792 loop
+		wait for 2*ClockPeriod;
+		charge_loop: while  activity ='1' loop
 			wait for 876*ClockPeriod;
-			CapVoltage <= CapVoltage + 10;
+			CapVoltage <= CapVoltage + 1;
 		end loop charge_loop;
+
+		discharge_loop: while activity = '0' loop
+			wait for 876*ClockPeriod;
+			CapVoltage <= CapVoltage -1;
+		end loop discharge_loop;
+
 		Done <= '1';
 		wait;
 	end process;
