@@ -17,3 +17,113 @@ net "LEDs(0)" iostandard=LVCMOS33 | slew=quietio | loc=P101;
 net "LEDs(1)" iostandard=LVCMOS33 | slew=quietio | loc=P99;
 net "LEDs(2)" iostandard=LVCMOS33 | slew=quietio | loc=P98;
 net "LEDs(3)" iostandard=LVCMOS33 | slew=quietio | loc=P96;
+
+#Encoder Connector P4
+net "Encoder4(0)" iostandard=LVCMOS33 | pullup | loc=P5;
+net "Encoder4(1)" iostandard=LVCMOS33 | pullup | loc=P6;
+
+#Parallel bus
+net "Parbus_D(0)" iostandard=LVCMOS33 | float | slew=quietio | loc=P7;
+net "Parbus_D(1)" iostandard=LVCMOS33 | float | slew=quietio | loc=P8;
+net "Parbus_D(2)" iostandard=LVCMOS33 | float | slew=quietio | loc=P10;
+net "Parbus_D(3)" iostandard=LVCMOS33 | float | slew=quietio | loc=P11;
+net "Parbus_D(4)" iostandard=LVCMOS33 | float | slew=quietio | loc=P12;
+net "Parbus_D(5)" iostandard=LVCMOS33 | float | slew=quietio | loc=P13;
+net "Parbus_D(6)" iostandard=LVCMOS33 | float | slew=quietio | loc=P15;
+net "Parbus_D(7)" iostandard=LVCMOS33 | float | slew=quietio | loc=P16;
+net "Parbus_RD" iostandard=LVCMOS33 | float | loc=P141;
+net "Parbus_WR" iostandard=LVCMOS33 | float | loc=P142;
+
+
+#Motor 1
+net "M_CTRL1_N(1)" iostandard=LVCMOS33 | slew=quietio | loc=P18;
+net "M_CTRL1_N(2)" iostandard=LVCMOS33 | slew=quietio | loc=P19;
+net "M_CTRL1_N(3)" iostandard=LVCMOS33 | slew=quietio | loc=P20;
+net "M_CTRL1_P(1)" iostandard=LVCMOS33 | slew=quietio | loc=P21;
+net "M_CTRL1_P(2)" iostandard=LVCMOS33 | slew=quietio | loc=P24;
+net "M_CTRL1_P(3)" iostandard=LVCMOS33 | slew=quietio | loc=P25;
+net "M_HALL1(1)" iostandard=LVCMOS33 | pullup | loc=P27;
+net "M_HALL1(1)" iostandard=LVCMOS33 | pullup | loc=P28;
+net "M_HALL1(1)" iostandard=LVCMOS33 | pullup | loc=P29;
+
+#Encoder Connector P1
+net "Encoder1(0)" iostandard=LVCMOS33 | pullup | loc=P30;
+net "Encoder1(1)" iostandard=LVCMOS33 | pullup | loc=P31;
+
+#Reset
+
+#Motor 4
+net "M_CTRL4_N(1)" iostandard=LVCMOS33 | slew=quietio | loc=P51;
+net "M_CTRL4_N(2)" iostandard=LVCMOS33 | slew=quietio | loc=P54;
+net "M_CTRL4_N(3)" iostandard=LVCMOS33 | slew=quietio | loc=P55;
+net "M_CTRL4_P(1)" iostandard=LVCMOS33 | slew=quietio | loc=P48;
+net "M_CTRL4_P(2)" iostandard=LVCMOS33 | slew=quietio | loc=P49;
+net "M_CTRL4_P(3)" iostandard=LVCMOS33 | slew=quietio | loc=P50;
+net "M_HALL4(1)" iostandard=LVCMOS33 | pullup | loc=P32;
+net "M_HALL4(2)" iostandard=LVCMOS33 | pullup | loc=P46;
+net "M_HALL4(3)" iostandard=LVCMOS33 | pullup | loc=P47;
+
+#Motor 3
+net "M_CTRL3_N(1)" iostandard=LVCMOS33 | slew=quietio | loc=P68;
+net "M_CTRL3_N(2)" iostandard=LVCMOS33 | slew=quietio | loc=P64;
+net "M_CTRL3_N(3)" iostandard=LVCMOS33 | slew=quietio | loc=P63;
+net "M_CTRL3_P(1)" iostandard=LVCMOS33 | slew=quietio | loc=P60;
+net "M_CTRL3_P(2)" iostandard=LVCMOS33 | slew=quietio | loc=P59;
+net "M_CTRL3_P(3)" iostandard=LVCMOS33 | slew=quietio | loc=P58;
+net "M_HALL3(1)" iostandard=LVCMOS33 | pullup | loc=P75;
+net "M_HALL3(2)" iostandard=LVCMOS33 | pullup | loc=P70;
+net "M_HALL3(3)" iostandard=LVCMOS33 | pullup | loc=P69;
+
+#Encoder Connector P2
+net "Encoder2(0)" iostandard=LVCMOS33 | pullup | loc=P77;
+net "Encoder2(1)" iostandard=LVCMOS33 | pullup | loc=P76;
+
+#Motor 2
+net "M_CTRL2_N(1)" iostandard=LVCMOS33 | slew=quietio | loc=P85;
+net "M_CTRL2_N(2)" iostandard=LVCMOS33 | slew=quietio | loc=P84;
+net "M_CTRL2_N(3)" iostandard=LVCMOS33 | slew=quietio | loc=P83;
+net "M_CTRL2_P(1)" iostandard=LVCMOS33 | slew=quietio | loc=P82;
+net "M_CTRL2_P(2)" iostandard=LVCMOS33 | slew=quietio | loc=P79;
+net "M_CTRL2_P(3)" iostandard=LVCMOS33 | slew=quietio | loc=P78;
+net "M_HALL2(1)" iostandard=LVCMOS33 | pullup | loc=P90;
+net "M_HALL2(2)" iostandard=LVCMOS33 | pullup | loc=P88;
+net "M_HALL2(3)" iostandard=LVCMOS33 | pullup | loc=P87;
+
+#Encoder Connector P3
+net "Encoder3(0)" iostandard=LVCMOS33 | pullup | loc=P92;
+net "Encoder3(1)" iostandard=LVCMOS33 | pullup | loc=P91;
+
+
+#Chicker
+net "Chicker_MISO" iostandard=LVCMOS33 | pulldown | loc=P105;
+net "Chicker_CLK" iostandard=LVCMOS33 | slew=quietio | loc=P103;
+net "Chicker_CS" iostandard=LVCMOS | slew=quietio | loc=P102;
+net "Chicker_Charge" iostandard=LVCMOS33 | slew=quietio | loc=P110;
+net "Kick" iostandard=LVCMOS33 | slew=quietio | loc=P111;
+net "Chip" iostandard=LVCMOS33 | slew=quietio | loc=P112;
+net "Chicker_Present" iostandard=LVCMOS33 | pulldown | loc=P113;
+
+#Motor 5
+net "M_CTRL5_N(1)" iostandard=LVCMOS33 | slew=quietio | loc=P117;
+net "M_CTRL5_N(2)" iostandard=LVCMOS33 | slew=quietio | loc=P116;
+net "M_CTRL5_N(3)" iostandard=LVCMOS33 | slew=quietio | loc=P115;
+net "M_CTRL5_P(1)" iostandard=LVCMOS33 | slew=quietio | loc=P124;
+net "M_CTRL5_P(2)" iostandard=LVCMOS33 | slew=quietio | loc=P121;
+net "M_CTRL5_P(3)" iostandard=LVCMOS33 | slew=quietio | loc=P120;
+net "M_HALL5(1)" iostandard=LVCMOS33 | pullup | loc=P130;
+net "M_HALL5(2)" iostandard=LVCMOS33 | pullup | loc=P131;
+net "M_HALL5(3)" iostandard=LVCMOS33 | pullup | loc=P132;
+
+#parbus control
+
+
+
+
+
+
+
+
+
+
+
+

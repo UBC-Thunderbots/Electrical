@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/25/2010 5:28:04 PM
+EESchema Schematic File Version 2  date Fri 31 Dec 2010 06:23:11 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,12 +27,13 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 18
 Title ""
-Date "26 nov 2010"
+Date "1 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -939,11 +940,11 @@ M_CTRL5+1
 Entry Wire Line
 	6750 700  6850 600 
 Text Label 9300 6850 0    60   ~ 0
-M_CTRL3-3
+M_CTRL3+3
 Text Label 9300 6750 0    60   ~ 0
-M_CTRL3-2
+M_CTRL3+2
 Text Label 9300 6650 0    60   ~ 0
-M_CTRL3-1
+M_CTRL3+1
 Entry Wire Line
 	9850 6850 9950 6750
 Entry Wire Line
@@ -955,19 +956,19 @@ Entry Wire Line
 Entry Wire Line
 	1400 7150 1500 7250
 Text Label 1550 7350 0    60   ~ 0
-M_CTRL4+3
+M_CTRL4-3
 Text Label 1550 7250 0    60   ~ 0
-M_CTRL4+2
+M_CTRL4-2
 Text Label 1550 7150 0    60   ~ 0
-M_CTRL4+1
+M_CTRL4-1
 Entry Wire Line
 	1400 7050 1500 7150
 Entry Wire Line
 	1400 6850 1500 6950
 Text Label 1550 6950 0    60   ~ 0
-M_CTRL4+1
+M_CTRL4+3
 Text Label 1550 6850 0    60   ~ 0
-M_CTRL4+1
+M_CTRL4+2
 Entry Wire Line
 	1400 6750 1500 6850
 Entry Wire Line

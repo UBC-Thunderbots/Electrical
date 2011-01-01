@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/25/2010 5:28:04 PM
+EESchema Schematic File Version 2  date Fri 31 Dec 2010 06:23:11 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,12 +27,13 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 15 18
 Title ""
-Date "26 nov 2010"
+Date "1 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -40,6 +41,93 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7550 3900 7150 3900
+Wire Wire Line
+	8450 3600 8350 3600
+Wire Wire Line
+	7550 3800 7450 3800
+Wire Wire Line
+	7550 3500 7450 3500
+Wire Wire Line
+	7500 3400 7550 3400
+Connection ~ 3250 4100
+Wire Wire Line
+	3300 4100 3250 4100
+Connection ~ 3250 3900
+Wire Wire Line
+	3300 3900 3250 3900
+Connection ~ 3250 3700
+Wire Wire Line
+	3300 3700 3250 3700
+Connection ~ 3250 3500
+Wire Wire Line
+	3300 3500 3250 3500
+Connection ~ 4150 3400
+Wire Wire Line
+	4150 3400 4100 3400
+Connection ~ 4150 3600
+Wire Wire Line
+	4150 3600 4100 3600
+Connection ~ 4150 3800
+Wire Wire Line
+	4150 3800 4100 3800
+Connection ~ 4150 4000
+Wire Wire Line
+	4150 4000 4100 4000
+Wire Wire Line
+	4100 4200 4150 4200
+Wire Wire Line
+	4150 4200 4150 3350
+Wire Wire Line
+	4100 4100 4150 4100
+Connection ~ 4150 4100
+Wire Wire Line
+	4100 3900 4150 3900
+Connection ~ 4150 3900
+Wire Wire Line
+	4100 3700 4150 3700
+Connection ~ 4150 3700
+Wire Wire Line
+	4100 3500 4150 3500
+Connection ~ 4150 3500
+Wire Wire Line
+	3250 4250 3250 3400
+Wire Wire Line
+	3250 3400 3300 3400
+Wire Wire Line
+	3250 3600 3300 3600
+Connection ~ 3250 3600
+Wire Wire Line
+	3250 3800 3300 3800
+Connection ~ 3250 3800
+Wire Wire Line
+	3250 4000 3300 4000
+Connection ~ 3250 4000
+Wire Wire Line
+	3250 4200 3300 4200
+Connection ~ 3250 4200
+Wire Wire Line
+	7450 3600 7550 3600
+Wire Wire Line
+	8350 3500 8450 3500
+Wire Wire Line
+	7450 3700 7550 3700
+Wire Wire Line
+	8350 3700 8450 3700
+Wire Wire Line
+	8450 3800 8350 3800
+Wire Wire Line
+	8450 3400 8350 3400
+$Comp
+L +BATT #PWR?
+U 1 1 4D1E8E72
+P 7150 3900
+F 0 "#PWR?" H 7150 3850 20  0001 C CNN
+F 1 "+BATT" H 7150 4000 30  0000 C CNN
+	1    7150 3900
+	0    -1   -1   0   
+$EndComp
 $Comp
 L GND #PWR?
 U 1 1 4CEE1DFC
@@ -60,82 +148,6 @@ F 1 "GND" H 8450 3430 30  0001 C CNN
 $EndComp
 Text HLabel 7450 3500 0    60   Input ~ 0
 CLK
-Wire Wire Line
-	8450 3400 8350 3400
-Wire Wire Line
-	8450 3800 8350 3800
-Wire Wire Line
-	8350 3700 8450 3700
-Wire Wire Line
-	7450 3700 7550 3700
-Wire Wire Line
-	8350 3500 8450 3500
-Wire Wire Line
-	7450 3600 7550 3600
-Connection ~ 3250 4200
-Wire Wire Line
-	3250 4200 3300 4200
-Connection ~ 3250 4000
-Wire Wire Line
-	3250 4000 3300 4000
-Connection ~ 3250 3800
-Wire Wire Line
-	3250 3800 3300 3800
-Connection ~ 3250 3600
-Wire Wire Line
-	3250 3600 3300 3600
-Wire Wire Line
-	3300 3400 3250 3400
-Wire Wire Line
-	3250 3400 3250 4250
-Connection ~ 4150 3500
-Wire Wire Line
-	4100 3500 4150 3500
-Connection ~ 4150 3700
-Wire Wire Line
-	4100 3700 4150 3700
-Connection ~ 4150 3900
-Wire Wire Line
-	4100 3900 4150 3900
-Connection ~ 4150 4100
-Wire Wire Line
-	4100 4100 4150 4100
-Wire Wire Line
-	4150 3350 4150 4200
-Wire Wire Line
-	4150 4200 4100 4200
-Wire Wire Line
-	4150 4000 4100 4000
-Connection ~ 4150 4000
-Wire Wire Line
-	4150 3800 4100 3800
-Connection ~ 4150 3800
-Wire Wire Line
-	4150 3600 4100 3600
-Connection ~ 4150 3600
-Wire Wire Line
-	4150 3400 4100 3400
-Connection ~ 4150 3400
-Wire Wire Line
-	3300 3500 3250 3500
-Connection ~ 3250 3500
-Wire Wire Line
-	3300 3700 3250 3700
-Connection ~ 3250 3700
-Wire Wire Line
-	3300 3900 3250 3900
-Connection ~ 3250 3900
-Wire Wire Line
-	3300 4100 3250 4100
-Connection ~ 3250 4100
-Wire Wire Line
-	7500 3400 7550 3400
-Wire Wire Line
-	7550 3500 7450 3500
-Wire Wire Line
-	7550 3800 7450 3800
-Wire Wire Line
-	8450 3600 8350 3600
 Text HLabel 8450 3800 2    60   Output ~ 0
 PRESENT
 Text HLabel 7450 3800 0    60   Input ~ 0
