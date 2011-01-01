@@ -47,18 +47,15 @@ const double SOLENOID_CONSTANT = MU_NOT * TURNS * TURNS * SOLENOID_AREA / (SOLEN
 const char SAVE_FILENAME[] = "data.csv"; 
 
 const double SIM_TIME = 15e-3 ; // in seconds
-
-double TIMESTEP = 10e-7; // in seconds
+const double TIMESTEP = 10e-7; // in seconds
 
 std::fstream save_file;
 std::vector<double> displacement; // in meters
 std::vector<double> voltage; // in volts
-std::vector<double> current;
 std::vector<double> times; // in seconds
 
 void save_row();
 double inductance(double);
-double dL_dx(double);
 
 int main(void) {
 	std::cout << "CONSTANT calculations: " << std::endl;
@@ -78,14 +75,54 @@ int main(void) {
 	
 	//initialize the system
 	times.push_back(0);
+	times.push_back(TIMESTEP);
+	displacement.push_back(0);
 	displacement.push_back(0);
 	voltage.push_back(CAPACITOR_INITIAL_CHARGE);
-	current.push_back(0);
+	voltage.push_back(CAPACITOR_INITIAL_CHARGE);
 	
 	save_row();
+	bool exited=false;
+
+	//TODO: need better models for the end of travel
+	//TODO: add code to account for eddy loss in the core
+
 	while(times.back() < SIM_TIME) {
+
+		if(!exited && displacement.back() > SOLENOID_LENGTH) {
+			break;
+		}
 		
-		times.push_back(TIMESTEP);
+		double xc = displacement.back();
+		double xp = *(displacement.end()-2);
+		double vc = voltage.back();
+		double vp = *(voltage.end()-2);
+		double xf = xc;
+		double vf = vc;	
+		
+		double a1 = PLUNGER_MASS/TIMESTEP/TIMESTEP/TIMESTEP;
+		double a2 = (2*xc*xp - xp*xp);
+		double a3 = CAPACITOR_SIZE/2/TIMESTEP;
+		double a4 = -CAPACITOR_SIZE*CAPACITOR_SIZE/4/TIMESTEP/TIMESTEP;
+		double a5 = -inductance(xc)*CAPACITOR_SIZE*CAPACITOR_SIZE/2/TIMESTEP/TIMESTEP/TIMESTEP;
+		double a6 = -2*vc*vp - vp*vp;
+		
+		double J;	
+		do {
+		 	J = (a1*(xf*xf-2*xc*xf+a2) - a3*(vf-vp) - a4*(vf*vf - 2*vp*vf + vp*vp) - a5*(vf*vf - vc*vf + a6));
+			J = J*J;
+			double dJ_dv = 2*(-a3 - 2*a4*vf + a4*2*vp - a5*2*vf + a5*vc)*sqrt(J);
+			double dJ_dx = 2*(2*a1*xf - a1*2*xc)*sqrt(J);
+			vf = 1e-20 * -J/dJ_dv;
+			xf = 1e-20 * -J/dJ_dx;
+			std::cout << J <<std::endl;	
+		} while(J > 1e-6);
+	
+		
+		voltage.push_back(vf);
+		displacement.push_back(xf);
+		times.push_back(times.back() + TIMESTEP);
+
 		save_row();
 	}
 	save_file.close();
@@ -97,13 +134,8 @@ double inductance(double x) {
 		return	TURNS*TURNS/reluctance; 
 }
 
-double dL_dx(double x) {
-	return (inductance(x + 0.0001) - inductance(x - 0.0001))/(2*0.0001);
-}
-
 void save_row() {
 	save_file << displacement.back() << ";";  // 1
 	save_file << voltage.back() << ";";       // 2
-	save_file << current.back() << ";";				// 3
-	save_file << times.back() << std::endl;   // 4
+	save_file << times.back() << std::endl;   // 3
 }

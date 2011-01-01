@@ -1,12 +1,12 @@
 Model {
   Name			  "solenoid"
-  Version		  7.1
+  Version		  7.0
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.34"
+    ComputedModelVersion    "1.19"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -21,7 +21,6 @@ Model {
   IgnoreBidirectionalLines off
   ShowStorageClass	  off
   ShowTestPointIcons	  on
-  ShowSignalResolutionIcons on
   ShowViewerIcons	  on
   SortedOrder		  off
   ExecutionContextIcon	  off
@@ -45,9 +44,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "binaryblade"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Dec 29 12:22:47 2010"
+  LastModifiedDate	  "Sat Dec 18 22:07:45 2010"
   RTWModifiedTimeStamp	  0
-  ModelVersionFormat	  "1.%<AutoIncrement:34>"
+  ModelVersionFormat	  "1.%<AutoIncrement:19>"
   ConfigurationManager	  "None"
   SimulationMode	  "normal"
   LinearizationMsg	  "none"
@@ -68,7 +67,6 @@ Model {
   CovCumulativeVarName	  "covCumulativeData"
   CovCumulativeReport	  off
   CovReportOnPause	  on
-  CovModelRefEnable	  "Off"
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -98,13 +96,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      1
-      Version		      "1.4.0"
+      Version		      "1.3.0"
       Array {
 	Type			"Handle"
 	Dimension		7
 	Simulink.SolverCC {
 	  $ObjectID		  2
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  StartTime		  "0.0"
 	  StopTime		  "0.03"
 	  AbsTol		  "auto"
@@ -112,7 +110,6 @@ Model {
 	  InitialStep		  "auto"
 	  MaxNumMinSteps	  "-1"
 	  MaxOrder		  5
-	  ZcThreshold		  "auto"
 	  ConsecutiveZCsStepRelTol "10*128*eps"
 	  MaxConsecutiveZCs	  "1000"
 	  ExtrapolationOrder	  4
@@ -124,19 +121,17 @@ Model {
 	  SolverMode		  "Auto"
 	  Solver		  "ode45"
 	  SolverName		  "ode45"
-	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
-	  ZeroCrossAlgorithm	  "Non-adaptive"
 	  AlgebraicLoopSolver	  "TrustRegion"
 	  SolverResetMethod	  "Fast"
 	  PositivePriorityOrder	  off
 	  AutoInsertRateTranBlk	  off
 	  SampleTimeConstraint	  "Unconstrained"
-	  InsertRTBMode		  "Whenever possible"
+	  RateTranMode		  "Deterministic"
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  3
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -172,7 +167,7 @@ Model {
 	    Cell		    "NoFixptDivByZeroProtection"
 	    PropName		    "DisabledProps"
 	  }
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  BlockReduction	  on
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
@@ -180,7 +175,6 @@ Model {
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
-	  EnhancedBackFolding	  off
 	  EnforceIntegerDowncast  on
 	  ExpressionFolding	  on
 	  ExpressionDepthLimit	  2147483647
@@ -204,7 +198,7 @@ Model {
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  5
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -225,7 +219,7 @@ Model {
 	  MinStepSizeMsg	  "warning"
 	  TimeAdjustmentMsg	  "none"
 	  MaxConsecutiveZCsMsg	  "error"
-	  SolverPrmCheckMsg	  "none"
+	  SolverPrmCheckMsg	  "warning"
 	  InheritedTsInSrcMsg	  "warning"
 	  DiscreteInheritContinuousMsg "warning"
 	  MultiTaskDSMMsg	  "error"
@@ -269,11 +263,10 @@ Model {
 	  StateNameClashWarn	  "warning"
 	  StrictBusMsg		  "Warning"
 	  LoggingUnavailableSignals "error"
-	  BlockIODiagnostic	  "none"
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  6
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -300,11 +293,10 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  7
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  ModelReferenceNumInstancesAllowed "Multi"
-	  ModelReferenceSigSizeVariationType "Always allowed"
 	  ModelReferencePassRootInputsByReference on
 	  ModelReferenceMinAlgLoopOccurrences off
 	}
@@ -318,7 +310,7 @@ Model {
 	    Cell		    "GenerateTraceInfo"
 	    PropName		    "DisabledProps"
 	  }
-	  Version		  "1.4.0"
+	  Version		  "1.3.0"
 	  SystemTargetFile	  "grt.tlc"
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
@@ -341,11 +333,6 @@ Model {
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
 	  IncludeERTFirstTime	  off
 	  GenerateTraceInfo	  off
-	  GenerateTraceReport	  off
-	  GenerateTraceReportSl	  off
-	  GenerateTraceReportSf	  off
-	  GenerateTraceReportEml  off
-	  GenerateCodeInfo	  off
 	  RTWCompilerOptimization "Off"
 	  Array {
 	    Type		    "Handle"
@@ -373,7 +360,7 @@ Model {
 		Cell			"CustomSymbolStrMacro"
 		PropName		"DisabledProps"
 	      }
-	      Version		      "1.4.0"
+	      Version		      "1.3.0"
 	      ForceParamTrailComments off
 	      GenerateComments	      on
 	      IgnoreCustomStorageClasses on
@@ -426,11 +413,11 @@ Model {
 		Cell			"PortableWordSizes"
 		PropName		"DisabledProps"
 	      }
-	      Version		      "1.4.0"
+	      Version		      "1.3.0"
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      TargetFunctionLibrary   "ANSI_C"
+	      GenFloatMathFcnCalls    "ANSI_C"
 	      UtilityFuncGeneration   "Auto"
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
@@ -441,7 +428,6 @@ Model {
 	      IncludeMdlTerminateFcn  on
 	      CombineOutputUpdateFcns off
 	      SuppressErrorStatus     off
-	      ERTFirstTimeCompliant   off
 	      IncludeFileDelimiter    "Auto"
 	      ERTCustomFileBanners    off
 	      SupportAbsoluteTime     on
@@ -457,7 +443,6 @@ Model {
 	      ParenthesesLevel	      "Nominal"
 	      PortableWordSizes	      off
 	      ModelStepFunctionPrototypeControlCompliant off
-	      AutosarCompliant	      off
 	      ExtMode		      off
 	      ExtModeStaticAlloc      off
 	      ExtModeTesting	      off
@@ -516,13 +501,11 @@ Model {
       ParameterDataType	      "fixdt(1,16,0)"
       ParameterScalingMode    "Best Precision: Matrix-wise"
       ParameterScaling	      "[]"
-      ParamDataTypeStr	      "Inherit: Same as input"
       OutMin		      "[]"
       OutMax		      "[]"
       OutDataTypeMode	      "Same as input"
       OutDataType	      "fixdt(1,16,0)"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: Same as input"
       LockScale		      off
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
@@ -553,7 +536,6 @@ Model {
       OutDataTypeMode	      "Same as first input"
       OutDataType	      "fixdt(1,16,0)"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
       LockScale		      off
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
@@ -578,7 +560,6 @@ Model {
       OutDataTypeMode	      "Same as first input"
       OutDataType	      "fixdt(1,16,0)"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
       LockScale		      off
       RndMeth		      "Zero"
       SaturateOnIntegerOverflow	on
@@ -608,13 +589,11 @@ Model {
       CollapseMode	      "All dimensions"
       CollapseDim	      "1"
       InputSameDT	      on
-      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
       OutMin		      "[]"
       OutMax		      "[]"
       OutDataTypeMode	      "Same as first input"
       OutDataType	      "fixdt(1,16,0)"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
       LockScale		      off
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
@@ -639,7 +618,6 @@ Model {
       OutDataType	      "fixdt(1,16,0)"
       ConRadixGroup	      "Use specified scaling"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
       SampleTime	      "inf"
       FramePeriod	      "inf"
     }
@@ -664,7 +642,7 @@ Model {
   }
   System {
     Name		    "solenoid"
-    Location		    [4, 78, 1275, 766]
+    Location		    [27, 142, 1656, 909]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -686,52 +664,50 @@ Model {
       ParameterDataTypeMode   "Inherit via internal rule"
       ParameterDataType	      "sfix(16)"
       ParameterScaling	      "2^0"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Gain
       Name		      "1/C"
       Position		      [535, 305, 565, 335]
-      Gain		      "-1/(4e-3)"
+      Gain		      "1/(4e-3)"
       ParameterDataTypeMode   "Inherit via internal rule"
       ParameterDataType	      "sfix(16)"
       ParameterScaling	      "2^0"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Gain
       Name		      "1/R"
-      Position		      [380, 160, 410, 190]
+      Position		      [310, 160, 340, 190]
       Orientation	      "left"
       Gain		      "1/0.5"
       ParameterDataTypeMode   "Inherit via internal rule"
       ParameterDataType	      "sfix(16)"
       ParameterScaling	      "2^0"
-      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Constant
-      Name		      "A"
-      Position		      [1590, 196, 1645, 244]
-      Orientation	      "left"
-      Value		      "1.98e-4"
+      BlockType		      Sum
+      Name		      "Add"
+      Ports		      [2, 1]
+      Position		      [700, 312, 730, 343]
+      Inputs		      "-+"
+      CollapseMode	      "All dimensions"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
+      OutScaling	      "2^-10"
+      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Sum
@@ -740,11 +716,11 @@ Model {
       Position		      [770, 162, 800, 193]
       Orientation	      "left"
       Inputs		      "-+"
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^-10"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
@@ -754,11 +730,11 @@ Model {
       Position		      [575, 157, 605, 188]
       Orientation	      "left"
       Inputs		      "-+"
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^-10"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
@@ -788,9 +764,9 @@ Model {
     }
     Block {
       BlockType		      Constant
-      Name		      "ChargeVoltage"
-      Position		      [510, 370, 540, 400]
-      Value		      "220"
+      Name		      "Constant2"
+      Position		      [565, 375, 595, 405]
+      Value		      "110"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
     }
@@ -813,14 +789,13 @@ Model {
     Block {
       BlockType		      Derivative
       Name		      "Derivative"
-      Position		      [670, 85, 700, 115]
+      Position		      [730, 95, 760, 125]
       Orientation	      "left"
-      LinearizePole	      "100e-3"
     }
     Block {
       BlockType		      Fcn
       Name		      "Diode Drop"
-      Position		      [320, 45, 380, 75]
+      Position		      [330, 35, 390, 65]
       Expr		      "(1-u[1])*0.7"
     }
     Block {
@@ -843,24 +818,21 @@ Model {
     Block {
       BlockType		      Fcn
       Name		      "Duty Cycle Limiter"
-      Position		      [160, 310, 220, 340]
-      Expr		      "tanh(2*(u[1]-1/2))/2+1/2"
+      Position		      [145, 310, 205, 340]
+      Expr		      "(tanh(2*u[1] -1)+1)/2;"
     }
     Block {
       BlockType		      Fcn
       Name		      "Duty Cycle Limiter1"
-      Position		      [480, 620, 540, 650]
+      Position		      [600, 665, 660, 695]
       Orientation	      "left"
-      Expr		      "(36.11 * ( 101*0.035 - 99 * u[2]) - u[1])"
+      Expr		      "(u[1]/0.035)^(1/1.5)+0.01"
     }
     Block {
       BlockType		      Integrator
       Name		      "Integrator"
-      Ports		      [2, 1]
-      Position		      [630, 308, 675, 352]
-      InitialConditionSource  "external"
-      LimitOutput	      on
-      LowerSaturationLimit    "0"
+      Ports		      [1, 1]
+      Position		      [600, 305, 630, 335]
     }
     Block {
       BlockType		      Integrator
@@ -872,41 +844,21 @@ Model {
       BlockType		      Integrator
       Name		      "Integrator2"
       Ports		      [1, 1]
-      Position		      [1350, 219, 1380, 251]
-      UpperSaturationLimit    "0.035"
-      LowerSaturationLimit    "0"
+      Position		      [1325, 220, 1355, 250]
     }
     Block {
       BlockType		      Fcn
       Name		      "L"
       Position		      [1135, 85, 1195, 115]
       Orientation	      "left"
-      Expr		      "u[1] * u[2] * u[3] /( (u[1] +1)*u[4] - (u[1] -1)*u[5])"
+      Expr		      "1.5e-3/(3.83 - 99*u[1])"
     }
     Block {
       BlockType		      Math
       Name		      "Math\nFunction"
       Ports		      [1, 1]
-      Position		      [945, 225, 975, 255]
+      Position		      [905, 225, 935, 255]
       Operator		      "square"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Mu_not"
-      Position		      [1590, 124, 1650, 176]
-      Orientation	      "left"
-      Value		      "pi*4e-7"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Mu_r"
-      Position		      [1595, 75, 1625, 105]
-      Orientation	      "left"
-      Value		      "100"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
     }
@@ -921,57 +873,10 @@ Model {
       DisplayOption	      "bar"
     }
     Block {
-      BlockType		      Mux
-      Name		      "Mux1"
-      Ports		      [2, 1]
-      Position		      [265, 41, 270, 79]
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Mux
-      Name		      "Mux2"
-      Ports		      [5, 1]
-      Position		      [1470, 91, 1475, 159]
-      Orientation	      "left"
-      ShowName		      off
-      Inputs		      "5"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Mux
-      Name		      "Mux3"
-      Ports		      [2, 1]
-      Position		      [1420, 216, 1425, 254]
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Mux
-      Name		      "Mux4"
-      Ports		      [2, 1]
-      Position		      [675, 566, 680, 604]
-      Orientation	      "left"
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "N"
-      Position		      [880, 165, 910, 195]
-      Orientation	      "left"
-      Value		      "260"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-    }
-    Block {
       BlockType		      Scope
       Name		      "Plunger Position"
       Ports		      [1]
-      Position		      [1445, 169, 1475, 201]
+      Position		      [1555, 149, 1585, 181]
       Floating		      off
       Location		      [188, 390, 1208, 792]
       Open		      off
@@ -1005,27 +910,27 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "Plunger mass"
-      Position		      [980, 336, 1020, 374]
+      Position		      [1025, 300, 1055, 330]
       Value		      "0.076"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
     }
     Block {
       BlockType		      Fcn
-      Name		      "Position Sat"
-      Position		      [1455, 220, 1515, 250]
-      Expr		      "u[2]* tanh(u[1] / u[2]);"
+      Name		      "Position limiter"
+      Position		      [1390, 220, 1450, 250]
+      Expr		      "0.035 * tanh(u[1]  / 0.035);"
     }
     Block {
       BlockType		      Product
       Name		      "Product"
       Ports		      [2, 1]
       Position		      [465, 302, 495, 333]
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
@@ -1033,11 +938,11 @@ Model {
       Name		      "Product1"
       Ports		      [2, 1]
       Position		      [780, 322, 810, 353]
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
@@ -1045,11 +950,11 @@ Model {
       Name		      "Product2"
       Ports		      [2, 1]
       Position		      [1010, 217, 1040, 248]
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
@@ -1058,11 +963,11 @@ Model {
       Ports		      [2, 1]
       Position		      [860, 92, 890, 123]
       Orientation	      "left"
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
@@ -1071,56 +976,17 @@ Model {
       Ports		      [2, 1]
       Position		      [1190, 217, 1220, 248]
       Inputs		      "*/"
+      CollapseMode	      "All dimensions"
       InputSameDT	      off
       OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "sfix(16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product5"
-      Ports		      [3, 1]
-      Position		      [970, 29, 1000, 61]
-      Inputs		      "3"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product6"
-      Ports		      [2, 1]
-      Position		      [745, 82, 775, 113]
-      Orientation	      "left"
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product7"
-      Ports		      [2, 1]
-      Position		      [845, 222, 875, 253]
-      InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      ToWorkspace
       Name		      "To Workspace"
-      Position		      [1275, 170, 1335, 200]
-      Orientation	      "left"
+      Position		      [1545, 200, 1605, 230]
       VariableName	      "Position"
       MaxDataPoints	      "inf"
       SampleTime	      "-1"
@@ -1131,16 +997,6 @@ Model {
       Name		      "To Workspace1"
       Position		      [1420, 365, 1480, 395]
       VariableName	      "PlungerVel"
-      MaxDataPoints	      "inf"
-      SampleTime	      "-1"
-      SaveFormat	      "Array"
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace10"
-      Position		      [990, 275, 1050, 305]
-      Orientation	      "left"
-      VariableName	      "Force"
       MaxDataPoints	      "inf"
       SampleTime	      "-1"
       SaveFormat	      "Array"
@@ -1183,45 +1039,6 @@ Model {
       SaveFormat	      "Array"
     }
     Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace6"
-      Position		      [1355, 40, 1415, 70]
-      Orientation	      "left"
-      VariableName	      "SatPos"
-      MaxDataPoints	      "inf"
-      SampleTime	      "-1"
-      SaveFormat	      "Array"
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace7"
-      Position		      [650, 15, 710, 45]
-      Orientation	      "left"
-      VariableName	      "Flux"
-      MaxDataPoints	      "inf"
-      SampleTime	      "-1"
-      SaveFormat	      "Array"
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace8"
-      Position		      [490, 90, 550, 120]
-      Orientation	      "left"
-      VariableName	      "backemf"
-      MaxDataPoints	      "inf"
-      SampleTime	      "-1"
-      SaveFormat	      "Array"
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace9"
-      Position		      [1120, 25, 1180, 55]
-      VariableName	      "Inductance"
-      MaxDataPoints	      "inf"
-      SampleTime	      "-1"
-      SaveFormat	      "Array"
-    }
-    Block {
       BlockType		      Scope
       Name		      "Voltage"
       Ports		      [1]
@@ -1239,20 +1056,11 @@ Model {
       SampleTime	      "0"
     }
     Block {
-      BlockType		      Constant
-      Name		      "X_not"
-      Position		      [1590, 264, 1635, 306]
-      Orientation	      "left"
-      Value		      "0.035"
-      OutDataType	      "sfix(16)"
-      OutScaling	      "2^0"
-    }
-    Block {
       BlockType		      Fcn
       Name		      "dL_dx"
       Position		      [1135, 155, 1195, 185]
       Orientation	      "left"
-      Expr		      "u[1] *(u[1] -1) * u[2] * u[3] / ( (u[1] + 1)*u[4] - (u[1] -1)*u[5])^2"
+      Expr		      "99*1.5e-3/(3.83 - 99*u[1])^2"
     }
     Line {
       SrcBlock		      "Product"
@@ -1261,9 +1069,28 @@ Model {
       DstPort		      1
     }
     Line {
+      SrcBlock		      "1/C"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
       SrcBlock		      "Integrator"
       SrcPort		      1
-      Points		      [65, 0]
+      DstBlock		      "Add"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [85, 0]
+      DstBlock		      "Add"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Add"
+      SrcPort		      1
+      Points		      [10, 0]
       Branch {
 	DstBlock		"Product1"
 	DstPort			1
@@ -1292,7 +1119,7 @@ Model {
     Line {
       SrcBlock		      "Diode Drop"
       SrcPort		      1
-      Points		      [450, 0; 0, 110]
+      Points		      [440, 0; 0, 120]
       DstBlock		      "Add1"
       DstPort		      1
     }
@@ -1311,59 +1138,46 @@ Model {
     Line {
       SrcBlock		      "1/R"
       SrcPort		      1
-      Points		      [-90, 0; 0, 65]
+      Points		      [-20, 0; 0, 65]
       Branch {
 	Points			[0, 40]
+	Branch {
+	  Points		  [0, 30]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
 	Branch {
 	  DstBlock		  "Current"
 	  DstPort		  1
 	}
-	Branch {
-	  Points		  [0, 30; 130, 0]
-	  Branch {
-	    DstBlock		    "Product"
-	    DstPort		    1
-	  }
-	  Branch {
-	    Points		    [-5, 0; 0, 150; 285, 0]
-	    DstBlock		    "Mux4"
-	    DstPort		    1
-	  }
-	}
-      }
-      Branch {
-	Points			[-35, 0]
-	DstBlock		"Mux1"
-	DstPort			2
       }
       Branch {
 	Points			[110, 0]
 	Branch {
+	  Points		  [465, 0]
+	  Branch {
+	    DstBlock		    "Math\nFunction"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -40; 70, 0; 0, -85]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Branch {
 	  Points		  [0, 30]
 	  DstBlock		  "To Workspace5"
 	  DstPort		  1
-	}
-	Branch {
-	  Points		  [0, 5]
-	  DstBlock		  "Product7"
-	  DstPort		  2
 	}
       }
     }
     Line {
       SrcBlock		      "Derivative"
       SrcPort		      1
-      Points		      [-15, 0; 0, 10]
-      Branch {
-	Points			[0, 55]
-	DstBlock		"Add2"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, -5]
-	DstBlock		"To Workspace8"
-	DstPort			1
-      }
+      Points		      [-75, 0; 0, 55]
+      DstBlock		      "Add2"
+      DstPort		      1
     }
     Line {
       SrcBlock		      "Math\nFunction"
@@ -1381,16 +1195,8 @@ Model {
     Line {
       SrcBlock		      "1/2"
       SrcPort		      1
-      Points		      [10, 0]
-      Branch {
-	DstBlock		"Product4"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, 65]
-	DstBlock		"To Workspace10"
-	DstPort			1
-      }
+      DstBlock		      "Product4"
+      DstPort		      1
     }
     Line {
       SrcBlock		      "Integrator1"
@@ -1424,30 +1230,14 @@ Model {
     Line {
       SrcBlock		      "Product3"
       SrcPort		      1
-      Points		      [-50, 0; 0, -5]
-      Branch {
-	DstBlock		"Product6"
-	DstPort			2
-      }
-      Branch {
-	Points			[0, -75]
-	DstBlock		"To Workspace7"
-	DstPort			1
-      }
+      DstBlock		      "Derivative"
+      DstPort		      1
     }
     Line {
       SrcBlock		      "L"
       SrcPort		      1
-      Points		      [-195, 0]
-      Branch {
-	DstBlock		"Product3"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, -55]
-	DstBlock		"Product5"
-	DstPort			2
-      }
+      DstBlock		      "Product3"
+      DstPort		      1
     }
     Line {
       SrcBlock		      "dL_dx"
@@ -1459,7 +1249,7 @@ Model {
     Line {
       SrcBlock		      "Plunger mass"
       SrcPort		      1
-      Points		      [135, 0; 0, -65]
+      Points		      [100, 0; 0, -25]
       Branch {
 	Points			[0, -50]
 	DstBlock		"Product4"
@@ -1501,223 +1291,87 @@ Model {
     Line {
       SrcBlock		      "Integrator2"
       SrcPort		      1
-      Points		      [0, -10]
+      DstBlock		      "Position limiter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Position limiter"
+      SrcPort		      1
+      Points		      [40, 0]
       Branch {
-	Points			[0, -40]
+	Points			[0, -20]
+	Branch {
+	  Points		  [0, -45]
+	  Branch {
+	    Points		    [0, -5]
+	    Branch {
+	      DstBlock		      "Plunger Position"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -65]
+	      DstBlock		      "L"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "dL_dx"
+	    DstPort		    1
+	  }
+	}
 	Branch {
 	  DstBlock		  "To Workspace"
 	  DstPort		  1
 	}
-	Branch {
-	  DstBlock		  "Plunger Position"
-	  DstPort		  1
-	}
       }
       Branch {
-	DstBlock		"Mux3"
+	Points			[0, 445]
+	DstBlock		"Duty Cycle Limiter1"
 	DstPort			1
       }
-    }
-    Line {
-      SrcBlock		      "Mux1"
-      SrcPort		      1
-      DstBlock		      "Diode Drop"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Mux2"
-      SrcPort		      1
-      Points		      [0, 5; -235, 0]
-      Branch {
-	Points			[0, -30]
-	DstBlock		"L"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, 40]
-	DstBlock		"dL_dx"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "X_not"
-      SrcPort		      1
-      Points		      [-45, 0; 0, -5]
-      Branch {
-	Points			[0, -140]
-	DstBlock		"Mux2"
-	DstPort			4
-      }
-      Branch {
-	Points			[0, 5; -135, 0]
-	DstBlock		"Mux3"
-	DstPort			2
-      }
-    }
-    Line {
-      SrcBlock		      "Product6"
-      SrcPort		      1
-      DstBlock		      "Derivative"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Product7"
-      SrcPort		      1
-      Points		      [40, 0]
-      Branch {
-	DstBlock		"Math\nFunction"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, -125]
-	DstBlock		"Product3"
-	DstPort			2
-      }
-    }
-    Line {
-      SrcBlock		      "N"
-      SrcPort		      1
-      Points		      [-30, 0]
-      Branch {
-	Points			[0, 30; -15, 0]
-	DstBlock		"Product7"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, -90]
-	Branch {
-	  DstBlock		  "Product6"
-	  DstPort		  1
-	}
-	Branch {
-	  Points		  [0, -35]
-	  Branch {
-	    Points		    [0, -20]
-	    DstBlock		    "Product5"
-	    DstPort		    1
-	  }
-	  Branch {
-	    DstBlock		    "Product5"
-	    DstPort		    3
-	  }
-	}
-      }
-    }
-    Line {
-      SrcBlock		      "A"
-      SrcPort		      1
-      Points		      [-35, 0; 0, -95]
-      DstBlock		      "Mux2"
-      DstPort		      3
-    }
-    Line {
-      SrcBlock		      "Mu_not"
-      SrcPort		      1
-      Points		      [-5, 0; 0, -40]
-      DstBlock		      "Mux2"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Mu_r"
-      SrcPort		      1
-      Points		      [-50, 0; 0, 5]
-      DstBlock		      "Mux2"
-      DstPort		      1
     }
     Line {
       SrcBlock		      "Duty Cycle Limiter"
       SrcPort		      1
-      Points		      [10, 0]
+      Points		      [40, 0]
       Branch {
-	Points			[0, -275]
-	DstBlock		"Mux1"
-	DstPort			1
+	Points			[5, 0]
+	Branch {
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, -270; 60, 0]
+	  DstBlock		  "Diode Drop"
+	  DstPort		  1
+	}
       }
       Branch {
 	Points			[0, 120]
 	Branch {
-	  Points		  [0, 90]
+	  Points		  [495, 0; 0, -100]
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 90; 15, 0]
+	  Branch {
+	    DstBlock		    "Duty Cycle"
+	    DstPort		    1
+	  }
 	  Branch {
 	    Points		    [0, 60]
 	    DstBlock		    "To Workspace3"
 	    DstPort		    1
 	  }
-	  Branch {
-	    DstBlock		    "Duty Cycle"
-	    DstPort		    1
-	  }
-	}
-	Branch {
-	  Points		  [515, 0; 0, -100]
-	  DstBlock		  "Product1"
-	  DstPort		  2
 	}
       }
-      Branch {
-	DstBlock		"Product"
-	DstPort			2
-      }
-    }
-    Line {
-      SrcBlock		      "1/C"
-      SrcPort		      1
-      DstBlock		      "Integrator"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "ChargeVoltage"
-      SrcPort		      1
-      Points		      [35, 0; 0, -45]
-      DstBlock		      "Integrator"
-      DstPort		      2
-    }
-    Line {
-      SrcBlock		      "Position Sat"
-      SrcPort		      1
-      Points		      [5, 0]
-      Branch {
-	Points			[5, 0; 0, -80; -20, 0]
-	Branch {
-	  DstBlock		  "Mux2"
-	  DstPort		  5
-	}
-	Branch {
-	  Points		  [0, -100]
-	  DstBlock		  "To Workspace6"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	Points			[0, 360]
-	DstBlock		"Mux4"
-	DstPort			2
-      }
-    }
-    Line {
-      SrcBlock		      "Mux3"
-      SrcPort		      1
-      DstBlock		      "Position Sat"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Product5"
-      SrcPort		      1
-      Points		      [50, 0; 0, -5]
-      DstBlock		      "To Workspace9"
-      DstPort		      1
     }
     Line {
       SrcBlock		      "Duty Cycle Limiter1"
       SrcPort		      1
-      Points		      [-345, 0; 0, -310]
+      Points		      [-490, 0; 0, -355]
       DstBlock		      "Duty Cycle Limiter"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Mux4"
-      SrcPort		      1
-      Points		      [-55, 0; 0, 50]
-      DstBlock		      "Duty Cycle Limiter1"
       DstPort		      1
     }
   }
