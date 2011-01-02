@@ -1,36 +1,42 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+
+--! Boost converted controller
+--! All inputs are sampled on rising clock edge
+--! Charger is either active at full power or not with the 10 volt top up window
+
 entity BoostController is 
 port (
-	Charge : in std_logic;
-	Reset : in std_logic;
-	CapVoltage : in natural range 0 to 4095; --full range = 330 volts
-	BattVoltage : in natural range 0 to 1023; --full range = 18.3 volts
-	Switch : out std_logic; --this is the output to the mosfet right now its positive sense
-	Fault : out std_logic;
-	Activity :  out std_logic; 
-	Clock : in std_logic); --I'm expecting this to be 256 MHz
+	Charge : in std_logic; --!Enables the Charger
+	Reset : in std_logic;	 --!Resets the Charger (Synchronous)
+	CapVoltage : in natural range 0 to 4095; --! Current Capacitor Voltage
+	BattVoltage : in natural range 0 to 1023; --! Current Battery Voltage
+	Switch : out std_logic; --! To the MOSFET, On is high
+	Fault : out std_logic;	--! Signals a fault in the charger
+	Activity :  out std_logic; --! Signals whether the it is actively charging
+	Clock : in std_logic); --! Clock for the system to run on
 end entity;
 
 architecture Behavioural of BoostController is
-	constant inductance : real := 22.0e-6;
-	constant frequency : real := 1.0e6;
-	constant Battbits : real := 1023.0;
-	constant Capbits : real := 4095.0;
-	constant maxcurrent : real := 10.0;
-	constant maxBatt : real := 18.3;
-	constant maxCap : real := 330.0;
+	--We shoule probably make some or all of these generic parameters
+	constant inductance : real := 22.0e-6; --! Inductance in switching element
+	constant frequency : real := 1.0e6;	--! Frequency the system is running at
+	constant Battbits : real := 1023.0; --! Number of levels for the battery
+	constant Capbits : real := 4095.0;	--! Number of levels for the Cap
+	constant maxcurrent : real := 10.0;	--! Maximum inductor Current
+	constant maxBatt : real := 18.3;	--! Voltage of battery at maximum ADC range 
+	constant maxCap : real := 330.0;	--! Voltage of Cap at maximum ADC range
 
 	constant countermax : natural := natural(inductance * frequency * maxcurrent * Battbits / maxbatt);
 	constant maxvoltage : natural := natural(230.0 / maxCap * Capbits);
 	constant dangervoltage : natural := natural(240.0 / maxCap * Capbits);
 	constant recharge : natural := natural(220.0 / maxCap * Capbits); 
 	constant diode : natural := natural(0.7 / maxBatt * Battbits);
-	constant ratio : natural := natural(maxCap * Battbits / maxBatt / Capbits); -- we should make sure this is power of 2
+	constant ratio : natural := natural(maxCap * Battbits / maxBatt / Capbits); -- we should make sure this is power of 2 otherwise the multiplier will get unneedily large.
 
-	type top_state is (disabled,charging,waiting,faulted);
-	type bottom_state is (ontime,offtime,waiting);
+	type top_state is (disabled,charging,waiting,faulted); --! permissable states for the overall controller
+	type bottom_state is (ontime,offtime,waiting); --! permissable states for the dutycycle
 	signal counter_state : bottom_state;
 	signal main_state : top_state;
 	signal FaultActive : std_logic;
@@ -40,16 +46,19 @@ begin
 
 	FaultActive <= OverVoltage; -- Or the faultlines together here
 
-	--Compute increment based on current voltages;
+	--Compute increment based on current voltages
+	--This is some what of a helper process to do some tests on new data
 	--this really only needs to be trigged when we get new data
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
+			--This increment is used to compute the off time.
 			if(CapVoltage*ratio - BattVoltage > 0) then
 				Increment <= CapVoltage*ratio + diode - BattVoltage;
 			else
 				Increment <= diode;
 			end if;
+			--Test the Capacitor for an over voltage scenario
 			if(CapVoltage > dangervoltage) then
 				OverVoltage <= '1';
 			else
@@ -62,40 +71,53 @@ begin
 	process(Clock)
 	begin
 		if rising_edge(Clock) then
+	
+			--this case is superceeded by the ifs below
 			case main_state is
 				when disabled =>
 					if(CapVoltage < maxvoltage) then
 						main_state <= charging;
 					end if; 
-				when charging =>
 
+				--stop charging if above max
+				when charging =>
 					if(CapVoltage > maxvoltage) then
 						main_state <= waiting;
 					else
 						main_state <= charging;
 					end if;
 
+				--trigger top up if below recharge
 				when waiting =>
 					if(CapVoltage < recharge) then
 						main_state <= charging;
 					else
 						main_state <= waiting;
 					end if;
+
+				--If the system faults lock it in
 				when faulted =>
 					main_state <= faulted;
 			end case;
+
+			-- The following ifs should override the above case statement
+			
 			if(charge = '0') then
 				main_state <= disabled;
 			end if;
+			
 			if(Reset = '1') then
 				main_state <= disabled;
 			end if;
+
+			--Keep this on the bottom so a reset can't clear an active fault
 			if(FaultActive = '1') then 
 				main_state <= faulted;
 			end if;
-	end if;
+		end if;
 	end process;
 
+	--Export some status to the world
 	with main_state select
 		Activity <= '1' when charging,
 								'0' when others;
@@ -111,6 +133,7 @@ begin
 		if rising_edge(Clock) then
 			case counter_state is
 				when ontime =>
+						--This implements Counts*BatteryVoltage = countermax in order to calculate counts
 						if(counter + BattVoltage > countermax) then
 							counter := 0;
 							counter_state <= offtime;
@@ -119,6 +142,7 @@ begin
 							counter_state <= ontime;
 						end if;
 				when offtime =>
+						--This implements Counts*(CapVoltage*ratio + diode - BatteryVoltage) = countermax
 						if(counter + Increment > countermax) then
 							counter := 0;
 							counter_state <= ontime;
@@ -131,12 +155,14 @@ begin
 							counter_state <= ontime;
 						end if;
 			end case;
+			--if the charger shuts down stop pulsing
 			if(main_state /= charging) then
 				counter_state <= waiting;
 			end if;
 		end if;
 	end process;
 	
+	--MOSFET is controlled by the bottom state machine
 	with counter_state select
 		Switch <= '1' when ontime,
 							'0' when others;
