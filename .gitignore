@@ -82,7 +82,9 @@ electronics/flyback/*-cache.*
 electronics/flyback/*.000
 electronics/flyback/*.bak
 electronics/flyback/*.bck
+electronics/flyback/*.csv
 electronics/flyback/*.drl
+electronics/flyback/*.dsn
 electronics/flyback/*.erc
 electronics/flyback/*.gbl
 electronics/flyback/*.gbo
@@ -95,6 +97,7 @@ electronics/flyback/*.lst
 electronics/flyback/*.mvl
 electronics/flyback/*.net
 electronics/flyback/*.pho
+electronics/flyback/*.ses
 electronics/flyback/*.stf
 electronics/main/$savepcb.*
 electronics/main/*-cache.*
@@ -102,6 +105,7 @@ electronics/main/*.000
 electronics/main/*.bak
 electronics/main/*.bck
 electronics/main/*.drl
+electronics/main/*.dsn
 electronics/main/*.erc
 electronics/main/*.gbl
 electronics/main/*.gbo
@@ -115,6 +119,8 @@ electronics/main/*.mvl
 electronics/main/*.net
 electronics/main/*.pho
 electronics/main/*.stf
+electronics/models/boost/*.d
+electronics/models/boost/boost_model
 electronics/models/charge_pump/*.csv
 electronics/models/charge_pump/*.d
 electronics/models/charge_pump/*.o
