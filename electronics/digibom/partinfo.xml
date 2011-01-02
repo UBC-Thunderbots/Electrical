@@ -199,9 +199,9 @@
 			<description>IC REG LDO 1.5A 1.2V TO-220-3</description>
 			<price>1.36000</price>
 		</part>
-		<part id="PIC18F65J50-I/PT-ND" minqty="1">
-			<description>IC PIC MCU FLASH 16KX16 64TQFP</description>
-			<price>4.49000</price>
+		<part id="PIC18F67J50-I/PT-ND" minqty="1">
+			<description>IC PIC MCU FLASH 64KX16 64TQFP</description>
+			<price>5.46000</price>
 		</part>
 		<part id="RURG3060CC-ND" minqty="1">
 			<description>DIODE UFAST DUAL 600V 30A TO-247</description>
@@ -315,7 +315,7 @@
 		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
 		<default value="MCP1416" part="MCP1416T-E/OTCT-ND" />
 		<default value="MCP1827S-1202E/AB" part="MCP1827S-1202E/AB-ND" />
-		<default value="PIC18F65J50" part="PIC18F65J50-I/PT-ND" />
+		<default value="PIC18F65J50" part="PIC18F67J50-I/PT-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="V7805-1000" part="102-1715-ND" />
