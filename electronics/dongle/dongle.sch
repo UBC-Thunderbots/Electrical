@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-12-24T17:59:57 PST
+EESchema Schematic File Version 2  date 2011-01-02T13:40:29 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "25 dec 2010"
+Date "2 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -540,7 +540,6 @@ U 1 1 4C54C379
 P 5700 4100
 F 0 "U2" H 5700 4100 60  0000 C CNN
 F 1 "PIC18F65J50" H 5700 4100 60  0000 C CNN
-F 4 "PIC18F65J50-I/PT-ND" H 5700 4100 60  0001 C CNN "Digikey Part"
 	1    5700 4100
 	1    0    0    -1  
 $EndComp
