@@ -14,7 +14,7 @@ port (
 end entity;
 
 
-architecture Behaviour of BrushlessController is
+architecture Behavioural of BrushlessController is
 	signal Swapped : std_logic_vector(3 downto 1);
 begin
 	Swapped <= Reverse&Reverse&Reverse XOR HallSensor;	

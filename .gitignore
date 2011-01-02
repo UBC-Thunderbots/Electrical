@@ -193,6 +193,9 @@ vhdl/*.xrpt
 vhdl/*_pad.csv
 vhdl/*_pad.txt
 vhdl/_xmsgs
+vhdl/boostcontrollertest
+vhdl/brushlesscontrollertest
+vhdl/common/*.cf
 vhdl/common/controllerimpl.asm
 vhdl/common/controllerimpl.vhd
 vhdl/cputest

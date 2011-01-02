@@ -102,6 +102,7 @@ vhdl/common/xbeereceiver.vhd -text
 vhdl/common/xbeetransmitter.vhd -text
 vhdl/nanoasm.cpp -text
 vhdl/sim/boostcontrollertest.vhd -text
+vhdl/sim/brushlesscontrollertest.vhd -text
 vhdl/sim/cputest.vhd -text
 vhdl/sim/graycountertest.vhd -text
 vhdl/sim/serialreceivertest.vhd -text
