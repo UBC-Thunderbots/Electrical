@@ -6,6 +6,7 @@ electronics/boostconverter/*.000
 electronics/boostconverter/*.bak
 electronics/boostconverter/*.bck
 electronics/boostconverter/*.drl
+electronics/boostconverter/*.dsn
 electronics/boostconverter/*.erc
 electronics/boostconverter/*.gbl
 electronics/boostconverter/*.gbo
@@ -18,6 +19,7 @@ electronics/boostconverter/*.lst
 electronics/boostconverter/*.mvl
 electronics/boostconverter/*.net
 electronics/boostconverter/*.pho
+electronics/boostconverter/*.ses
 electronics/boostconverter/*.stf
 electronics/chicker/$savepcb.*
 electronics/chicker/*-cache.*
@@ -25,6 +27,7 @@ electronics/chicker/*.000
 electronics/chicker/*.bak
 electronics/chicker/*.bck
 electronics/chicker/*.drl
+electronics/chicker/*.dsn
 electronics/chicker/*.erc
 electronics/chicker/*.gbl
 electronics/chicker/*.gbo
@@ -37,6 +40,7 @@ electronics/chicker/*.lst
 electronics/chicker/*.mvl
 electronics/chicker/*.net
 electronics/chicker/*.pho
+electronics/chicker/*.ses
 electronics/chicker/*.stf
 electronics/digibom/digibom
 electronics/dongle/$savepcb.*
@@ -45,6 +49,7 @@ electronics/dongle/*.000
 electronics/dongle/*.bak
 electronics/dongle/*.bck
 electronics/dongle/*.drl
+electronics/dongle/*.dsn
 electronics/dongle/*.erc
 electronics/dongle/*.gbl
 electronics/dongle/*.gbo
@@ -57,6 +62,7 @@ electronics/dongle/*.lst
 electronics/dongle/*.mvl
 electronics/dongle/*.net
 electronics/dongle/*.pho
+electronics/dongle/*.ses
 electronics/dongle/*.stf
 electronics/estop/$savepcb.*
 electronics/estop/*-cache.*
@@ -64,6 +70,7 @@ electronics/estop/*.000
 electronics/estop/*.bak
 electronics/estop/*.bck
 electronics/estop/*.drl
+electronics/estop/*.dsn
 electronics/estop/*.erc
 electronics/estop/*.gbl
 electronics/estop/*.gbo
@@ -76,13 +83,13 @@ electronics/estop/*.lst
 electronics/estop/*.mvl
 electronics/estop/*.net
 electronics/estop/*.pho
+electronics/estop/*.ses
 electronics/estop/*.stf
 electronics/flyback/$savepcb.*
 electronics/flyback/*-cache.*
 electronics/flyback/*.000
 electronics/flyback/*.bak
 electronics/flyback/*.bck
-electronics/flyback/*.csv
 electronics/flyback/*.drl
 electronics/flyback/*.dsn
 electronics/flyback/*.erc
@@ -118,6 +125,7 @@ electronics/main/*.lst
 electronics/main/*.mvl
 electronics/main/*.net
 electronics/main/*.pho
+electronics/main/*.ses
 electronics/main/*.stf
 electronics/models/boost/*.d
 electronics/models/boost/boost_model
@@ -137,6 +145,7 @@ electronics/motorcontroller_test_board/*.000
 electronics/motorcontroller_test_board/*.bak
 electronics/motorcontroller_test_board/*.bck
 electronics/motorcontroller_test_board/*.drl
+electronics/motorcontroller_test_board/*.dsn
 electronics/motorcontroller_test_board/*.erc
 electronics/motorcontroller_test_board/*.gbl
 electronics/motorcontroller_test_board/*.gbo
@@ -149,6 +158,7 @@ electronics/motorcontroller_test_board/*.lst
 electronics/motorcontroller_test_board/*.mvl
 electronics/motorcontroller_test_board/*.net
 electronics/motorcontroller_test_board/*.pho
+electronics/motorcontroller_test_board/*.ses
 electronics/motorcontroller_test_board/*.stf
 electronics/sensor/$savepcb.*
 electronics/sensor/*-cache.*
@@ -156,6 +166,7 @@ electronics/sensor/*.000
 electronics/sensor/*.bak
 electronics/sensor/*.bck
 electronics/sensor/*.drl
+electronics/sensor/*.dsn
 electronics/sensor/*.erc
 electronics/sensor/*.gbl
 electronics/sensor/*.gbo
@@ -168,6 +179,7 @@ electronics/sensor/*.lst
 electronics/sensor/*.mvl
 electronics/sensor/*.net
 electronics/sensor/*.pho
+electronics/sensor/*.ses
 electronics/sensor/*.stf
 vhdl/*.bgn
 vhdl/*.bit
