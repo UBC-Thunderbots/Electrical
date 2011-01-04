@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-03T17:49:51 PST
+EESchema Schematic File Version 2  date 2011-01-03T21:55:07 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -723,7 +723,7 @@ F 4 "497-4323-1-ND" H 3050 3500 60  0001 C CNN "Field1"
 	1    0    0    -1  
 $EndComp
 Text Label 1100 3500 2    60   ~ 0
-~CHARGE
+CHARGE
 $Comp
 L GND #PWR031
 U 1 1 4CE86D14
@@ -812,7 +812,7 @@ MISO
 Text Label 1950 1050 2    60   ~ 0
 CLK
 Text Label 1950 1250 2    60   ~ 0
-~CHARGE
+CHARGE
 Text Label 1950 1350 2    60   ~ 0
 CHIP
 $Comp
