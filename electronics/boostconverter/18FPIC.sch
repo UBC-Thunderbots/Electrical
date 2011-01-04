@@ -1,45 +1,14 @@
-EESchema Schematic File Version 2  date Wed 11 Aug 2010 12:03:07 PM PDT
-LIBS:power
-LIBS:thunderbots-symbols
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:boostconverter-cache
+EESchema Schematic File Version 2  date Mon 03 Jan 2011 04:05:06 PM PST
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./boostconverter.cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 2
-Title ""
-Date "11 aug 2010"
+Title "Boost Converter - PIC Schematic"
+Date "3 jan 2011"
 Rev ""
-Comp ""
-Comment1 ""
+Comp "UBC Thunderbots"
+Comment1 "Hierarchical Sheet with PIC18f4550"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -59,7 +28,7 @@ NoConn ~ 4200 4450
 NoConn ~ 4200 3950
 NoConn ~ 4200 3550
 Wire Wire Line
-	6400 1950 6400 2150
+	6400 2050 6400 2150
 Wire Wire Line
 	6150 6800 6250 6800
 Wire Wire Line
@@ -158,10 +127,10 @@ F 1 "GND" H 6900 6730 30  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L SW_PUSH SW1
+L SW_PUSH RESET1
 U 1 1 4C59AD0E
 P 6550 6800
-F 0 "SW1" H 6700 6910 50  0000 C CNN
+F 0 "RESET1" H 6700 6910 50  0000 C CNN
 F 1 "SW_PUSH" H 6550 6720 50  0000 C CNN
 	1    6550 6800
 	1    0    0    -1  
@@ -346,7 +315,7 @@ Text HLabel 8150 3750 2    60   Input ~ 0
 OSC1
 Text HLabel 6300 6150 1    60   Input ~ 0
 VCHMON
-Text HLabel 6400 1950 1    60   Output ~ 0
+Text HLabel 6400 2050 3    60   Output ~ 0
 PWM
 $Comp
 L VCC #PWR037

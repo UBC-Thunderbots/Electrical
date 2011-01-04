@@ -1,45 +1,14 @@
-EESchema Schematic File Version 2  date Wed 11 Aug 2010 12:03:07 PM PDT
-LIBS:power
-LIBS:thunderbots-symbols
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:boostconverter-cache
+EESchema Schematic File Version 2  date Mon 03 Jan 2011 04:05:06 PM PST
+LIBS:power,../thunderbots-symbols,device,transistors,conn,linear,regul,74xx,cmos4000,adc-dac,memory,xilinx,special,microcontrollers,dsp,microchip,analog_switches,motorola,texas,intel,audio,interface,digital-audio,philips,display,cypress,siliconi,opto,atmel,contrib,valves,./boostconverter.cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 2
-Title ""
-Date "11 aug 2010"
-Rev ""
-Comp ""
-Comment1 ""
+Title "Boost Converter"
+Date "3 jan 2011"
+Rev "00"
+Comp "UBC Thunderbots"
+Comment1 "Boost Converter Test Board Schematic"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -189,10 +158,10 @@ Wire Wire Line
 	7750 2950 7750 2950
 Connection ~ 7750 2950
 $Comp
-L SW_PUSH SW_CHG1
+L SW_PUSH CHARGE1
 U 1 1 4C54BAB7
 P 2050 4450
-F 0 "SW_CHG1" H 2200 4560 50  0000 C CNN
+F 0 "CHARGE1" H 2200 4560 50  0000 C CNN
 F 1 "SW_PUSH" H 2050 4370 50  0000 C CNN
 	1    2050 4450
 	1    0    0    1   
@@ -262,10 +231,10 @@ F13 "EXTRA1" B R 5500 4650 60
 F14 "PB2" B L 4000 4550 60 
 $EndSheet
 $Comp
-L CONN_8 P1
+L CONN_8 EXTRA1
 U 1 1 4C54B386
 P 6000 5000
-F 0 "P1" V 5950 5000 60  0000 C CNN
+F 0 "EXTRA1" V 5950 5000 60  0000 C CNN
 F 1 "CONN_8" V 6050 5000 60  0000 C CNN
 	1    6000 5000
 	1    0    0    -1  
@@ -298,19 +267,19 @@ F 1 "GND" H 9050 3030 30  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_2 P3
+L CONN_2 CAP1
 U 1 1 4C549C75
 P 9400 3650
-F 0 "P3" V 9350 3650 40  0000 C CNN
+F 0 "CAP1" V 9350 3650 40  0000 C CNN
 F 1 "CONN_2" V 9450 3650 40  0000 C CNN
 	1    9400 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P2
+L CONN_2 PWR1
 U 1 1 4C549C6F
 P 9500 3000
-F 0 "P2" V 9450 3000 40  0000 C CNN
+F 0 "PWR1" V 9450 3000 40  0000 C CNN
 F 1 "CONN_2" V 9550 3000 40  0000 C CNN
 	1    9500 3000
 	1    0    0    -1  
