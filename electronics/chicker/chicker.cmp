@@ -1,16 +1,16 @@
-Cmp-Mod V01 Created by CvPCB (2010-05-05 BZR 2356)-stable date = 11/25/2010 1:21:36 PM
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2011-01-03T23:04:01 PST
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
 Reference = C1;
-ValeurCmp = 0.1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CEDE42C;
 Reference = C2;
-ValeurCmp = 0.1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -24,21 +24,21 @@ EndCmp
 BeginCmp
 TimeStamp = /4CEDE409;
 Reference = C4;
-ValeurCmp = 0.1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CEDE442;
 Reference = C5;
-ValeurCmp = 0.1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CEECDAA;
 Reference = C6;
-ValeurCmp = 2.2mF;
+ValeurCmp = 1mF;
 IdModule  = C2V10;
 EndCmp
 
@@ -57,16 +57,16 @@ IdModule  = D2PAK123;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEDBF85;
+TimeStamp = /4D018AE0;
 Reference = D2;
-ValeurCmp = DPG60C300HB;
+ValeurCmp = RURG3060CC;
 IdModule  = TO247;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEDBF8B;
+TimeStamp = /4D018AF7;
 Reference = D3;
-ValeurCmp = DPG60C300HB;
+ValeurCmp = RURG3060CC;
 IdModule  = TO247;
 EndCmp
 
@@ -81,14 +81,14 @@ BeginCmp
 TimeStamp = /4CE869A3;
 Reference = P1;
 ValeurCmp = CONN_9X2;
-IdModule  = SIL-18;
+IdModule  = SIL-18-BIGPINS;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CE85D0A;
 Reference = P2;
 ValeurCmp = CONN_6X2;
-IdModule  = SIL-12;
+IdModule  = SIL-12-BIGPINS;
 EndCmp
 
 BeginCmp
@@ -162,9 +162,16 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CE86CEC;
+TimeStamp = /4D225394;
+Reference = R3;
+ValeurCmp = 330R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D22533F;
 Reference = U1;
-ValeurCmp = MCP1415;
+ValeurCmp = MCP1416;
 IdModule  = SOT23-5;
 EndCmp
 
