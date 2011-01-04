@@ -91,17 +91,17 @@ net "Hall(5)(3)" iostandard=LVCMOS33 | pullup | loc=P132;
 net "ChickerMISO" iostandard=LVCMOS33 | pulldown | loc=P105;
 net "ChickerCLK" iostandard=LVCMOS33 | slew=quietio | loc=P103;
 net "ChickerCS" iostandard=LVCMOS | slew=quietio | loc=P102;
-net "ChickerCharge" iostandard=LVCMOS33 | slew=quietio | loc=P110;
+net "ChickerCharge" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P110;
 net "Kick" iostandard=LVCMOS33 | slew=quietio | loc=P111;
 net "Chip" iostandard=LVCMOS33 | slew=quietio | loc=P112;
 net "ChickerPresent" iostandard=LVCMOS33 | pulldown | loc=P113;
 
 # Virtual grounds
-net "VirtualGround(0)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=24 | loc=P39;
+net "VirtualGround(0)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=16 | loc=P39;
 
 # Virtual VDDs
-net "VirtualVDD(0)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=24 | loc=P38;
-net "VirtualVDD(1)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=24 | loc=P40;
-net "VirtualVDD(2)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=24 | loc=P43;
-net "VirtualVDD(3)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=24 | loc=P44;
-net "VirtualVDD(4)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=24 | loc=P45;
+net "VirtualVDD(0)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=16 | loc=P38;
+net "VirtualVDD(1)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=16 | loc=P40;
+net "VirtualVDD(2)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=16 | loc=P43;
+net "VirtualVDD(3)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=16 | loc=P44;
+net "VirtualVDD(4)" iostandard=LVCMOS | slew=quietio | iostandard=LVTTL | drive=16 | loc=P45;
