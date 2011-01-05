@@ -163,6 +163,10 @@
 			<description>LED GREEN CLEAR 1206 SMD</description>
 			<price>0.55000</price>
 		</part>
+		<part id="296-18216-1-ND" minqty="1">
+			<description>IC ADC 12BIT 200KSPS SOT23-6</description>
+			<price>4.56</price>
+		</part>
 		<part id="365-1145-ND" minqty="1">
 			<description>LED VCSEL FLAT LENS 850NM LATERL</description>
 			<price>6.10</price>
@@ -361,6 +365,7 @@
 		<default value="365-1145-ND" part="365-1145-ND" />
 		<default value="568-3248-1-ND" part="568-3248-1-ND" />
 		<default value="ADC121S021" part="ADC121S021CIMFCT-ND" />
+		<default value="ADS7866IDBVT" part="296-18216-1-ND" />
 		<default value="AE16G-5-ND" part="AE16G-5-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
 		<default value="BAT54JW" part="BAT54JW-FDICT-ND" />
