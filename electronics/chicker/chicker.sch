@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-03T21:55:07 PST
+EESchema Schematic File Version 2  date Tue 04 Jan 2011 09:39:15 PM PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,7 +35,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "4 jan 2011"
+Date "5 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,6 +43,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L ADS7866IDBVT U3
+U 1 1 4D2403D7
+P 5650 3100
+F 0 "U3" H 5900 2600 60  0000 C CNN
+F 1 "ADS7866IDBVT" H 5700 3350 60  0000 C CNN
+	1    5650 3100
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	1150 4100 1150 4200
 Wire Wire Line
@@ -497,15 +506,6 @@ P 5650 2600
 F 0 "#PWR020" H 5650 2560 30  0001 C CNN
 F 1 "+3.3V" H 5650 2710 30  0000 C CNN
 	1    5650 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L ADC121S021 U3
-U 1 1 4CEDE351
-P 5650 3100
-F 0 "U3" H 5900 2600 60  0000 C CNN
-F 1 "ADC121S021" H 5700 3350 60  0000 C CNN
-	1    5650 3100
 	1    0    0    -1  
 $EndComp
 Text Label 3950 1500 2    60   ~ 0

@@ -1,6 +1,6 @@
-PCBNEW-BOARD Version 1 date 2011-01-03T23:04:33 PST
+PCBNEW-BOARD Version 1 date Tue 04 Jan 2011 09:39:08 PM PST
 
-# Created by Pcbnew(2010-03-13)-final
+# Created by Pcbnew(2010-03-14)-final
 
 $GENERAL
 LayerCount 2
@@ -20,7 +20,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11700 8267
 Title ""
-Date "4 jan 2011"
+Date "5 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -138,7 +138,7 @@ Na 16 "N-000014"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 17 "N-000017"
+Na 17 "N-000018"
 St ~
 $EndEQUIPOT
 $NCLASS
@@ -167,7 +167,7 @@ AddNet "N-000003"
 AddNet "N-000004"
 AddNet "N-000013"
 AddNet "N-000014"
-AddNet "N-000017"
+AddNet "N-000018"
 $EndNCLASS
 $MODULE SIL-2
 Po 14250 56750 900 15 4CEE25C0 4CE869FF ~~
@@ -455,7 +455,7 @@ $PAD
 Sh "2" R 350 550 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "N-000017"
+Ne 17 "N-000018"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -559,7 +559,7 @@ $PAD
 Sh "1" R 350 550 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "N-000017"
+Ne 17 "N-000018"
 Po -375 0
 $EndPAD
 $PAD
@@ -1027,10 +1027,10 @@ Po 26000 58750 900 15 4CEDF680 4CEDE96F ~~
 Li SOT23_6_DRCHACK
 Kw SOT23_5
 Sc 4CEDE96F
-AR /4CEDE351
+AR /4D2403D7
 Op 0 0 0
 T0 50 -1100 300 300 900 30 N V 21 N"U3"
-T1 25 0 197 197 900 30 N V 21 N"ADC121S021"
+T1 25 0 197 197 900 30 N V 21 N"ADS7866IDBVT"
 DS -200 300 -500 100 50 21
 DS 500 300 -525 300 50 21
 DS -525 300 -525 -300 50 21
@@ -1061,7 +1061,7 @@ $PAD
 Sh "3" R 250 394 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "N-000017"
+Ne 17 "N-000018"
 Po 375 500
 $EndPAD
 $PAD
@@ -2033,7 +2033,7 @@ ZLayer 0
 ZAux 12 E
 ZClearance 500 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 19250 64750 0
 ZCorner 19250 50750 0
 ZCorner 20500 50750 0
@@ -2696,7 +2696,7 @@ ZLayer 0
 ZAux 6 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 24250 69000 0
 ZCorner 24250 65250 0
 ZCorner 16750 65250 0
@@ -3119,7 +3119,7 @@ ZLayer 15
 ZAux 6 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 19250 64750 0
 ZCorner 19250 56500 0
 ZCorner 16250 56500 0
@@ -3636,7 +3636,7 @@ ZLayer 0
 ZAux 24 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 38750 69000 0
 ZCorner 38750 50250 0
 ZCorner 26500 50250 0
@@ -5603,7 +5603,7 @@ ZLayer 15
 ZAux 12 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 38750 69000 0
 ZCorner 38750 50250 0
 ZCorner 36000 50250 0
@@ -6691,7 +6691,7 @@ ZLayer 15
 ZAux 7 E
 ZClearance 0 I
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 31000 55500 0
 ZCorner 31000 50250 0
 ZCorner 23000 50250 0
@@ -6782,7 +6782,7 @@ ZLayer 15
 ZAux 6 E
 ZClearance 0 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 24250 69000 0
 ZCorner 24250 65250 0
 ZCorner 16750 65250 0
@@ -7215,7 +7215,7 @@ ZLayer 15
 ZAux 20 E
 ZClearance 20 T
 ZMinThickness 100
-ZOptions 1 16 F 200 200
+ZOptions 1 16 S 200 200
 ZCorner 15750 56750 0
 ZCorner 16000 56250 0
 ZCorner 19000 56250 0
