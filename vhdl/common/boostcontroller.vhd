@@ -102,7 +102,7 @@ begin
 
 			-- The following ifs should override the above case statement
 			
-			if(charge = '0') then
+			if(charge = '0') AND (main_state /= faulted) then
 				main_state <= disabled;
 			end if;
 			
