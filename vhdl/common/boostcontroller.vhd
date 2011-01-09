@@ -33,7 +33,15 @@ architecture Behavioural of BoostController is
 	constant dangervoltage : natural := natural(240.0 / maxCap * Capbits);
 	constant recharge : natural := natural(220.0 / maxCap * Capbits); 
 	constant diode : natural := natural(0.7 / maxBatt * Battbits);
-	constant ratio : natural := natural(maxCap * Battbits / maxBatt / Capbits); -- we should make sure this is power of 2 otherwise the multiplier will get unneedily large.
+	
+	--! ratio1 + 1 / ratio2 should be maxCap * Battbits / maxBatt / Capbits
+	--! ratio2 MUST be power of 2, ratio1 SHOULD be power of 2 to avoid multiplier
+	
+	--! ratio = 4.5
+	constant ratio1 : natural := 4;	
+	constant ratio2 : natural := 2;
+	
+	constant max_increment : natural := natural( (natural(capbits)+diode) * ratio1 + (natural(capbits)+diode) / ratio2);
 
 	type top_state is (disabled,charging,waiting,faulted); --! permissable states for the overall controller
 	type bottom_state is (ontime,offtime,waiting); --! permissable states for the dutycycle
@@ -41,7 +49,7 @@ architecture Behavioural of BoostController is
 	signal main_state : top_state;
 	signal FaultActive : std_logic;
 	signal OverVoltage : std_logic;
-	signal Increment : natural range 1 to ratio*natural(capbits)+diode;
+	signal Increment : natural range 1 to max_increment;
 begin
 
 	FaultActive <= OverVoltage; -- Or the faultlines together here
@@ -53,8 +61,8 @@ begin
 	begin
 		if rising_edge(Clock) then
 			--This increment is used to compute the off time.
-			if(CapVoltage*ratio - BattVoltage > 0) then
-				Increment <= CapVoltage*ratio + diode - BattVoltage;
+			if((CapVoltage - 1)*(ratio1) + (CapVoltage - 1)/ratio2 + diode - BattVoltage > 0) then
+				Increment <= ((CapVoltage - 1)*(ratio1) + (CapVoltage - 1)/ratio2 + diode - BattVoltage);
 			else
 				Increment <= diode;
 			end if;
@@ -128,7 +136,7 @@ begin
 
 	-- This process controls the actual switch timing;
 	process(Clock)
-		variable counter : natural range 0 to countermax;
+		variable counter : natural range 0 to countermax + max_increment;
 	begin
 		if rising_edge(Clock) then
 			case counter_state is
@@ -143,7 +151,7 @@ begin
 						end if;
 				when offtime =>
 						--This implements Counts*(CapVoltage*ratio + diode - BatteryVoltage) = countermax
-						if(counter + Increment > countermax) then
+						if(counter + Increment > countermax + Increment) then
 							counter := 0;
 							counter_state <= ontime;
 						else
