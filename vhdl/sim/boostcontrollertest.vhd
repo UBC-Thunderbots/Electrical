@@ -41,6 +41,7 @@ begin
 		wait for ClockPeriod / 2;
 		Clock <= '0';
 		wait for ClockPeriod / 2; 
+		
 		if Done = '1' then
 			wait;
 		end if;
@@ -58,27 +59,36 @@ begin
 		Charge <= '1';
 		Done <= '0';
 		wait for 2*ClockPeriod;
-		charge_loop: while  activity ='1' loop
+		charge_loop: while  activity ='1' and Fault = '0' loop
 			wait for 876*ClockPeriod;
 			CapVoltage <= natural(CapVoltageReal/maxCap * 4095.0);
 		end loop charge_loop;
 
-		discharge_loop: while activity = '0' loop
+		discharge_loop: while activity = '0' and Fault = '0' loop
 			wait for 876*ClockPeriod;
 			CapVoltage <= natural(CapVoltageReal/maxCap * 4095.0);
 		end loop discharge_loop;
+		
+		if Fault = '1' then -- capture some data after faulting
+			wait for 500 ms;
+		end if;
+		
 		Done <= '1';
 		wait;
 	end process;
 
 	process(Clock)
+	variable CapVoltageDrop : real;
 	begin
-		if rising_edge(Clock) then	
+		if rising_edge(Clock) then
+			CapVoltageDrop := CapVoltageReal/220.0e3 / 4.5e-3 * 1.0e-6;
+			
 			if(Switch = '1') then
 				InductorCurrent <= InductorCurrent + BattVoltageReal / 22.0e-6 * 1.0e-6;
+				CapVoltageReal <= CapVoltageReal - CapVoltageDrop;
 			else
 				InductorCurrent <= InductorCurrent - (CapVoltageReal + 0.7 - BattVoltageReal) * 1.0e-6 / 22.0e-6;
-				CapVoltageReal <= CapVoltageReal + (InductorCurrent - CapVoltageReal/220.0e3) / 4.5e-3 * 1.0e-6;
+				CapVoltageReal <= CapVoltageReal + InductorCurrent / 4.5e-3 * 1.0e-6 - CapVoltageDrop;
 			end if;
 
 			if InductorCurrent < 0.0 then
