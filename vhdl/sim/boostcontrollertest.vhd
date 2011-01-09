@@ -16,10 +16,12 @@ architecture Behavioural of BoostControllerTest is
 	signal Charge : std_logic := '0';
 	signal Switch : std_logic := '0';
 	signal Activity : std_logic := '0';
-	signal CapVoltageReal : real := 0.0;
+	signal CapVoltageReal : real := 14.4;
 	signal BattVoltageReal : real := 14.4; 
 	signal InductorCurrent : real := 0.0;
 	signal InductorQuant : natural range 0 to 1000;
+	
+	constant maxCap : real := 330.0;	--! Voltage of Cap at maximum ADC range
 begin
 	UUT : entity work.BoostController(Behavioural)
 		port map(
@@ -48,7 +50,7 @@ begin
 	begin
 		Charge <= '0';
 		Reset <= '1';
-		CapVoltage <= natural(CapVoltageReal/330.0 * 4095.0);
+		CapVoltage <= natural(CapVoltageReal/maxCap * 4095.0);
 		BattVoltage <= natural(BattVoltageReal/18.3*1023.0);
 		Done <= '0';
 		wait for 4.5*ClockPeriod;
@@ -58,12 +60,12 @@ begin
 		wait for 2*ClockPeriod;
 		charge_loop: while  activity ='1' loop
 			wait for 876*ClockPeriod;
-			CapVoltage <= natural(CapVoltageReal/330.0 * 4095.0);
+			CapVoltage <= natural(CapVoltageReal/maxCap * 4095.0);
 		end loop charge_loop;
 
 		discharge_loop: while activity = '0' loop
 			wait for 876*ClockPeriod;
-			CapVoltage <= natural(CapVoltageReal/330.0 * 4095.0);
+			CapVoltage <= natural(CapVoltageReal/maxCap * 4095.0);
 		end loop discharge_loop;
 		Done <= '1';
 		wait;
