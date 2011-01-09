@@ -34,6 +34,9 @@ architecture Behavioural of BoostController is
 	constant recharge : natural := natural(220.0 / maxCap * Capbits); 
 	constant diode : natural := natural(0.7 / maxBatt * Battbits);
 	
+	constant charge_timeout : real := 2.5; -- timeout for charge cycle
+	constant countermax_for_timeout : natural := natural(charge_timeout * frequency);
+	
 	--! ratio1 + 1 / ratio2 should be maxCap * Battbits / maxBatt / Capbits
 	--! ratio2 MUST be power of 2, ratio1 SHOULD be power of 2 to avoid multiplier
 	
@@ -47,12 +50,13 @@ architecture Behavioural of BoostController is
 	type bottom_state is (ontime,offtime,waiting); --! permissable states for the dutycycle
 	signal counter_state : bottom_state;
 	signal main_state : top_state;
-	signal FaultActive : std_logic;
-	signal OverVoltage : std_logic;
+	signal FaultActive : boolean;
+	signal OverVoltage : boolean;
+	signal Timeout : boolean;
 	signal Increment : natural range 1 to max_increment;
 begin
 
-	FaultActive <= OverVoltage; -- Or the faultlines together here
+	FaultActive <= OverVoltage or Timeout; -- Or the faultlines together here
 
 	--Compute increment based on current voltages
 	--This is some what of a helper process to do some tests on new data
@@ -68,15 +72,16 @@ begin
 			end if;
 			--Test the Capacitor for an over voltage scenario
 			if(CapVoltage > dangervoltage) then
-				OverVoltage <= '1';
+				OverVoltage <= true;
 			else
-				OverVoltage <= '0';
+				OverVoltage <= false;
 			end if;
 		end if;
 	end process;
 
 	--Main Controlling State Machine to control the levels of the system;
 	process(Clock)
+	variable counter : natural range 0 to countermax_for_timeout + 1 := 0;
 	begin
 		if rising_edge(Clock) then
 	
@@ -94,6 +99,8 @@ begin
 					else
 						main_state <= charging;
 					end if;
+					
+					counter := counter + 1;
 
 				--trigger top up if below recharge
 				when waiting =>
@@ -107,6 +114,12 @@ begin
 				when faulted =>
 					main_state <= faulted;
 			end case;
+			
+			if (main_state /= charging) then
+				counter := 0;
+			end if;
+			
+			Timeout <= counter >= countermax_for_timeout;
 
 			-- The following ifs should override the above case statement
 			
@@ -119,7 +132,7 @@ begin
 			end if;
 
 			--Keep this on the bottom so a reset can't clear an active fault
-			if(FaultActive = '1') then 
+			if(FaultActive = true) then 
 				main_state <= faulted;
 			end if;
 		end if;
