@@ -82,14 +82,10 @@ electronics/models/solenoid/solenoid.mdl -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
-vhdl/common/alu.vhd -text
 vhdl/common/boostcontroller.vhd -text
 vhdl/common/brushlesscontroller.vhd -text
 vhdl/common/byteshifter.vhd -text
 vhdl/common/chicker.vhd -text
-vhdl/common/controller.vhd -text
-vhdl/common/controllerimpl.asm.m4 -text
-vhdl/common/cpu.vhd -text
 vhdl/common/graycounter.vhd -text
 vhdl/common/pwm.vhd -text
 vhdl/common/serialreceiver.smv -text
@@ -97,14 +93,6 @@ vhdl/common/serialreceiver.vhd -text
 vhdl/common/serialtransmitter.vhd -text
 vhdl/common/srfilter.vhd -text
 vhdl/common/types.vhd -text
-vhdl/common/xbee.vhd -text
-vhdl/common/xbeebytereceiver.vhd -text
-vhdl/common/xbeebytetransmitter.vhd -text
-vhdl/common/xbeepacketreceiver.vhd -text
-vhdl/common/xbeepackettransmitter.vhd -text
-vhdl/common/xbeereceiver.vhd -text
-vhdl/common/xbeetransmitter.vhd -text
-vhdl/nanoasm.cpp -text
 vhdl/sim/boostcontrollertest.vhd -text
 vhdl/sim/brushlesscontrollertest.vhd -text
 vhdl/sim/cputest.vhd -text
@@ -115,7 +103,6 @@ vhdl/sim/xbeebytereceivertest.vhd -text
 vhdl/sim/xbeebytetransmittertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/main.vhd -text
-vhdl/synth/tester.vhd -text
 vhdl/thunderbots.prj -text
 vhdl/thunderbots.ucf -text
 vhdl/thunderbots.xst -text
