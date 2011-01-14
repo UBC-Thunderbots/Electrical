@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2010-12-24T17:57:56 PST
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2011-01-08T11:27:36 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -771,6 +771,13 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /4AD90413/4D225504;
+Reference = R46;
+ValeurCmp = 2.2kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /4AD90417/4B5A15A3;
 Reference = U4;
 ValeurCmp = LD1117V33C;
@@ -813,9 +820,9 @@ IdModule  = XBee;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD90413/4CC47564;
+TimeStamp = /4AD90413/4D28BA1D;
 Reference = U11;
-ValeurCmp = PIC18F65J50;
+ValeurCmp = PIC18F67J50;
 IdModule  = TQFP_64;
 EndCmp
 
@@ -883,7 +890,7 @@ IdModule  = SO16W;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72C3D;
+TimeStamp = /4D218C34;
 Reference = U21;
 ValeurCmp = TC4469;
 IdModule  = SO16W;

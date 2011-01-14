@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 31 Dec 2010 06:23:11 PM PST
+EESchema Schematic File Version 2  date 2011-01-12T18:57:08 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 13 18
 Title ""
-Date "1 jan 2011"
+Date "13 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -54,19 +53,19 @@ Wire Wire Line
 Wire Wire Line
 	4450 4300 4450 4250
 $Comp
-L GND #PWR085
+L GND #PWR072
 U 1 1 4CC50E98
 P 4450 4300
-F 0 "#PWR085" H 4450 4300 30  0001 C CNN
+F 0 "#PWR072" H 4450 4300 30  0001 C CNN
 F 1 "GND" H 4450 4230 30  0001 C CNN
 	1    4450 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR086
+L +3.3V #PWR073
 U 1 1 4CC50E96
 P 4450 3800
-F 0 "#PWR086" H 4450 3760 30  0001 C CNN
+F 0 "#PWR073" H 4450 3760 30  0001 C CNN
 F 1 "+3.3V" H 4450 3910 30  0000 C CNN
 	1    4450 3800
 	1    0    0    -1  
@@ -76,16 +75,16 @@ L C C23
 U 1 1 4CC50E90
 P 4450 4050
 F 0 "C23" H 4500 4150 50  0000 L CNN
-F 1 "10nF" H 4500 3950 50  0000 L CNN
+F 1 "10uF" H 4500 3950 50  0000 L CNN
 F 4 "" H 4450 4050 60  0001 C CNN "Digikey Part"
 	1    4450 4050
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR087
+L +3.3V #PWR074
 U 1 1 4CC50DFE
 P 5150 3900
-F 0 "#PWR087" H 5150 3860 30  0001 C CNN
+F 0 "#PWR074" H 5150 3860 30  0001 C CNN
 F 1 "+3.3V" H 5150 4010 30  0000 C CNN
 	1    5150 3900
 	0    -1   -1   0   
@@ -93,19 +92,19 @@ $EndComp
 Text HLabel 5150 4100 0    60   Output ~ 0
 OSC
 $Comp
-L +3.3V #PWR088
+L +3.3V #PWR075
 U 1 1 4CC50DEA
 P 5150 4200
-F 0 "#PWR088" H 5150 4160 30  0001 C CNN
+F 0 "#PWR075" H 5150 4160 30  0001 C CNN
 F 1 "+3.3V" H 5150 4310 30  0000 C CNN
 	1    5150 4200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR089
+L GND #PWR076
 U 1 1 4CC50DE7
 P 5150 4000
-F 0 "#PWR089" H 5150 4000 30  0001 C CNN
+F 0 "#PWR076" H 5150 4000 30  0001 C CNN
 F 1 "GND" H 5150 3930 30  0001 C CNN
 	1    5150 4000
 	0    1    1    0   

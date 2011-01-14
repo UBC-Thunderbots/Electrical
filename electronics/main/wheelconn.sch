@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 31 Dec 2010 06:23:11 PM PST
+EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 3 18
 Title ""
-Date "1 jan 2011"
+Date "8 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -103,27 +102,27 @@ PHASE1
 Text HLabel 5800 4300 0    60   Input ~ 0
 PHASE[1..3]
 $Comp
-L GND #PWR011
+L GND #PWR040
 U 1 1 4CD730A5
 P 6450 3450
-AR Path="/4CD73053/4CD730A5" Ref="#PWR011"  Part="1" 
-AR Path="/4CD73188/4CD730A5" Ref="#PWR05"  Part="1" 
-AR Path="/4CD7317F/4CD730A5" Ref="#PWR07"  Part="1" 
-AR Path="/4CD73172/4CD730A5" Ref="#PWR09"  Part="1" 
-F 0 "#PWR011" H 6450 3450 30  0001 C CNN
+AR Path="/4CD73053/4CD730A5" Ref="#PWR040"  Part="1" 
+AR Path="/4CD73188/4CD730A5" Ref="#PWR034"  Part="1" 
+AR Path="/4CD7317F/4CD730A5" Ref="#PWR036"  Part="1" 
+AR Path="/4CD73172/4CD730A5" Ref="#PWR038"  Part="1" 
+F 0 "#PWR040" H 6450 3450 30  0001 C CNN
 F 1 "GND" H 6450 3380 30  0001 C CNN
 	1    6450 3450
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR012
+L +5V #PWR041
 U 1 1 4CD73087
 P 6450 3050
-AR Path="/4CD73053/4CD73087" Ref="#PWR012"  Part="1" 
-AR Path="/4CD73188/4CD73087" Ref="#PWR06"  Part="1" 
-AR Path="/4CD7317F/4CD73087" Ref="#PWR08"  Part="1" 
-AR Path="/4CD73172/4CD73087" Ref="#PWR010"  Part="1" 
-F 0 "#PWR012" H 6450 3140 20  0001 C CNN
+AR Path="/4CD73053/4CD73087" Ref="#PWR041"  Part="1" 
+AR Path="/4CD73188/4CD73087" Ref="#PWR035"  Part="1" 
+AR Path="/4CD7317F/4CD73087" Ref="#PWR037"  Part="1" 
+AR Path="/4CD73172/4CD73087" Ref="#PWR039"  Part="1" 
+F 0 "#PWR041" H 6450 3140 20  0001 C CNN
 F 1 "+5V" H 6450 3140 30  0000 C CNN
 	1    6450 3050
 	0    -1   -1   0   

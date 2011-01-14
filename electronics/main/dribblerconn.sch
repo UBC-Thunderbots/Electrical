@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 31 Dec 2010 06:23:11 PM PST
+EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 18
 Title ""
-Date "1 jan 2011"
+Date "8 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -82,19 +81,19 @@ Entry Wire Line
 Entry Wire Line
 	4800 3400 4900 3500
 $Comp
-L GND #PWR03
+L GND #PWR032
 U 1 1 4CD7321A
 P 5350 3900
-F 0 "#PWR03" H 5350 3900 30  0001 C CNN
+F 0 "#PWR032" H 5350 3900 30  0001 C CNN
 F 1 "GND" H 5350 3830 30  0001 C CNN
 	1    5350 3900
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR04
+L +5V #PWR033
 U 1 1 4CD73217
 P 5350 3800
-F 0 "#PWR04" H 5350 3890 20  0001 C CNN
+F 0 "#PWR033" H 5350 3890 20  0001 C CNN
 F 1 "+5V" H 5350 3890 30  0000 C CNN
 	1    5350 3800
 	0    -1   -1   0   

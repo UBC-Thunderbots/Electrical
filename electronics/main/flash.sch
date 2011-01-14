@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 31 Dec 2010 06:23:11 PM PST
+EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 14 18
 Title ""
-Date "1 jan 2011"
+Date "8 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -72,19 +71,19 @@ Wire Wire Line
 Wire Wire Line
 	6650 4000 6650 4100
 $Comp
-L +3.3V #PWR090
+L +3.3V #PWR077
 U 1 1 4CC3848B
 P 6700 4050
-F 0 "#PWR090" H 6700 4010 30  0001 C CNN
+F 0 "#PWR077" H 6700 4010 30  0001 C CNN
 F 1 "+3.3V" H 6700 4160 30  0000 C CNN
 	1    6700 4050
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR091
+L +3.3V #PWR078
 U 1 1 4CC3847F
 P 5050 4200
-F 0 "#PWR091" H 5050 4160 30  0001 C CNN
+F 0 "#PWR078" H 5050 4160 30  0001 C CNN
 F 1 "+3.3V" H 5050 4310 30  0000 C CNN
 	1    5050 4200
 	0    -1   -1   0   
@@ -98,10 +97,10 @@ MOSI
 Text HLabel 7050 4200 2    60   Input ~ 0
 CLK
 $Comp
-L GND #PWR092
+L GND #PWR079
 U 1 1 4ABE8D7B
 P 5050 4300
-F 0 "#PWR092" H 5050 4300 30  0001 C CNN
+F 0 "#PWR079" H 5050 4300 30  0001 C CNN
 F 1 "GND" H 5050 4230 30  0001 C CNN
 	1    5050 4300
 	0    1    1    0   

@@ -375,7 +375,8 @@
 		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
 		<default value="MCP1416" part="MCP1416T-E/OTCT-ND" />
 		<default value="MCP1827S-1202E/AB" part="MCP1827S-1202E/AB-ND" />
-		<default value="PIC18F65J50" part="PIC18F67J50-I/PT-ND" />
+		<default value="PIC18F65J50" part="PIC18F65J50-I/PT-ND" />
+		<default value="PIC18F67J50" part="PIC18F67J50-I/PT-ND" />
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="TC4469" part="TC4469COE-ND" />
