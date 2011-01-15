@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
+EESchema Schematic File Version 2  date 2011-01-15T15:37:10 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -30,9 +30,9 @@ LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 12 18
+Sheet 8 18
 Title ""
-Date "8 jan 2011"
+Date "15 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -181,9 +181,9 @@ PHASE2
 Text Label 7850 1600 0    60   ~ 0
 PHASE1
 Text Label 4650 5850 0    60   ~ 0
-CTRL-3
+CTRL+3
 Text Label 4650 3950 0    60   ~ 0
-CTRL-2
+CTRL+2
 Entry Wire Line
 	4550 5750 4650 5850
 Entry Wire Line
@@ -191,25 +191,25 @@ Entry Wire Line
 Entry Wire Line
 	4550 1850 4650 1950
 Text Label 4650 1950 0    60   ~ 0
-CTRL-1
-Text Label 5150 1450 0    60   ~ 0
 CTRL+1
+Text Label 5150 1450 0    60   ~ 0
+CTRL-1
 Text Label 5150 3450 0    60   ~ 0
-CTRL+2
+CTRL-2
 Entry Wire Line
 	5050 1350 5150 1450
 Entry Wire Line
 	5050 3350 5150 3450
 Text Label 5150 5350 0    60   ~ 0
-CTRL+3
+CTRL-3
 Entry Wire Line
 	5050 5250 5150 5350
 Text HLabel 8550 5800 2    60   Output ~ 0
 PHASE[1..3]
 Text HLabel 4400 1650 0    60   Input ~ 0
-CTRL-[1..3]
-Text HLabel 4850 950  0    60   Input ~ 0
 CTRL+[1..3]
+Text HLabel 4850 950  0    60   Input ~ 0
+CTRL-[1..3]
 $Comp
 L +BATT #PWR042
 U 1 1 4CD72D0C
@@ -219,7 +219,7 @@ AR Path="/4CD72EC1/4CD72D0C" Ref="#PWR048"  Part="1"
 AR Path="/4CD72EB9/4CD72D0C" Ref="#PWR054"  Part="1" 
 AR Path="/4CD72EB0/4CD72D0C" Ref="#PWR060"  Part="1" 
 AR Path="/4CD72C2A/4CD72D0C" Ref="#PWR066"  Part="1" 
-F 0 "#PWR066" H 7700 5900 20  0001 C CNN
+F 0 "#PWR042" H 7700 5900 20  0001 C CNN
 F 1 "+BATT" H 7700 6050 30  0000 C CNN
 	1    7700 5950
 	1    0    0    -1  
@@ -233,7 +233,7 @@ AR Path="/4CD72EC1/4CD72D0B" Ref="#PWR049"  Part="1"
 AR Path="/4CD72EB9/4CD72D0B" Ref="#PWR055"  Part="1" 
 AR Path="/4CD72EB0/4CD72D0B" Ref="#PWR061"  Part="1" 
 AR Path="/4CD72C2A/4CD72D0B" Ref="#PWR067"  Part="1" 
-F 0 "#PWR067" H 7700 5050 30  0001 C CNN
+F 0 "#PWR043" H 7700 5050 30  0001 C CNN
 F 1 "GND" H 7700 4980 30  0001 C CNN
 	1    7700 5050
 	1    0    0    -1  
@@ -415,7 +415,7 @@ AR Path="/4CD72EC1/4CD72CFC" Ref="#PWR050"  Part="1"
 AR Path="/4CD72EB9/4CD72CFC" Ref="#PWR056"  Part="1" 
 AR Path="/4CD72EB0/4CD72CFC" Ref="#PWR062"  Part="1" 
 AR Path="/4CD72C2A/4CD72CFC" Ref="#PWR068"  Part="1" 
-F 0 "#PWR068" H 7700 3150 30  0001 C CNN
+F 0 "#PWR044" H 7700 3150 30  0001 C CNN
 F 1 "GND" H 7700 3080 30  0001 C CNN
 	1    7700 3150
 	1    0    0    -1  
@@ -429,7 +429,7 @@ AR Path="/4CD72EC1/4CD72CFB" Ref="#PWR051"  Part="1"
 AR Path="/4CD72EB9/4CD72CFB" Ref="#PWR057"  Part="1" 
 AR Path="/4CD72EB0/4CD72CFB" Ref="#PWR063"  Part="1" 
 AR Path="/4CD72C2A/4CD72CFB" Ref="#PWR069"  Part="1" 
-F 0 "#PWR069" H 7700 4000 20  0001 C CNN
+F 0 "#PWR045" H 7700 4000 20  0001 C CNN
 F 1 "+BATT" H 7700 4150 30  0000 C CNN
 	1    7700 4050
 	1    0    0    -1  
@@ -443,7 +443,7 @@ AR Path="/4CD72EC7/4CD72CE4" Ref="#PWR046"  Part="1"
 AR Path="/4CD72EC1/4CD72CE4" Ref="#PWR052"  Part="1" 
 AR Path="/4CD72EB9/4CD72CE4" Ref="#PWR058"  Part="1" 
 AR Path="/4CD72EB0/4CD72CE4" Ref="#PWR064"  Part="1" 
-F 0 "#PWR070" H 7700 2000 20  0001 C CNN
+F 0 "#PWR046" H 7700 2000 20  0001 C CNN
 F 1 "+BATT" H 7700 2150 30  0000 C CNN
 	1    7700 2050
 	1    0    0    -1  
@@ -457,7 +457,7 @@ AR Path="/4CD72EC7/4CD72CE1" Ref="#PWR047"  Part="1"
 AR Path="/4CD72EC1/4CD72CE1" Ref="#PWR053"  Part="1" 
 AR Path="/4CD72EB9/4CD72CE1" Ref="#PWR059"  Part="1" 
 AR Path="/4CD72EB0/4CD72CE1" Ref="#PWR065"  Part="1" 
-F 0 "#PWR071" H 7700 1150 30  0001 C CNN
+F 0 "#PWR047" H 7700 1150 30  0001 C CNN
 F 1 "GND" H 7700 1080 30  0001 C CNN
 	1    7700 1150
 	1    0    0    -1  

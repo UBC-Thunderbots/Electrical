@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
+EESchema Schematic File Version 2  date 2011-01-15T15:37:10 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 2 18
 Title ""
-Date "8 jan 2011"
+Date "15 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -915,11 +915,11 @@ M_HALL51
 Entry Wire Line
 	4750 650  4850 750 
 Text Label 6200 1300 0    60   ~ 0
-M_CTRL5-3
+M_CTRL5+3
 Text Label 6200 1200 0    60   ~ 0
-M_CTRL5-2
+M_CTRL5+2
 Text Label 6200 1100 0    60   ~ 0
-M_CTRL5-1
+M_CTRL5+1
 Entry Wire Line
 	6750 1300 6850 1200
 Entry Wire Line
@@ -931,19 +931,19 @@ Entry Wire Line
 Entry Wire Line
 	6750 800  6850 700 
 Text Label 6200 900  0    60   ~ 0
-M_CTRL5+3
+M_CTRL5-3
 Text Label 6200 800  0    60   ~ 0
-M_CTRL5+2
+M_CTRL5-2
 Text Label 6200 700  0    60   ~ 0
-M_CTRL5+1
+M_CTRL5-1
 Entry Wire Line
 	6750 700  6850 600 
 Text Label 9300 6850 0    60   ~ 0
-M_CTRL3+3
+M_CTRL3-3
 Text Label 9300 6750 0    60   ~ 0
-M_CTRL3+2
+M_CTRL3-2
 Text Label 9300 6650 0    60   ~ 0
-M_CTRL3+1
+M_CTRL3-1
 Entry Wire Line
 	9850 6850 9950 6750
 Entry Wire Line
@@ -955,25 +955,25 @@ Entry Wire Line
 Entry Wire Line
 	1400 7150 1500 7250
 Text Label 1550 7350 0    60   ~ 0
-M_CTRL4-3
+M_CTRL4+3
 Text Label 1550 7250 0    60   ~ 0
-M_CTRL4-2
+M_CTRL4+2
 Text Label 1550 7150 0    60   ~ 0
-M_CTRL4-1
+M_CTRL4+1
 Entry Wire Line
 	1400 7050 1500 7150
 Entry Wire Line
 	1400 6850 1500 6950
 Text Label 1550 6950 0    60   ~ 0
-M_CTRL4+3
+M_CTRL4-3
 Text Label 1550 6850 0    60   ~ 0
-M_CTRL4+2
+M_CTRL4-2
 Entry Wire Line
 	1400 6750 1500 6850
 Entry Wire Line
 	1400 6650 1500 6750
 Text Label 1550 6750 0    60   ~ 0
-M_CTRL4+1
+M_CTRL4-1
 Entry Wire Line
 	1300 6300 1400 6400
 Entry Wire Line
@@ -991,11 +991,11 @@ Entry Wire Line
 Entry Wire Line
 	9850 6400 9950 6300
 Text Label 9300 6500 0    60   ~ 0
-M_CTRL3-3
+M_CTRL3+3
 Text Label 9300 6400 0    60   ~ 0
-M_CTRL3-2
+M_CTRL3+2
 Text Label 9300 6300 0    60   ~ 0
-M_CTRL3-1
+M_CTRL3+1
 Entry Wire Line
 	9850 6300 9950 6200
 Entry Wire Line
@@ -1023,11 +1023,11 @@ Entry Wire Line
 Text Label 1450 4600 0    60   ~ 0
 M_HALL11
 Text Label 1500 4350 0    60   ~ 0
-M_CTRL1+3
+M_CTRL1-3
 Text Label 1500 4250 0    60   ~ 0
-M_CTRL1+2
+M_CTRL1-2
 Text Label 1500 4150 0    60   ~ 0
-M_CTRL1+1
+M_CTRL1-1
 Entry Wire Line
 	1350 4250 1450 4350
 Entry Wire Line
@@ -1039,11 +1039,11 @@ Entry Wire Line
 Entry Wire Line
 	1400 3750 1500 3850
 Text Label 1550 3950 0    60   ~ 0
-M_CTRL1-3
+M_CTRL1+3
 Text Label 1550 3850 0    60   ~ 0
-M_CTRL1-2
+M_CTRL1+2
 Text Label 1550 3750 0    60   ~ 0
-M_CTRL1-1
+M_CTRL1+1
 Entry Wire Line
 	1400 3650 1500 3750
 Entry Wire Line
@@ -1059,17 +1059,17 @@ Entry Wire Line
 Entry Wire Line
 	9800 4050 9900 3950
 Text Label 9200 4750 0    60   ~ 0
-M_CTRL2+3
-Text Label 9200 4650 0    60   ~ 0
-M_CTRL2+2
-Text Label 9200 4550 0    60   ~ 0
-M_CTRL2+1
-Text Label 9250 4250 0    60   ~ 0
 M_CTRL2-3
-Text Label 9250 4150 0    60   ~ 0
+Text Label 9200 4650 0    60   ~ 0
 M_CTRL2-2
-Text Label 9250 4050 0    60   ~ 0
+Text Label 9200 4550 0    60   ~ 0
 M_CTRL2-1
+Text Label 9250 4250 0    60   ~ 0
+M_CTRL2+3
+Text Label 9250 4150 0    60   ~ 0
+M_CTRL2+2
+Text Label 9250 4050 0    60   ~ 0
+M_CTRL2+1
 Entry Wire Line
 	10000 3700 10100 3600
 Entry Wire Line
@@ -1235,15 +1235,15 @@ PARBUS_D7
 Entry Wire Line
 	2750 3600 2850 3700
 Text HLabel 6900 550  2    60   Output ~ 0
-M_CTRL5+[1..3]
-Text HLabel 6900 950  2    60   Output ~ 0
 M_CTRL5-[1..3]
+Text HLabel 6900 950  2    60   Output ~ 0
+M_CTRL5+[1..3]
 Text HLabel 1350 6600 0    60   Output ~ 0
-M_CTRL4+[1..3]
-Text HLabel 1350 7000 0    60   Output ~ 0
 M_CTRL4-[1..3]
+Text HLabel 1350 7000 0    60   Output ~ 0
+M_CTRL4+[1..3]
 Text HLabel 10000 6500 2    60   Output ~ 0
-M_CTRL3+[1..3]
+M_CTRL3-[1..3]
 $Comp
 L GND #PWR06
 U 1 1 4CC7B6A9
@@ -1288,15 +1288,15 @@ M_HALL2[1..3]
 Text HLabel 1200 4450 0    60   Input ~ 0
 M_HALL1[1..3]
 Text HLabel 10000 6150 2    60   Output ~ 0
-M_CTRL3-[1..3]
+M_CTRL3+[1..3]
 Text HLabel 9900 4350 2    60   Output ~ 0
-M_CTRL2+[1..3]
-Text HLabel 10100 3850 2    60   Output ~ 0
 M_CTRL2-[1..3]
+Text HLabel 10100 3850 2    60   Output ~ 0
+M_CTRL2+[1..3]
 Text HLabel 1300 4000 0    60   Output ~ 0
-M_CTRL1+[1..3]
-Text HLabel 1300 3600 0    60   Output ~ 0
 M_CTRL1-[1..3]
+Text HLabel 1300 3600 0    60   Output ~ 0
+M_CTRL1+[1..3]
 Text HLabel 5050 5750 3    60   Input ~ 0
 RESET
 $Comp
