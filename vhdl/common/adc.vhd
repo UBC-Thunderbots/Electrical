@@ -4,31 +4,48 @@ use ieee.numeric_std.all;
 
 entity ADC is
 	port(
-		Clock10 : in std_ulogic;
-
-		SPICK : in std_ulogic;
-		SPIDT : in std_ulogic;
-		SPISS : in std_ulogic;
-
-		VMon : out unsigned(9 downto 0) := to_unsigned(0, 10);
-		ChickerVoltage : buffer unsigned(9 downto 0) := to_unsigned(0, 10)
-	);
+		Clock : in std_ulogic;
+		Reset : in boolean;
+		MISO : in boolean;
+		CLK : buffer boolean;
+		CS : buffer boolean;
+		Level : out natural range 0 to 4095);
 end entity ADC;
 
 architecture Behavioural of ADC is
-	signal Bits : std_ulogic_vector(25 downto 0);
-	signal PrevSPICK : std_ulogic := '0';
 begin
-	process(Clock10)
+	process(Clock) is
+		subtype BitCountType is natural range 0 to 14;
+		variable BitCount : BitCountType;
+		variable Data : std_ulogic_vector(11 downto 0);
 	begin
-		if rising_edge(Clock10) then
-			if SPISS = '1' then
-				ChickerVoltage <= unsigned(Bits(9 downto 0));
-				VMon <= unsigned(Bits(25 downto 16));
-			elsif SPICK = '1' and PrevSPICK = '0' then
-				Bits <= Bits(Bits'high - 1 downto 0) & SPIDT;
+		if rising_edge(Clock) then
+			if Reset then
+				CLK <= true;
+				CS <= false;
+				Level <= 0;
+				BitCount := 0;
+			else
+				if not CS then
+					CS <= true;
+				elsif CLK then
+					CLK <= false;
+				else
+					CLK <= true;
+					if MISO then
+						Data := Data(10 downto 0) & '1';
+					else
+						Data := Data(10 downto 0) & '0';
+					end if;
+					if BitCount = BitCountType'high then
+						BitCount := 0;
+						CS <= false;
+						Level <= to_integer(unsigned(Data(11 downto 0)));
+					else
+						BitCount := BitCount + 1;
+					end if;
+				end if;
 			end if;
-			PrevSPICK <= SPICK;
 		end if;
 	end process;
 end architecture Behavioural;

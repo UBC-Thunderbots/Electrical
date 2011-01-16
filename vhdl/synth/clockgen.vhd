@@ -5,14 +5,17 @@ use ieee.numeric_std.all;
 library unisim;
 use unisim.vcomponents.all;
 
+library work;
+use work.clock.all;
+
 entity ClockGen is
 	port(
 		Oscillator : in std_ulogic;
 		Reset : in std_ulogic;
 		Locked : out std_ulogic;
-		Clock500k : out std_ulogic;
-		Clock8M : out std_ulogic;
-		Clock256M : out std_ulogic);
+		ClockLow : out std_ulogic;
+		ClockMid : out std_ulogic;
+		ClockHigh : out std_ulogic);
 end entity ClockGen;
 
 --
@@ -23,16 +26,16 @@ end entity ClockGen;
 --     /------------------------------------------\
 --     |                                          |
 --     |  /------------------------\              |
---     |  |                        |  8MHz    |\  |
+--     |  |                        |  8 MHz   |\  |
 --     \--| CLKFB             CLK0 |----------| +-+--[]
 --        |                        |          |/
 --        |                        |
---   |\   |                        |  256Mhz  |\
--- --| +--| CLKIN      CLKFX (32×) |----------| +----[]
+--   |\   |                        |          |\
+-- --| +--| CLKIN            CLKFX |----------| +----[]
 --   |/   |                        |          |/
 --        |                        |
---        |                        |  500kHz  |\
--- -------| RST        CLKDV (÷32) |----------| +----[]
+--        |                        |          |\
+-- -------| RST              CLKDV |----------| +----[]
 --        |                        |          |/
 --        \------------------------/
 --
@@ -42,6 +45,11 @@ architecture Behavioural of ClockGen is
 	signal DCMClock0Buffered : std_ulogic;
 	signal DCMClockDV : std_ulogic;
 	signal DCMClockFX : std_ulogic;
+
+	-- These will evaluate to negative numbers if the frequencies are not exact multiples,
+	-- which will fail the assignment to natural.
+	constant ClockLowCheck : natural := -(clock.MidFrequency mod clock.LowFrequency);
+	constant ClockHighCheck : natural := -(clock.HighFrequency mod clock.MidFrequency);
 begin
 	IBufferG : IBufG
 	port map(
@@ -52,8 +60,8 @@ begin
 	DCM : DCM_SP
 	generic map(
 		CLKIN_PERIOD => 125.0,
-		CLKDV_DIVIDE => 16.0,
-		CLKFX_MULTIPLY => 32,
+		CLKDV_DIVIDE => real(clock.MidFrequency / clock.LowFrequency),
+		CLKFX_MULTIPLY => clock.HighFrequency / clock.MidFrequency,
 		CLKFX_DIVIDE => 1,
 		STARTUP_WAIT => false)
 	port map(
@@ -74,12 +82,12 @@ begin
 	BufGDV : BufG
 	port map(
 		I => DCMClockDV,
-		O => Clock500k);
+		O => ClockLow);
 
 	BufGFX : BufG
 	port map(
 		I => DCMClockFX,
-		O => Clock256M);
+		O => ClockHigh);
 
-	Clock8M <= DCMClock0Buffered;
+	ClockMid <= DCMClock0Buffered;
 end architecture Behavioural;
