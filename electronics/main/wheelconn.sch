@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
+EESchema Schematic File Version 2  date 2011-01-16T17:36:19 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -30,9 +30,9 @@ LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 3 18
+Sheet 4 18
 Title ""
-Date "8 jan 2011"
+Date "17 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -132,10 +132,10 @@ L CONN_11 P10
 U 1 1 4CD73060
 P 6850 3550
 AR Path="/4CD73053/4CD73060" Ref="P10"  Part="1" 
-AR Path="/4CD73188/4CD73060" Ref="P13"  Part="1" 
+AR Path="/4CD73188/4CD73060" Ref="P11"  Part="1" 
 AR Path="/4CD7317F/4CD73060" Ref="P12"  Part="1" 
-AR Path="/4CD73172/4CD73060" Ref="P11"  Part="1" 
-F 0 "P13" V 6800 3550 60  0000 C CNN
+AR Path="/4CD73172/4CD73060" Ref="P13"  Part="1" 
+F 0 "P11" V 6800 3550 60  0000 C CNN
 F 1 "CONN_11" V 6900 3550 60  0000 C CNN
 F 2 "FPC" H 6850 3550 60  0001 C CNN
 F 4 "WM7971CT-ND" H 6850 3550 60  0001 C CNN "Field1"
