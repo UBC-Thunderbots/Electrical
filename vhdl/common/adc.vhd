@@ -40,7 +40,7 @@ begin
 					if BitCount = BitCountType'high then
 						BitCount := 0;
 						CS <= false;
-						Level <= to_integer(unsigned(Data(11 downto 0)));
+						Level <= to_integer(unsigned(Data));
 					else
 						BitCount := BitCount + 1;
 					end if;
