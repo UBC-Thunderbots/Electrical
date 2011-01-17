@@ -29,14 +29,14 @@ net "LEDPin(2)" iostandard=LVCMOS33 | slew=quietio | loc=P98;
 net "LEDPin(3)" iostandard=LVCMOS33 | slew=quietio | loc=P96;
 
 # Optical encoders
-net "EncoderPin1(0)" iostandard=LVCMOS33 | pullup | loc=P30;
-net "EncoderPin1(1)" iostandard=LVCMOS33 | pullup | loc=P31;
-net "EncoderPin2(0)" iostandard=LVCMOS33 | pullup | loc=P77;
-net "EncoderPin2(1)" iostandard=LVCMOS33 | pullup | loc=P76;
-net "EncoderPin3(0)" iostandard=LVCMOS33 | pullup | loc=P92;
-net "EncoderPin3(1)" iostandard=LVCMOS33 | pullup | loc=P91;
-net "EncoderPin4(0)" iostandard=LVCMOS33 | pullup | loc=P5;
-net "EncoderPin4(1)" iostandard=LVCMOS33 | pullup | loc=P6;
+net "EncoderPin1(0)" iostandard=LVCMOS33 | pullup | loc=P5;
+net "EncoderPin1(1)" iostandard=LVCMOS33 | pullup | loc=P6;
+net "EncoderPin2(0)" iostandard=LVCMOS33 | pullup | loc=P30;
+net "EncoderPin2(1)" iostandard=LVCMOS33 | pullup | loc=P31;
+net "EncoderPin3(0)" iostandard=LVCMOS33 | pullup | loc=P77;
+net "EncoderPin3(1)" iostandard=LVCMOS33 | pullup | loc=P76;
+net "EncoderPin4(0)" iostandard=LVCMOS33 | pullup | loc=P92;
+net "EncoderPin4(1)" iostandard=LVCMOS33 | pullup | loc=P91;
 
 # Motor drivers
 net "MotorDrivePPin1(1)" iostandard=LVCMOS33 | slew=quietio | loc=P18;
