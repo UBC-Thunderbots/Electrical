@@ -1,41 +1,40 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
-library work;
+use work.types;
 
 entity Commutator is
 	port(
-		Reverse	: in boolean;
-		HallSensor : in work.types.hall;
+		signal Direction : in boolean;
+		signal Hall : in types.hall_t;
 		AllLow : out boolean;
 		AllHigh : out boolean;
-		Phase : out work.types.motor_phase3);
+		Phase : out types.motor_phases_t);
 end entity Commutator;
 
 architecture Behavioural of Commutator is
-	type phase_half is array(1 to 3) of boolean;
-	signal Swapped : work.types.hall;
+	type phase_half_t is array(0 to 2) of boolean;
+	signal Swapped : types.hall_t;
 	signal AllLowBuf : boolean;
 	signal AllHighBuf : boolean;
-	signal NPhase : phase_half;
-	signal PPhase : phase_half;
+	signal NPhase : phase_half_t;
+	signal PPhase : phase_half_t;
 begin
-	Swapped <= not HallSensor when Reverse else HallSensor;
+	Swapped <= not Hall when Direction else Hall;
 
-	AllLowBuf <= not (HallSensor(1) or HallSensor(2) or HallSensor(3));
-	AllHighBuf <= HallSensor(1) and HallSensor(2) and HallSensor(3);
+	AllLowBuf <= not (Hall(0) or Hall(1) or Hall(2));
+	AllHighBuf <= Hall(0) and Hall(1) and Hall(2);
 
 	AllLow <= AllLowBuf;
 	AllHigh <= AllHighBuf;
 
-	GeneratePhases: for I in 1 to 3 generate
-		PPhase(I) <= not (Swapped(I mod 3 + 1) or not Swapped(I));
-		NPhase(I) <= not Swapped(I) and Swapped(I mod 3 + 1);
+	GeneratePhases: for I in 0 to 2 generate
+		PPhase(I) <= not (Swapped((I + 1) mod 3) or not Swapped(I));
+		NPhase(I) <= not Swapped(I) and Swapped((I + 1) mod 3);
 
 		Phase(I) <=
-			work.types.FLOAT when AllLowBuf or AllHighBuf else
-			work.types.LOW when NPhase(I) else
-			work.types.HIGH when PPhase(I) else
-			work.types.FLOAT;
+			types.FLOAT when AllLowBuf or AllHighBuf else
+			types.LOW when NPhase(I) else
+			types.HIGH when PPhase(I) else
+			types.FLOAT;
 	end generate;
 end architecture Behavioural;

@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
-library work;
+use work.clock;
+use work.types;
 
 entity Motor is
 	generic(
@@ -10,30 +10,31 @@ entity Motor is
 		PWMClock : in std_ulogic;
 		ClockHigh : in std_ulogic;
 		Reset : in boolean;
+		Enable : in boolean;
 		Power : in natural range 0 to PWMMax;
-		Reverse	: in boolean;
-		HallSensor : in work.types.hall;
+		Direction	: in boolean;
+		Hall : in types.hall_t;
 		AllLow : out boolean;
 		AllHigh : out boolean;
-		Phase : out work.types.motor_phase3);
+		Phases : out types.motor_phases_t);
 end entity Motor;
 
 architecture Behavioural of Motor is
 	constant DeadBandSeconds : real := 50.0e-9;
-	constant DeadBandWidth : natural := natural(DeadBandSeconds * real(work.clock.HighFrequency));
-	signal CommutatorPhase : work.types.motor_phase3;
+	constant DeadBandWidth : natural := natural(DeadBandSeconds * real(clock.HighFrequency));
+	signal CommutatorPhases : types.motor_phases_t;
 	signal PWMOutput : boolean;
-	signal PWMPhase : work.types.motor_phase3;
+	signal PWMPhases : types.motor_phases_t;
 begin
-	Commutator: entity work.Commutator(Behavioural)
+	Commutator: entity Commutator(Behavioural)
 	port map(
-		Reverse => Reverse,
-		HallSensor => HallSensor,
+		Direction => Direction,
+		Hall => Hall,
 		AllLow => AllLow,
 		AllHigh => AllHigh,
-		Phase => CommutatorPhase);
+		Phase => CommutatorPhases);
 
-	PWM: entity work.PWM(Behavioural)
+	PWM: entity PWM(Behavioural)
 	generic map(
 		Max => PWMMax)
 	port map(
@@ -42,27 +43,31 @@ begin
 		Value => Power,
 		Output => PWMOutput);
 
-	Phases: for I in 1 to 3 generate
-		process(CommutatorPhase(I), PWMOutput) is
+	GeneratePhases: for I in 0 to 2 generate
+		process(Enable, CommutatorPhases(I), PWMOutput) is
 		begin
-			if CommutatorPhase(I) = work.types.HIGH then
-				if PWMOutput then
-					PWMPhase(I) <= work.types.HIGH;
+			if Enable then
+				if CommutatorPhases(I) = types.HIGH then
+					if PWMOutput then
+						PWMPhases(I) <= types.HIGH;
+					else
+						PWMPhases(I) <= types.FLOAT;
+					end if;
 				else
-					PWMPhase(I) <= work.types.FLOAT;
+					PWMPhases(I) <= CommutatorPhases(I);
 				end if;
 			else
-				PWMPhase(I) <= CommutatorPhase(I);
+				PWMPhases(I) <= types.FLOAT;
 			end if;
 		end process;
 
-		DeadBand: entity work.DeadBand(Behavioural)
+		DeadBand: entity DeadBand(Behavioural)
 		generic map(
 			Width => DeadBandWidth)
 		port map(
 			Clock => ClockHigh,
 			Reset => Reset,
-			Input => PWMPhase(I),
-			Output => Phase(I));
+			Input => PWMPhases(I),
+			Output => Phases(I));
 	end generate;
 end architecture Behavioural;

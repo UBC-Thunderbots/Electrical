@@ -1,12 +1,9 @@
 library ieee;
+library unisim;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
-library unisim;
 use unisim.vcomponents.all;
-
-library work;
-use work.clock.all;
+use work.clock;
 
 entity ClockGen is
 	port(

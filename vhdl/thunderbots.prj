@@ -4,9 +4,11 @@ vhdl work common/clock.vhd
 vhdl work common/commutator.vhd
 vhdl work common/deadband.vhd
 vhdl work common/graycounter.vhd
+vhdl work common/main.vhd
 vhdl work common/motor.vhd
+vhdl work common/parbus.vhd
 vhdl work common/pwm.vhd
 vhdl work common/types.vhd
 vhdl work synth/clockgen.vhd
-vhdl work synth/main.vhd
+vhdl work synth/pintypes.vhd
 vhdl work synth/top.vhd

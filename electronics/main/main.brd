@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2011-01-16T17:36:17 PST
+PCBNEW-BOARD Version 1 date 2011-01-16T21:07:33 PST
 
 # Created by Pcbnew(2010-03-13)-final
 
@@ -102,15 +102,15 @@ Na 8 "/chicker/PRESENT"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 9 "/dribblerconn/PHASE1"
+Na 9 "/dribblerconn/PHASE0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 10 "/dribblerconn/PHASE2"
+Na 10 "/dribblerconn/PHASE1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 11 "/dribblerconn/PHASE3"
+Na 11 "/dribblerconn/PHASE2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -134,91 +134,91 @@ Na 16 "/fpga/FLASH_MISO"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 17 "/fpga/M_CTRL1+1"
+Na 17 "/fpga/M_CTRL1+0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 18 "/fpga/M_CTRL1-1"
+Na 18 "/fpga/M_CTRL1-0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 19 "/fpga/M_CTRL2+1"
+Na 19 "/fpga/M_CTRL2+0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 20 "/fpga/M_CTRL2+2"
+Na 20 "/fpga/M_CTRL2+1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 21 "/fpga/M_CTRL2-3"
+Na 21 "/fpga/M_CTRL2-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 22 "/fpga/M_CTRL3+2"
+Na 22 "/fpga/M_CTRL3+1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 23 "/fpga/M_CTRL3-1"
+Na 23 "/fpga/M_CTRL3-0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 24 "/fpga/M_CTRL3-2"
+Na 24 "/fpga/M_CTRL3-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 25 "/fpga/M_CTRL4+1"
+Na 25 "/fpga/M_CTRL4+0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 26 "/fpga/M_CTRL4+2"
+Na 26 "/fpga/M_CTRL4+1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 27 "/fpga/M_CTRL4-2"
+Na 27 "/fpga/M_CTRL4-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 28 "/fpga/M_CTRL5+2"
+Na 28 "/fpga/M_CTRL5+1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 29 "/fpga/M_CTRL5-3"
+Na 29 "/fpga/M_CTRL5-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 30 "/fpga/M_HALL12"
+Na 30 "/fpga/M_HALL11"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 31 "/fpga/M_HALL21"
+Na 31 "/fpga/M_HALL20"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 32 "/fpga/M_HALL31"
+Na 32 "/fpga/M_HALL30"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 33 "/fpga/M_HALL41"
+Na 33 "/fpga/M_HALL40"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 34 "/fpga/M_HALL42"
+Na 34 "/fpga/M_HALL41"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 35 "/fpga/M_HALL43"
+Na 35 "/fpga/M_HALL42"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 36 "/fpga/M_HALL51"
+Na 36 "/fpga/M_HALL50"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 37 "/fpga/M_HALL52"
+Na 37 "/fpga/M_HALL51"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 38 "/fpga/M_HALL53"
+Na 38 "/fpga/M_HALL52"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -254,103 +254,103 @@ Na 46 "/fpga/RESET"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 47 "/motordriver1/CTRL+2"
+Na 47 "/motordriver1/CTRL+1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 48 "/motordriver1/CTRL+3"
+Na 48 "/motordriver1/CTRL+2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 49 "/motordriver1/CTRL-2"
+Na 49 "/motordriver1/CTRL-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 50 "/motordriver1/CTRL-3"
+Na 50 "/motordriver1/CTRL-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 51 "/motordriver1/PHASE1"
+Na 51 "/motordriver1/PHASE0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 52 "/motordriver1/PHASE2"
+Na 52 "/motordriver1/PHASE1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 53 "/motordriver1/PHASE3"
+Na 53 "/motordriver1/PHASE2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 54 "/motordriver2/CTRL+3"
+Na 54 "/motordriver2/CTRL+2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 55 "/motordriver2/CTRL-1"
+Na 55 "/motordriver2/CTRL-0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 56 "/motordriver2/CTRL-2"
+Na 56 "/motordriver2/CTRL-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 57 "/motordriver2/PHASE1"
+Na 57 "/motordriver2/PHASE0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 58 "/motordriver3/CTRL+1"
+Na 58 "/motordriver3/CTRL+0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 59 "/motordriver3/CTRL+3"
+Na 59 "/motordriver3/CTRL+2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 60 "/motordriver3/CTRL-3"
+Na 60 "/motordriver3/CTRL-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 61 "/motordriver3/PHASE2"
+Na 61 "/motordriver3/PHASE1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 62 "/motordriver3/PHASE3"
+Na 62 "/motordriver3/PHASE2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 63 "/motordriver4/CTRL+3"
+Na 63 "/motordriver4/CTRL+2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 64 "/motordriver4/CTRL-1"
+Na 64 "/motordriver4/CTRL-0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 65 "/motordriver4/CTRL-3"
+Na 65 "/motordriver4/CTRL-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 66 "/motordriver4/PHASE2"
+Na 66 "/motordriver4/PHASE1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 67 "/motordriver4/PHASE3"
+Na 67 "/motordriver4/PHASE2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 68 "/motordriver5/CTRL+1"
+Na 68 "/motordriver5/CTRL+0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 69 "/motordriver5/CTRL+3"
+Na 69 "/motordriver5/CTRL+2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 70 "/motordriver5/CTRL-1"
+Na 70 "/motordriver5/CTRL-0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 71 "/motordriver5/CTRL-2"
+Na 71 "/motordriver5/CTRL-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -446,43 +446,43 @@ Na 94 "/pic/XBEE1_SLEEP"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 95 "/wheelconn1/HALL1"
+Na 95 "/wheelconn1/HALL0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 96 "/wheelconn1/HALL3"
+Na 96 "/wheelconn1/HALL2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 97 "/wheelconn2/HALL2"
+Na 97 "/wheelconn2/HALL1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 98 "/wheelconn2/HALL3"
+Na 98 "/wheelconn2/HALL2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 99 "/wheelconn2/PHASE2"
+Na 99 "/wheelconn2/PHASE1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 100 "/wheelconn2/PHASE3"
+Na 100 "/wheelconn2/PHASE2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 101 "/wheelconn3/HALL2"
+Na 101 "/wheelconn3/HALL1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 102 "/wheelconn3/HALL3"
+Na 102 "/wheelconn3/HALL2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 103 "/wheelconn3/PHASE1"
+Na 103 "/wheelconn3/PHASE0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 104 "/wheelconn4/PHASE1"
+Na 104 "/wheelconn4/PHASE0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -975,36 +975,36 @@ AddNet "/chicker/CHARGE"
 AddNet "/chicker/CHIP"
 AddNet "/chicker/KICK"
 AddNet "/chicker/PRESENT"
+AddNet "/dribblerconn/PHASE0"
 AddNet "/dribblerconn/PHASE1"
 AddNet "/dribblerconn/PHASE2"
-AddNet "/dribblerconn/PHASE3"
 AddNet "/flash/MOSI"
 AddNet "/fpga//CHICKER_CS"
 AddNet "/fpga/CHICKER_CLK"
 AddNet "/fpga/CHICKER_MISO"
 AddNet "/fpga/FLASH_MISO"
-AddNet "/fpga/M_CTRL1+1"
-AddNet "/fpga/M_CTRL1-1"
+AddNet "/fpga/M_CTRL1+0"
+AddNet "/fpga/M_CTRL1-0"
+AddNet "/fpga/M_CTRL2+0"
 AddNet "/fpga/M_CTRL2+1"
-AddNet "/fpga/M_CTRL2+2"
-AddNet "/fpga/M_CTRL2-3"
-AddNet "/fpga/M_CTRL3+2"
+AddNet "/fpga/M_CTRL2-2"
+AddNet "/fpga/M_CTRL3+1"
+AddNet "/fpga/M_CTRL3-0"
 AddNet "/fpga/M_CTRL3-1"
-AddNet "/fpga/M_CTRL3-2"
+AddNet "/fpga/M_CTRL4+0"
 AddNet "/fpga/M_CTRL4+1"
-AddNet "/fpga/M_CTRL4+2"
-AddNet "/fpga/M_CTRL4-2"
-AddNet "/fpga/M_CTRL5+2"
-AddNet "/fpga/M_CTRL5-3"
-AddNet "/fpga/M_HALL12"
-AddNet "/fpga/M_HALL21"
-AddNet "/fpga/M_HALL31"
+AddNet "/fpga/M_CTRL4-1"
+AddNet "/fpga/M_CTRL5+1"
+AddNet "/fpga/M_CTRL5-2"
+AddNet "/fpga/M_HALL11"
+AddNet "/fpga/M_HALL20"
+AddNet "/fpga/M_HALL30"
+AddNet "/fpga/M_HALL40"
 AddNet "/fpga/M_HALL41"
 AddNet "/fpga/M_HALL42"
-AddNet "/fpga/M_HALL43"
+AddNet "/fpga/M_HALL50"
 AddNet "/fpga/M_HALL51"
 AddNet "/fpga/M_HALL52"
-AddNet "/fpga/M_HALL53"
 AddNet "/fpga/OSC"
 AddNet "/fpga/PARBUS_D0"
 AddNet "/fpga/PARBUS_D1"
@@ -1013,31 +1013,31 @@ AddNet "/fpga/PARBUS_D5"
 AddNet "/fpga/PARBUS_WR"
 AddNet "/fpga/PROG_B"
 AddNet "/fpga/RESET"
+AddNet "/motordriver1/CTRL+1"
 AddNet "/motordriver1/CTRL+2"
-AddNet "/motordriver1/CTRL+3"
+AddNet "/motordriver1/CTRL-1"
 AddNet "/motordriver1/CTRL-2"
-AddNet "/motordriver1/CTRL-3"
+AddNet "/motordriver1/PHASE0"
 AddNet "/motordriver1/PHASE1"
 AddNet "/motordriver1/PHASE2"
-AddNet "/motordriver1/PHASE3"
-AddNet "/motordriver2/CTRL+3"
+AddNet "/motordriver2/CTRL+2"
+AddNet "/motordriver2/CTRL-0"
 AddNet "/motordriver2/CTRL-1"
-AddNet "/motordriver2/CTRL-2"
-AddNet "/motordriver2/PHASE1"
-AddNet "/motordriver3/CTRL+1"
-AddNet "/motordriver3/CTRL+3"
-AddNet "/motordriver3/CTRL-3"
+AddNet "/motordriver2/PHASE0"
+AddNet "/motordriver3/CTRL+0"
+AddNet "/motordriver3/CTRL+2"
+AddNet "/motordriver3/CTRL-2"
+AddNet "/motordriver3/PHASE1"
 AddNet "/motordriver3/PHASE2"
-AddNet "/motordriver3/PHASE3"
-AddNet "/motordriver4/CTRL+3"
-AddNet "/motordriver4/CTRL-1"
-AddNet "/motordriver4/CTRL-3"
+AddNet "/motordriver4/CTRL+2"
+AddNet "/motordriver4/CTRL-0"
+AddNet "/motordriver4/CTRL-2"
+AddNet "/motordriver4/PHASE1"
 AddNet "/motordriver4/PHASE2"
-AddNet "/motordriver4/PHASE3"
-AddNet "/motordriver5/CTRL+1"
-AddNet "/motordriver5/CTRL+3"
+AddNet "/motordriver5/CTRL+0"
+AddNet "/motordriver5/CTRL+2"
+AddNet "/motordriver5/CTRL-0"
 AddNet "/motordriver5/CTRL-1"
-AddNet "/motordriver5/CTRL-2"
 AddNet "/motordriver5/ENABLE"
 AddNet "/pic//FLASH_CS"
 AddNet "/pic//XBEE0_CTS"
@@ -1061,16 +1061,16 @@ AddNet "/pic/PARBUS_RD"
 AddNet "/pic/Thermistor_In"
 AddNet "/pic/XBEE0_RX"
 AddNet "/pic/XBEE1_SLEEP"
-AddNet "/wheelconn1/HALL1"
-AddNet "/wheelconn1/HALL3"
+AddNet "/wheelconn1/HALL0"
+AddNet "/wheelconn1/HALL2"
+AddNet "/wheelconn2/HALL1"
 AddNet "/wheelconn2/HALL2"
-AddNet "/wheelconn2/HALL3"
+AddNet "/wheelconn2/PHASE1"
 AddNet "/wheelconn2/PHASE2"
-AddNet "/wheelconn2/PHASE3"
+AddNet "/wheelconn3/HALL1"
 AddNet "/wheelconn3/HALL2"
-AddNet "/wheelconn3/HALL3"
-AddNet "/wheelconn3/PHASE1"
-AddNet "/wheelconn4/PHASE1"
+AddNet "/wheelconn3/PHASE0"
+AddNet "/wheelconn4/PHASE0"
 AddNet "/xbee//RESET0"
 AddNet "/xbee//RTS1"
 AddNet "/xbee/DIN0"
@@ -3130,7 +3130,7 @@ $PAD
 Sh "2" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 49 "/motordriver1/CTRL-2"
+Ne 49 "/motordriver1/CTRL-1"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -3144,7 +3144,7 @@ $PAD
 Sh "4" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "/motordriver1/CTRL+2"
+Ne 47 "/motordriver1/CTRL+1"
 Po -250 2000
 $EndPAD
 $PAD
@@ -3158,7 +3158,7 @@ $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 18 "/fpga/M_CTRL1-1"
+Ne 18 "/fpga/M_CTRL1-0"
 Po 750 2000
 $EndPAD
 $PAD
@@ -3186,7 +3186,7 @@ $PAD
 Sh "10" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "/fpga/M_CTRL1+1"
+Ne 17 "/fpga/M_CTRL1+0"
 Po 1250 -2000
 $EndPAD
 $PAD
@@ -3267,7 +3267,7 @@ $PAD
 Sh "2" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/fpga/M_CTRL5-3"
+Ne 29 "/fpga/M_CTRL5-2"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -3281,7 +3281,7 @@ $PAD
 Sh "4" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "/motordriver5/CTRL+3"
+Ne 69 "/motordriver5/CTRL+2"
 Po -250 2000
 $EndPAD
 $PAD
@@ -3295,7 +3295,7 @@ $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "/motordriver1/CTRL-3"
+Ne 50 "/motordriver1/CTRL-2"
 Po 750 2000
 $EndPAD
 $PAD
@@ -3323,7 +3323,7 @@ $PAD
 Sh "10" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 48 "/motordriver1/CTRL+3"
+Ne 48 "/motordriver1/CTRL+2"
 Po 1250 -2000
 $EndPAD
 $PAD
@@ -3404,7 +3404,7 @@ $PAD
 Sh "2" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "/motordriver4/CTRL-3"
+Ne 65 "/motordriver4/CTRL-2"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -3418,7 +3418,7 @@ $PAD
 Sh "4" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 63 "/motordriver4/CTRL+3"
+Ne 63 "/motordriver4/CTRL+2"
 Po -250 2000
 $EndPAD
 $PAD
@@ -3432,7 +3432,7 @@ $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/fpga/M_CTRL4-2"
+Ne 27 "/fpga/M_CTRL4-1"
 Po 750 2000
 $EndPAD
 $PAD
@@ -3460,7 +3460,7 @@ $PAD
 Sh "10" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 26 "/fpga/M_CTRL4+2"
+Ne 26 "/fpga/M_CTRL4+1"
 Po 1250 -2000
 $EndPAD
 $PAD
@@ -3541,7 +3541,7 @@ $PAD
 Sh "2" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 24 "/fpga/M_CTRL3-2"
+Ne 24 "/fpga/M_CTRL3-1"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -3555,7 +3555,7 @@ $PAD
 Sh "4" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 22 "/fpga/M_CTRL3+2"
+Ne 22 "/fpga/M_CTRL3+1"
 Po -250 2000
 $EndPAD
 $PAD
@@ -3569,7 +3569,7 @@ $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 23 "/fpga/M_CTRL3-1"
+Ne 23 "/fpga/M_CTRL3-0"
 Po 750 2000
 $EndPAD
 $PAD
@@ -3597,7 +3597,7 @@ $PAD
 Sh "10" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 58 "/motordriver3/CTRL+1"
+Ne 58 "/motordriver3/CTRL+0"
 Po 1250 -2000
 $EndPAD
 $PAD
@@ -3678,7 +3678,7 @@ $PAD
 Sh "2" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 55 "/motordriver2/CTRL-1"
+Ne 55 "/motordriver2/CTRL-0"
 Po -1250 -2000
 $EndPAD
 $PAD
@@ -3692,7 +3692,7 @@ $PAD
 Sh "4" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 19 "/fpga/M_CTRL2+1"
+Ne 19 "/fpga/M_CTRL2+0"
 Po -250 -2000
 $EndPAD
 $PAD
@@ -3706,7 +3706,7 @@ $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 60 "/motordriver3/CTRL-3"
+Ne 60 "/motordriver3/CTRL-2"
 Po 750 -2000
 $EndPAD
 $PAD
@@ -3734,7 +3734,7 @@ $PAD
 Sh "10" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 59 "/motordriver3/CTRL+3"
+Ne 59 "/motordriver3/CTRL+2"
 Po 1250 2000
 $EndPAD
 $PAD
@@ -3815,7 +3815,7 @@ $PAD
 Sh "2" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 21 "/fpga/M_CTRL2-3"
+Ne 21 "/fpga/M_CTRL2-2"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -3829,7 +3829,7 @@ $PAD
 Sh "4" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 54 "/motordriver2/CTRL+3"
+Ne 54 "/motordriver2/CTRL+2"
 Po -250 2000
 $EndPAD
 $PAD
@@ -3843,7 +3843,7 @@ $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/motordriver2/CTRL-2"
+Ne 56 "/motordriver2/CTRL-1"
 Po 750 2000
 $EndPAD
 $PAD
@@ -3871,7 +3871,7 @@ $PAD
 Sh "10" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 20 "/fpga/M_CTRL2+2"
+Ne 20 "/fpga/M_CTRL2+1"
 Po 1250 -2000
 $EndPAD
 $PAD
@@ -3952,7 +3952,7 @@ $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 70 "/motordriver5/CTRL-1"
+Ne 70 "/motordriver5/CTRL-0"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -3966,7 +3966,7 @@ $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "/motordriver5/CTRL+1"
+Ne 68 "/motordriver5/CTRL+0"
 Po -250 2000
 $EndPAD
 $PAD
@@ -3980,7 +3980,7 @@ $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 71 "/motordriver5/CTRL-2"
+Ne 71 "/motordriver5/CTRL-1"
 Po 750 2000
 $EndPAD
 $PAD
@@ -4008,7 +4008,7 @@ $PAD
 Sh "10" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/fpga/M_CTRL5+2"
+Ne 28 "/fpga/M_CTRL5+1"
 Po 1250 -2000
 $EndPAD
 $PAD
@@ -4089,7 +4089,7 @@ $PAD
 Sh "2" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "/motordriver4/CTRL-1"
+Ne 64 "/motordriver4/CTRL-0"
 Po -1250 2000
 $EndPAD
 $PAD
@@ -4103,7 +4103,7 @@ $PAD
 Sh "4" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 25 "/fpga/M_CTRL4+1"
+Ne 25 "/fpga/M_CTRL4+0"
 Po -250 2000
 $EndPAD
 $PAD
@@ -4220,7 +4220,7 @@ $PAD
 Sh "8" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 51 "/motordriver1/PHASE1"
+Ne 51 "/motordriver1/PHASE0"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4234,21 +4234,21 @@ $PAD
 Sh "7" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 51 "/motordriver1/PHASE1"
+Ne 51 "/motordriver1/PHASE0"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 51 "/motordriver1/PHASE1"
+Ne 51 "/motordriver1/PHASE0"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 51 "/motordriver1/PHASE1"
+Ne 51 "/motordriver1/PHASE0"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4302,7 +4302,7 @@ $PAD
 Sh "8" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 52 "/motordriver1/PHASE2"
+Ne 52 "/motordriver1/PHASE1"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4316,21 +4316,21 @@ $PAD
 Sh "7" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 52 "/motordriver1/PHASE2"
+Ne 52 "/motordriver1/PHASE1"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 52 "/motordriver1/PHASE2"
+Ne 52 "/motordriver1/PHASE1"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 52 "/motordriver1/PHASE2"
+Ne 52 "/motordriver1/PHASE1"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4384,7 +4384,7 @@ $PAD
 Sh "8" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE3"
+Ne 53 "/motordriver1/PHASE2"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4398,21 +4398,21 @@ $PAD
 Sh "7" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE3"
+Ne 53 "/motordriver1/PHASE2"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE3"
+Ne 53 "/motordriver1/PHASE2"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE3"
+Ne 53 "/motordriver1/PHASE2"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4466,7 +4466,7 @@ $PAD
 Sh "8" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 104 "/wheelconn4/PHASE1"
+Ne 104 "/wheelconn4/PHASE0"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4480,21 +4480,21 @@ $PAD
 Sh "7" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 104 "/wheelconn4/PHASE1"
+Ne 104 "/wheelconn4/PHASE0"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 104 "/wheelconn4/PHASE1"
+Ne 104 "/wheelconn4/PHASE0"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 104 "/wheelconn4/PHASE1"
+Ne 104 "/wheelconn4/PHASE0"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4548,7 +4548,7 @@ $PAD
 Sh "8" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 66 "/motordriver4/PHASE2"
+Ne 66 "/motordriver4/PHASE1"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4562,21 +4562,21 @@ $PAD
 Sh "7" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 66 "/motordriver4/PHASE2"
+Ne 66 "/motordriver4/PHASE1"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 66 "/motordriver4/PHASE2"
+Ne 66 "/motordriver4/PHASE1"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 66 "/motordriver4/PHASE2"
+Ne 66 "/motordriver4/PHASE1"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4630,7 +4630,7 @@ $PAD
 Sh "8" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 67 "/motordriver4/PHASE3"
+Ne 67 "/motordriver4/PHASE2"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4644,21 +4644,21 @@ $PAD
 Sh "7" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 67 "/motordriver4/PHASE3"
+Ne 67 "/motordriver4/PHASE2"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 67 "/motordriver4/PHASE3"
+Ne 67 "/motordriver4/PHASE2"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 67 "/motordriver4/PHASE3"
+Ne 67 "/motordriver4/PHASE2"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4712,7 +4712,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 103 "/wheelconn3/PHASE1"
+Ne 103 "/wheelconn3/PHASE0"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4726,21 +4726,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 103 "/wheelconn3/PHASE1"
+Ne 103 "/wheelconn3/PHASE0"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 103 "/wheelconn3/PHASE1"
+Ne 103 "/wheelconn3/PHASE0"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 103 "/wheelconn3/PHASE1"
+Ne 103 "/wheelconn3/PHASE0"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4794,7 +4794,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE2"
+Ne 61 "/motordriver3/PHASE1"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4808,21 +4808,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE2"
+Ne 61 "/motordriver3/PHASE1"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE2"
+Ne 61 "/motordriver3/PHASE1"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE2"
+Ne 61 "/motordriver3/PHASE1"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4876,7 +4876,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE3"
+Ne 62 "/motordriver3/PHASE2"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4890,21 +4890,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE3"
+Ne 62 "/motordriver3/PHASE2"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE3"
+Ne 62 "/motordriver3/PHASE2"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE3"
+Ne 62 "/motordriver3/PHASE2"
 Po 750 1050
 $EndPAD
 $PAD
@@ -4958,7 +4958,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 57 "/motordriver2/PHASE1"
+Ne 57 "/motordriver2/PHASE0"
 Po -750 1050
 $EndPAD
 $PAD
@@ -4972,21 +4972,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 57 "/motordriver2/PHASE1"
+Ne 57 "/motordriver2/PHASE0"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 57 "/motordriver2/PHASE1"
+Ne 57 "/motordriver2/PHASE0"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 57 "/motordriver2/PHASE1"
+Ne 57 "/motordriver2/PHASE0"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5040,7 +5040,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 99 "/wheelconn2/PHASE2"
+Ne 99 "/wheelconn2/PHASE1"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5054,21 +5054,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 99 "/wheelconn2/PHASE2"
+Ne 99 "/wheelconn2/PHASE1"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 99 "/wheelconn2/PHASE2"
+Ne 99 "/wheelconn2/PHASE1"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 99 "/wheelconn2/PHASE2"
+Ne 99 "/wheelconn2/PHASE1"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5122,7 +5122,7 @@ $PAD
 Sh "8" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 100 "/wheelconn2/PHASE3"
+Ne 100 "/wheelconn2/PHASE2"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5136,21 +5136,21 @@ $PAD
 Sh "7" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 100 "/wheelconn2/PHASE3"
+Ne 100 "/wheelconn2/PHASE2"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 100 "/wheelconn2/PHASE3"
+Ne 100 "/wheelconn2/PHASE2"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 1800
 Dr 0 0 0
 At SMD N 00440001
-Ne 100 "/wheelconn2/PHASE3"
+Ne 100 "/wheelconn2/PHASE2"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5204,7 +5204,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 9 "/dribblerconn/PHASE1"
+Ne 9 "/dribblerconn/PHASE0"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5218,21 +5218,21 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 9 "/dribblerconn/PHASE1"
+Ne 9 "/dribblerconn/PHASE0"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 9 "/dribblerconn/PHASE1"
+Ne 9 "/dribblerconn/PHASE0"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 9 "/dribblerconn/PHASE1"
+Ne 9 "/dribblerconn/PHASE0"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5286,7 +5286,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 10 "/dribblerconn/PHASE2"
+Ne 10 "/dribblerconn/PHASE1"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5300,21 +5300,21 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 10 "/dribblerconn/PHASE2"
+Ne 10 "/dribblerconn/PHASE1"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 10 "/dribblerconn/PHASE2"
+Ne 10 "/dribblerconn/PHASE1"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 10 "/dribblerconn/PHASE2"
+Ne 10 "/dribblerconn/PHASE1"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5368,7 +5368,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE3"
+Ne 11 "/dribblerconn/PHASE2"
 Po -750 1050
 $EndPAD
 $PAD
@@ -5382,21 +5382,21 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE3"
+Ne 11 "/dribblerconn/PHASE2"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE3"
+Ne 11 "/dribblerconn/PHASE2"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 11 "/dribblerconn/PHASE3"
+Ne 11 "/dribblerconn/PHASE2"
 Po 750 1050
 $EndPAD
 $PAD
@@ -5571,28 +5571,28 @@ $PAD
 Sh "18" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "/fpga/M_CTRL1+1"
+Ne 17 "/fpga/M_CTRL1+0"
 Po 100 -4325
 $EndPAD
 $PAD
 Sh "19" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "/motordriver1/CTRL+2"
+Ne 47 "/motordriver1/CTRL+1"
 Po -100 -4325
 $EndPAD
 $PAD
 Sh "20" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 48 "/motordriver1/CTRL+3"
+Ne 48 "/motordriver1/CTRL+2"
 Po -295 -4325
 $EndPAD
 $PAD
 Sh "21" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 18 "/fpga/M_CTRL1-1"
+Ne 18 "/fpga/M_CTRL1-0"
 Po -495 -4325
 $EndPAD
 $PAD
@@ -5613,14 +5613,14 @@ $PAD
 Sh "24" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 49 "/motordriver1/CTRL-2"
+Ne 49 "/motordriver1/CTRL-1"
 Po -1085 -4325
 $EndPAD
 $PAD
 Sh "25" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "/motordriver1/CTRL-3"
+Ne 50 "/motordriver1/CTRL-2"
 Po -1280 -4325
 $EndPAD
 $PAD
@@ -5718,7 +5718,7 @@ $PAD
 Sh "68" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 58 "/motordriver3/CTRL+1"
+Ne 58 "/motordriver3/CTRL+0"
 Po -4325 2655
 $EndPAD
 $PAD
@@ -5760,21 +5760,21 @@ $PAD
 Sh "115" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "/motordriver5/CTRL+3"
+Ne 69 "/motordriver5/CTRL+2"
 Po 4325 2265
 $EndPAD
 $PAD
 Sh "116" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/fpga/M_CTRL5+2"
+Ne 28 "/fpga/M_CTRL5+1"
 Po 4325 2065
 $EndPAD
 $PAD
 Sh "117" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "/motordriver5/CTRL+1"
+Ne 68 "/motordriver5/CTRL+0"
 Po 4325 1870
 $EndPAD
 $PAD
@@ -5795,14 +5795,14 @@ $PAD
 Sh "120" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/fpga/M_CTRL5-3"
+Ne 29 "/fpga/M_CTRL5-2"
 Po 4325 1280
 $EndPAD
 $PAD
 Sh "121" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 71 "/motordriver5/CTRL-2"
+Ne 71 "/motordriver5/CTRL-1"
 Po 4325 1085
 $EndPAD
 $PAD
@@ -5823,7 +5823,7 @@ $PAD
 Sh "124" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 70 "/motordriver5/CTRL-1"
+Ne 70 "/motordriver5/CTRL-0"
 Po 4325 495
 $EndPAD
 $PAD
@@ -5865,21 +5865,21 @@ $PAD
 Sh "130" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 36 "/fpga/M_HALL51"
+Ne 36 "/fpga/M_HALL50"
 Po 4325 -690
 $EndPAD
 $PAD
 Sh "131" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 37 "/fpga/M_HALL52"
+Ne 37 "/fpga/M_HALL51"
 Po 4325 -885
 $EndPAD
 $PAD
 Sh "132" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 38 "/fpga/M_HALL53"
+Ne 38 "/fpga/M_HALL52"
 Po 4325 -1085
 $EndPAD
 $PAD
@@ -6047,28 +6047,28 @@ $PAD
 Sh "48" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/motordriver2/CTRL-1"
+Ne 55 "/motordriver2/CTRL-0"
 Po -4325 -1280
 $EndPAD
 $PAD
 Sh "49" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/motordriver2/CTRL-2"
+Ne 56 "/motordriver2/CTRL-1"
 Po -4325 -1085
 $EndPAD
 $PAD
 Sh "50" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 21 "/fpga/M_CTRL2-3"
+Ne 21 "/fpga/M_CTRL2-2"
 Po -4325 -885
 $EndPAD
 $PAD
 Sh "51" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 19 "/fpga/M_CTRL2+1"
+Ne 19 "/fpga/M_CTRL2+0"
 Po -4325 -690
 $EndPAD
 $PAD
@@ -6089,14 +6089,14 @@ $PAD
 Sh "54" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 20 "/fpga/M_CTRL2+2"
+Ne 20 "/fpga/M_CTRL2+1"
 Po -4325 -100
 $EndPAD
 $PAD
 Sh "55" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 54 "/motordriver2/CTRL+3"
+Ne 54 "/motordriver2/CTRL+2"
 Po -4325 100
 $EndPAD
 $PAD
@@ -6117,21 +6117,21 @@ $PAD
 Sh "58" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "/motordriver3/CTRL-3"
+Ne 60 "/motordriver3/CTRL-2"
 Po -4325 690
 $EndPAD
 $PAD
 Sh "59" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 24 "/fpga/M_CTRL3-2"
+Ne 24 "/fpga/M_CTRL3-1"
 Po -4325 885
 $EndPAD
 $PAD
 Sh "60" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 23 "/fpga/M_CTRL3-1"
+Ne 23 "/fpga/M_CTRL3-0"
 Po -4325 1085
 $EndPAD
 $PAD
@@ -6152,14 +6152,14 @@ $PAD
 Sh "63" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 59 "/motordriver3/CTRL+3"
+Ne 59 "/motordriver3/CTRL+2"
 Po -4325 1675
 $EndPAD
 $PAD
 Sh "64" R 600 100 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 22 "/fpga/M_CTRL3+2"
+Ne 22 "/fpga/M_CTRL3+1"
 Po -4325 1870
 $EndPAD
 $PAD
@@ -6173,14 +6173,14 @@ $PAD
 Sh "78" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "/motordriver4/CTRL-3"
+Ne 65 "/motordriver4/CTRL-2"
 Po -2460 4325
 $EndPAD
 $PAD
 Sh "79" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/fpga/M_CTRL4-2"
+Ne 27 "/fpga/M_CTRL4-1"
 Po -2265 4325
 $EndPAD
 $PAD
@@ -6201,28 +6201,28 @@ $PAD
 Sh "82" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "/motordriver4/CTRL-1"
+Ne 64 "/motordriver4/CTRL-0"
 Po -1675 4325
 $EndPAD
 $PAD
 Sh "83" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 63 "/motordriver4/CTRL+3"
+Ne 63 "/motordriver4/CTRL+2"
 Po -1475 4325
 $EndPAD
 $PAD
 Sh "84" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 26 "/fpga/M_CTRL4+2"
+Ne 26 "/fpga/M_CTRL4+1"
 Po -1280 4325
 $EndPAD
 $PAD
 Sh "85" R 100 600 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 25 "/fpga/M_CTRL4+1"
+Ne 25 "/fpga/M_CTRL4+0"
 Po -1085 4325
 $EndPAD
 $PAD
@@ -7159,21 +7159,21 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 9 "/dribblerconn/PHASE1"
+Ne 9 "/dribblerconn/PHASE0"
 Po -3500 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 10 "/dribblerconn/PHASE2"
+Ne 10 "/dribblerconn/PHASE1"
 Po -2500 0
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 11 "/dribblerconn/PHASE3"
+Ne 11 "/dribblerconn/PHASE2"
 Po -1500 0
 $EndPAD
 $PAD
@@ -7194,21 +7194,21 @@ $PAD
 Sh "6" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 36 "/fpga/M_HALL51"
+Ne 36 "/fpga/M_HALL50"
 Po 1500 0
 $EndPAD
 $PAD
 Sh "7" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 37 "/fpga/M_HALL52"
+Ne 37 "/fpga/M_HALL51"
 Po 2500 0
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 0
 Dr 420 0 0
 At STD N 00E0FFFF
-Ne 38 "/fpga/M_HALL53"
+Ne 38 "/fpga/M_HALL52"
 Po 3500 0
 $EndPAD
 $EndMODULE  DRIBBLERCONN
@@ -7232,42 +7232,42 @@ $PAD
 Sh "11" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 51 "/motordriver1/PHASE1"
+Ne 51 "/motordriver1/PHASE0"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 51 "/motordriver1/PHASE1"
+Ne 51 "/motordriver1/PHASE0"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 52 "/motordriver1/PHASE2"
+Ne 52 "/motordriver1/PHASE1"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 52 "/motordriver1/PHASE2"
+Ne 52 "/motordriver1/PHASE1"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE3"
+Ne 53 "/motordriver1/PHASE2"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 53 "/motordriver1/PHASE3"
+Ne 53 "/motordriver1/PHASE2"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7281,21 +7281,21 @@ $PAD
 Sh "4" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 30 "/fpga/M_HALL12"
+Ne 30 "/fpga/M_HALL11"
 Po 787 1968
 $EndPAD
 $PAD
 Sh "3" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 95 "/wheelconn1/HALL1"
+Ne 95 "/wheelconn1/HALL0"
 Po 1181 1968
 $EndPAD
 $PAD
 Sh "2" R 236 748 0 0 2700
 Dr 0 0 0
 At SMD N 00440001
-Ne 96 "/wheelconn1/HALL3"
+Ne 96 "/wheelconn1/HALL2"
 Po 1575 1968
 $EndPAD
 $PAD
@@ -7340,42 +7340,42 @@ $PAD
 Sh "11" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 104 "/wheelconn4/PHASE1"
+Ne 104 "/wheelconn4/PHASE0"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 104 "/wheelconn4/PHASE1"
+Ne 104 "/wheelconn4/PHASE0"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 66 "/motordriver4/PHASE2"
+Ne 66 "/motordriver4/PHASE1"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 66 "/motordriver4/PHASE2"
+Ne 66 "/motordriver4/PHASE1"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 67 "/motordriver4/PHASE3"
+Ne 67 "/motordriver4/PHASE2"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 67 "/motordriver4/PHASE3"
+Ne 67 "/motordriver4/PHASE2"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7389,21 +7389,21 @@ $PAD
 Sh "4" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 34 "/fpga/M_HALL42"
+Ne 34 "/fpga/M_HALL41"
 Po 787 1968
 $EndPAD
 $PAD
 Sh "3" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 33 "/fpga/M_HALL41"
+Ne 33 "/fpga/M_HALL40"
 Po 1181 1968
 $EndPAD
 $PAD
 Sh "2" R 236 748 0 0 900
 Dr 0 0 0
 At SMD N 00440001
-Ne 35 "/fpga/M_HALL43"
+Ne 35 "/fpga/M_HALL42"
 Po 1575 1968
 $EndPAD
 $PAD
@@ -7448,42 +7448,42 @@ $PAD
 Sh "11" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 103 "/wheelconn3/PHASE1"
+Ne 103 "/wheelconn3/PHASE0"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 103 "/wheelconn3/PHASE1"
+Ne 103 "/wheelconn3/PHASE0"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE2"
+Ne 61 "/motordriver3/PHASE1"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 61 "/motordriver3/PHASE2"
+Ne 61 "/motordriver3/PHASE1"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE3"
+Ne 62 "/motordriver3/PHASE2"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 62 "/motordriver3/PHASE3"
+Ne 62 "/motordriver3/PHASE2"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7497,21 +7497,21 @@ $PAD
 Sh "4" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 101 "/wheelconn3/HALL2"
+Ne 101 "/wheelconn3/HALL1"
 Po 787 1968
 $EndPAD
 $PAD
 Sh "3" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 32 "/fpga/M_HALL31"
+Ne 32 "/fpga/M_HALL30"
 Po 1181 1968
 $EndPAD
 $PAD
 Sh "2" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 102 "/wheelconn3/HALL3"
+Ne 102 "/wheelconn3/HALL2"
 Po 1575 1968
 $EndPAD
 $PAD
@@ -7556,42 +7556,42 @@ $PAD
 Sh "11" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 57 "/motordriver2/PHASE1"
+Ne 57 "/motordriver2/PHASE0"
 Po -1969 1968
 $EndPAD
 $PAD
 Sh "10" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 57 "/motordriver2/PHASE1"
+Ne 57 "/motordriver2/PHASE0"
 Po -1575 1968
 $EndPAD
 $PAD
 Sh "9" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 99 "/wheelconn2/PHASE2"
+Ne 99 "/wheelconn2/PHASE1"
 Po -1181 1968
 $EndPAD
 $PAD
 Sh "8" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 99 "/wheelconn2/PHASE2"
+Ne 99 "/wheelconn2/PHASE1"
 Po -787 1968
 $EndPAD
 $PAD
 Sh "7" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 100 "/wheelconn2/PHASE3"
+Ne 100 "/wheelconn2/PHASE2"
 Po -394 1968
 $EndPAD
 $PAD
 Sh "6" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 100 "/wheelconn2/PHASE3"
+Ne 100 "/wheelconn2/PHASE2"
 Po 0 1968
 $EndPAD
 $PAD
@@ -7605,21 +7605,21 @@ $PAD
 Sh "4" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 97 "/wheelconn2/HALL2"
+Ne 97 "/wheelconn2/HALL1"
 Po 787 1968
 $EndPAD
 $PAD
 Sh "3" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 31 "/fpga/M_HALL21"
+Ne 31 "/fpga/M_HALL20"
 Po 1181 1968
 $EndPAD
 $PAD
 Sh "2" R 236 748 0 0 0
 Dr 0 0 0
 At SMD N 00440001
-Ne 98 "/wheelconn2/HALL3"
+Ne 98 "/wheelconn2/HALL2"
 Po 1575 1968
 $EndPAD
 $PAD
@@ -8502,7 +8502,7 @@ $PAD
 Sh "6" R 200 157 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/fpga/M_HALL12"
+Ne 30 "/fpga/M_HALL11"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8516,7 +8516,7 @@ $PAD
 Sh "4" R 200 157 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 95 "/wheelconn1/HALL1"
+Ne 95 "/wheelconn1/HALL0"
 Po 400 250
 $EndPAD
 $PAD
@@ -8560,7 +8560,7 @@ $PAD
 Sh "6" R 200 157 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 96 "/wheelconn1/HALL3"
+Ne 96 "/wheelconn1/HALL2"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8618,7 +8618,7 @@ $PAD
 Sh "6" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/fpga/M_HALL43"
+Ne 35 "/fpga/M_HALL42"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8676,7 +8676,7 @@ $PAD
 Sh "6" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 33 "/fpga/M_HALL41"
+Ne 33 "/fpga/M_HALL40"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8690,7 +8690,7 @@ $PAD
 Sh "4" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 34 "/fpga/M_HALL42"
+Ne 34 "/fpga/M_HALL41"
 Po 400 250
 $EndPAD
 $PAD
@@ -8734,7 +8734,7 @@ $PAD
 Sh "6" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 32 "/fpga/M_HALL31"
+Ne 32 "/fpga/M_HALL30"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8748,7 +8748,7 @@ $PAD
 Sh "4" R 200 157 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 101 "/wheelconn3/HALL2"
+Ne 101 "/wheelconn3/HALL1"
 Po 400 250
 $EndPAD
 $PAD
@@ -8792,7 +8792,7 @@ $PAD
 Sh "6" R 200 157 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 98 "/wheelconn2/HALL3"
+Ne 98 "/wheelconn2/HALL2"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8806,7 +8806,7 @@ $PAD
 Sh "4" R 200 157 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 97 "/wheelconn2/HALL2"
+Ne 97 "/wheelconn2/HALL1"
 Po 400 250
 $EndPAD
 $PAD
@@ -8850,7 +8850,7 @@ $PAD
 Sh "6" R 200 157 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 102 "/wheelconn3/HALL3"
+Ne 102 "/wheelconn3/HALL2"
 Po 400 -250
 $EndPAD
 $PAD
@@ -8908,7 +8908,7 @@ $PAD
 Sh "6" R 200 157 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 31 "/fpga/M_HALL21"
+Ne 31 "/fpga/M_HALL20"
 Po 400 -250
 $EndPAD
 $PAD

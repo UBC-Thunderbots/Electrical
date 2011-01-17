@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-16T17:36:19 PST
+EESchema Schematic File Version 2  date 2011-01-16T21:07:18 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -30,7 +30,7 @@ LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 4 18
+Sheet 7 18
 Title ""
 Date "17 jan 2011"
 Rev ""
@@ -80,13 +80,13 @@ Entry Wire Line
 Entry Wire Line
 	5950 3050 6050 3150
 Text Label 6050 3150 0    60   ~ 0
-HALL3
-Text Label 6050 3350 0    60   ~ 0
 HALL2
-Text Label 6050 3250 0    60   ~ 0
+Text Label 6050 3350 0    60   ~ 0
 HALL1
+Text Label 6050 3250 0    60   ~ 0
+HALL0
 Text HLabel 5800 2750 0    60   Output ~ 0
-HALL[1..3]
+HALL[0..2]
 Entry Wire Line
 	5950 3700 6050 3600
 Entry Wire Line
@@ -94,13 +94,13 @@ Entry Wire Line
 Entry Wire Line
 	5950 4100 6050 4000
 Text Label 6050 3600 0    60   ~ 0
-PHASE3
-Text Label 6050 3800 0    60   ~ 0
 PHASE2
-Text Label 6050 4000 0    60   ~ 0
+Text Label 6050 3800 0    60   ~ 0
 PHASE1
+Text Label 6050 4000 0    60   ~ 0
+PHASE0
 Text HLabel 5800 4300 0    60   Input ~ 0
-PHASE[1..3]
+PHASE[0..2]
 $Comp
 L GND #PWR040
 U 1 1 4CD730A5
@@ -135,7 +135,7 @@ AR Path="/4CD73053/4CD73060" Ref="P10"  Part="1"
 AR Path="/4CD73188/4CD73060" Ref="P11"  Part="1" 
 AR Path="/4CD7317F/4CD73060" Ref="P12"  Part="1" 
 AR Path="/4CD73172/4CD73060" Ref="P13"  Part="1" 
-F 0 "P11" V 6800 3550 60  0000 C CNN
+F 0 "P10" V 6800 3550 60  0000 C CNN
 F 1 "CONN_11" V 6900 3550 60  0000 C CNN
 F 2 "FPC" H 6850 3550 60  0001 C CNN
 F 4 "WM7971CT-ND" H 6850 3550 60  0001 C CNN "Field1"

@@ -20,11 +20,18 @@ begin
 	begin
 		if rising_edge(Clock) then
 			if Reset then
+				Output <= false;
 				ValueLatch := 0;
 				Count := 0;
 			else
 				if Count = 0 then
 					ValueLatch := Value;
+				end if;
+
+				if Count = ValueLatch then
+					Output <= false;
+				elsif Count = 0 then
+					Output <= true;
 				end if;
 
 				if Count = CountType'high then
@@ -35,6 +42,6 @@ begin
 			end if;
 		end if;
 
-		Output <= Count < ValueLatch;
+--		Output <= Count < ValueLatch;
 	end process;
 end architecture Behavioural;

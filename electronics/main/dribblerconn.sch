@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
+EESchema Schematic File Version 2  date 2011-01-16T21:07:18 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -30,9 +30,9 @@ LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 2 18
+Sheet 3 18
 Title ""
-Date "8 jan 2011"
+Date "17 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -65,9 +65,9 @@ Wire Bus Line
 Wire Bus Line
 	4800 3300 4800 3600
 Text HLabel 4700 3300 0    60   Input ~ 0
-PHASE[1..3]
+PHASE[0..2]
 Text HLabel 4700 4400 0    60   Output ~ 0
-HALL[1..3]
+HALL[0..2]
 Entry Wire Line
 	4800 4300 4900 4200
 Entry Wire Line
@@ -99,17 +99,17 @@ F 1 "+5V" H 5350 3890 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 4900 4200 0    60   ~ 0
-HALL3
-Text Label 4900 4100 0    60   ~ 0
 HALL2
-Text Label 4900 4000 0    60   ~ 0
+Text Label 4900 4100 0    60   ~ 0
 HALL1
+Text Label 4900 4000 0    60   ~ 0
+HALL0
 Text Label 4900 3700 0    60   ~ 0
-PHASE3
-Text Label 4900 3600 0    60   ~ 0
 PHASE2
-Text Label 4900 3500 0    60   ~ 0
+Text Label 4900 3600 0    60   ~ 0
 PHASE1
+Text Label 4900 3500 0    60   ~ 0
+PHASE0
 $Comp
 L CONN_8 P14
 U 1 1 4CD731E0

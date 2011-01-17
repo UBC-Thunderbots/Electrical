@@ -1,33 +1,26 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
-library work;
+use work.types;
 
 entity GrayCounter is
-	generic(
-		Max : positive);
 	port(
 		Clock : in std_ulogic;
 		Reset : in boolean;
-		Input : in work.types.encoder;
-		Strobe : in boolean;
-		Value : out integer range -Max to Max);
+		Input : in types.encoder_t;
+		Value : out types.encoder_count_t);
 end entity GrayCounter;
 
 architecture Behavioural of GrayCounter is
 begin
 	process(Clock)
 		type DeltaType is (NONE, ADD, SUB);
-
-		variable Accumulator : integer range -Max to Max;
-		variable OldInput : work.types.encoder;
-
+		variable OldInput : types.encoder_t;
 		variable Delta : DeltaType;
+		variable ValueTemp : types.encoder_count_t;
 	begin
 		if rising_edge(Clock) then
 			if Reset then
-				Value <= 0;
-				Accumulator := 0;
+				ValueTemp := 0;
 			else
 				if not OldInput(0) and not OldInput(1) and Input(0) and not Input(1) then 
 					Delta := ADD;
@@ -49,19 +42,26 @@ begin
 					Delta := NONE;
 				end if;
 
-				case Delta is
-					when NONE => null;
-					when ADD => Accumulator := Accumulator + 1;
-					when SUB => Accumulator := Accumulator - 1;
-				end case;
-
-				if Strobe then
-					Value <= Accumulator;
-					Accumulator := 0;
+				if Delta /= NONE then
+					if Delta = ADD then
+						if ValueTemp = encoder_count_t'high then
+							ValueTemp := 0;
+						else
+							ValueTemp := ValueTemp + 1;
+						end if;
+					else
+						if ValueTemp = 0 then
+							ValueTemp := encoder_count_t'high;
+						else
+							ValueTemp := ValueTemp - 1;
+						end if;
+					end if;
 				end if;
 			end if;
 
 			OldInput := Input;
 		end if;
+
+		Value <= ValueTemp;
 	end process;
 end architecture Behavioural;
