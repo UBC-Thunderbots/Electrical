@@ -31,9 +31,13 @@ architecture Behavioural of Main is
 	signal MotorsDirection : types.motors_direction_t;
 	signal MotorsPower : types.motors_power_t;
 	signal BatteryVoltageHigh : types.battery_voltage_t;
+	signal TestMode : types.test_mode_t;
+	signal TestIndex : natural range 0 to 15;
 	signal BatteryVoltageLow : types.battery_voltage_t;
 	signal CapacitorVoltage : types.capacitor_voltage_t;
 	signal EncodersCount : types.encoders_count_t;
+	signal ChickerFault : boolean;
+	signal ChickerActivity : boolean;
 begin
 	Parbus: entity Parbus(Behavioural)
 	port map(
@@ -48,6 +52,8 @@ begin
 		MotorsDirection => MotorsDirection,
 		MotorsPower => MotorsPower,
 		BatteryVoltage => BatteryVoltageHigh,
+		TestMode => TestMode,
+		TestIndex => TestIndex,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
 		EncodersCount => EncodersCount);
@@ -106,6 +112,28 @@ begin
 		CapacitorVoltage => CapacitorVoltage,
 		BatteryVoltage => BatteryVoltageLow,
 		Charge => ChickerCharge,
-		Fault => open,
-		Activity => open);
+		Fault => ChickerFault,
+		Activity => ChickerActivity);
+
+	process(ClockMid) is
+	begin
+		if rising_edge(ClockMid) then
+			case TestMode is
+				when types.NONE =>
+					LEDs <= (others => false);
+
+				when types.HALL =>
+					for I in 0 to 2 loop
+						LEDs(I) <= Halls(TestIndex)(I);
+					end loop;
+					LEDs(3) <= false;
+
+				when types.ENCODER =>
+					LEDs <= (0 => Encoders(TestIndex)(0), 1 => Encoders(TestIndex)(1), others => false);
+
+				when types.BOOSTCONVERTER =>
+					LEDs <= (0 => ChickerActivity, 1 => ChickerFault, others => false);
+			end case;
+		end if;
+	end process;
 end architecture Behavioural;

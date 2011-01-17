@@ -18,6 +18,8 @@ entity Parbus is
 		MotorsDirection : out types.motors_direction_t;
 		MotorsPower : out types.motors_power_t;
 		BatteryVoltage : out types.battery_voltage_t;
+		TestMode : out types.test_mode_t;
+		TestIndex : out natural range 0 to 15;
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in types.capacitor_voltage_t;
@@ -28,7 +30,7 @@ architecture Behavioural of Parbus is
 begin
 	-- Handle packets from the microcontroller
 	process(Clock) is
-		type data_t is array(0 to 7) of std_ulogic_vector(7 downto 0);
+		type data_t is array(0 to 8) of std_ulogic_vector(7 downto 0);
 		subtype byte_count_t is natural range data_t'range;
 		variable WriteData : data_t;
 		variable WriteByteCount : byte_count_t;
@@ -54,6 +56,13 @@ begin
 						MotorsPower(I) <= to_integer(unsigned(WriteData(1 + (I - 1))));
 					end loop;
 					BatteryVoltage <= to_integer(unsigned(std_ulogic_vector'(WriteData(7) & WriteData(6))));
+					case WriteData(8)(5 downto 4) is
+						when "00" => TestMode <= types.NONE;
+						when "01" => TestMode <= types.HALL;
+						when "10" => TestMode <= types.ENCODER;
+						when others => TestMode <= types.BOOSTCONVERTER;
+					end case;
+					TestIndex <= to_integer(unsigned(WriteData(8)(3 downto 0)));
 				else
 					WriteByteCount := WriteByteCount + 1;
 				end if;

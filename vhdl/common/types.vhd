@@ -22,4 +22,6 @@ package types is
 
 	subtype motor_power_t is natural range 0 to 2 ** 8 - 1;
 	type motors_power_t is array(1 to 5) of motor_power_t;
+
+	type test_mode_t is (NONE, HALL, ENCODER, BOOSTCONVERTER);
 end package types;
