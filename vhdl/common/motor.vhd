@@ -20,7 +20,7 @@ end entity Motor;
 
 architecture Behavioural of Motor is
 	constant DeadBandSeconds : real := 50.0e-9;
-	constant DeadBandWidth : natural := natural(DeadBandSeconds * real(work.clock.HighFrequency) + 0.5);
+	constant DeadBandWidth : natural := natural(DeadBandSeconds * real(work.clock.HighFrequency));
 	signal CommutatorPhase : work.types.motor_phase3;
 	signal PWMOutput : boolean;
 	signal PWMPhase : work.types.motor_phase3;
