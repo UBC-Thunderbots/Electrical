@@ -83,15 +83,12 @@ vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
 vhdl/common/boostcontroller.vhd -text
-vhdl/common/byteshifter.vhd -text
-vhdl/common/chicker.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/deadband.vhd -text
 vhdl/common/graycounter.vhd -text
 vhdl/common/motor.vhd -text
 vhdl/common/pwm.vhd -text
-vhdl/common/srfilter.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
 vhdl/sim/brushlesscontrollertest.vhd -text

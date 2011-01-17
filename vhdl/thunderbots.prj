@@ -1,14 +1,11 @@
 vhdl work common/adc.vhd
 vhdl work common/boostcontroller.vhd
-vhdl work common/byteshifter.vhd
-vhdl work common/chicker.vhd
 vhdl work common/clock.vhd
 vhdl work common/commutator.vhd
 vhdl work common/deadband.vhd
 vhdl work common/graycounter.vhd
 vhdl work common/motor.vhd
 vhdl work common/pwm.vhd
-vhdl work common/srfilter.vhd
 vhdl work common/types.vhd
 vhdl work synth/clockgen.vhd
 vhdl work synth/main.vhd
