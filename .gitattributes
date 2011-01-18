@@ -83,6 +83,7 @@ vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
 vhdl/common/boostcontroller.vhd -text
+vhdl/common/chicker.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/deadband.vhd -text

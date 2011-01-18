@@ -15,11 +15,13 @@ entity Parbus is
 
 		EnableMotors : out boolean;
 		EnableCharger : out boolean;
+		ChickSequence : out boolean;
 		MotorsDirection : out types.motors_direction_t;
 		MotorsPower : out types.motors_power_t;
 		BatteryVoltage : out types.battery_voltage_t;
 		TestMode : out types.test_mode_t;
 		TestIndex : out natural range 0 to 15;
+		ChickPower : out natural range 0 to 65535;
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in types.capacitor_voltage_t;
@@ -30,7 +32,7 @@ architecture Behavioural of Parbus is
 begin
 	-- Handle packets from the microcontroller
 	process(Clock) is
-		type data_t is array(0 to 8) of std_ulogic_vector(7 downto 0);
+		type data_t is array(0 to 10) of std_ulogic_vector(7 downto 0);
 		subtype byte_count_t is natural range data_t'range;
 		variable WriteData : data_t;
 		variable WriteByteCount : byte_count_t;
@@ -49,20 +51,24 @@ begin
 					WriteByteCount := 0;
 					EnableMotors <= WriteData(0)(7) = '1';
 					EnableCharger <= WriteData(0)(6) = '1';
+					ChickSequence <= WriteData(0)(5) = '1';
 					for I in 1 to 5 loop
-						MotorsDirection(I) <= WriteData(0)(I - 1) = '1';
+						MotorsDirection(I) <= WriteData(0)(I - 1) = '0'; -- Inverted because motors are mounted so "positive" direction is backwards
 					end loop;
 					for I in 1 to 5 loop
 						MotorsPower(I) <= to_integer(unsigned(WriteData(1 + (I - 1))));
 					end loop;
 					BatteryVoltage <= to_integer(unsigned(std_ulogic_vector'(WriteData(7) & WriteData(6))));
-					case WriteData(8)(5 downto 4) is
-						when "00" => TestMode <= types.NONE;
-						when "01" => TestMode <= types.HALL;
-						when "10" => TestMode <= types.ENCODER;
-						when others => TestMode <= types.BOOSTCONVERTER;
+					case WriteData(8)(7 downto 4) is
+						when "0001" => TestMode <= types.LAMPTEST;
+						when "0010" => TestMode <= types.HALL;
+						when "0011" => TestMode <= types.ENCODER_LINES;
+						when "0100" => TestMode <= types.ENCODER_COUNT;
+						when "0101" => TestMode <= types.BOOSTCONVERTER;
+						when others => TestMode <= types.NONE;
 					end case;
 					TestIndex <= to_integer(unsigned(WriteData(8)(3 downto 0)));
+					ChickPower <= to_integer(unsigned(std_ulogic_vector'(WriteData(10) & WriteData(9))));
 				else
 					WriteByteCount := WriteByteCount + 1;
 				end if;
@@ -75,15 +81,20 @@ begin
 	-- Handle packets to the microcontroller
 	process(Clock) is
 		type data_t is array(0 to 10) of std_ulogic_vector(7 downto 0);
-		subtype byte_count_t is natural range data_t'range;
+		subtype byte_count_t is natural range 0 to data_t'high + 1; -- +1 because the PIC does a dummy read at the end of each packet
 		variable ReadData : data_t;
 		variable ReadByteCount : byte_count_t;
 		variable OldParbusRead : boolean;
+		variable OldEncodersCount : types.encoders_count_t;
+		variable Diff : signed(15 downto 0);
 	begin
 		if rising_edge(Clock) then
 			if Reset then
 				ParbusDataOut <= X"00";
 				ReadByteCount := 0;
+				OldEncodersCount := (others => 0);
+			elsif ParbusRead and not OldParbusRead and ReadByteCount = 0 then
+				OldEncodersCount := EncodersCount;
 			elsif OldParbusRead and not ParbusRead then
 				if ReadByteCount = byte_count_t'high then
 					ReadByteCount := 0;
@@ -91,15 +102,16 @@ begin
 					ReadByteCount := ReadByteCount + 1;
 				end if;
 			elsif not ParbusRead and ReadByteCount = 0 then
-				ReadData(0) := X"00";
+				ReadData(0) := X"01";
 				if ChickerPresent then
-					ReadData(0)(0) := '1';
+					ReadData(0)(1) := '1';
 				end if;
 				ReadData(1) := std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)(7 downto 0));
 				ReadData(2) := std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)(15 downto 8));
 				for I in 1 to 4 loop
-					ReadData(3 + (I - 1) * 2 + 0) := std_ulogic_vector(to_unsigned(EncodersCount(I), 16)(7 downto 0));
-					ReadData(3 + (I - 1) * 2 + 1) := std_ulogic_vector(to_unsigned(EncodersCount(I), 16)(15 downto 8));
+					Diff := -signed(to_unsigned(EncodersCount(I), 16) - to_unsigned(OldEncodersCount(I), 16)); -- Negated because encoders are mounted so "positive" direction is backwards
+					ReadData(3 + (I - 1) * 2 + 0) := std_ulogic_vector(Diff(7 downto 0));
+					ReadData(3 + (I - 1) * 2 + 1) := std_ulogic_vector(Diff(15 downto 8));
 				end loop;
 			end if;
 

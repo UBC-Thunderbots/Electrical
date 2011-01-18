@@ -1,5 +1,6 @@
 vhdl work common/adc.vhd
 vhdl work common/boostcontroller.vhd
+vhdl work common/chicker.vhd
 vhdl work common/clock.vhd
 vhdl work common/commutator.vhd
 vhdl work common/deadband.vhd
