@@ -33,7 +33,7 @@ architecture Behavioural of BoostController is
 	constant recharge : natural := natural(220.0 / maxCap * Capbits); 
 	constant diode : natural := natural(0.7 / maxBatt * Battbits);
 	
-	constant charge_timeout : real := 2.5; -- timeout for charge cycle
+	constant charge_timeout : real := 3.5; -- timeout for charge cycle
 	constant countermax_for_timeout : natural := natural(charge_timeout * frequency);
 	
 	--! ratio1 + 1 / ratio2 should be maxCap * Battbits / maxBatt / Capbits
