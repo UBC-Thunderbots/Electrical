@@ -3,6 +3,8 @@ package types is
 
 	subtype capacitor_voltage_t is natural range 0 to 2 ** 12 - 1;
 
+	subtype chicker_power_t is natural range 0 to 4095;
+
 	type encoder_t is array(0 to 1) of boolean;
 	type encoders_t is array(1 to 4) of encoder_t;
 

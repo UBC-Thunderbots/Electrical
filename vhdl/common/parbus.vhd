@@ -20,7 +20,7 @@ entity Parbus is
 		BatteryVoltage : out types.battery_voltage_t;
 		TestMode : out types.test_mode_t;
 		TestIndex : out natural range 0 to 15;
-		ChickPower : out natural range 0 to 65535;
+		ChickPower : out types.chicker_power_t;
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in types.capacitor_voltage_t;
