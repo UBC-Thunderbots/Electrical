@@ -98,7 +98,7 @@ begin
 				ReadData(1) := std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)(7 downto 0));
 				ReadData(2) := std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)(15 downto 8));
 				for I in 1 to 4 loop
-					Diff := -signed(to_unsigned(EncodersCount(I), 16) - to_unsigned(OldEncodersCount(I), 16)); -- Negated because encoders are mounted so "positive" direction is backwards
+					Diff := resize(signed(to_unsigned(OldEncodersCount(I), 11) - to_unsigned(EncodersCount(I), 11)), 16); -- Negated because encoders are mounted so "positive" direction is backwards
 					ReadData(3 + (I - 1) * 2 + 0) := std_ulogic_vector(Diff(7 downto 0));
 					ReadData(3 + (I - 1) * 2 + 1) := std_ulogic_vector(Diff(15 downto 8));
 				end loop;

@@ -6,7 +6,7 @@ package types is
 	type encoder_t is array(0 to 1) of boolean;
 	type encoders_t is array(1 to 4) of encoder_t;
 
-	subtype encoder_count_t is natural range 0 to 2 ** 16 - 1;
+	subtype encoder_count_t is natural range 0 to 2 ** 11 - 1;
 	type encoders_count_t is array(1 to 4) of encoder_count_t;
 
 	type hall_t is array(0 to 2) of boolean;
