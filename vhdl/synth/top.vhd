@@ -1,6 +1,8 @@
 library ieee;
+library unisim;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use unisim.vcomponents.all;
 use work.clock;
 use work.pintypes;
 use work.types;
@@ -31,10 +33,10 @@ entity Top is
 end entity Top;
 
 architecture Behavioural of Top is
+	signal ShiftedReset : std_ulogic;
 	signal ClockLow : std_ulogic;
 	signal ClockMid : std_ulogic;
 	signal ClockHigh : std_ulogic;
-	signal Reset : boolean;
 	signal ParbusDataIn : std_ulogic_vector(7 downto 0);
 	signal ParbusDataOut : std_ulogic_vector(7 downto 0);
 	signal ParbusRead : boolean;
@@ -61,6 +63,23 @@ begin
 		ClockMid => ClockMid,
 		ClockHigh => ClockHigh);
 
+	-- Feed the external reset into a properly-clocked shift register and then the GSR line.
+	-- Note that SRL16s are *NOT* affected by GSR, though they do have an initial value loaded from the configuration bitstream.
+	ResetShifter: SRL16
+	generic map(
+		INIT => X"FFFF")
+	port map(
+		CLK => ClockLow,
+		D => ResetPin,
+		A3 => '1',
+		A2 => '1',
+		A1 => '1',
+		A0 => '1',
+		Q => ShiftedReset);
+	Startup: STARTUP_SPARTAN3A
+	port map(
+		GSR => ShiftedReset);
+
 	-- Add registers to all input paths and do signal conversion.
 	process(ClockHigh) is
 	begin
@@ -80,12 +99,6 @@ begin
 			end loop;
 			ChickerMISO <= ChickerMISOPin = '1';
 			ChickerPresent <= ChickerPresentPin = '1';
-		end if;
-	end process;
-	process(ClockLow) is
-	begin
-		if rising_edge(ClockLow) then
-			Reset <= ResetPin = '1';
 		end if;
 	end process;
 
@@ -115,7 +128,6 @@ begin
 		ClockLow => ClockLow,
 		ClockMid => ClockMid,
 		ClockHigh => ClockHigh,
-		Reset => Reset,
 		ParbusDataIn => ParbusDataIn,
 		ParbusDataOut => ParbusDataOut,
 		ParbusRead => ParbusRead,

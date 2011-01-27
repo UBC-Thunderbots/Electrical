@@ -9,7 +9,6 @@ entity Motor is
 	port(
 		PWMClock : in std_ulogic;
 		ClockHigh : in std_ulogic;
-		Reset : in boolean;
 		Enable : in boolean;
 		Power : in natural range 0 to PWMMax;
 		Direction	: in boolean;
@@ -39,7 +38,6 @@ begin
 		Max => PWMMax)
 	port map(
 		Clock => PWMClock,
-		Reset => Reset,
 		Value => Power,
 		Output => PWMOutput);
 
@@ -66,7 +64,6 @@ begin
 			Width => DeadBandWidth)
 		port map(
 			Clock => ClockHigh,
-			Reset => Reset,
 			Input => PWMPhases(I),
 			Output => Phases(I));
 	end generate;

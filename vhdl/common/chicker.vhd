@@ -5,7 +5,6 @@ use work.types;
 entity Chicker is
 	port(
 		ClockLow : in std_ulogic;
-		Reset : in boolean;
 		Sequence : in boolean;
 		Power : in natural range 0 to 65535;
 		Active : out boolean);
@@ -14,14 +13,11 @@ end entity Chicker;
 architecture Behavioural of Chicker is
 begin
 	process(ClockLow) is
-		variable LastSequence : boolean;
-		variable Counter : natural range 0 to 65535;
+		variable LastSequence : boolean := false;
+		variable Counter : natural range 0 to 65535 := 0;
 	begin
 		if rising_edge(ClockLow) then
-			if Reset then
-				LastSequence := false;
-				Counter := 0;
-			elsif Sequence /= LastSequence then
+			if Sequence /= LastSequence then
 				Counter := Power;
 			elsif Counter /= 0 then
 				Counter := Counter - 1;

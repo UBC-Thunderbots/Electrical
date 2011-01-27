@@ -6,18 +6,17 @@ use work.types;
 entity Parbus is
 	port(
 		Clock : in std_ulogic;
-		Reset : in boolean;
 
 		ParbusDataIn : in std_ulogic_vector(7 downto 0);
 		ParbusDataOut : out std_ulogic_vector(7 downto 0);
 		ParbusRead : in boolean;
 		ParbusWrite : in boolean;
 
-		EnableMotors : out boolean;
-		EnableCharger : out boolean;
+		EnableMotors : out boolean := false;
+		EnableCharger : out boolean := false;
 		ChickSequence : out boolean;
-		MotorsDirection : out types.motors_direction_t;
-		MotorsPower : out types.motors_power_t;
+		MotorsDirection : out types.motors_direction_t := (others => false);
+		MotorsPower : out types.motors_power_t := (others => 0);
 		BatteryVoltage : out types.battery_voltage_t;
 		TestMode : out types.test_mode_t;
 		TestIndex : out natural range 0 to 15;
@@ -35,17 +34,11 @@ begin
 		type data_t is array(0 to 10) of std_ulogic_vector(7 downto 0);
 		subtype byte_count_t is natural range data_t'range;
 		variable WriteData : data_t;
-		variable WriteByteCount : byte_count_t;
+		variable WriteByteCount : byte_count_t := 0;
 		variable OldParbusWrite : boolean;
 	begin
 		if rising_edge(Clock) then
-			if Reset then
-				EnableMotors <= false;
-				EnableCharger <= false;
-				MotorsDirection <= (others => false);
-				MotorsPower <= (others => 0);
-				WriteByteCount := 0;
-			elsif ParbusWrite and not OldParbusWrite then
+			if ParbusWrite and not OldParbusWrite then
 				WriteData(WriteByteCount) := ParbusDataIn;
 				if WriteByteCount = byte_count_t'high then
 					WriteByteCount := 0;
@@ -83,17 +76,13 @@ begin
 		type data_t is array(0 to 10) of std_ulogic_vector(7 downto 0);
 		subtype byte_count_t is natural range 0 to data_t'high + 1; -- +1 because the PIC does a dummy read at the end of each packet
 		variable ReadData : data_t;
-		variable ReadByteCount : byte_count_t;
+		variable ReadByteCount : byte_count_t := 0;
 		variable OldParbusRead : boolean;
-		variable OldEncodersCount : types.encoders_count_t;
+		variable OldEncodersCount : types.encoders_count_t := (others => 0);
 		variable Diff : signed(15 downto 0);
 	begin
 		if rising_edge(Clock) then
-			if Reset then
-				ParbusDataOut <= X"00";
-				ReadByteCount := 0;
-				OldEncodersCount := (others => 0);
-			elsif ParbusRead and not OldParbusRead and ReadByteCount = 0 then
+			if ParbusRead and not OldParbusRead and ReadByteCount = 0 then
 				OldEncodersCount := EncodersCount;
 			elsif OldParbusRead and not ParbusRead then
 				if ReadByteCount = byte_count_t'high then

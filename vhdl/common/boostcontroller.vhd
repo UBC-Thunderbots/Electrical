@@ -8,7 +8,6 @@ use ieee.std_logic_1164.all;
 entity BoostController is 
 	port (
 		Clock : in std_logic; --! Clock for the system to run on
-		Reset : in boolean; --!Resets the Charger (Synchronous)
 		Enable : in boolean; --!Enables the Charger
 		CapacitorVoltage : in natural range 0 to 4095; --! Current Capacitor Voltage
 		BatteryVoltage : in natural range 0 to 1023; --! Current Battery Voltage
@@ -48,7 +47,7 @@ architecture Behavioural of BoostController is
 	type top_state is (disabled,charging,waiting,faulted); --! permissable states for the overall controller
 	type bottom_state is (ontime,offtime,waiting); --! permissable states for the dutycycle
 	signal counter_state : bottom_state;
-	signal main_state : top_state;
+	signal main_state : top_state := disabled;
 	signal FaultActive : boolean;
 	signal OverVoltage : boolean;
 	signal Timeout : boolean;
@@ -126,10 +125,6 @@ begin
 				main_state <= disabled;
 			end if;
 			
-			if Reset then
-				main_state <= disabled;
-			end if;
-
 			--Keep this on the bottom so a reset can't clear an active fault
 			if FaultActive then 
 				main_state <= faulted;

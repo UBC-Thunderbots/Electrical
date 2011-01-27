@@ -7,7 +7,6 @@ entity Main is
 		ClockLow : in std_ulogic;
 		ClockMid : in std_ulogic;
 		ClockHigh : in std_ulogic;
-		Reset : in boolean;
 		ParbusDataIn : in std_ulogic_vector(7 downto 0);
 		ParbusDataOut : out std_ulogic_vector(7 downto 0);
 		ParbusRead : in boolean;
@@ -45,7 +44,6 @@ begin
 	Parbus: entity Parbus(Behavioural)
 	port map(
 		Clock => ClockHigh,
-		Reset => Reset,
 		ParbusDataIn => ParbusDataIn,
 		ParbusDataOut => ParbusDataOut,
 		ParbusRead => ParbusRead,
@@ -81,7 +79,6 @@ begin
 		port map(
 			PWMClock => ClockMid,
 			ClockHigh => ClockHigh,
-			Reset => Reset,
 			Enable => EnableMotors,
 			Power => MotorsPower(I),
 			Direction => MotorsDirection(I),
@@ -95,7 +92,6 @@ begin
 		GrayCounter: entity GrayCounter(Behavioural)
 		port map(
 			Clock => ClockHigh,
-			Reset => Reset,
 			Input => Encoders(I),
 			Value => EncodersCount(I));
 	end generate;
@@ -103,7 +99,6 @@ begin
 	ADC: entity ADC(Behavioural)
 	port map(
 		Clock => ClockLow,
-		Reset => Reset,
 		MISO => ChickerMISO,
 		CLK => ChickerCLK,
 		CS => ChickerCS,
@@ -112,7 +107,6 @@ begin
 	Chicker: entity Chicker(Behavioural)
 	port map(
 		ClockLow => ClockLow,
-		Reset => Reset,
 		Sequence => ChickSequence,
 		Power => ChickPower,
 		Active => ChickActive);
@@ -122,7 +116,6 @@ begin
 	BoostController: entity BoostController(Behavioural)
 	port map(
 		Clock => ClockLow,
-		Reset => Reset,
 		Enable => EnableCharger,
 		CapacitorVoltage => CapacitorVoltage,
 		BatteryVoltage => BatteryVoltageLow,
