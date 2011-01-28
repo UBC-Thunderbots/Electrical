@@ -33,7 +33,7 @@ architecture Behavioural of Main is
 	signal BatteryVoltageHigh : types.battery_voltage_t;
 	signal TestMode : types.test_mode_t;
 	signal TestIndex : natural range 0 to 15;
-	signal ChickPower : natural range 0 to 65535;
+	signal ChickPower : types.chicker_power_t;
 	signal BatteryVoltageLow : types.battery_voltage_t;
 	signal CapacitorVoltage : types.capacitor_voltage_t;
 	signal EncodersCount : types.encoders_count_t;
