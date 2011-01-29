@@ -4,26 +4,32 @@ use work.types;
 
 entity Chicker is
 	port(
+		ClockHigh : in std_ulogic;
 		ClockLow : in std_ulogic;
-		Sequence : in boolean;
+		Strobe : in boolean;
 		Power : in types.chicker_power_t;
 		Active : out boolean);
 end entity Chicker;
 
 architecture Behavioural of Chicker is
+	signal StrobeLow : boolean;
 begin
+	SyncDownStrobe: entity work.SyncDownStrobe(Behavioural)
+	port map(
+		ClockHigh => ClockHigh,
+		ClockLow => ClockLow,
+		Input => Strobe,
+		Output => StrobeLow);
+
 	process(ClockLow) is
-		variable LastSequence : boolean := false;
 		variable Counter : types.chicker_power_t := 0;
 	begin
 		if rising_edge(ClockLow) then
-			if Sequence /= LastSequence then
+			if StrobeLow then
 				Counter := Power;
 			elsif Counter /= 0 then
 				Counter := Counter - 1;
 			end if;
-
-			LastSequence := Sequence;
 		end if;
 
 		Active <= Counter /= 0;

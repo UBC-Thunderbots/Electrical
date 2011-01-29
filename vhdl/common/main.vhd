@@ -27,12 +27,12 @@ end entity Main;
 architecture Behavioural of Main is
 	signal EnableMotors : boolean;
 	signal EnableCharger : boolean;
-	signal ChickSequence : boolean;
 	signal MotorsDirection : types.motors_direction_t;
 	signal MotorsPower : types.motors_power_t;
 	signal BatteryVoltageHigh : types.battery_voltage_t;
 	signal TestMode : types.test_mode_t;
 	signal TestIndex : natural range 0 to 15;
+	signal ChickStrobe : boolean;
 	signal ChickPower : types.chicker_power_t;
 	signal BatteryVoltageLow : types.battery_voltage_t;
 	signal CapacitorVoltage : types.capacitor_voltage_t;
@@ -50,12 +50,12 @@ begin
 		ParbusWrite => ParbusWrite,
 		EnableMotors => EnableMotors,
 		EnableCharger => EnableCharger,
-		ChickSequence => ChickSequence,
 		MotorsDirection => MotorsDirection,
 		MotorsPower => MotorsPower,
 		BatteryVoltage => BatteryVoltageHigh,
 		TestMode => TestMode,
 		TestIndex => TestIndex,
+		ChickStrobe => ChickStrobe,
 		ChickPower => ChickPower,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
@@ -106,8 +106,9 @@ begin
 
 	Chicker: entity Chicker(Behavioural)
 	port map(
+		ClockHigh => ClockHigh,
 		ClockLow => ClockLow,
-		Sequence => ChickSequence,
+		Strobe => ChickStrobe,
 		Power => ChickPower,
 		Active => ChickActive);
 

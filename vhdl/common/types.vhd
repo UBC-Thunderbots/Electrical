@@ -1,3 +1,6 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 package types is
 	subtype battery_voltage_t is natural range 0 to 2 ** 10 - 1;
 
@@ -26,4 +29,24 @@ package types is
 	type motors_power_t is array(1 to 5) of motor_power_t;
 
 	type test_mode_t is (NONE, LAMPTEST, HALL, ENCODER_LINES, ENCODER_COUNT, BOOSTCONVERTER);
+
+	function to_boolean(X : std_ulogic) return boolean;
+
+	function to_stdulogic(X : boolean) return std_ulogic;
 end package types;
+
+package body types is
+	function to_boolean(X : std_ulogic) return boolean is
+	begin
+		return X = '1';
+	end function to_boolean;
+
+	function to_stdulogic(X : boolean) return std_ulogic is
+	begin
+		if X then
+			return '1';
+		else
+			return '0';
+		end if;
+	end function to_stdulogic;
+end package body types;

@@ -9,6 +9,7 @@ vhdl work common/main.vhd
 vhdl work common/motor.vhd
 vhdl work common/parbus.vhd
 vhdl work common/pwm.vhd
+vhdl work common/syncdown.vhd
 vhdl work common/types.vhd
 vhdl work synth/clockgen.vhd
 vhdl work synth/pintypes.vhd
