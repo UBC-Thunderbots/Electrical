@@ -121,6 +121,7 @@ entity ParbusRegisterMap is
 		TestIndex : out natural range 0 to 15 := 0;
 		ChickStrobe : out boolean := false;
 		ChickPower : out types.chicker_power_t := 0;
+		EncodersStrobe : out boolean := false;
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in types.capacitor_voltage_t;
@@ -128,8 +129,6 @@ entity ParbusRegisterMap is
 end entity ParbusRegisterMap;
 
 architecture Behavioural of ParbusRegisterMap is
-	signal OldEncodersCount : types.encoders_count_t := (others => 0);
-	signal EncodersDiff : types.encoders_count_t := (others => 0);
 begin
 	-- Combinationally construct the readable register map for data transfer from FPGA to microcontroller.
 	ReadData <=
@@ -140,7 +139,7 @@ begin
 		(0 => '1', 1 => types.to_stdulogic(ChickerPresent), others => '0') when Address = 1 else
 
 		-- Addresses 2 through 5 have encoders 1 through 4 deltas.
-		std_ulogic_vector(resize(signed(std_ulogic_vector(to_unsigned(EncodersDiff(Address - 1), 11))), 16)) when Address = 2 or Address = 3 or Address = 4 or Address = 5 else
+		std_ulogic_vector(to_signed(EncodersCount(Address - 1), 16)) when Address = 2 or Address = 3 or Address = 4 or Address = 5 else
 
 		-- Address 6 has capacitr voltage.
 		std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)) when Address = 6 else
@@ -151,8 +150,9 @@ begin
 	process(Clock) is
 	begin
 		if rising_edge(Clock) then
-			-- Chick strobe is always clear except for one clock cycle when it should assert.
+			-- Strobes are always clear except for one clock cycle when they should assert.
 			ChickStrobe <= false;
+			EncodersStrobe <= false;
 
 			-- If a register is written to, handle the effects.
 			if WriteStrobe then
@@ -190,11 +190,7 @@ begin
 
 					-- Address 9 latches and resets the encoder counts.
 					when 9 =>
-						-- Compute deltas.
-						for I in 1 to 4 loop
-							EncodersDiff(I) <= (EncodersCount(I) - OldEncodersCount(I)) mod (types.encoder_count_t'high + 1);
-						end loop;
-						OldEncodersCount <= EncodersCount;
+						EncodersStrobe <= true;
 
 					-- Remaining addresses are unimplemented.
 					when others =>
@@ -228,6 +224,7 @@ entity Parbus is
 		TestIndex : out natural range 0 to 15;
 		ChickStrobe : out boolean;
 		ChickPower : out types.chicker_power_t;
+		EncodersStrobe : out boolean;
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in types.capacitor_voltage_t;
@@ -268,6 +265,7 @@ begin
 		TestIndex => TestIndex,
 		ChickStrobe => ChickStrobe,
 		ChickPower => ChickPower,
+		EncodersStrobe => EncodersStrobe,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
 		EncodersCount => EncodersCount);

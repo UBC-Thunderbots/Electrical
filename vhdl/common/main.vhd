@@ -37,6 +37,7 @@ architecture Behavioural of Main is
 	signal BatteryVoltageLow : types.battery_voltage_t;
 	signal CapacitorVoltage : types.capacitor_voltage_t;
 	signal EncodersCount : types.encoders_count_t;
+	signal EncodersStrobe : boolean;
 	signal ChickerFault : boolean;
 	signal ChickerActivity : boolean;
 	signal ChickActive : boolean;
@@ -57,6 +58,7 @@ begin
 		TestIndex => TestIndex,
 		ChickStrobe => ChickStrobe,
 		ChickPower => ChickPower,
+		EncodersStrobe => EncodersStrobe,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
 		EncodersCount => EncodersCount);
@@ -93,6 +95,7 @@ begin
 		port map(
 			Clock => ClockHigh,
 			Input => Encoders(I),
+			Strobe => EncodersStrobe,
 			Value => EncodersCount(I));
 	end generate;
 
