@@ -19,7 +19,7 @@ architecture Behavioural of Commutator is
 	signal NPhase : phase_half_t;
 	signal PPhase : phase_half_t;
 begin
-	Swapped <= not Hall when Direction else Hall;
+	Swapped <= Hall when Direction else not Hall;
 
 	AllLowBuf <= not (Hall(0) or Hall(1) or Hall(2));
 	AllHighBuf <= Hall(0) and Hall(1) and Hall(2);

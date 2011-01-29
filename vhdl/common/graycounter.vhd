@@ -19,21 +19,21 @@ begin
 	begin
 		if rising_edge(Clock) then
 			if not OldInput(0) and not OldInput(1) and Input(0) and not Input(1) then 
-				Delta := ADD;
+				Delta := SUB;
 			elsif OldInput(0) and not OldInput(1) and Input(0) and Input(1) then 
-				Delta := ADD;
+				Delta := SUB;
 			elsif OldInput(0) and OldInput(1) and not Input(0) and Input(1) then 
-				Delta := ADD;
+				Delta := SUB;
 			elsif not OldInput(0) and OldInput(1) and not Input(0) and not Input(1) then 
-				Delta := ADD;
+				Delta := SUB;
 			elsif not OldInput(0) and not OldInput(1) and not Input(0) and Input(1) then 
-				Delta := SUB;
+				Delta := ADD;
 			elsif not OldInput(0) and OldInput(1) and Input(0) and Input(1) then 
-				Delta := SUB;
+				Delta := ADD;
 			elsif OldInput(0) and OldInput(1) and Input(0) and not Input(1) then 
-				Delta := SUB;
+				Delta := ADD;
 			elsif OldInput(0) and not OldInput(1) and not Input(0) and not Input(1) then 
-				Delta := SUB;
+				Delta := ADD;
 			else
 				Delta := NONE;
 			end if;

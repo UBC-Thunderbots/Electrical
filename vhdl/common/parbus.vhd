@@ -151,7 +151,7 @@ begin
 	process(Clock) is
 	begin
 		if rising_edge(Clock) then
-			-- Chick strobe is always clear except for one clock cycle when it should asser.t
+			-- Chick strobe is always clear except for one clock cycle when it should assert.
 			ChickStrobe <= false;
 
 			-- If a register is written to, handle the effects.
@@ -164,7 +164,7 @@ begin
 
 					-- Addresses 1 through 5 have motor N direction and power.
 					when 1 | 2 | 3 | 4 | 5 =>
-						MotorsDirection(Address) <= not types.to_boolean(WriteData(8)); -- Motors are mounted so "positive" direction is backwards.
+						MotorsDirection(Address) <= types.to_boolean(WriteData(8));
 						MotorsPower(Address) <= to_integer(unsigned(WriteData(7 downto 0)));
 
 					-- Address 6 has test mode controls.
@@ -190,9 +190,9 @@ begin
 
 					-- Address 9 latches and resets the encoder counts.
 					when 9 =>
-						-- Compute deltas, negated because encoders are mounted so "positive" direction is backwards.
+						-- Compute deltas.
 						for I in 1 to 4 loop
-							EncodersDiff(I) <= (OldEncodersCount(I) - EncodersCount(I)) mod (types.encoder_count_t'high + 1);
+							EncodersDiff(I) <= (EncodersCount(I) - OldEncodersCount(I)) mod (types.encoder_count_t'high + 1);
 						end loop;
 						OldEncodersCount <= EncodersCount;
 
