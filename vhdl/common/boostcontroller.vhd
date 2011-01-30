@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use work.clock.all;
 
 --! Boost converted controller
 --! All inputs are sampled on rising clock edge
@@ -17,41 +18,41 @@ entity BoostController is
 end entity;
 
 architecture Behavioural of BoostController is
-	--We shoule probably make some or all of these generic parameters
-	constant inductance : real := 22.0e-6; --! Inductance in switching element
-	constant frequency : real := 1.0e6;	--! Frequency the system is running at
-	constant Battbits : real := 1023.0; --! Number of levels for the battery
-	constant Capbits : real := 4095.0;	--! Number of levels for the Cap
-	constant maxcurrent : real := 10.0;	--! Maximum inductor Current
-	constant maxBatt : real := 18.3;	--! Voltage of battery at maximum ADC range 
-	constant maxCap : real := 330.0;	--! Voltage of Cap at maximum ADC range
+	--We should probably make some or all of these generic parameters
+	constant Inductance : real := 22.0e-6; --! Inductance in switching element
+	constant Frequency : real := real(ClockLowFrequency);	--! Frequency the system is running at
+	constant BattBits : real := 1023.0; --! Number of levels for the battery
+	constant CapBits : real := 4095.0;	--! Number of levels for the Cap
+	constant MaxCurrent : real := 10.0;	--! Maximum inductor Current
+	constant MaxBatt : real := 18.3;	--! Voltage of battery at maximum ADC range 
+	constant MaxCap : real := 330.0;	--! Voltage of Cap at maximum ADC range
 
-	constant countermax : natural := natural(inductance * frequency * maxcurrent * Battbits / maxbatt);
-	constant maxvoltage : natural := natural(230.0 / maxCap * Capbits);
-	constant dangervoltage : natural := natural(240.0 / maxCap * Capbits);
-	constant recharge : natural := natural(220.0 / maxCap * Capbits); 
-	constant diode : natural := natural(0.7 / maxBatt * Battbits);
+	constant CounterMax : natural := natural(Inductance * Frequency * MaxCurrent * BattBits / MaxBatt);
+	constant MaxVoltage : natural := natural(230.0 / MaxCap * CapBits);
+	constant DangerVoltage : natural := natural(240.0 / MaxCap * CapBits);
+	constant Recharge : natural := natural(220.0 / MaxCap * CapBits); 
+	constant Diode : natural := natural(0.7 / MaxBatt * BattBits);
 	
-	constant charge_timeout : real := 3.5; -- timeout for charge cycle
-	constant countermax_for_timeout : natural := natural(charge_timeout * frequency);
+	constant ChargeTimeout : real := 3.5; -- timeout for charge cycle
+	constant CounterMaxForTimeout : natural := natural(ChargeTimeout * Frequency);
 	
-	--! ratio1 + 1 / ratio2 should be maxCap * Battbits / maxBatt / Capbits
-	--! ratio2 MUST be power of 2, ratio1 SHOULD be power of 2 to avoid multiplier
+	--! Ratio1 + 1 / Ratio2 should be MaxCap * BattBits / MaxBatt / CapBits
+	--! Ratio2 MUST be power of 2, Ratio1 SHOULD be power of 2 to avoid multiplier
 	
 	--! ratio = 4.5
-	constant ratio1 : natural := 4;	
-	constant ratio2 : natural := 2;
+	constant Ratio1 : natural := 4;	
+	constant Ratio2 : natural := 2;
 	
-	constant max_increment : natural := natural( (natural(capbits)+diode) * ratio1 + (natural(capbits)+diode) / ratio2);
+	constant MaxIncrement : natural := natural((natural(CapBits) + Diode) * Ratio1 + (natural(CapBits) + Diode) / Ratio2);
 
-	type top_state is (disabled,charging,waiting,faulted); --! permissable states for the overall controller
-	type bottom_state is (ontime,offtime,waiting); --! permissable states for the dutycycle
-	signal counter_state : bottom_state;
-	signal main_state : top_state := disabled;
+	type top_state_t is (DISABLED,CHARGING,WAITING,FAULTED); --! permissable states for the overall controller
+	type bottom_state_t is (ONTIME,OFFTIME,WAITING); --! permissable states for the dutycycle
+	signal CounterState : bottom_state_t;
+	signal MainState : top_state_t := DISABLED;
 	signal FaultActive : boolean;
 	signal OverVoltage : boolean;
 	signal Timeout : boolean;
-	signal Increment : natural range 1 to max_increment;
+	signal Increment : natural range 1 to MaxIncrement;
 begin
 
 	FaultActive <= OverVoltage or Timeout; -- Or the faultlines together here
@@ -63,13 +64,13 @@ begin
 	begin
 		if rising_edge(Clock) then
 			--This increment is used to compute the off time.
-			if((CapacitorVoltage - 1)*(ratio1) + (CapacitorVoltage - 1)/ratio2 + diode - BatteryVoltage > 0) then
-				Increment <= ((CapacitorVoltage - 1)*(ratio1) + (CapacitorVoltage - 1)/ratio2 + diode - BatteryVoltage);
+			if (CapacitorVoltage - 1) * Ratio1 + (CapacitorVoltage - 1) / Ratio2 + Diode - BatteryVoltage > 0 then
+				Increment <= (CapacitorVoltage - 1) * Ratio1 + (CapacitorVoltage - 1) / Ratio2 + Diode - BatteryVoltage;
 			else
-				Increment <= diode;
+				Increment <= Diode;
 			end if;
 			--Test the Capacitor for an over voltage scenario
-			if(CapacitorVoltage > dangervoltage) then
+			if CapacitorVoltage > DangerVoltage then
 				OverVoltage <= true;
 			else
 				OverVoltage <= false;
@@ -79,100 +80,99 @@ begin
 
 	--Main Controlling State Machine to control the levels of the system;
 	process(Clock)
-	variable counter : natural range 0 to countermax_for_timeout + 1 := 0;
+		variable Counter : natural range 0 to CounterMaxForTimeout + 1 := 0;
 	begin
 		if rising_edge(Clock) then
-	
 			--this case is superceeded by the ifs below
-			case main_state is
-				when disabled =>
-					if(CapacitorVoltage < maxvoltage) then
-						main_state <= charging;
+			case MainState is
+				when DISABLED =>
+					if CapacitorVoltage < MaxVoltage then
+						MainState <= CHARGING;
 					end if; 
 
 				--stop charging if above max
-				when charging =>
-					if(CapacitorVoltage > maxvoltage) then
-						main_state <= waiting;
+				when CHARGING =>
+					if CapacitorVoltage > MaxVoltage then
+						MainState <= WAITING;
 					else
-						main_state <= charging;
+						MainState <= CHARGING;
 					end if;
 					
-					counter := counter + 1;
+					Counter := Counter + 1;
 
-				--trigger top up if below recharge
-				when waiting =>
-					if(CapacitorVoltage < recharge) then
-						main_state <= charging;
+				--trigger top up if below Recharge
+				when WAITING =>
+					if CapacitorVoltage < Recharge then
+						MainState <= CHARGING;
 					else
-						main_state <= waiting;
+						MainState <= WAITING;
 					end if;
 
 				--If the system faults lock it in
-				when faulted =>
-					main_state <= faulted;
+				when FAULTED =>
+					MainState <= FAULTED;
 			end case;
 			
-			if (main_state /= charging) then
-				counter := 0;
+			if MainState /= CHARGING then
+				Counter := 0;
 			end if;
 			
-			Timeout <= counter >= countermax_for_timeout;
+			Timeout <= Counter >= CounterMaxForTimeout;
 
 			-- The following ifs should override the above case statement
 			
-			if not Enable AND (main_state /= faulted) then
-				main_state <= disabled;
+			if not Enable and MainState /= FAULTED then
+				MainState <= DISABLED;
 			end if;
 			
 			--Keep this on the bottom so a reset can't clear an active fault
 			if FaultActive then 
-				main_state <= faulted;
+				MainState <= FAULTED;
 			end if;
 		end if;
 	end process;
 
 	--Export some status to the world
-	Activity <= main_state = charging;
+	Activity <= MainState = CHARGING;
 
-	Fault <= main_state = faulted;
+	Fault <= MainState = FAULTED;
 
 	-- This process controls the actual switch timing;
 	process(Clock)
-		variable counter : natural range 0 to countermax + max_increment;
+		variable Counter : natural range 0 to CounterMax + MaxIncrement;
 	begin
 		if rising_edge(Clock) then
-			case counter_state is
-				when ontime =>
-						--This implements Counts*BatteryVoltage = countermax in order to calculate counts
-						if(counter + BatteryVoltage > countermax) then
-							counter := 0;
-							counter_state <= offtime;
+			case CounterState is
+				when ONTIME =>
+						--This implements Counts*BatteryVoltage = CounterMax in order to calculate counts
+						if Counter + BatteryVoltage > CounterMax then
+							Counter := 0;
+							CounterState <= OFFTIME;
 						else
-							counter := counter + BatteryVoltage;
-							counter_state <= ontime;
+							Counter := Counter + BatteryVoltage;
+							CounterState <= ONTIME;
 						end if;
-				when offtime =>
-						--This implements Counts*(CapacitorVoltage*ratio + diode - BatteryVoltage) = countermax
-						if(counter + Increment > countermax + Increment) then
-							counter := 0;
-							counter_state <= ontime;
+				when OFFTIME =>
+						--This implements Counts*(CapacitorVoltage*ratio + Diode - BatteryVoltage) = CounterMax
+						if Counter + Increment > CounterMax + Increment then
+							Counter := 0;
+							CounterState <= ONTIME;
 						else
-							counter := counter + Increment;
-							counter_state <= offtime;
+							Counter := Counter + Increment;
+							CounterState <= OFFTIME;
 						end if;
-				when waiting =>
-						if(main_state = charging) then
-							counter_state <= ontime;
+				when WAITING =>
+						if MainState = CHARGING then
+							CounterState <= ONTIME;
 						end if;
 			end case;
 			--if the charger shuts down stop pulsing
-			if(main_state /= charging) then
-				counter_state <= waiting;
+			if MainState /= CHARGING then
+				CounterState <= WAITING;
 			end if;
 		end if;
 	end process;
 	
 	--MOSFET is controlled by the bottom state machine
-	Charge <= counter_state = ontime;
-end;
+	Charge <= CounterState = ONTIME;
+end architecture Behavioural;
