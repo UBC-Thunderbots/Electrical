@@ -101,7 +101,7 @@ end architecture Behavioural;
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.types;
+use work.types.all;
 
 entity ParbusRegisterMap is
 	port(
@@ -114,18 +114,18 @@ entity ParbusRegisterMap is
 
 		EnableMotors : out boolean := false;
 		EnableCharger : out boolean := false;
-		MotorsDirection : out types.motors_direction_t := (others => false);
-		MotorsPower : out types.motors_power_t := (others => 0);
-		BatteryVoltage : out types.battery_voltage_t := 0;
-		TestMode : out types.test_mode_t := types.NONE;
+		MotorsDirection : out motors_direction_t := (others => false);
+		MotorsPower : out motors_power_t := (others => 0);
+		BatteryVoltage : out battery_voltage_t := 0;
+		TestMode : out test_mode_t := NONE;
 		TestIndex : out natural range 0 to 15 := 0;
 		ChickStrobe : out boolean := false;
-		ChickPower : out types.chicker_power_t := 0;
+		ChickPower : out chicker_power_t := 0;
 		EncodersStrobe : out boolean := false;
 
 		ChickerPresent : in boolean;
-		CapacitorVoltage : in types.capacitor_voltage_t;
-		EncodersCount : in types.encoders_count_t);
+		CapacitorVoltage : in capacitor_voltage_t;
+		EncodersCount : in encoders_count_t);
 end entity ParbusRegisterMap;
 
 architecture Behavioural of ParbusRegisterMap is
@@ -136,7 +136,7 @@ begin
 		X"468D" when Address = 0 else
 
 		-- Address 1 has general operational flags.
-		(0 => '1', 1 => types.to_stdulogic(ChickerPresent), others => '0') when Address = 1 else
+		(0 => '1', 1 => to_stdulogic(ChickerPresent), others => '0') when Address = 1 else
 
 		-- Addresses 2 through 5 have encoders 1 through 4 deltas.
 		std_ulogic_vector(to_signed(EncodersCount(Address - 1), 16)) when Address = 2 or Address = 3 or Address = 4 or Address = 5 else
@@ -159,23 +159,23 @@ begin
 				case Address is
 					-- Address 0 has general subsystem enable flags.
 					when 0 =>
-						EnableMotors <= types.to_boolean(WriteData(0));
-						EnableCharger <= types.to_boolean(WriteData(1));
+						EnableMotors <= to_boolean(WriteData(0));
+						EnableCharger <= to_boolean(WriteData(1));
 
 					-- Addresses 1 through 5 have motor N direction and power.
 					when 1 | 2 | 3 | 4 | 5 =>
-						MotorsDirection(Address) <= types.to_boolean(WriteData(8));
+						MotorsDirection(Address) <= to_boolean(WriteData(8));
 						MotorsPower(Address) <= to_integer(unsigned(WriteData(7 downto 0)));
 
 					-- Address 6 has test mode controls.
 					when 6 =>
 						case to_integer(unsigned(WriteData(7 downto 4))) is
-							when 1 => TestMode <= types.LAMPTEST;
-							when 2 => TestMode <= types.HALL;
-							when 3 => TestMode <= types.ENCODER_LINES;
-							when 4 => TestMode <= types.ENCODER_COUNT;
-							when 5 => TestMode <= types.BOOSTCONVERTER;
-							when others => TestMode <= types.NONE;
+							when 1 => TestMode <= LAMPTEST;
+							when 2 => TestMode <= HALL;
+							when 3 => TestMode <= ENCODER_LINES;
+							when 4 => TestMode <= ENCODER_COUNT;
+							when 5 => TestMode <= BOOSTCONVERTER;
+							when others => TestMode <= NONE;
 						end case;
 						TestIndex <= to_integer(unsigned(WriteData(3 downto 0)));
 
@@ -204,7 +204,7 @@ end architecture Behavioural;
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.types;
+use work.types.all;
 
 entity Parbus is
 	port(
@@ -217,18 +217,18 @@ entity Parbus is
 
 		EnableMotors : out boolean := false;
 		EnableCharger : out boolean := false;
-		MotorsDirection : out types.motors_direction_t := (others => false);
-		MotorsPower : out types.motors_power_t := (others => 0);
-		BatteryVoltage : out types.battery_voltage_t;
-		TestMode : out types.test_mode_t;
+		MotorsDirection : out motors_direction_t := (others => false);
+		MotorsPower : out motors_power_t := (others => 0);
+		BatteryVoltage : out battery_voltage_t;
+		TestMode : out test_mode_t;
 		TestIndex : out natural range 0 to 15;
 		ChickStrobe : out boolean;
-		ChickPower : out types.chicker_power_t;
+		ChickPower : out chicker_power_t;
 		EncodersStrobe : out boolean;
 
 		ChickerPresent : in boolean;
-		CapacitorVoltage : in types.capacitor_voltage_t;
-		EncodersCount : in types.encoders_count_t);
+		CapacitorVoltage : in capacitor_voltage_t;
+		EncodersCount : in encoders_count_t);
 end entity Parbus;
 
 architecture Behavioural of Parbus is

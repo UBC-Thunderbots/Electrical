@@ -1,13 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.types;
+use work.types.all;
 
 entity Chicker is
 	port(
 		ClockHigh : in std_ulogic;
 		ClockLow : in std_ulogic;
 		Strobe : in boolean;
-		Power : in types.chicker_power_t;
+		Power : in chicker_power_t;
 		Active : out boolean);
 end entity Chicker;
 
@@ -22,7 +22,7 @@ begin
 		Output => StrobeLow);
 
 	process(ClockLow) is
-		variable Counter : types.chicker_power_t := 0;
+		variable Counter : chicker_power_t := 0;
 	begin
 		if rising_edge(ClockLow) then
 			if StrobeLow then

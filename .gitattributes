@@ -100,13 +100,6 @@ vhdl/common/pwm.vhd -text
 vhdl/common/syncdown.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
-vhdl/sim/brushlesscontrollertest.vhd -text
-vhdl/sim/cputest.vhd -text
-vhdl/sim/graycountertest.vhd -text
-vhdl/sim/serialreceivertest.vhd -text
-vhdl/sim/serialtransmittertest.vhd -text
-vhdl/sim/xbeebytereceivertest.vhd -text
-vhdl/sim/xbeebytetransmittertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/pintypes.vhd -text
 vhdl/synth/top.vhd -text

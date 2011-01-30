@@ -3,9 +3,9 @@ library unisim;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use unisim.vcomponents.all;
-use work.clock;
-use work.pintypes;
-use work.types;
+use work.clock.all;
+use work.pintypes.all;
+use work.types.all;
 
 entity Top is
 	port(
@@ -17,10 +17,10 @@ entity Top is
 		ParbusReadPin : in std_ulogic;
 		ParbusWritePin : in std_ulogic;
 		LEDsPin : out std_ulogic_vector(3 downto 0);
-		EncodersPin : in pintypes.encoders_t;
-		MotorsPhasesPPin : out pintypes.motors_phases_t;
-		MotorsPhasesNPin : out pintypes.motors_phases_t;
-		HallsPin : in pintypes.halls_t;
+		EncodersPin : in encoders_pin_t;
+		MotorsPhasesPPin : out motors_phases_pin_t;
+		MotorsPhasesNPin : out motors_phases_pin_t;
+		HallsPin : in halls_pin_t;
 		ChickerMISOPin : in std_ulogic;
 		ChickerCLKPin : out std_ulogic;
 		ChickerCSPin : out std_ulogic;
@@ -41,10 +41,10 @@ architecture Behavioural of Top is
 	signal ParbusDataOut : std_ulogic_vector(7 downto 0);
 	signal ParbusRead : boolean;
 	signal ParbusWrite : boolean;
-	signal LEDs : types.leds_t;
-	signal Encoders : types.encoders_t;
-	signal MotorsPhases : types.motors_phases_t;
-	signal Halls : types.halls_t;
+	signal LEDs : leds_t;
+	signal Encoders : encoders_t;
+	signal MotorsPhases : motors_phases_t;
+	signal Halls : halls_t;
 	signal ChickerMISO : boolean;
 	signal ChickerCLK : boolean;
 	signal ChickerCS : boolean;
@@ -110,8 +110,8 @@ begin
 	GenerateMotorsPhasesPin: for I in 1 to 5 generate
 		GenerateMotorPhasesPin: for J in 0 to 2 generate
 			-- Note inversion in level shifters!
-			MotorsPhasesPPin(I)(J) <= '1' when MotorsPhases(I)(J) = types.HIGH else '0';
-			MotorsPhasesNPin(I)(J) <= '0' when MotorsPhases(I)(J) = types.LOW else '1';
+			MotorsPhasesPPin(I)(J) <= '1' when MotorsPhases(I)(J) = HIGH else '0';
+			MotorsPhasesNPin(I)(J) <= '0' when MotorsPhases(I)(J) = LOW else '1';
 		end generate;
 	end generate;
 	ChickerCLKPin <= '0' when ChickerCLK else '1';

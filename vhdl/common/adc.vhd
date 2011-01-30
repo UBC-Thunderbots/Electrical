@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.types;
+use work.types.all;
 
 entity ADC is
 	port(
@@ -9,7 +9,7 @@ entity ADC is
 		MISO : in boolean;
 		CLK : out boolean;
 		CS : out boolean;
-		Level : out types.capacitor_voltage_t := 0);
+		Level : out capacitor_voltage_t := 0);
 end entity ADC;
 
 architecture Behavioural of ADC is

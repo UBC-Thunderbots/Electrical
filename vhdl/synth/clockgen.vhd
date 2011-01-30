@@ -3,7 +3,7 @@ library unisim;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use unisim.vcomponents.all;
-use work.clock;
+use work.clock.all;
 
 entity ClockGen is
 	port(
@@ -45,8 +45,8 @@ architecture Behavioural of ClockGen is
 
 	-- These will evaluate to negative numbers if the frequencies are not exact multiples,
 	-- which will fail the assignment to natural.
-	constant ClockLowCheck : natural := -(clock.MidFrequency mod clock.LowFrequency);
-	constant ClockHighCheck : natural := -(clock.HighFrequency mod clock.MidFrequency);
+	constant ClockLowCheck : natural := -(ClockMidFrequency mod ClockLowFrequency);
+	constant ClockHighCheck : natural := -(ClockHighFrequency mod ClockMidFrequency);
 begin
 	IBufferG : IBufG
 	port map(
@@ -57,8 +57,8 @@ begin
 	DCM : DCM_SP
 	generic map(
 		CLKIN_PERIOD => 125.0,
-		CLKDV_DIVIDE => real(clock.MidFrequency / clock.LowFrequency),
-		CLKFX_MULTIPLY => clock.HighFrequency / clock.MidFrequency,
+		CLKDV_DIVIDE => real(ClockMidFrequency / ClockLowFrequency),
+		CLKFX_MULTIPLY => ClockHighFrequency / ClockMidFrequency,
 		CLKFX_DIVIDE => 1,
 		STARTUP_WAIT => false)
 	port map(

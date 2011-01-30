@@ -1,22 +1,22 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.types;
+use work.types.all;
 
 entity GrayCounter is
 	port(
 		Clock : in std_ulogic;
-		Input : in types.encoder_t;
+		Input : in encoder_t;
 		Strobe : in boolean;
-		Value : out types.encoder_count_t);
+		Value : out encoder_count_t);
 end entity GrayCounter;
 
 architecture Behavioural of GrayCounter is
 begin
 	process(Clock)
 		type DeltaType is (NONE, ADD, SUB);
-		variable OldInput : types.encoder_t;
+		variable OldInput : encoder_t;
 		variable Delta : DeltaType;
-		variable ValueTemp : types.encoder_count_t := 0;
+		variable ValueTemp : encoder_count_t := 0;
 	begin
 		if rising_edge(Clock) then
 			if Strobe then

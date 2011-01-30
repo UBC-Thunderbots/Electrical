@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.types;
+use ieee.numeric_std.all;
+use work.types.all;
 
 entity Main is
 	port(
@@ -11,10 +12,10 @@ entity Main is
 		ParbusDataOut : out std_ulogic_vector(7 downto 0);
 		ParbusRead : in boolean;
 		ParbusWrite : in boolean;
-		LEDs : out types.leds_t;
-		Encoders : in types.encoders_t;
-		MotorsPhases : out types.motors_phases_t;
-		Halls : in types.halls_t;
+		LEDs : out leds_t;
+		Encoders : in encoders_t;
+		MotorsPhases : out motors_phases_t;
+		Halls : in halls_t;
 		ChickerMISO : in boolean;
 		ChickerCLK : out boolean;
 		ChickerCS : out boolean;
@@ -27,22 +28,22 @@ end entity Main;
 architecture Behavioural of Main is
 	signal EnableMotors : boolean;
 	signal EnableCharger : boolean;
-	signal MotorsDirection : types.motors_direction_t;
-	signal MotorsPower : types.motors_power_t;
-	signal BatteryVoltageHigh : types.battery_voltage_t;
-	signal TestMode : types.test_mode_t;
+	signal MotorsDirection : motors_direction_t;
+	signal MotorsPower : motors_power_t;
+	signal BatteryVoltageHigh : battery_voltage_t;
+	signal TestMode : test_mode_t;
 	signal TestIndex : natural range 0 to 15;
 	signal ChickStrobe : boolean;
-	signal ChickPower : types.chicker_power_t;
-	signal BatteryVoltageLow : types.battery_voltage_t;
-	signal CapacitorVoltage : types.capacitor_voltage_t;
-	signal EncodersCount : types.encoders_count_t;
+	signal ChickPower : chicker_power_t;
+	signal BatteryVoltageLow : battery_voltage_t;
+	signal CapacitorVoltage : capacitor_voltage_t;
+	signal EncodersCount : encoders_count_t;
 	signal EncodersStrobe : boolean;
 	signal ChickerFault : boolean;
 	signal ChickerActivity : boolean;
 	signal ChickActive : boolean;
 begin
-	Parbus: entity Parbus(Behavioural)
+	Parbus: entity work.Parbus(Behavioural)
 	port map(
 		Clock => ClockHigh,
 		ParbusDataIn => ParbusDataIn,
@@ -75,7 +76,7 @@ begin
 	end process;
 
 	GenerateMotor: for I in 1 to 5 generate
-		Motor: entity Motor(Behavioural)
+		Motor: entity work.Motor(Behavioural)
 		generic map(
 			PWMMax => 255)
 		port map(
@@ -91,7 +92,7 @@ begin
 	end generate;
 
 	GenerateGrayCounter: for I in 1 to 4 generate
-		GrayCounter: entity GrayCounter(Behavioural)
+		GrayCounter: entity work.GrayCounter(Behavioural)
 		port map(
 			Clock => ClockHigh,
 			Input => Encoders(I),
@@ -99,7 +100,7 @@ begin
 			Value => EncodersCount(I));
 	end generate;
 
-	ADC: entity ADC(Behavioural)
+	ADC: entity work.ADC(Behavioural)
 	port map(
 		Clock => ClockLow,
 		MISO => ChickerMISO,
@@ -107,7 +108,7 @@ begin
 		CS => ChickerCS,
 		Level => CapacitorVoltage);
 
-	Chicker: entity Chicker(Behavioural)
+	Chicker: entity work.Chicker(Behavioural)
 	port map(
 		ClockHigh => ClockHigh,
 		ClockLow => ClockLow,
@@ -117,7 +118,7 @@ begin
 
 	Kick <= ChickActive;
 
-	BoostController: entity BoostController(Behavioural)
+	BoostController: entity work.BoostController(Behavioural)
 	port map(
 		Clock => ClockLow,
 		Enable => EnableCharger,
@@ -130,27 +131,27 @@ begin
 	process(TestMode, Halls, Encoders, ChickerActivity, ChickerFault) is
 	begin
 		case TestMode is
-			when types.NONE =>
+			when NONE =>
 				LEDs <= (others => false);
 
-			when types.LAMPTEST =>
+			when LAMPTEST =>
 				LEDs <= (others => true);
 
-			when types.HALL =>
+			when HALL =>
 				for I in 0 to 2 loop
 					LEDs(I) <= Halls(TestIndex)(I);
 				end loop;
 				LEDs(3) <= false;
 
-			when types.ENCODER_LINES =>
+			when ENCODER_LINES =>
 				LEDs <= (0 => Encoders(TestIndex)(0), 1 => Encoders(TestIndex)(1), others => false);
 
-			when types.ENCODER_COUNT =>
+			when ENCODER_COUNT =>
 				for I in 0 to 3 loop
 					LEDs(I) <= to_unsigned(EncodersCount(TestIndex), 4)(I) = '1';
 				end loop;
 
-			when types.BOOSTCONVERTER =>
+			when BOOSTCONVERTER =>
 				LEDs <= (0 => ChickerActivity, 1 => ChickerFault, others => false);
 		end case;
 	end process;
