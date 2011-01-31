@@ -42,20 +42,22 @@ begin
 		Output => PWMOutput);
 
 	GeneratePhases: for I in 0 to 2 generate
-		process(Enable, CommutatorPhases(I), PWMOutput) is
+		process(ClockHigh) is
 		begin
-			if Enable then
-				if CommutatorPhases(I) = HIGH then
-					if PWMOutput then
-						PWMPhases(I) <= HIGH;
+			if rising_edge(ClockHigh) then
+				if Enable then
+					if CommutatorPhases(I) = HIGH then
+						if PWMOutput then
+							PWMPhases(I) <= HIGH;
+						else
+							PWMPhases(I) <= FLOAT;
+						end if;
 					else
-						PWMPhases(I) <= FLOAT;
+						PWMPhases(I) <= CommutatorPhases(I);
 					end if;
 				else
-					PWMPhases(I) <= CommutatorPhases(I);
+					PWMPhases(I) <= FLOAT;
 				end if;
-			else
-				PWMPhases(I) <= FLOAT;
 			end if;
 		end process;
 
