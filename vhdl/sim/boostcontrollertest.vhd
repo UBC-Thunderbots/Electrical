@@ -13,23 +13,23 @@ architecture Behavioural of BoostControllerTest is
 	signal ClockLow : std_logic := '0';
 	signal CapVoltage : natural range 0 to 4095;
 	signal BattVoltage : natural range 0 to 1023;
-	signal Fault : boolean;
+	signal Timeout : boolean;
 	signal Enable : boolean := false;
 	signal Charge : boolean;
 	signal Activity : boolean;
 	signal CapVoltageReal : real := 14.4;
 	signal BattVoltageReal : real := 14.4; 
 	signal InductorCurrent : real := 0.0;
-	signal InductorQuant : natural range 0 to 1000;
+	signal InductorCurrentMilliamps : natural;
 begin
 	UUT: entity work.BoostController(Behavioural)
 	port map(
-		Clock => ClockLow,
+		ClockLow => ClockLow,
 		Enable => Enable,
 		CapacitorVoltage => CapVoltage,
 		BatteryVoltage => BattVoltage,
 		Charge => Charge,
-		Fault => Fault,
+		Timeout => Timeout,
 		Activity => Activity);
 
 	process
@@ -52,19 +52,15 @@ begin
 		wait for 4.5 * ClockLowTime;
 		Enable <= true;
 		wait for 2 * ClockLowTime;
-		while Activity and not Fault loop
+		while Activity and not Timeout loop
 			wait for 876 * ClockLowTime;
 			CapVoltage <= natural(CapVoltageReal / MaxCap * 4095.0);
 		end loop;
 
-		while not Activity and not Fault loop
-			wait for 876 * ClockLowTime;
-			CapVoltage <= natural(CapVoltageReal / MaxCap * 4095.0);
-		end loop;
-		
-		if Fault then -- capture some data after faulting
-			wait for 500 ms;
-		end if;
+		assert not Timeout;
+		assert CapVoltageReal >= 227.0;
+
+		wait for 250 ms;
 		
 		Done <= true;
 		wait;
@@ -72,25 +68,28 @@ begin
 
 	process(ClockLow)
 		variable CapVoltageDrop : real;
+		variable NewInductorCurrent : real;
 	begin
 		if rising_edge(ClockLow) then
 			CapVoltageDrop := CapVoltageReal / 220.0e3 / 4.5e-3 * 1.0e-6;
 			
 			if Charge then
-				InductorCurrent <= InductorCurrent + BattVoltageReal / 22.0e-6 * 1.0e-6;
+				NewInductorCurrent := InductorCurrent + BattVoltageReal / 22.0e-6 * 1.0e-6;
 				CapVoltageReal <= CapVoltageReal - CapVoltageDrop;
 			else
-				InductorCurrent <= InductorCurrent - (CapVoltageReal + 0.7 - BattVoltageReal) * 1.0e-6 / 22.0e-6;
+				NewInductorCurrent := InductorCurrent - (CapVoltageReal + 0.7 - BattVoltageReal) * 1.0e-6 / 22.0e-6;
 				CapVoltageReal <= CapVoltageReal + InductorCurrent / 4.5e-3 * 1.0e-6 - CapVoltageDrop;
 			end if;
 
-			if InductorCurrent < 0.0 then
-				InductorCurrent <= 0.0;
-			else
-				InductorQuant <= natural(InductorCurrent);
+			if NewInductorCurrent < 0.0 then
+				NewInductorCurrent := 0.0;
 			end if;
+
+			InductorCurrent <= NewInductorCurrent;
 		end if;
 	end process;
 
-	assert InductorCurrent <= 10.5;
+	InductorCurrentMilliamps <= natural(InductorCurrent * 1000.0);
+
+	assert InductorCurrent <= 10.5 severity failure;
 end architecture Behavioural;

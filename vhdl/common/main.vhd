@@ -39,7 +39,7 @@ architecture Behavioural of Main is
 	signal CapacitorVoltage : capacitor_voltage_t;
 	signal EncodersCount : encoders_count_t;
 	signal EncodersStrobe : boolean;
-	signal ChickerFault : boolean;
+	signal ChickerTimeout : boolean;
 	signal ChickerActivity : boolean;
 	signal ChickActive : boolean;
 begin
@@ -120,15 +120,15 @@ begin
 
 	BoostController: entity work.BoostController(Behavioural)
 	port map(
-		Clock => ClockLow,
+		ClockLow => ClockLow,
 		Enable => EnableCharger,
 		CapacitorVoltage => CapacitorVoltage,
 		BatteryVoltage => BatteryVoltageLow,
 		Charge => ChickerCharge,
-		Fault => ChickerFault,
+		Timeout => ChickerTimeout,
 		Activity => ChickerActivity);
 
-	process(TestMode, Halls, Encoders, ChickerActivity, ChickerFault) is
+	process(TestMode, Halls, Encoders, ChickerActivity, ChickerTimeout) is
 	begin
 		case TestMode is
 			when NONE =>
@@ -152,7 +152,7 @@ begin
 				end loop;
 
 			when BOOSTCONVERTER =>
-				LEDs <= (0 => ChickerActivity, 1 => ChickerFault, others => false);
+				LEDs <= (0 => ChickerActivity, 1 => ChickerTimeout, others => false);
 		end case;
 	end process;
 end architecture Behavioural;
