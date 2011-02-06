@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Saturday, February 05, 2011 PM02:34:17 PST
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Saturday, February 05, 2011 PM09:50:01 PST
 
 BeginCmp
 TimeStamp = /4D447CC6;
@@ -92,13 +92,6 @@ IdModule  = ICSP;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D44783B;
-Reference = P2;
-ValeurCmp = CONN_6X2;
-IdModule  = SIL-12-BIGPINS;
-EndCmp
-
-BeginCmp
 TimeStamp = /4D4476DC;
 Reference = P3;
 ValeurCmp = CONN_9X2;
@@ -110,6 +103,13 @@ TimeStamp = /4D4DB1A3;
 Reference = P4;
 ValeurCmp = CONN_2;
 IdModule  = SIL-2_bigpins;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D4E339B;
+Reference = P5;
+ValeurCmp = CONN_9X2;
+IdModule  = SIL-18-BIGPINS;
 EndCmp
 
 BeginCmp
