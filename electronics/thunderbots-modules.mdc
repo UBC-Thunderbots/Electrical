@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2011-01-03T23:03:11 PST
+PCBNEW-LibDoc----V1  Saturday, February 12, 2011 PM02:01:29 PST
 #
 $MODULE D2
 Li D2
@@ -143,6 +143,24 @@ $EndMODULE
 $MODULE SIL-12-BIGPINS
 Li SIL-12-BIGPINS
 Cd Connecteur 12 pins
+Kw CONN DEV
+$EndMODULE
+#
+$MODULE SIL-2_bigpins
+Li SIL-2_bigpins
+Cd Connecteurs 2 pins
+Kw CONN DEV
+$EndMODULE
+#
+$MODULE LM78XX_VERT
+Li LM78XX_VERT
+Cd Regulateur TO220 serie LM78xx
+Kw TR TO220
+$EndMODULE
+#
+$MODULE SIL-10-BIGPINS
+Li SIL-10-BIGPINS
+Cd Connecteur 10 pins
 Kw CONN DEV
 $EndMODULE
 #
