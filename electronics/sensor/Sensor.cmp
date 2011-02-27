@@ -1,0 +1,115 @@
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 26 Feb 2011 12:30:07 PM PST
+
+BeginCmp
+TimeStamp = /4D605DE4;
+Reference = C1;
+ValeurCmp = 0.1u;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D605E15;
+Reference = C2;
+ValeurCmp = 0.1u;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D60593D;
+Reference = P1;
+ValeurCmp = CONN_5;
+IdModule  = WM7624CT-ND;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B1F4749;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B1F474B;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D75C;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7A9;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7BC;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7CB;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B1F46E6;
+Reference = U1;
+ValeurCmp = MIC7300;
+IdModule  = SOT23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D6A6;
+Reference = U3;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7A5;
+Reference = U5;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7B8;
+Reference = U7;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7C7;
+Reference = U9;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D6055BC;
+Reference = U10;
+ValeurCmp = 74AHC74;
+IdModule  = SO14E;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D605830;
+Reference = U11;
+ValeurCmp = 74AHC74;
+IdModule  = SO14E;
+EndCmp
+
+EndListe

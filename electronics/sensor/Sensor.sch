@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 25 Feb 2011 10:22:26 PM PST
+EESchema Schematic File Version 2  date Sat 26 Feb 2011 02:26:55 PM PST
 LIBS:power
 LIBS:thunderbots-symbols
 LIBS:device
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "20 feb 2011"
+Date "26 feb 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +44,24 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L 74AHC74 U11
+U 1 1 4D697DD2
+P 6500 5750
+F 0 "U11" H 6550 6200 60  0000 C CNN
+F 1 "74AHC74" H 6500 5750 60  0000 C CNN
+	1    6500 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74AHC74 U10
+U 1 1 4D697DC4
+P 3650 5750
+F 0 "U10" H 3700 6200 60  0000 C CNN
+F 1 "74AHC74" H 3650 5750 60  0000 C CNN
+	1    3650 5750
+	1    0    0    -1  
+$EndComp
 $Comp
 L VCC #PWR01
 U 1 1 4D605E61
@@ -60,15 +78,6 @@ P 7200 5450
 F 0 "#PWR02" H 7200 5550 30  0001 C CNN
 F 1 "VCC" H 7200 5550 30  0000 C CNN
 	1    7200 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74AHC74 U11
-U 1 1 4D605830
-P 6500 5750
-F 0 "U11" H 6550 6200 60  0000 C CNN
-F 1 "74AHC74" H 6500 5750 60  0000 C CNN
-	1    6500 5750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -395,15 +404,6 @@ P 1250 4650
 F 0 "#PWR010" H 1250 4650 30  0001 C CNN
 F 1 "GND" H 1250 4580 30  0001 C CNN
 	1    1250 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74AHC74 U10
-U 1 1 4D6055BC
-P 3650 5750
-F 0 "U10" H 3700 6200 60  0000 C CNN
-F 1 "74AHC74" H 3650 5750 60  0000 C CNN
-	1    3650 5750
 	1    0    0    -1  
 $EndComp
 $Comp
