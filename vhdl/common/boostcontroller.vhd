@@ -94,7 +94,7 @@ begin
 	Activity <= ActivityBuffer;
 
 	-- This process controls the actual switch timing;
-	process(ClockLow)
+	process(ClockLow, TimeoutBuffer)
 		type state_t is (ONTIME,OFFTIME,WAITING); --! permissable states for the dutycycle
 		variable State : state_t := WAITING;
 		variable Counter : natural range 0 to CounterMax + MaxIncrement;
