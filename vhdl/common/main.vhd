@@ -34,14 +34,16 @@ architecture Behavioural of Main is
 	signal TestMode : test_mode_t;
 	signal TestIndex : natural range 0 to 15;
 	signal ChickStrobe : boolean;
-	signal ChickPower : chicker_power_t;
+	signal ChickPower : chicker_powers_t;
+	signal ChickOffset : chicker_offset_t;
+	signal ChickOffsetDisableMask : chicker_offset_disable_mask_t;
 	signal BatteryVoltageLow : battery_voltage_t;
 	signal CapacitorVoltage : capacitor_voltage_t;
 	signal EncodersCount : encoders_count_t;
 	signal EncodersStrobe : boolean;
 	signal ChickerTimeout : boolean;
 	signal ChickerActivity : boolean;
-	signal ChickActive : boolean;
+	signal ChickActive : chicker_active_t;
 begin
 	Parbus: entity work.Parbus(Behavioural)
 	port map(
@@ -59,6 +61,8 @@ begin
 		TestIndex => TestIndex,
 		ChickStrobe => ChickStrobe,
 		ChickPower => ChickPower,
+		ChickOffset => ChickOffset,
+		ChickOffsetDisableMask => ChickOffsetDisableMask,
 		EncodersStrobe => EncodersStrobe,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
@@ -114,9 +118,12 @@ begin
 		ClockLow => ClockLow,
 		Strobe => ChickStrobe,
 		Power => ChickPower,
+		Offset => ChickOffset,
+		OffsetDisableMask => ChickOffsetDisableMask,
 		Active => ChickActive);
 
-	Kick <= ChickActive;
+	Kick <= ChickActive(1);
+	Chip <= ChickActive(2);
 
 	BoostController: entity work.BoostController(Behavioural)
 	port map(

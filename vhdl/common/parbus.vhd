@@ -120,7 +120,9 @@ entity ParbusRegisterMap is
 		TestMode : out test_mode_t := NONE;
 		TestIndex : out natural range 0 to 15 := 0;
 		ChickStrobe : out boolean := false;
-		ChickPower : out chicker_power_t := 0;
+		ChickPower : out chicker_powers_t := (others => 0);
+		ChickOffset : out chicker_offset_t := 0;
+		ChickOffsetDisableMask : out chicker_offset_disable_mask_t := (others => false);
 		EncodersStrobe : out boolean := false;
 
 		ChickerPresent : in boolean;
@@ -179,10 +181,9 @@ begin
 						end case;
 						TestIndex <= to_integer(unsigned(WriteData(3 downto 0)));
 
-					-- Address 7 has chicker firing control.
+					-- Address 7 is unused.
 					when 7 =>
-						ChickPower <= to_integer(unsigned(WriteData(11 downto 0)));
-						ChickStrobe <= true;
+						null;
 
 					-- Address 8 has battery voltage.
 					when 8 =>
@@ -191,6 +192,21 @@ begin
 					-- Address 9 latches and resets the encoder counts.
 					when 9 =>
 						EncodersStrobe <= true;
+
+					-- Address 10 has solenoid #1 pulse width.
+					when 10 =>
+						ChickPower(1) <= to_integer(unsigned(WriteData(13 downto 0)));
+
+					-- Address 11 has solenoid #2 pulse width.
+					when 11 =>
+						ChickPower(2) <= to_integer(unsigned(WriteData(13 downto 0)));
+
+					-- Address 12 has solenoid time offset, offset disable mask, and fire strobe.
+					when 12 =>
+						ChickOffsetDisableMask(1) <= WriteData(15) = '1';
+						ChickOffsetDisableMask(2) <= WriteData(14) = '1';
+						ChickOffset <= to_integer(unsigned(WriteData(13 downto 0)));
+						ChickStrobe <= true;
 
 					-- Remaining addresses are unimplemented.
 					when others =>
@@ -223,7 +239,9 @@ entity Parbus is
 		TestMode : out test_mode_t;
 		TestIndex : out natural range 0 to 15;
 		ChickStrobe : out boolean;
-		ChickPower : out chicker_power_t;
+		ChickPower : out chicker_powers_t;
+		ChickOffset : out chicker_offset_t := 0;
+		ChickOffsetDisableMask : out chicker_offset_disable_mask_t := (others => false);
 		EncodersStrobe : out boolean;
 
 		ChickerPresent : in boolean;
@@ -265,6 +283,8 @@ begin
 		TestIndex => TestIndex,
 		ChickStrobe => ChickStrobe,
 		ChickPower => ChickPower,
+		ChickOffset => ChickOffset,
+		ChickOffsetDisableMask => ChickOffsetDisableMask,
 		EncodersStrobe => EncodersStrobe,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,

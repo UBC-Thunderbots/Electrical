@@ -7,8 +7,10 @@ entity Chicker is
 		ClockHigh : in std_ulogic;
 		ClockLow : in std_ulogic;
 		Strobe : in boolean;
-		Power : in chicker_power_t;
-		Active : out boolean);
+		Power : in chicker_powers_t;
+		Offset : in chicker_offset_t;
+		OffsetDisableMask : in chicker_offset_disable_mask_t;
+		Active : out chicker_active_t);
 end entity Chicker;
 
 architecture Behavioural of Chicker is
@@ -21,17 +23,26 @@ begin
 		Input => Strobe,
 		Output => StrobeLow);
 
-	process(ClockLow) is
-		variable Counter : chicker_power_t := 0;
+	process(ClockLow, Power, OffsetDisableMask) is
+		variable PulseCounter : chicker_power_t := chicker_power_t'high;
+		variable OffsetCounter : chicker_offset_t := 0;
 	begin
 		if rising_edge(ClockLow) then
 			if StrobeLow then
-				Counter := Power;
-			elsif Counter /= 0 then
-				Counter := Counter - 1;
+				PulseCounter := 0;
+				OffsetCounter := Offset;
+			else
+				if PulseCounter /= chicker_power_t'high then
+					PulseCounter := PulseCounter + 1;
+				end if;
+				if OffsetCounter /= 0 then
+					OffsetCounter := OffsetCounter - 1;
+				end if;
 			end if;
 		end if;
 
-		Active <= Counter /= 0;
+		for I in 1 to 2 loop
+			Active(I) <= PulseCounter < Power(I) and (OffsetCounter = 0 or OffsetDisableMask(I));
+		end loop;
 	end process;
 end architecture Behavioural;
