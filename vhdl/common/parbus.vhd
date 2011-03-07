@@ -143,7 +143,7 @@ begin
 		-- Addresses 2 through 5 have encoders 1 through 4 deltas.
 		std_ulogic_vector(to_signed(EncodersCount(Address - 1), 16)) when Address = 2 or Address = 3 or Address = 4 or Address = 5 else
 
-		-- Address 6 has capacitr voltage.
+		-- Address 6 has capacitor voltage.
 		std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)) when Address = 6 else
 
 		-- Remaining addresses are unimplemented.
