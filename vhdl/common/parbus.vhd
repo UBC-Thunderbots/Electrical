@@ -127,7 +127,8 @@ entity ParbusRegisterMap is
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in capacitor_voltage_t;
-		EncodersCount : in encoders_count_t);
+		EncodersCount : in encoders_count_t;
+		FlashCRC : in std_ulogic_vector(15 downto 0));
 end entity ParbusRegisterMap;
 
 architecture Behavioural of ParbusRegisterMap is
@@ -145,6 +146,9 @@ begin
 
 		-- Address 6 has capacitor voltage.
 		std_ulogic_vector(to_unsigned(CapacitorVoltage, 16)) when Address = 6 else
+
+		-- Address 7 has SPI flash CRC16.
+		FlashCRC when Address = 7 else
 
 		-- Remaining addresses are unimplemented.
 		X"0000";
@@ -246,7 +250,8 @@ entity Parbus is
 
 		ChickerPresent : in boolean;
 		CapacitorVoltage : in capacitor_voltage_t;
-		EncodersCount : in encoders_count_t);
+		EncodersCount : in encoders_count_t;
+		FlashCRC : in std_ulogic_vector(15 downto 0));
 end entity Parbus;
 
 architecture Behavioural of Parbus is
@@ -288,5 +293,6 @@ begin
 		EncodersStrobe => EncodersStrobe,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
-		EncodersCount => EncodersCount);
+		EncodersCount => EncodersCount,
+		FlashCRC => FlashCRC);
 end architecture Behavioural;

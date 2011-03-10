@@ -22,6 +22,12 @@ net "ParbusDataPin<7>" iostandard=LVCMOS33 | float | slew=fast | loc=P16;
 net "ParbusReadPin" iostandard=LVCMOS33 | float | loc=P141;
 net "ParbusWritePin" iostandard=LVCMOS33 | float | loc=P142;
 
+# SPI flash
+net "FlashCSPin" iostandard=LVCMOS33 | slew=fast | pullup | loc=P41;
+net "FlashClockPin" iostandard=LVCMOS33 | slew=fast | loc=P72;
+net "FlashMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P62;
+net "FlashMISOPin" iostandard=LVCMOS33 | slew=fast | loc=P71;
+
 # LEDs
 net "LEDsPin<0>" iostandard=LVCMOS33 | slew=quietio | loc=P101;
 net "LEDsPin<1>" iostandard=LVCMOS33 | slew=quietio | loc=P99;

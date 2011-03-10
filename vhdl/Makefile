@@ -2,7 +2,7 @@
 PROJ := thunderbots
 
 # The names of all the top-level test targets.
-SIM_TARGETS := boostcontrollertest
+SIM_TARGETS := boostcontrollertest crc16test flashchecksummertest
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -27,7 +27,11 @@ ghdl/obj/boostcontroller.o : ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/boostcontrollertest.o : ghdl/obj/boostcontroller.o ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/chicker.o : ghdl/obj/syncdown.o ghdl/obj/types.o
 ghdl/obj/commutator.o : ghdl/obj/types.o
+ghdl/obj/crc16.o :
+ghdl/obj/crc16test.o : ghdl/obj/crc16.o
 ghdl/obj/deadband.o : ghdl/obj/clock.o ghdl/obj/types.o
+ghdl/obj/flashchecksummer.o : ghdl/obj/clock.o ghdl/obj/crc16.o
+ghdl/obj/flashchecksummertest.o : ghdl/obj/clock.o ghdl/obj/flashchecksummer.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o
 ghdl/obj/main.o : ghdl/obj/adc.o ghdl/obj/boostcontroller.o ghdl/obj/chicker.o ghdl/obj/graycounter.o ghdl/obj/motor.o ghdl/obj/parbus.o ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/deadband.o ghdl/obj/pwm.o ghdl/obj/types.o

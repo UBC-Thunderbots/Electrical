@@ -12,6 +12,11 @@ entity Main is
 		ParbusDataOut : out std_ulogic_vector(7 downto 0);
 		ParbusRead : in boolean;
 		ParbusWrite : in boolean;
+		FlashDrive : out boolean;
+		FlashCS : out boolean;
+		FlashClock : out boolean;
+		FlashMOSI : out std_ulogic;
+		FlashMISO : in std_ulogic;
 		LEDs : out leds_t;
 		Encoders : in encoders_t;
 		MotorsPhases : out motors_phases_t;
@@ -44,6 +49,7 @@ architecture Behavioural of Main is
 	signal ChickerTimeout : boolean;
 	signal ChickerActivity : boolean;
 	signal ChickActive : chicker_active_t;
+	signal FlashCRC : std_ulogic_vector(15 downto 0);
 begin
 	Parbus: entity work.Parbus(Behavioural)
 	port map(
@@ -66,7 +72,8 @@ begin
 		EncodersStrobe => EncodersStrobe,
 		ChickerPresent => ChickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
-		EncodersCount => EncodersCount);
+		EncodersCount => EncodersCount,
+		FlashCRC => FlashCRC);
 
 	-- Parbus registers its output on ClockHigh.
 	-- BoostConverter runs entirely on ClockLow.
@@ -78,6 +85,16 @@ begin
 			BatteryVoltageLow <= BatteryVoltageHigh;
 		end if;
 	end process;
+
+	FlashChecksummer: entity work.FlashChecksummer(Behavioural)
+	port map(
+		ClockHigh => ClockHigh,
+		Drive => FlashDrive,
+		CS => FlashCS,
+		SPIClock => FlashClock,
+		MOSI => FlashMOSI,
+		MISO => FlashMISO,
+		CRC => FlashCRC);
 
 	GenerateMotor: for I in 1 to 5 generate
 		Motor: entity work.Motor(Behavioural)

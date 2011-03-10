@@ -16,6 +16,10 @@ entity Top is
 		ParbusDataPin : inout std_ulogic_vector(7 downto 0);
 		ParbusReadPin : in std_ulogic;
 		ParbusWritePin : in std_ulogic;
+		FlashCSPin : inout std_ulogic;
+		FlashClockPin : inout std_ulogic;
+		FlashMOSIPin : inout std_ulogic;
+		FlashMISOPin : in std_ulogic;
 		LEDsPin : out std_ulogic_vector(3 downto 0);
 		EncodersPin : in encoders_pin_t;
 		MotorsPhasesPPin : out motors_phases_pin_t;
@@ -41,6 +45,11 @@ architecture Behavioural of Top is
 	signal ParbusDataOut : std_ulogic_vector(7 downto 0);
 	signal ParbusRead : boolean;
 	signal ParbusWrite : boolean;
+	signal FlashDrive : boolean;
+	signal FlashCS : boolean;
+	signal FlashClock : boolean;
+	signal FlashMOSI : std_ulogic;
+	signal FlashMISO : std_ulogic;
 	signal LEDs : leds_t;
 	signal Encoders : encoders_t;
 	signal MotorsPhases : motors_phases_t;
@@ -87,6 +96,7 @@ begin
 			ParbusDataIn <= ParbusDataPin;
 			ParbusRead <= ParbusReadPin = '1';
 			ParbusWrite <= ParbusWritePin = '1';
+			FlashMISO <= FlashMISOPin;
 			for I in 1 to 4 loop
 				for J in 0 to 1 loop
 					Encoders(I)(J) <= EncodersPin(I)(J) = '1';
@@ -104,6 +114,9 @@ begin
 
 	-- Drive all output paths and do signal conversion.
 	ParbusDataPin <= ParbusDataOut when ParbusRead else (others => 'Z');
+	FlashCSPin <= 'Z' when not FlashDrive else '0' when FlashCS else '1';
+	FlashClockPin <= 'Z' when not FlashDrive else '1' when FlashClock else '0';
+	FlashMOSIPin <= 'Z' when not FlashDrive else FlashMOSI;
 	GenerateLEDsPin: for I in 0 to 3 generate
 		LEDsPin(I) <= '1' when LEDs(I) else '0';
 	end generate;
@@ -132,6 +145,11 @@ begin
 		ParbusDataOut => ParbusDataOut,
 		ParbusRead => ParbusRead,
 		ParbusWrite => ParbusWrite,
+		FlashDrive => FlashDrive,
+		FlashCS => FlashCS,
+		FlashClock => FlashClock,
+		FlashMOSI => FlashMOSI,
+		FlashMISO => FlashMISO,
 		LEDs => LEDs,
 		Encoders => Encoders,
 		MotorsPhases => MotorsPhases,
