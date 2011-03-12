@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 04 Jan 2011 09:39:15 PM PST
+EESchema Schematic File Version 2  date Sat 12 Mar 2011 12:28:19 PM PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,7 +35,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "5 jan 2011"
+Date "12 mar 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,6 +43,33 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L MCP1415 U4
+U 1 1 4D7BD74C
+P 6500 6250
+F 0 "U4" H 6500 6200 60  0000 C CNN
+F 1 "MCP1415" H 6500 6300 60  0000 C CNN
+	1    6500 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1415 U2
+U 1 1 4D7BD56F
+P 2350 6250
+F 0 "U2" H 2350 6200 60  0000 C CNN
+F 1 "MCP1415" H 2350 6300 60  0000 C CNN
+	1    2350 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1415 U1
+U 1 1 4D7BD568
+P 1950 3500
+F 0 "U1" H 1950 3450 60  0000 C CNN
+F 1 "MCP1415" H 1950 3550 60  0000 C CNN
+	1    1950 3500
+	1    0    0    -1  
+$EndComp
 $Comp
 L ADS7866IDBVT U3
 U 1 1 4D2403D7
@@ -232,15 +259,6 @@ F 0 "R3" V 1230 3850 50  0000 C CNN
 F 1 "330R" V 1150 3850 50  0000 C CNN
 F 2 "SM0805" H 1150 3850 60  0001 C CNN
 	1    1150 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCP1416 U1
-U 1 1 4D22533F
-P 1950 3500
-F 0 "U1" H 1950 3450 60  0000 C CNN
-F 1 "MCP1416" H 1950 3550 60  0000 C CNN
-	1    1950 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -552,24 +570,6 @@ P 2350 5650
 F 0 "#PWR024" H 2350 5600 20  0001 C CNN
 F 1 "+BATT" H 2350 5750 30  0000 C CNN
 	1    2350 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCP1416 U4
-U 1 1 4CEDC048
-P 6500 6250
-F 0 "U4" H 6500 6200 60  0000 C CNN
-F 1 "MCP1416" H 6500 6300 60  0000 C CNN
-	1    6500 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCP1416 U2
-U 1 1 4CEDC042
-P 2350 6250
-F 0 "U2" H 2350 6200 60  0000 C CNN
-F 1 "MCP1416" H 2350 6300 60  0000 C CNN
-	1    2350 6250
 	1    0    0    -1  
 $EndComp
 Text Label 4400 4900 2    60   ~ 0
