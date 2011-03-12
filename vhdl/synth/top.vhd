@@ -96,7 +96,6 @@ begin
 			ParbusDataIn <= ParbusDataPin;
 			ParbusRead <= ParbusReadPin = '1';
 			ParbusWrite <= ParbusWritePin = '1';
-			FlashMISO <= FlashMISOPin;
 			for I in 1 to 4 loop
 				for J in 0 to 1 loop
 					Encoders(I)(J) <= EncodersPin(I)(J) = '1';
@@ -111,6 +110,9 @@ begin
 			ChickerPresent <= ChickerPresentPin = '1';
 		end if;
 	end process;
+
+	-- FlashMISO is special, it is not registered here due to high speed.
+	FlashMISO <= FlashMISOPin;
 
 	-- Drive all output paths and do signal conversion.
 	ParbusDataPin <= ParbusDataOut when ParbusRead else (others => 'Z');
