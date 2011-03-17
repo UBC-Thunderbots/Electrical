@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Saturday, February 12, 2011 PM02:02:08 PST
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Thursday, March 17, 2011 PM12:51:51 PDT
 
 BeginCmp
 TimeStamp = /4D447CC6;
@@ -54,6 +54,20 @@ TimeStamp = /4D447C77;
 Reference = C8;
 ValeurCmp = 10uF;
 IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D82641B;
+Reference = C9;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D82639B;
+Reference = C10;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
@@ -117,6 +131,13 @@ TimeStamp = /4D57012B;
 Reference = P6;
 ValeurCmp = CONN_5X2;
 IdModule  = SIL-10-BIGPINS;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D826199;
+Reference = P7;
+ValeurCmp = CONN_5;
+IdModule  = UX60SC-MB-5ST;
 EndCmp
 
 BeginCmp
@@ -194,6 +215,13 @@ TimeStamp = /4D447BF2;
 Reference = U3;
 ValeurCmp = 7805;
 IdModule  = LM78XX_VERT;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D82610A;
+Reference = U4;
+ValeurCmp = FT232RL;
+IdModule  = SSOP28;
 EndCmp
 
 BeginCmp
