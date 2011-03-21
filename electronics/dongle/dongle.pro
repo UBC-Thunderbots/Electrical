@@ -1,4 +1,4 @@
-update=18/03/2011 10:30:41 AM
+update=20/03/2011 8:49:45 AM
 last_client=pcbnew
 [general]
 version=1
@@ -78,9 +78,9 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
+PadDrlX=0
+PadDimH=236
+PadDimV=394
 BoardThickness=630
 SgPcb45=1
 TxtPcbV=800
@@ -92,8 +92,8 @@ VEgarde=100
 DrawLar=150
 EdgeLar=150
 TxtLar=120
-MSegLar=150
-LastNetListRead=
+MSegLar=79
+LastNetListRead=dongle.net
 [pcbnew/libraries]
 LibDir=../../electronics
 LibName1=sockets

@@ -1,4 +1,11 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2010-12-24T18:02:29 PST
+Cmp-Mod V01 Created by CvPCB (2011-01-22 BZR 2754)-stable date = 20/03/2011 8:33:29 AM
+
+BeginCmp
+TimeStamp = /4D85FDC2;
+Reference = Buzzer1;
+ValeurCmp = SD1209T3-A1;
+IdModule  = Buzzer;
+EndCmp
 
 BeginCmp
 TimeStamp = /4C55144A;
@@ -71,9 +78,9 @@ IdModule  = SM1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C9FCFDC;
+TimeStamp = /4D85F930;
 Reference = C11;
-ValeurCmp = 100nF;
+ValeurCmp = 1uF;
 IdModule  = SM1206;
 EndCmp
 
@@ -99,6 +106,13 @@ IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
+TimeStamp = /4D8607F4;
+Reference = D4;
+ValeurCmp = DIODE;
+IdModule  = SOT23DIODE;
+EndCmp
+
+BeginCmp
 TimeStamp = /4C9FD7D0;
 Reference = K1;
 ValeurCmp = CONN_3;
@@ -117,6 +131,13 @@ TimeStamp = /4C54F757;
 Reference = P2;
 ValeurCmp = CONN_6;
 IdModule  = ICSP;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D8600AE;
+Reference = Q1;
+ValeurCmp = BC847A;
+IdModule  = SOT323-transistor;
 EndCmp
 
 BeginCmp
@@ -169,6 +190,13 @@ IdModule  = SM1206;
 EndCmp
 
 BeginCmp
+TimeStamp = /4D860340;
+Reference = R8;
+ValeurCmp = 10K;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
 TimeStamp = /4C54C37A;
 Reference = U1;
 ValeurCmp = XBEE;
@@ -176,9 +204,9 @@ IdModule  = XBee;
 EndCmp
 
 BeginCmp
-TimeStamp = /4C54C379;
+TimeStamp = /4D83914E;
 Reference = U2;
-ValeurCmp = PIC18F65J50;
+ValeurCmp = PIC18F67J50;
 IdModule  = TQFP_64;
 EndCmp
 
@@ -190,10 +218,10 @@ IdModule  = XBee;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CDF23F9;
+TimeStamp = /4D85F8A1;
 Reference = U4;
-ValeurCmp = LD1117V33C;
-IdModule  = TO220_123;
+ValeurCmp = XC6222B331PR;
+IdModule  = SOT89-5;
 EndCmp
 
 BeginCmp
