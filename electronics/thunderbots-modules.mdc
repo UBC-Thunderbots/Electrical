@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  Sat 26 Feb 2011 12:26:47 PM PST
+PCBNEW-LibDoc----V1  20/03/2011 8:32:45 AM
 #
 $MODULE D2
 Li D2
@@ -162,6 +162,11 @@ $MODULE SIL-10-BIGPINS
 Li SIL-10-BIGPINS
 Cd Connecteur 10 pins
 Kw CONN DEV
+$EndMODULE
+#
+$MODULE SOT323-transistor
+Li SOT323-transistor
+Kw SMD SOT
 $EndMODULE
 #
 $EndLIBDOC
