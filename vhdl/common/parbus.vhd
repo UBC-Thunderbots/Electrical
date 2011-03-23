@@ -235,8 +235,8 @@ entity Parbus is
 		ParbusRead : in boolean;
 		ParbusWrite : in boolean;
 
-		EnableMotors : out boolean := false;
-		EnableCharger : out boolean := false;
+		EnableMotors : out boolean;
+		EnableCharger : out boolean;
 		MotorsDirection : out motors_direction_t := (others => false);
 		MotorsPower : out motors_power_t := (others => 0);
 		BatteryVoltage : out battery_voltage_t;
