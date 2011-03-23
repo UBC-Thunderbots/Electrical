@@ -112,8 +112,9 @@ entity ParbusRegisterMap is
 		WriteData : in std_ulogic_vector(15 downto 0);
 		WriteStrobe : in boolean;
 
-		EnableMotors : out boolean := false;
+		EnableWheels : out boolean := false;
 		EnableCharger : out boolean := false;
+		EnableDribbler : out boolean := false;
 		MotorsDirection : out motors_direction_t := (others => false);
 		MotorsPower : out motors_power_t := (others => 0);
 		BatteryVoltage : out battery_voltage_t := 0;
@@ -165,8 +166,9 @@ begin
 				case Address is
 					-- Address 0 has general subsystem enable flags.
 					when 0 =>
-						EnableMotors <= to_boolean(WriteData(0));
+						EnableWheels <= to_boolean(WriteData(0));
 						EnableCharger <= to_boolean(WriteData(1));
+						EnableDribbler <= to_boolean(WriteData(2));
 
 					-- Addresses 1 through 5 have motor N direction and power.
 					when 1 | 2 | 3 | 4 | 5 =>
@@ -235,8 +237,9 @@ entity Parbus is
 		ParbusRead : in boolean;
 		ParbusWrite : in boolean;
 
-		EnableMotors : out boolean;
+		EnableWheels : out boolean;
 		EnableCharger : out boolean;
+		EnableDribbler : out boolean;
 		MotorsDirection : out motors_direction_t := (others => false);
 		MotorsPower : out motors_power_t := (others => 0);
 		BatteryVoltage : out battery_voltage_t;
@@ -279,8 +282,9 @@ begin
 		ReadData => ReadData,
 		WriteData => WriteData,
 		WriteStrobe => WriteStrobe,
-		EnableMotors => EnableMotors,
+		EnableWheels => EnableWheels,
 		EnableCharger => EnableCharger,
+		EnableDribbler => EnableDribbler,
 		MotorsDirection => MotorsDirection,
 		MotorsPower => MotorsPower,
 		BatteryVoltage => BatteryVoltage,

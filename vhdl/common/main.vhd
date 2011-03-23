@@ -31,8 +31,11 @@ entity Main is
 end entity Main;
 
 architecture Behavioural of Main is
-	signal EnableMotors : boolean;
+	type enable_motors_t is array(1 to 5) of boolean;
+	signal EnableWheels : boolean;
 	signal EnableCharger : boolean;
+	signal EnableDribbler : boolean;
+	signal EnableMotors : enable_motors_t;
 	signal MotorsDirection : motors_direction_t;
 	signal MotorsPower : motors_power_t;
 	signal BatteryVoltageHigh : battery_voltage_t;
@@ -58,8 +61,9 @@ begin
 		ParbusDataOut => ParbusDataOut,
 		ParbusRead => ParbusRead,
 		ParbusWrite => ParbusWrite,
-		EnableMotors => EnableMotors,
+		EnableWheels => EnableWheels,
 		EnableCharger => EnableCharger,
+		EnableDribbler => EnableDribbler,
 		MotorsDirection => MotorsDirection,
 		MotorsPower => MotorsPower,
 		BatteryVoltage => BatteryVoltageHigh,
@@ -96,6 +100,7 @@ begin
 		MISO => FlashMISO,
 		CRC => FlashCRC);
 
+	EnableMotors <= (5 => EnableDribbler, others => EnableWheels);
 	GenerateMotor: for I in 1 to 5 generate
 		Motor: entity work.Motor(Behavioural)
 		generic map(
@@ -103,7 +108,7 @@ begin
 		port map(
 			PWMClock => ClockMid,
 			ClockHigh => ClockHigh,
-			Enable => EnableMotors,
+			Enable => EnableMotors(I),
 			Power => MotorsPower(I),
 			Direction => MotorsDirection(I),
 			Hall => Halls(I),
