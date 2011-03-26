@@ -33,6 +33,7 @@ datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text sv
 datasheets/electromechanical/EC16.pdf -text
 datasheets/electromechanical/EC45.pdf -text
 datasheets/electromechanical/maxon_brushless_commutation.pdf -text svneol=unset#unset
+datasheets/ics/ADS7866.pdf -text
 datasheets/ics/LT3751.pdf -text
 datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
@@ -55,7 +56,6 @@ datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/In-System[!!-~]Flash[!!-~]Guide.pdf -
 datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Overview.pdf -text
 datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
 datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/ads7866.pdf -text
 datasheets/igbts/FGA180N33AT.pdf -text
 datasheets/mosfets/2N7000.pdf -text
 datasheets/mosfets/AO4616.pdf -text
