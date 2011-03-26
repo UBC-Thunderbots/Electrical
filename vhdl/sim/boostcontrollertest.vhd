@@ -47,14 +47,14 @@ begin
 	process
 	begin
 		Enable <= false;
-		CapVoltage <= natural(CapVoltageReal / MaxCap * 4095.0);
-		BattVoltage <= natural(BattVoltageReal / 18.3 * 1023.0);
+		CapVoltage <= natural(CapVoltageReal / MaxCap * 4096.0 + 0.5);
+		BattVoltage <= natural(BattVoltageReal / 18.3 * 1024.0);
 		wait for 4.5 * ClockLowTime;
 		Enable <= true;
 		wait for 2 * ClockLowTime;
 		while Activity and not Timeout loop
 			wait for 876 * ClockLowTime;
-			CapVoltage <= natural(CapVoltageReal / MaxCap * 4095.0);
+			CapVoltage <= natural(CapVoltageReal / MaxCap * 4096.0 + 0.5);
 		end loop;
 
 		assert not Timeout;
