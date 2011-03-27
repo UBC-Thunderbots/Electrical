@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2011-01-03T23:04:01 PST
+Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 26 Mar 2011 04:37:08 PM PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -113,6 +113,13 @@ IdModule  = SIL-2;
 EndCmp
 
 BeginCmp
+TimeStamp = /4D8E7804;
+Reference = P6;
+ValeurCmp = CONN_1;
+IdModule  = CHICKER_JUMPER;
+EndCmp
+
+BeginCmp
 TimeStamp = /4CE86D82;
 Reference = Q1;
 ValeurCmp = MOS_N;
@@ -162,37 +169,30 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D225394;
-Reference = R3;
-ValeurCmp = 330R;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /4D22533F;
+TimeStamp = /4D7BD568;
 Reference = U1;
-ValeurCmp = MCP1416;
+ValeurCmp = MCP1415;
 IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEDC042;
+TimeStamp = /4D7BD56F;
 Reference = U2;
-ValeurCmp = MCP1416;
+ValeurCmp = MCP1415;
 IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEDE351;
+TimeStamp = /4D2403D7;
 Reference = U3;
-ValeurCmp = ADC121S021;
+ValeurCmp = ADS7866IDBVT;
 IdModule  = SOT23_6_DRCHACK;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEDC048;
+TimeStamp = /4D7BD74C;
 Reference = U4;
-ValeurCmp = MCP1416;
+ValeurCmp = MCP1415;
 IdModule  = SOT23-5;
 EndCmp
 

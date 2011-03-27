@@ -1,13 +1,8 @@
-update=Saturday, January 29, 2011 PM02:14:26 PST
+update=Sat 26 Mar 2011 04:37:00 PM PDT
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=../../electronics
@@ -94,7 +89,6 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=chicker.net
 [pcbnew/libraries]
-LibDir=../../electronics
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -106,3 +100,9 @@ LibName8=valves
 LibName9=led
 LibName10=dip_sockets
 LibName11=thunderbots-modules
+LibDir=../../electronics
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
