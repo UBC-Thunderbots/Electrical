@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2010-11-27T12:10:50 PST
+EESchema Schematic File Version 2  date Sat 19 Mar 2011 03:06:07 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:motorcontroller_test_board-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
@@ -43,6 +44,24 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L GND #PWR?
+U 1 1 4D8528CC
+P 5900 5750
+F 0 "#PWR?" H 5900 5750 30  0001 C CNN
+F 1 "GND" H 5900 5680 30  0001 C CNN
+	1    5900 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4D8528CB
+P 5900 5350
+F 0 "#PWR?" H 5900 5350 30  0001 C CNN
+F 1 "GND" H 5900 5280 30  0001 C CNN
+	1    5900 5350
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	5900 4550 5900 3550
 Wire Wire Line
