@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 26 Mar 2011 05:06:43 PM PDT
+EESchema Schematic File Version 2  date Sun 27 Mar 2011 07:54:43 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:thunderbots-symbols
 LIBS:chicker-cache
 EELAYER 24  0
 EELAYER END

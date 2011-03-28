@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date Sat 26 Mar 2011 05:09:16 PM PDT
+PCBNEW-BOARD Version 1 date Sun 27 Mar 2011 07:55:20 PM PDT
 
 # Created by Pcbnew(2010-03-14)-final
 
@@ -6,7 +6,7 @@ $GENERAL
 LayerCount 2
 Ly 1FFF8001
 EnabledLayers 1FFF8001
-Links 79
+Links 80
 NoConn 0
 Di 13190 49909 47060 81825
 Ndraw 26
@@ -20,7 +20,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11700 8267
 Title ""
-Date "27 mar 2011"
+Date "28 mar 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1431,7 +1431,7 @@ $PAD
 Sh "2" C 1200 1200 0 0 1800
 Dr 800 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 13 "GND"
 Po 0 13500
 $EndPAD
 $EndMODULE  CHICKER_JUMPER
