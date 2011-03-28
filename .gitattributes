@@ -86,8 +86,8 @@ electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.pro -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.sch -text
 electronics/dongle/dongle.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
-electronics/sensor/Sensor.brd -text
-electronics/sensor/Sensor.cmp -text
+electronics/sensor/sensor.brd -text
+electronics/sensor/sensor.cmp -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
