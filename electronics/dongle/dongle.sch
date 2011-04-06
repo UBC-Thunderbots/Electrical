@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-04-05T23:35:16 PDT
+EESchema Schematic File Version 2  date 2011-04-05T23:53:04 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -398,6 +398,7 @@ U 1 1 4D860340
 P 5800 1700
 F 0 "R8" V 5880 1700 50  0000 C CNN
 F 1 "1K" V 5800 1700 50  0000 C CNN
+F 4 "RHM1.0KERCT-ND" H 5800 1700 60  0001 C CNN "Field1"
 	1    5800 1700
 	0    1    1    0   
 $EndComp
@@ -425,6 +426,7 @@ U 1 1 4D8600AE
 P 6300 1700
 F 0 "Q1" H 6500 1600 50  0000 C CNN
 F 1 "BC847A" H 6550 1850 50  0000 C CNN
+F 4 "BC846A-7-FDICT-ND" H 6300 1700 60  0001 C CNN "Field1"
 	1    6300 1700
 	1    0    0    -1  
 $EndComp
@@ -771,8 +773,8 @@ L CONN_6 P2
 U 1 1 4C54F757
 P 9050 1500
 F 0 "P2" V 9000 1500 60  0000 C CNN
-F 1 "CONN_6" V 9100 1500 60  0000 C CNN
-F 4 "(Made from Breakaway)" H 9050 1500 60  0001 C CNN "Digikey Part"
+F 1 "ICSP" V 9100 1500 60  0000 C CNN
+F 4 "" H 9050 1500 60  0001 C CNN "Field 1"
 	1    9050 1500
 	1    0    0    -1  
 $EndComp
