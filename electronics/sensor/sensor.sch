@@ -1,6 +1,5 @@
-EESchema Schematic File Version 2  date Sat 26 Feb 2011 02:26:55 PM PST
+EESchema Schematic File Version 2  date 2011-04-05T23:54:30 PDT
 LIBS:power
-LIBS:thunderbots-symbols
 LIBS:device
 LIBS:transistors
 LIBS:conn
@@ -30,13 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Sensor-cache
+LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "26 feb 2011"
+Date "6 apr 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -85,7 +84,7 @@ L C C2
 U 1 1 4D605E15
 P 6400 6850
 F 0 "C2" H 6450 6950 50  0000 L CNN
-F 1 "0.1u" H 6450 6750 50  0000 L CNN
+F 1 "100nF" H 6450 6750 50  0000 L CNN
 	1    6400 6850
 	1    0    0    -1  
 $EndComp
@@ -130,7 +129,7 @@ L C C1
 U 1 1 4D605DE4
 P 4700 6800
 F 0 "C1" H 4750 6900 50  0000 L CNN
-F 1 "0.1u" H 4750 6700 50  0000 L CNN
+F 1 "100nF" H 4750 6700 50  0000 L CNN
 	1    4700 6800
 	1    0    0    -1  
 $EndComp
