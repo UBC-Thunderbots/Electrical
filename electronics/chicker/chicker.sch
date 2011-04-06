@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 27 Mar 2011 07:54:43 PM PDT
+EESchema Schematic File Version 2  date 2011-04-05T21:59:51 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "27 mar 2011"
+Date "6 apr 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -212,6 +212,7 @@ U 1 1 4D8E7EA5
 P 4150 7100
 F 0 "P6" V 4100 7100 40  0000 C CNN
 F 1 "CONN_2" V 4200 7100 40  0000 C CNN
+F 4 "jumper-wire" H 4150 7100 60  0001 C CNN "Field1"
 	1    4150 7100
 	1    0    0    -1  
 $EndComp

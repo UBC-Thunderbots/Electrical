@@ -332,6 +332,9 @@
 		<!-- Chicker boost regulator inductor is not ordered from Digikey. -->
 		<multipart id="chicker-charge-inductor" />
 
+		<!-- Some components are just representations of jumper wires between two points. -->
+		<multipart id="jumper-wire" />
+
 		<!-- XBees require both the radio and two headers with the unusual pin spacing of 2mm. -->
 		<multipart id="XBEE">
 			<subpart>XB24-AWI-001-ND</subpart>
