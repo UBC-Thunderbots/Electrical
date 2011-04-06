@@ -142,6 +142,40 @@
 			<price>0.63000</price>
 		</part>
 
+		<!-- Legacy 1206 components on the dongle that should be replaced with 0805 later -->
+		<part id="490-1832-1-ND" minqty="25">
+			<description>CAP CER 1.0UF 25V Y5V 1206</description>
+			<price>0.178</price>
+		</part>
+		<part id="490-1775-1-ND" minqty="100">
+			<description>CAP CER .1UF 50V 10% X7R 1206</description>
+			<price>0.0636</price>
+		</part>
+		<part id="311-1155-1-ND" minqty="10">
+			<description>CAP CERAMIC 27PF 50V NP0 1206</description>
+			<price>0.127</price>
+		</part>
+		<part id="RHM56ERCT-ND" minqty="10">
+			<description>RES 56 OHM 1/4W 5% 1206 SMD</description>
+			<price>0.046</price>
+		</part>
+		<part id="RHM82ERCT-ND" minqty="10">
+			<description>RES 82 OHM 1/4W 5% 1206 SMD</description>
+			<price>0.046</price>
+		</part>
+		<part id="RHM1.0KERCT-ND" minqty="10">
+			<description>RES 1.0K OHM 1/4W 5% 1206 SMD</description>
+			<price>0.046</price>
+		</part>
+		<part id="RHM2.20KFRCT-ND" minqty="10">
+			<description>RES 2.20K OHM 1/4W 1% 1206 SMD</description>
+			<price>0.053</price>
+		</part>
+		<part id="RHM10KERCT-ND" minqty="10">
+			<description>RES 10K OHM 1/4W 5% 1206 SMD</description>
+			<price>0.046</price>
+		</part>
+
 		<!-- Silicon and packaged units -->
 		<part id="102-1715-ND" minqty="1">
 			<description>CONVERTER DC/DC REG 5V 1A</description>
@@ -187,6 +221,14 @@
 			<description>DIODE ULT FAST 400V 10A D2PAK</description>
 			<price>1.80000</price>
 		</part>
+		<part id="535-10202-1-ND" minqty="1">
+			<description>CRYSTAL 4.000 MHZ 18PF SMD</description>
+			<price>0.46</price>
+		</part>
+		<part id="568-3413-1-ND" minqty="1">
+			<description>DIODE SCHOTTKY 30V 200MA SOT323</description>
+			<price>0.56</price>
+		</part>
 		<part id="631-1125-1-ND" minqty="1">
 			<description>OSC 8.0000 MHZ 3.3V HCMOS SMT</description>
 			<price>2.02000</price>
@@ -195,6 +237,10 @@
 			<description>MOSFET N/P-CH COMPL 30V 8-SOIC</description>
 			<price>0.95000</price>
 		</part>
+		<part id="893-1138-1-ND" minqty="1">
+			<description>IC REG LDO 3.3V SOT-89-5</description>
+			<price>0.80</price>
+		</part>
 		<part id="ADC121S021CIMFCT-ND" minqty="1">
 			<description>ADC 12BIT 1CH 50-200KSPS SOT23-6</description>
 			<price>3.30000</price>
@@ -202,6 +248,10 @@
 		<part id="BAT54JW-FDICT-ND" minqty="1">
 			<description>DIODE SCHOTTKY ARRAY 30V SC70-6</description>
 			<price>0.61000</price>
+		</part>
+		<part id="BC846A-7-FDICT-ND" minqty="1">
+			<description>TRANS BIPO NPN 300MW SOT23-3</description>
+			<price>0.44</price>
 		</part>
 		<part id="FGA180N33ATDTU-ND" minqty="1">
 			<description>IGBT PDP TRENCH 330V 180A TO-3P</description>
@@ -256,6 +306,10 @@
 		<part id="CP1-3513-ND" minqty="1">
 			<description>CONN JACK STEREO R/A 3PIN 3.5MM</description>
 			<price>0.83000</price>
+		</part>
+		<part id="CP1-3523N-ND" minqty="1">
+			<description>CONN JACK STEREO R/A 3PIN 3.5MM</description>
+			<price>1.08</price>
 		</part>
 		<part id="H11671CT-ND" minqty="1">
 			<description>CONN RCPT USB MINI B R/A SMD</description>
@@ -312,6 +366,10 @@
 		<part id="568-3248-1-ND" minqty="1">
 			<description>IC TEMPERATURE SENSOR DO34</description>
 			<price>1.28</price>
+		</part>
+		<part id="SD1209T3-A1" minqty="1">
+			<description>BUZZER MAGNET 2048HZ 12MM PC MNT</description>
+			<price>1.36</price>
 		</part>
 	</parts>
 
@@ -382,6 +440,7 @@
 		<default value="PIC18F67J50" part="PIC18F67J50-I/PT-ND" />
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
+		<default value="SD1209T3-A1" part="SD1209T3-A1" />
 		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="V7805-1000" part="102-1715-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
@@ -392,5 +451,6 @@
 		<default value="WM2623-ND" part="WM2623-ND" />
 		<default value="XBEE" part="XBEE" />
 		<default value="XC3S50A-TQ144" part="122-1555-ND" />
+		<default value="XC6222B331PR" part="893-1138-1-ND" />
 	</defaults>
 </partinfo>
