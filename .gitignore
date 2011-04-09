@@ -231,9 +231,6 @@ vhdl/*.xrpt
 vhdl/*_pad.csv
 vhdl/*_pad.txt
 vhdl/_xmsgs
-vhdl/common/*.cf
-vhdl/common/controllerimpl.asm
-vhdl/common/controllerimpl.vhd
 vhdl/ghdl
 vhdl/html
 vhdl/thunderbots_bitgen.xwbt
