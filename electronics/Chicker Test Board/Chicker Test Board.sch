@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wednesday, April 06, 2011 PM04:27:28 PDT
+EESchema Schematic File Version 2  date Sat 16 Apr 2011 12:43:32 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:thunderbots-symbols
 LIBS:Chicker Test Board-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "6 apr 2011"
+Date "16 apr 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1049,7 +1048,7 @@ L C C4
 U 1 1 4D322EF9
 P 7550 4200
 F 0 "C4" H 7600 4300 50  0000 L CNN
-F 1 "20nF" H 7600 4100 50  0000 L CNN
+F 1 "27pF" H 7600 4100 50  0000 L CNN
 	1    7550 4200
 	0    1    1    0   
 $EndComp
@@ -1058,7 +1057,7 @@ L C C3
 U 1 1 4D322EEE
 P 7550 3600
 F 0 "C3" H 7600 3700 50  0000 L CNN
-F 1 "20nF" H 7450 3500 50  0000 L CNN
+F 1 "27pF" H 7450 3500 50  0000 L CNN
 	1    7550 3600
 	0    1    1    0   
 $EndComp
