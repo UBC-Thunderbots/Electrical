@@ -340,6 +340,11 @@ int main(int argc, char **argv) {
 
 	// Read the other lines and translate them.
 	while (std::getline(std::cin, line)) {
+		// Ignore extra headers (for concatenated inputs).
+		if (line.find("ref\tvalue") != std::string::npos) {
+			continue;
+		}
+
 		std::vector<Glib::ustring> columns;
 		split(line, '\t', columns);
 		Glib::ustring base_part;
