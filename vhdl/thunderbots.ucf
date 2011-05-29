@@ -93,14 +93,14 @@ net "HallsPin<5><0>" iostandard=LVCMOS33 | pullup | loc=P130;
 net "HallsPin<5><1>" iostandard=LVCMOS33 | pullup | loc=P131;
 net "HallsPin<5><2>" iostandard=LVCMOS33 | pullup | loc=P132;
 
-# Chicker
-net "ChickerMISOPin" iostandard=LVCMOS33 | pulldown | loc=P105;
-net "ChickerCLKPin" iostandard=LVCMOS33 | slew=quietio | loc=P103;
-net "ChickerCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P102;
-net "ChickerChargePin" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P110;
-net "KickPin" iostandard=LVCMOS33 | slew=quietio | loc=P111;
-net "ChipPin" iostandard=LVCMOS33 | slew=quietio | loc=P112;
-net "ChickerPresentPin" iostandard=LVCMOS33 | pulldown | loc=P113;
+# Kicker
+net "KickerMISOPin" iostandard=LVCMOS33 | pulldown | loc=P105;
+net "KickerCLKPin" iostandard=LVCMOS33 | slew=quietio | loc=P103;
+net "KickerCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P102;
+net "KickerChargePin" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P110;
+net "KickLeftPin" iostandard=LVCMOS33 | slew=quietio | loc=P111;
+net "KickRightPin" iostandard=LVCMOS33 | slew=quietio | loc=P112;
+net "KickerPresentPin" iostandard=LVCMOS33 | pulldown | loc=P113;
 
 # Virtual grounds
 net "VirtualGroundPin<0>" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P37;

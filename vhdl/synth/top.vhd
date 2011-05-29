@@ -25,13 +25,13 @@ entity Top is
 		MotorsPhasesPPin : out motors_phases_pin_t;
 		MotorsPhasesNPin : out motors_phases_pin_t;
 		HallsPin : in halls_pin_t;
-		ChickerMISOPin : in std_ulogic;
-		ChickerCLKPin : out std_ulogic;
-		ChickerCSPin : out std_ulogic;
-		ChickerChargePin : out std_ulogic;
-		KickPin : out std_ulogic;
-		ChipPin : out std_ulogic;
-		ChickerPresentPin : in std_ulogic;
+		KickerMISOPin : in std_ulogic;
+		KickerCLKPin : out std_ulogic;
+		KickerCSPin : out std_ulogic;
+		KickerChargePin : out std_ulogic;
+		KickLeftPin : out std_ulogic;
+		KickRightPin : out std_ulogic;
+		KickerPresentPin : in std_ulogic;
 		VirtualGroundPin : out std_ulogic_vector(0 to 1);
 		VirtualVDDPin : out std_ulogic_vector(0 to 3));
 end entity Top;
@@ -54,13 +54,13 @@ architecture Behavioural of Top is
 	signal Encoders : encoders_t;
 	signal MotorsPhases : motors_phases_t;
 	signal Halls : halls_t;
-	signal ChickerMISO : boolean;
-	signal ChickerCLK : boolean;
-	signal ChickerCS : boolean;
-	signal ChickerCharge : boolean;
-	signal Kick : boolean;
-	signal Chip : boolean;
-	signal ChickerPresent : boolean;
+	signal KickerMISO : boolean;
+	signal KickerCLK : boolean;
+	signal KickerCS : boolean;
+	signal KickerCharge : boolean;
+	signal KickLeft : boolean;
+	signal KickRight : boolean;
+	signal KickerPresent : boolean;
 begin
 	-- Feed the external oscillator into a clock generator to produce our three system clocks.
 	ClockGen: entity ClockGen(Behavioural)
@@ -106,8 +106,8 @@ begin
 					Halls(I)(J) <= HallsPin(I)(J) = '1';
 				end loop;
 			end loop;
-			ChickerMISO <= ChickerMISOPin = '1';
-			ChickerPresent <= ChickerPresentPin = '1';
+			KickerMISO <= KickerMISOPin = '1';
+			KickerPresent <= KickerPresentPin = '1';
 		end if;
 	end process;
 
@@ -129,11 +129,11 @@ begin
 			MotorsPhasesNPin(I)(J) <= '0' when MotorsPhases(I)(J) = LOW else '1';
 		end generate;
 	end generate;
-	ChickerCLKPin <= '0' when ChickerCLK else '1';
-	ChickerCSPin <= '0' when ChickerCS else '1';
-	ChickerChargePin <= '1' when ChickerCharge else '0';
-	KickPin <= '1' when Kick else '0';
-	ChipPin <= '1' when Chip else '0';
+	KickerCLKPin <= '0' when KickerCLK else '1';
+	KickerCSPin <= '0' when KickerCS else '1';
+	KickerChargePin <= '1' when KickerCharge else '0';
+	KickLeftPin <= '1' when KickLeft else '0';
+	KickRightPin <= '1' when KickRight else '0';
 	VirtualGroundPin <= (others => '0');
 	VirtualVDDPin <= (others => '1');
 
@@ -156,11 +156,11 @@ begin
 		Encoders => Encoders,
 		MotorsPhases => MotorsPhases,
 		Halls => Halls,
-		ChickerMISO => ChickerMISO,
-		ChickerCLK => ChickerCLK,
-		ChickerCS => ChickerCS,
-		ChickerCharge => ChickerCharge,
-		Kick => Kick,
-		Chip => Chip,
-		ChickerPresent => ChickerPresent);
+		KickerMISO => KickerMISO,
+		KickerCLK => KickerCLK,
+		KickerCS => KickerCS,
+		KickerCharge => KickerCharge,
+		KickLeft => KickLeft,
+		KickRight => KickRight,
+		KickerPresent => KickerPresent);
 end architecture Behavioural;

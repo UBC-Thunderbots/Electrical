@@ -21,13 +21,13 @@ entity Main is
 		Encoders : in encoders_t;
 		MotorsPhases : out motors_phases_t;
 		Halls : in halls_t;
-		ChickerMISO : in boolean;
-		ChickerCLK : out boolean;
-		ChickerCS : out boolean;
-		ChickerCharge : out boolean;
-		Kick : out boolean;
-		Chip : out boolean;
-		ChickerPresent : in boolean);
+		KickerMISO : in boolean;
+		KickerCLK : out boolean;
+		KickerCS : out boolean;
+		KickerCharge : out boolean;
+		KickLeft : out boolean;
+		KickRight : out boolean;
+		KickerPresent : in boolean);
 end entity Main;
 
 architecture Behavioural of Main is
@@ -41,17 +41,17 @@ architecture Behavioural of Main is
 	signal BatteryVoltageHigh : battery_voltage_t;
 	signal TestMode : test_mode_t;
 	signal TestIndex : natural range 0 to 15;
-	signal ChickStrobe : boolean;
-	signal ChickPower : chicker_powers_t;
-	signal ChickOffset : chicker_offset_t;
-	signal ChickOffsetDisableMask : chicker_offset_disable_mask_t;
+	signal KickStrobe : boolean;
+	signal KickPower : kicker_powers_t;
+	signal KickOffset : kicker_offset_t;
+	signal KickOffsetDisableMask : kicker_offset_disable_mask_t;
 	signal BatteryVoltageLow : battery_voltage_t;
 	signal CapacitorVoltage : capacitor_voltage_t;
 	signal EncodersCount : encoders_count_t;
 	signal EncodersStrobe : boolean;
-	signal ChickerTimeout : boolean;
-	signal ChickerActivity : boolean;
-	signal ChickActive : chicker_active_t;
+	signal KickerTimeout : boolean;
+	signal KickerActivity : boolean;
+	signal KickActive : kicker_active_t;
 	signal FlashCRC : std_ulogic_vector(15 downto 0);
 begin
 	Parbus: entity work.Parbus(Behavioural)
@@ -69,12 +69,12 @@ begin
 		BatteryVoltage => BatteryVoltageHigh,
 		TestMode => TestMode,
 		TestIndex => TestIndex,
-		ChickStrobe => ChickStrobe,
-		ChickPower => ChickPower,
-		ChickOffset => ChickOffset,
-		ChickOffsetDisableMask => ChickOffsetDisableMask,
+		KickStrobe => KickStrobe,
+		KickPower => KickPower,
+		KickOffset => KickOffset,
+		KickOffsetDisableMask => KickOffsetDisableMask,
 		EncodersStrobe => EncodersStrobe,
-		ChickerPresent => ChickerPresent,
+		KickerPresent => KickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
 		EncodersCount => EncodersCount,
 		FlashCRC => FlashCRC);
@@ -129,23 +129,23 @@ begin
 	ADC: entity work.ADC(Behavioural)
 	port map(
 		Clock => ClockLow,
-		MISO => ChickerMISO,
-		CLK => ChickerCLK,
-		CS => ChickerCS,
+		MISO => KickerMISO,
+		CLK => KickerCLK,
+		CS => KickerCS,
 		Level => CapacitorVoltage);
 
-	Chicker: entity work.Chicker(Behavioural)
+	Kicker: entity work.Kicker(Behavioural)
 	port map(
 		ClockHigh => ClockHigh,
 		ClockLow => ClockLow,
-		Strobe => ChickStrobe,
-		Power => ChickPower,
-		Offset => ChickOffset,
-		OffsetDisableMask => ChickOffsetDisableMask,
-		Active => ChickActive);
+		Strobe => KickStrobe,
+		Power => KickPower,
+		Offset => KickOffset,
+		OffsetDisableMask => KickOffsetDisableMask,
+		Active => KickActive);
 
-	Kick <= ChickActive(1);
-	Chip <= ChickActive(2);
+	KickLeft <= KickActive(1);
+	KickRight <= KickActive(2);
 
 	BoostController: entity work.BoostController(Behavioural)
 	port map(
@@ -153,11 +153,11 @@ begin
 		Enable => EnableCharger,
 		CapacitorVoltage => CapacitorVoltage,
 		BatteryVoltage => BatteryVoltageLow,
-		Charge => ChickerCharge,
-		Timeout => ChickerTimeout,
-		Activity => ChickerActivity);
+		Charge => KickerCharge,
+		Timeout => KickerTimeout,
+		Activity => KickerActivity);
 
-	process(TestMode, Halls, Encoders, ChickerActivity, ChickerTimeout) is
+	process(TestMode, Halls, Encoders, KickerActivity, KickerTimeout) is
 	begin
 		case TestMode is
 			when NONE =>
@@ -181,7 +181,7 @@ begin
 				end loop;
 
 			when BOOSTCONVERTER =>
-				LEDs <= (0 => ChickerActivity, 1 => ChickerTimeout, others => false);
+				LEDs <= (0 => KickerActivity, 1 => KickerTimeout, others => false);
 		end case;
 	end process;
 end architecture Behavioural;

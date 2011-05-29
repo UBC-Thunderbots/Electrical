@@ -120,13 +120,13 @@ entity ParbusRegisterMap is
 		BatteryVoltage : out battery_voltage_t := 0;
 		TestMode : out test_mode_t := NONE;
 		TestIndex : out natural range 0 to 15 := 0;
-		ChickStrobe : out boolean := false;
-		ChickPower : out chicker_powers_t := (others => 0);
-		ChickOffset : out chicker_offset_t := 0;
-		ChickOffsetDisableMask : out chicker_offset_disable_mask_t := (others => false);
+		KickStrobe : out boolean := false;
+		KickPower : out kicker_powers_t := (others => 0);
+		KickOffset : out kicker_offset_t := 0;
+		KickOffsetDisableMask : out kicker_offset_disable_mask_t := (others => false);
 		EncodersStrobe : out boolean := false;
 
-		ChickerPresent : in boolean;
+		KickerPresent : in boolean;
 		CapacitorVoltage : in capacitor_voltage_t;
 		EncodersCount : in encoders_count_t;
 		FlashCRC : in std_ulogic_vector(15 downto 0));
@@ -140,7 +140,7 @@ begin
 		X"468D" when Address = 0 else
 
 		-- Address 1 has general operational flags.
-		(0 => '1', 1 => to_stdulogic(ChickerPresent), others => '0') when Address = 1 else
+		(0 => '1', 1 => to_stdulogic(KickerPresent), others => '0') when Address = 1 else
 
 		-- Addresses 2 through 5 have encoders 1 through 4 deltas.
 		std_ulogic_vector(to_signed(EncodersCount(Address - 1), 16)) when Address = 2 or Address = 3 or Address = 4 or Address = 5 else
@@ -158,7 +158,7 @@ begin
 	begin
 		if rising_edge(Clock) then
 			-- Strobes are always clear except for one clock cycle when they should assert.
-			ChickStrobe <= false;
+			KickStrobe <= false;
 			EncodersStrobe <= false;
 
 			-- If a register is written to, handle the effects.
@@ -201,18 +201,18 @@ begin
 
 					-- Address 10 has solenoid #1 pulse width.
 					when 10 =>
-						ChickPower(1) <= to_integer(unsigned(WriteData(13 downto 0)));
+						KickPower(1) <= to_integer(unsigned(WriteData(13 downto 0)));
 
 					-- Address 11 has solenoid #2 pulse width.
 					when 11 =>
-						ChickPower(2) <= to_integer(unsigned(WriteData(13 downto 0)));
+						KickPower(2) <= to_integer(unsigned(WriteData(13 downto 0)));
 
 					-- Address 12 has solenoid time offset, offset disable mask, and fire strobe.
 					when 12 =>
-						ChickOffsetDisableMask(1) <= WriteData(15) = '1';
-						ChickOffsetDisableMask(2) <= WriteData(14) = '1';
-						ChickOffset <= to_integer(unsigned(WriteData(13 downto 0)));
-						ChickStrobe <= true;
+						KickOffsetDisableMask(1) <= WriteData(15) = '1';
+						KickOffsetDisableMask(2) <= WriteData(14) = '1';
+						KickOffset <= to_integer(unsigned(WriteData(13 downto 0)));
+						KickStrobe <= true;
 
 					-- Remaining addresses are unimplemented.
 					when others =>
@@ -245,13 +245,13 @@ entity Parbus is
 		BatteryVoltage : out battery_voltage_t;
 		TestMode : out test_mode_t;
 		TestIndex : out natural range 0 to 15;
-		ChickStrobe : out boolean;
-		ChickPower : out chicker_powers_t;
-		ChickOffset : out chicker_offset_t := 0;
-		ChickOffsetDisableMask : out chicker_offset_disable_mask_t := (others => false);
+		KickStrobe : out boolean;
+		KickPower : out kicker_powers_t;
+		KickOffset : out kicker_offset_t := 0;
+		KickOffsetDisableMask : out kicker_offset_disable_mask_t := (others => false);
 		EncodersStrobe : out boolean;
 
-		ChickerPresent : in boolean;
+		KickerPresent : in boolean;
 		CapacitorVoltage : in capacitor_voltage_t;
 		EncodersCount : in encoders_count_t;
 		FlashCRC : in std_ulogic_vector(15 downto 0));
@@ -290,12 +290,12 @@ begin
 		BatteryVoltage => BatteryVoltage,
 		TestMode => TestMode,
 		TestIndex => TestIndex,
-		ChickStrobe => ChickStrobe,
-		ChickPower => ChickPower,
-		ChickOffset => ChickOffset,
-		ChickOffsetDisableMask => ChickOffsetDisableMask,
+		KickStrobe => KickStrobe,
+		KickPower => KickPower,
+		KickOffset => KickOffset,
+		KickOffsetDisableMask => KickOffsetDisableMask,
 		EncodersStrobe => EncodersStrobe,
-		ChickerPresent => ChickerPresent,
+		KickerPresent => KickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
 		EncodersCount => EncodersCount,
 		FlashCRC => FlashCRC);

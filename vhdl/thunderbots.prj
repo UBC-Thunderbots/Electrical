@@ -1,12 +1,12 @@
 vhdl work common/adc.vhd
 vhdl work common/boostcontroller.vhd
-vhdl work common/chicker.vhd
 vhdl work common/clock.vhd
 vhdl work common/commutator.vhd
 vhdl work common/crc16.vhd
 vhdl work common/deadband.vhd
 vhdl work common/flashchecksummer.vhd
 vhdl work common/graycounter.vhd
+vhdl work common/kicker.vhd
 vhdl work common/main.vhd
 vhdl work common/motor.vhd
 vhdl work common/parbus.vhd
