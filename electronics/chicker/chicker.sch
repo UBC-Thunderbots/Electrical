@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 07 May 2011 04:00:40 PM PDT
+EESchema Schematic File Version 2  date 2011-05-29T17:46:32 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,13 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:thunderbots-symbols
 LIBS:chicker-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "7 may 2011"
+Date "30 may 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -512,15 +513,15 @@ F 1 "+3.3V" H 5650 2710 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3950 1500 2    60   ~ 0
-KICK-
+KICKL-
 Text Label 7650 5650 2    60   ~ 0
-KICK-
+KICKL-
 Text Label 3750 5650 2    60   ~ 0
-CHIP-
+KICKR-
 Text Label 5600 6250 2    60   ~ 0
-KICK
+KICKL
 Text Label 1450 6250 2    60   ~ 0
-CHIP
+KICKR
 $Comp
 L GND #PWR021
 U 1 1 4CEDC077
@@ -729,7 +730,7 @@ F 4 "chicker-header" H 1150 1300 60  0001 C CNN "Field1"
 	1    0    0    -1  
 $EndComp
 Text Label 3950 1050 2    60   ~ 0
-CHIP-
+KICKR-
 Text Label 3950 1750 2    60   ~ 0
 CAP+
 $Comp
@@ -782,7 +783,7 @@ F 1 "+3.3V" H 3450 1460 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2950 1250 0    60   ~ 0
-KICK
+KICKL
 Text Label 2950 1150 0    60   ~ 0
 MISO
 Text Label 1950 1050 2    60   ~ 0
@@ -790,7 +791,7 @@ CLK
 Text Label 1950 1250 2    60   ~ 0
 CHARGE
 Text Label 1950 1350 2    60   ~ 0
-CHIP
+KICKR
 $Comp
 L +BATT #PWR033
 U 1 1 4CE84AEC
