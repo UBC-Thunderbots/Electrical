@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-05-30T21:31:40 PDT
+EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 15 18
 Title ""
-Date "31 may 2011"
+Date "8 jan 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -187,12 +187,13 @@ F 1 "GND" H 3250 4180 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_6X2 P9
-U 1 1 4DE46F2D
-P 7950 3650
-F 0 "P9" H 7950 4000 60  0000 C CNN
-F 1 "CONN_6X2" V 7950 3650 60  0000 C CNN
-	1    7950 3650
+L CONN_9X2 P9
+U 1 1 4CC35F96
+P 7950 3750
+F 0 "P9" H 7950 4200 60  0000 C CNN
+F 1 "CONN_9X2" V 7950 3750 50  0000 C CNN
+F 4 "chicker-header" H 7950 3750 60  0001 C CNN "Field1"
+	1    7950 3750
 	1    0    0    -1  
 $EndComp
 $Comp
