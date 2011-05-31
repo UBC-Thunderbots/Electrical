@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2011-01-08T11:27:36 PST
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2011-05-30T21:32:31 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -87,7 +87,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4CC4F481/4CC50E90;
 Reference = C23;
-ValeurCmp = 10nF;
+ValeurCmp = 10uF;
 IdModule  = SM1206;
 EndCmp
 
@@ -302,10 +302,10 @@ IdModule  = SIL-18-BIGPINS;
 EndCmp
 
 BeginCmp
-TimeStamp = /4B4D69E7/4CC35F96;
+TimeStamp = /4B4D69E7/4DE46F2D;
 Reference = P9;
-ValeurCmp = CONN_9X2;
-IdModule  = SIL-18-BIGPINS;
+ValeurCmp = CONN_6X2;
+IdModule  = SIL-12-BIGPINS;
 EndCmp
 
 BeginCmp
@@ -316,7 +316,7 @@ IdModule  = FPC;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD73172/4CD73060;
+TimeStamp = /4CD73188/4CD73060;
 Reference = P11;
 ValeurCmp = CONN_11;
 IdModule  = FPC;
@@ -330,7 +330,7 @@ IdModule  = FPC;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD73188/4CD73060;
+TimeStamp = /4CD73172/4CD73060;
 Reference = P13;
 ValeurCmp = CONN_11;
 IdModule  = FPC;
@@ -372,21 +372,21 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72C5C;
+TimeStamp = /4CD72EC1/4CD72C5C;
 Reference = Q4;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72CFF;
+TimeStamp = /4CD72EC1/4CD72CFF;
 Reference = Q5;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72D09;
+TimeStamp = /4CD72EC1/4CD72D09;
 Reference = Q6;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -414,21 +414,21 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72C5C;
+TimeStamp = /4CD72EB0/4CD72C5C;
 Reference = Q10;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72CFF;
+TimeStamp = /4CD72EB0/4CD72CFF;
 Reference = Q11;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72D09;
+TimeStamp = /4CD72EB0/4CD72D09;
 Reference = Q12;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -540,42 +540,42 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72C46;
+TimeStamp = /4CD72EC1/4CD72C46;
 Reference = R13;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72C49;
+TimeStamp = /4CD72EC1/4CD72C49;
 Reference = R14;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72D01;
+TimeStamp = /4CD72EC1/4CD72D01;
 Reference = R15;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72D00;
+TimeStamp = /4CD72EC1/4CD72D00;
 Reference = R16;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72D06;
+TimeStamp = /4CD72EC1/4CD72D06;
 Reference = R17;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72D07;
+TimeStamp = /4CD72EC1/4CD72D07;
 Reference = R18;
 ValeurCmp = 47R;
 IdModule  = SM0805;
@@ -624,42 +624,42 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72C46;
+TimeStamp = /4CD72EB0/4CD72C46;
 Reference = R25;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72C49;
+TimeStamp = /4CD72EB0/4CD72C49;
 Reference = R26;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72D01;
+TimeStamp = /4CD72EB0/4CD72D01;
 Reference = R27;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72D00;
+TimeStamp = /4CD72EB0/4CD72D00;
 Reference = R28;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72D06;
+TimeStamp = /4CD72EB0/4CD72D06;
 Reference = R29;
 ValeurCmp = 47R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72D07;
+TimeStamp = /4CD72EB0/4CD72D07;
 Reference = R30;
 ValeurCmp = 47R;
 IdModule  = SM0805;
@@ -855,7 +855,7 @@ IdModule  = SO16W;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4CD72D05;
+TimeStamp = /4CD72EC1/4CD72D05;
 Reference = U16;
 ValeurCmp = TC4469;
 IdModule  = SO16W;
@@ -869,14 +869,14 @@ IdModule  = SO16W;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72C3D;
+TimeStamp = /4CD72EB9/4CD72D05;
 Reference = U18;
 ValeurCmp = TC4469;
 IdModule  = SO16W;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4CD72D05;
+TimeStamp = /4CD72EB0/4CD72D05;
 Reference = U19;
 ValeurCmp = TC4469;
 IdModule  = SO16W;
