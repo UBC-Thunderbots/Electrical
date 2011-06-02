@@ -121,9 +121,9 @@ entity ParbusRegisterMap is
 		TestMode : out test_mode_t := NONE;
 		TestIndex : out natural range 0 to 15 := 0;
 		KickStrobe : out boolean := false;
-		KickPower : out kicker_powers_t := (others => 0);
-		KickOffset : out kicker_offset_t := 0;
-		KickOffsetDisableMask : out kicker_offset_disable_mask_t := (others => false);
+		KickPower : out kicker_times_t := (others => 0);
+		KickOffset : out kicker_time_t := 0;
+		KickOffsetSign : out boolean := false;
 		EncodersStrobe : out boolean := false;
 
 		KickerPresent : in boolean;
@@ -177,7 +177,7 @@ begin
 
 					-- Address 6 has test mode controls.
 					when 6 =>
-						case to_integer(unsigned(WriteData(7 downto 4))) is
+						case to_integer(unsigned(WriteData(15 downto 8))) is
 							when 1 => TestMode <= LAMPTEST;
 							when 2 => TestMode <= HALL;
 							when 3 => TestMode <= ENCODER_LINES;
@@ -185,7 +185,7 @@ begin
 							when 5 => TestMode <= BOOSTCONVERTER;
 							when others => TestMode <= NONE;
 						end case;
-						TestIndex <= to_integer(unsigned(WriteData(3 downto 0)));
+						TestIndex <= to_integer(unsigned(WriteData(7 downto 0)));
 
 					-- Address 7 is unused.
 					when 7 =>
@@ -207,10 +207,9 @@ begin
 					when 11 =>
 						KickPower(2) <= to_integer(unsigned(WriteData(13 downto 0)));
 
-					-- Address 12 has solenoid time offset, offset disable mask, and fire strobe.
+					-- Address 12 has solenoid time offset (including sign) and fire strobe.
 					when 12 =>
-						KickOffsetDisableMask(1) <= WriteData(15) = '1';
-						KickOffsetDisableMask(2) <= WriteData(14) = '1';
+						KickOffsetSign <= WriteData(15) = '1';
 						KickOffset <= to_integer(unsigned(WriteData(13 downto 0)));
 						KickStrobe <= true;
 
@@ -240,15 +239,15 @@ entity Parbus is
 		EnableWheels : out boolean;
 		EnableCharger : out boolean;
 		EnableDribbler : out boolean;
-		MotorsDirection : out motors_direction_t := (others => false);
-		MotorsPower : out motors_power_t := (others => 0);
+		MotorsDirection : out motors_direction_t;
+		MotorsPower : out motors_power_t;
 		BatteryVoltage : out battery_voltage_t;
 		TestMode : out test_mode_t;
 		TestIndex : out natural range 0 to 15;
 		KickStrobe : out boolean;
-		KickPower : out kicker_powers_t;
-		KickOffset : out kicker_offset_t := 0;
-		KickOffsetDisableMask : out kicker_offset_disable_mask_t := (others => false);
+		KickPower : out kicker_times_t;
+		KickOffset : out kicker_time_t;
+		KickOffsetSign : out boolean;
 		EncodersStrobe : out boolean;
 
 		KickerPresent : in boolean;
@@ -293,7 +292,7 @@ begin
 		KickStrobe => KickStrobe,
 		KickPower => KickPower,
 		KickOffset => KickOffset,
-		KickOffsetDisableMask => KickOffsetDisableMask,
+		KickOffsetSign => KickOffsetSign,
 		EncodersStrobe => EncodersStrobe,
 		KickerPresent => KickerPresent,
 		CapacitorVoltage => CapacitorVoltage,

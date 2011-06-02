@@ -7,9 +7,9 @@ entity Kicker is
 		ClockHigh : in std_ulogic;
 		ClockLow : in std_ulogic;
 		Strobe : in boolean;
-		Power : in kicker_powers_t;
-		Offset : in kicker_offset_t;
-		OffsetDisableMask : in kicker_offset_disable_mask_t;
+		Power : in kicker_times_t;
+		Offset : in kicker_time_t;
+		OffsetSign : in boolean;
 		Active : out kicker_active_t);
 end entity Kicker;
 
@@ -23,18 +23,29 @@ begin
 		Input => Strobe,
 		Output => StrobeLow);
 
-	process(ClockLow, Power, OffsetDisableMask) is
-		variable PulseCounter : kicker_power_t := kicker_power_t'high;
-		variable OffsetCounter : kicker_offset_t := 0;
+	process(ClockLow) is
+		variable PulseCounters : kicker_times_t := (others => 0);
+		variable OffsetCounter : kicker_time_t := 0;
+
+		impure function PulseCounterEnabled(Index : natural range 1 to 2) return boolean is
+		begin
+			if Index = 1 then
+				return OffsetSign or OffsetCounter = 0;
+			else
+				return not OffsetSign or OffsetCounter = 0;
+			end if;
+		end function PulseCounterEnabled;
 	begin
 		if rising_edge(ClockLow) then
 			if StrobeLow then
-				PulseCounter := 0;
+				PulseCounters := Power;
 				OffsetCounter := Offset;
 			else
-				if PulseCounter /= kicker_power_t'high then
-					PulseCounter := PulseCounter + 1;
-				end if;
+				for I in 1 to 2 loop
+					if PulseCounterEnabled(I) and PulseCounters(I) /= 0 then
+						PulseCounters(I) := PulseCounters(I) - 1;
+					end if;
+				end loop;
 				if OffsetCounter /= 0 then
 					OffsetCounter := OffsetCounter - 1;
 				end if;
@@ -42,7 +53,7 @@ begin
 		end if;
 
 		for I in 1 to 2 loop
-			Active(I) <= PulseCounter < Power(I) and (OffsetCounter = 0 or OffsetDisableMask(I));
+			Active(I) <= PulseCounterEnabled(I) and PulseCounters(I) /= 0;
 		end loop;
 	end process;
 end architecture Behavioural;

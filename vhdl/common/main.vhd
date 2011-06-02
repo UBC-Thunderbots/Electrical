@@ -42,9 +42,9 @@ architecture Behavioural of Main is
 	signal TestMode : test_mode_t;
 	signal TestIndex : natural range 0 to 15;
 	signal KickStrobe : boolean;
-	signal KickPower : kicker_powers_t;
-	signal KickOffset : kicker_offset_t;
-	signal KickOffsetDisableMask : kicker_offset_disable_mask_t;
+	signal KickPower : kicker_times_t;
+	signal KickOffset : kicker_time_t;
+	signal KickOffsetSign : boolean;
 	signal BatteryVoltageLow : battery_voltage_t;
 	signal CapacitorVoltage : capacitor_voltage_t;
 	signal EncodersCount : encoders_count_t;
@@ -72,7 +72,7 @@ begin
 		KickStrobe => KickStrobe,
 		KickPower => KickPower,
 		KickOffset => KickOffset,
-		KickOffsetDisableMask => KickOffsetDisableMask,
+		KickOffsetSign => KickOffsetSign,
 		EncodersStrobe => EncodersStrobe,
 		KickerPresent => KickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
@@ -141,7 +141,7 @@ begin
 		Strobe => KickStrobe,
 		Power => KickPower,
 		Offset => KickOffset,
-		OffsetDisableMask => KickOffsetDisableMask,
+		OffsetSign => KickOffsetSign,
 		Active => KickActive);
 
 	KickLeft <= KickActive(1);

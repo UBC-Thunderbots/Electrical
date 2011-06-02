@@ -8,12 +8,8 @@ package types is
 
 	type kicker_active_t is array(1 to 2) of boolean;
 
-	subtype kicker_power_t is natural range 0 to 16383;
-	type kicker_powers_t is array(1 to 2) of kicker_power_t;
-
-	subtype kicker_offset_t is natural range 0 to 16383;
-
-	type kicker_offset_disable_mask_t is array(1 to 2) of boolean;
+	subtype kicker_time_t is natural range 0 to 16383;
+	type kicker_times_t is array(1 to 2) of kicker_time_t;
 
 	type encoder_t is array(0 to 1) of boolean;
 	type encoders_t is array(1 to 4) of encoder_t;
