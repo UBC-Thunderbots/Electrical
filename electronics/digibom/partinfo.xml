@@ -117,6 +117,10 @@
 		</part>
 
 		<!-- Capacitors, general purpose 25V or 50V -->
+		<part id="478-5017-1-ND" minqty="10">
+			<description>CAP CER 27PF 100V NP0 5% 0805</description>
+			<price>0.088</price>
+		</part>
 		<part id="490-1664-1-ND" minqty="10">
 			<description>CAP CER 10000PF 50V 10% X7R 0805</description>
 			<price>0.03100</price>
@@ -140,6 +144,10 @@
 		<part id="493-1065-ND" minqty="1">
 			<description>CAP 1000UF 25V ELECT VR RADIAL</description>
 			<price>0.63000</price>
+		</part>
+		<part id="565-1201-ND" minqty="1">
+			<description>CAP 10UF 250V ELECT SMG RAD</description>
+			<price>0.78000</price>
 		</part>
 
 		<!-- Legacy 1206 components on the dongle that should be replaced with 0805 later -->
@@ -209,6 +217,10 @@
 			<description>IC REG LDO 3.3V 950MA TO220</description>
 			<price>0.80000</price>
 		</part>
+		<part id="LM7805CT-ND" minqty="1">
+			<description>IC REG 1A POS 5V TO-220</description>
+			<price>0.65</price>
+		</part>
 		<part id="497-4323-1-ND" minqty="1">
 			<description>MOSFET N-CH 500V 17A D2PAK</description>
 			<price>5.37000</price>
@@ -224,6 +236,10 @@
 		<part id="535-10202-1-ND" minqty="1">
 			<description>CRYSTAL 4.000 MHZ 18PF SMD</description>
 			<price>0.46</price>
+		</part>
+		<part id="X1045-ND" minqty="1">
+			<description>CRYSTAL 4.000 MHZ 20PF 49US</description>
+			<price>0.58</price>
 		</part>
 		<part id="568-3413-1-ND" minqty="1">
 			<description>DIODE SCHOTTKY 30V 200MA SOT323</description>
@@ -293,6 +309,14 @@
 			<description>MODULE 802.15.4 1MW W/WIRE ANT</description>
 			<price>21.32000</price>
 		</part>
+		<part id="1N4004FSCT-ND" minqty="1">
+			<description>DIODE GEN PURPOSE 400V 1A DO41</description>
+			<price>0.34</price>
+		</part>
+		<part id="768-1007-1-ND" minqty="1">
+			<description>IC USB FS SERIAL UART 28-SSOP</description>
+			<price>4.50</price>
+		</part>
 
 		<!-- Connectors and Cable -->
 		<part id="A25213-ND" minqty="1">
@@ -361,6 +385,10 @@
 			<description>SWITCH TOGGLE SPST 20A SCREW</description>
 			<price>3.04000</price>
 		</part>
+		<part id="CKN9364-ND" minqty="1">
+			<description>KEYSWITCH RACON 12 PCB OUTWARD</description>
+			<price>3.07000</price>
+		</part>
 
 		<!-- Other -->
 		<part id="568-3248-1-ND" minqty="1">
@@ -386,6 +414,7 @@
 		<multipart id="chicker-header" />
 		<multipart id="dribbler-header" />
 		<multipart id="ICSP" />
+		<multipart id="2.54mm-header-general" />
 
 		<!-- Chicker boost regulator inductor is not ordered from Digikey. -->
 		<multipart id="chicker-charge-inductor" />
@@ -418,6 +447,7 @@
 		<default value="2.2kR" part="RMCF0805JT2K20CT-ND" />
 		<default value="10kR" part="RMCF0805JT10K0CT-ND" />
 		<default value="100kR" part="RMCF0805JT100KCT-ND" />
+		<default value="27pF" part="478-5017-1-ND" />
 		<default value="10nF" part="490-1664-1-ND" />
 		<default value="100nF" part="311-1361-1-ND" />
 		<default value="1uF" part="445-3463-1-ND" />
@@ -443,6 +473,7 @@
 		<default value="SD1209T3-A1" part="SD1209T3-A1" />
 		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="V7805-1000" part="102-1715-ND" />
+		<default value="7805" part="LM7805CT-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
 		<default value="WM1142CT-ND" part="WM1142CT-ND" />
 		<default value="WM1722-ND" part="WM1722-ND" />
@@ -452,5 +483,7 @@
 		<default value="XBEE" part="XBEE" />
 		<default value="XC3S50A-TQ144" part="122-1555-ND" />
 		<default value="XC6222B331PR" part="893-1138-1-ND" />
+		<default value="USB-MINI-B-RCPT" part="H11671CT-ND" />
+		<default value="FT232" part="768-1007-1-ND" />
 	</defaults>
 </partinfo>

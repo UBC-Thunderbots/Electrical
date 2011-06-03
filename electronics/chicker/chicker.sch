@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-05-29T17:46:32 PDT
+EESchema Schematic File Version 2  date Thu 02 Jun 2011 05:46:19 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:thunderbots-symbols
 LIBS:chicker-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "30 may 2011"
+Date "3 jun 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -359,6 +358,7 @@ U 1 1 4CEDE442
 P 6950 5550
 F 0 "C5" H 7000 5650 50  0000 L CNN
 F 1 "100nF" H 7000 5450 50  0000 L CNN
+F 4 "565-1201-ND" H 6950 5550 60  0001 C CNN "Field1"
 	1    6950 5550
 	1    0    0    -1  
 $EndComp
