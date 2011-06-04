@@ -19,7 +19,7 @@ entity Motor is
 end entity Motor;
 
 architecture Behavioural of Motor is
-	constant DeadBandSeconds : real := 50.0e-9;
+	constant DeadBandSeconds : real := 80.0e-9;
 	constant DeadBandWidth : natural := natural(DeadBandSeconds * real(ClockHighFrequency));
 	signal CommutatorPhases : motor_phases_t;
 	signal PWMOutput : boolean;
@@ -50,7 +50,7 @@ begin
 						if PWMOutput then
 							PWMPhases(I) <= HIGH;
 						else
-							PWMPhases(I) <= FLOAT;
+							PWMPhases(I) <= LOW;
 						end if;
 					else
 						PWMPhases(I) <= CommutatorPhases(I);

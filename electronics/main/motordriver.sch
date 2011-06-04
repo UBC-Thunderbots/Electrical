@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2011-01-16T21:07:18 PST
+EESchema Schematic File Version 2  date 2011-05-07T20:41:37 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 12 18
 Title ""
-Date "17 jan 2011"
+Date "8 may 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -40,6 +40,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7200 5750 6600 5750
+Wire Wire Line
+	7200 3850 6600 3850
+Wire Wire Line
+	7200 1850 6600 1850
 Wire Wire Line
 	3150 3250 5400 3250
 Connection ~ 3500 3250
@@ -85,25 +91,9 @@ Connection ~ 7650 5500
 Wire Wire Line
 	7500 5450 7500 5550
 Wire Wire Line
-	6600 5750 6650 5750
-Wire Wire Line
-	7150 5250 7200 5250
-Wire Wire Line
-	7200 5750 7150 5750
-Wire Wire Line
-	6600 5250 6650 5250
-Wire Wire Line
 	7650 5450 7650 5550
 Wire Wire Line
 	7650 3550 7650 3650
-Wire Wire Line
-	6600 3350 6650 3350
-Wire Wire Line
-	7200 3850 7150 3850
-Wire Wire Line
-	7150 3350 7200 3350
-Wire Wire Line
-	6600 3850 6650 3850
 Wire Wire Line
 	7500 3550 7500 3650
 Connection ~ 7650 3600
@@ -112,14 +102,6 @@ Connection ~ 7500 1600
 Connection ~ 7650 1600
 Wire Wire Line
 	7500 1550 7500 1650
-Wire Wire Line
-	6600 1850 6650 1850
-Wire Wire Line
-	7150 1350 7200 1350
-Wire Wire Line
-	7200 1850 7150 1850
-Wire Wire Line
-	6600 1350 6650 1350
 Wire Wire Line
 	7650 1550 7650 1650
 Wire Wire Line
@@ -166,6 +148,12 @@ Connection ~ 3500 3750
 Wire Wire Line
 	3500 1750 5400 1750
 Connection ~ 3500 1750
+Wire Wire Line
+	6600 1350 7200 1350
+Wire Wire Line
+	6600 3350 7200 3350
+Wire Wire Line
+	6600 5250 7200 5250
 Text HLabel 3150 3250 0    60   Input ~ 0
 ENABLE
 Entry Wire Line
@@ -267,34 +255,6 @@ F 1 "AO4616" H 7410 5100 60  0000 R CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L R R36
-U 1 1 4CD72D07
-P 6900 5750
-AR Path="/4CD72EC7/4CD72D07" Ref="R36"  Part="1" 
-AR Path="/4CD72EC1/4CD72D07" Ref="R18"  Part="1" 
-AR Path="/4CD72EB9/4CD72D07" Ref="R24"  Part="1" 
-AR Path="/4CD72EB0/4CD72D07" Ref="R30"  Part="1" 
-AR Path="/4CD72C2A/4CD72D07" Ref="R12"  Part="1" 
-F 0 "R12" V 6980 5750 50  0000 C CNN
-F 1 "47R" V 6900 5750 50  0000 C CNN
-	1    6900 5750
-	0    1    1    0   
-$EndComp
-$Comp
-L R R35
-U 1 1 4CD72D06
-P 6900 5250
-AR Path="/4CD72EC7/4CD72D06" Ref="R35"  Part="1" 
-AR Path="/4CD72EC1/4CD72D06" Ref="R17"  Part="1" 
-AR Path="/4CD72EB9/4CD72D06" Ref="R23"  Part="1" 
-AR Path="/4CD72EB0/4CD72D06" Ref="R29"  Part="1" 
-AR Path="/4CD72C2A/4CD72D06" Ref="R11"  Part="1" 
-F 0 "R11" V 6980 5250 50  0000 C CNN
-F 1 "47R" V 6900 5250 50  0000 C CNN
-	1    6900 5250
-	0    1    1    0   
-$EndComp
-$Comp
 L TC4469 U15
 U 4 1 4CD72D05
 P 6000 5750
@@ -349,34 +309,6 @@ F 0 "U14" H 6000 3900 60  0000 C CNN
 F 1 "TC4469" H 6000 3750 60  0000 C CNN
 	2    6000 3850
 	1    0    0    -1  
-$EndComp
-$Comp
-L R R33
-U 1 1 4CD72D01
-P 6900 3350
-AR Path="/4CD72EC7/4CD72D01" Ref="R33"  Part="1" 
-AR Path="/4CD72EC1/4CD72D01" Ref="R15"  Part="1" 
-AR Path="/4CD72EB9/4CD72D01" Ref="R21"  Part="1" 
-AR Path="/4CD72EB0/4CD72D01" Ref="R27"  Part="1" 
-AR Path="/4CD72C2A/4CD72D01" Ref="R9"  Part="1" 
-F 0 "R9" V 6980 3350 50  0000 C CNN
-F 1 "47R" V 6900 3350 50  0000 C CNN
-	1    6900 3350
-	0    1    1    0   
-$EndComp
-$Comp
-L R R34
-U 1 1 4CD72D00
-P 6900 3850
-AR Path="/4CD72EC7/4CD72D00" Ref="R34"  Part="1" 
-AR Path="/4CD72EC1/4CD72D00" Ref="R16"  Part="1" 
-AR Path="/4CD72EB9/4CD72D00" Ref="R22"  Part="1" 
-AR Path="/4CD72EB0/4CD72D00" Ref="R28"  Part="1" 
-AR Path="/4CD72C2A/4CD72D00" Ref="R10"  Part="1" 
-F 0 "R10" V 6980 3850 50  0000 C CNN
-F 1 "47R" V 6900 3850 50  0000 C CNN
-	1    6900 3850
-	0    1    1    0   
 $EndComp
 $Comp
 L AO4616 Q2
@@ -489,34 +421,6 @@ F 0 "Q1" H 7410 1520 60  0000 R CNN
 F 1 "AO4616" H 7410 1200 60  0000 R CNN
 	1    7400 1350
 	1    0    0    1   
-$EndComp
-$Comp
-L R R8
-U 1 1 4CD72C49
-P 6900 1850
-AR Path="/4CD72C2A/4CD72C49" Ref="R8"  Part="1" 
-AR Path="/4CD72EC7/4CD72C49" Ref="R32"  Part="1" 
-AR Path="/4CD72EC1/4CD72C49" Ref="R14"  Part="1" 
-AR Path="/4CD72EB9/4CD72C49" Ref="R20"  Part="1" 
-AR Path="/4CD72EB0/4CD72C49" Ref="R26"  Part="1" 
-F 0 "R8" V 6980 1850 50  0000 C CNN
-F 1 "47R" V 6900 1850 50  0000 C CNN
-	1    6900 1850
-	0    1    1    0   
-$EndComp
-$Comp
-L R R7
-U 1 1 4CD72C46
-P 6900 1350
-AR Path="/4CD72C2A/4CD72C46" Ref="R7"  Part="1" 
-AR Path="/4CD72EC7/4CD72C46" Ref="R31"  Part="1" 
-AR Path="/4CD72EC1/4CD72C46" Ref="R13"  Part="1" 
-AR Path="/4CD72EB9/4CD72C46" Ref="R19"  Part="1" 
-AR Path="/4CD72EB0/4CD72C46" Ref="R25"  Part="1" 
-F 0 "R7" V 6980 1350 50  0000 C CNN
-F 1 "47R" V 6900 1350 50  0000 C CNN
-	1    6900 1350
-	0    1    1    0   
 $EndComp
 $Comp
 L TC4469 U14
