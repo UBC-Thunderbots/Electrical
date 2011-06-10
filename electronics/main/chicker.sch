@@ -1,6 +1,7 @@
-EESchema Schematic File Version 2  date 2011-05-30T22:52:05 PDT
+EESchema Schematic File Version 2  date Thu 09 Jun 2011 05:46:03 PM PDT
 LIBS:power
 LIBS:device
+LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
@@ -24,15 +25,16 @@ LIBS:philips
 LIBS:display
 LIBS:cypress
 LIBS:siliconi
+LIBS:opto
+LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 15 18
 Title ""
-Date "31 may 2011"
+Date "10 jun 2011"
 Rev ""
 Comp ""
 Comment1 ""
@@ -46,6 +48,7 @@ U 1 1 4DE48200
 P 7950 3650
 F 0 "P9" H 7950 4000 60  0000 C CNN
 F 1 "CONN_6X2" V 7950 3650 60  0000 C CNN
+F 4 "chicker-header" H 7950 3650 60  0001 C CNN "Field1"
 	1    7950 3650
 	1    0    0    -1  
 $EndComp

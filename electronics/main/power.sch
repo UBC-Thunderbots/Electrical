@@ -1,6 +1,7 @@
-EESchema Schematic File Version 2  date 2011-01-08T11:27:20 PST
+EESchema Schematic File Version 2  date Thu 09 Jun 2011 05:46:03 PM PDT
 LIBS:power
 LIBS:device
+LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
@@ -24,15 +25,16 @@ LIBS:philips
 LIBS:display
 LIBS:cypress
 LIBS:siliconi
+LIBS:opto
+LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:thunderbots-symbols
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 18 18
 Title ""
-Date "8 jan 2011"
+Date "10 jun 2011"
 Rev ""
 Comp ""
 Comment1 ""
