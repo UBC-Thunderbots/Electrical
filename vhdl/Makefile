@@ -28,7 +28,7 @@ ghdl/obj/boostcontrollertest.o : ghdl/obj/boostcontroller.o ghdl/obj/clock.o ghd
 ghdl/obj/commutator.o : ghdl/obj/types.o
 ghdl/obj/crc16.o :
 ghdl/obj/crc16test.o : ghdl/obj/crc16.o
-ghdl/obj/deadband.o : ghdl/obj/clock.o ghdl/obj/types.o
+ghdl/obj/deadband.o : ghdl/obj/types.o
 ghdl/obj/flashchecksummer.o : ghdl/obj/clock.o ghdl/obj/crc16.o
 ghdl/obj/flashchecksummertest.o : ghdl/obj/clock.o ghdl/obj/flashchecksummer.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o
