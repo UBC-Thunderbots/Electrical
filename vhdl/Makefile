@@ -2,7 +2,7 @@
 PROJ := thunderbots
 
 # The names of all the top-level test targets.
-SIM_TARGETS := boostcontrollertest crc16test flashchecksummertest
+SIM_TARGETS := boostcontrollertest deadbandtest crc16test flashchecksummertest
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -29,6 +29,7 @@ ghdl/obj/commutator.o : ghdl/obj/types.o
 ghdl/obj/crc16.o :
 ghdl/obj/crc16test.o : ghdl/obj/crc16.o
 ghdl/obj/deadband.o : ghdl/obj/types.o
+ghdl/obj/deadbandtest.o : ghdl/obj/deadband.o ghdl/obj/types.o
 ghdl/obj/flashchecksummer.o : ghdl/obj/clock.o ghdl/obj/crc16.o
 ghdl/obj/flashchecksummertest.o : ghdl/obj/clock.o ghdl/obj/flashchecksummer.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o

@@ -109,6 +109,7 @@ vhdl/common/syncdown.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
 vhdl/sim/crc16test.vhd -text
+vhdl/sim/deadbandtest.vhd -text
 vhdl/sim/flashchecksummertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/pintypes.vhd -text
