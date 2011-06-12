@@ -13,25 +13,26 @@ entity DeadBand is
 end entity DeadBand;
 
 architecture Behavioural of DeadBand is
+	signal OldOutput : motor_phase_t := HIGH;
+	signal CurOutput : motor_phase_t;
+	subtype timeout_t is natural range 0 to Width - 1;
+	signal Timeout : timeout_t := 0;
 begin
+	CurOutput <= Input when Input = OldOutput or Timeout = timeout_t'high else FLOAT;
+
+	Output <= FLOAT when Input = FLOAT else CurOutput;
+
 	process(Clock) is
-		subtype timeout_t is natural range 0 to Width - 1;
-		variable OldInput : motor_phase_t := FLOAT;
-		variable Timeout : timeout_t := timeout_t'high;
 	begin
 		if rising_edge(Clock) then
-			if Input /= OldInput then
-				Timeout := timeout_t'high;
-			elsif Timeout /= 0 then
-				Timeout := Timeout - 1;
+			if CurOutput = FLOAT then
+				if Timeout /= timeout_t'high then
+					Timeout <= Timeout + 1;
+				end if;
+			else
+				Timeout <= 0;
+				OldOutput <= CurOutput;
 			end if;
-			OldInput := Input;
-		end if;
-
-		if Timeout = 0 then
-			Output <= OldInput;
-		else
-			Output <= FLOAT;
 		end if;
 	end process;
 end architecture Behavioural;
