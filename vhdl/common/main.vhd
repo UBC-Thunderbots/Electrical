@@ -34,6 +34,7 @@ architecture Behavioural of Main is
 	type enable_motors_t is array(1 to 5) of boolean;
 	signal EnableWheels : boolean;
 	signal EnableCharger : boolean;
+	signal GatedEnableCharger : boolean;
 	signal EnableDribbler : boolean;
 	signal EnableMotors : enable_motors_t;
 	signal MotorsDirection : motors_direction_t;
@@ -51,6 +52,7 @@ architecture Behavioural of Main is
 	signal EncodersStrobe : boolean;
 	signal KickerTimeout : boolean;
 	signal KickerActivity : boolean;
+	signal KickerDone : boolean;
 	signal KickActive : kicker_active_t;
 	signal FlashCRC : std_ulogic_vector(15 downto 0);
 begin
@@ -76,6 +78,7 @@ begin
 		EncodersStrobe => EncodersStrobe,
 		KickerPresent => KickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
+		KickerDone => KickerDone,
 		EncodersCount => EncodersCount,
 		FlashCRC => FlashCRC);
 
@@ -147,15 +150,18 @@ begin
 	KickLeft <= KickActive(1);
 	KickRight <= KickActive(2);
 
+	GatedEnableCharger <= EnableCharger and not KickActive(1) and not KickActive(2);
+
 	BoostController: entity work.BoostController(Behavioural)
 	port map(
 		ClockLow => ClockLow,
-		Enable => EnableCharger,
+		Enable => GatedEnableCharger,
 		CapacitorVoltage => CapacitorVoltage,
 		BatteryVoltage => BatteryVoltageLow,
 		Charge => KickerCharge,
 		Timeout => KickerTimeout,
-		Activity => KickerActivity);
+		Activity => KickerActivity,
+		Done => KickerDone);
 
 	process(TestMode, Halls, Encoders, KickerActivity, KickerTimeout) is
 	begin
@@ -181,7 +187,7 @@ begin
 				end loop;
 
 			when BOOSTCONVERTER =>
-				LEDs <= (0 => KickerActivity, 1 => KickerTimeout, others => false);
+				LEDs <= (0 => KickerActivity, 1 => KickerTimeout, 2 => KickerDone, others => false);
 		end case;
 	end process;
 end architecture Behavioural;

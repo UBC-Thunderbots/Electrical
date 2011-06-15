@@ -128,6 +128,7 @@ entity ParbusRegisterMap is
 
 		KickerPresent : in boolean;
 		CapacitorVoltage : in capacitor_voltage_t;
+		KickerDone : in boolean;
 		EncodersCount : in encoders_count_t;
 		FlashCRC : in std_ulogic_vector(15 downto 0));
 end entity ParbusRegisterMap;
@@ -140,7 +141,7 @@ begin
 		X"468D" when Address = 0 else
 
 		-- Address 1 has general operational flags.
-		(0 => '1', 1 => to_stdulogic(KickerPresent), others => '0') when Address = 1 else
+		(0 => '1', 1 => to_stdulogic(KickerPresent), 2 => to_stdulogic(KickerDone), others => '0') when Address = 1 else
 
 		-- Addresses 2 through 5 have encoders 1 through 4 deltas.
 		std_ulogic_vector(to_signed(EncodersCount(Address - 1), 16)) when Address = 2 or Address = 3 or Address = 4 or Address = 5 else
@@ -252,6 +253,7 @@ entity Parbus is
 
 		KickerPresent : in boolean;
 		CapacitorVoltage : in capacitor_voltage_t;
+		KickerDone : in boolean;
 		EncodersCount : in encoders_count_t;
 		FlashCRC : in std_ulogic_vector(15 downto 0));
 end entity Parbus;
@@ -296,6 +298,7 @@ begin
 		EncodersStrobe => EncodersStrobe,
 		KickerPresent => KickerPresent,
 		CapacitorVoltage => CapacitorVoltage,
+		KickerDone => KickerDone,
 		EncodersCount => EncodersCount,
 		FlashCRC => FlashCRC);
 end architecture Behavioural;

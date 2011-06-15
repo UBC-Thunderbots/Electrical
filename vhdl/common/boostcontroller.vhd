@@ -15,7 +15,8 @@ entity BoostController is
 		BatteryVoltage : in battery_voltage_t; --! Current Battery Voltage
 		Charge : out boolean; --! To the MOSFET
 		Timeout : out boolean; --! Signals a fault in the charger
-		Activity : out boolean); --! Signals whether the it is actively charging
+		Activity : out boolean; --! Signals whether the it is actively charging
+		Done : out boolean := false); --! Signals whether charging is complete
 end entity;
 
 architecture Behavioural of BoostController is
@@ -44,8 +45,7 @@ architecture Behavioural of BoostController is
 	
 	constant MaxIncrement : natural := natural((natural(CapBits)) * Ratio1 + (natural(CapBits)) / Ratio2) + Diode;
 
-	signal FaultActive : boolean;
-	signal TimeoutBuffer : boolean;
+	signal TimeoutBuffer : boolean := false;
 	signal Increment : natural range 1 to MaxIncrement;
 	signal ActivityBuffer : boolean := false;
 begin
@@ -123,12 +123,18 @@ begin
 					end if;
 
 				when WAITING =>
-					if Enable and CapacitorVoltage < MaxVoltage then
-						State := ONTIME;
-						Multiplier := BatteryVoltage;
-						ActivityBuffer <= true;
+					if Enable then
+						if CapacitorVoltage < MaxVoltage then
+							State := ONTIME;
+							Multiplier := BatteryVoltage;
+							ActivityBuffer <= true;
+						else
+							ActivityBuffer <= false;
+							Done <= true;
+						end if;
 					else
 						ActivityBuffer <= false;
+						Done <= false;
 					end if;
 			end case;
 		end if;
