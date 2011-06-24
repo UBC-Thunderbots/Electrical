@@ -91,6 +91,7 @@ electronics/dongle/dongle.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/sensor/sensor.brd -text
 electronics/sensor/sensor.cmp -text
+electronics/sensor_harness_sch/sensor_harness_sch.sch -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
