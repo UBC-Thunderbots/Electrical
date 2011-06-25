@@ -35,12 +35,12 @@ begin
 
 	process
 	begin
-		wait for ClockHighTime * 5;
+		wait for (ClockHighTime * 5.0) * 1 sec;
 		while not Done loop
 			ClockHigh <= '1';
-			wait for ClockHighTime / 2;
+			wait for (ClockHighTime / 2.0) * 1 sec;
 			ClockHigh <= '0';
-			wait for ClockHighTime / 2;
+			wait for (ClockHighTime / 2.0) * 1 sec;
 		end loop;
 		wait;
 	end process;

@@ -95,10 +95,17 @@ begin
 
 	-- This process controls the actual switch timing;
 	process(ClockLow, TimeoutBuffer)
-		type state_t is (ONTIME,OFFTIME,WAITING); --! permissable states for the dutycycle
+		type state_t is (ONTIME, OFFTIME, WAITING); --! permissable states for the dutycycle
 		variable State : state_t := WAITING;
 		variable Counter : natural range 0 to CounterMax + MaxIncrement;
 		variable Multiplier : natural range 0 to MaxIncrement;
+		constant ThermalAmbient : natural := natural(30.0 / 0.4472e-3);
+		constant ThermalLimit : natural := natural(140.0 / 0.4472e-3);
+		constant ThermalRange : natural := ThermalLimit - ThermalAmbient;
+		variable ThermalAccumulator : natural range 0 to ThermalRange := 0;
+		constant ThermalTimeInterval : real := 23.0 / 256.0;
+		constant ThermalTimeTickCount : natural := natural(ThermalTimeInterval / ClockLowTime);
+		variable ThermalTimeCounter : natural range 0 to ThermalTimeTickCount - 1 := 0;
 	begin
 		if rising_edge(ClockLow) then
 			case State is
@@ -123,11 +130,12 @@ begin
 					end if;
 
 				when WAITING =>
-					if Enable then
+					if Enable and ThermalAccumulator /= ThermalRange then
 						if CapacitorVoltage < MaxVoltage then
 							State := ONTIME;
 							Multiplier := BatteryVoltage;
 							ActivityBuffer <= true;
+							ThermalAccumulator := ThermalAccumulator + 1;
 						else
 							ActivityBuffer <= false;
 							Done <= true;
@@ -137,8 +145,15 @@ begin
 						Done <= false;
 					end if;
 			end case;
+
+			if ThermalTimeCounter = ThermalTimeTickCount - 1 then
+				ThermalAccumulator := ThermalAccumulator - (ThermalAccumulator + 128) / 256;
+				ThermalTimeCounter := 0;
+			else
+				ThermalTimeCounter := ThermalTimeCounter + 1;
+			end if;
 		end if;
-		
+
 		--MOSFET is controlled by the bottom state machine
 		Charge <= State = ONTIME and not TimeoutBuffer;
 	end process;

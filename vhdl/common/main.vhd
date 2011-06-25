@@ -150,7 +150,12 @@ begin
 	KickLeft <= KickActive(1);
 	KickRight <= KickActive(2);
 
-	GatedEnableCharger <= EnableCharger and not KickActive(1) and not KickActive(2);
+	process(ClockLow) is
+	begin
+		if rising_edge(ClockLow) then
+			GatedEnableCharger <= EnableCharger and not KickActive(1) and not KickActive(2);
+		end if;
+	end process;
 
 	BoostController: entity work.BoostController(Behavioural)
 	port map(
@@ -163,7 +168,7 @@ begin
 		Activity => KickerActivity,
 		Done => KickerDone);
 
-	process(TestMode, Halls, Encoders, KickerActivity, KickerTimeout) is
+	process(TestMode, Halls, Encoders, EncodersCount, KickerActivity, KickerTimeout, KickerDone) is
 	begin
 		case TestMode is
 			when NONE =>

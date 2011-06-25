@@ -35,9 +35,9 @@ begin
 	process
 	begin
 		ClockLow <= '1';
-		wait for ClockLowTime / 2;
+		wait for (ClockLowTime / 2.0) * 1 sec;
 		ClockLow <= '0';
-		wait for ClockLowTime / 2; 
+		wait for (ClockLowTime / 2.0) * 1 sec;
 		
 		if Done then
 			wait;
@@ -49,11 +49,11 @@ begin
 		Enable <= false;
 		CapVoltage <= natural(CapVoltageReal / MaxCap * 4096.0 + 0.5);
 		BattVoltage <= natural(BattVoltageReal / 18.3 * 1024.0);
-		wait for 4.5 * ClockLowTime;
+		wait for (4.5 * ClockLowTime) * 1 sec;
 		Enable <= true;
-		wait for 2 * ClockLowTime;
+		wait for (2.0 * ClockLowTime) * 1 sec;
 		while Activity and not Timeout loop
-			wait for 876 * ClockLowTime;
+			wait for (876.0 * ClockLowTime) * 1 sec;
 			CapVoltage <= natural(CapVoltageReal / MaxCap * 4096.0 + 0.5);
 		end loop;
 

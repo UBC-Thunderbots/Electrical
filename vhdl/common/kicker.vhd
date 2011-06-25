@@ -15,6 +15,17 @@ end entity Kicker;
 
 architecture Behavioural of Kicker is
 	signal StrobeLow : boolean;
+	signal PulseCounters : kicker_times_t := (others => 0);
+	signal OffsetCounter : kicker_time_t := 0;
+
+	impure function PulseCounterEnabled(Index : natural range 1 to 2) return boolean is
+	begin
+		if Index = 1 then
+			return OffsetSign or OffsetCounter = 0;
+		else
+			return not OffsetSign or OffsetCounter = 0;
+		end if;
+	end function PulseCounterEnabled;
 begin
 	SyncDownStrobe: entity work.SyncDownStrobe(Behavioural)
 	port map(
@@ -24,36 +35,30 @@ begin
 		Output => StrobeLow);
 
 	process(ClockLow) is
-		variable PulseCounters : kicker_times_t := (others => 0);
-		variable OffsetCounter : kicker_time_t := 0;
-
-		impure function PulseCounterEnabled(Index : natural range 1 to 2) return boolean is
-		begin
-			if Index = 1 then
-				return OffsetSign or OffsetCounter = 0;
-			else
-				return not OffsetSign or OffsetCounter = 0;
-			end if;
-		end function PulseCounterEnabled;
 	begin
 		if rising_edge(ClockLow) then
 			if StrobeLow then
-				PulseCounters := Power;
-				OffsetCounter := Offset;
+				PulseCounters <= Power;
+				OffsetCounter <= Offset;
 			else
 				for I in 1 to 2 loop
 					if PulseCounterEnabled(I) and PulseCounters(I) /= 0 then
-						PulseCounters(I) := PulseCounters(I) - 1;
+						PulseCounters(I) <= PulseCounters(I) - 1;
 					end if;
 				end loop;
 				if OffsetCounter /= 0 then
-					OffsetCounter := OffsetCounter - 1;
+					OffsetCounter <= OffsetCounter - 1;
 				end if;
 			end if;
 		end if;
+	end process;
 
-		for I in 1 to 2 loop
-			Active(I) <= PulseCounterEnabled(I) and PulseCounters(I) /= 0;
-		end loop;
+	process(ClockLow) is
+	begin
+		if rising_edge(ClockLow) then
+			for I in 1 to 2 loop
+				Active(I) <= PulseCounterEnabled(I) and PulseCounters(I) /= 0;
+			end loop;
+		end if;
 	end process;
 end architecture Behavioural;
