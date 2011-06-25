@@ -97,7 +97,9 @@ begin
 	process(ClockLow, TimeoutBuffer)
 		type state_t is (ONTIME, OFFTIME, WAITING); --! permissable states for the dutycycle
 		variable State : state_t := WAITING;
-		variable Counter : natural range 0 to CounterMax + MaxIncrement;
+		variable Counter : natural range 1 to CounterMax + MaxIncrement := 1;
+		type counter_disposition_t is (HOLD, INC, RESET);
+		variable CounterDisposition : counter_disposition_t;
 		variable Multiplier : natural range 0 to MaxIncrement;
 		constant ThermalAmbient : natural := natural(30.0 / 0.4472e-3);
 		constant ThermalLimit : natural := natural(140.0 / 0.4472e-3);
@@ -108,25 +110,27 @@ begin
 		variable ThermalTimeCounter : natural range 0 to ThermalTimeTickCount - 1 := 0;
 	begin
 		if rising_edge(ClockLow) then
+			CounterDisposition := HOLD;
+
 			case State is
 				when ONTIME =>
 					--This implements Counts*BatteryVoltage = CounterMax in order to calculate counts
-					if (Counter + 1) * Multiplier > CounterMax then
-						Counter := 0;
+					if Counter * Multiplier > CounterMax then
+						CounterDisposition := RESET;
 						State := OFFTIME;
 						Multiplier := Increment;
 					else
-						Counter := Counter + 1;
+						CounterDisposition := INC;
 					end if;
 
 				when OFFTIME =>
 					--This implements Counts*(CapacitorVoltage*ratio + Diode - BatteryVoltage) = CounterMax
-					if (Counter + 1) * Multiplier > CounterMax + Increment then
-						Counter := 0;
+					if Counter * Multiplier > CounterMax + Increment then
+						CounterDisposition := RESET;
 						State := WAITING;
 						Multiplier := BatteryVoltage;
 					else
-						Counter := Counter + 1;
+						CounterDisposition := INC;
 					end if;
 
 				when WAITING =>
@@ -145,6 +149,12 @@ begin
 						Done <= false;
 					end if;
 			end case;
+
+			if CounterDisposition = RESET then
+				Counter := 1;
+			elsif CounterDisposition = INC then
+				Counter := Counter + 1;
+			end if;
 
 			if ThermalTimeCounter = ThermalTimeTickCount - 1 then
 				ThermalAccumulator := ThermalAccumulator - (ThermalAccumulator + 128) / 256;
