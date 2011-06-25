@@ -101,13 +101,18 @@ begin
 					Encoders(I)(J) <= EncodersPin(I)(J) = '1';
 				end loop;
 			end loop;
+			KickerMISO <= KickerMISOPin = '1';
+			KickerPresent <= KickerPresentPin = '1';
+		end if;
+	end process;
+	process(ClockLow) is
+	begin
+		if rising_edge(ClockLow) then
 			for I in 1 to 5 loop
 				for J in 0 to 2 loop
 					Halls(I)(J) <= HallsPin(I)(J) = '1';
 				end loop;
 			end loop;
-			KickerMISO <= KickerMISOPin = '1';
-			KickerPresent <= KickerPresentPin = '1';
 		end if;
 	end process;
 

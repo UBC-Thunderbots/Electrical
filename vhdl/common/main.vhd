@@ -109,7 +109,8 @@ begin
 		generic map(
 			PWMMax => 255)
 		port map(
-			PWMClock => ClockMid,
+			ClockLow => ClockLow,
+			ClockMid => ClockMid,
 			ClockHigh => ClockHigh,
 			Enable => EnableMotors(I),
 			Power => MotorsPower(I),
