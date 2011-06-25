@@ -131,9 +131,9 @@ begin
 	end generate;
 	KickerCLKPin <= '0' when KickerCLK else '1';
 	KickerCSPin <= '0' when KickerCS else '1';
-	KickerChargePin <= '1' when KickerCharge else '0';
-	KickLeftPin <= '1' when KickLeft else '0';
-	KickRightPin <= '1' when KickRight else '0';
+	KickerChargePin <= '0' when KickerCharge else '1';
+	KickLeftPin <= '0' when KickLeft else '1';
+	KickRightPin <= '0' when KickRight else '1';
 	VirtualGroundPin <= (others => '0');
 	VirtualVDDPin <= (others => '1');
 
