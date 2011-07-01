@@ -90,24 +90,24 @@ begin
 		GSR => ShiftedReset);
 
 	-- Add registers to all input paths and do signal conversion.
-	process(ClockHigh) is
+	process(ClockMid) is
 	begin
-		if rising_edge(ClockHigh) then
+		if rising_edge(ClockMid) then
 			ParbusDataIn <= ParbusDataPin;
 			ParbusRead <= ParbusReadPin = '1';
 			ParbusWrite <= ParbusWritePin = '1';
+			KickerMISO <= KickerMISOPin = '1';
 			for I in 1 to 4 loop
 				for J in 0 to 1 loop
 					Encoders(I)(J) <= EncodersPin(I)(J) = '1';
 				end loop;
 			end loop;
-			KickerMISO <= KickerMISOPin = '1';
-			KickerPresent <= KickerPresentPin = '1';
 		end if;
 	end process;
 	process(ClockLow) is
 	begin
 		if rising_edge(ClockLow) then
+			KickerPresent <= KickerPresentPin = '1';
 			for I in 1 to 5 loop
 				for J in 0 to 2 loop
 					Halls(I)(J) <= HallsPin(I)(J) = '1';

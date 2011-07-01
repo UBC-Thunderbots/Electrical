@@ -26,7 +26,7 @@ architecture Behavioural of FlashChecksummer is
 		Value : std_ulogic_vector(7 downto 0);
 	end record;
 
-	constant ClocksHighPerSPIClock : natural := 6;
+	constant ClocksHighPerSPIClock : natural := 2;
 	constant SPIClockMidCount : natural := ClocksHighPerSPIClock / 2;
 	constant ROMSize : natural := 2 * 1024 * 1024;
 

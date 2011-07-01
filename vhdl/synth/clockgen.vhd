@@ -43,10 +43,13 @@ architecture Behavioural of ClockGen is
 	signal DCMClockDV : std_ulogic;
 	signal DCMClockFX : std_ulogic;
 
-	-- These will evaluate to negative numbers if the frequencies are not exact multiples,
-	-- which will fail the assignment to natural.
-	constant ClockLowCheck : natural := -(ClockMidFrequency mod ClockLowFrequency);
-	constant ClockHighCheck : natural := -(ClockHighFrequency mod ClockMidFrequency);
+	constant ClockLowDivider : natural := 8;
+	constant ClockHighMultiplier : natural := 25;
+	constant ClockHighDivider : natural := 16;
+
+	-- These will evaluate to nonzero numbers if the math doesn't work out, which will fail the assignment to natural range 0 to 0.
+	constant ClockLowCheck : natural range 0 to 0 := ClockMidFrequency - ClockLowFrequency * ClockLowDivider;
+	constant ClockHighCheck : natural range 0 to 0 := ClockMidFrequency * ClockHighMultiplier - ClockHighFrequency * ClockHighDivider;
 begin
 	IBufferG : IBufG
 	port map(
@@ -57,9 +60,9 @@ begin
 	DCM : DCM_SP
 	generic map(
 		CLKIN_PERIOD => 125.0,
-		CLKDV_DIVIDE => real(ClockMidFrequency / ClockLowFrequency),
-		CLKFX_MULTIPLY => ClockHighFrequency / ClockMidFrequency,
-		CLKFX_DIVIDE => 1,
+		CLKDV_DIVIDE => real(ClockLowDivider),
+		CLKFX_MULTIPLY => ClockHighMultiplier,
+		CLKFX_DIVIDE => ClockHighDivider,
 		STARTUP_WAIT => false)
 	port map(
 		CLKIN => OscillatorBuffered,

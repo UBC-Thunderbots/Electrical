@@ -39,7 +39,7 @@ architecture Behavioural of Main is
 	signal EnableMotors : enable_motors_t;
 	signal MotorsDirection : motors_direction_t;
 	signal MotorsPower : motors_power_t;
-	signal BatteryVoltageHigh : battery_voltage_t;
+	signal BatteryVoltageMid : battery_voltage_t;
 	signal TestMode : test_mode_t;
 	signal TestIndex : natural range 0 to 15;
 	signal KickStrobe : boolean;
@@ -58,7 +58,7 @@ architecture Behavioural of Main is
 begin
 	Parbus: entity work.Parbus(Behavioural)
 	port map(
-		Clock => ClockHigh,
+		Clock => ClockMid,
 		ParbusDataIn => ParbusDataIn,
 		ParbusDataOut => ParbusDataOut,
 		ParbusRead => ParbusRead,
@@ -68,7 +68,7 @@ begin
 		EnableDribbler => EnableDribbler,
 		MotorsDirection => MotorsDirection,
 		MotorsPower => MotorsPower,
-		BatteryVoltage => BatteryVoltageHigh,
+		BatteryVoltage => BatteryVoltageMid,
 		TestMode => TestMode,
 		TestIndex => TestIndex,
 		KickStrobe => KickStrobe,
@@ -82,14 +82,13 @@ begin
 		EncodersCount => EncodersCount,
 		FlashCRC => FlashCRC);
 
-	-- Parbus registers its output on ClockHigh.
+	-- Parbus registers its output on ClockMid.
 	-- BoostConverter runs entirely on ClockLow.
 	-- Cross the timing domain into a second register.
-	-- Without this, timing closure fails as BoostConverter is too slow.
 	process(ClockLow) is
 	begin
 		if rising_edge(ClockLow) then
-			BatteryVoltageLow <= BatteryVoltageHigh;
+			BatteryVoltageLow <= BatteryVoltageMid;
 		end if;
 	end process;
 
@@ -107,7 +106,8 @@ begin
 	GenerateMotor: for I in 1 to 5 generate
 		Motor: entity work.Motor(Behavioural)
 		generic map(
-			PWMMax => 255)
+			PWMMax => 255,
+			PWMPhase => (I - 1) * 51)
 		port map(
 			ClockLow => ClockLow,
 			ClockMid => ClockMid,
@@ -124,7 +124,7 @@ begin
 	GenerateGrayCounter: for I in 1 to 4 generate
 		GrayCounter: entity work.GrayCounter(Behavioural)
 		port map(
-			Clock => ClockHigh,
+			Clock => ClockMid,
 			Input => Encoders(I),
 			Strobe => EncodersStrobe,
 			Value => EncodersCount(I));
@@ -140,7 +140,7 @@ begin
 
 	Kicker: entity work.Kicker(Behavioural)
 	port map(
-		ClockHigh => ClockHigh,
+		ClockMid => ClockMid,
 		ClockLow => ClockLow,
 		Strobe => KickStrobe,
 		Power => KickPower,

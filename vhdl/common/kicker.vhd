@@ -4,7 +4,7 @@ use work.types.all;
 
 entity Kicker is
 	port(
-		ClockHigh : in std_ulogic;
+		ClockMid : in std_ulogic;
 		ClockLow : in std_ulogic;
 		Strobe : in boolean;
 		Power : in kicker_times_t;
@@ -29,8 +29,8 @@ architecture Behavioural of Kicker is
 begin
 	SyncDownStrobe: entity work.SyncDownStrobe(Behavioural)
 	port map(
-		ClockHigh => ClockHigh,
-		ClockLow => ClockLow,
+		ClockInput => ClockMid,
+		ClockOutput => ClockLow,
 		Input => Strobe,
 		Output => StrobeLow);
 

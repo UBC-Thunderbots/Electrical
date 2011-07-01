@@ -3,28 +3,28 @@ use ieee.std_logic_1164.all;
 
 entity SyncDownStrobe is
 	port(
-		ClockHigh : in std_ulogic;
-		ClockLow : in std_ulogic;
+		ClockInput : in std_ulogic;
+		ClockOutput : in std_ulogic;
 		Input : in boolean;
 		Output : out boolean := false);
 end entity SyncDownStrobe;
 
 architecture Behavioural of SyncDownStrobe is
-	signal LowPol : boolean := false;
-	signal HighPol : boolean := false;
+	signal Req : boolean := false;
+	signal Ack : boolean := false;
 begin
-	process(ClockHigh) is
+	process(ClockInput) is
 	begin
-		if rising_edge(ClockHigh) and Input then
-			HighPol <= not HighPol;
+		if rising_edge(ClockInput) and Input then
+			Req <= not Req;
 		end if;
 	end process;
 
-	process(ClockLow) is
+	process(ClockOutput) is
 	begin
-		if rising_edge(ClockLow) then
-			Output <= LowPol /= HighPol;
-			LowPol <= HighPol;
+		if rising_edge(ClockOutput) then
+			Output <= Req /= Ack;
+			Ack <= Req;
 		end if;
 	end process;
 end architecture Behavioural;
