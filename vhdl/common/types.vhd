@@ -17,6 +17,8 @@ package types is
 	subtype encoder_count_t is integer range -1023 to 1023;
 	type encoders_count_t is array(1 to 4) of encoder_count_t;
 
+	type encoders_failed_t is array(1 to 4) of boolean;
+
 	type hall_t is array(0 to 2) of boolean;
 	type halls_t is array(1 to 5) of hall_t;
 

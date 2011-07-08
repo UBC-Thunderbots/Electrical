@@ -39,6 +39,11 @@ architecture Behavioural of Main is
 	signal EnableMotors : enable_motors_t;
 	signal MotorsDirection : motors_direction_t;
 	signal MotorsPower : motors_power_t;
+	type motors_hall_stuck_t is array(1 to 5) of boolean;
+	signal HallsStuck : motors_hall_stuck_t;
+	signal HallsAnyStuck : boolean;
+	type halls_commutated_t is array(1 to 5) of boolean;
+	signal HallsCommutated : halls_commutated_t := (others => false);
 	signal BatteryVoltageMid : battery_voltage_t;
 	signal TestMode : test_mode_t;
 	signal TestIndex : natural range 0 to 15;
@@ -50,6 +55,9 @@ architecture Behavioural of Main is
 	signal CapacitorVoltage : capacitor_voltage_t;
 	signal EncodersCount : encoders_count_t;
 	signal EncodersStrobe : boolean;
+	type encoders_all_seen_t is array(1 to 4) of boolean;
+	signal EncodersAllSeen : encoders_all_seen_t := (others => false);
+	signal EncodersFailed : encoders_failed_t := (others => false);
 	signal KickerTimeout : boolean;
 	signal KickerActivity : boolean;
 	signal KickerDone : boolean;
@@ -80,7 +88,9 @@ begin
 		CapacitorVoltage => CapacitorVoltage,
 		KickerDone => KickerDone,
 		EncodersCount => EncodersCount,
-		FlashCRC => FlashCRC);
+		FlashCRC => FlashCRC,
+		HallsAnyStuck => HallsAnyStuck,
+		EncodersFailed => EncodersFailed);
 
 	-- Parbus registers its output on ClockMid.
 	-- BoostConverter runs entirely on ClockLow.
@@ -109,17 +119,26 @@ begin
 			PWMMax => 255,
 			PWMPhase => (I - 1) * 51)
 		port map(
-			ClockLow => ClockLow,
 			ClockMid => ClockMid,
 			ClockHigh => ClockHigh,
 			Enable => EnableMotors(I),
 			Power => MotorsPower(I),
 			Direction => MotorsDirection(I),
 			Hall => Halls(I),
-			AllLow => open,
-			AllHigh => open,
+			EncodersStrobe => EncodersStrobe,
+			HallStuck => HallsStuck(I),
+			HallCommutated => HallsCommutated(I),
 			Phases => MotorsPhases(I));
 	end generate;
+	process(HallsStuck) is
+	begin
+		HallsAnyStuck <= false;
+		for I in 1 to 5 loop
+			if HallsStuck(I) then
+				HallsAnyStuck <= true;
+			end if;
+		end loop;
+	end process;
 
 	GenerateGrayCounter: for I in 1 to 4 generate
 		GrayCounter: entity work.GrayCounter(Behavioural)
@@ -127,8 +146,15 @@ begin
 			Clock => ClockMid,
 			Input => Encoders(I),
 			Strobe => EncodersStrobe,
-			Value => EncodersCount(I));
+			Value => EncodersCount(I),
+			SeenAllStates => EncodersAllSeen(I));
 	end generate;
+	process(HallsCommutated, EncodersAllSeen) is
+	begin
+		for I in 1 to 4 loop
+			EncodersFailed(I) <= HallsCommutated(I) and not EncodersAllSeen(I);
+		end loop;
+	end process;
 
 	ADC: entity work.ADC(Behavioural)
 	port map(

@@ -8,15 +8,15 @@ entity Motor is
 		PWMMax : positive;
 		PWMPhase : natural);
 	port(
-		ClockLow : in std_ulogic;
 		ClockMid : in std_ulogic;
 		ClockHigh : in std_ulogic;
 		Enable : in boolean;
 		Power : in natural range 0 to PWMMax;
-		Direction	: in boolean;
+		Direction : in boolean;
 		Hall : in hall_t;
-		AllLow : out boolean;
-		AllHigh : out boolean;
+		EncodersStrobe : in boolean;
+		HallStuck : buffer boolean;
+		HallCommutated : out boolean;
 		Phases : out motor_phases_t);
 end entity Motor;
 
@@ -27,12 +27,35 @@ architecture Behavioural of Motor is
 	signal PWMOutput : boolean;
 	signal PWMPhases : motor_phases_t;
 begin
+	process(ClockMid) is
+		type seen_hall_high_t is array(0 to 2) of boolean;
+		variable SeenHallHigh : seen_hall_high_t := (others => false);
+	begin
+		if rising_edge(ClockMid) then
+			if EncodersStrobe then
+				SeenHallHigh := (others => false);
+			else
+				for I in 0 to 2 loop
+					if Hall(I) then
+						SeenHallHigh(I) := true;
+					end if;
+				end loop;
+			end if;
+		end if;
+
+		HallCommutated <= true;
+		for I in 0 to 2 loop
+			if not SeenHallHigh(I) then
+				HallCommutated <= false;
+			end if;
+		end loop;
+	end process;
+
 	Commutator: entity work.Commutator(Behavioural)
 	port map(
 		Direction => Direction,
 		Hall => Hall,
-		AllLow => AllLow,
-		AllHigh => AllHigh,
+		HallStuck => HallStuck,
 		Phase => CommutatorPhases);
 
 	PWM: entity work.PWM(Behavioural)

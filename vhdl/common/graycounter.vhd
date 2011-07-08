@@ -7,12 +7,35 @@ entity GrayCounter is
 		Clock : in std_ulogic;
 		Input : in encoder_t;
 		Strobe : in boolean;
-		Value : out encoder_count_t);
+		Value : out encoder_count_t;
+		SeenAllStates : out boolean := false);
 end entity GrayCounter;
 
 architecture Behavioural of GrayCounter is
 begin
-	process(Clock)
+	process(Clock) is
+		type seen_t is array(0 to 1) of boolean;
+		variable SeenLow, SeenHigh : seen_t := (others => false);
+	begin
+		if rising_edge(Clock) then
+			if Strobe then
+				SeenLow := (others => false);
+				SeenHigh := (others => false);
+			else
+				for I in 0 to 1 loop
+					if Input(I) then
+						SeenHigh(I) := true;
+					else
+						SeenLow(I) := true;
+					end if;
+				end loop;
+			end if;
+		end if;
+
+		SeenAllStates <= SeenLow(0) and SeenLow(1) and SeenHigh(0) and SeenHigh(1);
+	end process;
+
+	process(Clock) is
 		type DeltaType is (NONE, ADD, SUB);
 		variable OldInput : encoder_t;
 		variable Delta : DeltaType;
