@@ -195,7 +195,7 @@ begin
 		Activity => KickerActivity,
 		Done => KickerDone);
 
-	process(TestMode, Halls, Encoders, EncodersCount, KickerActivity, KickerTimeout, KickerDone) is
+	process(TestMode, TestIndex, Halls, Encoders, EncodersCount, KickerActivity, KickerTimeout, KickerDone) is
 	begin
 		case TestMode is
 			when NONE =>
