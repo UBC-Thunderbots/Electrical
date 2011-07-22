@@ -39,22 +39,17 @@ function solenoidDiff = solenoidDiff(t, state)
 
     ALPHA = 1;
 
-    function L = L(position)
-        L = (TURNS ^ 2 * MU_NOT * SOLENOID_AREA * MU_R_CORE) / ((MU_R_CORE + 1) * SOLENOID_LENGTH - (MU_R_CORE - 1) * position);
-    end
-
-    function dLdx = dLdx(position)
-        dLdx = (TURNS ^ 2 * MU_NOT * SOLENOID_AREA * MU_R_CORE * (MU_R_CORE - 1)) / (((MU_R_CORE + 1) * SOLENOID_LENGTH - (MU_R_CORE - 1) * position) ^ 2);
-    end
-
     velocity = state(1);
     position = state(2);
     current = state(3);
     voltage = state(4);
     
-    dVelocity = (1 / (2 * PLUNGER_MASS)) * dLdx(position) * current ^ 2;
+    L = (TURNS ^ 2 * MU_NOT * SOLENOID_AREA * MU_R_CORE) / ((MU_R_CORE + 1) * SOLENOID_LENGTH - (MU_R_CORE - 1) * position);
+    dLdx = (TURNS ^ 2 * MU_NOT * SOLENOID_AREA * MU_R_CORE * (MU_R_CORE - 1)) / (((MU_R_CORE + 1) * SOLENOID_LENGTH - (MU_R_CORE - 1) * position) ^ 2);
+    
+    dVelocity = (1 / (2 * PLUNGER_MASS)) * dLdx * current ^ 2;
     dPosition = velocity;
-    dCurrent = (ALPHA * voltage - dLdx(position) * velocity * current - current * SOLENOID_RESISTANCE) / L(position);
+    dCurrent = (ALPHA * voltage - dLdx * velocity * current - current * SOLENOID_RESISTANCE) / L;
     dVoltage = -current / CAPACITOR_SIZE * ALPHA;
     
     solenoidDiff = [dVelocity; dPosition; dCurrent; dVoltage];
