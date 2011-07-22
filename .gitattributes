@@ -91,7 +91,7 @@ electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.sch -text
 electronics/dongle/dongle.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/plotter.m -text
-electronics/models/solenoid2/solenoidDiff.m -text
+electronics/models/solenoid2/solenoidModel.m -text
 electronics/sensor/sensor.brd -text
 electronics/sensor/sensor.cmp -text
 electronics/sensor_harness_sch/sensor_harness_sch.sch -text
