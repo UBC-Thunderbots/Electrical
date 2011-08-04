@@ -28,7 +28,7 @@ classdef solenoidModel < handle
 		MU_R_CORE;
 		PLUNGER_MASS;
 		CORE_LOSS_CONSTANT;
-
+		DAMPING;
 	end
 	
 	methods
@@ -69,27 +69,34 @@ classdef solenoidModel < handle
 		
 		model.CORE_LOSS_CONSTANT = model.SOLENOID_LENGTH / (2* model.CORE_RESISTIVITY * (model.SOLENOID_WIDTH/model.SOLENOID_HEIGHT + model.SOLENOID_HEIGHT/model.SOLENOID_WIDTH));
 		
+		model.DAMPING = 10;
 		model.ALPHA = 1;
 		end
-	end
-	
-	methods
-		function solenoidDiff = computeDiff(obj,t, state)
+		
+		function mu_r = getMuR(obj,~)
+			mu_r = obj.MU_R_CORE;
+		end
+		
+		function R = getReluctance(obj,position,flux)
+			R = (obj.SOLENOID_LENGTH + position)/obj.MU_NOT./obj.getMuR(flux)/obj.SOLENOID_AREA + (obj.SOLENOID_LENGTH - position)/obj.MU_NOT/obj.SOLENOID_AREA;
+		end
+		
+		function solenoidDiff = computeDiff(obj,~, state)
 			
 			velocity = state(1);
 			position = state(2);
 			flux = state(3);
 			voltage = state(4);
 			
-			Reluctance = (obj.SOLENOID_LENGTH + position)/obj.MU_NOT/obj.MU_R_CORE/obj.SOLENOID_AREA + (obj.SOLENOID_LENGTH - position)/obj.MU_NOT/obj.SOLENOID_AREA;
-			dReluctancedx = (1/obj.MU_R_CORE - 1)/obj.MU_NOT/obj.SOLENOID_AREA;
-			dFlux = (obj.TURNS/obj.SOLENOID_RESISTANCE*voltage*obj.ALPHA - Reluctance*flux)/(obj.TURNS*obj.TURNS / obj.SOLENOID_RESISTANCE - obj.CORE_LOSS_CONSTANT);
-			current = (obj.ALPHA*voltage - obj.TURNS * dFlux)/obj.SOLENOID_RESISTANCE;
-			dVelocity = -(1 / (2 * obj.PLUNGER_MASS)) * dReluctancedx * obj.TURNS^2 / Reluctance^2 * current^2;
+			Reluctance = obj.getReluctance(position,flux);
+			dReluctancedx = (1/obj.getMuR(flux) - 1)/obj.MU_NOT/obj.SOLENOID_AREA;
+			dFlux = (obj.TURNS/obj.SOLENOID_RESISTANCE*voltage*obj.ALPHA - Reluctance*flux)/(obj.TURNS*obj.TURNS / obj.SOLENOID_RESISTANCE + obj.CORE_LOSS_CONSTANT);
+			dVelocity = (-obj.DAMPING*velocity - 1/2*dReluctancedx*flux.^2)/obj.PLUNGER_MASS;
 			dPosition = velocity;
-			dVoltage = -current / obj.CAPACITOR_SIZE * obj.ALPHA;
+			dVoltage = (obj.TURNS*dFlux - voltage)/obj.SOLENOID_RESISTANCE/obj.CAPACITOR_SIZE*obj.ALPHA;
 			
 			solenoidDiff = [dVelocity; dPosition; dFlux; dVoltage];
 		end
+		
 	end
 end
