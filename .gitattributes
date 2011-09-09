@@ -40,6 +40,11 @@ datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
 datasheets/ics/MCP1416.pdf -text svneol=unset#unset
 datasheets/ics/MIC7300.pdf -text
+datasheets/ics/MRF24J40/MRF24J40.pdf -text
+datasheets/ics/MRF24J40/MRF24J40MA.pdf -text
+datasheets/ics/MRF24J40/MRF24J40MB.pdf -text
+datasheets/ics/MRF24J40/MRF24J40MC.pdf -text
+datasheets/ics/MRF24J40/Silicon[!!-~]Errata.pdf -text
 datasheets/ics/NXP[!!-~]-[!!-~]LPC1769FBD100/user.manual.lpc17xx.pdf -text
 datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/PIC18F4550/Errata.pdf -text
