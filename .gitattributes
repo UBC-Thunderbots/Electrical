@@ -108,6 +108,14 @@ electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.cmp -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.pro -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.sch -text
 electronics/digibom/digibom.py -text
+electronics/digibom/digibom/__init__.py -text
+electronics/digibom/digibom/bom.py -text
+electronics/digibom/digibom/digikey.py -text
+electronics/digibom/digibom/main.py -text
+electronics/digibom/digibom/partinfo.py -text
+electronics/digibom/digibom/projectinfo.py -text
+electronics/digibom/digibom/xdg/__init__.py -text
+electronics/digibom/digibom/xdg/basedir.py -text
 electronics/dongle/dongle.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/kickdata.m -text

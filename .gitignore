@@ -63,7 +63,10 @@ electronics/chicker/*.net
 electronics/chicker/*.pho
 electronics/chicker/*.ses
 electronics/chicker/*.stf
-electronics/digibom/digibom
+electronics/digibom/digibom/*.pyc
+electronics/digibom/digibom/*.pyo
+electronics/digibom/digibom/xdg/*.pyc
+electronics/digibom/digibom/xdg/*.pyo
 electronics/dongle/$savepcb.*
 electronics/dongle/*-cache.*
 electronics/dongle/*.000
