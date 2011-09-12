@@ -107,6 +107,7 @@ electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.brd -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.cmp -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.pro -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.sch -text
+electronics/digibom/digibom.py -text
 electronics/dongle/dongle.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/kickdata.m -text
