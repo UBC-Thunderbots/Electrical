@@ -62,6 +62,12 @@
 		<!-- Some components are just representations of jumper wires between two points. -->
 		<multipart id="jumper-wire" />
 
+		<!-- An MRF24J40MC requires an external antenna. -->
+		<multipart id="MRF24J40MC">
+			<subpart id="MRF24J40MC-I/RM-ND" />
+			<subpart id="0600-00039-ND" />
+		</multipart>
+
 		<!-- XBees require both the radio and two headers with the unusual pin spacing of 2mm. -->
 		<multipart id="XBEE">
 			<subpart id="XB24-AWI-001-ND" />
