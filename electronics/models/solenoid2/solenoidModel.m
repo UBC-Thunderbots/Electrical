@@ -1,39 +1,5 @@
-classdef solenoidModel < handle
-	properties
-		FILL_FACTOR; %this is the circle fill factor (not nessecary at this point)
-		AWG
-		CLADDING_THICKNESS;
-		WINDING_HEIGHT; %meters
-		SOLENOID_WIDTH; % meters
-		SOLENOID_HEIGHT; % meters
-		SOLENOID_LENGTH; % in meters
-		WINDING_RESISTIVITY; % ohm meters
-		CAPACITOR_SIZE; % in farad
-		CORE_RESISTIVITY; % ohm meter
-		MU_NOT;
-		MU_R_IRON;
-		MU_R_STEEL;
-		CORE_DENSITY; % kg / meters cube		
-		ALPHA;
-		
-		CORE_DIAMETER;
-		WIRE_DIAMETER;
-		CORE_AREA;
-		WINDING_AREA;
-		TURNS;
-		FILL_EFFICENCY;
-		TURN_RESISTANCE;
-		SOLENOID_RESISTANCE; 		
-		SOLENOID_AREA; 
-		MU_R_CORE;
-		PLUNGER_MASS;
-		CORE_LOSS_CONSTANT;
-		DAMPING;
-	end
-	
-	methods
-		function model = solenoidModel()
-			model.FILL_FACTOR = 0.9934; %this is the circle fill factor (not nessecary at this point)
+function model=solenoidModel()
+		model.FILL_FACTOR = 0.9934; %this is the circle fill factor (not nessecary at this point)
 		model.AWG = 18;
 		
 		model.CLADDING_THICKNESS = 0.0;
@@ -71,32 +37,4 @@ classdef solenoidModel < handle
 		
 		model.DAMPING = 10;
 		model.ALPHA = 1;
-		end
-		
-		function mu_r = getMuR(obj,~)
-			mu_r = obj.MU_R_CORE;
-		end
-		
-		function R = getReluctance(obj,position,flux)
-			R = (obj.SOLENOID_LENGTH + position)/obj.MU_NOT./obj.getMuR(flux)/obj.SOLENOID_AREA + (obj.SOLENOID_LENGTH - position)/obj.MU_NOT/obj.SOLENOID_AREA;
-		end
-		
-		function solenoidDiff = computeDiff(obj,~, state)
-			
-			velocity = state(1);
-			position = state(2);
-			flux = state(3);
-			voltage = state(4);
-			
-			Reluctance = obj.getReluctance(position,flux);
-			dReluctancedx = (1/obj.getMuR(flux) - 1)/obj.MU_NOT/obj.SOLENOID_AREA;
-			dFlux = (obj.TURNS/obj.SOLENOID_RESISTANCE*voltage*obj.ALPHA - Reluctance*flux)/(obj.TURNS*obj.TURNS / obj.SOLENOID_RESISTANCE + obj.CORE_LOSS_CONSTANT);
-			dVelocity = (-obj.DAMPING*velocity - 1/2*dReluctancedx*flux.^2)/obj.PLUNGER_MASS;
-			dPosition = velocity;
-			dVoltage = (obj.TURNS*dFlux - voltage)/obj.SOLENOID_RESISTANCE/obj.CAPACITOR_SIZE*obj.ALPHA;
-			
-			solenoidDiff = [dVelocity; dPosition; dFlux; dVoltage];
-		end
-		
-	end
 end

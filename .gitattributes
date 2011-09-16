@@ -118,6 +118,9 @@ electronics/digibom/digibom/xdg/__init__.py -text
 electronics/digibom/digibom/xdg/basedir.py -text
 electronics/dongle/dongle.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
+electronics/models/solenoid2/computeDiff.m -text
+electronics/models/solenoid2/getMuR.m -text
+electronics/models/solenoid2/getReluctance.m -text
 electronics/models/solenoid2/kickdata.m -text
 electronics/models/solenoid2/moded.csv -text
 electronics/models/solenoid2/plotter.m -text
