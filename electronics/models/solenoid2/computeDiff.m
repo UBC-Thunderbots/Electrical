@@ -6,6 +6,7 @@ function solenoidDiff = computeDiff(obj,time, state)
 		voltage = state(4);
 			
 		Reluctance = getReluctance(obj,position,flux);
+		
 		dReluctancedx = (1/getMuR(obj,flux) - 1)/obj.MU_NOT/obj.SOLENOID_AREA;
 		dFlux = (obj.TURNS/obj.SOLENOID_RESISTANCE*voltage*obj.ALPHA - Reluctance*flux)/(obj.TURNS*obj.TURNS / obj.SOLENOID_RESISTANCE + obj.CORE_LOSS_CONSTANT);
 		dVelocity = (-obj.DAMPING*velocity - 1/2*dReluctancedx*flux.^2)/obj.PLUNGER_MASS;

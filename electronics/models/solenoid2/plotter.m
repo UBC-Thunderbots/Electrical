@@ -7,7 +7,7 @@ initState = [initVelocity; initPosition; initFlux; initVoltage];
 
 A = solenoidModel();
 
-[t, y] = ode45(@(t,y) computeDiff(A,t,y), [0, 0.005], initState);
+[t, y] = ode45(@(t,y) computeDiff(A,t,y), [0, 0.01], initState);
 
 figure(1);
 for i = 1:4
@@ -19,6 +19,7 @@ figure(2);
 VelEnergy = A.PLUNGER_MASS/2*y(:,1).^2;
 CapEnergy = A.CAPACITOR_SIZE/2*y(:,4).^2;
 MagEnergy = getReluctance(A,y(:,2),y(:,3))/2.*(y(:,3).^2);
+
 subplot(2,2,1)
 plot(t,VelEnergy);
 subplot(2,2,2)
