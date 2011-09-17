@@ -30,7 +30,7 @@ function model=solenoidModel()
 		model.MU_R_STEEL = 300;
 		model.MU_R_CORE = model.MU_R_STEEL;
 		model.CORE_SATURATION = 1.6;
-		
+		model.CORE_SAT_SCALE = 1;
 		model.CORE_DENSITY = 7870; % kg / meters cubed
 		model.PLUNGER_MASS = model.SOLENOID_AREA * model.SOLENOID_LENGTH * model.CORE_DENSITY;
 		
