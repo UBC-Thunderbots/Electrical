@@ -76,4 +76,4 @@ class BOM(object):
 			for part_id, quantity in self._parts.items():
 				part_info = self._part_info[part_id]
 				price, quantity = part_info.get_effective_price_and_quantity(quantity)
-				fp.write("{}\t{}\t{}\t{}\t{}\n".format(part_info.description, part_info.id, digibom.digikey.url_for_part(part_info.id), quantity, price))
+				fp.write("{}\t{}\t{}\t{}\t{}\n".format(part_info.id, part_info.description, digibom.digikey.url_for_part(part_info.id), quantity, price))
