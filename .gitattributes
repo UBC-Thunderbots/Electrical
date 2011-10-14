@@ -117,6 +117,9 @@ electronics/digibom/digibom/projectinfo.py -text
 electronics/digibom/digibom/xdg/__init__.py -text
 electronics/digibom/digibom/xdg/basedir.py -text
 electronics/dongle/dongle.cmp -text
+electronics/dribbler_testboard/dribbler_testboard.brd -text
+electronics/dribbler_testboard/dribbler_testboard.cmp -text
+electronics/dribbler_testboard/dribbler_testboard.net -text
 electronics/dribbler_testboard/dribbler_testboard.pro -text
 electronics/dribbler_testboard/dribbler_testboard.sch -text
 electronics/models/solenoid/solenoid.mdl -text
