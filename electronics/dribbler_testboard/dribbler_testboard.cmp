@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Sat 08 Oct 2011 12:43:41 PM PDT
+Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Sat 22 Oct 2011 01:35:54 PM PDT
 
 BeginCmp
 TimeStamp = /4E5D249A;
@@ -211,6 +211,27 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /4EA3250C;
+Reference = R8;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EA32511;
+Reference = R9;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EA32518;
+Reference = R10;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /4E5D2721;
 Reference = RV1;
 ValeurCmp = POT;
@@ -222,6 +243,27 @@ TimeStamp = /4E6BF0F8;
 Reference = RV2;
 ValeurCmp = POT;
 IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EA32638;
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = SW_PUSH;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EA32643;
+Reference = SW2;
+ValeurCmp = SW_PUSH;
+IdModule  = SW_PUSH;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EA32649;
+Reference = SW3;
+ValeurCmp = SW_PUSH;
+IdModule  = SW_PUSH;
 EndCmp
 
 BeginCmp
