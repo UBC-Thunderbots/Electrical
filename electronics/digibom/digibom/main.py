@@ -31,11 +31,8 @@ def main():
 	if options.flush:
 		digibom.partinfo.flush()
 
-	# If a project information file was specified, load it now.
-	if options.project_info is not None:
-		project_info = digibom.projectinfo.ProjectInfo(options.project_info)
-	else:
-		project_info = digibom.projectinfo.ProjectInfo()
+	# If a project information file was specified, load it now (otherwise will create an empty ProjectInfo).
+	project_info = digibom.projectinfo.ProjectInfo(options.project_info)
 
 	# Read all the list files specified on the command line, collecting part counts and expanding multiparts.
 	bom = digibom.bom.BOM(project_info)
