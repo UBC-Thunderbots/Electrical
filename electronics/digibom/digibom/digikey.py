@@ -44,10 +44,23 @@ def lookup(part):
 			return self._text.find("Part not found.") != -1
 
 	# Download the HTML file.
-	with urllib.request.urlopen(url_for_part(part)) as resp:
-		if resp.getheader("Content-Type") != "text/html; charset=utf-8":
-			raise Exception("DigiKey returned unexpected content-type")
-		html_string = str(resp.readall(), "UTF-8")
+	html_string = None
+	url = url_for_part(part)
+	while html_string is None:
+		try:
+			with urllib.request.urlopen(url) as resp:
+				if resp.getheader("Content-Type") != "text/html; charset=utf-8":
+					raise Exception("DigiKey returned unexpected content-type")
+				html_string = str(resp.readall(), "UTF-8")
+		except urllib.error.HTTPError as exp:
+			if exp.code == 301:
+				location = exp.headers["Location"]
+				if location.startswith("/"):
+					url = "http://search.digikey.com" + location
+				else:
+					raise
+			else:
+				raise
 	
 	# For some reason, DigiKey dumps weird tags in the middle of the HTML that look like this:
 	# <CS=0>
