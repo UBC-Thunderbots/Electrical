@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Sat 22 Oct 2011 01:35:54 PM PDT
+Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Sun 30 Oct 2011 06:41:01 PM PDT
 
 BeginCmp
 TimeStamp = /4E5D249A;
@@ -64,6 +64,13 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /4EADFC0F;
+Reference = C10;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /4E5D268A;
 Reference = D1;
 ValeurCmp = LED;
@@ -82,6 +89,20 @@ TimeStamp = /4E90A4EA;
 Reference = D3;
 ValeurCmp = DIODE;
 IdModule  = D6;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EADFBB5;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EADFBBE;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
@@ -164,14 +185,14 @@ EndCmp
 BeginCmp
 TimeStamp = /4E5D25AB;
 Reference = R1;
-ValeurCmp = 2kR;
+ValeurCmp = 10kR;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E5D25B7;
 Reference = R2;
-ValeurCmp = 10kR;
+ValeurCmp = 2kR;
 IdModule  = SM0805;
 EndCmp
 
@@ -228,6 +249,20 @@ BeginCmp
 TimeStamp = /4EA32518;
 Reference = R10;
 ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EADFBB6;
+Reference = R11;
+ValeurCmp = 100R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EADFBBD;
+Reference = R12;
+ValeurCmp = 100R;
 IdModule  = SM0805;
 EndCmp
 
