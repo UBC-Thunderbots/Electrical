@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Sun 30 Oct 2011 06:41:01 PM PDT
+Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Thu 03 Nov 2011 09:34:16 AM PDT
 
 BeginCmp
 TimeStamp = /4E5D249A;
@@ -66,6 +66,27 @@ EndCmp
 BeginCmp
 TimeStamp = /4EADFC0F;
 Reference = C10;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EB2C247;
+Reference = C11;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EB2C223;
+Reference = C12;
+ValeurCmp = 1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EB2C171;
+Reference = C13;
 ValeurCmp = 1uF;
 IdModule  = SM0805;
 EndCmp
@@ -232,16 +253,16 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EA3250C;
+TimeStamp = /4EB2C242;
 Reference = R8;
 ValeurCmp = 10kR;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EA32511;
+TimeStamp = /4EB2C246;
 Reference = R9;
-ValeurCmp = 10kR;
+ValeurCmp = 100kR;
 IdModule  = SM0805;
 EndCmp
 
@@ -267,6 +288,27 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /4EB2C228;
+Reference = R13;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EB2C224;
+Reference = R14;
+ValeurCmp = 100kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4EB2C160;
+Reference = R15;
+ValeurCmp = 100kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /4E5D2721;
 Reference = RV1;
 ValeurCmp = POT;
@@ -281,14 +323,14 @@ IdModule  = PIN_ARRAY_3X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EA32638;
+TimeStamp = /4EB2C244;
 Reference = SW1;
 ValeurCmp = SW_PUSH;
 IdModule  = SW_PUSH;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EA32643;
+TimeStamp = /4EB2C226;
 Reference = SW2;
 ValeurCmp = SW_PUSH;
 IdModule  = SW_PUSH;
