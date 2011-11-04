@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Thu 03 Nov 2011 09:34:16 AM PDT
+Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Thu 03 Nov 2011 05:28:43 PM PDT
 
 BeginCmp
 TimeStamp = /4E5D249A;
@@ -361,7 +361,7 @@ BeginCmp
 TimeStamp = /4E5D248C;
 Reference = U3;
 ValeurCmp = LD1117V33C;
-IdModule  = TO220_VERT;
+IdModule  = TO220_123;
 EndCmp
 
 BeginCmp
