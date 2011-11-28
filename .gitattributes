@@ -54,6 +54,7 @@ datasheets/ics/PIC18F6XJ50/Errata.pdf -text
 datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
 datasheets/ics/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/STM32/Bootloader[!!-~]DFU[!!-~]File[!!-~]Format.pdf -text
 datasheets/ics/STM32/Bootloader[!!-~]DFU[!!-~]Protocol.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Errata.pdf -text
 datasheets/ics/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Technical[!!-~]Reference[!!-~]Manual.pdf -text
