@@ -1,65 +1,65 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 26 Feb 2011 12:30:07 PM PST
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sat 28 Jan 2012 12:06:14 PM PST
 
 BeginCmp
 TimeStamp = /4D605DE4;
 Reference = C1;
-ValeurCmp = 0.1u;
-IdModule  = SM0805;
+ValeurCmp = 100nF;
+IdModule  = 1pin;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D605E15;
 Reference = C2;
-ValeurCmp = 0.1u;
-IdModule  = SM0805;
+ValeurCmp = 100nF;
+IdModule  = 1pin;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D60593D;
+TimeStamp = /4F244C06;
 Reference = P1;
-ValeurCmp = CONN_5;
+ValeurCmp = CONN_6;
 IdModule  = WM7624CT-ND;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B1F4749;
 Reference = R1;
-ValeurCmp = R;
+ValeurCmp = 88;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B1F474B;
 Reference = R2;
-ValeurCmp = R;
+ValeurCmp = 5;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B27D75C;
 Reference = R3;
-ValeurCmp = R;
+ValeurCmp = 100;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B27D7A9;
 Reference = R4;
-ValeurCmp = R;
+ValeurCmp = 100;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B27D7BC;
 Reference = R5;
-ValeurCmp = R;
+ValeurCmp = 100;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B27D7CB;
 Reference = R6;
-ValeurCmp = R;
+ValeurCmp = 100;
 IdModule  = SM0805;
 EndCmp
 
@@ -71,10 +71,24 @@ IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F245263;
+Reference = U2;
+ValeurCmp = 74AHC74;
+IdModule  = SO14E;
+EndCmp
+
+BeginCmp
 TimeStamp = /4B27D6A6;
 Reference = U3;
 ValeurCmp = OPB733TR;
 IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F245279;
+Reference = U4;
+ValeurCmp = 74AHC74;
+IdModule  = SO14E;
 EndCmp
 
 BeginCmp
@@ -96,20 +110,6 @@ TimeStamp = /4B27D7C7;
 Reference = U9;
 ValeurCmp = OPB733TR;
 IdModule  = OPB733T;
-EndCmp
-
-BeginCmp
-TimeStamp = /4D6055BC;
-Reference = U10;
-ValeurCmp = 74AHC74;
-IdModule  = SO14E;
-EndCmp
-
-BeginCmp
-TimeStamp = /4D605830;
-Reference = U11;
-ValeurCmp = 74AHC74;
-IdModule  = SO14E;
 EndCmp
 
 EndListe
