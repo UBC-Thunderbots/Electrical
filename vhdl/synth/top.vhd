@@ -63,7 +63,7 @@ architecture Behavioural of Top is
 	signal KickerPresent : boolean;
 begin
 	-- Feed the external oscillator into a clock generator to produce our three system clocks.
-	ClockGen: entity work.ClockGen(Behavioural)
+	ClockGen: entity ClockGen(Behavioural)
 	port map(
 		Oscillator => OscillatorPin,
 		Reset => DCMResetPin,
@@ -143,7 +143,7 @@ begin
 	VirtualVDDPin <= (others => '1');
 
 	-- Instantiate the main entity.
-	Main: entity work.Main(Behavioural)
+	Main: entity Main(Behavioural)
 	port map(
 		ClockLow => ClockLow,
 		ClockMid => ClockMid,

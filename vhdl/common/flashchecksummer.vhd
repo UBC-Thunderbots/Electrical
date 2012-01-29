@@ -55,15 +55,13 @@ begin
 		variable ClockCount : clock_count_t := 0;
 		variable OutputShifter : std_ulogic_vector(7 downto 0) := X"03"; -- Need to send another 3 bytes for address, but they're all zeroes
 	begin
-		if rising_edge(ClockHigh) then
-			if TransceiverEnable then
-				TransceiverToIgnorer.Strobe <= ClockCount = clock_count_t'high / 2;
-				TransceiverToIgnorer.Value <= MISO;
-				if ClockCount = clock_count_t'high then
-					OutputShifter := OutputShifter(6 downto 0) & '0';
-				end if;
-				ClockCount := (ClockCount + 1) mod (clock_count_t'high + 1);
+		if rising_edge(ClockHigh) and TransceiverEnable then
+			TransceiverToIgnorer.Strobe <= ClockCount = clock_count_t'high / 2;
+			TransceiverToIgnorer.Value <= MISO;
+			if ClockCount = clock_count_t'high then
+				OutputShifter := OutputShifter(6 downto 0) & '0';
 			end if;
+			ClockCount := (ClockCount + 1) mod (clock_count_t'high + 1);
 		end if;
 
 		SPIClock <= ClockCount > clock_count_t'high / 2;
@@ -102,10 +100,8 @@ begin
 	process(ClockHigh, AccumulatorToLimiter) is
 		variable ByteCount : natural range 0 to ROMSize := ROMSize;
 	begin
-		if rising_edge(ClockHigh) then
-			if AccumulatorToLimiter.Strobe and ByteCount /= 0 then
-				ByteCount := ByteCount - 1;
-			end if;
+		if rising_edge(ClockHigh) and AccumulatorToLimiter.Strobe and ByteCount /= 0 then
+			ByteCount := ByteCount - 1;
 		end if;
 
 		Drive <= ByteCount /= 0;
@@ -116,10 +112,8 @@ begin
 	process(ClockHigh) is
 		variable CRCBuffer : std_ulogic_vector(15 downto 0) := X"FFFF";
 	begin
-		if rising_edge(ClockHigh) then
-			if LimiterToCRC.Strobe then
-				CRCBuffer := CRC16(CRCBuffer, LimiterToCRC.Value);
-			end if;
+		if rising_edge(ClockHigh) and LimiterToCRC.Strobe then
+			CRCBuffer := CRC16(CRCBuffer, LimiterToCRC.Value);
 		end if;
 
 		CRC <= CRCBuffer;

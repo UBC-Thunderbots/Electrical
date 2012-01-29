@@ -15,7 +15,7 @@ entity Motor is
 		Direction : in boolean;
 		Hall : in hall_t;
 		EncodersStrobe : in boolean;
-		HallStuck : out boolean;
+		HallStuck : buffer boolean;
 		HallCommutated : out boolean;
 		Phases : out motor_phases_t);
 end entity Motor;

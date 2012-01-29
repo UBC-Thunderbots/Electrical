@@ -15,10 +15,8 @@ architecture Behavioural of SyncDownStrobe is
 begin
 	process(ClockInput) is
 	begin
-		if rising_edge(ClockInput) then
-			if Input then
-				Req <= not Req;
-			end if;
+		if rising_edge(ClockInput) and Input then
+			Req <= not Req;
 		end if;
 	end process;
 

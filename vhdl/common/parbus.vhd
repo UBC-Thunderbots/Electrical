@@ -180,7 +180,14 @@ begin
 
 					-- Address 6 has test mode controls.
 					when 6 =>
-						TestMode <= test_mode_t'val(to_integer(unsigned(WriteData(15 downto 8))));
+						case to_integer(unsigned(WriteData(15 downto 8))) is
+							when 1 => TestMode <= LAMPTEST;
+							when 2 => TestMode <= HALL;
+							when 3 => TestMode <= ENCODER_LINES;
+							when 4 => TestMode <= ENCODER_COUNT;
+							when 5 => TestMode <= BOOSTCONVERTER;
+							when others => TestMode <= NONE;
+						end case;
 						TestIndex <= to_integer(unsigned(WriteData(7 downto 0)));
 
 					-- Address 7 is unused.

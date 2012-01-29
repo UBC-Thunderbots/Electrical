@@ -6,5 +6,4 @@ run
 -opt_level 1
 -opt_mode area
 -arch behavioural
--use_new_parser yes
 
