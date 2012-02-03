@@ -4,7 +4,7 @@ import os
 import os.path
 import sqlite3
 
-import digibom.digikey
+import digibom.octopart
 import digibom.xdg.basedir
 
 class Part(object):
@@ -82,7 +82,7 @@ def lookup(parts, include_quantity_available):
 			# Download the data.
 			for part in need_fetch:
 				print("Looking up part {}...".format(part))
-				part = digibom.digikey.lookup(part)
+				part = digibom.octopart.lookup(part)
 				ret[part.id] = part
 				with conn:
 					conn.execute("INSERT OR REPLACE INTO parts(id, description) VALUES (?, ?)", (part.id, part.description))
