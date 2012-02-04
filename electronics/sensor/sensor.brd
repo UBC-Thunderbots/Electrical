@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date Thu 02 Feb 2012 01:31:08 PM PST
+PCBNEW-BOARD Version 1 date Sat 04 Feb 2012 12:40:02 PM PST
 
 # Created by Pcbnew(2011-05-25)-stable
 
@@ -8,10 +8,10 @@ LayerCount 2
 Ly 1FFF8001
 EnabledLayers 1FFF8001
 Links 48
-NoConn 1
+NoConn 0
 Di 45740 30424 76076 37926
 Ndraw 4
-Ntrack 249
+Ntrack 252
 Nzone 0
 BoardThickness 630
 Nmodule 16
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11700 8267
 Title ""
-Date "2 feb 2012"
+Date "4 feb 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -35,7 +35,7 @@ InternalUnit 0.000100 INCH
 Layers 2
 Layer[0] Back signal
 Layer[15] Front signal
-TrackWidth 80
+TrackWidth 240
 TrackWidthList 80
 TrackWidthList 160
 TrackWidthList 240
@@ -64,7 +64,7 @@ PadSize 600 600
 PadDrill 320
 Pad2MaskClearance 100
 AuxiliaryAxisOrg 0 0
-PcbPlotParams (pcbplotparams (layerselection 15761409) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
+PcbPlotParams (pcbplotparams (layerselection 284983297) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
 $EndSETUP
 
 $EQUIPOT
@@ -970,6 +970,18 @@ Po 0 46500 30500 76000 30500 150
 De 28 0 900 0 0
 $EndDRAWSEGMENT
 $TRACK
+Po 0 64250 36000 65000 36000 240 -1
+De 0 0 1 0 400000
+Po 0 67900 35600 67500 36000 160 -1
+De 15 0 1 0 0
+Po 3 67500 36000 67500 36000 350 -1
+De 15 1 1 0 0
+Po 0 67900 35600 67900 35000 160 -1
+De 15 0 1 0 800000
+Po 0 65000 36000 67500 36000 240 -1
+De 15 0 1 0 0
+Po 3 65000 36000 65000 36000 350 -1
+De 15 1 1 0 0
 Po 0 63500 34000 63000 34000 240 -1
 De 0 0 1 0 0
 Po 0 63750 36500 64250 36000 240 -1
@@ -1016,12 +1028,6 @@ Po 0 68000 31000 71000 31000 240 -1
 De 0 0 1 0 0
 Po 0 67000 32000 68000 31000 240 -1
 De 0 0 1 0 0
-Po 0 67900 35000 67900 35600 160 -1
-De 15 0 1 0 400000
-Po 3 67500 36000 67500 36000 350 -1
-De 15 1 1 0 0
-Po 0 67900 35600 67500 36000 160 -1
-De 15 0 1 0 0
 Po 0 51400 35000 51400 35100 160 -1
 De 15 0 1 0 400000
 Po 3 51000 35500 51000 35500 350 -1
