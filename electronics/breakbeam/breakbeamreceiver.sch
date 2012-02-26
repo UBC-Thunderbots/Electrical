@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/02/2012 3:31:15 PM
+EESchema Schematic File Version 2  date 26/02/2012 3:38:48 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,10 +45,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L OPTO_NPN Q?
+L OPTO_NPN Q1
 U 1 1 4F4AC0B2
 P 5200 3750
-F 0 "Q?" H 5350 3800 50  0000 L CNN
+F 0 "Q1" H 5350 3800 50  0000 L CNN
 F 1 "OPTO_NPN" H 5350 3650 50  0000 L CNN
 	1    5200 3750
 	1    0    0    -1  
