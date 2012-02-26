@@ -1,0 +1,24 @@
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 26/02/2012 1:02:33 PM
+
+BeginCmp
+TimeStamp = /4F4A8D52;
+Reference = D1;
+ValeurCmp = VSMY2850RG;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4A9B88;
+Reference = P1;
+ValeurCmp = CONN_2;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F4A9331;
+Reference = R1;
+ValeurCmp = 16.5;
+IdModule  = SM0805;
+EndCmp
+
+EndListe

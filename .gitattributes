@@ -120,6 +120,14 @@ electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.brd -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.cmp -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.pro -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.sch -text
+electronics/breakbeam/breakbeam.brd -text
+electronics/breakbeam/breakbeam.cmp -text
+electronics/breakbeam/breakbeam.pro -text
+electronics/breakbeam/breakbeam.sch -text
+electronics/breakbeam/breakbeamreceiver.brd -text
+electronics/breakbeam/breakbeamreceiver.cmp -text
+electronics/breakbeam/breakbeamreceiver.pro -text
+electronics/breakbeam/breakbeamreceiver.sch -text
 electronics/digibom/digibom.py -text
 electronics/digibom/digibom/__init__.py -text
 electronics/digibom/digibom/bom.py -text
