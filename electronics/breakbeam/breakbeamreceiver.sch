@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/02/2012 3:38:48 PM
+EESchema Schematic File Version 2  date 26/02/2012 5:00:48 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:breakbeamreceiver-cache
-EELAYER 25  0
+EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-encoding utf-8
 Sheet 1 1
 Title ""
-Date "26 feb 2012"
+Date "27 feb 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -49,7 +48,7 @@ L OPTO_NPN Q1
 U 1 1 4F4AC0B2
 P 5200 3750
 F 0 "Q1" H 5350 3800 50  0000 L CNN
-F 1 "OPTO_NPN" H 5350 3650 50  0000 L CNN
+F 1 "TEMT1000" H 5350 3650 50  0000 L CNN
 	1    5200 3750
 	1    0    0    -1  
 $EndComp

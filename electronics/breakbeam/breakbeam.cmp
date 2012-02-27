@@ -1,17 +1,17 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 26/02/2012 1:02:33 PM
+Cmp-Mod V01 Created by CvPCB (2010-05-05 BZR 2356)-stable date = 26/02/2012 4:45:31 PM
 
 BeginCmp
 TimeStamp = /4F4A8D52;
 Reference = D1;
 ValeurCmp = VSMY2850RG;
-IdModule  = ;
+IdModule  = LED-VSMY2850RG;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4A9B88;
 Reference = P1;
 ValeurCmp = CONN_2;
-IdModule  = ;
+IdModule  = connector_0_49_in_2pin;
 EndCmp
 
 BeginCmp

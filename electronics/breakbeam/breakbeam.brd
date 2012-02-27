@@ -1,27 +1,26 @@
-PCBNEW-BOARD Version 1 date 26/02/2012 1:21:42 PM
+PCBNEW-BOARD Version 1 date 26/02/2012 5:30:55 PM
 
-# Created by Pcbnew(2012-01-19 BZR 3256)-stable
+# Created by Pcbnew(2010-05-05 BZR 2356)-stable
 
 $GENERAL
-encoding utf-8
 LayerCount 2
 Ly 1FFF8001
 EnabledLayers 1FFF8001
-Links 0
-NoConn 0
-Di 0 0 117000 82670
+Links 3
+NoConn 3
+Di 7870 6133 12190 11540
 Ndraw 0
-Ntrack 0
+Ntrack 11
 Nzone 0
 BoardThickness 630
-Nmodule 0
-Nnets 1
+Nmodule 3
+Nnets 4
 $EndGENERAL
 
 $SHEETDESCR
 Sheet A4 11700 8267
 Title ""
-Date "26 feb 2012"
+Date "27 feb 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -32,6 +31,7 @@ $EndSHEETDESCR
 
 $SETUP
 InternalUnit 0.000100 INCH
+ZoneGridSize 250
 Layers 2
 Layer[0] Back signal
 Layer[15] Front signal
@@ -55,15 +55,26 @@ TextPcbSize 600 800
 EdgeModWidth 150
 TextModSize 600 600
 TextModWidth 120
-PadSize 600 600
-PadDrill 320
+PadSize 905 905
+PadDrill 905
 Pad2MaskClearance 100
 AuxiliaryAxisOrg 0 0
-PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
 $EndSETUP
 
 $EQUIPOT
 Na 0 ""
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 1 "N-000003"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 2 "N-000004"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 3 "N-000005"
 St ~
 $EndEQUIPOT
 $NCLASS
@@ -76,8 +87,140 @@ ViaDrill 250
 uViaDia 200
 uViaDrill 50
 AddNet ""
+AddNet "N-000003"
+AddNet "N-000004"
+AddNet "N-000005"
 $EndNCLASS
+$MODULE connector_0_49_in_2pin
+Po 10000 9500 0 15 4F4AD1C0 4F4ADA74 ~~
+Li connector_0_49_in_2pin
+Sc 4F4ADA74
+AR /4F4A9B88
+Op 0 0 0
+T0 120 -1545 600 600 0 120 N V 21 N"P1"
+T1 30 1560 600 600 0 120 N V 21 N"CONN_2"
+$PAD
+Sh "2" R 315 511 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "N-000005"
+Po 246 -256
+$EndPAD
+$PAD
+Sh "1" R 314 511 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "N-000004"
+Po -246 -255
+$EndPAD
+$PAD
+Sh "" R 826 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1250 1220
+$EndPAD
+$PAD
+Sh "" R 826 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1250 1220
+$EndPAD
+$EndMODULE  connector_0_49_in_2pin
+$MODULE LED-VSMY2850RG
+Po 10000 7000 0 15 4F4AC93F 4F4AD376 ~~
+Li LED-VSMY2850RG
+Cd LED 1206 smd package
+Kw LED led 1206 SMD smd SMT smt smdled SMDLED smtled SMTLED
+Sc 4F4AD376
+AR /4F4A8D52
+Op 0 0 0
+At SMD 
+T0 100 -600 300 300 0 35 N V 21 N"D1"
+T1 0 600 300 300 0 35 N V 21 N"VSMY2850RG"
+$PAD
+Sh "1" R 669 295 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "N-000003"
+Po -980 0
+$EndPAD
+$PAD
+Sh "2" R 669 295 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "N-000005"
+Po 984 0
+$EndPAD
+$PAD
+Sh "" C 905 905 0 0 0
+Dr 905 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$EndMODULE  LED-VSMY2850RG
+$MODULE SM0805
+Po 8500 8500 900 15 42806E04 4F4AD377 ~~
+Li SM0805
+Sc 4F4AD377
+AR /4F4A9331
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 900 50 N V 21 N"R1"
+T1 0 0 250 250 900 50 N I 21 N"16.5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "N-000004"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "N-000003"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
 $TRACK
+Po 0 9017 7290 9020 7290 80 -1
+De 15 0 1 0 0
+Po 0 8500 7807 9017 7290 80 -1
+De 15 0 1 0 0
+Po 0 8500 8125 8500 7807 80 -1
+De 15 0 1 0 0
+Po 0 9020 7000 9020 7290 80 -1
+De 15 0 1 0 0
+Po 0 8947 8846 9754 8846 80 -1
+De 15 0 2 0 0
+Po 0 8918 8875 8947 8846 80 -1
+De 15 0 2 0 0
+Po 0 9754 9245 9754 8846 80 -1
+De 15 0 2 0 0
+Po 0 8500 8875 8918 8875 80 -1
+De 15 0 2 0 0
+Po 0 10984 8107 10246 8845 80 -1
+De 15 0 3 0 0
+Po 0 10984 7000 10984 8107 80 -1
+De 15 0 3 0 0
+Po 0 10246 9244 10246 8845 80 -1
+De 15 0 3 0 0
 $EndTRACK
 $ZONE
 $EndZONE

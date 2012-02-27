@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/02/2012 3:41:51 PM
+EESchema Schematic File Version 2  date 26/02/2012 4:11:06 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,10 +30,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:breakbeam-cache
-EELAYER 25  0
+EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-encoding utf-8
 Sheet 1 1
 Title ""
 Date "26 feb 2012"

@@ -1,23 +1,23 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 26/02/2012 3:28:56 PM
+Cmp-Mod V01 Created by CvPCB (2010-05-05 BZR 2356)-stable date = 26/02/2012 4:44:51 PM
 
 BeginCmp
 TimeStamp = /4F4ABF4E;
 Reference = K1;
 ValeurCmp = CONN_3;
-IdModule  = ;
+IdModule  = connector_0_49_in_3pin;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4ABF17;
+TimeStamp = /4F4AC0B2;
 Reference = Q1;
-ValeurCmp = OPTO_NPN;
-IdModule  = ;
+ValeurCmp = TEMT1000;
+IdModule  = PHOTOTRANS-TEMT1000;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4ABF26;
 Reference = R1;
-ValeurCmp = R;
+ValeurCmp = 100;
 IdModule  = SM0805;
 EndCmp
 
