@@ -1,4 +1,4 @@
-update=26/02/2012 5:30:57 PM
+update=29/02/2012 12:03:25 AM
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -79,9 +79,9 @@ LibName30=valves
 version=1
 [pcbnew]
 version=1
-PadDrlX=905
-PadDimH=905
-PadDimV=905
+PadDrlX=890
+PadDimH=1000
+PadDimV=1000
 BoardThickness=630
 SgPcb45=1
 TxtPcbV=800
@@ -93,7 +93,7 @@ VEgarde=100
 DrawLar=150
 EdgeLar=150
 TxtLar=120
-MSegLar=150
+MSegLar=15
 LastNetListRead=breakbeam.net
 [pcbnew/libraries]
 LibDir=
@@ -107,4 +107,4 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=C:\\Users\\binaryblade\\Documents\\Robocup\\trunk\\electronics\\thunderbots-modules
+LibName11=C:\\Users\\Kukuthecoconut\\thunderbots\\electronics\\thunderbots-modules

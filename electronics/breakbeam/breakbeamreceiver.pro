@@ -1,4 +1,4 @@
-update=26/02/2012 5:33:22 PM
+update=29/02/2012 12:05:18 AM
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -107,4 +107,4 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=C:\\Users\\binaryblade\\Documents\\Robocup\\trunk\\electronics\\thunderbots-modules
+LibName11=C:\\Users\\Kukuthecoconut\\thunderbots\\electronics\\thunderbots-modules
