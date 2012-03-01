@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/02/2012 4:11:06 PM
+EESchema Schematic File Version 2  date 2012-02-29T20:22:39 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,13 +29,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:breakbeam-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "26 feb 2012"
+Date "1 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -63,6 +62,7 @@ U 1 1 4F4A9B88
 P 5350 2650
 F 0 "P1" V 5300 2650 40  0000 C CNN
 F 1 "CONN_2" V 5400 2650 40  0000 C CNN
+F 4 "jumper-wire" H 5350 2650 60  0001 C CNN "Field1"
 	1    5350 2650
 	1    0    0    -1  
 $EndComp
@@ -71,7 +71,7 @@ L R R1
 U 1 1 4F4A9331
 P 4200 2800
 F 0 "R1" V 4280 2800 50  0000 C CNN
-F 1 "16.5" V 4200 2800 50  0000 C CNN
+F 1 "16.5R" V 4200 2800 50  0000 C CNN
 	1    4200 2800
 	1    0    0    -1  
 $EndComp

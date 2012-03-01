@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 28 Jan 2012 02:24:30 PM PST
+EESchema Schematic File Version 2  date 2012-02-29T20:42:51 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:sensor-cache
-EELAYER 25  0
+EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-encoding utf-8
 Sheet 1 1
 Title ""
-Date "28 jan 2012"
+Date "1 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -333,6 +331,7 @@ U 1 1 4F244C06
 P 700 4150
 F 0 "P1" V 650 4150 60  0000 C CNN
 F 1 "CONN_6" V 750 4150 60  0000 C CNN
+F 4 "WM7624CT-ND" H 700 4150 60  0001 C CNN "Field1"
 	1    700  4150
 	-1   0    0    1   
 $EndComp
@@ -390,7 +389,7 @@ L R R6
 U 1 1 4B27D7CB
 P 8550 4650
 F 0 "R6" V 8630 4650 50  0000 C CNN
-F 1 "100" V 8550 4650 50  0000 C CNN
+F 1 "100R" V 8550 4650 50  0000 C CNN
 	1    8550 4650
 	1    0    0    -1  
 $EndComp
@@ -426,7 +425,7 @@ L R R5
 U 1 1 4B27D7BC
 P 6400 4550
 F 0 "R5" V 6480 4550 50  0000 C CNN
-F 1 "100" V 6400 4550 50  0000 C CNN
+F 1 "100R" V 6400 4550 50  0000 C CNN
 	1    6400 4550
 	1    0    0    -1  
 $EndComp
@@ -462,7 +461,7 @@ L R R4
 U 1 1 4B27D7A9
 P 4200 4600
 F 0 "R4" V 4280 4600 50  0000 C CNN
-F 1 "100" V 4200 4600 50  0000 C CNN
+F 1 "100R" V 4200 4600 50  0000 C CNN
 	1    4200 4600
 	1    0    0    -1  
 $EndComp
@@ -498,7 +497,7 @@ L R R3
 U 1 1 4B27D75C
 P 1900 4600
 F 0 "R3" V 1980 4600 50  0000 C CNN
-F 1 "100" V 1900 4600 50  0000 C CNN
+F 1 "100R" V 1900 4600 50  0000 C CNN
 	1    1900 4600
 	1    0    0    -1  
 $EndComp
@@ -561,7 +560,7 @@ L R R2
 U 1 1 4B1F474B
 P 6250 2550
 F 0 "R2" V 6330 2550 50  0000 C CNN
-F 1 "5" V 6250 2550 50  0000 C CNN
+F 1 "5R" V 6250 2550 50  0000 C CNN
 	1    6250 2550
 	1    0    0    -1  
 $EndComp
@@ -570,7 +569,7 @@ L R R1
 U 1 1 4B1F4749
 P 6250 1900
 F 0 "R1" V 6330 1900 50  0000 C CNN
-F 1 "88" V 6250 1900 50  0000 C CNN
+F 1 "88R" V 6250 1900 50  0000 C CNN
 	1    6250 1900
 	1    0    0    -1  
 $EndComp
