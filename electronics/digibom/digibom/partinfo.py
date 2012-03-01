@@ -71,11 +71,11 @@ def lookup(parts, include_quantity_available):
 				print(part)
 			print()
 			if include_quantity_available:
-				print("Part information must be downloaded from the DigiKey website to check available quantities as requested.")
+				print("Part information must be downloaded from Octopart to check available quantities as requested.")
 				print()
 			ch = ""
 			while ch != "y" and ch != "n":
-				ch = input("Download information about these parts from the DigiKey website? [y/n] ").lower()
+				ch = input("Download information about these parts from Octopart? [y/n] ").lower()
 			if ch == "n":
 				raise Exception("Some part information needed to be downloaded and the user refused to allow the download.")
 
