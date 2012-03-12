@@ -64,7 +64,7 @@
 
 		<!-- An MRF24J40MC requires an external antenna. -->
 		<multipart id="MRF24J40MC">
-			<subpart id="MRF24J40MC-I/RM-ND" />
+			<subpart id="MRF24J40MCT-I/RMCT-ND" />
 			<subpart id="0600-00039-ND" />
 		</multipart>
 
@@ -85,22 +85,30 @@
 		In all cases, if the "Digikey Part" field is filled in in the schematic symbol, that field will override this default mapping.
 	-->
 	<defaults>
+		<default value="5R" part="RMCF0805FT4R99CT-ND" />
+		<default value="16.5R" part="311-16.5CRCT-ND" />
 		<default value="47R" part="RHM47KCT-ND" />
 		<default value="56R" part="RMCF0805JT56R0CT-ND" />
 		<default value="82R" part="RMCF0805JT82R0CT-ND" />
+		<default value="88R" part="RMCF0805FT86R6CT-ND" />
+		<default value="100R" part="311-100ARCT-ND" />
 		<default value="330R" part="RMCF0805JT330RCT-ND" />
 		<default value="1kR" part="RMCF0805JT1K00CT-ND" />
 		<default value="2.2kR" part="RMCF0805JT2K20CT-ND" />
 		<default value="10kR" part="RMCF0805JT10K0CT-ND" />
 		<default value="100kR" part="RMCF0805JT100KCT-ND" />
+		<default value="15pF" part="490-5532-1-ND" />
 		<default value="27pF" part="478-5017-1-ND" />
 		<default value="10nF" part="490-1664-1-ND" />
 		<default value="100nF" part="311-1361-1-ND" />
 		<default value="1uF" part="445-3463-1-ND" />
+		<default value="2.2uF" part="587-1292-1-ND" />
+		<default value="4.7uF" part="587-1782-1-ND" />
 		<default value="10uF" part="445-3469-1-ND" />
 		<default value="100uF" part="P5182-ND" />
 		<default value="365-1145-ND" part="365-1145-ND" />
 		<default value="568-3248-1-ND" part="568-3248-1-ND" />
+		<default value="74AHC74" part="568-4458-1-ND" />
 		<default value="7805" part="LM7805CT-ND" />
 		<default value="ADC121S021" part="ADC121S021CIMFCT-ND" />
 		<default value="ADS7866IDBVT" part="296-18216-1-ND" />
@@ -114,16 +122,21 @@
 		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
 		<default value="MCP1416" part="MCP1416T-E/OTCT-ND" />
 		<default value="MCP1827S-1202E/AB" part="MCP1827S-1202E/AB-ND" />
+		<default value="MIC7300" part="576-1319-1-ND" />
 		<default value="MRF24J40MB" part="MRF24J40MB-I/RM-ND" />
 		<default value="MRF24J40MC" part="MRF24J40MC" />
+		<default value="OPB733TR" part="365-1510-1-ND" />
 		<default value="PIC18F65J50" part="PIC18F65J50-I/PT-ND" />
 		<default value="PIC18F67J50" part="PIC18F67J50-I/PT-ND" />
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="SD1209T3-A1" part="445-2530-ND" />
+		<default value="STM32F405RXT" part="497-11767-ND" />
 		<default value="TC4469" part="TC4469COE-ND" />
+		<default value="TEMT1000" part="751-1052-1-ND" />
 		<default value="USB-MINI-B-RCPT" part="H11671CT-ND" />
 		<default value="V7805-1000" part="102-1715-ND" />
+		<default value="VSMY2850RG" part="VSMY2850RGCT-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
 		<default value="WM1142CT-ND" part="WM1142CT-ND" />
 		<default value="WM1722-ND" part="WM1722-ND" />

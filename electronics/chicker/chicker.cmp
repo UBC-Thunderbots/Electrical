@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-14)-final date = Sat 26 Mar 2011 04:37:08 PM PDT
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sat 08 Oct 2011 04:01:17 PM PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -18,7 +18,7 @@ BeginCmp
 TimeStamp = /4CEDE3F8;
 Reference = C3;
 ValeurCmp = 10uF;
-IdModule  = C1;
+IdModule  = SM1206;
 EndCmp
 
 BeginCmp
@@ -38,19 +38,47 @@ EndCmp
 BeginCmp
 TimeStamp = /4CEECDAA;
 Reference = C6;
-ValeurCmp = 1mF;
-IdModule  = C2V10;
+ValeurCmp = 47uF;
+IdModule  = C1V5H;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEED332;
+TimeStamp = /4E627F86;
 Reference = C7;
-ValeurCmp = 10uF;
-IdModule  = C2V8;
+ValeurCmp = 100nF;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CE86DE7;
+TimeStamp = /4E62973B;
+Reference = C8;
+ValeurCmp = 1mF;
+IdModule  = ESMQ251VSN102MQ45S_HORIZONTAL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E629A84;
+Reference = C9;
+ValeurCmp = 1mF;
+IdModule  = ESMQ251VSN102MQ45S_HORIZONTAL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E629A85;
+Reference = C10;
+ValeurCmp = 1mF;
+IdModule  = ESMQ251VSN102MQ45S_HORIZONTAL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E629A87;
+Reference = C11;
+ValeurCmp = 1mF;
+IdModule  = ESMQ251VSN102MQ45S_HORIZONTAL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E90D0ED;
 Reference = D1;
 ValeurCmp = DIODE;
 IdModule  = D2PAK123;
@@ -60,14 +88,14 @@ BeginCmp
 TimeStamp = /4D018AE0;
 Reference = D2;
 ValeurCmp = RURG3060CC;
-IdModule  = TO247;
+IdModule  = TO-3PN_H;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D018AF7;
 Reference = D3;
 ValeurCmp = RURG3060CC;
-IdModule  = TO247;
+IdModule  = TO-3PN_H;
 EndCmp
 
 BeginCmp
@@ -78,45 +106,66 @@ IdModule  = 22uH_INDUCTOR;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CE869A3;
-Reference = P1;
-ValeurCmp = CONN_9X2;
-IdModule  = SIL-18-BIGPINS;
+TimeStamp = /4E878B24;
+Reference = M1;
+ValeurCmp = CONN_1;
+IdModule  = M3_MOUNT;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CE85D0A;
+TimeStamp = /4E878B28;
+Reference = M2;
+ValeurCmp = CONN_1;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E878B2A;
+Reference = M3;
+ValeurCmp = CONN_1;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E878B29;
+Reference = M4;
+ValeurCmp = CONN_1;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E627F5E;
+Reference = P1;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E62ACEE;
 Reference = P2;
-ValeurCmp = CONN_6X2;
-IdModule  = SIL-12-BIGPINS;
+ValeurCmp = CONN_14;
+IdModule  = pin_array_7x2;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CE85E9F;
 Reference = P3;
 ValeurCmp = CONN_2;
-IdModule  = SIL-2;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CE85EA2;
 Reference = P4;
 ValeurCmp = CONN_2;
-IdModule  = SIL-2;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CE85EA5;
+TimeStamp = /4E878E18;
 Reference = P5;
 ValeurCmp = CONN_2;
-IdModule  = SIL-2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4D8E7804;
-Reference = P6;
-ValeurCmp = CONN_1;
-IdModule  = CHICKER_JUMPER;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
@@ -134,7 +183,7 @@ IdModule  = TO247GCE;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEDBF93;
+TimeStamp = /4E627F51;
 Reference = Q3;
 ValeurCmp = IGBT_N;
 IdModule  = TO247GCE;
@@ -143,13 +192,6 @@ EndCmp
 BeginCmp
 TimeStamp = /4CEDBF96;
 Reference = Q4;
-ValeurCmp = IGBT_N;
-IdModule  = TO247GCE;
-EndCmp
-
-BeginCmp
-TimeStamp = /4CEDBF99;
-Reference = Q5;
 ValeurCmp = IGBT_N;
 IdModule  = TO247GCE;
 EndCmp
@@ -172,28 +214,35 @@ BeginCmp
 TimeStamp = /4D7BD568;
 Reference = U1;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5;
+IdModule  = SOT23-5-LONG_PADS;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D7BD56F;
 Reference = U2;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5;
+IdModule  = SOT23-5-LONG_PADS;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D2403D7;
 Reference = U3;
 ValeurCmp = ADS7866IDBVT;
-IdModule  = SOT23_6_DRCHACK;
+IdModule  = SOT23_6_DRCHACK-LONG_PADS;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D7BD74C;
 Reference = U4;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5;
+IdModule  = SOT23-5-LONG_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /4E627F3F;
+Reference = U5;
+ValeurCmp = MCP1415;
+IdModule  = SOT23-5-LONG_PADS;
 EndCmp
 
 EndListe
