@@ -41,6 +41,7 @@ datasheets/ics/LT3751.pdf -text
 datasheets/ics/M25P16.pdf -text
 datasheets/ics/MC33035.pdf -text
 datasheets/ics/MCP1416.pdf -text svneol=unset#unset
+datasheets/ics/MCP3004_3008.pdf -text
 datasheets/ics/MIC7300.pdf -text
 datasheets/ics/MRF24J40/MRF24J40.pdf -text
 datasheets/ics/MRF24J40/MRF24J40MA.pdf -text
