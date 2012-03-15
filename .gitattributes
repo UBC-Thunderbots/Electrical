@@ -36,61 +36,60 @@ datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text sv
 datasheets/electromechanical/EC16.pdf -text
 datasheets/electromechanical/EC45.pdf -text
 datasheets/electromechanical/maxon_brushless_commutation.pdf -text svneol=unset#unset
-datasheets/ics/ADS7866.pdf -text
-datasheets/ics/LT3751.pdf -text
-datasheets/ics/M25P16.pdf -text
-datasheets/ics/MC33035.pdf -text
-datasheets/ics/MCP1416.pdf -text svneol=unset#unset
-datasheets/ics/MCP3004_3008.pdf -text
-datasheets/ics/MIC7300.pdf -text
-datasheets/ics/MRF24J40/MRF24J40.pdf -text
-datasheets/ics/MRF24J40/MRF24J40MA.pdf -text
-datasheets/ics/MRF24J40/MRF24J40MB.pdf -text
-datasheets/ics/MRF24J40/MRF24J40MC.pdf -text
-datasheets/ics/MRF24J40/Silicon[!!-~]Errata.pdf -text
-datasheets/ics/NXP[!!-~]-[!!-~]LPC1769FBD100/user.manual.lpc17xx.pdf -text
-datasheets/ics/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/PIC18F4550/Errata.pdf -text
-datasheets/ics/PIC18F6XJ50/Datasheet.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/PIC18F6XJ50/Errata.pdf -text
+datasheets/ics/74AHC74.pdf -text
+datasheets/ics/ADCs/ADS7866.pdf -text
+datasheets/ics/ADCs/MCP3004_3008.pdf -text
+datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
+datasheets/ics/FET[!!-~]Drivers/TC4467_4468_4469.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Block[!!-~]RAM.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Clocking.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Configurable[!!-~]Logic[!!-~]Blocks.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Configuration.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/DSP48A1[!!-~]Slices.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Datasheet.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Errata[!!-~]1.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Errata[!!-~]2.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Family[!!-~]Overview.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/PCB[!!-~]Design[!!-~]and[!!-~]Pin[!!-~]Planning.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Packaging[!!-~]and[!!-~]Pinout.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Power[!!-~]Management.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/SelectIO.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Configuration[!!-~]User[!!-~]Guide.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Datasheet.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/In-System[!!-~]Flash[!!-~]Guide.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Overview.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/Flash/M25P16.pdf -text
+datasheets/ics/Flash/W25Q16BV.pdf -text
+datasheets/ics/Flash/W25X16AVDAIZ.pdf -text
+datasheets/ics/MCUs/NXP[!!-~]-[!!-~]LPC1769FBD100/user.manual.lpc17xx.pdf -text
+datasheets/ics/MCUs/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/MCUs/PIC18F4550/Errata.pdf -text
+datasheets/ics/MCUs/PIC18F6XJ50/Datasheet.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/MCUs/PIC18F6XJ50/Errata.pdf -text
+datasheets/ics/MCUs/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/MCUs/STM32/Bootloader[!!-~]DFU[!!-~]File[!!-~]Format.pdf -text
+datasheets/ics/MCUs/STM32/Bootloader[!!-~]DFU[!!-~]Protocol.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/MCUs/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Devices[!!-~]Generic[!!-~]User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/MCUs/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Errata.pdf -text
+datasheets/ics/MCUs/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Technical[!!-~]Reference[!!-~]Manual.pdf -text
+datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Datasheet.pdf -text
+datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Development[!!-~]Board[!!-~]Manual.pdf -text
+datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Errata.pdf -text
+datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Flash[!!-~]Programming[!!-~]Manual.pdf -text
+datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
+datasheets/ics/MCUs/STM32/System[!!-~]Memory[!!-~]Boot[!!-~]Mode[!!-~]AN2606[!!-~](Bootloader).pdf -text
+datasheets/ics/Opamps/MIC7300.pdf -text
+datasheets/ics/Opamps/TL071_072_074.pdf -text
 datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
+datasheets/ics/Radios/MRF24J40/MRF24J40.pdf -text
+datasheets/ics/Radios/MRF24J40/MRF24J40MA.pdf -text
+datasheets/ics/Radios/MRF24J40/MRF24J40MB.pdf -text
+datasheets/ics/Radios/MRF24J40/MRF24J40MC.pdf -text
+datasheets/ics/Radios/MRF24J40/Silicon[!!-~]Errata.pdf -text
+datasheets/ics/Radios/XBee.pdf -text
 datasheets/ics/SN74LVC1G80.pdf -text
-datasheets/ics/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/STM32/Bootloader[!!-~]DFU[!!-~]File[!!-~]Format.pdf -text
-datasheets/ics/STM32/Bootloader[!!-~]DFU[!!-~]Protocol.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Devices[!!-~]Generic[!!-~]User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Errata.pdf -text
-datasheets/ics/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Technical[!!-~]Reference[!!-~]Manual.pdf -text
-datasheets/ics/STM32/STM32F4/STM32F40x/Datasheet.pdf -text
-datasheets/ics/STM32/STM32F4/STM32F40x/Development[!!-~]Board[!!-~]Manual.pdf -text
-datasheets/ics/STM32/STM32F4/STM32F40x/Errata.pdf -text
-datasheets/ics/STM32/STM32F4/STM32F40x/Flash[!!-~]Programming[!!-~]Manual.pdf -text
-datasheets/ics/STM32/STM32F4/STM32F40x/Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/STM32/System[!!-~]Memory[!!-~]Boot[!!-~]Mode[!!-~]AN2606[!!-~](Bootloader).pdf -text
-datasheets/ics/TC4469[!!-~]Quad[!!-~]FET[!!-~]Driver.pdf -text
-datasheets/ics/TL072.pdf -text
-datasheets/ics/W25Q16BV.pdf -text
-datasheets/ics/W25X16AVDAIZ.pdf -text
-datasheets/ics/XBee.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Block[!!-~]RAM.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Clocking.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Configurable[!!-~]Logic[!!-~]Blocks.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Configuration.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/DSP48A1[!!-~]Slices.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Datasheet.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Errata[!!-~]1.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Errata[!!-~]2.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Family[!!-~]Overview.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/PCB[!!-~]Design[!!-~]and[!!-~]Pin[!!-~]Planning.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Packaging[!!-~]and[!!-~]Pinout.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/Power[!!-~]Management.pdf -text
-datasheets/ics/Xilinx[!!-~]Spartan[!!-~]6/SelectIO.pdf -text
-datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Configuration[!!-~]User[!!-~]Guide.pdf -text
-datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Datasheet.pdf -text
-datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/In-System[!!-~]Flash[!!-~]Guide.pdf -text
-datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Overview.pdf -text
-datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
-datasheets/ics/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
 datasheets/igbts/FGA180N33AT.pdf -text
 datasheets/mosfets/2N7000.pdf -text
 datasheets/mosfets/AO4616.pdf -text
