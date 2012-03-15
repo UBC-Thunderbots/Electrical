@@ -148,6 +148,7 @@ electronics/dribbler_testboard/dribbler_testboard.cmp -text
 electronics/dribbler_testboard/dribbler_testboard.net -text
 electronics/dribbler_testboard/dribbler_testboard.pro -text
 electronics/dribbler_testboard/dribbler_testboard.sch -text
+electronics/main/adc.sch -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/computeDiff.m -text
 electronics/models/solenoid2/getMuR.m -text
