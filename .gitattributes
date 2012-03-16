@@ -37,6 +37,7 @@ datasheets/electromechanical/EC16.pdf -text
 datasheets/electromechanical/EC45.pdf -text
 datasheets/electromechanical/maxon_brushless_commutation.pdf -text svneol=unset#unset
 datasheets/ics/74AHC74.pdf -text
+datasheets/ics/74HC4050.pdf -text
 datasheets/ics/ADCs/ADS7866.pdf -text
 datasheets/ics/ADCs/MCP3004_3008.pdf -text
 datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
@@ -63,6 +64,9 @@ datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneo
 datasheets/ics/Flash/M25P16.pdf -text
 datasheets/ics/Flash/W25Q16BV.pdf -text
 datasheets/ics/Flash/W25X16AVDAIZ.pdf -text
+datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
+datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
+datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
 datasheets/ics/MCUs/NXP[!!-~]-[!!-~]LPC1769FBD100/user.manual.lpc17xx.pdf -text
 datasheets/ics/MCUs/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/PIC18F4550/Errata.pdf -text
