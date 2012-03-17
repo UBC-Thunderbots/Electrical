@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2012-03-17T00:32:41 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2012-03-17T01:31:27 PDT
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -44,6 +44,10 @@ $ENDCMP
 $CMP M25P16-8
 D Flash Memory
 K FLASH MEMORY
+$ENDCMP
+#
+$CMP MCP1726
+D LDO voltage regulator
 $ENDCMP
 #
 $CMP MCP1827S-1202E/AB
