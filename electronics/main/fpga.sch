@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-17T02:09:32 PDT
+EESchema Schematic File Version 2  date 2012-03-17T02:11:32 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 2500 2600 0    60   Input ~ 0
+M_SENSOR5[0..2]
+Text HLabel 2500 2500 0    60   Input ~ 0
+M_SENSOR4[0..4]
+Text HLabel 2500 2400 0    60   Input ~ 0
+M_SENSOR3[0..4]
+Text HLabel 2500 2300 0    60   Input ~ 0
+M_SENSOR2[0..4]
+Text HLabel 2500 2200 0    60   Input ~ 0
+M_SENSOR1[0..4]
 Text HLabel 3650 1150 0    60   Output ~ 0
 OSC_ENABLE
 Text HLabel 3850 6300 0    60   Input ~ 0
