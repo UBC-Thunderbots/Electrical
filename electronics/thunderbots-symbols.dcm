@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2012-03-15T00:00:54 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2012-03-17T00:01:00 PDT
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -25,6 +25,10 @@ $ENDCMP
 $CMP BZX84C
 D Diode zener
 K DEV DIODE
+$ENDCMP
+#
+$CMP ECS-2033
+D SMD Clock Oscillator
 $ENDCMP
 #
 $CMP LD1117D33
@@ -67,6 +71,10 @@ $ENDCMP
 #
 $CMP PIC18F67J50
 F ../datasheets/ics/PIC18F65J50/Datasheet.pdf
+$ENDCMP
+#
+$CMP SN74LVC8T245
+D 8-bit Dual-Supply Bus Transceiver
 $ENDCMP
 #
 $CMP V7805-1000
