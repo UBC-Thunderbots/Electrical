@@ -35,6 +35,7 @@ datasheets/dribbler/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
 datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
 datasheets/electromechanical/EC16.pdf -text
 datasheets/electromechanical/EC45.pdf -text
+datasheets/electromechanical/NKK[!!-~]A[!!-~]Series.pdf -text
 datasheets/electromechanical/maxon_brushless_commutation.pdf -text svneol=unset#unset
 datasheets/ics/74AHC74.pdf -text
 datasheets/ics/74HC4050.pdf -text
