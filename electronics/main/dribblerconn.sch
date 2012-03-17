@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-15T00:18:53 PDT
+EESchema Schematic File Version 2  date 2012-03-17T01:55:21 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -31,9 +31,9 @@ LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 3 17
+Sheet 5 17
 Title ""
-Date "15 mar 2012"
+Date "17 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -41,40 +41,172 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L +3.3V #PWR?
+U 1 1 4F644D48
+P 3650 5850
+F 0 "#PWR?" H 3650 5810 30  0001 C CNN
+F 1 "+3.3V" H 3650 5960 30  0000 C CNN
+	1    3650 5850
+	-1   0    0    1   
+$EndComp
+Connection ~ 4450 5300
+Wire Wire Line
+	4400 5300 4450 5300
+Connection ~ 4450 5100
+Wire Wire Line
+	4400 5100 4450 5100
+Wire Wire Line
+	5400 4200 4700 4200
+Wire Wire Line
+	4700 4200 4700 4900
+Wire Wire Line
+	4700 4900 4400 4900
+Wire Wire Line
+	4400 4700 4500 4700
+Wire Wire Line
+	4500 4700 4500 4000
+Wire Wire Line
+	4500 4000 5400 4000
 Wire Bus Line
-	4800 4100 4800 4400
+	2200 4800 2200 5050
 Wire Bus Line
-	4800 4400 4700 4400
+	4800 3600 4800 3300
+Wire Bus Line
+	4800 3300 4700 3300
 Wire Wire Line
-	4900 4200 5400 4200
-Wire Wire Line
-	4900 4100 5400 4100
-Wire Wire Line
-	4900 4000 5400 4000
-Wire Wire Line
-	5400 3800 5350 3800
-Wire Wire Line
-	5350 3900 5400 3900
-Wire Wire Line
-	4900 3500 5400 3500
+	4900 3700 5400 3700
 Wire Wire Line
 	4900 3600 5400 3600
 Wire Wire Line
-	4900 3700 5400 3700
+	4900 3500 5400 3500
+Wire Wire Line
+	5350 3900 5400 3900
+Wire Wire Line
+	5400 3800 5350 3800
 Wire Bus Line
-	4700 3300 4800 3300
-Wire Bus Line
-	4800 3300 4800 3600
+	2200 5050 2050 5050
+Wire Wire Line
+	2800 4700 2300 4700
+Wire Wire Line
+	3700 5750 3700 5800
+Wire Wire Line
+	3700 5800 3600 5800
+Wire Wire Line
+	3600 5800 3600 5750
+Wire Wire Line
+	3500 5800 3500 5750
+Wire Wire Line
+	3600 4250 3600 4350
+Wire Wire Line
+	3700 4350 3700 4300
+Wire Wire Line
+	3700 4300 3500 4300
+Wire Wire Line
+	3500 4300 3500 4350
+Connection ~ 3600 4300
+Wire Wire Line
+	3400 5800 3400 5750
+Wire Wire Line
+	3800 5800 3800 5750
+Wire Wire Line
+	3650 5800 3650 5850
+Connection ~ 3650 5800
+Wire Wire Line
+	2300 4800 2800 4800
+Wire Wire Line
+	2800 4900 2300 4900
+Wire Wire Line
+	4600 4800 4400 4800
+Wire Wire Line
+	4600 4800 4600 4100
+Wire Wire Line
+	4600 4100 5400 4100
+Wire Wire Line
+	4450 5450 4450 5000
+Wire Wire Line
+	4450 5000 4400 5000
+Wire Wire Line
+	4450 5200 4400 5200
+Connection ~ 4450 5200
+Wire Wire Line
+	4450 5400 4400 5400
+Connection ~ 4450 5400
+$Comp
+L GND #PWR?
+U 1 1 4F62EEF7
+P 4450 5450
+F 0 "#PWR?" H 4450 5450 30  0001 C CNN
+F 1 "GND" H 4450 5380 30  0001 C CNN
+	1    4450 5450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2800 5400
+NoConn ~ 2800 5300
+NoConn ~ 2800 5200
+Entry Wire Line
+	2200 5000 2300 4900
+Text Label 2350 4900 0    60   ~ 0
+SENSOR2
+Text HLabel 2050 5050 0    60   Output ~ 0
+SENSOR[0..2]
+Text Label 2350 4700 0    60   ~ 0
+SENSOR0
+Text Label 2350 4800 0    60   ~ 0
+SENSOR1
+$Comp
+L SN74LVC8T245 U?
+U 1 1 4F62B0D9
+P 3600 5050
+F 0 "U?" H 3600 5000 60  0000 C CNN
+F 1 "SN74LVC8T245" H 3600 5100 60  0000 C CNN
+	1    3600 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F62B0D8
+P 3600 4250
+F 0 "#PWR?" H 3600 4250 30  0001 C CNN
+F 1 "GND" H 3600 4180 30  0001 C CNN
+	1    3600 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F62B0D7
+P 3400 5800
+F 0 "#PWR?" H 3400 5800 30  0001 C CNN
+F 1 "GND" H 3400 5730 30  0001 C CNN
+	1    3400 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 4F62B0D6
+P 3500 5800
+F 0 "#PWR?" H 3500 5890 20  0001 C CNN
+F 1 "+5V" H 3500 5890 30  0000 C CNN
+	1    3500 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 4F62B0D5
+P 3800 5800
+F 0 "#PWR?" H 3800 5890 20  0001 C CNN
+F 1 "+5V" H 3800 5890 30  0000 C CNN
+	1    3800 5800
+	-1   0    0    1   
+$EndComp
+NoConn ~ 2800 5000
+NoConn ~ 2800 5100
+Entry Wire Line
+	2200 4800 2300 4700
+Entry Wire Line
+	2200 4900 2300 4800
 Text HLabel 4700 3300 0    60   Input ~ 0
 PHASE[0..2]
-Text HLabel 4700 4400 0    60   Output ~ 0
-HALL[0..2]
-Entry Wire Line
-	4800 4300 4900 4200
-Entry Wire Line
-	4800 4200 4900 4100
-Entry Wire Line
-	4800 4100 4900 4000
 Entry Wire Line
 	4800 3600 4900 3700
 Entry Wire Line
@@ -99,12 +231,6 @@ F 1 "+5V" H 5350 3890 30  0000 C CNN
 	1    5350 3800
 	0    -1   -1   0   
 $EndComp
-Text Label 4900 4200 0    60   ~ 0
-HALL2
-Text Label 4900 4100 0    60   ~ 0
-HALL1
-Text Label 4900 4000 0    60   ~ 0
-HALL0
 Text Label 4900 3700 0    60   ~ 0
 PHASE2
 Text Label 4900 3600 0    60   ~ 0

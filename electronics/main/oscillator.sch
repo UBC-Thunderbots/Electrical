@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-15T00:18:53 PDT
+EESchema Schematic File Version 2  date 2012-03-17T01:55:21 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 15 17
 Title ""
-Date "15 mar 2012"
+Date "17 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,17 +42,30 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	4450 3850 4450 3800
-Wire Wire Line
 	5150 3900 5200 3900
 Wire Wire Line
-	5200 4000 5150 4000
-Wire Wire Line
-	5150 4200 5200 4200
+	4450 4300 4450 4250
 Wire Wire Line
 	5150 4100 5200 4100
 Wire Wire Line
-	4450 4300 4450 4250
+	5150 4200 5200 4200
+Wire Wire Line
+	5200 4000 5150 4000
+Wire Wire Line
+	4450 3850 4450 3800
+Text HLabel 5150 3900 0    60   Input ~ 0
+ENABLE
+$Comp
+L ECS-2033 U?
+U 1 1 4F6436C0
+P 6100 4050
+F 0 "U?" H 6100 4000 60  0000 C CNN
+F 1 "ECS-2033" H 6100 4100 60  0000 C CNN
+F 2 "ECS-2033" H 6000 3950 60  0001 C CNN
+F 4 "XC1424CT-ND" H 6100 4050 60  0001 C CNN "Field1"
+	1    6100 4050
+	1    0    0    -1  
+$EndComp
 $Comp
 L GND #PWR072
 U 1 1 4CC50E98
@@ -76,19 +89,10 @@ L C C23
 U 1 1 4CC50E90
 P 4450 4050
 F 0 "C23" H 4500 4150 50  0000 L CNN
-F 1 "10uF" H 4500 3950 50  0000 L CNN
+F 1 "100nF" H 4500 3950 50  0000 L CNN
 F 4 "" H 4450 4050 60  0001 C CNN "Digikey Part"
 	1    4450 4050
 	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR074
-U 1 1 4CC50DFE
-P 5150 3900
-F 0 "#PWR074" H 5150 3860 30  0001 C CNN
-F 1 "+3.3V" H 5150 4010 30  0000 C CNN
-	1    5150 3900
-	0    -1   -1   0   
 $EndComp
 Text HLabel 5150 4100 0    60   Output ~ 0
 OSC
@@ -109,15 +113,5 @@ F 0 "#PWR076" H 5150 4000 30  0001 C CNN
 F 1 "GND" H 5150 3930 30  0001 C CNN
 	1    5150 4000
 	0    1    1    0   
-$EndComp
-$Comp
-L FXO-HC73 U13
-U 1 1 4CC4F8BA
-P 6100 4050
-F 0 "U13" H 6100 4000 60  0000 C CNN
-F 1 "FXO-HC73" H 6100 4100 60  0000 C CNN
-F 4 "" H 6100 4050 60  0001 C CNN "Digikey Part"
-	1    6100 4050
-	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

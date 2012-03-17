@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-15T00:18:53 PDT
+EESchema Schematic File Version 2  date 2012-03-17T01:55:21 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -31,9 +31,9 @@ LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 7 17
+Sheet 9 17
 Title ""
-Date "15 mar 2012"
+Date "17 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -41,24 +41,52 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Bus Line
-	5950 3250 5950 2750
-Wire Bus Line
-	5950 2750 5800 2750
+Connection ~ 4900 3550
 Wire Wire Line
-	6500 3250 6050 3250
+	4900 3550 4900 3600
+Wire Wire Line
+	5650 3150 5650 3350
+Wire Bus Line
+	3300 2750 3450 2750
+Wire Wire Line
+	4050 3150 3550 3150
+Wire Wire Line
+	4050 2950 3550 2950
+Wire Wire Line
+	4050 2450 3550 2450
+Connection ~ 5700 2750
+Wire Wire Line
+	5650 3350 6500 3350
+Wire Wire Line
+	5650 2950 5850 2950
+Wire Wire Line
+	5850 2950 5850 3150
+Wire Wire Line
+	5650 2550 5850 2550
+Wire Wire Line
+	5850 2550 5850 2400
+Wire Wire Line
+	4750 3550 4750 3500
+Wire Wire Line
+	4850 2000 4850 2100
+Wire Wire Line
+	4950 2100 4950 2050
+Wire Wire Line
+	4950 2050 4750 2050
+Wire Wire Line
+	4750 2050 4750 2100
+Wire Wire Line
+	5850 2400 6500 2400
+Wire Wire Line
+	6500 2100 6450 2100
+Wire Wire Line
+	5850 4000 6500 4000
+Wire Wire Line
+	5850 3600 6500 3600
 Connection ~ 6500 3600
-Wire Wire Line
-	6500 3600 6050 3600
 Connection ~ 6500 4000
 Wire Wire Line
-	6500 4000 6050 4000
-Wire Wire Line
 	6500 3750 6500 3850
-Wire Bus Line
-	5950 3700 5950 4300
-Wire Bus Line
-	5950 4300 5800 4300
 Wire Wire Line
 	6450 3050 6500 3050
 Wire Wire Line
@@ -67,40 +95,207 @@ Wire Wire Line
 	6500 3550 6500 3650
 Wire Wire Line
 	6500 3950 6500 4050
-Wire Wire Line
-	6050 3800 6500 3800
 Connection ~ 6500 3800
+Wire Bus Line
+	5500 4300 5750 4300
+Wire Bus Line
+	5750 4300 5750 3700
 Wire Wire Line
-	6050 3350 6500 3350
+	5850 3150 6500 3150
 Wire Wire Line
-	6050 3150 6500 3150
+	6500 3800 5850 3800
+Wire Wire Line
+	6450 2300 6500 2300
+Connection ~ 4850 2050
+Wire Wire Line
+	4650 3550 4650 3500
+Wire Wire Line
+	5050 3550 5050 3500
+Wire Wire Line
+	6500 2200 5750 2200
+Wire Wire Line
+	5750 2200 5750 2450
+Wire Wire Line
+	5750 2450 5650 2450
+Wire Wire Line
+	6500 3250 5750 3250
+Wire Wire Line
+	5750 3250 5750 3050
+Wire Wire Line
+	5750 3050 5650 3050
+Wire Wire Line
+	5650 2650 5700 2650
+Wire Wire Line
+	5700 2650 5700 2850
+Wire Wire Line
+	5700 2850 5650 2850
+Wire Wire Line
+	5750 2750 5650 2750
+Wire Wire Line
+	4050 2550 3550 2550
+Wire Wire Line
+	3550 3050 4050 3050
+Wire Bus Line
+	3450 2550 3450 3050
+Wire Wire Line
+	4850 3500 4850 3550
+Wire Wire Line
+	4850 3550 4950 3550
+Wire Wire Line
+	4950 3550 4950 3500
+$Comp
+L +3.3V #PWR?
+U 1 1 4F644D30
+P 4900 3600
+AR Path="/4CD73188/4F644D30" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73053/4F644D30" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4900 3560 30  0001 C CNN
+F 1 "+3.3V" H 4900 3710 30  0000 C CNN
+	1    4900 3600
+	-1   0    0    1   
+$EndComp
 Entry Wire Line
-	5950 3250 6050 3350
+	3450 2650 3550 2550
 Entry Wire Line
-	5950 3150 6050 3250
+	3450 2550 3550 2450
 Entry Wire Line
-	5950 3050 6050 3150
-Text Label 6050 3150 0    60   ~ 0
-HALL2
-Text Label 6050 3350 0    60   ~ 0
-HALL1
-Text Label 6050 3250 0    60   ~ 0
-HALL0
-Text HLabel 5800 2750 0    60   Output ~ 0
-HALL[0..2]
+	3450 3050 3550 3150
 Entry Wire Line
-	5950 3700 6050 3600
+	3450 2950 3550 3050
 Entry Wire Line
-	5950 3900 6050 3800
+	3450 2850 3550 2950
+NoConn ~ 4050 2850
+NoConn ~ 4050 2750
+NoConn ~ 4050 2650
+$Comp
+L GND #PWR?
+U 1 1 4F62AFE9
+P 5750 2750
+AR Path="/4CD73053/4F62AFE9" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73188/4F62AFE9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5750 2750 30  0001 C CNN
+F 1 "GND" H 5750 2680 30  0001 C CNN
+	1    5750 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 4F62AF4E
+P 5050 3550
+AR Path="/4CD73053/4F62AF4E" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73188/4F62AF4E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5050 3640 20  0001 C CNN
+F 1 "+5V" H 5050 3640 30  0000 C CNN
+	1    5050 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 4F62AF38
+P 4750 3550
+AR Path="/4CD73053/4F62AF38" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73188/4F62AF38" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4750 3640 20  0001 C CNN
+F 1 "+5V" H 4750 3640 30  0000 C CNN
+	1    4750 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F62AF30
+P 4650 3550
+AR Path="/4CD73053/4F62AF30" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73188/4F62AF30" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4650 3550 30  0001 C CNN
+F 1 "GND" H 4650 3480 30  0001 C CNN
+	1    4650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F62AF11
+P 4850 2000
+AR Path="/4CD73053/4F62AF11" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73188/4F62AF11" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4850 2000 30  0001 C CNN
+F 1 "GND" H 4850 1930 30  0001 C CNN
+	1    4850 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L SN74LVC8T245 U?
+U 1 1 4F62AEBA
+P 4850 2800
+AR Path="/4CD73053/4F62AEBA" Ref="U?"  Part="1" 
+AR Path="/4CD73188/4F62AEBA" Ref="U?"  Part="1" 
+F 0 "U?" H 4850 2750 60  0000 C CNN
+F 1 "SN74LVC8T245" H 4850 2850 60  0000 C CNN
+	1    4850 2800
+	-1   0    0    1   
+$EndComp
+Text Label 3600 2550 0    60   ~ 0
+SENSOR4
+Text Label 3600 2450 0    60   ~ 0
+SENSOR3
+$Comp
+L GND #PWR?
+U 1 1 4F6292C5
+P 6450 2300
+AR Path="/4CD73188/4F6292C5" Ref="#PWR?"  Part="1" 
+AR Path="/4CD7317F/4F6292C5" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73053/4F6292C5" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6450 2300 30  0001 C CNN
+F 1 "GND" H 6450 2230 30  0001 C CNN
+	1    6450 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 4F6292C2
+P 6450 2100
+AR Path="/4CD73188/4F6292C2" Ref="#PWR?"  Part="1" 
+AR Path="/4CD7317F/4F6292C2" Ref="#PWR?"  Part="1" 
+AR Path="/4CD73053/4F6292C2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6450 2190 20  0001 C CNN
+F 1 "+5V" H 6450 2190 30  0000 C CNN
+	1    6450 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_4 P?
+U 1 1 4F6292AE
+P 6850 2250
+AR Path="/4CD73188/4F6292AE" Ref="P?"  Part="1" 
+AR Path="/4CD7317F/4F6292AE" Ref="P?"  Part="1" 
+AR Path="/4CD73053/4F6292AE" Ref="P?"  Part="1" 
+F 0 "P?" V 6800 2250 50  0000 C CNN
+F 1 "CONN_4" V 6900 2250 50  0000 C CNN
+F 2 "53048-0410" H 6850 2250 60  0001 C CNN
+F 4 "WM1744-ND" H 6850 2250 60  0001 C CNN "Field1"
+	1    6850 2250
+	1    0    0    -1  
+$EndComp
 Entry Wire Line
-	5950 4100 6050 4000
-Text Label 6050 3600 0    60   ~ 0
+	5750 4100 5850 4000
+Entry Wire Line
+	5750 3900 5850 3800
+Entry Wire Line
+	5750 3700 5850 3600
+Text Label 3600 2950 0    60   ~ 0
+SENSOR2
+Text Label 3600 3150 0    60   ~ 0
+SENSOR1
+Text Label 3600 3050 0    60   ~ 0
+SENSOR0
+Text HLabel 3300 2750 0    60   Output ~ 0
+SENSOR[0..4]
+Text Label 5900 3600 0    60   ~ 0
 PHASE2
-Text Label 6050 3800 0    60   ~ 0
+Text Label 5900 3800 0    60   ~ 0
 PHASE1
-Text Label 6050 4000 0    60   ~ 0
+Text Label 5900 4000 0    60   ~ 0
 PHASE0
-Text HLabel 5800 4300 0    60   Input ~ 0
+Text HLabel 5500 4300 0    60   Input ~ 0
 PHASE[0..2]
 $Comp
 L GND #PWR040
