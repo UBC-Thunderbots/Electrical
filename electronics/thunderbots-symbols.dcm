@@ -1,4 +1,8 @@
-EESchema-DOCLIB  Version 2.0  Date: 2012-03-17T01:31:27 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2012-03-17T15:32:39 PDT
+#
+$CMP 74HC4050
+D Hex level shifter
+$ENDCMP
 #
 $CMP 78ST105
 D Switching Regulator +5V
@@ -29,6 +33,10 @@ $ENDCMP
 #
 $CMP ECS-2033
 D SMD Clock Oscillator
+$ENDCMP
+#
+$CMP IRF9310
+F transistors/mos/*.*
 $ENDCMP
 #
 $CMP LD1117D33
@@ -79,6 +87,11 @@ $ENDCMP
 #
 $CMP SN74LVC8T245
 D 8-bit Dual-Supply Bus Transceiver
+$ENDCMP
+#
+$CMP SP3T
+D Switch inverseur
+K switch
 $ENDCMP
 #
 $CMP V7805-1000

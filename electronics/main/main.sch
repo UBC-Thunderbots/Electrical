@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-17T02:11:32 PDT
+EESchema Schematic File Version 2  date 2012-03-20T21:20:57 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 17
 Title ""
-Date "17 mar 2012"
+Date "21 mar 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -41,6 +41,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3350 2050 3950 2050
+Wire Wire Line
+	3950 2050 3950 2650
+Wire Wire Line
+	3950 2650 5900 2650
 Wire Wire Line
 	5900 950  5650 950 
 Connection ~ 4200 1300
@@ -60,8 +66,6 @@ Wire Wire Line
 	3800 2450 3350 2450
 Wire Wire Line
 	3400 2250 3350 2250
-Wire Wire Line
-	3850 1900 3850 2050
 Wire Wire Line
 	5650 2300 5900 2300
 Wire Wire Line
@@ -84,8 +88,6 @@ Wire Bus Line
 	8450 2350 8450 2450
 Wire Bus Line
 	8450 2350 8300 2350
-Wire Wire Line
-	3850 2050 3350 2050
 Wire Bus Line
 	10000 3400 9900 3400
 Wire Bus Line
@@ -175,8 +177,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 2400 5650 2400
 Wire Wire Line
-	3850 1950 3350 1950
-Connection ~ 3850 1950
+	3350 1950 3850 1950
 Wire Wire Line
 	3800 2150 3800 2200
 Wire Wire Line
@@ -187,6 +188,8 @@ Wire Wire Line
 	4200 750  4200 700 
 Wire Wire Line
 	5650 850  5900 850 
+Wire Wire Line
+	3850 1950 3850 1900
 $Comp
 L GND #PWR?
 U 1 1 4F644EA8
@@ -262,6 +265,7 @@ F29 "M_SENSOR4[0..4]" I R 8300 2950 60
 F30 "M_SENSOR3[0..4]" I R 8300 2350 60 
 F31 "M_SENSOR2[0..4]" I R 8300 1750 60 
 F32 "M_SENSOR1[0..4]" I R 8300 1150 60 
+F33 "BREAKBEAM_DRIVE" O L 5900 2650 60 
 $EndSheet
 $Sheet
 S 4800 1250 850  550 
