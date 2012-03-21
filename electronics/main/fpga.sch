@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-20T22:21:50 PDT
+EESchema Schematic File Version 2  date 2012-03-20T22:29:00 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 1250 1500 2    60   Output ~ 0
+CHICKER_SPARE
 Text HLabel 8650 2300 0    60   Output ~ 0
 /MRF_CS
 Text HLabel 8650 2200 0    60   Output ~ 0
@@ -845,17 +847,17 @@ Text HLabel 1350 7000 0    60   Output ~ 0
 M_CTRL2+[0..2]
 Text HLabel 10000 6500 2    60   Output ~ 0
 M_CTRL3-[0..2]
-Text HLabel 2750 1600 1    60   Output ~ 0
-CHIP
-Text HLabel 2850 1600 1    60   Output ~ 0
-KICK
-Text HLabel 2950 1600 1    60   Output ~ 0
+Text HLabel 1200 1250 2    60   Output ~ 0
+CHICKER_CHIP
+Text HLabel 1200 1400 2    60   Output ~ 0
+CHICKER_KICK
+Text HLabel 1200 1600 2    60   Output ~ 0
 CHICKER_CHARGE
-Text HLabel 2050 1200 2    60   Input ~ 0
+Text HLabel 1350 900  2    60   Input ~ 0
 CHICKER_MISO
-Text HLabel 1950 1300 2    60   Output ~ 0
+Text HLabel 1250 1000 2    60   Output ~ 0
 CHICKER_CLK
-Text HLabel 1950 1400 2    60   Output ~ 0
+Text HLabel 1250 1100 2    60   Output ~ 0
 /CHICKER_CS
 Text HLabel 10000 6150 2    60   Output ~ 0
 M_CTRL3+[0..2]

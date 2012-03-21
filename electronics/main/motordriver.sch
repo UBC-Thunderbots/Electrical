@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-20T22:21:50 PDT
+EESchema Schematic File Version 2  date 2012-03-20T22:29:00 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -45,6 +45,11 @@ $Comp
 L +HVBATT #PWR?
 U 1 1 4F6501FB
 P 7500 5400
+AR Path="/4CD72EC7/4F6501FB" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EC1/4F6501FB" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EB9/4F6501FB" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EB0/4F6501FB" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72C2A/4F6501FB" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7500 5350 20  0001 C CNN
 F 1 "+HVBATT" H 7500 5500 30  0000 C CNN
 	1    7500 5400
@@ -54,6 +59,11 @@ $Comp
 L +HVBATT #PWR?
 U 1 1 4F6501F6
 P 7500 3500
+AR Path="/4CD72EC7/4F6501F6" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EC1/4F6501F6" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EB9/4F6501F6" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EB0/4F6501F6" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72C2A/4F6501F6" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7500 3450 20  0001 C CNN
 F 1 "+HVBATT" H 7500 3600 30  0000 C CNN
 	1    7500 3500
@@ -63,6 +73,11 @@ $Comp
 L +HVBATT #PWR?
 U 1 1 4F6501E8
 P 7500 1500
+AR Path="/4CD72EC7/4F6501E8" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EC1/4F6501E8" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EB9/4F6501E8" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72EB0/4F6501E8" Ref="#PWR?"  Part="1" 
+AR Path="/4CD72C2A/4F6501E8" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7500 1450 20  0001 C CNN
 F 1 "+HVBATT" H 7500 1600 30  0000 C CNN
 	1    7500 1500
