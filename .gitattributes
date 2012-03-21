@@ -11,6 +11,7 @@ datasheets/bjts/BC847A.pdf -text
 datasheets/cameras/EC1020.pdf -text
 datasheets/cameras/EC750.pdf -text
 datasheets/connectors/Encoder.pdf -text
+datasheets/connectors/FPC[!!-~]1-173248-1.pdf -text
 datasheets/connectors/FPC-52207.pdf -text
 datasheets/connectors/MHC40E-ND.pdf -text svneol=unset#application/octet-stream
 datasheets/connectors/SJ1-3523N[!!-~]Stereo[!!-~]Phone[!!-~]Jack.pdf -text svneol=unset#application/octet-stream
@@ -98,6 +99,7 @@ datasheets/ics/SN74LVC1G80.pdf -text
 datasheets/ics/SN74LVC8T245[!!-~]8-bit[!!-~]Bus[!!-~]Transceiver.pdf -text
 datasheets/igbts/FGA180N33AT.pdf -text
 datasheets/mosfets/2N7000.pdf -text
+datasheets/mosfets/2N7002P.pdf -text
 datasheets/mosfets/AO4616.pdf -text
 datasheets/mosfets/AOP605.pdf -text
 datasheets/mosfets/IRF5305.pdf -text
@@ -120,6 +122,7 @@ datasheets/oscillators/ACOL50[!!-~]Oscillator.pdf -text
 datasheets/oscillators/ECS-2025-2033.pdf -text
 datasheets/oscillators/FXO-HC735[!!-~]Canned[!!-~]Oscillator.pdf -text
 datasheets/regulators/LD1117V33C.pdf -text
+datasheets/regulators/MCP1726.pdf -text
 datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/regulators/PT78ST105.pdf -text
