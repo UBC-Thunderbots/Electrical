@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T00:26:04 PDT
+EESchema Schematic File Version 2  date 2012-03-21T00:34:44 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,10 +41,44 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 2600 3300 0    60   Output ~ 0
-/LPS_RESET
-Text HLabel 2600 3200 0    60   Output ~ 0
-LPS_CLOCK
+Wire Wire Line
+	4650 5400 4800 5400
+Wire Wire Line
+	9200 4750 9750 4750
+Wire Wire Line
+	9200 4650 9750 4650
+Wire Wire Line
+	9200 4550 9750 4550
+Wire Wire Line
+	6200 1300 6750 1300
+Wire Wire Line
+	6200 1200 6750 1200
+Wire Wire Line
+	6200 1100 6750 1100
+Wire Wire Line
+	6200 900  6750 900 
+Wire Wire Line
+	6200 800  6750 800 
+Wire Wire Line
+	6200 700  6750 700 
+Wire Wire Line
+	2050 4350 1450 4350
+Wire Wire Line
+	2050 4250 1450 4250
+Wire Wire Line
+	2050 4150 1450 4150
+Wire Wire Line
+	2050 7350 1500 7350
+Wire Wire Line
+	2050 7250 1500 7250
+Wire Wire Line
+	2050 7150 1500 7150
+Wire Wire Line
+	9300 6850 9850 6850
+Wire Wire Line
+	9300 6750 9850 6750
+Wire Wire Line
+	9300 6650 9850 6650
 Connection ~ 10450 2200
 Wire Wire Line
 	10400 2200 10450 2200
@@ -107,46 +141,10 @@ Wire Wire Line
 	4800 2350 4800 2400
 Wire Wire Line
 	5200 2350 5200 2400
-Wire Wire Line
-	5750 700  6750 700 
-Wire Wire Line
-	5950 900  6750 900 
-Wire Wire Line
-	6150 1200 6750 1200
-Wire Wire Line
-	6200 1300 6750 1300
 Wire Bus Line
 	6850 800  6850 550 
 Wire Bus Line
 	6850 550  6900 550 
-Wire Wire Line
-	2300 3750 1500 3750
-Wire Wire Line
-	2200 3950 1500 3950
-Wire Wire Line
-	2100 4250 1450 4250
-Wire Wire Line
-	8800 4050 9800 4050
-Wire Wire Line
-	8900 4250 9800 4250
-Wire Wire Line
-	8150 4650 9750 4650
-Wire Wire Line
-	9750 4750 8050 4750
-Wire Wire Line
-	9850 6850 5800 6850
-Wire Wire Line
-	9850 6650 5900 6650
-Wire Wire Line
-	9850 6400 6100 6400
-Wire Wire Line
-	1500 7250 5500 7250
-Wire Wire Line
-	1500 7150 5450 7150
-Wire Wire Line
-	1500 6950 5400 6950
-Wire Wire Line
-	1500 6750 5300 6750
 Wire Bus Line
 	10000 6150 9950 6150
 Wire Bus Line
@@ -171,42 +169,18 @@ Wire Bus Line
 	1350 6600 1400 6600
 Wire Bus Line
 	1400 6600 1400 6850
-Wire Wire Line
-	5350 6850 1500 6850
 Wire Bus Line
 	1350 7000 1400 7000
 Wire Bus Line
 	1400 7000 1400 7250
-Wire Wire Line
-	5550 7350 1500 7350
-Wire Wire Line
-	6300 6300 9850 6300
-Wire Wire Line
-	6050 6500 9850 6500
-Wire Wire Line
-	5850 6750 9850 6750
 Wire Bus Line
 	10000 6500 9950 6500
 Wire Bus Line
 	9950 6500 9950 6750
-Wire Wire Line
-	8200 4550 9750 4550
-Wire Wire Line
-	8850 4150 9800 4150
-Wire Wire Line
-	2050 4350 1450 4350
-Wire Wire Line
-	2150 4150 1450 4150
-Wire Wire Line
-	2250 3850 1500 3850
 Wire Bus Line
 	6850 1200 6850 950 
 Wire Bus Line
 	6850 950  6900 950 
-Wire Wire Line
-	6100 1100 6750 1100
-Wire Wire Line
-	5900 800  6750 800 
 Wire Wire Line
 	5500 2350 5500 2400
 Wire Wire Line
@@ -238,10 +212,6 @@ Wire Wire Line
 Wire Wire Line
 	5050 5400 5050 5350
 Wire Wire Line
-	4800 5350 4800 5800
-Wire Wire Line
-	4800 5800 4200 5800
-Wire Wire Line
 	4150 3100 4200 3100
 Wire Wire Line
 	4200 3600 4150 3600
@@ -269,6 +239,57 @@ Connection ~ 10450 3400
 Wire Wire Line
 	10400 2600 10450 2600
 Connection ~ 10450 2600
+Wire Wire Line
+	9300 6300 9850 6300
+Wire Wire Line
+	9300 6400 9850 6400
+Wire Wire Line
+	9300 6500 9850 6500
+Wire Wire Line
+	2050 6750 1500 6750
+Wire Wire Line
+	2050 6850 1500 6850
+Wire Wire Line
+	2050 6950 1500 6950
+Wire Wire Line
+	2100 3750 1500 3750
+Wire Wire Line
+	2100 3850 1500 3850
+Wire Wire Line
+	2100 3950 1500 3950
+Wire Wire Line
+	9250 4050 9800 4050
+Wire Wire Line
+	9250 4150 9800 4150
+Wire Wire Line
+	9250 4250 9800 4250
+Wire Wire Line
+	4800 5400 4800 5350
+Wire Wire Line
+	4450 5350 4450 5400
+$Comp
+L CONN_2 P?
+U 1 1 4F698465
+P 4550 5750
+F 0 "P?" V 4500 5750 40  0000 C CNN
+F 1 "CONN_2" V 4600 5750 40  0000 C CNN
+F 2 "R1" H 4550 5750 60  0001 C CNN
+	1    4550 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F69842E
+P 4450 5350
+F 0 "#PWR?" H 4450 5350 30  0001 C CNN
+F 1 "GND" H 4450 5280 30  0001 C CNN
+	1    4450 5350
+	-1   0    0    1   
+$EndComp
+Text HLabel 2600 3300 0    60   Output ~ 0
+/LPS_RESET
+Text HLabel 2600 3200 0    60   Output ~ 0
+LPS_CLOCK
 $Comp
 L GND #PWR?
 U 1 1 4F69766B
@@ -429,13 +450,13 @@ Text HLabel 2500 2200 0    60   Input ~ 0
 M_SENSOR1[0..4]
 Text HLabel 3650 1150 0    60   Output ~ 0
 OSC_ENABLE
-Text HLabel 3850 6300 0    60   Input ~ 0
+Text HLabel 3200 1850 0    60   Input ~ 0
 ADC_MISO
-Text HLabel 3800 6200 0    60   Output ~ 0
+Text HLabel 3150 1750 0    60   Output ~ 0
 ADC_MOSI
-Text HLabel 3750 6100 0    60   Output ~ 0
+Text HLabel 3100 1650 0    60   Output ~ 0
 ADC_CLK
-Text HLabel 3700 6000 0    60   Output ~ 0
+Text HLabel 3050 1550 0    60   Output ~ 0
 /ADC_SS
 $Comp
 L GND #PWR?
