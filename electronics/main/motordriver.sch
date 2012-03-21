@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T01:20:13 PDT
+EESchema Schematic File Version 2  date 2012-03-21T01:25:00 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -31,7 +31,7 @@ LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 10 17
+Sheet 14 17
 Title ""
 Date "21 mar 2012"
 Rev ""
@@ -41,6 +41,47 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L MCP1415 U?
+U 1 1 4F699059
+P 5200 5500
+F 0 "U?" H 5200 5450 60  0000 C CNN
+F 1 "MCP1415" H 5200 5550 60  0000 C CNN
+	1    5200 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1415 U?
+U 1 1 4F699054
+P 5200 3600
+F 0 "U?" H 5200 3550 60  0000 C CNN
+F 1 "MCP1415" H 5200 3650 60  0000 C CNN
+	1    5200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1415 U?
+U 1 1 4F645068
+P 6100 4400
+AR Path="/4CD72EC7/4F645068" Ref="U?"  Part="1" 
+AR Path="/4CD72C2A/4F645068" Ref="U?"  Part="1" 
+AR Path="/4CD72EC1/4F645068" Ref="U?"  Part="1" 
+AR Path="/4CD72EB9/4F645068" Ref="U?"  Part="1" 
+AR Path="/4CD72EB0/4F645068" Ref="U?"  Part="1" 
+F 0 "U?" H 6100 4350 60  0000 C CNN
+F 1 "MCP1415" H 6100 4450 60  0000 C CNN
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP1415 U?
+U 1 1 4F69904C
+P 5200 1600
+F 0 "U?" H 5200 1550 60  0000 C CNN
+F 1 "MCP1415" H 5200 1650 60  0000 C CNN
+	1    5200 1600
+	1    0    0    -1  
+$EndComp
 $Comp
 L +HVBATT #PWR?
 U 1 1 4F6501FB
@@ -366,20 +407,6 @@ F 1 "+BATT" H 5200 1050 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCP1416 U?
-U 1 1 4F645075
-P 5200 5500
-AR Path="/4CD72EC7/4F645075" Ref="U?"  Part="1" 
-AR Path="/4CD72C2A/4F645075" Ref="U?"  Part="1" 
-AR Path="/4CD72EC1/4F645075" Ref="U?"  Part="1" 
-AR Path="/4CD72EB9/4F645075" Ref="U?"  Part="1" 
-AR Path="/4CD72EB0/4F645075" Ref="U?"  Part="1" 
-F 0 "U?" H 5200 5450 60  0000 C CNN
-F 1 "MCP1416" H 5200 5550 60  0000 C CNN
-	1    5200 5500
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCP1415 U?
 U 1 1 4F645074
 P 6100 6300
@@ -391,34 +418,6 @@ AR Path="/4CD72EB0/4F645074" Ref="U?"  Part="1"
 F 0 "U?" H 6100 6250 60  0000 C CNN
 F 1 "MCP1415" H 6100 6350 60  0000 C CNN
 	1    6100 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCP1415 U?
-U 1 1 4F645068
-P 6100 4400
-AR Path="/4CD72EC7/4F645068" Ref="U?"  Part="1" 
-AR Path="/4CD72C2A/4F645068" Ref="U?"  Part="1" 
-AR Path="/4CD72EC1/4F645068" Ref="U?"  Part="1" 
-AR Path="/4CD72EB9/4F645068" Ref="U?"  Part="1" 
-AR Path="/4CD72EB0/4F645068" Ref="U?"  Part="1" 
-F 0 "U?" H 6100 4350 60  0000 C CNN
-F 1 "MCP1415" H 6100 4450 60  0000 C CNN
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCP1416 U?
-U 1 1 4F645067
-P 5200 3600
-AR Path="/4CD72EC7/4F645067" Ref="U?"  Part="1" 
-AR Path="/4CD72C2A/4F645067" Ref="U?"  Part="1" 
-AR Path="/4CD72EC1/4F645067" Ref="U?"  Part="1" 
-AR Path="/4CD72EB9/4F645067" Ref="U?"  Part="1" 
-AR Path="/4CD72EB0/4F645067" Ref="U?"  Part="1" 
-F 0 "U?" H 5200 3550 60  0000 C CNN
-F 1 "MCP1416" H 5200 3650 60  0000 C CNN
-	1    5200 3600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -506,20 +505,6 @@ F 1 "GND" H 7500 4430 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCP1416 U?
-U 1 1 4F644F5B
-P 5200 1600
-AR Path="/4CD72C2A/4F644F5B" Ref="U?"  Part="1" 
-AR Path="/4CD72EC7/4F644F5B" Ref="U?"  Part="1" 
-AR Path="/4CD72EC1/4F644F5B" Ref="U?"  Part="1" 
-AR Path="/4CD72EB9/4F644F5B" Ref="U?"  Part="1" 
-AR Path="/4CD72EB0/4F644F5B" Ref="U?"  Part="1" 
-F 0 "U?" H 5200 1550 60  0000 C CNN
-F 1 "MCP1416" H 5200 1650 60  0000 C CNN
-	1    5200 1600
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCP1415 U?
 U 1 1 4F644F58
 P 6100 2400
@@ -584,7 +569,7 @@ AR Path="/4CD72EC7/4CD72CE1" Ref="#PWR047"  Part="1"
 AR Path="/4CD72EC1/4CD72CE1" Ref="#PWR053"  Part="1" 
 AR Path="/4CD72EB9/4CD72CE1" Ref="#PWR059"  Part="1" 
 AR Path="/4CD72EB0/4CD72CE1" Ref="#PWR065"  Part="1" 
-F 0 "#PWR047" H 7500 2500 30  0001 C CNN
+F 0 "#PWR071" H 7500 2500 30  0001 C CNN
 F 1 "GND" H 7500 2430 30  0001 C CNN
 	1    7500 2500
 	1    0    0    -1  
@@ -598,7 +583,7 @@ AR Path="/4CD72EC7/4CD72C5C" Ref="Q13"  Part="2"
 AR Path="/4CD72EC1/4CD72C5C" Ref="Q4"  Part="2" 
 AR Path="/4CD72EB9/4CD72C5C" Ref="Q7"  Part="2" 
 AR Path="/4CD72EB0/4CD72C5C" Ref="Q10"  Part="2" 
-F 0 "Q13" H 7410 1920 60  0000 R CNN
+F 0 "Q1" H 7410 1920 60  0000 R CNN
 F 1 "AO4616" H 7410 1600 60  0000 R CNN
 	2    7400 1750
 	1    0    0    1   
@@ -612,7 +597,7 @@ AR Path="/4CD72EC7/4CD72C5A" Ref="Q13"  Part="1"
 AR Path="/4CD72EC1/4CD72C5A" Ref="Q4"  Part="1" 
 AR Path="/4CD72EB9/4CD72C5A" Ref="Q7"  Part="1" 
 AR Path="/4CD72EB0/4CD72C5A" Ref="Q10"  Part="1" 
-F 0 "Q13" H 7410 2420 60  0000 R CNN
+F 0 "Q1" H 7410 2420 60  0000 R CNN
 F 1 "AO4616" H 7410 2100 60  0000 R CNN
 	1    7400 2250
 	1    0    0    -1  
