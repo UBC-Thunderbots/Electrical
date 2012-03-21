@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T00:21:19 PDT
+EESchema Schematic File Version 2  date 2012-03-21T00:26:04 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -31,7 +31,7 @@ LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 6 17
+Sheet 9 17
 Title ""
 Date "21 mar 2012"
 Rev ""
@@ -41,8 +41,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7500 2600 7450 2600
+Wire Wire Line
+	6800 2900 6900 2900
+Wire Wire Line
+	7500 3550 7450 3550
+Connection ~ 6850 3850
 Wire Bus Line
-	3950 3550 3950 3850
+	3950 3850 3950 3550
 Wire Wire Line
 	6050 3450 6150 3450
 Wire Wire Line
@@ -66,7 +73,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 3100 6900 3100
 Wire Wire Line
-	6900 4600 6250 4600
+	6250 4600 6900 4600
 Wire Wire Line
 	6900 3950 6250 3950
 Wire Bus Line
@@ -75,23 +82,19 @@ Wire Bus Line
 	6150 5100 5900 5100
 Connection ~ 6900 4600
 Wire Wire Line
-	6900 4750 6900 4850
+	6900 4850 6900 4750
 Wire Wire Line
-	6900 4350 6900 4450
+	6900 4450 6900 4350
 Wire Wire Line
 	6850 4250 6900 4250
 Wire Wire Line
-	6850 3850 6900 3850
-Wire Wire Line
-	6900 4550 6900 4650
+	6900 4650 6900 4550
 Connection ~ 6900 4800
 Connection ~ 6900 4400
 Wire Wire Line
 	6250 4400 6900 4400
 Wire Wire Line
 	6250 4800 6900 4800
-Wire Wire Line
-	6900 2900 6850 2900
 Wire Wire Line
 	6900 3200 6250 3200
 Wire Wire Line
@@ -116,6 +119,53 @@ Wire Wire Line
 	6050 3550 6250 3550
 Wire Wire Line
 	6250 3550 6250 3200
+Wire Wire Line
+	6900 3850 6800 3850
+Wire Wire Line
+	6850 3850 6850 3550
+Wire Wire Line
+	6850 3550 7050 3550
+Wire Wire Line
+	6850 2900 6850 2600
+Wire Wire Line
+	6850 2600 7050 2600
+Connection ~ 6850 2900
+$Comp
+L GND #PWR?
+U 1 1 4F698265
+P 7500 2600
+F 0 "#PWR?" H 7500 2600 30  0001 C CNN
+F 1 "GND" H 7500 2530 30  0001 C CNN
+	1    7500 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C?
+U 1 1 4F69825D
+P 7250 2600
+F 0 "C?" H 7300 2700 50  0000 L CNN
+F 1 "10uF" H 7300 2500 50  0000 L CNN
+	1    7250 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 4F69823B
+P 7500 3550
+F 0 "#PWR?" H 7500 3550 30  0001 C CNN
+F 1 "GND" H 7500 3480 30  0001 C CNN
+	1    7500 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C?
+U 1 1 4F698233
+P 7250 3550
+F 0 "C?" H 7300 3650 50  0000 L CNN
+F 1 "10uF" H 7300 3450 50  0000 L CNN
+	1    7250 3550
+	0    1    1    0   
+$EndComp
 NoConn ~ 4550 3650
 $Comp
 L +3.3V #PWR?
@@ -201,14 +251,14 @@ $EndComp
 $Comp
 L +5V #PWR?
 U 1 1 4F6292C2
-P 6850 2900
+P 6800 2900
 AR Path="/4CD73188/4F6292C2" Ref="#PWR?"  Part="1" 
 AR Path="/4CD7317F/4F6292C2" Ref="#PWR?"  Part="1" 
 AR Path="/4CD73053/4F6292C2" Ref="#PWR?"  Part="1" 
 AR Path="/4CD73172/4F6292C2" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6850 2990 20  0001 C CNN
-F 1 "+5V" H 6850 2990 30  0000 C CNN
-	1    6850 2900
+F 0 "#PWR?" H 6800 2990 20  0001 C CNN
+F 1 "+5V" H 6800 2990 30  0000 C CNN
+	1    6800 2900
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -256,7 +306,7 @@ AR Path="/4CD73053/4CD730A5" Ref="#PWR040"  Part="1"
 AR Path="/4CD73188/4CD730A5" Ref="#PWR034"  Part="1" 
 AR Path="/4CD7317F/4CD730A5" Ref="#PWR036"  Part="1" 
 AR Path="/4CD73172/4CD730A5" Ref="#PWR038"  Part="1" 
-F 0 "#PWR034" H 6850 4250 30  0001 C CNN
+F 0 "#PWR040" H 6850 4250 30  0001 C CNN
 F 1 "GND" H 6850 4180 30  0001 C CNN
 	1    6850 4250
 	0    1    1    0   
@@ -264,14 +314,14 @@ $EndComp
 $Comp
 L +5V #PWR041
 U 1 1 4CD73087
-P 6850 3850
+P 6800 3850
 AR Path="/4CD73053/4CD73087" Ref="#PWR041"  Part="1" 
 AR Path="/4CD73188/4CD73087" Ref="#PWR035"  Part="1" 
 AR Path="/4CD7317F/4CD73087" Ref="#PWR037"  Part="1" 
 AR Path="/4CD73172/4CD73087" Ref="#PWR039"  Part="1" 
-F 0 "#PWR035" H 6850 3940 20  0001 C CNN
-F 1 "+5V" H 6850 3940 30  0000 C CNN
-	1    6850 3850
+F 0 "#PWR041" H 6800 3940 20  0001 C CNN
+F 1 "+5V" H 6800 3940 30  0000 C CNN
+	1    6800 3850
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -282,7 +332,7 @@ AR Path="/4CD73053/4CD73060" Ref="P10"  Part="1"
 AR Path="/4CD73188/4CD73060" Ref="P11"  Part="1" 
 AR Path="/4CD7317F/4CD73060" Ref="P12"  Part="1" 
 AR Path="/4CD73172/4CD73060" Ref="P13"  Part="1" 
-F 0 "P11" V 7200 4350 60  0000 C CNN
+F 0 "P10" V 7200 4350 60  0000 C CNN
 F 1 "CONN_11" V 7300 4350 60  0000 C CNN
 F 2 "FPC" H 7250 4350 60  0001 C CNN
 F 4 "WM7971CT-ND" H 7250 4350 60  0001 C CNN "Field1"

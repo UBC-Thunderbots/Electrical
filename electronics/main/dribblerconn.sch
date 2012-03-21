@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T00:21:19 PDT
+EESchema Schematic File Version 2  date 2012-03-21T00:26:04 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,80 +41,105 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 6800 4750
 Wire Wire Line
-	6800 4700 6800 4800
-Connection ~ 7000 4100
+	7700 3050 7650 3050
 Wire Wire Line
-	7000 4200 7000 4100
-Connection ~ 6600 3900
+	7000 3700 7100 3700
 Wire Wire Line
-	6600 4200 6600 3900
+	7000 4700 7000 4750
 Wire Wire Line
-	5350 5550 5350 5500
-Connection ~ 6150 5000
+	7000 4750 6600 4750
 Wire Wire Line
-	6100 5000 6150 5000
+	6600 4750 6600 4700
+Connection ~ 6800 4000
 Wire Wire Line
-	7100 4100 6400 4100
-Wire Wire Line
-	6400 4100 6400 4800
-Wire Wire Line
-	6400 4800 6100 4800
-Wire Wire Line
-	6100 4600 6200 4600
-Wire Wire Line
-	6200 4600 6200 3900
-Wire Wire Line
-	6200 3900 7100 3900
-Wire Bus Line
-	4000 4700 4000 4950
-Wire Bus Line
-	6500 3500 6500 3200
-Wire Bus Line
-	6500 3200 6400 3200
-Wire Wire Line
-	6600 3600 7100 3600
-Wire Wire Line
-	6600 3500 7100 3500
-Wire Wire Line
-	6600 3400 7100 3400
-Wire Wire Line
-	7050 3800 7100 3800
-Wire Wire Line
-	7100 3700 7050 3700
-Wire Bus Line
-	4000 4950 3850 4950
-Wire Wire Line
-	4600 4600 4100 4600
-Wire Wire Line
-	4100 4700 4600 4700
-Wire Wire Line
-	4600 4800 4100 4800
-Wire Wire Line
-	6100 4700 6300 4700
-Wire Wire Line
-	6300 4700 6300 4000
-Wire Wire Line
-	6300 4000 7100 4000
-Wire Wire Line
-	6100 4900 6150 4900
-Wire Wire Line
-	6150 5100 6100 5100
-Connection ~ 6150 5100
-Wire Wire Line
-	6150 4900 6150 5150
+	6800 4200 6800 4000
 Wire Wire Line
 	5350 4150 5350 4200
 Wire Wire Line
-	6800 4200 6800 4000
-Connection ~ 6800 4000
+	6150 5150 6150 4900
+Connection ~ 6150 5100
 Wire Wire Line
-	6600 4700 6600 4750
+	6150 5100 6100 5100
 Wire Wire Line
-	6600 4750 7000 4750
+	6150 4900 6100 4900
 Wire Wire Line
-	7000 4750 7000 4700
+	7100 4000 6300 4000
+Wire Wire Line
+	6300 4000 6300 4700
+Wire Wire Line
+	6300 4700 6100 4700
+Wire Wire Line
+	4600 4800 4100 4800
+Wire Wire Line
+	4100 4700 4600 4700
+Wire Wire Line
+	4600 4600 4100 4600
+Wire Bus Line
+	3850 4950 4000 4950
+Wire Wire Line
+	7050 3800 7100 3800
+Wire Wire Line
+	6600 3400 7100 3400
+Wire Wire Line
+	6600 3500 7100 3500
+Wire Wire Line
+	6600 3600 7100 3600
+Wire Bus Line
+	6400 3200 6500 3200
+Wire Bus Line
+	6500 3200 6500 3500
+Wire Bus Line
+	4000 4950 4000 4700
+Wire Wire Line
+	7100 3900 6200 3900
+Wire Wire Line
+	6200 3900 6200 4600
+Wire Wire Line
+	6200 4600 6100 4600
+Wire Wire Line
+	6100 4800 6400 4800
+Wire Wire Line
+	6400 4800 6400 4100
+Wire Wire Line
+	6400 4100 7100 4100
+Wire Wire Line
+	6100 5000 6150 5000
+Connection ~ 6150 5000
+Wire Wire Line
+	5350 5550 5350 5500
+Wire Wire Line
+	6600 4200 6600 3900
+Connection ~ 6600 3900
+Wire Wire Line
+	7000 4200 7000 4100
+Connection ~ 7000 4100
+Wire Wire Line
+	6800 4700 6800 4800
+Connection ~ 6800 4750
+Wire Wire Line
+	7050 3700 7050 3050
+Wire Wire Line
+	7050 3050 7250 3050
+Connection ~ 7050 3700
+$Comp
+L GND #PWR?
+U 1 1 4F698285
+P 7700 3050
+F 0 "#PWR?" H 7700 3050 30  0001 C CNN
+F 1 "GND" H 7700 2980 30  0001 C CNN
+	1    7700 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C?
+U 1 1 4F698278
+P 7450 3050
+F 0 "C?" H 7500 3150 50  0000 L CNN
+F 1 "10uF" H 7500 2950 50  0000 L CNN
+	1    7450 3050
+	0    1    1    0   
+$EndComp
 $Comp
 L +5V #PWR?
 U 1 1 4F696790
@@ -226,10 +251,10 @@ $EndComp
 $Comp
 L +5V #PWR033
 U 1 1 4CD73217
-P 7050 3700
-F 0 "#PWR033" H 7050 3790 20  0001 C CNN
-F 1 "+5V" H 7050 3790 30  0000 C CNN
-	1    7050 3700
+P 7000 3700
+F 0 "#PWR033" H 7000 3790 20  0001 C CNN
+F 1 "+5V" H 7000 3790 30  0000 C CNN
+	1    7000 3700
 	0    -1   -1   0   
 $EndComp
 Text Label 6600 3600 0    60   ~ 0
