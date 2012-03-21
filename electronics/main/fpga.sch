@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-20T23:15:40 PDT
+EESchema Schematic File Version 2  date 2012-03-20T23:34:43 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,22 +41,28 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 1250 1500 2    60   Output ~ 0
-CHICKER_SPARE
-Text HLabel 8650 2300 0    60   Output ~ 0
-/MRF_CS
-Text HLabel 8650 2200 0    60   Output ~ 0
-MRF_CLK
-Text HLabel 8650 2100 0    60   Input ~ 0
-MRF_MISO
-Text HLabel 8650 2000 0    60   Output ~ 0
-MRF_MOSI
-Text HLabel 8650 1900 0    60   Input ~ 0
-MRF_INT
-Text HLabel 8650 1800 0    60   Output ~ 0
-MRF_WAKE
-Text HLabel 8650 1700 0    60   Output ~ 0
-/MRF_RESET
+Connection ~ 10450 2200
+Wire Wire Line
+	10400 2200 10450 2200
+Connection ~ 10450 3000
+Wire Wire Line
+	10400 3000 10450 3000
+Wire Wire Line
+	10450 3450 10450 1800
+Wire Wire Line
+	10450 1800 10400 1800
+Wire Wire Line
+	9950 3000 10000 3000
+Wire Wire Line
+	9950 2200 10000 2200
+Wire Wire Line
+	7600 5450 7550 5450
+Wire Wire Line
+	6600 5450 6500 5450
+Wire Wire Line
+	6500 5450 6500 5350
+Wire Wire Line
+	10450 850  10500 850 
 Wire Wire Line
 	6450 5400 6450 5350
 Wire Wire Line
@@ -80,10 +86,6 @@ Wire Wire Line
 Wire Wire Line
 	6200 5350 6200 5400
 Wire Wire Line
-	7550 5850 6500 5850
-Wire Wire Line
-	6500 5850 6500 5350
-Wire Wire Line
 	7150 4600 7200 4600
 Wire Wire Line
 	7200 3950 7150 3950
@@ -101,16 +103,6 @@ Wire Wire Line
 	4800 2350 4800 2400
 Wire Wire Line
 	5200 2350 5200 2400
-Connection ~ 10850 900 
-Wire Wire Line
-	10750 900  10850 900 
-Connection ~ 10850 1600
-Wire Wire Line
-	10750 1600 10850 1600
-Wire Wire Line
-	9900 550  10350 550 
-Wire Wire Line
-	10100 1250 10350 1250
 Wire Wire Line
 	5750 700  6750 700 
 Wire Wire Line
@@ -212,17 +204,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 800  6750 800 
 Wire Wire Line
-	10200 1600 10350 1600
-Wire Wire Line
-	10000 900  10350 900 
-Wire Wire Line
-	10750 550  10850 550 
-Wire Wire Line
-	10850 550  10850 1700
-Wire Wire Line
-	10750 1250 10850 1250
-Connection ~ 10850 1250
-Wire Wire Line
 	5500 2350 5500 2400
 Wire Wire Line
 	5250 2350 5250 2400
@@ -266,6 +247,170 @@ Wire Wire Line
 	4150 4200 4200 4200
 Wire Wire Line
 	4150 4500 4200 4500
+Wire Wire Line
+	10950 850  10900 850 
+Wire Wire Line
+	9900 850  9950 850 
+Wire Wire Line
+	7100 5450 7150 5450
+Wire Wire Line
+	9950 1800 10000 1800
+Wire Wire Line
+	9950 2600 10000 2600
+Wire Wire Line
+	9950 3400 10000 3400
+Wire Wire Line
+	10400 3400 10450 3400
+Connection ~ 10450 3400
+Wire Wire Line
+	10400 2600 10450 2600
+Connection ~ 10450 2600
+$Comp
+L GND #PWR?
+U 1 1 4F69766B
+P 10450 3450
+F 0 "#PWR?" H 10450 3450 30  0001 C CNN
+F 1 "GND" H 10450 3380 30  0001 C CNN
+	1    10450 3450
+	1    0    0    -1  
+$EndComp
+Text Notes 10000 3250 0    60   ~ 0
+Test2
+Text Notes 10000 2850 0    60   ~ 0
+Test1
+Text Notes 10000 2450 0    60   ~ 0
+Test0
+Text Notes 10000 2050 0    60   ~ 0
+Radio
+Text Notes 10000 1650 0    60   ~ 0
+Charged
+Text Notes 7200 5300 0    60   ~ 0
+FPGA OK
+$Comp
+L GND #PWR?
+U 1 1 4F697553
+P 7600 5450
+F 0 "#PWR?" H 7600 5450 30  0001 C CNN
+F 1 "GND" H 7600 5380 30  0001 C CNN
+	1    7600 5450
+	0    -1   -1   0   
+$EndComp
+Text Notes 10550 700  0    60   ~ 0
+Power
+$Comp
+L GND #PWR?
+U 1 1 4F697498
+P 10950 850
+F 0 "#PWR?" H 10950 850 30  0001 C CNN
+F 1 "GND" H 10950 780 30  0001 C CNN
+	1    10950 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 4F697495
+P 9900 850
+F 0 "#PWR?" H 9900 810 30  0001 C CNN
+F 1 "+3.3V" H 9900 960 30  0000 C CNN
+	1    9900 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 4F697437
+P 9700 3400
+F 0 "R?" V 9780 3400 50  0000 C CNN
+F 1 "56R" V 9700 3400 50  0000 C CNN
+F 4 "" H 9700 3400 60  0001 C CNN "Digikey Part"
+	1    9700 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 4F697436
+P 9700 3000
+F 0 "R?" V 9780 3000 50  0000 C CNN
+F 1 "56R" V 9700 3000 50  0000 C CNN
+F 4 "" H 9700 3000 60  0001 C CNN "Digikey Part"
+	1    9700 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 4F697433
+P 9700 2600
+F 0 "R?" V 9780 2600 50  0000 C CNN
+F 1 "56R" V 9700 2600 50  0000 C CNN
+F 4 "" H 9700 2600 60  0001 C CNN "Digikey Part"
+	1    9700 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 4F697430
+P 9700 2200
+F 0 "R?" V 9780 2200 50  0000 C CNN
+F 1 "56R" V 9700 2200 50  0000 C CNN
+F 4 "" H 9700 2200 60  0001 C CNN "Digikey Part"
+	1    9700 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 4F69742C
+P 10200 3400
+F 0 "D?" H 10200 3500 50  0000 C CNN
+F 1 "LED" H 10200 3300 50  0000 C CNN
+F 4 "160-1169-1-ND" H 10200 3400 60  0001 C CNN "Field1"
+	1    10200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 4F69742B
+P 10200 3000
+F 0 "D?" H 10200 3100 50  0000 C CNN
+F 1 "LED" H 10200 2900 50  0000 C CNN
+F 4 "160-1169-1-ND" H 10200 3000 60  0001 C CNN "Field1"
+	1    10200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 4F697423
+P 10200 2600
+F 0 "D?" H 10200 2700 50  0000 C CNN
+F 1 "LED" H 10200 2500 50  0000 C CNN
+F 4 "160-1169-1-ND" H 10200 2600 60  0001 C CNN "Field1"
+	1    10200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 4F697420
+P 10200 2200
+F 0 "D?" H 10200 2300 50  0000 C CNN
+F 1 "LED" H 10200 2100 50  0000 C CNN
+F 4 "160-1169-1-ND" H 10200 2200 60  0001 C CNN "Field1"
+	1    10200 2200
+	1    0    0    -1  
+$EndComp
+Text HLabel 1250 1500 2    60   Output ~ 0
+CHICKER_SPARE
+Text HLabel 8650 2300 0    60   Output ~ 0
+/MRF_CS
+Text HLabel 8650 2200 0    60   Output ~ 0
+MRF_CLK
+Text HLabel 8650 2100 0    60   Input ~ 0
+MRF_MISO
+Text HLabel 8650 2000 0    60   Output ~ 0
+MRF_MOSI
+Text HLabel 8650 1900 0    60   Input ~ 0
+MRF_INT
+Text HLabel 8650 1800 0    60   Output ~ 0
+MRF_WAKE
+Text HLabel 8650 1700 0    60   Output ~ 0
+/MRF_RESET
 Text HLabel 2600 3000 0    60   Output ~ 0
 BREAKBEAM_DRIVE
 Text HLabel 2500 2600 0    60   Input ~ 0
@@ -629,92 +774,63 @@ F 2 "TQFP144" H 5550 3750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
-U 1 1 4CDF34B5
-P 10850 1700
-F 0 "#PWR05" H 10850 1700 30  0001 C CNN
-F 1 "GND" H 10850 1630 30  0001 C CNN
-	1    10850 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R40
 U 1 1 4CDF345A
-P 10200 1850
-F 0 "R40" V 10280 1850 50  0000 C CNN
-F 1 "56R" V 10200 1850 50  0000 C CNN
-F 4 "" H 10200 1850 60  0001 C CNN "Digikey Part"
-	1    10200 1850
-	1    0    0    -1  
+P 6850 5450
+F 0 "R40" V 6930 5450 50  0000 C CNN
+F 1 "56R" V 6850 5450 50  0000 C CNN
+F 4 "" H 6850 5450 60  0001 C CNN "Digikey Part"
+	1    6850 5450
+	0    1    1    0   
 $EndComp
 $Comp
 L R R39
 U 1 1 4CDF3458
-P 10100 1500
-F 0 "R39" V 10180 1500 50  0000 C CNN
-F 1 "56R" V 10100 1500 50  0000 C CNN
-F 4 "" H 10100 1500 60  0001 C CNN "Digikey Part"
-	1    10100 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R38
-U 1 1 4CDF3456
-P 10000 1150
-F 0 "R38" V 10080 1150 50  0000 C CNN
-F 1 "82R" V 10000 1150 50  0000 C CNN
-F 4 "" H 10000 1150 60  0001 C CNN "Digikey Part"
-	1    10000 1150
-	1    0    0    -1  
+P 10200 850
+F 0 "R39" V 10280 850 50  0000 C CNN
+F 1 "56R" V 10200 850 50  0000 C CNN
+F 4 "" H 10200 850 60  0001 C CNN "Digikey Part"
+	1    10200 850 
+	0    1    1    0   
 $EndComp
 $Comp
 L R R37
 U 1 1 4CDF3450
-P 9900 800
-F 0 "R37" V 9980 800 50  0000 C CNN
-F 1 "82R" V 9900 800 50  0000 C CNN
-F 4 "" H 9900 800 60  0001 C CNN "Digikey Part"
-	1    9900 800 
-	1    0    0    -1  
+P 9700 1800
+F 0 "R37" V 9780 1800 50  0000 C CNN
+F 1 "82R" V 9700 1800 50  0000 C CNN
+F 4 "" H 9700 1800 60  0001 C CNN "Digikey Part"
+	1    9700 1800
+	0    1    1    0   
 $EndComp
 $Comp
 L LED D16
 U 1 1 4CDF343B
-P 10550 550
-F 0 "D16" H 10550 650 50  0000 C CNN
-F 1 "LED" H 10550 450 50  0000 C CNN
-F 4 "160-1167-1-ND" H 10550 550 60  0001 C CNN "Field1"
-	1    10550 550 
+P 10200 1800
+F 0 "D16" H 10200 1900 50  0000 C CNN
+F 1 "LED" H 10200 1700 50  0000 C CNN
+F 4 "160-1167-1-ND" H 10200 1800 60  0001 C CNN "Field1"
+	1    10200 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D19
 U 1 1 4CDF3436
-P 10550 1600
-F 0 "D19" H 10550 1700 50  0000 C CNN
-F 1 "LED" H 10550 1500 50  0000 C CNN
-F 4 "160-1169-1-ND" H 10550 1600 60  0001 C CNN "Field1"
-	1    10550 1600
+P 7350 5450
+F 0 "D19" H 7350 5550 50  0000 C CNN
+F 1 "LED" H 7350 5350 50  0000 C CNN
+F 4 "160-1169-1-ND" H 7350 5450 60  0001 C CNN "Field1"
+	1    7350 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D18
 U 1 1 4CDF3432
-P 10550 1250
-F 0 "D18" H 10550 1350 50  0000 C CNN
-F 1 "LED" H 10550 1150 50  0000 C CNN
-F 4 "160-1169-1-ND" H 10550 1250 60  0001 C CNN "Field1"
-	1    10550 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L LED D17
-U 1 1 4CDF3428
-P 10550 900
-F 0 "D17" H 10550 1000 50  0000 C CNN
-F 1 "LED" H 10550 800 50  0000 C CNN
-F 4 "160-1167-1-ND" H 10550 900 60  0001 C CNN "Field1"
-	1    10550 900 
+P 10700 850
+F 0 "D18" H 10700 950 50  0000 C CNN
+F 1 "LED" H 10700 750 50  0000 C CNN
+F 4 "160-1169-1-ND" H 10700 850 60  0001 C CNN "Field1"
+	1    10700 850 
 	1    0    0    -1  
 $EndComp
 Text Label 6200 1300 0    60   ~ 0
