@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-20T22:07:54 PDT
+EESchema Schematic File Version 2  date 2012-03-20T22:21:50 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,28 +41,20 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 2600 3000 0    60   Output ~ 0
-BREAKBEAM_DRIVE
-Text HLabel 2500 2600 0    60   Input ~ 0
-M_SENSOR5[0..2]
-Text HLabel 2500 2500 0    60   Input ~ 0
-M_SENSOR4[0..4]
-Text HLabel 2500 2400 0    60   Input ~ 0
-M_SENSOR3[0..4]
-Text HLabel 2500 2300 0    60   Input ~ 0
-M_SENSOR2[0..4]
-Text HLabel 2500 2200 0    60   Input ~ 0
-M_SENSOR1[0..4]
-Text HLabel 3650 1150 0    60   Output ~ 0
-OSC_ENABLE
-Text HLabel 3850 6300 0    60   Input ~ 0
-ADC_MISO
-Text HLabel 3800 6200 0    60   Output ~ 0
-ADC_MOSI
-Text HLabel 3750 6100 0    60   Output ~ 0
-ADC_CLK
-Text HLabel 3700 6000 0    60   Output ~ 0
-/ADC_SS
+Text HLabel 8650 2300 0    60   Output ~ 0
+/MRF_CS
+Text HLabel 8650 2200 0    60   Output ~ 0
+MRF_CLK
+Text HLabel 8650 2100 0    60   Input ~ 0
+MRF_MISO
+Text HLabel 8650 2000 0    60   Output ~ 0
+MRF_MOSI
+Text HLabel 8650 1900 0    60   Input ~ 0
+MRF_INT
+Text HLabel 8650 1800 0    60   Output ~ 0
+MRF_WAKE
+Text HLabel 8650 1700 0    60   Output ~ 0
+/MRF_RESET
 Wire Wire Line
 	6450 5400 6450 5350
 Wire Wire Line
@@ -272,6 +264,28 @@ Wire Wire Line
 	4150 4200 4200 4200
 Wire Wire Line
 	4150 4500 4200 4500
+Text HLabel 2600 3000 0    60   Output ~ 0
+BREAKBEAM_DRIVE
+Text HLabel 2500 2600 0    60   Input ~ 0
+M_SENSOR5[0..2]
+Text HLabel 2500 2500 0    60   Input ~ 0
+M_SENSOR4[0..4]
+Text HLabel 2500 2400 0    60   Input ~ 0
+M_SENSOR3[0..4]
+Text HLabel 2500 2300 0    60   Input ~ 0
+M_SENSOR2[0..4]
+Text HLabel 2500 2200 0    60   Input ~ 0
+M_SENSOR1[0..4]
+Text HLabel 3650 1150 0    60   Output ~ 0
+OSC_ENABLE
+Text HLabel 3850 6300 0    60   Input ~ 0
+ADC_MISO
+Text HLabel 3800 6200 0    60   Output ~ 0
+ADC_MOSI
+Text HLabel 3750 6100 0    60   Output ~ 0
+ADC_CLK
+Text HLabel 3700 6000 0    60   Output ~ 0
+/ADC_SS
 $Comp
 L GND #PWR?
 U 1 1 4F617472
