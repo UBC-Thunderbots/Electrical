@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-20T23:34:43 PDT
+EESchema Schematic File Version 2  date 2012-03-21T00:21:19 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 2600 3300 0    60   Output ~ 0
+/LPS_RESET
+Text HLabel 2600 3200 0    60   Output ~ 0
+LPS_CLOCK
 Connection ~ 10450 2200
 Wire Wire Line
 	10400 2200 10450 2200
