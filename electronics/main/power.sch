@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T00:39:29 PDT
+EESchema Schematic File Version 2  date 2012-03-21T01:20:13 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,21 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	4600 2950 4850 2950
+Wire Wire Line
+	4850 2950 4850 3200
+Connection ~ 6700 2600
+Wire Wire Line
+	6800 2650 6800 2600
+Wire Wire Line
+	6800 2600 6500 2600
+Connection ~ 6600 2600
+Wire Wire Line
+	6600 2600 6600 2650
+Connection ~ 6600 3100
+Wire Wire Line
+	6600 3050 6600 3100
 Connection ~ 4300 3500
 Wire Wire Line
 	4250 3500 6500 3500
@@ -75,16 +90,9 @@ Wire Wire Line
 Wire Wire Line
 	4000 2150 4000 2200
 Wire Wire Line
-	4600 2950 4750 2950
-Wire Wire Line
 	4800 3200 5000 3200
-Connection ~ 6650 2600
-Wire Wire Line
-	6650 2600 6500 2600
 Wire Wire Line
 	6500 2600 6500 2650
-Wire Wire Line
-	6500 3500 6500 3050
 Wire Wire Line
 	5000 2750 4950 2750
 Wire Wire Line
@@ -184,19 +192,10 @@ Wire Wire Line
 Wire Wire Line
 	4300 3400 5000 3400
 Wire Wire Line
-	6650 2550 6650 2650
-Wire Wire Line
 	4300 3500 4300 3200
 Connection ~ 4300 3400
 Wire Wire Line
 	4600 2500 4600 2550
-Wire Wire Line
-	4700 2950 4700 3100
-Connection ~ 4700 2950
-Wire Wire Line
-	4700 3100 4850 3100
-Wire Wire Line
-	4850 3100 4850 3200
 Connection ~ 4850 3200
 Wire Wire Line
 	3800 2750 4300 2750
@@ -228,6 +227,40 @@ Wire Wire Line
 Connection ~ 6100 3950
 Wire Wire Line
 	3700 3500 3750 3500
+Wire Wire Line
+	6700 3050 6700 3100
+Wire Wire Line
+	6700 3100 6500 3100
+Wire Wire Line
+	6500 3500 6500 3050
+Connection ~ 6500 3100
+Wire Wire Line
+	6700 2600 6700 2650
+Wire Wire Line
+	6650 2600 6650 2550
+Connection ~ 6650 2600
+$Comp
+L MOSFET_N Q?
+U 1 1 4F698F29
+P 4500 2750
+F 0 "Q?" H 4510 2920 60  0000 R CNN
+F 1 "MOSFET_N" H 4510 2600 60  0000 R CNN
+F 2 "SOT23_3GDS" H 4500 2750 60  0001 C CNN
+F 4 "568-5818-1-ND" H 4500 2750 60  0001 C CNN "Field1"
+	1    4500 2750
+	1    0    0    1   
+$EndComp
+$Comp
+L IRF9310 Q?
+U 1 1 4F698F0A
+P 6400 2850
+F 0 "Q?" H 6410 3020 60  0000 R CNN
+F 1 "IRF9310" H 6410 2700 60  0000 R CNN
+F 2 "SO8E-LONG_PADS" H 6310 2920 60  0001 C CNN
+F 3 "IRF9310TRPBFCT-ND" H 6510 3120 60  0001 C CNN
+	1    6400 2850
+	1    0    0    -1  
+$EndComp
 $Comp
 L FUSE F?
 U 1 1 4F6971B8
@@ -370,28 +403,6 @@ F 1 "IRF9310" H 6010 4050 60  0000 R CNN
 F 2 "SO8E-LONG_PADS" H 5910 4270 60  0001 C CNN
 F 3 "IRF9310TRPBFCT-ND" H 6110 4470 60  0001 C CNN
 	1    6000 4200
-	1    0    0    1   
-$EndComp
-$Comp
-L AO4616 Q?
-U 2 1 4F650919
-P 6400 2850
-F 0 "Q?" H 6410 3020 60  0000 R CNN
-F 1 "AO4616" H 6410 2700 60  0000 R CNN
-F 2 "~" H 6310 2920 60  0001 C CNN
-F 3 "~" H 6510 3120 60  0001 C CNN
-	2    6400 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L AO4616 Q?
-U 1 1 4F650916
-P 4500 2750
-F 0 "Q?" H 4510 2920 60  0000 R CNN
-F 1 "AO4616" H 4510 2600 60  0000 R CNN
-F 2 "~" H 4410 2820 60  0001 C CNN
-F 3 "~" H 4610 3020 60  0001 C CNN
-	1    4500 2750
 	1    0    0    1   
 $EndComp
 $Comp
