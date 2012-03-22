@@ -92,15 +92,20 @@
 		<default value="82R" part="RMCF0805JT82R0CT-ND" />
 		<default value="88R" part="RMCF0805FT86R6CT-ND" />
 		<default value="100R" part="311-100ARCT-ND" />
+		<default value="220R" part="RMCF0805JT220RCT-ND" />
 		<default value="330R" part="RMCF0805JT330RCT-ND" />
+		<default value="470R" part="RMCF0805JT470RCT-ND" />
 		<default value="1kR" part="RMCF0805JT1K00CT-ND" />
+		<default value="1.5kR" part="RMCF0805JT1K50CT-ND" />
 		<default value="2.2kR" part="RMCF0805JT2K20CT-ND" />
+		<default value="4.7kR" part="311-4.7KARCT-ND" />
 		<default value="10kR" part="RMCF0805JT10K0CT-ND" />
 		<default value="100kR" part="RMCF0805JT100KCT-ND" />
 		<default value="15pF" part="490-5532-1-ND" />
 		<default value="27pF" part="478-5017-1-ND" />
 		<default value="10nF" part="490-1664-1-ND" />
 		<default value="100nF" part="311-1361-1-ND" />
+		<default value="470nF" part="311-1364-1-ND" />
 		<default value="1uF" part="445-3463-1-ND" />
 		<default value="2.2uF" part="587-1292-1-ND" />
 		<default value="4.7uF" part="587-1782-1-ND" />
