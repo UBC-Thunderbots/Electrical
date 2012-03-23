@@ -214,35 +214,35 @@ BeginCmp
 TimeStamp = /4D7BD568;
 Reference = U1;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5-LONG_PADS;
+IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D7BD56F;
 Reference = U2;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5-LONG_PADS;
+IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D2403D7;
 Reference = U3;
 ValeurCmp = ADS7866IDBVT;
-IdModule  = SOT23_6_DRCHACK-LONG_PADS;
+IdModule  = SOT23_6;
 EndCmp
 
 BeginCmp
 TimeStamp = /4D7BD74C;
 Reference = U4;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5-LONG_PADS;
+IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E627F3F;
 Reference = U5;
 ValeurCmp = MCP1415;
-IdModule  = SOT23-5-LONG_PADS;
+IdModule  = SOT23-5;
 EndCmp
 
 EndListe
