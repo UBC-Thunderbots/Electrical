@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-03-21T23:58:41 PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-03-23T00:20:23 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -519,13 +519,6 @@ IdModule  = SOT23_3GDS;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD90417/4F698F0A;
-Reference = Q16;
-ValeurCmp = IRF9310;
-IdModule  = SO8E;
-EndCmp
-
-BeginCmp
 TimeStamp = /4CD72C2A/4F645015;
 Reference = Q17;
 ValeurCmp = AO4616;
@@ -593,6 +586,20 @@ TimeStamp = /4CD72EC7/4F645018;
 Reference = Q26;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD90417/4F6C23C6;
+Reference = Q27;
+ValeurCmp = MOSFET_P;
+IdModule  = SO8E-IRF9310;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD90417/4F6C238C;
+Reference = Q28;
+ValeurCmp = MOSFET_P;
+IdModule  = SO8E-IRF9310;
 EndCmp
 
 BeginCmp
