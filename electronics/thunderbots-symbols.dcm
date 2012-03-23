@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2012-03-21T23:33:17 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2012-03-22T17:27:45 PDT
 #
 $CMP 74HC4050
 D Hex level shifter
@@ -117,6 +117,10 @@ $ENDCMP
 $CMP XC3S50A-TQ144
 D Xilinx Extended Spartan-3A FPGA
 K XILINX FPGA
+$ENDCMP
+#
+$CMP XC6SLX9TQG144
+D Xilinx Spartan 6 FPGA
 $ENDCMP
 #
 #End Doc Library
