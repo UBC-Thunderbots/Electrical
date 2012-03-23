@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2012-03-22T17:38:21 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2012-03-22T18:17:34 PDT
 #
 $CMP 74HC4050
 D Hex level shifter
@@ -20,10 +20,6 @@ $ENDCMP
 #
 $CMP AOP605
 F transistors/mos/*.*
-$ENDCMP
-#
-$CMP BAT54JW
-K DEV DIODE
 $ENDCMP
 #
 $CMP BZX84C
