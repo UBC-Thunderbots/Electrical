@@ -473,35 +473,35 @@ BeginCmp
 TimeStamp = /4CD72C2A/4CD72C5C;
 Reference = Q1;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC1/4CD72C5C;
 Reference = Q4;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/4CD72C5C;
 Reference = Q7;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB0/4CD72C5C;
 Reference = Q10;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC7/4CD72C5C;
 Reference = Q13;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
@@ -522,77 +522,77 @@ BeginCmp
 TimeStamp = /4AD90417/4F698F0A;
 Reference = Q16;
 ValeurCmp = IRF9310;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72C2A/4F645015;
 Reference = Q17;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72C2A/4F645018;
 Reference = Q18;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB0/4F645015;
 Reference = Q19;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB0/4F645018;
 Reference = Q20;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/4F645015;
 Reference = Q21;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/4F645018;
 Reference = Q22;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC1/4F645015;
 Reference = Q23;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC1/4F645018;
 Reference = Q24;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC7/4F645015;
 Reference = Q25;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC7/4F645018;
 Reference = Q26;
 ValeurCmp = AO4616;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
@@ -760,7 +760,7 @@ BeginCmp
 TimeStamp = /4AD90417/4F643E3C;
 Reference = U9;
 ValeurCmp = LD1117D33;
-IdModule  = SO8E-LONG_PADS;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
