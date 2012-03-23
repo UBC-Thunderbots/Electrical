@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2012-03-22T18:08:33 PDT
+PCBNEW-LibDoc----V1  2012-03-22T18:11:45 PDT
 #
 $MODULE D2
 Li D2
@@ -192,11 +192,6 @@ Cd Double rangee de contacts 2 x 6 pins
 Kw CONN
 $EndMODULE
 #
-$MODULE SOT23_6GDS
-Li SOT23_6GDS
-Kw SOT23_5
-$EndMODULE
-#
 $MODULE 2-56hole
 Li 2-56hole
 Cd module 1 pin (ou trou mecanique de percage)
@@ -210,6 +205,11 @@ $EndMODULE
 #
 $MODULE SOT23_6
 Li SOT23_6
+Kw SOT23_5
+$EndMODULE
+#
+$MODULE SOT23_6GDS
+Li SOT23_6GDS
 Kw SOT23_5
 $EndMODULE
 #
