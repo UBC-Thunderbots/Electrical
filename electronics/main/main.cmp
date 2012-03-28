@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-03-23T00:20:23 PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-03-28T00:29:47 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -375,28 +375,28 @@ BeginCmp
 TimeStamp = /4CD73053/4CD73060;
 Reference = P10;
 ValeurCmp = CONN_11;
-IdModule  = FPC;
+IdModule  = FH12-11S-1SH;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD73188/4CD73060;
 Reference = P11;
 ValeurCmp = CONN_11;
-IdModule  = FPC;
+IdModule  = FH12-11S-1SH;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD7317F/4CD73060;
 Reference = P12;
 ValeurCmp = CONN_11;
-IdModule  = FPC;
+IdModule  = FH12-11S-1SH;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD73172/4CD73060;
 Reference = P13;
 ValeurCmp = CONN_11;
-IdModule  = FPC;
+IdModule  = FH12-11S-1SH;
 EndCmp
 
 BeginCmp
