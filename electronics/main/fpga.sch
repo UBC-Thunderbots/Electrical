@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-29T00:03:54 PDT
+EESchema Schematic File Version 2  date 2012-03-29T00:10:52 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,19 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 6450 7100
+Wire Wire Line
+	6450 5350 6450 7200
+Wire Wire Line
+	6450 7200 6100 7200
+Wire Wire Line
+	6450 7000 6100 7000
+Connection ~ 6200 6800
+Wire Wire Line
+	6100 6800 6200 6800
+Connection ~ 6150 6500
+Wire Wire Line
+	6100 6500 6150 6500
 Wire Wire Line
 	3950 7700 3950 7600
 Connection ~ 3350 7650
@@ -186,8 +199,6 @@ Wire Wire Line
 Wire Wire Line
 	6100 5400 6100 5350
 Wire Wire Line
-	6150 5400 6150 5350
-Wire Wire Line
 	7200 4550 7150 4550
 Wire Wire Line
 	7200 4750 7150 4750
@@ -266,8 +277,6 @@ Wire Wire Line
 Wire Wire Line
 	7150 4600 7200 4600
 Wire Wire Line
-	6200 5350 6200 5400
-Wire Wire Line
 	5950 5400 5950 5350
 Wire Wire Line
 	5600 5400 5600 5350
@@ -285,8 +294,6 @@ Wire Wire Line
 	4150 3900 4200 3900
 Wire Wire Line
 	4150 4350 4200 4350
-Wire Wire Line
-	6450 5400 6450 5350
 Wire Wire Line
 	10450 850  10500 850 
 Wire Wire Line
@@ -417,6 +424,20 @@ Connection ~ 3650 7650
 Wire Wire Line
 	3050 7600 3050 7650
 Connection ~ 3050 7650
+Wire Wire Line
+	6150 5350 6150 6600
+Wire Wire Line
+	6150 6600 6100 6600
+Wire Wire Line
+	6200 5350 6200 6900
+Wire Wire Line
+	6200 6900 6100 6900
+Wire Wire Line
+	6100 6700 6200 6700
+Connection ~ 6200 6700
+Wire Wire Line
+	6450 7100 6100 7100
+Connection ~ 6450 7000
 $Comp
 L +3.3V #PWR010
 U 1 1 4F69858F
@@ -844,11 +865,11 @@ Text HLabel 1250 1500 2    60   Output ~ 0
 CHICKER_SPARE
 Text HLabel 8650 2300 0    60   Output ~ 0
 /MRF_CS
-Text HLabel 8650 2200 0    60   Output ~ 0
+Text HLabel 6100 7100 0    60   Output ~ 0
 MRF_CLK
-Text HLabel 8650 2100 0    60   Input ~ 0
+Text HLabel 6100 6900 0    60   Input ~ 0
 MRF_MISO
-Text HLabel 8650 2000 0    60   Output ~ 0
+Text HLabel 6100 6600 0    60   Output ~ 0
 MRF_MOSI
 Text HLabel 8650 1900 0    60   Input ~ 0
 MRF_INT
@@ -1414,9 +1435,9 @@ Text HLabel 1200 1400 2    60   Output ~ 0
 CHICKER_KICK
 Text HLabel 1200 1600 2    60   Output ~ 0
 CHICKER_CHARGE
-Text HLabel 1350 900  2    60   Input ~ 0
+Text HLabel 6100 6800 0    60   Input ~ 0
 CHICKER_MISO
-Text HLabel 1250 1000 2    60   Output ~ 0
+Text HLabel 6100 7200 0    60   Output ~ 0
 CHICKER_CLK
 Text HLabel 1250 1100 2    60   Output ~ 0
 /CHICKER_CS
@@ -1434,10 +1455,10 @@ Text HLabel 3650 1050 0    60   Input ~ 0
 OSC
 Text HLabel 4850 5400 3    60   BiDi ~ 0
 /FLASH_SS
-Text HLabel 6150 5400 3    60   BiDi ~ 0
+Text HLabel 6100 6500 0    60   BiDi ~ 0
 FLASH_MOSI
-Text HLabel 6450 5400 3    60   BiDi ~ 0
+Text HLabel 6100 7000 0    60   BiDi ~ 0
 FLASH_CLK
-Text HLabel 6200 5400 3    60   Input ~ 0
+Text HLabel 6100 6700 0    60   Input ~ 0
 FLASH_MISO
 $EndSCHEMATC
