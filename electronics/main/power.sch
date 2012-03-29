@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-28T23:39:14 PDT
+EESchema Schematic File Version 2  date 2012-03-28T23:53:43 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -204,10 +204,9 @@ U 1 1 4F6C23C6
 P 6100 4200
 F 0 "Q27" H 6100 4390 60  0000 R CNN
 F 1 "MOSFET_P" H 6100 4020 60  0000 R CNN
-F 2 "SO8E-IRF9310" H 6100 4200 60  0001 C CNN
 F 4 "IRF9310TRPBFCT-ND" H 6100 4200 60  0001 C CNN "Field1"
 	1    6100 4200
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L MOSFET_P Q28
