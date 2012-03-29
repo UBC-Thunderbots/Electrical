@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-28T23:01:44 PDT
+EESchema Schematic File Version 2  date 2012-03-28T23:35:45 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,70 +41,75 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 4750 4700
+Connection ~ 4750 3850
 Wire Wire Line
-	4750 4750 4750 4700
-Connection ~ 4750 4300
-Connection ~ 4750 4150
+	4550 3450 4750 3450
 Wire Wire Line
-	4750 4300 4750 3850
+	4750 3450 4750 4300
 Wire Wire Line
-	3850 4450 3850 4500
-Connection ~ 4750 4100
-Wire Wire Line
-	4750 4150 5150 4150
-Connection ~ 4750 4000
-Wire Wire Line
-	4700 4000 4750 4000
-Wire Wire Line
-	4750 4100 4700 4100
-Wire Wire Line
-	4750 3950 4700 3950
-Wire Wire Line
-	5150 3950 5050 3950
-Wire Wire Line
-	5050 3950 5050 4250
-Wire Wire Line
-	6750 3850 6850 3850
-Wire Wire Line
-	6750 3650 6850 3650
-Wire Wire Line
-	5050 3650 5150 3650
-Wire Wire Line
-	5050 3450 5150 3450
-Wire Wire Line
-	5150 3550 5050 3550
-Wire Wire Line
-	5150 3750 5050 3750
-Wire Wire Line
-	6850 3750 6750 3750
-Wire Wire Line
-	6850 3950 6750 3950
-Wire Wire Line
-	5150 4050 5050 4050
-Connection ~ 5050 4050
-Wire Wire Line
-	4700 4050 4750 4050
-Connection ~ 4750 4050
-Wire Wire Line
-	4750 3850 5150 3850
-Connection ~ 4750 3950
-Wire Wire Line
-	3850 4000 3900 4000
-Wire Wire Line
-	3850 4050 3850 3950
-Connection ~ 3850 4000
-Wire Wire Line
-	4300 4300 4300 4350
+	4600 4700 4900 4700
 Wire Wire Line
 	4600 4300 4900 4300
 Wire Wire Line
-	4600 4700 4900 4700
+	4300 4300 4300 4350
+Connection ~ 3850 4000
+Wire Wire Line
+	3850 4050 3850 3950
+Wire Wire Line
+	3850 4000 3900 4000
+Connection ~ 4750 3950
+Wire Wire Line
+	4750 3850 5150 3850
+Connection ~ 4750 4050
+Wire Wire Line
+	4700 4050 4750 4050
+Connection ~ 5050 4050
+Wire Wire Line
+	5150 4050 5050 4050
+Wire Wire Line
+	6850 3950 6750 3950
+Wire Wire Line
+	6850 3750 6750 3750
+Wire Wire Line
+	5150 3750 5050 3750
+Wire Wire Line
+	5150 3550 5050 3550
+Wire Wire Line
+	5050 3450 5150 3450
+Wire Wire Line
+	5050 3650 5150 3650
+Wire Wire Line
+	6750 3650 6850 3650
+Wire Wire Line
+	6750 3850 6850 3850
+Wire Wire Line
+	5050 4250 5050 3950
+Wire Wire Line
+	5050 3950 5150 3950
+Wire Wire Line
+	4750 3950 4700 3950
+Wire Wire Line
+	4750 4100 4700 4100
+Wire Wire Line
+	4700 4000 4750 4000
+Connection ~ 4750 4000
+Wire Wire Line
+	4750 4150 5150 4150
+Connection ~ 4750 4100
+Wire Wire Line
+	3850 4450 3850 4500
+Connection ~ 4750 4150
+Connection ~ 4750 4300
+Wire Wire Line
+	4750 4750 4750 4700
+Connection ~ 4750 4700
+Text HLabel 4550 3450 0    60   Output ~ 0
+VREF
 $Comp
-L GND #PWR179
+L GND #PWR060
 U 1 1 4F619657
 P 4750 4750
-F 0 "#PWR179" H 4750 4750 30  0001 C CNN
+F 0 "#PWR060" H 4750 4750 30  0001 C CNN
 F 1 "GND" H 4750 4680 30  0001 C CNN
 	1    4750 4750
 	1    0    0    -1  
@@ -119,10 +124,10 @@ F 1 "100nF" H 4950 4400 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR177
+L GND #PWR061
 U 1 1 4F61951D
 P 3850 4500
-F 0 "#PWR177" H 3850 4500 30  0001 C CNN
+F 0 "#PWR061" H 3850 4500 30  0001 C CNN
 F 1 "GND" H 3850 4430 30  0001 C CNN
 	1    3850 4500
 	1    0    0    -1  
@@ -146,28 +151,28 @@ F 1 "100nF" H 3900 4150 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR176
+L +5V #PWR062
 U 1 1 4F6194AC
 P 3850 3950
-F 0 "#PWR176" H 3850 4040 20  0001 C CNN
+F 0 "#PWR062" H 3850 4040 20  0001 C CNN
 F 1 "+5V" H 3850 4040 30  0000 C CNN
 	1    3850 3950
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR178
+L GND #PWR063
 U 1 1 4F6194A6
 P 4300 4350
-F 0 "#PWR178" H 4300 4350 30  0001 C CNN
+F 0 "#PWR063" H 4300 4350 30  0001 C CNN
 F 1 "GND" H 4300 4280 30  0001 C CNN
 	1    4300 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR180
+L GND #PWR064
 U 1 1 4F619488
 P 5050 4250
-F 0 "#PWR180" H 5050 4250 30  0001 C CNN
+F 0 "#PWR064" H 5050 4250 30  0001 C CNN
 F 1 "GND" H 5050 4180 30  0001 C CNN
 	1    5050 4250
 	1    0    0    -1  
