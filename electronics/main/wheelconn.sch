@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-29T00:10:52 PDT
+EESchema Schematic File Version 2  date 2012-04-01T18:22:52 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -31,9 +31,9 @@ LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 9 17
+Sheet 6 17
 Title ""
-Date "29 mar 2012"
+Date "2 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -41,6 +41,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	6900 3000 6450 3000
+Wire Wire Line
+	6450 3000 6450 3750
+Wire Wire Line
+	6450 3750 6050 3750
+Wire Wire Line
+	6050 3550 6250 3550
+Wire Wire Line
+	6250 3550 6250 3950
 Wire Wire Line
 	7500 2600 7450 2600
 Wire Wire Line
@@ -51,10 +61,6 @@ Connection ~ 6850 3850
 Wire Bus Line
 	3950 3850 3950 3550
 Wire Wire Line
-	6050 3450 6150 3450
-Wire Wire Line
-	6150 3450 6150 3000
-Wire Wire Line
 	5300 4400 5300 4350
 Wire Wire Line
 	4050 3850 4550 3850
@@ -63,19 +69,11 @@ Wire Wire Line
 Wire Wire Line
 	6100 3650 6050 3650
 Wire Wire Line
-	6050 3850 6150 3850
-Wire Wire Line
-	6150 3850 6150 4050
-Wire Wire Line
-	6150 4050 6900 4050
-Wire Wire Line
-	6150 3000 6900 3000
-Wire Wire Line
 	6850 3100 6900 3100
 Wire Wire Line
 	6250 4600 6900 4600
 Wire Wire Line
-	6900 3950 6250 3950
+	6250 3950 6900 3950
 Wire Bus Line
 	6150 4500 6150 5100
 Wire Bus Line
@@ -96,12 +94,6 @@ Wire Wire Line
 Wire Wire Line
 	6250 4800 6900 4800
 Wire Wire Line
-	6900 3200 6250 3200
-Wire Wire Line
-	6250 3950 6250 3750
-Wire Wire Line
-	6250 3750 6050 3750
-Wire Wire Line
 	6900 4150 6050 4150
 Wire Wire Line
 	4550 3450 4050 3450
@@ -116,10 +108,6 @@ Wire Wire Line
 Wire Wire Line
 	5300 3000 5300 3050
 Wire Wire Line
-	6050 3550 6250 3550
-Wire Wire Line
-	6250 3550 6250 3200
-Wire Wire Line
 	6900 3850 6800 3850
 Wire Wire Line
 	6850 3850 6850 3550
@@ -130,6 +118,18 @@ Wire Wire Line
 Wire Wire Line
 	6850 2600 7050 2600
 Connection ~ 6850 2900
+Wire Wire Line
+	6900 4050 6350 4050
+Wire Wire Line
+	6350 4050 6350 3450
+Wire Wire Line
+	6350 3450 6050 3450
+Wire Wire Line
+	6050 3850 6550 3850
+Wire Wire Line
+	6550 3850 6550 3200
+Wire Wire Line
+	6550 3200 6900 3200
 $Comp
 L GND #PWR074
 U 1 1 4F698265
@@ -151,7 +151,7 @@ AR Path="/4CD73188/4F69825D" Ref="C55"  Part="1"
 AR Path="/4CD7317F/4F69825D" Ref="C53"  Part="1" 
 AR Path="/4CD73172/4F69825D" Ref="C51"  Part="1" 
 AR Path="/4CD73053/4F69825D" Ref="C49"  Part="1" 
-F 0 "C55" H 7300 2700 50  0000 L CNN
+F 0 "C51" H 7300 2700 50  0000 L CNN
 F 1 "10uF" H 7300 2500 50  0000 L CNN
 	1    7250 2600
 	0    1    1    0   
@@ -177,7 +177,7 @@ AR Path="/4CD73188/4F698233" Ref="C56"  Part="1"
 AR Path="/4CD7317F/4F698233" Ref="C54"  Part="1" 
 AR Path="/4CD73172/4F698233" Ref="C52"  Part="1" 
 AR Path="/4CD73053/4F698233" Ref="C50"  Part="1" 
-F 0 "C56" H 7300 3650 50  0000 L CNN
+F 0 "C52" H 7300 3650 50  0000 L CNN
 F 1 "10uF" H 7300 3450 50  0000 L CNN
 	1    7250 3550
 	0    1    1    0   
@@ -204,12 +204,12 @@ AR Path="/4CD73053/4F64540F" Ref="U43"  Part="1"
 AR Path="/4CD73188/4F64540F" Ref="U46"  Part="1" 
 AR Path="/4CD7317F/4F64540F" Ref="U45"  Part="1" 
 AR Path="/4CD73172/4F64540F" Ref="U44"  Part="1" 
-F 0 "U46" H 5300 3650 60  0000 C CNN
+F 0 "U44" H 5300 3650 60  0000 C CNN
 F 1 "74HC4050" H 5300 3750 60  0000 C CNN
 F 2 "SO16L" H 5200 3550 60  0001 C CNN
 F 4 "568-8150-1-ND" H 5300 3700 60  0001 C CNN "Field1"
 	1    5300 3700
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 Entry Wire Line
 	3950 3650 4050 3550
@@ -247,9 +247,9 @@ F 1 "GND" H 5300 4330 30  0001 C CNN
 	1    5300 4400
 	1    0    0    -1  
 $EndComp
-Text Label 4100 3550 0    60   ~ 0
+Text Label 4100 3850 0    60   ~ 0
 SENSOR4
-Text Label 4100 3450 0    60   ~ 0
+Text Label 4100 3750 0    60   ~ 0
 SENSOR3
 $Comp
 L GND #PWR079
@@ -285,7 +285,7 @@ AR Path="/4CD73188/4F6292AE" Ref="P23"  Part="1"
 AR Path="/4CD7317F/4F6292AE" Ref="P22"  Part="1" 
 AR Path="/4CD73053/4F6292AE" Ref="P20"  Part="1" 
 AR Path="/4CD73172/4F6292AE" Ref="P21"  Part="1" 
-F 0 "P23" V 7200 3050 50  0000 C CNN
+F 0 "P21" V 7200 3050 50  0000 C CNN
 F 1 "CONN_4" V 7300 3050 50  0000 C CNN
 F 2 "53048-0410" H 7250 3050 60  0001 C CNN
 F 4 "WM1744-ND" H 7250 3050 60  0001 C CNN "Field1"
@@ -298,11 +298,11 @@ Entry Wire Line
 	6150 4700 6250 4600
 Entry Wire Line
 	6150 4500 6250 4400
-Text Label 4100 3750 0    60   ~ 0
+Text Label 4100 3550 0    60   ~ 0
 SENSOR2
 Text Label 4100 3950 0    60   ~ 0
 SENSOR1
-Text Label 4100 3850 0    60   ~ 0
+Text Label 4100 3450 0    60   ~ 0
 SENSOR0
 Text HLabel 3800 3650 0    60   Output ~ 0
 SENSOR[0..4]
@@ -348,7 +348,7 @@ AR Path="/4CD73053/4CD73060" Ref="P10"  Part="1"
 AR Path="/4CD73188/4CD73060" Ref="P11"  Part="1" 
 AR Path="/4CD7317F/4CD73060" Ref="P12"  Part="1" 
 AR Path="/4CD73172/4CD73060" Ref="P13"  Part="1" 
-F 0 "P11" V 7200 4350 60  0000 C CNN
+F 0 "P13" V 7200 4350 60  0000 C CNN
 F 1 "CONN_11" V 7300 4350 60  0000 C CNN
 F 2 "FH12-11S-1SH" H 7250 4350 60  0001 C CNN
 F 4 "HFB111CT-ND" H 7250 4350 60  0001 C CNN "Field1"
