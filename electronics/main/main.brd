@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2012-04-04T03:26:33 PDT
+PCBNEW-BOARD Version 1 date 2012-04-04T03:30:06 PDT
 
 # Created by Pcbnew(2010-03-13)-final
 
@@ -9,7 +9,7 @@ EnabledLayers 1FFF8007
 Links 547
 NoConn 0
 Di 6278 10424 57847 45576
-Ndraw 17
+Ndraw 18
 Ntrack 1867
 Nzone 0
 BoardThickness 630
@@ -9323,6 +9323,11 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SSOP20
 $TEXTPCB
+Te "$Rev$"
+Po 11500 11500 600 800 120 0
+De 21 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
 Te "470nF@3.3V"
 Po 40750 47750 600 800 120 0
 De 25 1 0 Normal
@@ -13147,7 +13152,7 @@ ZLayer 2
 ZAux 8 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 56000 45500 0
 ZCorner 56000 10500 0
 ZCorner 8000 10500 0
@@ -18826,7 +18831,7 @@ ZLayer 1
 ZAux 5 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 44000 37500 0
 ZCorner 44000 18000 0
 ZCorner 20000 18000 0
@@ -21426,7 +21431,7 @@ ZLayer 15
 ZAux 4 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 33000 31500 0
 ZCorner 33000 24750 0
 ZCorner 26250 24750 0
@@ -22252,7 +22257,7 @@ ZLayer 15
 ZAux 4 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 56000 45500 0
 ZCorner 56000 39750 0
 ZCorner 45500 39750 0
@@ -22930,7 +22935,7 @@ ZLayer 0
 ZAux 4 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 49250 45500 0
 ZCorner 49250 40500 0
 ZCorner 45500 40500 0
@@ -23095,7 +23100,7 @@ ZLayer 1
 ZAux 8 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 56000 45500 0
 ZCorner 56000 10500 0
 ZCorner 8000 10500 0
@@ -27196,7 +27201,7 @@ ZLayer 0
 ZAux 8 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 32 F 200 200
+ZOptions 0 32 S 200 200
 ZCorner 56000 45500 0
 ZCorner 56000 10500 0
 ZCorner 8000 10500 0
