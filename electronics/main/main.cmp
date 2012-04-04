@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-03-29T00:04:39 PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-04-04T02:44:54 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -526,7 +526,7 @@ IdModule  = SOT23_3GDS;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72C2A/4F645015;
+TimeStamp = /4CD72C2A/4F645014;
 Reference = Q17;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -540,7 +540,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4F645015;
+TimeStamp = /4CD72EB0/4F645014;
 Reference = Q19;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -554,7 +554,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB9/4F645015;
+TimeStamp = /4CD72EB9/4F645014;
 Reference = Q21;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -568,7 +568,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4F645015;
+TimeStamp = /4CD72EC1/4F645014;
 Reference = Q23;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -582,7 +582,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC7/4F645015;
+TimeStamp = /4CD72EC7/4F645014;
 Reference = Q25;
 ValeurCmp = AO4616;
 IdModule  = SO8E;
@@ -848,38 +848,38 @@ IdModule  = SO14E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72C2A/4F73FA08;
+TimeStamp = /4CD72C2A/4F7C1719;
 Reference = U50;
-ValeurCmp = CD4504BM;
-IdModule  = SO16E;
+ValeurCmp = ADG3123;
+IdModule  = SSOP20;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/4F73FA08;
+TimeStamp = /4CD72EB0/4F7C1719;
 Reference = U51;
-ValeurCmp = CD4504BM;
-IdModule  = SO16E;
+ValeurCmp = ADG3123;
+IdModule  = SSOP20;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB9/4F73FA08;
+TimeStamp = /4CD72EB9/4F7C1719;
 Reference = U52;
-ValeurCmp = CD4504BM;
-IdModule  = SO16E;
+ValeurCmp = ADG3123;
+IdModule  = SSOP20;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/4F73FA08;
+TimeStamp = /4CD72EC1/4F7C1719;
 Reference = U53;
-ValeurCmp = CD4504BM;
-IdModule  = SO16E;
+ValeurCmp = ADG3123;
+IdModule  = SSOP20;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC7/4F73FA08;
+TimeStamp = /4CD72EC7/4F7C1719;
 Reference = U54;
-ValeurCmp = CD4504BM;
-IdModule  = SO16E;
+ValeurCmp = ADG3123;
+IdModule  = SSOP20;
 EndCmp
 
 EndListe
