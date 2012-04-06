@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-04-04T03:21:11 PDT
+EESchema Schematic File Version 2  date 2012-04-05T20:38:48 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 17 17
 Title ""
-Date "4 apr 2012"
+Date "6 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -435,7 +435,7 @@ P 9500 5600
 F 0 "U10" H 9500 5550 60  0000 C CNN
 F 1 "MCP1726" H 9500 5650 60  0000 C CNN
 F 2 "SO8N" H 9400 5450 60  0001 C CNN
-F 3 "MCP1726-1202E/SN-ND" H 9600 5650 60  0001 C CNN
+F 4 "MCP1726-1202E/SN-ND" H 9500 5600 60  0001 C CNN "Field1"
 	1    9500 5600
 	1    0    0    -1  
 $EndComp
@@ -464,7 +464,7 @@ P 9450 3850
 F 0 "U9" H 9600 3654 60  0000 C CNN
 F 1 "LD1117D33" H 9450 4050 60  0000 C CNN
 F 2 "SO8E" H 9450 3550 60  0001 C CNN
-F 3 "497-7306-1-ND" H 9450 3450 60  0001 C CNN
+F 4 "497-7306-1-ND" H 9450 3850 60  0001 C CNN "Field1"
 	1    9450 3850
 	1    0    0    -1  
 $EndComp
@@ -495,6 +495,7 @@ U 1 1 4CC474AD
 P 2950 3600
 F 0 "P7" V 2900 3600 40  0000 C CNN
 F 1 "CONN_2" V 3000 3600 40  0000 C CNN
+F 4 "battery-inlet" H 2950 3600 60  0001 C CNN "Field1"
 	1    2950 3600
 	-1   0    0    -1  
 $EndComp

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-04-04T03:21:11 PDT
+EESchema Schematic File Version 2  date 2012-04-05T20:38:48 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 2 17
 Title ""
-Date "4 apr 2012"
+Date "6 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1128,6 +1128,7 @@ P 4550 5750
 F 0 "P16" V 4500 5750 40  0000 C CNN
 F 1 "CONN_2" V 4600 5750 40  0000 C CNN
 F 2 "R1" H 4550 5750 60  0001 C CNN
+F 4 "2.54mm-header-general" H 4550 5750 60  0001 C CNN "Field1"
 	1    4550 5750
 	0    1    1    0   
 $EndComp
@@ -1649,6 +1650,7 @@ P 5650 3900
 F 0 "U8" H 5650 3850 60  0000 C CNN
 F 1 "XC6SLX9TQG144" H 5650 3950 60  0000 C CNN
 F 2 "TQFP144" H 5550 3750 60  0001 C CNN
+F 4 "122-1745-ND" H 5650 3900 60  0001 C CNN "Field1"
 	1    5650 3900
 	1    0    0    -1  
 $EndComp

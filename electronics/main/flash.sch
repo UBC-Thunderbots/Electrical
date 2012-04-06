@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-04-04T03:21:11 PDT
+EESchema Schematic File Version 2  date 2012-04-05T20:38:48 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 3 17
 Title ""
-Date "4 apr 2012"
+Date "6 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -111,6 +111,7 @@ P 7450 3300
 F 0 "P17" V 7400 3300 60  0000 C CNN
 F 1 "CONN_6" V 7500 3300 60  0000 C CNN
 F 2 "ICSP" H 7450 3300 60  0001 C CNN
+F 4 "ICSP" H 7450 3300 60  0001 C CNN "Field1"
 	1    7450 3300
 	1    0    0    -1  
 $EndComp
