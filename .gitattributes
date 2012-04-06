@@ -161,6 +161,7 @@ electronics/digibom/digibom/xdg/basedir.py -text
 electronics/dongle/dongle.cmp -text
 electronics/dongle/gerbmerge/dongle10.cfg -text
 electronics/dongle/gerbmerge/dongle10.def -text
+electronics/dribbler_harness/sensor_harness_sch.sch -text
 electronics/dribbler_testboard/dribbler_testboard.brd -text
 electronics/dribbler_testboard/dribbler_testboard.cmp -text
 electronics/dribbler_testboard/dribbler_testboard.net -text
@@ -177,7 +178,6 @@ electronics/models/solenoid2/plotter.m -text
 electronics/models/solenoid2/solenoidModel.m -text
 electronics/sensor/sensor.brd -text
 electronics/sensor/sensor.cmp -text
-electronics/sensor_harness_sch/sensor_harness_sch.sch -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
