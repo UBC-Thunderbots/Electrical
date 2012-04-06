@@ -161,7 +161,7 @@ electronics/digibom/digibom/xdg/basedir.py -text
 electronics/dongle/dongle.cmp -text
 electronics/dongle/gerbmerge/dongle10.cfg -text
 electronics/dongle/gerbmerge/dongle10.def -text
-electronics/dribbler_harness/sensor_harness_sch.sch -text
+electronics/dribbler_harness/dribbler_harness.sch -text
 electronics/dribbler_testboard/dribbler_testboard.brd -text
 electronics/dribbler_testboard/dribbler_testboard.cmp -text
 electronics/dribbler_testboard/dribbler_testboard.net -text
