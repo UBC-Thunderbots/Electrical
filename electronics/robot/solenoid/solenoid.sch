@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-04-06T20:13:43 PDT
+EESchema Schematic File Version 2  date 2012-04-06T21:04:06 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -72,6 +72,7 @@ U 1 1 4F7FB09F
 P 6150 3650
 F 0 "L?" V 6100 3650 40  0000 C CNN
 F 1 "INDUCTOR" V 6250 3650 40  0000 C CNN
+F 4 "KICKER_SOLENOID" H 6150 3650 60  0001 C CNN "Field1"
 	1    6150 3650
 	1    0    0    -1  
 $EndComp
