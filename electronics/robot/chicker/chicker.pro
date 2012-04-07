@@ -8,7 +8,7 @@ NetIExt=net
 EquName1=devcms
 [eeschema]
 version=1
-LibDir=../../electronics
+LibDir=../..
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -94,7 +94,7 @@ MSegLar=150
 LastNetListRead=chicker.net
 [pcbnew/libraries]
 LibDir=
-LibName1=../thunderbots-modules
+LibName1=../../thunderbots-modules
 LibName2=sockets
 LibName3=connect
 LibName4=discret

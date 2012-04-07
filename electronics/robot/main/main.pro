@@ -9,7 +9,7 @@ NetIExt=.net
 EquName1=devcms
 [eeschema]
 version=1
-LibDir=../
+LibDir=../..
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -93,7 +93,7 @@ MSegLar=150
 LastNetListRead=main.net
 [pcbnew/libraries]
 LibDir=
-LibName1=../thunderbots-modules
+LibName1=../../thunderbots-modules
 LibName2=connect
 LibName3=discret
 LibName4=pin_array
