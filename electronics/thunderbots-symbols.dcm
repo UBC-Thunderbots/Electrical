@@ -1,17 +1,7 @@
-EESchema-DOCLIB  Version 2.0  Date: 2012-04-06T20:06:11 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2012-04-06T21:54:57 PDT
 #
 $CMP 74HC4050
 D Hex level shifter
-$ENDCMP
-#
-$CMP 78ST105
-D Switching Regulator +5V
-K POWER REGUL
-$ENDCMP
-#
-$CMP ACOL50
-D Oscillator 50MHz
-K OSCILLATOR
 $ENDCMP
 #
 $CMP ADG3123
@@ -20,19 +10,6 @@ $ENDCMP
 #
 $CMP AO4616
 F transistors/mos/*.*
-$ENDCMP
-#
-$CMP AOP605
-F transistors/mos/*.*
-$ENDCMP
-#
-$CMP BZX84C
-D Diode zener
-K DEV DIODE
-$ENDCMP
-#
-$CMP CD4504BM
-D Hex level shifter
 $ENDCMP
 #
 $CMP ECS-2033
@@ -53,32 +30,12 @@ D Linear Regulator +3.3V
 K POWER REGUL
 $ENDCMP
 #
-$CMP M25P16-8
-D Flash Memory
-K FLASH MEMORY
-$ENDCMP
-#
 $CMP MCP1726
 D LDO voltage regulator
 $ENDCMP
 #
-$CMP MCP1827S-1202E/AB
-D Linear Regulator +1.2V
-K POWER REGUL
-$ENDCMP
-#
 $CMP MCP3004
 D 4-input 10-bit ADC
-$ENDCMP
-#
-$CMP OKI-78SR-5
-D Switching Regulator +5V
-K POWER REGUL
-$ENDCMP
-#
-$CMP PIC18F4550
-D PICmicro 18F4550
-K PIC
 $ENDCMP
 #
 $CMP PIC18F65J50
@@ -89,38 +46,14 @@ $CMP PIC18F67J50
 F ../datasheets/ics/PIC18F65J50/Datasheet.pdf
 $ENDCMP
 #
-$CMP SN74LVC8T245
-D 8-bit Dual-Supply Bus Transceiver
-$ENDCMP
-#
 $CMP SP3T
 D Switch inverseur
 K switch
 $ENDCMP
 #
-$CMP V7805-1000
-D Switching Regulator +5V
-K POWER REGUL
-$ENDCMP
-#
 $CMP W25Q16BV
 D Flash Memory
 K FLASH MEMORY
-$ENDCMP
-#
-$CMP W25X16AVDAIZ
-D Flash Memory
-K FLASH MEMORY
-$ENDCMP
-#
-$CMP XBEE
-D XBee Radio Modem
-K MODEM RADIO
-$ENDCMP
-#
-$CMP XC3S50A-TQ144
-D Xilinx Extended Spartan-3A FPGA
-K XILINX FPGA
 $ENDCMP
 #
 $CMP XC6SLX9TQG144
