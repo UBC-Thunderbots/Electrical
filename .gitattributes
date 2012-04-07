@@ -181,6 +181,8 @@ electronics/robot/lateral_sensor/lateral_sensor.cmp -text
 electronics/robot/main/adc.sch -text
 electronics/robot/optical_encoder/optical_encoder.pro -text
 electronics/robot/optical_encoder/optical_encoder.sch -text
+electronics/robot/solenoid/solenoid.pro -text
+electronics/robot/solenoid/solenoid.sch -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text
