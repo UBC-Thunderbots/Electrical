@@ -76,12 +76,6 @@
 			<subpart id="MRF24J40MCT-I/RMCT-ND" />
 			<subpart id="0600-00039-ND" />
 		</multipart>
-
-		<!-- XBees require both the radio and two headers with the unusual pin spacing of 2mm. -->
-		<multipart id="XBEE">
-			<subpart id="XB24-AWI-001-ND" />
-			<subpart id="S5751-10-ND" quantity="2" />
-		</multipart>
 	</multiparts>
 
 	<!--
@@ -96,7 +90,6 @@
 	<defaults>
 		<default value="5R" part="RMCF0805FT4R99CT-ND" />
 		<default value="16.5R" part="311-16.5CRCT-ND" />
-		<default value="47R" part="RHM47KCT-ND" />
 		<default value="56R" part="RMCF0805JT56R0CT-ND" />
 		<default value="82R" part="RMCF0805JT82R0CT-ND" />
 		<default value="88R" part="RMCF0805FT86R6CT-ND" />
@@ -120,23 +113,15 @@
 		<default value="4.7uF" part="587-1782-1-ND" />
 		<default value="10uF" part="445-3469-1-ND" />
 		<default value="100uF" part="P5182-ND" />
-		<default value="365-1145-ND" part="365-1145-ND" />
-		<default value="568-3248-1-ND" part="568-3248-1-ND" />
 		<default value="74AHC74" part="568-4458-1-ND" />
 		<default value="7805" part="LM7805CT-ND" />
-		<default value="ADC121S021" part="ADC121S021CIMFCT-ND" />
 		<default value="ADS7866IDBVT" part="296-18216-1-ND" />
-		<default value="AE16G-5-ND" part="AE16G-5-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
-		<default value="BAT54JW" part="BAT54JW-FDICT-ND" />
 		<default value="E4P" part="E4P" />
 		<default value="FT232" part="768-1007-1-ND" />
-		<default value="FXO-HC73" part="631-1125-1-ND" />
 		<default value="ICSP" part="ICSP" />
 		<default value="LD1117V33C" part="497-1492-5-ND" />
 		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
-		<default value="MCP1416" part="MCP1416T-E/OTCT-ND" />
-		<default value="MCP1827S-1202E/AB" part="MCP1827S-1202E/AB-ND" />
 		<default value="MIC7300" part="576-1319-1-ND" />
 		<default value="MRF24J40MB" part="MRF24J40MB-I/RM-ND" />
 		<default value="MRF24J40MC" part="MRF24J40MC" />
@@ -149,17 +134,8 @@
 		<default value="STM32F405RXT" part="497-11767-ND" />
 		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="TEMT1000" part="751-1052-1-ND" />
-		<default value="USB-MINI-B-RCPT" part="H11671CT-ND" />
-		<default value="V7805-1000" part="102-1715-ND" />
 		<default value="VSMY2850RG" part="VSMY2850RGCT-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
-		<default value="WM1142CT-ND" part="WM1142CT-ND" />
-		<default value="WM1722-ND" part="WM1722-ND" />
-		<default value="WM1724-ND" part="WM1724-ND" />
-		<default value="WM2613-ND" part="WM2613-ND" />
-		<default value="WM2623-ND" part="WM2623-ND" />
-		<default value="XBEE" part="XBEE" />
-		<default value="XC3S50A-TQ144" part="122-1555-ND" />
 		<default value="XC6222B331PR" part="893-1138-1-ND" />
 	</defaults>
 </project-info>
