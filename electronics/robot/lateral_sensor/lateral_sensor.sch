@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T00:21:17 PDT
+EESchema Schematic File Version 2  date 2012-04-06T18:46:07 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:lateral_sensor-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "21 mar 2012"
+Date "7 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,20 +43,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 1100 3900 0    60   ~ 0
-11
-Text Notes 1100 4000 0    60   ~ 0
-10
-Text Notes 1150 4100 0    60   ~ 0
-9
-Text Notes 1150 4200 0    60   ~ 0
-8
-Text Notes 1150 4300 0    60   ~ 0
-7
-Text Notes 1050 4400 0    60   ~ 0
-N/C
-Text Notes 500  3800 0    60   ~ 0
-Mainboard Pins:
 Text Notes 1900 3950 0    60   ~ 0
 OUT
 Text Notes 1900 4050 0    60   ~ 0
