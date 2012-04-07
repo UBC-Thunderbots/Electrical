@@ -53,17 +53,23 @@
 		<!-- Battery inlet consists of a pair of holes with soldered wires, not a component. -->
 		<multipart id="battery-inlet" />
 
-		<!-- Chicker, dribbler, and ICSP headers are snapped off from a standard-length SIP header. -->
+		<!-- Chicker, dribbler, ICSP, and other headers are snapped off from a standard-length SIP header. -->
 		<multipart id="chicker-header" />
 		<multipart id="dribbler-header" />
 		<multipart id="ICSP" />
 		<multipart id="2.54mm-header-general" />
 
-		<!-- Chicker boost regulator inductor is not ordered from Digikey. -->
+		<!-- Chicker boost regulator inductor is ordered from CoilCraft. -->
 		<multipart id="chicker-charge-inductor" />
+
+		<!-- E4P optical encoder kit is ordered from US Digital. -->
+		<multipart id="E4P" />
 
 		<!-- Some components are just representations of jumper wires between two points. -->
 		<multipart id="jumper-wire" />
+
+		<!-- The kicker solenoid is manufactured locally, not purchased. -->
+		<multipart id="KICKER_SOLENOID" />
 
 		<!-- An MRF24J40MC requires an external antenna. -->
 		<multipart id="MRF24J40MC">
@@ -123,6 +129,7 @@
 		<default value="AE16G-5-ND" part="AE16G-5-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
 		<default value="BAT54JW" part="BAT54JW-FDICT-ND" />
+		<default value="E4P" part="E4P" />
 		<default value="FT232" part="768-1007-1-ND" />
 		<default value="FXO-HC73" part="631-1125-1-ND" />
 		<default value="ICSP" part="ICSP" />
