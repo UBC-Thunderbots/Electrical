@@ -1,11 +1,10 @@
 * text=auto !eol
-datasheets/2N3904[!!-~]NPN.pdf -text
-datasheets/3900uF[!!-~]160V[!!-~]capacitor.pdf -text
-datasheets/GA3460[!!-~]Flyback[!!-~]Transformer.pdf -text
+datasheets/ECS-2025-2033[!!-~](Oscillator).pdf -text
+datasheets/Fairchild[!!-~]FGA180N33AT[!!-~](IGBT).pdf -text
 datasheets/IEEE[!!-~]802.15.4.pdf -text
-datasheets/KTY83_SER[!!-~]thermister.pdf -text
-datasheets/PICkit2.pdf -text
-datasheets/RL3264L4[!!-~]Series[!!-~]resistor.pdf -text
+datasheets/Microchip[!!-~]PICkit2.pdf -text
+datasheets/NXP[!!-~]KTY83[!!-~](Thermistor).pdf -text
+datasheets/Nippon[!!-~]Chemi-Con[!!-~]SMQ[!!-~](Capacitor).pdf -text
 datasheets/Turnigy[!!-~]Accucell[!!-~]6[!!-~]Charger.pdf -text
 datasheets/bjts/BC847A.pdf -text
 datasheets/cameras/AVT[!!-~]Stingray[!!-~]F046C[!!-~]IRF/Datasheet[!!-~]4.0.1.pdf -text
@@ -25,28 +24,17 @@ datasheets/connectors/Molex/53048-0410[!!-~](Header;[!!-~]Encoder).pdf -text
 datasheets/connectors/Molex/53261-0671[!!-~](Header;[!!-~]Lateral[!!-~]Sensor).pdf -text
 datasheets/connectors/Molex/53261-1171[!!-~](Header;[!!-~]Dribbler[!!-~]Harness).pdf -text
 datasheets/connectors/Molex/638190300[!!-~](Crimp[!!-~]Tool[!!-~]for[!!-~]50079-8x00).pdf -text
-datasheets/diodes/BAT54JW.pdf -text
-datasheets/diodes/BAT54W.pdf -text
-datasheets/diodes/BAT85.pdf -text
-datasheets/diodes/BZX79-C5V1.pdf -text
-datasheets/diodes/DPG60C300HB.pdf -text
-datasheets/diodes/MUR860.pdf -text
-datasheets/diodes/NSR15DW1T1.pdf -text
 datasheets/diodes/RURG3060C.pdf -text
-datasheets/diodes/RURP860.pdf -text
 datasheets/diodes/STTH10R04.pdf -text
-datasheets/dribbler/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
-datasheets/dribbler/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
-datasheets/electromechanical/EC16.pdf -text
-datasheets/electromechanical/EC45.pdf -text
-datasheets/electromechanical/NKK[!!-~]A[!!-~]Series.pdf -text
-datasheets/electromechanical/maxon_brushless_commutation.pdf -text svneol=unset#unset
-datasheets/ics/74AHC74.pdf -text
-datasheets/ics/74HC4050.pdf -text
+datasheets/electromechanical/Maxon[!!-~]EC[!!-~]Commutation[!!-~]and[!!-~]Wiring.pdf -text svneol=unset#unset
+datasheets/electromechanical/Maxon[!!-~]EC16[!!-~](Dribbler).pdf -text
+datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain).pdf -text
+datasheets/electromechanical/NKK[!!-~]A[!!-~]Series[!!-~](Power[!!-~]Switch).pdf -text
+datasheets/ics/74AHC74[!!-~](Dual[!!-~]D[!!-~]FF).pdf -text
+datasheets/ics/74HC4050[!!-~](Level[!!-~]Shifter).pdf -text
 datasheets/ics/ADCs/ADS7866.pdf -text
 datasheets/ics/ADCs/MCP3004_3008.pdf -text
-datasheets/ics/ADG3123.pdf -text
-datasheets/ics/CD4504B.pdf -text
+datasheets/ics/ADG3123[!!-~](Level[!!-~]Shifter).pdf -text
 datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
 datasheets/ics/FET[!!-~]Drivers/TC4467_4468_4469.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Block[!!-~]RAM.pdf -text
@@ -68,15 +56,9 @@ datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/In-System[!!-~]Flash[!!-~]Guide
 datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Overview.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/Flash/M25P16.pdf -text
-datasheets/ics/Flash/W25Q16BV.pdf -text
-datasheets/ics/Flash/W25X16AVDAIZ.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
 datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
-datasheets/ics/MCUs/NXP[!!-~]-[!!-~]LPC1769FBD100/user.manual.lpc17xx.pdf -text
-datasheets/ics/MCUs/PIC18F4550/Datasheet.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/MCUs/PIC18F4550/Errata.pdf -text
 datasheets/ics/MCUs/PIC18F6XJ50/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/PIC18F6XJ50/Errata.pdf -text
 datasheets/ics/MCUs/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
@@ -91,48 +73,31 @@ datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Errata.pdf -text
 datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Flash[!!-~]Programming[!!-~]Manual.pdf -text
 datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/STM32/System[!!-~]Memory[!!-~]Boot[!!-~]Mode[!!-~]AN2606[!!-~](Bootloader).pdf -text
-datasheets/ics/Opamps/MIC7300.pdf -text
-datasheets/ics/Opamps/TL071_072_074.pdf -text
-datasheets/ics/QS3126[!!-~]Quad[!!-~]Bus[!!-~]Switch.pdf -text
+datasheets/ics/Micrel[!!-~]MIC7300[!!-~](Opamp).pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MA.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MB.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MC.pdf -text
 datasheets/ics/Radios/MRF24J40/Silicon[!!-~]Errata.pdf -text
 datasheets/ics/Radios/XBee.pdf -text
-datasheets/ics/SN74LVC1G80.pdf -text
-datasheets/ics/SN74LVC8T245[!!-~]8-bit[!!-~]Bus[!!-~]Transceiver.pdf -text
-datasheets/igbts/FGA180N33AT.pdf -text
-datasheets/mosfets/2N7000.pdf -text
+datasheets/ics/Winbond[!!-~]W25Q16BV[!!-~](SPI[!!-~]Flash).pdf -text
+datasheets/mechanical/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
+datasheets/mechanical/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
 datasheets/mosfets/2N7002P.pdf -text
 datasheets/mosfets/AO4616.pdf -text
-datasheets/mosfets/AOP605.pdf -text
-datasheets/mosfets/IRF5305.pdf -text
 datasheets/mosfets/IRF9310.pdf -text
-datasheets/mosfets/IRFP90N20D.pdf -text
-datasheets/mosfets/IXFX180N25T.pdf -text
 datasheets/mosfets/STx20NK50Z.pdf -text
-datasheets/mosfets/SUM33N20.pdf -text
-datasheets/mosfets/sum45n25.pdf -text
-datasheets/optoelectronics/4N33M.pdf -text
-datasheets/optoelectronics/E4P.pdf -text
-datasheets/optoelectronics/OPB733T.pdf -text
-datasheets/optoelectronics/OPV380.pdf -text
-datasheets/optoelectronics/PNA2602M.pdf -text
-datasheets/optoelectronics/PS9552.pdf -text
-datasheets/optoelectronics/temd1000.pdf -text
-datasheets/optoelectronics/temt1000.pdf -text
-datasheets/optoelectronics/vsmy2850.pdf -text
-datasheets/oscillators/ABLS-4.000MHz[!!-~]Crystal.pdf -text
-datasheets/oscillators/ACOL50[!!-~]Oscillator.pdf -text
-datasheets/oscillators/ECS-2025-2033.pdf -text
-datasheets/oscillators/FXO-HC735[!!-~]Canned[!!-~]Oscillator.pdf -text
+datasheets/optoelectronics/E4P[!!-~](Rotary[!!-~]Encoder).pdf -text
+datasheets/optoelectronics/LTST-C150CKT[!!-~](Red[!!-~]LED).pdf -text
+datasheets/optoelectronics/LTST-C150GKT[!!-~](Green[!!-~]LED).pdf -text
+datasheets/optoelectronics/OPB733T[!!-~](LED+Phototransistor).pdf -text
+datasheets/optoelectronics/OPV380[!!-~](Laser).pdf -text
+datasheets/optoelectronics/PNA2602M[!!-~](Phototransistor).pdf -text
+datasheets/optoelectronics/TEMT1000[!!-~](Phototransistor).pdf -text
+datasheets/optoelectronics/VSMY2850[!!-~](IR[!!-~]LED).pdf -text
 datasheets/regulators/LD1117V33C.pdf -text
 datasheets/regulators/MCP1726.pdf -text
-datasheets/regulators/MCP1827S.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
-datasheets/regulators/PT78ST105.pdf -text
-datasheets/regulators/V78XX-1000.pdf -text
 datasheets/regulators/XC6222.pdf -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.brd -text
 electronics/Chicker[!!-~]Test[!!-~]Board/Chicker[!!-~]Test[!!-~]Board.cmp -text
