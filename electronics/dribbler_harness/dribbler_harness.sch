@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-03-21T00:14:25 PDT
+EESchema Schematic File Version 2  date 2012-04-06T18:01:51 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -34,7 +34,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title "noname.sch"
-Date "21 mar 2012"
+Date "7 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -93,6 +93,7 @@ U 1 1 4F697E69
 P 1150 4450
 F 0 "P?" V 1100 4450 60  0000 C CNN
 F 1 "CONN_11" V 1200 4450 60  0000 C CNN
+F 4 "WM1729-ND" H 1150 4450 60  0001 C CNN "Field1"
 	1    1150 4450
 	-1   0    0    1   
 $EndComp
@@ -102,6 +103,7 @@ U 1 1 4E03DE1E
 P 1850 5050
 F 0 "TH?" V 1950 5100 50  0000 C CNN
 F 1 "THERMISTOR" V 1750 5050 50  0000 C CNN
+F 4 "568-3248-1-ND" H 1850 5050 60  0001 C CNN "Field1"
 	1    1850 5050
 	0    1    1    0   
 $EndComp
@@ -111,6 +113,7 @@ U 1 1 4E03DD91
 P 2750 4850
 F 0 "Q?" H 2750 4700 50  0000 R CNN
 F 1 "PHOTOTRANSISTOR" H 2750 5000 50  0000 R CNN
+F 4 "PNA2602M-ND" H 2750 4850 60  0001 C CNN "Field1"
 	1    2750 4850
 	1    0    0    -1  
 $EndComp
@@ -120,6 +123,7 @@ U 1 1 4E03DCF1
 P 2150 4250
 F 0 "D?" H 2150 4350 50  0000 C CNN
 F 1 "LED" H 2150 4150 50  0000 C CNN
+F 4 "365-1145-ND" H 2150 4250 60  0001 C CNN "Field1"
 	1    2150 4250
 	1    0    0    -1  
 $EndComp
