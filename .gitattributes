@@ -14,20 +14,17 @@ datasheets/cameras/AVT[!!-~]Stingray[!!-~]F046C[!!-~]IRF/Instruction[!!-~]Leafle
 datasheets/cameras/AVT[!!-~]Stingray[!!-~]F046C[!!-~]IRF/Technical[!!-~]Manual[!!-~]4.4.2.pdf -text
 datasheets/cameras/EC1020.pdf -text
 datasheets/cameras/EC750.pdf -text
-datasheets/connectors/Encoder.pdf -text
-datasheets/connectors/FPC[!!-~]1-173248-1.pdf -text
-datasheets/connectors/FPC[!!-~]FH12[!!-~]Series.pdf -text
-datasheets/connectors/FPC-52207.pdf -text
-datasheets/connectors/MHC40E-ND.pdf -text svneol=unset#application/octet-stream
-datasheets/connectors/SJ1-3523N[!!-~]Stereo[!!-~]Phone[!!-~]Jack.pdf -text svneol=unset#application/octet-stream
-datasheets/connectors/Tyco[!!-~]643226-1.pdf -text
-datasheets/connectors/UX60SC-MB-5ST[!!-~]USB[!!-~]Mini-B.pdf -text
-datasheets/connectors/WM1142.pdf -text
-datasheets/connectors/WM4306-ND.pdf -text
-datasheets/connectors/WM7624CT-ND.pdf -text
-datasheets/connectors/WM7629CT-ND.pdf -text
-datasheets/connectors/WM9984-ND[!!-~]Crimp[!!-~]Tool.pdf -text
-datasheets/connectors/XF2L.pdf -text
+datasheets/connectors/CUI[!!-~]SJ1-3523N[!!-~](Stereo[!!-~]Phone[!!-~]Jack).pdf -text svneol=unset#application/octet-stream
+datasheets/connectors/Hirose[!!-~]FH12[!!-~](FPC).pdf -text
+datasheets/connectors/Molex/02-20-2xx5[!!-~](Housing;[!!-~]Solenoid).pdf -text
+datasheets/connectors/Molex/02-20-3021[!!-~](Header;[!!-~]Solenoid).pdf -text
+datasheets/connectors/Molex/08-5x-0xxx[!!-~](Pin[!!-~]for[!!-~]02-20-2xx5).pdf -text
+datasheets/connectors/Molex/50079-8x00[!!-~](Pin[!!-~]for[!!-~]51021).pdf -text
+datasheets/connectors/Molex/51021[!!-~](Housing;[!!-~]Encoder,[!!-~]Lateral[!!-~]Position[!!-~]Sensor,[!!-~]Dribbler[!!-~]Harness).pdf -text
+datasheets/connectors/Molex/53048-0410[!!-~](Header;[!!-~]Encoder).pdf -text
+datasheets/connectors/Molex/53261-0671[!!-~](Header;[!!-~]Lateral[!!-~]Sensor).pdf -text
+datasheets/connectors/Molex/53261-1171[!!-~](Header;[!!-~]Dribbler[!!-~]Harness).pdf -text
+datasheets/connectors/Molex/638190300[!!-~](Crimp[!!-~]Tool[!!-~]for[!!-~]50079-8x00).pdf -text
 datasheets/diodes/BAT54JW.pdf -text
 datasheets/diodes/BAT54W.pdf -text
 datasheets/diodes/BAT85.pdf -text
