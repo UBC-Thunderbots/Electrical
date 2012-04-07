@@ -168,6 +168,8 @@ electronics/dribbler_testboard/dribbler_testboard.cmp -text
 electronics/dribbler_testboard/dribbler_testboard.net -text
 electronics/dribbler_testboard/dribbler_testboard.pro -text
 electronics/dribbler_testboard/dribbler_testboard.sch -text
+electronics/lateral_sensor/lateral_sensor.brd -text
+electronics/lateral_sensor/lateral_sensor.cmp -text
 electronics/main/adc.sch -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/computeDiff.m -text
@@ -177,8 +179,6 @@ electronics/models/solenoid2/kickdata.m -text
 electronics/models/solenoid2/moded.csv -text
 electronics/models/solenoid2/plotter.m -text
 electronics/models/solenoid2/solenoidModel.m -text
-electronics/sensor/sensor.brd -text
-electronics/sensor/sensor.cmp -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/adc.vhd -text

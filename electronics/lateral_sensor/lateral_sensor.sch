@@ -30,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:sensor-cache
+LIBS:lateral_sensor-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267

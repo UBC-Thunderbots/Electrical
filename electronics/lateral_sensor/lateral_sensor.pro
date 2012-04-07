@@ -2,8 +2,8 @@ update=Sat 28 Jan 2012 12:06:38 PM PST
 last_client=pcbnew
 [general]
 version=1
-RootSch=Sensor.sch
-BoardNm=Sensor.brd
+RootSch=lateral_sensor.sch
+BoardNm=lateral_sensor.brd
 [cvpcb]
 version=1
 NetIExt=.net
@@ -94,7 +94,7 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=sensor.net
+LastNetListRead=lateral_sensor.net
 [pcbnew/libraries]
 LibDir=
 LibName1=../thunderbots-modules
