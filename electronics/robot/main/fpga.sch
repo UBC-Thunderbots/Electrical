@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-04-05T20:38:48 PDT
+EESchema Schematic File Version 2  date 2012-05-20T15:57:21 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 2 17
 Title ""
-Date "6 apr 2012"
+Date "20 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1276,7 +1275,7 @@ F 4 "160-1169-1-ND" H 950 4050 60  0001 C CNN "Field1"
 	-1   0    0    -1  
 $EndComp
 Text HLabel 8300 4450 2    60   Output ~ 0
-CHICKER_SPARE
+CHICKER_POWER_CTL
 Text HLabel 5450 2150 1    60   Output ~ 0
 /MRF_CS
 Text HLabel 6100 7550 0    60   Output ~ 0

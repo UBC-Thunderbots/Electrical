@@ -1,15 +1,8 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sat 08 Oct 2011 04:01:17 PM PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-20T15:40:17 PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
 Reference = C1;
-ValeurCmp = 100nF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /4CEDE42C;
-Reference = C2;
 ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
@@ -85,13 +78,6 @@ IdModule  = D2PAK123;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D018AE0;
-Reference = D2;
-ValeurCmp = RURG3060CC;
-IdModule  = TO-3PN_H;
-EndCmp
-
-BeginCmp
 TimeStamp = /4D018AF7;
 Reference = D3;
 ValeurCmp = RURG3060CC;
@@ -155,13 +141,6 @@ IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CE85EA2;
-Reference = P4;
-ValeurCmp = CONN_2;
-IdModule  = PIN_ARRAY_2X1;
-EndCmp
-
-BeginCmp
 TimeStamp = /4E878E18;
 Reference = P5;
 ValeurCmp = CONN_2;
@@ -173,13 +152,6 @@ TimeStamp = /4CE86D82;
 Reference = Q1;
 ValeurCmp = MOS_N;
 IdModule  = D2PAKGDS;
-EndCmp
-
-BeginCmp
-TimeStamp = /4CEDBD14;
-Reference = Q2;
-ValeurCmp = IGBT_N;
-IdModule  = TO247GCE;
 EndCmp
 
 BeginCmp
@@ -197,6 +169,20 @@ IdModule  = TO247GCE;
 EndCmp
 
 BeginCmp
+TimeStamp = /4FB97180;
+Reference = Q5;
+ValeurCmp = MOSFET_N;
+IdModule  = SOT23_3GDS;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FB97204;
+Reference = Q6;
+ValeurCmp = MOSFET_P;
+IdModule  = SO8E-IRF9310;
+EndCmp
+
+BeginCmp
 TimeStamp = /4CE86DF3;
 Reference = R1;
 ValeurCmp = 220KR;
@@ -211,15 +197,22 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D7BD568;
-Reference = U1;
-ValeurCmp = MCP1415;
-IdModule  = SOT23-5;
+TimeStamp = /4FB9718A;
+Reference = R3;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D7BD56F;
-Reference = U2;
+TimeStamp = /4FB97215;
+Reference = R4;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4D7BD568;
+Reference = U1;
 ValeurCmp = MCP1415;
 IdModule  = SOT23-5;
 EndCmp
