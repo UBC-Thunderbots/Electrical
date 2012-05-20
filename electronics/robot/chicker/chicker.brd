@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2012-05-20T15:56:37 PDT
+PCBNEW-BOARD Version 1 date 2012-05-20T16:50:29 PDT
 
 # Created by Pcbnew(2010-03-13)-final
 
@@ -9,7 +9,7 @@ EnabledLayers 1FFF8001
 Links 71
 NoConn 0
 Di 7909 7924 56076 53076
-Ndraw 9
+Ndraw 10
 Ntrack 329
 Nzone 0
 BoardThickness 630
@@ -35,7 +35,7 @@ ZoneGridSize 250
 Layers 2
 Layer[0] Back signal
 Layer[15] Front signal
-TrackWidth 250
+TrackWidth 80
 TrackWidthList 100
 TrackWidthList 250
 TrackWidthList 500
@@ -1571,6 +1571,11 @@ Of 0.000000 0.000000 0.000000
 Ro 0.000000 0.000000 -180.000000
 $EndSHAPE3D
 $EndMODULE  SOT23_3GDS
+$TEXTPCB
+Te "$Rev$"
+Po 14900 9100 600 800 120 0
+De 21 1 0 Normal
+$EndTEXTPCB
 $DRAWSEGMENT
 Po 0 56000 8000 8000 8000 150
 De 28 0 900 0 0
