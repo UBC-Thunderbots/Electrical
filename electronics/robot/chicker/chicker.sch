@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T15:53:57 PDT
+EESchema Schematic File Version 2  date 2012-05-20T16:28:42 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -815,7 +815,7 @@ U 1 1 4CE86D82
 P 3050 3500
 F 0 "Q1" H 3060 3670 60  0000 R CNN
 F 1 "MOS_N" H 3060 3350 60  0000 R CNN
-F 4 "497-4323-1-ND" H 3050 3500 60  0001 C CNN "Field1"
+F 4 "497-12940-1-ND" H 3050 3500 60  0001 C CNN "Field1"
 	1    3050 3500
 	1    0    0    -1  
 $EndComp
