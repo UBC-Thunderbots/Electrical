@@ -71,6 +71,11 @@
 		<!-- The kicker solenoid is manufactured locally, not purchased. -->
 		<multipart id="KICKER_SOLENOID" />
 
+		<!-- Long-pin headers are one assembly per chicker board; they come in 5×1 lengths and each board needs 7×2 plus 2×1. -->
+		<multipart id="long-pin-male-header">
+			<subpart id="609-4534-2-ND" quantity="4" />
+		</multipart>
+
 		<!-- An MRF24J40MC requires an external antenna. -->
 		<multipart id="MRF24J40MC">
 			<subpart id="MRF24J40MCT-I/RMCT-ND" />

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T16:28:42 PDT
+EESchema Schematic File Version 2  date 2012-05-20T16:48:06 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -414,6 +414,7 @@ U 1 1 4E62ACEE
 P 8900 1600
 F 0 "P2" V 8870 1600 60  0000 C CNN
 F 1 "CONN_14" V 8980 1600 60  0000 C CNN
+F 4 "long-pin-male-header" H 8900 1600 60  0001 C CNN "Field1"
 	1    8900 1600
 	1    0    0    -1  
 $EndComp
