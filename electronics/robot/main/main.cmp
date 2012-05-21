@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le 2012-05-20T22:37:09 PDT
+Cmp-Mod V01 Genere par PcbNew le 2012-05-20T22:51:43 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -816,7 +816,7 @@ BeginCmp
 TimeStamp = /4CC4F481/4F6436C0;
 Reference = U12;
 ValeurCmp = ECS-2033;
-IdModule  = ECS-2033;
+IdModule  = ECS-3953M;
 EndCmp
 
 BeginCmp

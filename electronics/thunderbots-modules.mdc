@@ -1,4 +1,4 @@
-PCBNEW-LibDoc----V1  2012-05-20T22:40:59 PDT
+PCBNEW-LibDoc----V1  2012-05-20T22:58:47 PDT
 #
 $MODULE D2
 Li D2
@@ -107,6 +107,12 @@ $MODULE SO8E-IRF9310
 Li SO8E-IRF9310
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
+$EndMODULE
+#
+$MODULE LCD_screen
+Li LCD_screen
+Cd Connecteur 14 pins
+Kw CONN DEV
 $EndMODULE
 #
 $EndLIBDOC

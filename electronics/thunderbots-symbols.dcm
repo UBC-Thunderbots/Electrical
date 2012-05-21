@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 20/05/2012 4:38:38 PM
+EESchema-DOCLIB  Version 2.0  Date: 2012-05-20T22:47:18 PDT
 #
 $CMP 74HC4050
 D Hex level shifter
@@ -12,7 +12,7 @@ $CMP AO4616
 F transistors/mos/*.*
 $ENDCMP
 #
-$CMP ECS-2033
+$CMP ECS-3953M
 D SMD Clock Oscillator
 $ENDCMP
 #
