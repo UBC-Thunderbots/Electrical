@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 20/05/2012 6:06:02 PM
+EESchema Schematic File Version 2  date 20/05/2012 10:16:18 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,6 +45,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 7400 3750
+NoConn ~ 7400 3650
 Connection ~ 6800 6650
 Wire Wire Line
 	6800 6650 6800 5850
@@ -77,12 +79,6 @@ Wire Wire Line
 	8000 4150 8000 5200
 Wire Wire Line
 	8000 5200 9200 5200
-Wire Wire Line
-	9800 4400 8100 4400
-Wire Wire Line
-	8100 4400 8100 3750
-Wire Wire Line
-	8100 3750 7400 3750
 Wire Wire Line
 	1950 4100 2500 4100
 Wire Wire Line
@@ -542,10 +538,6 @@ Wire Wire Line
 	2400 2200 2400 4000
 Wire Wire Line
 	2400 4000 1950 4000
-Wire Wire Line
-	8200 4150 8200 3650
-Wire Wire Line
-	8200 3650 7400 3650
 Wire Wire Line
 	8700 5100 8050 5100
 Wire Wire Line
