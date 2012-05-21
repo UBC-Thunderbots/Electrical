@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T23:07:21 PDT
+EESchema Schematic File Version 2  date 2012-05-20T23:12:58 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -255,8 +255,8 @@ U 1 1 4F6971B8
 P 4000 3500
 F 0 "F1" H 4100 3550 40  0000 C CNN
 F 1 "FUSE" H 3900 3450 40  0000 C CNN
-F 2 "R1" H 4000 3500 60  0001 C CNN
-F 4 "F3379-ND" H 4000 3500 60  0001 C CNN "Field1"
+F 2 "SM1206" H 4000 3500 60  0001 C CNN
+F 4 "mainboard-fuses" H 4000 3500 60  0001 C CNN "Field1"
 	1    4000 3500
 	1    0    0    -1  
 $EndComp

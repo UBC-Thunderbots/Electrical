@@ -76,6 +76,15 @@
 			<subpart id="609-4534-2-ND" quantity="4" />
 		</multipart>
 
+		<!-- The mainboard may need one of a handful of different fuse values. -->
+		<multipart id="mainboard-fuses">
+			<subpart id="486-1684-1-ND" />
+			<subpart id="486-1686-1-ND" />
+			<subpart id="486-1687-1-ND" />
+			<subpart id="486-1688-1-ND" />
+			<subpart id="486-1690-1-ND" />
+		</multipart>
+
 		<!-- An MRF24J40MC requires an external antenna. -->
 		<multipart id="MRF24J40MC">
 			<subpart id="MRF24J40MCT-I/RMCT-ND" />

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le 2012-05-20T23:08:08 PDT
+Cmp-Mod V01 Genere par PcbNew le 2012-05-20T23:10:55 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -368,7 +368,7 @@ BeginCmp
 TimeStamp = /4AD90417/4F6971B8;
 Reference = F1;
 ValeurCmp = FUSE;
-IdModule  = R1;
+IdModule  = SM1206;
 EndCmp
 
 BeginCmp
