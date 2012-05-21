@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T16:08:03 PDT
+EESchema Schematic File Version 2  date 2012-05-20T20:57:43 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -33,7 +33,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 5 17
 Title ""
-Date "20 may 2012"
+Date "21 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
