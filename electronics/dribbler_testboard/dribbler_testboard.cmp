@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08 BZR 3044)-stable date = Thu 03 Nov 2011 05:28:43 PM PDT
+Cmp-Mod V01 Genere par PcbNew le 2012-05-20T22:40:11 PDT
 
 BeginCmp
 TimeStamp = /4E5D249A;
@@ -165,7 +165,7 @@ BeginCmp
 TimeStamp = /4E6BDD2C;
 Reference = P3;
 ValeurCmp = CONN_8;
-IdModule  = DRIBBLERCONN;
+IdModule  = EC16;
 EndCmp
 
 BeginCmp

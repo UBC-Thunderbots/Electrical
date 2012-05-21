@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Thu 03 Nov 2011 05:28:43 PM PDT
+# EESchema Netlist Version 1.1 created  2012-05-20T22:39:47 PDT
 (
  ( /4E5D249A SM1206 C1 10uF
   ( 1 +BATT )
@@ -101,7 +101,7 @@
   ( 1 N-000080 )
   ( 2 GND )
  )
- ( /4E6BDD2C DRIBBLERCONN P3 CONN_8
+ ( /4E6BDD2C EC16 P3 CONN_8
   ( 1 /Mot1 )
   ( 2 /Mot2 )
   ( 3 /Mot3 )
