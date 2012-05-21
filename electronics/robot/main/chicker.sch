@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-21T00:17:41 PDT
+EESchema Schematic File Version 2  date 2012-05-21T00:58:22 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,17 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L CONN_1 M1
+U 1 1 4FB9F594
+P 7400 4300
+F 0 "M1" H 7480 4300 40  0000 L CNN
+F 1 "CONN_1" H 7400 4355 30  0001 C CNN
+	1    7400 4300
+	1    0    0    -1  
+$EndComp
+Text Notes 6900 4250 0    60   ~ 0
+Mounting standoff
 Wire Wire Line
 	5100 3750 5150 3750
 Connection ~ 5100 3400

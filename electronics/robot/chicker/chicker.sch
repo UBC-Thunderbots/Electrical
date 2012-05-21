@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T16:48:06 PDT
+EESchema Schematic File Version 2  date 2012-05-21T01:04:18 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "20 may 2012"
+Date "21 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +44,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L CONN_1 M5
+U 1 1 4FB9F54F
+P 9750 3850
+F 0 "M5" H 9830 3850 40  0000 L CNN
+F 1 "CONN_1" H 9750 3905 30  0001 C CNN
+	1    9750 3850
+	1    0    0    -1  
+$EndComp
 Connection ~ 5600 5450
 Wire Wire Line
 	6050 5450 5600 5450

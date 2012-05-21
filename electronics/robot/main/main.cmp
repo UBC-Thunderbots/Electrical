@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-21T00:00:34 PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-21T00:58:46 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -369,6 +369,13 @@ TimeStamp = /4AD90417/4F6971B8;
 Reference = F1;
 ValeurCmp = FUSE;
 IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B4D69E7/4FB9F594;
+Reference = M1;
+ValeurCmp = CONN_1;
+IdModule  = M3_MOUNT;
 EndCmp
 
 BeginCmp
