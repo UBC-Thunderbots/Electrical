@@ -73,7 +73,7 @@
 
 		<!-- Long-pin headers are one assembly per chicker board; they come in 5×1 lengths and each board needs 7×2 plus 2×1. -->
 		<multipart id="long-pin-male-header">
-			<subpart id="609-4534-2-ND" quantity="4" />
+			<subpart id="609-4535-1-ND" quantity="4" />
 		</multipart>
 
 		<!-- The mainboard may need one of a handful of different fuse values. -->
