@@ -73,7 +73,7 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-symbols
+LibName31=../../thunderbots-symbols
 [pcbnew]
 version=1
 PadDrlX=0
@@ -103,6 +103,6 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-modules
+LibName11=../../thunderbots-modules
 [general]
 version=1
