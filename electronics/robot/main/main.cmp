@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le 2012-05-20T22:51:43 PDT
+Cmp-Mod V01 Genere par PcbNew le 2012-05-20T23:08:08 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -361,7 +361,7 @@ BeginCmp
 TimeStamp = /4AD90417/4F651F65;
 Reference = D24;
 ValeurCmp = DIODESCH;
-IdModule  = SM0603;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
@@ -757,13 +757,6 @@ IdModule  = ;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CC4F481/4FB97860;
-Reference = R59;
-ValeurCmp = 10kR;
-IdModule  = ;
-EndCmp
-
-BeginCmp
 TimeStamp = /4AD90417/4F651110;
 Reference = SW1;
 ValeurCmp = SP3T;
@@ -813,9 +806,9 @@ IdModule  = LM78XX_VERT;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CC4F481/4F6436C0;
+TimeStamp = /4CC4F481/4FB9D6EE;
 Reference = U12;
-ValeurCmp = ECS-2033;
+ValeurCmp = ECS-3953M;
 IdModule  = ECS-3953M;
 EndCmp
 
