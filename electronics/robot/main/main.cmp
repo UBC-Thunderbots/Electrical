@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-20T23:44:20 PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-20T23:46:10 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -780,13 +780,6 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD73188/4FB9E1A3;
 Reference = R62;
-ValeurCmp = 10KR7;
-IdModule  = SO14HUGE;
-EndCmp
-
-BeginCmp
-TimeStamp = /4CD73194/4FB9E379;
-Reference = R63;
 ValeurCmp = 10KR7;
 IdModule  = SO14HUGE;
 EndCmp
