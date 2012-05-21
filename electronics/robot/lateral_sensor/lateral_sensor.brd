@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2012-05-21T01:19:20 PDT
+PCBNEW-BOARD Version 1 date 2012-05-21T01:21:36 PDT
 
 # Created by Pcbnew(2010-03-13)-final
 
@@ -9,7 +9,7 @@ EnabledLayers 1FFF8001
 Links 48
 NoConn 0
 Di 46424 30424 76076 38775
-Ndraw 4
+Ndraw 5
 Ntrack 265
 Nzone 0
 BoardThickness 630
@@ -952,6 +952,11 @@ Of 0.000000 0.000000 0.000000
 Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23-5
+$TEXTPCB
+Te "$Rev$"
+Po 53000 36200 600 800 120 0
+De 21 1 0 Normal
+$EndTEXTPCB
 $DRAWSEGMENT
 Po 0 46500 37000 46500 30500 150
 De 28 0 900 0 0
@@ -1508,7 +1513,7 @@ ZLayer 15
 ZAux 4 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 16 F 200 200
+ZOptions 0 16 S 200 200
 ZCorner 76000 37000 0
 ZCorner 76000 30500 0
 ZCorner 46500 30500 0
@@ -2065,7 +2070,7 @@ ZLayer 0
 ZAux 4 E
 ZClearance 200 T
 ZMinThickness 100
-ZOptions 0 16 F 200 200
+ZOptions 0 16 S 200 200
 ZCorner 76000 37000 0
 ZCorner 76000 30500 0
 ZCorner 46500 30500 0
