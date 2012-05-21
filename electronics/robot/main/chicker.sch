@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T23:45:57 PDT
+EESchema Schematic File Version 2  date 2012-05-20T23:52:29 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -89,7 +89,7 @@ U 1 1 4F69669B
 P 7450 3800
 F 0 "P19" V 7400 3800 40  0000 C CNN
 F 1 "CONN_2" V 7500 3800 40  0000 C CNN
-F 4 "2.54mm-header-general" H 7450 3800 60  0001 C CNN "Field1"
+F 4 "3M9513-ND" H 7450 3800 60  0001 C CNN "Field1"
 	1    7450 3800
 	1    0    0    -1  
 $EndComp
@@ -126,7 +126,7 @@ U 1 1 4F696627
 P 5500 3800
 F 0 "P18" V 5470 3800 60  0000 C CNN
 F 1 "CONN_14" V 5580 3800 60  0000 C CNN
-F 4 "2.54mm-header-general" H 5500 3800 60  0001 C CNN "Field1"
+F 4 "S7075-ND" H 5500 3800 60  0001 C CNN "Field1"
 	1    5500 3800
 	1    0    0    -1  
 $EndComp
