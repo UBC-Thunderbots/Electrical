@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2012-05-21T01:06:24 PDT
+PCBNEW-BOARD Version 1 date 2012-05-21T01:09:12 PDT
 
 # Created by Pcbnew(2010-03-13)-final
 
@@ -9,7 +9,7 @@ EnabledLayers 1FFF8007
 Links 592
 NoConn 0
 Di 6278 10175 57847 45576
-Ndraw 18
+Ndraw 22
 Ntrack 2036
 Nzone 0
 BoardThickness 630
@@ -9954,6 +9954,26 @@ Ne 0 ""
 Po 0 0
 $EndPAD
 $EndMODULE  M3_MOUNT
+$TEXTPCB
+Te "Wheel 4"
+Po 54200 12500 600 800 120 900
+De 21 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "Wheel 3"
+Po 55000 28500 600 800 120 900
+De 21 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "Wheel 2"
+Po 12600 34100 600 800 120 2700
+De 21 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "Wheel 1"
+Po 11900 16000 600 800 120 2700
+De 21 1 0 Normal
+$EndTEXTPCB
 $TEXTPCB
 Te "$Rev$"
 Po 11500 11500 600 800 120 0
