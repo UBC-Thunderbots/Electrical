@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-20T18:10:18 PDT
+Cmp-Mod V01 Created by CvPCB (2010-03-13)-final date = 2012-05-20T18:15:28 PDT
 
 BeginCmp
 TimeStamp = /4D85FDC2;
@@ -239,10 +239,10 @@ IdModule  = ESWITCH_320.01;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D85F8A1;
+TimeStamp = /4FB996D1;
 Reference = U4;
-ValeurCmp = XC6222B331PR;
-IdModule  = SOT89-5;
+ValeurCmp = LD1117D33;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
@@ -262,7 +262,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4C54C369;
 Reference = X1;
-ValeurCmp = 4MHz;
+ValeurCmp = 8MHz;
 IdModule  = HC49US;
 EndCmp
 
