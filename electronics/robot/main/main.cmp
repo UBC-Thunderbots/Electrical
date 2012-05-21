@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le 2012-05-20T22:32:34 PDT
+Cmp-Mod V01 Genere par PcbNew le 2012-05-20T22:37:09 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -410,7 +410,7 @@ BeginCmp
 TimeStamp = /4CD73194/4CD731E0;
 Reference = P14;
 ValeurCmp = CONN_8;
-IdModule  = DRIBBLERCONN;
+IdModule  = EC16;
 EndCmp
 
 BeginCmp

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T22:15:07 PDT
+EESchema Schematic File Version 2  date 2012-05-20T22:36:20 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -269,7 +269,7 @@ U 1 1 4CD731E0
 P 7450 3750
 F 0 "P14" V 7400 3750 60  0000 C CNN
 F 1 "CONN_8" V 7500 3750 60  0000 C CNN
-F 2 "DRIBBLERCONN" H 7450 3750 60  0001 C CNN
+F 2 "EC16" H 7450 3750 60  0001 C CNN
 F 4 "dribbler-header" H 7450 3750 60  0001 C CNN "Field1"
 	1    7450 3750
 	1    0    0    -1  
