@@ -1,6 +1,6 @@
-update=20/05/2012 3:04:53 PM
+update=20/05/2012 3:14:33 PM
 version=1
-last_client=pcbnew
+last_client=kicad
 [cvpcb]
 version=1
 NetITyp=0
@@ -41,8 +41,6 @@ offY_E=0
 RptD_X=0
 RptD_Y=100
 RptLab=1
-SimCmd=
-UseNetN=0
 LabSize=60
 [eeschema/libraries]
 LibName1=power
@@ -75,13 +73,12 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-[general]
-version=1
+LibName31=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-symbols
 [pcbnew]
 version=1
-PadDrlX=890
-PadDimH=1000
-PadDimV=1000
+PadDrlX=0
+PadDimH=300
+PadDimV=600
 BoardThickness=630
 TxtPcbV=800
 TxtPcbH=600
@@ -92,19 +89,20 @@ VEgarde=100
 DrawLar=150
 EdgeLar=150
 TxtLar=120
-MSegLar=15
-LastNetListRead=breakbeam.net
+MSegLar=100
+LastNetListRead=
 [pcbnew/libraries]
 LibDir=
-LibName1=../thunderbots-modules
-LibName2=sockets
-LibName3=connect
-LibName4=discret
-LibName5=pin_array
-LibName6=divers
-LibName7=libcms
-LibName8=display
-LibName9=valves
-LibName10=led
-LibName11=dip_sockets
-LibName12=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-modules
+LibName1=sockets
+LibName2=connect
+LibName3=discret
+LibName4=pin_array
+LibName5=divers
+LibName6=libcms
+LibName7=display
+LibName8=valves
+LibName9=led
+LibName10=dip_sockets
+LibName11=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-modules
+[general]
+version=1

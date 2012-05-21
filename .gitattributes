@@ -108,6 +108,10 @@ electronics/breakbeam/emitter/breakbeam.brd -text
 electronics/breakbeam/emitter/breakbeam.cmp -text
 electronics/breakbeam/emitter/breakbeam.pro -text
 electronics/breakbeam/emitter/breakbeam.sch -text
+electronics/breakbeam/processor/breakbeam-processor.brd -text
+electronics/breakbeam/processor/breakbeam-processor.cmp -text
+electronics/breakbeam/processor/breakbeam-processor.pro -text
+electronics/breakbeam/processor/breakbeam-processor.sch -text
 electronics/breakbeam/receiver/breakbeamreceiver.brd -text
 electronics/breakbeam/receiver/breakbeamreceiver.cmp -text
 electronics/breakbeam/receiver/breakbeamreceiver.pro -text

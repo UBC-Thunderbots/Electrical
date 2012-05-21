@@ -1,4 +1,4 @@
-update=29/02/2012 12:05:18 AM
+update=20/05/2012 3:10:50 PM
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -83,7 +83,6 @@ PadDrlX=0
 PadDimH=669
 PadDimV=295
 BoardThickness=630
-SgPcb45=1
 TxtPcbV=800
 TxtPcbH=600
 TxtModV=600
@@ -108,3 +107,4 @@ LibName8=display
 LibName9=valves
 LibName10=led
 LibName11=dip_sockets
+LibName12=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-modules
