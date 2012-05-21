@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T20:57:43 PDT
+EESchema Schematic File Version 2  date 2012-05-20T20:58:45 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -396,7 +396,7 @@ L R R45
 U 1 1 4F644E8B
 P 4200 1600
 F 0 "R45" V 4280 1600 50  0000 C CNN
-F 1 "330R" V 4200 1600 50  0000 C CNN
+F 1 "3.3kR" V 4200 1600 50  0000 C CNN
 	1    4200 1600
 	1    0    0    -1  
 $EndComp
@@ -405,7 +405,7 @@ L R R44
 U 1 1 4F644E89
 P 4200 1000
 F 0 "R44" V 4280 1000 50  0000 C CNN
-F 1 "1.5kR" V 4200 1000 50  0000 C CNN
+F 1 "15kR" V 4200 1000 50  0000 C CNN
 	1    4200 1000
 	1    0    0    -1  
 $EndComp
