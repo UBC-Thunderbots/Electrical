@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-02-05T19:58:22 PST
+EESchema Schematic File Version 2  date 2012-05-20T18:12:10 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:dongle-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "6 feb 2012"
+Date "21 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -920,8 +919,8 @@ L CRYSTAL X1
 U 1 1 4C54C369
 P 3150 3650
 F 0 "X1" H 3150 3800 60  0000 C CNN
-F 1 "4MHz" H 3150 3500 60  0000 C CNN
-F 4 "535-10202-1-ND" H 3150 3650 60  0001 C CNN "Digikey Part"
+F 1 "8MHz" H 3150 3500 60  0000 C CNN
+F 4 "535-10212-1-ND" H 3150 3650 60  0001 C CNN "Digikey Part"
 	1    3150 3650
 	0    -1   1    0   
 $EndComp
