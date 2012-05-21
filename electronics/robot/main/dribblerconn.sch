@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T23:12:57 PDT
+EESchema Schematic File Version 2  date 2012-05-20T23:43:59 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,6 +42,19 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
+	5900 3350 5900 3450
+Wire Wire Line
+	6050 3450 6050 3400
+Wire Wire Line
+	6050 3400 5750 3400
+Wire Wire Line
+	5750 3400 5750 3450
+Connection ~ 6300 4000
+Wire Wire Line
+	5900 3950 5900 4000
+Wire Wire Line
+	5900 4000 7100 4000
+Wire Wire Line
 	7700 3050 7650 3050
 Wire Wire Line
 	7000 3700 7100 3700
@@ -63,8 +76,6 @@ Wire Wire Line
 	6150 5100 6100 5100
 Wire Wire Line
 	6150 4900 6100 4900
-Wire Wire Line
-	7100 4000 6300 4000
 Wire Wire Line
 	6300 4000 6300 4700
 Wire Wire Line
@@ -102,8 +113,6 @@ Wire Wire Line
 Wire Wire Line
 	6400 4800 6400 4100
 Wire Wire Line
-	6400 4100 7100 4100
-Wire Wire Line
 	6100 5000 6150 5000
 Connection ~ 6150 5000
 Wire Wire Line
@@ -122,6 +131,51 @@ Wire Wire Line
 Wire Wire Line
 	7050 3050 7250 3050
 Connection ~ 7050 3700
+Wire Wire Line
+	7100 4100 5750 4100
+Wire Wire Line
+	5750 4100 5750 3950
+Connection ~ 6400 4100
+Wire Wire Line
+	6200 3950 6050 3950
+Connection ~ 6200 3950
+Connection ~ 5900 3400
+$Comp
+L +5V #PWR232
+U 1 1 4FB9E391
+P 5900 3350
+F 0 "#PWR232" H 5900 3440 20  0001 C CNN
+F 1 "+5V" H 5900 3440 30  0000 C CNN
+	1    5900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 10KR7 R63
+U 3 1 4FB9E379
+P 6050 3700
+F 0 "R63" V 6130 3700 50  0000 C CNN
+F 1 "10KR7" V 6050 3700 50  0000 C CNN
+	3    6050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 10KR7 R63
+U 2 1 4FB9E377
+P 5900 3700
+F 0 "R63" V 5980 3700 50  0000 C CNN
+F 1 "10KR7" V 5900 3700 50  0000 C CNN
+	2    5900 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 10KR7 R63
+U 1 1 4FB9E375
+P 5750 3700
+F 0 "R63" V 5830 3700 50  0000 C CNN
+F 1 "10KR7" V 5750 3700 50  0000 C CNN
+	1    5750 3700
+	1    0    0    -1  
+$EndComp
 $Comp
 L GND #PWR237
 U 1 1 4F698285
@@ -177,19 +231,19 @@ F 1 "4.7kR" V 6600 4450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR231
+L +3.3V #PWR230
 U 1 1 4F6454AF
 P 5350 4150
-F 0 "#PWR231" H 5350 4110 30  0001 C CNN
+F 0 "#PWR230" H 5350 4110 30  0001 C CNN
 F 1 "+3.3V" H 5350 4260 30  0000 C CNN
 	1    5350 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR232
+L GND #PWR231
 U 1 1 4F6454AB
 P 5350 5550
-F 0 "#PWR232" H 5350 5550 30  0001 C CNN
+F 0 "#PWR231" H 5350 5550 30  0001 C CNN
 F 1 "GND" H 5350 5480 30  0001 C CNN
 	1    5350 5550
 	1    0    0    -1  

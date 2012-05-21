@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T23:12:57 PDT
+EESchema Schematic File Version 2  date 2012-05-20T23:43:59 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -96,19 +96,19 @@ $EndComp
 Text HLabel 5150 4100 0    60   Output ~ 0
 OSC
 $Comp
-L +3.3V #PWR89
+L +3.3V #PWR88
 U 1 1 4CC50DEA
 P 5150 4200
-F 0 "#PWR89" H 5150 4160 30  0001 C CNN
+F 0 "#PWR88" H 5150 4160 30  0001 C CNN
 F 1 "+3.3V" H 5150 4310 30  0000 C CNN
 	1    5150 4200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR88
+L GND #PWR87
 U 1 1 4CC50DE7
 P 5150 4000
-F 0 "#PWR88" H 5150 4000 30  0001 C CNN
+F 0 "#PWR87" H 5150 4000 30  0001 C CNN
 F 1 "GND" H 5150 3930 30  0001 C CNN
 	1    5150 4000
 	0    1    1    0   
