@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T21:48:56 PDT
+EESchema Schematic File Version 2  date 2012-05-20T21:53:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -41,6 +41,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 6400 5350
 Wire Wire Line
 	7450 4050 7150 4050
 Wire Wire Line
