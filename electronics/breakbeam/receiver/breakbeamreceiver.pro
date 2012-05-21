@@ -75,6 +75,7 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+LibName31=../../thunderbots-symbols
 [general]
 version=1
 [pcbnew]
@@ -96,7 +97,7 @@ MSegLar=150
 LastNetListRead=breakbeamreceiver.net
 [pcbnew/libraries]
 LibDir=
-LibName1=../thunderbots-modules
+LibName1=../../thunderbots-modules
 LibName2=sockets
 LibName3=connect
 LibName4=discret
@@ -107,4 +108,3 @@ LibName8=display
 LibName9=valves
 LibName10=led
 LibName11=dip_sockets
-LibName12=C:/Users/kokola/MyDesigns/My Repos/thunderbots/electronics/thunderbots-modules
