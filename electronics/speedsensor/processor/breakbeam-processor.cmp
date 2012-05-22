@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 20/05/2012 9:02:59 PM
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Mon 21 May 2012 09:34:26 PM PDT
 
 BeginCmp
 TimeStamp = /4C55144A;
@@ -204,6 +204,13 @@ IdModule  = LCD_screen;
 EndCmp
 
 BeginCmp
+TimeStamp = /4FBB167C;
+Reference = P7;
+ValeurCmp = CONN_2;
+IdModule  = SIL-2;
+EndCmp
+
+BeginCmp
 TimeStamp = /4FB94756;
 Reference = Q1;
 ValeurCmp = MMPQ3904;
@@ -309,10 +316,10 @@ IdModule  = SW_ROCKER_SP3T;
 EndCmp
 
 BeginCmp
-TimeStamp = /4D85F8A1;
-Reference = U4;
-ValeurCmp = XC6222B331PR;
-IdModule  = SOT89-5;
+TimeStamp = /4FBB1452;
+Reference = U1;
+ValeurCmp = LD1117D33;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp

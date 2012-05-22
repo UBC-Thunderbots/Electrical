@@ -1,6 +1,6 @@
-update=20/05/2012 3:14:33 PM
+update=Mon 21 May 2012 09:24:15 PM PDT
 version=1
-last_client=kicad
+last_client=pcbnew
 [cvpcb]
 version=1
 NetITyp=0
@@ -74,6 +74,8 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=../../thunderbots-symbols
+[general]
+version=1
 [pcbnew]
 version=1
 PadDrlX=0
@@ -90,7 +92,7 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=100
-LastNetListRead=
+LastNetListRead=breakbeam-processor.net
 [pcbnew/libraries]
 LibDir=
 LibName1=sockets
@@ -104,5 +106,3 @@ LibName8=valves
 LibName9=led
 LibName10=dip_sockets
 LibName11=../../thunderbots-modules
-[general]
-version=1
