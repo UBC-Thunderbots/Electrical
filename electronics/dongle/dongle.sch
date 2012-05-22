@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-20T18:41:01 PDT
+EESchema Schematic File Version 2  date 2012-05-22T00:45:46 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:dongle-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "21 may 2012"
+Date "22 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -422,6 +421,7 @@ U 1 1 4FB99C99
 P 2750 1500
 F 0 "P2" V 2700 1500 60  0000 C CNN
 F 1 "CONN_6" V 2800 1500 60  0000 C CNN
+F 4 "609-3263-ND" H 2750 1500 60  0001 C CNN "Field1"
 	1    2750 1500
 	1    0    0    -1  
 $EndComp
