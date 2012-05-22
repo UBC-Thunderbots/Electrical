@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-21T00:58:22 PDT
+EESchema Schematic File Version 2  date 2012-05-22T01:11:55 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 15 17
 Title ""
-Date "21 may 2012"
+Date "22 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -60,6 +59,7 @@ P 6100 4050
 F 0 "U12" H 6100 4000 60  0000 C CNN
 F 1 "ECS-3953M" H 6100 4100 60  0000 C CNN
 F 2 "ECS-3953M" H 6000 3950 60  0001 C CNN
+F 4 "XC287CT-ND" H 6100 4050 60  0001 C CNN "Field1"
 	1    6100 4050
 	1    0    0    -1  
 $EndComp

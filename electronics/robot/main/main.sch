@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-21T00:58:22 PDT
+EESchema Schematic File Version 2  date 2012-05-22T01:11:55 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,13 +27,12 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 17
 Title ""
-Date "21 may 2012"
+Date "22 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -397,6 +396,7 @@ U 1 1 4F644E8B
 P 4200 1600
 F 0 "R45" V 4280 1600 50  0000 C CNN
 F 1 "3.3kR" V 4200 1600 50  0000 C CNN
+F 4 "311-3.30KCRCT-ND" H 4200 1600 60  0001 C CNN "Field1"
 	1    4200 1600
 	1    0    0    -1  
 $EndComp
@@ -406,6 +406,7 @@ U 1 1 4F644E89
 P 4200 1000
 F 0 "R44" V 4280 1000 50  0000 C CNN
 F 1 "15kR" V 4200 1000 50  0000 C CNN
+F 4 "311-15.0KCRCT-ND" H 4200 1000 60  0001 C CNN "Field1"
 	1    4200 1000
 	1    0    0    -1  
 $EndComp
