@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-21T01:04:18 PDT
+EESchema Schematic File Version 2  date 2012-05-22T00:49:02 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:chicker-cache
 EELAYER 24  0
 EELAYER END
 $Descr A4 11700 8267
 Sheet 1 1
 Title ""
-Date "21 may 2012"
+Date "22 may 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -50,6 +49,7 @@ U 1 1 4FB9F54F
 P 9750 3850
 F 0 "M5" H 9830 3850 40  0000 L CNN
 F 1 "CONN_1" H 9750 3905 30  0001 C CNN
+F 4 "M3_MOUNT" H 9750 3850 60  0001 C CNN "Field1"
 	1    9750 3850
 	1    0    0    -1  
 $EndComp
@@ -301,6 +301,7 @@ U 1 1 4E878E18
 P 7350 1400
 F 0 "P5" V 7300 1400 40  0000 C CNN
 F 1 "CONN_2" V 7400 1400 40  0000 C CNN
+F 4 "long-pin-male-header2" H 7350 1400 60  0001 C CNN "Field1"
 	1    7350 1400
 	1    0    0    -1  
 $EndComp
@@ -312,6 +313,7 @@ U 1 1 4E878B2A
 P 9750 3650
 F 0 "M3" H 9830 3650 40  0000 L CNN
 F 1 "CONN_1" H 9750 3705 30  0001 C CNN
+F 4 "M3_MOUNT" H 9750 3650 60  0001 C CNN "Field1"
 	1    9750 3650
 	1    0    0    -1  
 $EndComp
@@ -321,6 +323,7 @@ U 1 1 4E878B29
 P 9750 3750
 F 0 "M4" H 9830 3750 40  0000 L CNN
 F 1 "CONN_1" H 9750 3805 30  0001 C CNN
+F 4 "M3_MOUNT" H 9750 3750 60  0001 C CNN "Field1"
 	1    9750 3750
 	1    0    0    -1  
 $EndComp
@@ -330,6 +333,7 @@ U 1 1 4E878B28
 P 9750 3550
 F 0 "M2" H 9830 3550 40  0000 L CNN
 F 1 "CONN_1" H 9750 3605 30  0001 C CNN
+F 4 "M3_MOUNT" H 9750 3550 60  0001 C CNN "Field1"
 	1    9750 3550
 	1    0    0    -1  
 $EndComp
@@ -339,6 +343,7 @@ U 1 1 4E878B24
 P 9750 3450
 F 0 "M1" H 9830 3450 40  0000 L CNN
 F 1 "CONN_1" H 9750 3505 30  0001 C CNN
+F 4 "M3_MOUNT" H 9750 3450 60  0001 C CNN "Field1"
 	1    9750 3450
 	1    0    0    -1  
 $EndComp
