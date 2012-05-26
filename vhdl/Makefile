@@ -113,8 +113,11 @@ $(PROJ).mcs : $(PROJ).bit
 #  -g Compress
 #    Packs data more efficiently, resulting in a smaller bitstream, without
 #    altering the semantics of the bitstream.
-#  -g ConfigRate:1
-#    Instructs the FPGA to clock in configuration data at 1Mbps.
+#  -g ConfigRate:10
+#    Instructs the FPGA to clock in configuration data at 10 Mbps.
+#  -g DriveDone:1
+#    Instructs the FPGA to drive the DONE pin high hard instead of leaving it to
+#    float with a pull-up.
 #  -g GTS_cycle:3
 #    Instructs the FPGA to release the GLOBAL 3-STATE net in completion cycle 3.
 #  -g LCK_cycle:4
@@ -131,7 +134,7 @@ $(PROJ).mcs : $(PROJ).bit
 #  -w
 #    Overwrites any existing file.
 $(PROJ).bit : $(PROJ).ncd
-	( source $(XILINX_SETTINGS) && bitgen -d -g Compress -g ConfigRate:1 -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
+	( source $(XILINX_SETTINGS) && bitgen -d -g Compress -g ConfigRate:10 -g DriveDone:yes -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
 
 # We can make a routed NCD file from an unrouted NCD file using Xilinx PAR.
 # Options

@@ -1,9 +1,9 @@
 run
 -ifn thunderbots.prj
 -ofn thunderbots.ngc
--p xc3s50atq144-4
+-p xc6slx9-tqg144-2
 -top top
 -opt_level 1
--opt_mode area
+-opt_mode speed
 -arch behavioural
 

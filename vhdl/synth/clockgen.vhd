@@ -7,87 +7,119 @@ use work.clock.all;
 
 entity ClockGen is
 	port(
-		Oscillator : in std_ulogic;
-		Reset : in std_ulogic;
-		Locked : out std_ulogic;
-		ClockLow : out std_ulogic;
-		ClockMid : out std_ulogic;
-		ClockHigh : out std_ulogic);
+		Oscillator0 : in std_ulogic;
+		Oscillator1 : in std_ulogic;
+		Clock1MHz : out std_ulogic;
+		Clock8MHz : out std_ulogic;
+		Failed : out boolean := false);
+--		Reset : in std_ulogic;
+--		Locked : out std_ulogic;
+--		ClockLow : out std_ulogic;
+--		ClockMid : out std_ulogic;
+--		ClockHigh : out std_ulogic);
 end entity ClockGen;
 
---
--- This entity generates clocks for the FPGA from an input 8MHz clock provided by the packaged oscillator.
--- The buffers and DCMs are arranged in the following layout:
---
---
---     /------------------------------------------\
---     |                                          |
---     |  /------------------------\              |
---     |  |                        |  8 MHz   |\  |
---     \--| CLKFB             CLK0 |----------| +-+--[]
---        |                        |          |/
---        |                        |
---   |\   |                        |          |\
--- --| +--| CLKIN            CLKFX |----------| +----[]
---   |/   |                        |          |/
---        |                        |
---        |                        |          |\
--- -------| RST              CLKDV |----------| +----[]
---        |                        |          |/
---        \------------------------/
---
 architecture Behavioural of ClockGen is
-	signal OscillatorBuffered : std_ulogic;
-	signal DCMClock0 : std_ulogic;
-	signal DCMClock0Buffered : std_ulogic;
-	signal DCMClockDV : std_ulogic;
-	signal DCMClockFX : std_ulogic;
-
-	constant ClockLowDivider : natural := 8;
-	constant ClockHighMultiplier : natural := 25;
-	constant ClockHighDivider : natural := 16;
-
-	-- These will evaluate to nonzero numbers if the math doesn't work out, which will fail the assignment to natural range 0 to 0.
-	constant ClockLowCheck : natural range 0 to 0 := ClockMidFrequency - ClockLowFrequency * ClockLowDivider;
-	constant ClockHighCheck : natural range 0 to 0 := ClockMidFrequency * ClockHighMultiplier - ClockHighFrequency * ClockHighDivider;
+	signal Oscillator0Buffered : std_ulogic;
+	signal MainDCMClockSelect : std_ulogic := '0';
+	signal MainDCMClockInput : std_ulogic;
+	signal MainDCMReset : std_ulogic;
+	signal MainDCMClock1 : std_ulogic;
+	signal MainDCMClock8 : std_ulogic;
+	signal MainDCMStatus : std_logic_vector(7 downto 0);
+	signal MainDCMLocked : std_ulogic;
+	signal MainDCMInputStopped : std_ulogic;
+	signal BackupDCMClock8 : std_ulogic;
+	signal BackupDCMClock8Buffered : std_ulogic;
+	signal BackupDCMLocked : std_ulogic;
+	signal EnableOutput : std_ulogic := '1';
 begin
 	IBufferG : IBufG
 	port map(
-		I => Oscillator,
-		O => OscillatorBuffered
-	);
+		I => Oscillator0,
+		O => Oscillator0Buffered);
 
-	DCM : DCM_SP
+	ClockSourceSelector : BUFGMUX
 	generic map(
-		CLKIN_PERIOD => 125.0,
-		CLKDV_DIVIDE => real(ClockLowDivider),
-		CLKFX_MULTIPLY => ClockHighMultiplier,
-		CLKFX_DIVIDE => ClockHighDivider,
-		STARTUP_WAIT => false)
+		CLK_SEL_TYPE => "ASYNC")
 	port map(
-		CLKIN => OscillatorBuffered,
-		CLKFB => DCMClock0Buffered,
-		RST => Reset,
-		PSEN => '0',
-		CLK0 => DCMClock0,
-		CLKDV => DCMClockDV,
-		CLKFX => DCMClockFX,
-		LOCKED => Locked);
+		I0 => Oscillator0Buffered,
+		I1 => BackupDCMClock8,
+		O => MainDCMClockInput,
+		S => MainDCMClockSelect);
 
-	BufG0 : BufG
+	MainDCM : DCM_SP
+	generic map(
+		CLKIN_PERIOD => 1.0e9 / 8.0e6,
+		CLK_FEEDBACK => "NONE",
+		CLKDV_DIVIDE => 8.0,
+		CLKOUT_PHASE_SHIFT => "NONE",
+		DESKEW_ADJUST => "SYSTEM_SYNCHRONOUS",
+		STARTUP_WAIT => true,
+		CLKIN_DIVIDE_BY_2 => false)
 	port map(
-		I => DCMClock0,
-		O => DCMClock0Buffered);
+		CLKIN => MainDCMClockInput,
+		RST => MainDCMReset,
+		CLK0 => MainDCMClock8,
+		CLKDV => MainDCMClock1,
+		STATUS => MainDCMStatus,
+		LOCKED => MainDCMLocked);
 
-	BufGDV : BufG
+	MainDCMInputStopped <= MainDCMStatus(1);
+
+	BufferG1 : BUFGCE
 	port map(
-		I => DCMClockDV,
-		O => ClockLow);
+		I => MainDCMClock1,
+		O => Clock1MHz,
+		CE => EnableOutput);
 
-	BufGFX : BufG
+	BufferG8 : BUFGCE
 	port map(
-		I => DCMClockFX,
-		O => ClockHigh);
+		I => MainDCMClock8,
+		O => Clock8MHz,
+		CE => EnableOutput);
 
-	ClockMid <= DCMClock0Buffered;
+	BackupDCM : DCM_CLKGEN
+	generic map(
+		CLKIN_PERIOD => 1.0e9 / 8.0e6,
+		CLKFX_MULTIPLY => 2,
+		CLKFX_DIVIDE => 2,
+		STARTUP_WAIT => true)
+	port map(
+		CLKIN => Oscillator0Buffered,
+		RST => '0',
+		FREEZEDCM => BackupDCMLocked,
+		CLKFX => BackupDCMClock8,
+		LOCKED => BackupDCMLocked);
+
+	BufferG8Backup : BUFG
+	port map(
+		I => BackupDCMClock8,
+		O => BackupDCMClock8Buffered);
+
+	process(BackupDCMClock8Buffered) is
+		variable Fired : boolean := false;
+		variable MainDCMResetCount : natural range 0 to 7 := 0;
+	begin
+		if rising_edge(BackupDCMClock8Buffered) then
+			if (MainDCMLocked = '0' or MainDCMInputStopped = '1') and not Fired then
+				Fired := true;
+				MainDCMResetCount := 7;
+				EnableOutput <= '0';
+				MainDCMClockSelect <= '1';
+			elsif MainDCMResetCount /= 0 then
+				MainDCMResetCount := MainDCMResetCount - 1;
+			elsif Fired and MainDCMResetCount = 0 and MainDCMLocked = '1' and MainDCMInputStopped = '0' then
+				EnableOutput <= '1';
+			end if;
+		end if;
+
+		if MainDCMResetCount /= 0 then
+			MainDCMReset <= '1';
+		else
+			MainDCMReset <= '0';
+		end if;
+
+		Failed <= Fired;
+	end process;
 end architecture Behavioural;
