@@ -1,8 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 package clock is
-	constant ClockLowFrequency : natural := 1000000;
-	constant ClockMidFrequency : natural := 8000000;
-	constant ClockHighFrequency : natural := 12000000;
-	constant ClockLowTime : real := (1.0 / real(ClockLowFrequency));
-	constant ClockMidTime : real := (1.0 / real(ClockMidFrequency));
-	constant ClockHighTime : real := (1.0 / real(ClockHighFrequency));
+	type clocks_t is record
+		Clock4MHz : std_ulogic;
+		Clock8MHz : std_ulogic;
+		Clock40MHz : std_ulogic;
+	end record;
 end package clock;

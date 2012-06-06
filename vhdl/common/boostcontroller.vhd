@@ -8,8 +8,10 @@ use work.types.all;
 --! Charger is either active at full power or not with the 10 volt top up window
 
 entity BoostController is 
-	port (
-		ClockLow : in std_logic; --! Clock for the system to run on
+	generic(
+		ClockFrequency : real);
+	port(
+		Clock : in std_logic; --! Clock for the system to run on
 		Enable : in boolean; --!Enables the Charger
 		CapacitorVoltage : in capacitor_voltage_t; --! Current Capacitor Voltage
 		BatteryVoltage : in battery_voltage_t; --! Current Battery Voltage
@@ -20,21 +22,21 @@ entity BoostController is
 end entity;
 
 architecture Behavioural of BoostController is
+	constant ClockPeriod : real := 1.0 / ClockFrequency;
 	--We should probably make some or all of these generic parameters
 	constant Inductance : real := 22.0e-6; --! Inductance in switching element
-	constant Frequency : real := real(ClockLowFrequency);	--! Frequency the system is running at
 	constant BattBits : real := real(battery_voltage_t'high); --! Number of levels for the battery
 	constant CapBits : real := real(capacitor_voltage_t'high);	--! Number of levels for the Cap
 	constant MaxCurrent : real := 10.0;	--! Maximum inductor Current
 	constant MaxBatt : real := 18.3;	--! Voltage of battery at maximum ADC range 
 	constant MaxCap : real := 330.0;	--! Voltage of Cap at maximum ADC range
 
-	constant CounterMax : natural := natural(Inductance * Frequency * MaxCurrent * BattBits / MaxBatt);
+	constant CounterMax : natural := natural(Inductance * ClockFrequency * MaxCurrent * BattBits / MaxBatt);
 	constant MaxVoltage : natural := natural(230.0 / MaxCap * CapBits);
 	constant Diode : natural := natural(0.7 / MaxBatt * BattBits);
 	
 	constant ChargeTimeout : real := 4.0; -- timeout for charge cycle
-	constant CounterMaxForTimeout : natural := natural(ChargeTimeout * Frequency);
+	constant CounterMaxForTimeout : natural := natural(ChargeTimeout * ClockFrequency);
 	
 	--! Ratio1 + 1 / Ratio2 should be MaxCap * BattBits / MaxBatt / CapBits
 	--! Ratio2 MUST be power of 2, Ratio1 SHOULD be power of 2 to avoid multiplier
@@ -73,10 +75,10 @@ begin
 		end if;
 	end process;
 
-	process(ClockLow)
+	process(Clock)
 		variable Counter : natural range 0 to CounterMaxForTimeout + 1 := 0;
 	begin
-		if rising_edge(ClockLow) then
+		if rising_edge(Clock) then
 			if ActivityBuffer then
 				if Counter = CounterMaxForTimeout + 1 then
 					Counter := 0;
@@ -94,7 +96,7 @@ begin
 	Activity <= ActivityBuffer;
 
 	-- This process controls the actual switch timing;
-	process(ClockLow, TimeoutBuffer)
+	process(Clock, TimeoutBuffer)
 		type state_t is (ONTIME, OFFTIME, WAITING); --! permissable states for the dutycycle
 		variable State : state_t := WAITING;
 		variable Counter : natural range 1 to CounterMax + MaxIncrement := 1;
@@ -106,10 +108,10 @@ begin
 		constant ThermalRange : natural := ThermalLimit - ThermalAmbient;
 		variable ThermalAccumulator : natural range 0 to ThermalRange := 0;
 		constant ThermalTimeInterval : real := 23.0 / 256.0;
-		constant ThermalTimeTickCount : natural := natural(ThermalTimeInterval / ClockLowTime);
+		constant ThermalTimeTickCount : natural := natural(ThermalTimeInterval / ClockPeriod);
 		variable ThermalTimeCounter : natural range 0 to ThermalTimeTickCount - 1 := 0;
 	begin
-		if rising_edge(ClockLow) then
+		if rising_edge(Clock) then
 			CounterDisposition := HOLD;
 
 			case State is

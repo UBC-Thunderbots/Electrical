@@ -8,8 +8,7 @@ entity Motor is
 		PWMMax : positive;
 		PWMPhase : natural);
 	port(
-		ClockMid : in std_ulogic;
-		ClockHigh : in std_ulogic;
+		Clocks : in clocks_t;
 		Enable : in boolean;
 		Power : in natural range 0 to PWMMax;
 		Direction : in boolean;
@@ -21,17 +20,15 @@ entity Motor is
 end entity Motor;
 
 architecture Behavioural of Motor is
-	constant DeadBandSeconds : real := 200.0e-9;
-	constant DeadBandWidth : natural := natural(DeadBandSeconds * real(ClockHighFrequency));
 	signal CommutatorPhases : motor_phases_t;
 	signal PWMOutput : boolean;
 	signal PWMPhases : motor_phases_t;
 begin
-	process(ClockMid) is
+	process(Clocks.Clock8MHz) is
 		type seen_hall_high_t is array(0 to 2) of boolean;
 		variable SeenHallHigh : seen_hall_high_t := (others => false);
 	begin
-		if rising_edge(ClockMid) then
+		if rising_edge(Clocks.Clock8MHz) then
 			if EncodersStrobe then
 				SeenHallHigh := (others => false);
 			else
@@ -63,14 +60,14 @@ begin
 		Max => PWMMax,
 		Phase => PWMPhase)
 	port map(
-		Clock => ClockMid,
+		Clock => Clocks.Clock8MHz,
 		Value => Power,
 		Output => PWMOutput);
 
 	GeneratePhases: for I in 0 to 2 generate
-		process(ClockHigh) is
+		process(Clocks.Clock8MHz) is
 		begin
-			if rising_edge(ClockHigh) then
+			if rising_edge(Clocks.Clock8MHz) then
 				if Enable then
 					if CommutatorPhases(I) = HIGH then
 						if PWMOutput then
@@ -89,9 +86,9 @@ begin
 
 		DeadBand: entity work.DeadBand(Behavioural)
 		generic map(
-			Width => DeadBandWidth)
+			Width => 1)
 		port map(
-			Clock => ClockHigh,
+			Clock => Clocks.Clock8MHz,
 			Input => PWMPhases(I),
 			Output => Phases(I));
 	end generate;
