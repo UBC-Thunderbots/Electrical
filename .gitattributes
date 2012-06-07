@@ -167,6 +167,7 @@ vhdl/common/kicker.vhd -text
 vhdl/common/main.vhd -text
 vhdl/common/motor.vhd -text
 vhdl/common/navre.v -text
+vhdl/common/navrewrapper.vhd -text
 vhdl/common/parbus.vhd -text
 vhdl/common/pwm.vhd -text
 vhdl/common/syncdown.vhd -text

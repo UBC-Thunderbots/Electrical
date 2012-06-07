@@ -10,6 +10,7 @@ vhdl work common/deadband.vhd
 #vhdl work common/main.vhd
 vhdl work common/motor.vhd
 verilog work common/navre.v
+vhdl work common/navrewrapper.vhd
 #vhdl work common/parbus.vhd
 vhdl work common/pwm.vhd
 #vhdl work common/syncdown.vhd

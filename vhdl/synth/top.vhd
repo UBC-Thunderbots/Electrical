@@ -215,42 +215,7 @@ end architecture TestADC;
 
 architecture TestNavre of Top is
 	signal Clocks : clocks_t;
-
-	signal NavreResetShifter : std_ulogic_vector(15 downto 0) := X"FFFF";
-	signal NavreProgramMemoryClockEnable : std_ulogic;
-	signal NavreProgramMemoryAddress : unsigned(11 downto 0);
-	signal NavreProgramMemoryData : std_ulogic_vector(15 downto 0) := X"0000";
-	signal NavreDataMemoryWriteEnable : std_ulogic;
-	signal NavreDataMemoryAddress : unsigned(11 downto 0);
-	signal NavreDataMemoryDI : std_ulogic_vector(7 downto 0) := X"00";
-	signal NavreDataMemoryDO : std_ulogic_vector(7 downto 0);
-	signal NavreIOReadEnable : std_ulogic;
-	signal NavreIOWriteEnable : std_ulogic;
-	signal NavreIOAddress : unsigned(5 downto 0);
-	signal NavreIODO : std_ulogic_vector(7 downto 0);
-	signal NavreIODI : std_ulogic_vector(7 downto 0) := X"00";
-
-	component navre
-	generic(
-		pmem_width : natural;
-		dmem_width : natural);
-	port(
-		clk : in std_ulogic;
-		rst : in std_ulogic;
-		pmem_ce : out std_ulogic;
-		pmem_a : out std_ulogic_vector(pmem_width - 1 downto 0);
-		pmem_d : in std_ulogic_vector(15 downto 0);
-		dmem_we : out std_ulogic;
-		dmem_a : out std_ulogic_vector(dmem_width - 1 downto 0);
-		dmem_di : in std_ulogic_vector(7 downto 0);
-		dmem_do : out std_ulogic_vector(7 downto 0);
-		io_re : out std_ulogic;
-		io_we : out std_ulogic;
-		io_a : out std_ulogic_vector(5 downto 0);
-		io_do : out std_ulogic_vector(7 downto 0);
-		io_di : in std_ulogic_vector(7 downto 0);
-		dbg_pc : out std_ulogic_vector(pmem_width - 1 downto 0));
-	end component navre;
+	signal LEDs : std_ulogic_vector(4 downto 0);
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
@@ -258,89 +223,14 @@ begin
 		Oscillator1 => OscillatorPin(1),
 		Clocks => Clocks);
 
-	NavreInstance : navre
-	generic map(
-		pmem_width => 12,
-		dmem_width => 12)
+	WrapperInstance : entity work.NavreWrapper(Arch)
 	port map(
-		clk => Clocks.Clock40MHz,
-		rst => NavreResetShifter(0),
-		pmem_ce => NavreProgramMemoryClockEnable,
-		unsigned(pmem_a) => NavreProgramMemoryAddress,
-		pmem_d => NavreProgramMemoryData,
-		dmem_we => NavreDataMemoryWriteEnable,
-		unsigned(dmem_a) => NavreDataMemoryAddress,
-		dmem_di => NavreDataMemoryDI,
-		dmem_do => NavreDataMemoryDO,
-		io_re => NavreIOReadEnable,
-		io_we => NavreIOWriteEnable,
-		unsigned(io_a) => NavreIOAddress,
-		io_do => NavreIODO,
-		io_di => NavreIODI,
-		dbg_pc => open);
+		Clock => Clocks.Clock40MHz,
+		LEDs => LEDs);
 
-	process(Clocks.Clock40MHz) is
-		type program_memory_lane_t is array(0 to 4095) of std_ulogic_vector(3 downto 0);
-		type program_memory_t is array(3 downto 0) of program_memory_lane_t;
-		variable ProgramMemory : program_memory_t := (0 => (others => X"1"), 1 => (others => X"2"), 2 => (others => X"3"), 3 => (others => X"4"));
-		constant DataMemoryLaneWidth : natural := 4;
-		constant DataMemoryBRAMs : natural := 8 / DataMemoryLaneWidth;
-		type data_memory_lane_t is array(0 to 4095) of std_ulogic_vector(DataMemoryLaneWidth - 1 downto 0);
-		type data_memory_t is array(DataMemoryBRAMs - 1 downto 0) of data_memory_lane_t;
-		variable DataMemory : data_memory_t;
-		variable TSC : unsigned(31 downto 0) := X"00000000";
-		variable TSCLatched : std_ulogic_vector(31 downto 0);
-	begin
-		if rising_edge(Clocks.Clock40MHz) then
-			NavreResetShifter <= '0' & NavreResetShifter(15 downto 1);
-
-			if NavreProgramMemoryClockEnable = '1' then
-				NavreProgramMemoryData(15 downto 12) <= ProgramMemory(3)(to_integer(NavreProgramMemoryAddress));
-				NavreProgramMemoryData(11 downto 8) <= ProgramMemory(2)(to_integer(NavreProgramMemoryAddress));
-				NavreProgramMemoryData(7 downto 4) <= ProgramMemory(1)(to_integer(NavreProgramMemoryAddress));
-				NavreProgramMemoryData(3 downto 0) <= ProgramMemory(0)(to_integer(NavreProgramMemoryAddress));
-			end if;
-
-			for Index in 0 to DataMemoryBRAMs - 1 loop
-				NavreDataMemoryDI((Index + 1) * DataMemoryLaneWidth - 1 downto Index * DataMemoryLaneWidth) <= DataMemory(Index)(to_integer(NavreDataMemoryAddress));
-			end loop;
-			if NavreDataMemoryWriteEnable = '1' then
-				for Index in 0 to DataMemoryBRAMs - 1 loop
-					DataMemory(Index)(to_integer(NavreDataMemoryAddress)) := NavreDataMemoryDO((Index + 1) * DataMemoryLaneWidth - 1 downto Index * DataMemoryLaneWidth);
-				end loop;
-			end if;
-
-			NavreIODI <= X"00";
-			if NavreIOReadEnable = '1' then
-				case to_integer(NavreIOAddress) is
-					when 0 =>
-						TSCLatched := std_ulogic_vector(TSC);
-						NavreIODI <= TSCLatched(7 downto 0);
-					when 1 =>
-						NavreIODI <= TSCLatched(15 downto 8);
-					when 2 =>
-						NavreIODI <= TSCLatched(23 downto 16);
-					when 3 =>
-						NavreIODI <= TSCLatched(31 downto 24);
-					when others =>
-						null;
-				end case;
-			end if;
-
-			if NavreIOWriteEnable = '1' then
-				case to_integer(NavreIOAddress) is
-					when 0 =>
-						TestLEDsPin(2) <= NavreIODO(4);
-						TestLEDsPin(1) <= NavreIODO(3);
-						TestLEDsPin(0) <= NavreIODO(2);
-						RadioLEDPin <= NavreIODO(1);
-						ChargedLEDPin <= NavreIODO(0);
-					when others =>
-						null;
-				end case;
-			end if;
-
-			TSC := TSC + 1;
-		end if;
-	end process;
+	TestLEDsPin(2) <= LEDs(4);
+	TestLEDsPin(1) <= LEDs(3);
+	TestLEDsPin(0) <= LEDs(2);
+	RadioLEDPin <= LEDs(1);
+	ChargedLEDPin <= LEDs(0);
 end architecture TestNavre;
