@@ -138,8 +138,9 @@ $(PROJ).mcs : $(PROJ).bit
 $(PROJ).bit : $(PROJ).ncd ../firmware/main/main.elf
 	( source $(XILINX_SETTINGS) && bitgen -bd ../firmware/main/main.elf -d -g Compress -g ConfigRate:10 -g DriveDone:yes -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
 
-# The ELF file depends on all its source and header files, and can be rebuilt by recursively making in the firmware/main directory.
-../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h)
+# The ELF file depends on all its source and header files and the Makefile and linker script.
+# It can be rebuilt by recursively making in the firmware/main directory.
+../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h) ../firmware/main/Makefile ../firmware/main/navre.ld
 	$(MAKE) -C ../firmware/main
 
 # We can make a routed NCD file from an unrouted NCD file using Xilinx PAR.
