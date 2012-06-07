@@ -112,21 +112,19 @@ begin
 	-- Provide the CPU with access to I/O ports
 	process(Clock) is
 		variable TSC : unsigned(31 downto 0) := X"00000000";
-		variable TSCLatched : std_ulogic_vector(31 downto 0);
 	begin
 		if rising_edge(Clock) then
 			IODI <= X"00";
 			if IOReadEnable = '1' then
 				case to_integer(IOAddress) is
 					when 0 =>
-						TSCLatched := std_ulogic_vector(TSC);
-						IODI <= TSCLatched(7 downto 0);
+						IODI <= std_ulogic_vector(TSC(7 downto 0));
 					when 1 =>
-						IODI <= TSCLatched(15 downto 8);
+						IODI <= std_ulogic_vector(TSC(15 downto 8));
 					when 2 =>
-						IODI <= TSCLatched(23 downto 16);
+						IODI <= std_ulogic_vector(TSC(23 downto 16));
 					when 3 =>
-						IODI <= TSCLatched(31 downto 24);
+						IODI <= std_ulogic_vector(TSC(31 downto 24));
 					when others =>
 						null;
 				end case;
