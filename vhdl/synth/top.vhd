@@ -221,7 +221,7 @@ architecture TestNavre of Top is
 	signal NavreProgramMemoryAddress : unsigned(11 downto 0);
 	signal NavreProgramMemoryData : std_ulogic_vector(15 downto 0) := X"0000";
 	signal NavreDataMemoryWriteEnable : std_ulogic;
-	signal NavreDataMemoryAddress : unsigned(14 downto 0);
+	signal NavreDataMemoryAddress : unsigned(11 downto 0);
 	signal NavreDataMemoryDI : std_ulogic_vector(7 downto 0) := X"00";
 	signal NavreDataMemoryDO : std_ulogic_vector(7 downto 0);
 	signal NavreIOReadEnable : std_ulogic;
@@ -261,7 +261,7 @@ begin
 	NavreInstance : navre
 	generic map(
 		pmem_width => 12,
-		dmem_width => 15)
+		dmem_width => 12)
 	port map(
 		clk => Clocks.Clock40MHz,
 		rst => NavreResetShifter(0),
@@ -280,19 +280,14 @@ begin
 		dbg_pc => open);
 
 	process(Clocks.Clock40MHz) is
-		type program_memory_type is array(0 to 4095) of std_ulogic_vector(15 downto 0);
-		variable ProgramMemory : program_memory_type := (
-			X"B000", -- IN r0, 0x00
-			X"B003", -- IN r0, 0x03
-			X"9200", -- STS 0x0000, r0
-			X"0000",
-			X"9010", -- LDS r1, 0x0000
-			X"0000",
-			X"B810", -- OUT 0x00, r1
-			X"CFF8", -- RJMP .-16 <0x00>
-			others => X"0000");
-		type data_memory_type is array(0 to 32767) of std_ulogic_vector(7 downto 0);
-		variable DataMemory : data_memory_type;
+		type program_memory_lane_t is array(0 to 4095) of std_ulogic_vector(3 downto 0);
+		type program_memory_t is array(3 downto 0) of program_memory_lane_t;
+		variable ProgramMemory : program_memory_t := (0 => (others => X"1"), 1 => (others => X"2"), 2 => (others => X"3"), 3 => (others => X"4"));
+		constant DataMemoryLaneWidth : natural := 4;
+		constant DataMemoryBRAMs : natural := 8 / DataMemoryLaneWidth;
+		type data_memory_lane_t is array(0 to 4095) of std_ulogic_vector(DataMemoryLaneWidth - 1 downto 0);
+		type data_memory_t is array(DataMemoryBRAMs - 1 downto 0) of data_memory_lane_t;
+		variable DataMemory : data_memory_t;
 		variable TSC : unsigned(31 downto 0) := X"00000000";
 		variable TSCLatched : std_ulogic_vector(31 downto 0);
 	begin
@@ -300,12 +295,19 @@ begin
 			NavreResetShifter <= '0' & NavreResetShifter(15 downto 1);
 
 			if NavreProgramMemoryClockEnable = '1' then
-				NavreProgramMemoryData <= ProgramMemory(to_integer(NavreProgramMemoryAddress));
+				NavreProgramMemoryData(15 downto 12) <= ProgramMemory(3)(to_integer(NavreProgramMemoryAddress));
+				NavreProgramMemoryData(11 downto 8) <= ProgramMemory(2)(to_integer(NavreProgramMemoryAddress));
+				NavreProgramMemoryData(7 downto 4) <= ProgramMemory(1)(to_integer(NavreProgramMemoryAddress));
+				NavreProgramMemoryData(3 downto 0) <= ProgramMemory(0)(to_integer(NavreProgramMemoryAddress));
 			end if;
 
-			NavreDataMemoryDI <= DataMemory(to_integer(NavreDataMemoryAddress));
+			for Index in 0 to DataMemoryBRAMs - 1 loop
+				NavreDataMemoryDI((Index + 1) * DataMemoryLaneWidth - 1 downto Index * DataMemoryLaneWidth) <= DataMemory(Index)(to_integer(NavreDataMemoryAddress));
+			end loop;
 			if NavreDataMemoryWriteEnable = '1' then
-				DataMemory(to_integer(NavreDataMemoryAddress)) := NavreDataMemoryDO;
+				for Index in 0 to DataMemoryBRAMs - 1 loop
+					DataMemory(Index)(to_integer(NavreDataMemoryAddress)) := NavreDataMemoryDO((Index + 1) * DataMemoryLaneWidth - 1 downto Index * DataMemoryLaneWidth);
+				end loop;
 			end if;
 
 			NavreIODI <= X"00";

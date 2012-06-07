@@ -311,6 +311,7 @@ vhdl/*_pad.txt
 vhdl/_xmsgs
 vhdl/ghdl
 vhdl/html
+vhdl/thunderbots_bd.bmm
 vhdl/thunderbots_bitgen.xwbt
 vhdl/thunderbots_vhdl.prj
 vhdl/work-obj93.cf

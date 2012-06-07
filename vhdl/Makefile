@@ -108,6 +108,8 @@ $(PROJ).mcs : $(PROJ).bit
 
 # We can make a BIT file from a routed NCD file using Xilinx BITGEN.
 # Options
+#  -bd ../firmware/main/main.elf
+#    Loads the firmware from the ELF file into the block RAMs.
 #  -d
 #    Skips DRC, since it's done by MAP/PAR anyway.
 #  -g Compress
@@ -133,8 +135,12 @@ $(PROJ).mcs : $(PROJ).bit
 #    application.
 #  -w
 #    Overwrites any existing file.
-$(PROJ).bit : $(PROJ).ncd
-	( source $(XILINX_SETTINGS) && bitgen -d -g Compress -g ConfigRate:10 -g DriveDone:yes -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
+$(PROJ).bit : $(PROJ).ncd ../firmware/main/main.elf
+	( source $(XILINX_SETTINGS) && bitgen -bd ../firmware/main/main.elf -d -g Compress -g ConfigRate:10 -g DriveDone:yes -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
+
+# The ELF file depends on all its source and header files, and can be rebuilt by recursively making in the firmware/main directory.
+../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h)
+	$(MAKE) -C ../firmware/main
 
 # We can make a routed NCD file from an unrouted NCD file using Xilinx PAR.
 # Options
@@ -156,8 +162,8 @@ $(PROJ)_map.ncd : $(PROJ).ngd
 	( source $(XILINX_SETTINGS) && map -pr b $(PROJ).ngd -o $(PROJ)_map.ncd -w -detail )
 
 # We can make an NGD file from an NGC file and a UCF file using Xilinx NGDBUILD.
-$(PROJ).ngd : $(PROJ).ngc $(PROJ).ucf
-	( source $(XILINX_SETTINGS) && ngdbuild $(PROJ).ngc )
+$(PROJ).ngd : $(PROJ).ngc $(PROJ).ucf $(PROJ).bmm
+	( source $(XILINX_SETTINGS) && ngdbuild -bm $(PROJ).bmm $(PROJ).ngc )
 
 # We can make an NCD file from an XST file, a PRJ file, and a bunch of VHD files
 # using Xilinx XST.
@@ -243,7 +249,7 @@ $(eval $(foreach smv,$(SMVs),$(call prove_target_template,$(smv))))
 #####################
 
 clean :
-	$(RM) *.bgn *.bit *.bld *.cfi *.drc *.html *.log *.lso *.lst *.map *.mcs *.mrp *.ncd *.ngc *.ngd *.ngm *_pad.csv *_pad.txt *.pad *.par *.pcf *.prm *.ptwx *.srp *.unroutes *.xml *.xpi *.xrpt $(PROJ)_bitgen.xwbt $(PROJ)_vhdl.prj work-obj93.cf
+	$(RM) *.bgn *.bit *.bld *.cfi *.drc *.html *.log *.lso *.lst *.map *.mcs *.mrp *.ncd *.ngc *.ngd *.ngm *_pad.csv *_pad.txt *.pad *.par *.pcf *.prm *.ptwx *.srp *.unroutes *.xml *.xpi *.xrpt $(PROJ)_bd.bmm $(PROJ)_bitgen.xwbt $(PROJ)_vhdl.prj work-obj93.cf
 	$(RM) -r ghdl html xlnx_auto_0_xdb xst _xmsgs
 .PHONY : clean
 

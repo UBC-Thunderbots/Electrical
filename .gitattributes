@@ -178,6 +178,7 @@ vhdl/sim/flashchecksummertest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/pintypes.vhd -text
 vhdl/synth/top.vhd -text
+vhdl/thunderbots.bmm -text
 vhdl/thunderbots.prj -text
 vhdl/thunderbots.ucf -text
 vhdl/thunderbots.xst -text

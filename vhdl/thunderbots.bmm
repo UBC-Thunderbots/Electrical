@@ -1,0 +1,15 @@
+ADDRESS_SPACE ProgramMemory RAMB16 [0x000000:0x001FFF]
+	BUS_BLOCK
+		Mram_ProgramMemory_1 [7:4];
+		Mram_ProgramMemory_0 [3:0];
+		Mram_ProgramMemory_3 [15:12];
+		Mram_ProgramMemory_2 [11:8];
+	END_BUS_BLOCK;
+END_ADDRESS_SPACE;
+
+ADDRESS_SPACE DataMemory RAMB16 [0x800000:0x800FFF]
+	BUS_BLOCK
+		Mram_DataMemory_1 [7:4];
+		Mram_DataMemory_0 [3:0];
+	END_BUS_BLOCK;
+END_ADDRESS_SPACE;
