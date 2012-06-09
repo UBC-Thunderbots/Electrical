@@ -285,6 +285,12 @@ architecture Main of Top is
 	signal FlashDataWrite : std_ulogic_vector(7 downto 0) := X"00";
 	signal FlashStrobe : boolean := false;
 	signal FlashBusy : boolean := false;
+
+	signal MRFCS : std_ulogic := '1';
+	signal MRFDataRead : std_ulogic_vector(7 downto 0) := X"00";
+	signal MRFDataWrite : std_ulogic_vector(7 downto 0) := X"00";
+	signal MRFStrobe : boolean := false;
+	signal MRFBusy : boolean := false;
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
@@ -684,8 +690,9 @@ begin
 	FlashCSPin <= FlashCS;
 	FlashSPI : entity work.SPI(Arch)
 	port map(
-		Clock => Clocks.Clock40MHz,
-		ClockI => Clocks.Clock40MHzI,
+		HostClock => Clocks.Clock40MHz,
+		BusClock => Clocks.Clock40MHz,
+		BusClockI => Clocks.Clock40MHzI,
 		WriteData => FlashDataWrite,
 		ReadData => FlashDataRead,
 		Strobe => FlashStrobe,
@@ -693,4 +700,18 @@ begin
 		ClockPin => FlashClockPin,
 		MOSIPin => FlashMOSIPin,
 		MISOPin => FlashMISOPin);
+
+	MRFCSPin <= MRFCS;
+	MRFSPI : entity work.SPI(Arch)
+	port map(
+		HostClock => Clocks.Clock40MHz,
+		BusClock => Clocks.Clock10MHz,
+		BusClockI => Clocks.Clock10MHzI,
+		WriteData => MRFDataWrite,
+		ReadData => MRFDataRead,
+		Strobe => MRFStrobe,
+		Busy => MRFBusy,
+		ClockPin => MRFClockPin,
+		MOSIPin => MRFMOSIPin,
+		MISOPin => MRFMISOPin);
 end architecture Main;
