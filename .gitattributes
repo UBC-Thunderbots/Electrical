@@ -155,7 +155,7 @@ electronics/speedsensor/receiver/breakbeamreceiver.pro -text
 electronics/speedsensor/receiver/breakbeamreceiver.sch -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
-vhdl/common/adc.vhd -text
+vhdl/common/ads7866.vhd -text
 vhdl/common/boostcontroller.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
@@ -165,11 +165,13 @@ vhdl/common/flashchecksummer.vhd -text
 vhdl/common/graycounter.vhd -text
 vhdl/common/kicker.vhd -text
 vhdl/common/main.vhd -text
+vhdl/common/mcp3004.vhd -text
 vhdl/common/motor.vhd -text
 vhdl/common/navre.v -text
 vhdl/common/navrewrapper.vhd -text
 vhdl/common/parbus.vhd -text
 vhdl/common/pwm.vhd -text
+vhdl/common/spi.vhd -text
 vhdl/common/syncdown.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text

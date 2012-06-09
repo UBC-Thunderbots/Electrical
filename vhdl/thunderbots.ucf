@@ -15,24 +15,33 @@ net "HVPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P138;
 
 # SPI ADC
 net "ADCCSPin" iostandard=LVCMOS33 | slew=fast | loc=P35;
-net "ADCClockPin" iostandard=LVCMOS33 | slew=fast | loc=P32;
+net "ADCClockPin" iostandard=LVCMOS33 | slew=fast | loc=P87;
 net "ADCMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P34;
-net "ADCMISOPin" iostandard=LVCMOS33 | slew=fast | loc=P33;
+net "ADCMISOPin" iostandard=LVCMOS33 | float | loc=P33;
 
-# SPI flash, MRF24J40, and chicker
+# SPI flash
 net "FlashCSPin" iostandard=LVCMOS33 | slew=fast | loc=P38;
-net "ChickerCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P80;
+net "FlashClockPin" iostandard=LVCMOS33 | slew=fast | loc=P51;
+net "FlashMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P64;
+net "FlashMISOPin" iostandard=LVCMOS33 | float | loc=P65;
+
+# MRF24J40
+net "MRFResetPin" iostandard=LVCMOS33 | slew=quietio | loc=P127;
+net "MRFWakePin" iostandard=LVCMOS33 | slew=quietio | loc=P131;
+net "MRFInterruptPin" iostandard=LVCMOS33 | slew=quietio | loc=P132;
+net "MRFCSPin" iostandard=LVCMOS33 | slew=fast | loc=P126;
+net "MRFClockPin" iostandard=LVCMOS33 | slew=fast | loc=P134;
+net "MRFMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P133;
+net "MRFMISOPin" iostandard=LVCMOS33 | float | loc=P124;
+
+# Chicker
 net "ChickerChargePin" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P75;
 net "ChickerKickPin" iostandard=LVCMOS33 | slew=quietio | loc=P78;
 net "ChickerChipPin" iostandard=LVCMOS33 | slew=quietio | loc=P74;
-net "ChickerSparePin" iostandard=LVCMOS33 | slew=quietio | loc=P79;
-net "MRFCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P131;
-net "MRFResetPin" iostandard=LVCMOS33 | slew=quietio | loc=P132;
-net "MRFWakePin" iostandard=LVCMOS33 | slew=quietio | loc=P133;
-net "MRFInterruptPin" iostandard=LVCMOS33 | slew=quietio | loc=P134;
-net "FlashMRFChickerClockPin" iostandard=LVCMOS33 | slew=fast | loc=P70;
-net "FlashMRFChickerMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P64;
-net "FlashMRFChickerMISOPin" iostandard=LVCMOS33 | slew=fast | loc=P65;
+net "ChickerPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P79;
+net "ChickerCSPin" iostandard=LVCMOS33 | slew=fast | loc=P80;
+net "ChickerClockPin" iostandard=LVCMOS33 | slew=fast | loc=P56;
+net "ChickerMISOPin" iostandard=LVCMOS33 | float | loc=P67;
 
 # Break beam
 net "BreakbeamDrivePin" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P40;
@@ -49,64 +58,60 @@ net "TestLEDsPin<1>" iostandard=LVCMOS33 | slew=quietio | loc=P10;
 net "TestLEDsPin<2>" iostandard=LVCMOS33 | slew=quietio | loc=P9;
 
 # Optical encoders
-net "EncodersPin<1><0>" iostandard=LVCMOS33 | pullup | loc=P81;
-net "EncodersPin<1><1>" iostandard=LVCMOS33 | pullup | loc=P82;
-net "EncodersPin<2><0>" iostandard=LVCMOS33 | pullup | loc=P111;
-net "EncodersPin<2><1>" iostandard=LVCMOS33 | pullup | loc=P112;
-net "EncodersPin<3><0>" iostandard=LVCMOS33 | pullup | loc=P139;
-net "EncodersPin<3><1>" iostandard=LVCMOS33 | pullup | loc=P140;
-net "EncodersPin<4><0>" iostandard=LVCMOS33 | pullup | loc=P15;
-net "EncodersPin<4><1>" iostandard=LVCMOS33 | pullup | loc=P16;
+net "EncodersPin<0><0>" iostandard=LVCMOS33 | float | loc=P81;
+net "EncodersPin<0><1>" iostandard=LVCMOS33 | float | loc=P82;
+net "EncodersPin<1><0>" iostandard=LVCMOS33 | float | loc=P111;
+net "EncodersPin<1><1>" iostandard=LVCMOS33 | float | loc=P112;
+net "EncodersPin<2><0>" iostandard=LVCMOS33 | float | loc=P139;
+net "EncodersPin<2><1>" iostandard=LVCMOS33 | float | loc=P140;
+net "EncodersPin<3><0>" iostandard=LVCMOS33 | float | loc=P15;
+net "EncodersPin<3><1>" iostandard=LVCMOS33 | float | loc=P16;
 
 # Motor drivers
-net "MotorsPhasesPPin<1><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P99;
-net "MotorsPhasesPPin<1><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P97;
-net "MotorsPhasesPPin<1><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P94;
-net "MotorsPhasesNPin<1><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P100;
-net "MotorsPhasesNPin<1><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P98;
-net "MotorsPhasesNPin<1><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P95;
-net "MotorsPhasesPPin<2><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P121;
-net "MotorsPhasesPPin<2><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P119;
-net "MotorsPhasesPPin<2><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P117;
-net "MotorsPhasesNPin<2><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P123;
-net "MotorsPhasesNPin<2><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P120;
-net "MotorsPhasesNPin<2><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P118;
-net "MotorsPhasesPPin<3><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P7;
-net "MotorsPhasesPPin<3><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P5;
-net "MotorsPhasesPPin<3><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P1;
-net "MotorsPhasesNPin<3><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P8;
-net "MotorsPhasesNPin<3><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P6;
-net "MotorsPhasesNPin<3><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P2;
-net "MotorsPhasesPPin<4><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P29;
-net "MotorsPhasesPPin<4><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P26;
-net "MotorsPhasesPPin<4><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P23;
-net "MotorsPhasesNPin<4><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P30;
-net "MotorsPhasesNPin<4><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P27;
-net "MotorsPhasesNPin<4><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P24;
-net "MotorsPhasesPPin<5><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P44;
-net "MotorsPhasesPPin<5><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P46;
-net "MotorsPhasesPPin<5><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P48;
-net "MotorsPhasesNPin<5><0>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P45;
-net "MotorsPhasesNPin<5><1>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P47;
-net "MotorsPhasesNPin<5><2>" iostandard=LVCMOS33 | slew=quietio | drive=2 | loc=P50;
+net "MotorsPhasesPPin<0><0>" iostandard=LVCMOS33 | slew=quietio | loc=P99;
+net "MotorsPhasesPPin<0><1>" iostandard=LVCMOS33 | slew=quietio | loc=P97;
+net "MotorsPhasesPPin<0><2>" iostandard=LVCMOS33 | slew=quietio | loc=P94;
+net "MotorsPhasesNPin<0><0>" iostandard=LVCMOS33 | slew=quietio | loc=P100;
+net "MotorsPhasesNPin<0><1>" iostandard=LVCMOS33 | slew=quietio | loc=P98;
+net "MotorsPhasesNPin<0><2>" iostandard=LVCMOS33 | slew=quietio | loc=P95;
+net "MotorsPhasesPPin<1><0>" iostandard=LVCMOS33 | slew=quietio | loc=P121;
+net "MotorsPhasesPPin<1><1>" iostandard=LVCMOS33 | slew=quietio | loc=P119;
+net "MotorsPhasesPPin<1><2>" iostandard=LVCMOS33 | slew=quietio | loc=P117;
+net "MotorsPhasesNPin<1><0>" iostandard=LVCMOS33 | slew=quietio | loc=P123;
+net "MotorsPhasesNPin<1><1>" iostandard=LVCMOS33 | slew=quietio | loc=P120;
+net "MotorsPhasesNPin<1><2>" iostandard=LVCMOS33 | slew=quietio | loc=P118;
+net "MotorsPhasesPPin<2><0>" iostandard=LVCMOS33 | slew=quietio | loc=P7;
+net "MotorsPhasesPPin<2><1>" iostandard=LVCMOS33 | slew=quietio | loc=P5;
+net "MotorsPhasesPPin<2><2>" iostandard=LVCMOS33 | slew=quietio | loc=P1;
+net "MotorsPhasesNPin<2><0>" iostandard=LVCMOS33 | slew=quietio | loc=P8;
+net "MotorsPhasesNPin<2><1>" iostandard=LVCMOS33 | slew=quietio | loc=P6;
+net "MotorsPhasesNPin<2><2>" iostandard=LVCMOS33 | slew=quietio | loc=P2;
+net "MotorsPhasesPPin<3><0>" iostandard=LVCMOS33 | slew=quietio | loc=P29;
+net "MotorsPhasesPPin<3><1>" iostandard=LVCMOS33 | slew=quietio | loc=P26;
+net "MotorsPhasesPPin<3><2>" iostandard=LVCMOS33 | slew=quietio | loc=P23;
+net "MotorsPhasesNPin<3><0>" iostandard=LVCMOS33 | slew=quietio | loc=P30;
+net "MotorsPhasesNPin<3><1>" iostandard=LVCMOS33 | slew=quietio | loc=P27;
+net "MotorsPhasesNPin<3><2>" iostandard=LVCMOS33 | slew=quietio | loc=P24;
+net "MotorsPhasesPPin<4><0>" iostandard=LVCMOS33 | slew=quietio | loc=P44;
+net "MotorsPhasesPPin<4><1>" iostandard=LVCMOS33 | slew=quietio | loc=P46;
+net "MotorsPhasesPPin<4><2>" iostandard=LVCMOS33 | slew=quietio | loc=P48;
+net "MotorsPhasesNPin<4><0>" iostandard=LVCMOS33 | slew=quietio | loc=P45;
+net "MotorsPhasesNPin<4><1>" iostandard=LVCMOS33 | slew=quietio | loc=P47;
+net "MotorsPhasesNPin<4><2>" iostandard=LVCMOS33 | slew=quietio | loc=P50;
 
 # Hall sensors
-net "HallsPin<1><0>" iostandard=LVCMOS33 | pullup | loc=P84;
-net "HallsPin<1><1>" iostandard=LVCMOS33 | pullup | loc=P85;
-net "HallsPin<1><2>" iostandard=LVCMOS33 | pullup | loc=P83;
-net "HallsPin<2><0>" iostandard=LVCMOS33 | pullup | loc=P116;
-net "HallsPin<2><1>" iostandard=LVCMOS33 | pullup | loc=P115;
-net "HallsPin<2><2>" iostandard=LVCMOS33 | pullup | loc=P114;
-net "HallsPin<3><0>" iostandard=LVCMOS33 | pullup | loc=P143;
-net "HallsPin<3><1>" iostandard=LVCMOS33 | pullup | loc=P142;
-net "HallsPin<3><2>" iostandard=LVCMOS33 | pullup | loc=P141;
-net "HallsPin<4><0>" iostandard=LVCMOS33 | pullup | loc=P22;
-net "HallsPin<4><1>" iostandard=LVCMOS33 | pullup | loc=P21;
-net "HallsPin<4><2>" iostandard=LVCMOS33 | pullup | loc=P17;
-net "HallsPin<5><0>" iostandard=LVCMOS33 | pullup | loc=P55;
-net "HallsPin<5><1>" iostandard=LVCMOS33 | pullup | loc=P56;
-net "HallsPin<5><2>" iostandard=LVCMOS33 | pullup | loc=P57;
-
-# Virtual grounds
-net "VirtualGroundPin<0>" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P60;
-net "VirtualGroundPin<1>" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P144;
+net "HallsPin<0><0>" iostandard=LVCMOS33 | float | loc=P84;
+net "HallsPin<0><1>" iostandard=LVCMOS33 | float | loc=P85;
+net "HallsPin<0><2>" iostandard=LVCMOS33 | float | loc=P83;
+net "HallsPin<1><0>" iostandard=LVCMOS33 | float | loc=P116;
+net "HallsPin<1><1>" iostandard=LVCMOS33 | float | loc=P115;
+net "HallsPin<1><2>" iostandard=LVCMOS33 | float | loc=P114;
+net "HallsPin<2><0>" iostandard=LVCMOS33 | float | loc=P143;
+net "HallsPin<2><1>" iostandard=LVCMOS33 | float | loc=P142;
+net "HallsPin<2><2>" iostandard=LVCMOS33 | float | loc=P141;
+net "HallsPin<3><0>" iostandard=LVCMOS33 | float | loc=P22;
+net "HallsPin<3><1>" iostandard=LVCMOS33 | float | loc=P21;
+net "HallsPin<3><2>" iostandard=LVCMOS33 | float | loc=P17;
+net "HallsPin<4><0>" iostandard=LVCMOS33 | float | loc=P55;
+net "HallsPin<4><1>" iostandard=LVCMOS33 | float | loc=P57;
+net "HallsPin<4><2>" iostandard=LVCMOS33 | float | loc=P58;

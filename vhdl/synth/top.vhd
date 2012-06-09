@@ -21,18 +21,25 @@ entity Top is
 		ADCMISOPin : in std_ulogic;
 
 		FlashCSPin : out std_ulogic := '1';
-		ChickerCSPin : out std_ulogic := '1';
-		ChickerChargePin : out std_ulogic := '1';
-		ChickerKickPin : out std_ulogic := '1';
-		ChickerChipPin : out std_ulogic := '1';
-		ChickerSparePin : out std_ulogic := '0';
-		MRFCSPin : out std_ulogic := '1';
+		FlashClockPin : out std_ulogic := '0';
+		FlashMOSIPin : out std_ulogic := '0';
+		FlashMISOPin : in std_ulogic;
+
 		MRFResetPin : out std_ulogic := '0';
 		MRFWakePin : out std_ulogic := '0';
 		MRFInterruptPin : in std_ulogic;
-		FlashMRFChickerClockPin : out std_ulogic := '0';
-		FlashMRFChickerMOSIPin : out std_ulogic := '0';
-		FlashMRFChickerMISOPin : in std_ulogic;
+		MRFCSPin : out std_ulogic := '1';
+		MRFClockPin : out std_ulogic := '0';
+		MRFMOSIPin : out std_ulogic := '0';
+		MRFMISOPin : in std_ulogic;
+
+		ChickerChargePin : out std_ulogic := '1';
+		ChickerKickPin : out std_ulogic := '1';
+		ChickerChipPin : out std_ulogic := '1';
+		ChickerPowerPin : out std_ulogic := '0';
+		ChickerCSPin : out std_ulogic := '1';
+		ChickerClockPin : out std_ulogic := '0';
+		ChickerMISOPin : in std_ulogic;
 
 		BreakbeamDrivePin : out std_ulogic := '0';
 
@@ -48,9 +55,7 @@ entity Top is
 		MotorsPhasesPPin : out motors_phases_pin_t := (others => (others => '1'));
 		MotorsPhasesNPin : out motors_phases_pin_t := (others => (others => '0'));
 
-		HallsPin : in halls_pin_t;
-
-		VirtualGroundPin : out std_ulogic_vector(0 to 1) := (others => '0'));
+		HallsPin : in halls_pin_t);
 end entity Top;
 
 architecture TestStaticLEDs of Top is
@@ -139,11 +144,11 @@ begin
 						MRFCSPin <= '0';
 						State := CS_ASSERTED;
 					when CS_ASSERTED =>
-						FlashMRFChickerClockPin <= '1';
+						MRFClockPin <= '1';
 						State := CLK_RAISED;
-						DataIn := DataIn(14 downto 0) & FlashMRFChickerMISOPin;
+						DataIn := DataIn(14 downto 0) & MRFMISOPin;
 					when CLK_RAISED =>
-						FlashMRFChickerClockPin <= '0';
+						MRFClockPin <= '0';
 						State := CS_ASSERTED;
 						DataOut := DataOut(14 downto 0) & '0';
 						if Count = 0 then
@@ -161,7 +166,7 @@ begin
 			end if;
 			Ticks := (Ticks + 1) mod (ticks_t'high + 1);
 		end if;
-		FlashMRFChickerMOSIPin <= DataOut(15);
+		MRFMOSIPin <= DataOut(15);
 	end process;
 end architecture TestMRFBasic;
 
@@ -213,9 +218,73 @@ begin
 	end process;
 end architecture TestADC;
 
-architecture TestNavre of Top is
+architecture Main of Top is
 	signal Clocks : clocks_t;
-	signal LEDs : std_ulogic_vector(4 downto 0);
+
+	signal NavreReadEnable : boolean;
+	signal NavreWriteEnable : boolean;
+	signal NavreIOAddress : natural range 0 to 63;
+	signal NavreDO : std_ulogic_vector(7 downto 0);
+	signal NavreDI : std_ulogic_vector(7 downto 0);
+
+	signal RadioLEDLevel : boolean := false;
+	signal RadioLEDBlinkX : boolean := false;
+	signal RadioLEDBlinkY : boolean := false;
+	signal LEDSoftware : boolean := true;
+	signal LEDValue : std_ulogic_vector(4 downto 0) := "00000";
+
+	signal PowerChicker : boolean := false;
+	signal PowerMotors : boolean := false;
+	signal PowerLogic : boolean := true;
+
+	signal FiveMilliTicks : natural range 0 to 255 := 0;
+
+	signal Halls : halls_t := (others => (others => false));
+	signal HallsStuckHigh : halls_stuck_t := (others => false);
+	signal HallsStuckHighLatch : halls_stuck_t := (others => false);
+	signal HallsStuckHighClear : halls_stuck_t := (others => false);
+	signal HallsStuckLow : halls_stuck_t := (others => false);
+	signal HallsStuckLowLatch : halls_stuck_t := (others => false);
+	signal HallsStuckLowClear : halls_stuck_t := (others => false);
+
+	signal MotorsMode : motors_mode_t := (others => FLOAT);
+	signal MotorsPower : motors_power_t := (others => 0);
+	signal MotorsPhases : motors_phases_t := (others => (others => FLOAT));
+
+	signal Encoders : encoders_t := (others => (others => false));
+	signal EncodersCount : encoders_count_t := (others => 0);
+	signal EncoderCountLatch : std_ulogic_vector(15 downto 0) := X"0000";
+	signal EncodersClear : encoders_clear_t := (others => false);
+
+	signal MCP3004Levels : mcp3004s_t := (others => 0);
+	signal MCP3004Latch : std_ulogic_vector(9 downto 0);
+
+	signal ADS7866Level : capacitor_voltage_t := 0;
+	signal ADS7866Latch : std_ulogic_vector(11 downto 0);
+
+	signal ChipX : boolean := false;
+	signal ChipY : boolean := false;
+	signal ChipActive : boolean := false;
+	signal KickX : boolean := false;
+	signal KickY : boolean := false;
+	signal KickActive : boolean := false;
+	signal KickPeriod : natural range 0 to 65535 := 0;
+	signal KickPeriodLSBPost : natural range 0 to 255 := 0;
+	signal KickPeriodLoadLSBX : boolean := false;
+	signal KickPeriodLoadLSBY : boolean := false;
+	signal KickPeriodMSBPost : natural range 0 to 255 := 0;
+	signal KickPeriodLoadMSBX : boolean := false;
+	signal KickPeriodLoadMSBY : boolean := false;
+	signal Charge : boolean := false;
+	signal ChargeTimeout : boolean := false;
+	signal ChargeDone : boolean := false;
+	signal ChargePulse : boolean := false;
+
+	signal FlashCS : std_ulogic := '1';
+	signal FlashDataRead : std_ulogic_vector(7 downto 0) := X"00";
+	signal FlashDataWrite : std_ulogic_vector(7 downto 0) := X"00";
+	signal FlashStrobe : boolean := false;
+	signal FlashBusy : boolean := false;
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
@@ -226,11 +295,402 @@ begin
 	WrapperInstance : entity work.NavreWrapper(Arch)
 	port map(
 		Clock => Clocks.Clock40MHz,
-		LEDs => LEDs);
+		IOReadEnable => NavreReadEnable,
+		IOWriteEnable => NavreWriteEnable,
+		IOAddress => NavreIOAddress,
+		IODO => NavreDO,
+		IODI => NavreDI);
 
-	TestLEDsPin(2) <= LEDs(4);
-	TestLEDsPin(1) <= LEDs(3);
-	TestLEDsPin(0) <= LEDs(2);
-	RadioLEDPin <= LEDs(1);
-	ChargedLEDPin <= LEDs(0);
-end architecture TestNavre;
+	process(Clocks.Clock40MHz) is
+		variable DIBuffer : std_ulogic_vector(7 downto 0);
+	begin
+		if rising_edge(Clocks.Clock40MHz) then
+			HallsStuckHighClear <= (others => false);
+			HallsStuckLowClear <= (others => false);
+			EncodersClear <= (others => false);
+			FlashStrobe <= false;
+
+			case NavreIOAddress is
+				when 16#00# => -- LED_CTL
+					DIBuffer := to_stdulogic(RadioLEDLevel) & '0' & to_stdulogic(LEDSoftware) & LEDValue;
+					if NavreWriteEnable then
+						RadioLEDLevel <= to_boolean(NavreDO(7));
+						if NavreDO(6) = '1' then
+							RadioLEDBlinkX <= not RadioLEDBlinkY;
+						end if;
+						LEDSoftware <= to_boolean(NavreDO(5));
+						LEDValue <= NavreDO(4 downto 0);
+					end if;
+
+				when 16#01# => -- POWER_CTL
+					DIBuffer := "00000" & to_stdulogic(PowerChicker) & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
+					if NavreWriteEnable then
+						PowerChicker <= to_boolean(NavreDO(2));
+						PowerMotors <= to_boolean(NavreDO(1));
+						PowerLogic <= to_boolean(NavreDO(0));
+					end if;
+
+				when 16#02# => -- TICKS
+					DIBuffer := std_ulogic_vector(to_unsigned(FiveMilliTicks, 8));
+
+				when 16#03# => -- WHEEL_CTL
+					for Index in 0 to 3 loop
+						case MotorsMode(Index) is
+							when FLOAT => DIBuffer(Index * 2 + 1 downto Index * 2) := "00";
+							when BRAKE => DIBuffer(Index * 2 + 1 downto Index * 2) := "01";
+							when FORWARD => DIBuffer(Index * 2 + 1 downto Index * 2) := "10";
+							when REVERSE => DIBuffer(Index * 2 + 1 downto Index * 2) := "11";
+						end case;
+					end loop;
+					if NavreWriteEnable then
+						for Index in 0 to 3 loop
+							case NavreDO(Index * 2 + 1 downto Index * 2) is
+								when "00" => MotorsMode(Index) <= FLOAT;
+								when "01" => MotorsMode(Index) <= BRAKE;
+								when "10" => MotorsMode(Index) <= FORWARD;
+								when "11" => MotorsMode(Index) <= REVERSE;
+								when others => null;
+							end case;
+						end loop;
+					end if;
+
+				when 16#04# => -- WHEEL_HALL_FAIL
+					for Index in 0 to 3 loop
+						DIBuffer(Index) := to_stdulogic(HallsStuckLowLatch(Index));
+						DIBuffer(Index + 4) := to_stdulogic(HallsStuckHighLatch(Index));
+					end loop;
+					if NavreWriteEnable then
+						for Index in 0 to 3 loop
+							HallsStuckLowClear(Index) <= to_boolean(NavreDO(Index));
+							HallsStuckHighClear(Index) <= to_boolean(NavreDO(Index + 4));
+						end loop;
+					end if;
+
+				when 16#05# to 16#08# => -- WHEEL0_PWM … WHEEL3_PWM
+					DIBuffer := std_ulogic_vector(to_unsigned(MotorsPower(NavreIOAddress - 16#05#), 8));
+					if NavreWriteEnable then
+						MotorsPower(NavreIOAddress - 16#05#) <= to_integer(unsigned(NavreDO));
+					end if;
+
+				when 16#09# => -- DRIBBLER_CTL
+					DIBuffer(7 downto 2) := "000000";
+					case MotorsMode(4) is
+						when FLOAT => DIBuffer(1 downto 0) := "00";
+						when BRAKE => DIBuffer(1 downto 0) := "01";
+						when FORWARD => DIBuffer(1 downto 0) := "10";
+						when REVERSE => DIBuffer(1 downto 0) := "11";
+					end case;
+					if NavreWriteEnable then
+						case NavreDO(1 downto 0) is
+							when "00" => MotorsMode(4) <= FLOAT;
+							when "01" => MotorsMode(4) <= BRAKE;
+							when "10" => MotorsMode(4) <= FORWARD;
+							when "11" => MotorsMode(4) <= REVERSE;
+							when others => null;
+						end case;
+					end if;
+
+				when 16#0A# => -- DRIBBLER_HALL_FAIL
+					DIBuffer := "000000" & to_stdulogic(HallsStuckHighLatch(4)) & to_stdulogic(HallsStuckLowLatch(4));
+					if NavreWriteEnable then
+						HallsStuckHighClear(4) <= to_boolean(NavreDO(1));
+						HallsStuckLowClear(4) <= to_boolean(NavreDO(0));
+					end if;
+
+				when 16#0B# => -- DRIBBLER_PWM
+					DIBuffer := std_ulogic_vector(to_unsigned(MotorsPower(4), 8));
+					if NavreWriteEnable then
+						MotorsPower(4) <= to_integer(unsigned(NavreDO));
+					end if;
+
+				when 16#0C# => -- ENCODER_LSB
+					DIBuffer := EncoderCountLatch(7 downto 0);
+					if NavreWriteEnable then
+						EncoderCountLatch <= std_ulogic_vector(to_unsigned(EncodersCount(to_integer(unsigned(NavreDO))), 16));
+						EncodersClear(to_integer(unsigned(NavreDO))) <= true;
+					end if;
+
+				when 16#0D# => -- ENCODER_MSB
+					DIBuffer := EncoderCountLatch(15 downto 8);
+
+				when 16#0E# => -- ENCODER_FAIL
+					DIBuffer := "00000000";
+
+				when 16#0F# => -- ADC_LSB
+					DIBuffer := MCP3004Latch(7 downto 0);
+					if NavreWriteEnable then
+						MCP3004Latch <= std_ulogic_vector(to_unsigned(MCP3004Levels(to_integer(unsigned(NavreDO))), 10));
+					end if;
+
+				when 16#10# => -- ADC_MSB
+					DIBuffer := "000000" & MCP3004Latch(9 downto 8);
+
+				when 16#11# => -- CHICKER_ADC_LSB
+					DIBuffer := ADS7866Latch(7 downto 0);
+					if NavreWriteEnable then
+						ADS7866Latch <= std_ulogic_vector(to_unsigned(ADS7866Level, 12));
+					end if;
+
+				when 16#12# => -- CHICKER_ADC_MSB
+					DIBuffer := "0000" & ADS7866Latch(11 downto 8);
+
+				when 16#13# => -- CHICKER_CTL
+					DIBuffer := "000" & to_stdulogic(ChargeDone) & to_stdulogic(ChargeTimeout) & to_stdulogic(ChipActive or (ChipX xor ChipY)) & to_stdulogic(KickActive or (KickX xor KickY)) & to_stdulogic(Charge);
+					if NavreWriteEnable then
+						if NavreDO(2) = '1' then
+							ChipX <= not ChipY;
+						end if;
+						if NavreDO(1) = '1' then
+							KickX <= not KickY;
+						end if;
+						Charge <= to_boolean(NavreDO(0));
+					end if;
+
+				when 16#14# => -- CHICKER_PULSE_LSB
+					if KickPeriodLoadLSBX /= KickPeriodLoadLSBY then
+						DIBuffer := std_ulogic_vector(to_unsigned(KickPeriodLSBPost, 8));
+					else
+						DIBuffer := std_ulogic_vector(to_unsigned(KickPeriod mod 256, 8));
+					end if;
+					if NavreWriteEnable then
+						KickPeriodLSBPost <= to_integer(unsigned(NavreDO));
+						KickPeriodLoadLSBX <= not KickPeriodLoadLSBY;
+					end if;
+
+				when 16#15# => -- CHICKER_PULSE_MSB
+					if KickPeriodLoadMSBX /= KickPeriodLoadMSBY then
+						DIBuffer := std_ulogic_vector(to_unsigned(KickPeriodMSBPost, 8));
+					else
+						DIBuffer := std_ulogic_vector(to_unsigned(KickPeriod mod 256, 8));
+					end if;
+					if NavreWriteEnable then
+						KickPeriodMSBPost <= to_integer(unsigned(NavreDO));
+						KickPeriodLoadMSBX <= not KickPeriodLoadMSBY;
+					end if;
+
+				when 16#16# => -- FLASH_CTL
+					DIBuffer := "000000" & FlashCS & to_stdulogic(FlashStrobe or FlashBusy);
+					if NavreWriteEnable then
+						FlashCS <= NavreDO(1);
+					end if;
+
+				when 16#17# => -- FLASH_DATA
+					DIBuffer := FlashDataRead;
+					if NavreWriteEnable then
+						FlashDataWrite <= NavreDO;
+						FlashStrobe <= true;
+					end if;
+
+				when others =>
+					DIBuffer := "--------";
+			end case;
+
+			if NavreReadEnable then
+				NavreDI <= DIBuffer;
+			end if;
+		end if;
+	end process;
+
+	process(Clocks.Clock4MHz, RadioLEDLevel) is
+		subtype ticks_t is natural range 0 to 999999;
+		variable Ticks : ticks_t := 0;
+		variable Polarity : boolean := false;
+	begin
+		if rising_edge(Clocks.Clock4MHz) then
+			if Ticks = ticks_t'high then
+				if Polarity then
+					Polarity := false;
+				elsif RadioLEDBlinkX /= RadioLEDBlinkY then
+					RadioLEDBlinkY <= RadioLEDBlinkX;
+					Polarity := true;
+				end if;
+			end if;
+			Ticks := (Ticks + 1) mod (ticks_t'high + 1);
+		end if;
+
+		if RadioLEDLevel and not Polarity then
+			RadioLEDPin <= '1';
+		else
+			RadioLEDPin <= '0';
+		end if;
+	end process;
+
+	process(LEDSoftware, LEDValue, Halls, Encoders) is
+	begin
+		if LEDSoftware then
+			TestLEDsPin <= LEDValue(2 downto 0);
+		else
+			case LEDValue is
+				when "00000" | "00001" | "00010" | "00011" | "00100" =>
+					for Index in 0 to 2 loop
+						TestLEDsPin(Index) <= to_stdulogic(Halls(to_integer(unsigned(LEDValue)))(Index));
+					end loop;
+
+				when "00101" | "00110" | "00111" | "01000" =>
+					for Index in 0 to 1 loop
+						TestLEDsPin(Index) <= to_stdulogic(Encoders(to_integer(unsigned(LEDValue)) - 5)(Index));
+					end loop;
+					TestLEDsPin(2) <= '0';
+
+				when others =>
+					TestLEDsPin <= "---";
+			end case;
+		end if;
+	end process;
+
+	LogicPowerPin <= '1' when PowerLogic else '0';
+	HVPowerPin <= '1' when PowerMotors else '0';
+	ChickerPowerPin <= '1' when PowerChicker else '0';
+
+	process(Clocks.Clock4MHz) is
+		subtype subticks_t is natural range 0 to 19999;
+		variable Subticks : subticks_t := 0;
+	begin
+		if rising_edge(Clocks.Clock4MHz) then
+			if Subticks = subticks_t'high then
+				FiveMilliTicks <= (FiveMilliTicks + 1) mod 256;
+			end if;
+			Subticks := (Subticks + 1) mod (subticks_t'high + 1);
+		end if;
+	end process;
+
+	process(Clocks.Clock8MHz) is
+	begin
+		if rising_edge(Clocks.Clock8MHz) then
+			for Index in 0 to 4 loop
+				for Pin in 0 to 2 loop
+					Halls(Index)(Pin) <= to_boolean(HallsPin(Index)(Pin));
+				end loop;
+			end loop;
+		end if;
+	end process;
+
+	process(Clocks.Clock40MHz) is
+	begin
+		if rising_edge(Clocks.Clock40MHz) then
+			for Index in 0 to 4 loop
+				HallsStuckHighLatch(Index) <= (HallsStuckHighLatch(Index) and not HallsStuckHighClear(Index)) or HallsStuckHigh(Index);
+				HallsStuckLowLatch(Index) <= (HallsStuckLowLatch(Index) and not HallsStuckLowClear(Index)) or HallsStuckLow(Index);
+			end loop;
+		end if;
+	end process;
+
+	Motors : for Index in 0 to 4 generate
+		Motor : entity work.Motor(Arch)
+		generic map(
+			PWMMax => 255,
+			PWMPhase => Index * 51)
+		port map(
+			Clocks => Clocks,
+			Mode => MotorsMode(Index),
+			Power => MotorsPower(Index),
+			Hall => Halls(Index),
+			HallStuckHigh => HallsStuckHigh(Index),
+			HallStuckLow => HallsStuckLow(Index),
+			Phases => MotorsPhases(Index));
+
+		Phases : for Phase in 0 to 2 generate
+			MotorsPhasesPPin(Index)(Phase) <= '0' when MotorsPhases(Index)(Phase) = HIGH else '1';
+			MotorsPHasesNPin(Index)(Phase) <= '1' when MotorsPhases(Index)(Phase) = LOW else '0';
+		end generate;
+	end generate;
+
+	GenerateEncoders : for Index in 0 to 3 generate
+		process(Clocks.Clock40MHz) is
+		begin
+			if rising_edge(Clocks.Clock40MHz) then
+				for Channel in 0 to 1 loop
+					Encoders(Index)(Channel) <= to_boolean(EncodersPin(Index)(Channel));
+				end loop;
+			end if;
+		end process;
+
+		Encoder : entity work.GrayCounter(Arch)
+		port map(
+			Clock => Clocks.Clock40MHz,
+			Input => Encoders(Index),
+			Clear => EncodersClear(Index),
+			Value => EncodersCount(Index));
+	end generate;
+
+	MCP3004 : entity work.MCP3004(Arch)
+	port map(
+		Clocks => Clocks,
+		MOSI => ADCMOSIPin,
+		MISO => ADCMISOPin,
+		CLK => ADCClockPin,
+		CS => ADCCSPin,
+		Levels => MCP3004Levels);
+
+	ADS7866 : entity work.ADS7866(Arch)
+	port map(
+		Clocks => Clocks,
+		MISO => ChickerMISOPin,
+		CLK => ChickerClockPin,
+		CS => ChickerCSPin,
+		Level => ADS7866Level);
+
+	BoostController : entity work.BoostController(Arch)
+	generic map(
+		ClockFrequency => 4000000.0)
+	port map(
+		Clock => Clocks.Clock4MHz,
+		Enable => Charge,
+		CapacitorVoltage => ADS7866Level,
+		BatteryVoltage => MCP3004Levels(3),
+		Charge => ChargePulse,
+		Timeout => ChargeTimeout,
+		Done => ChargeDone);
+	ChickerChargePin <= to_stdulogic(not ChargePulse);
+
+	process(Clocks.Clock4MHz) is
+		variable KickPeriodTemp : unsigned(15 downto 0);
+	begin
+		if rising_edge(Clocks.Clock4MHz) then
+			-- Count
+			if ChipActive or KickActive then
+				if KickPeriod = 0 then
+					ChipActive <= false;
+					KickActive <= false;
+				else
+					KickPeriod <= KickPeriod - 1;
+				end if;
+			end if;
+			-- Bring in posted writes
+			if ChipX /= ChipY then
+				ChipActive <= true;
+				ChipY <= ChipX;
+			end if;
+			if KickX /= KickY then
+				KickActive <= true;
+				KickY <= KickX;
+			end if;
+			KickPeriodTemp := to_unsigned(KickPeriod, 16);
+			if KickPeriodLoadLSBX /= KickPeriodLoadLSBY then
+				KickPeriodTemp(7 downto 0) := to_unsigned(KickPeriodLSBPost, 8);
+				KickPeriod <= to_integer(KickPeriodTemp);
+				KickPeriodLoadLSBY <= KickPeriodLoadLSBX;
+			end if;
+			if KickPeriodLoadMSBX /= KickPeriodLoadMSBY then
+				KickPeriodTemp(15 downto 8) := to_unsigned(KickPeriodMSBPost, 8);
+				KickPeriod <= to_integer(KickPeriodTemp);
+				KickPeriodLoadMSBY <= KickPeriodLoadMSBX;
+			end if;
+		end if;
+	end process;
+	ChickerChipPin <= to_stdulogic(not ChipActive);
+	ChickerKickPin <= to_stdulogic(not KickActive);
+
+	FlashCSPin <= FlashCS;
+	FlashSPI : entity work.SPI(Arch)
+	port map(
+		Clock => Clocks.Clock40MHz,
+		ClockI => Clocks.Clock40MHzI,
+		WriteData => FlashDataWrite,
+		ReadData => FlashDataRead,
+		Strobe => FlashStrobe,
+		Busy => FlashBusy,
+		ClockPin => FlashClockPin,
+		MOSIPin => FlashMOSIPin,
+		MISOPin => FlashMISOPin);
+end architecture Main;

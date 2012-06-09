@@ -11,7 +11,7 @@ entity PWM is
 		Output : out boolean := false);
 end entity PWM;
 
-architecture Behavioural of PWM is
+architecture Arch of PWM is
 begin
 	process(Clock) is
 		subtype count_t is natural range 0 to Max - 1;
@@ -29,4 +29,4 @@ begin
 
 		Output <= Count < ValueLatch;
 	end process;
-end architecture Behavioural;
+end architecture Arch;

@@ -9,53 +9,31 @@ entity Motor is
 		PWMPhase : natural);
 	port(
 		Clocks : in clocks_t;
-		Enable : in boolean;
+		Mode : in motor_mode_t;
 		Power : in natural range 0 to PWMMax;
-		Direction : in boolean;
 		Hall : in hall_t;
-		EncodersStrobe : in boolean;
-		HallStuck : buffer boolean;
-		HallCommutated : out boolean;
+		HallStuckHigh : out boolean;
+		HallStuckLow : out boolean;
 		Phases : out motor_phases_t);
 end entity Motor;
 
-architecture Behavioural of Motor is
+architecture Arch of Motor is
+	signal Direction : boolean;
 	signal CommutatorPhases : motor_phases_t;
 	signal PWMOutput : boolean;
 	signal PWMPhases : motor_phases_t;
 begin
-	process(Clocks.Clock8MHz) is
-		type seen_hall_high_t is array(0 to 2) of boolean;
-		variable SeenHallHigh : seen_hall_high_t := (others => false);
-	begin
-		if rising_edge(Clocks.Clock8MHz) then
-			if EncodersStrobe then
-				SeenHallHigh := (others => false);
-			else
-				for I in 0 to 2 loop
-					if Hall(I) then
-						SeenHallHigh(I) := true;
-					end if;
-				end loop;
-			end if;
-		end if;
+	Direction <= Mode = REVERSE;
 
-		HallCommutated <= true;
-		for I in 0 to 2 loop
-			if not SeenHallHigh(I) then
-				HallCommutated <= false;
-			end if;
-		end loop;
-	end process;
-
-	Commutator: entity work.Commutator(Behavioural)
+	Commutator: entity work.Commutator(Arch)
 	port map(
 		Direction => Direction,
 		Hall => Hall,
-		HallStuck => HallStuck,
+		HallStuckHigh => HallStuckHigh,
+		HallStuckLow => HallStuckLow,
 		Phase => CommutatorPhases);
 
-	PWM: entity work.PWM(Behavioural)
+	PWM: entity work.PWM(Arch)
 	generic map(
 		Max => PWMMax,
 		Phase => PWMPhase)
@@ -68,28 +46,31 @@ begin
 		process(Clocks.Clock8MHz) is
 		begin
 			if rising_edge(Clocks.Clock8MHz) then
-				if Enable then
-					if CommutatorPhases(I) = HIGH then
-						if PWMOutput then
-							PWMPhases(I) <= HIGH;
+				case Mode is
+					when FLOAT =>
+						PWMPhases(I) <= FLOAT;
+
+					when BRAKE =>
+						PWMPhases(I) <= LOW;
+
+					when FORWARD | REVERSE =>
+						if CommutatorPhases(I) = HIGH then
+							if PWMOutput then
+								PWMPhases(I) <= HIGH;
+							else
+								PWMPhases(I) <= LOW;
+							end if;
 						else
-							PWMPhases(I) <= LOW;
+							PWMPhases(I) <= CommutatorPhases(I);
 						end if;
-					else
-						PWMPhases(I) <= CommutatorPhases(I);
-					end if;
-				else
-					PWMPhases(I) <= FLOAT;
-				end if;
+				end case;
 			end if;
 		end process;
 
-		DeadBand: entity work.DeadBand(Behavioural)
-		generic map(
-			Width => 1)
+		DeadBand: entity work.DeadBand(Arch)
 		port map(
 			Clock => Clocks.Clock8MHz,
 			Input => PWMPhases(I),
 			Output => Phases(I));
 	end generate;
-end architecture Behavioural;
+end architecture Arch;

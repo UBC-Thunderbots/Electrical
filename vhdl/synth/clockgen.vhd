@@ -18,7 +18,7 @@ architecture Behavioural of ClockGen is
 	signal StepUpDCMStatus : std_logic_vector(7 downto 0);
 	signal StepUpDCMLocked : std_ulogic;
 	signal PLLReset : std_ulogic;
-	signal PLLOutputs : std_ulogic_vector(2 downto 0);
+	signal PLLOutputs : std_ulogic_vector(0 to 5);
 	signal PLLFeedbackClock : std_ulogic;
 	signal PLLLocked : std_ulogic;
 	signal BufferedPLLOutputs : std_ulogic_vector(PLLOutputs'range);
@@ -51,7 +51,12 @@ begin
 	generic map(
 		CLKOUT0_DIVIDE => 100, -- CLKOUT0 is 400 ÷ 100 = 4 MHz
 		CLKOUT1_DIVIDE => 50, -- CLKOUT1 is 400 ÷ 50 = 8 MHz
-		CLKOUT2_DIVIDE => 10, -- CLKOUT3 is 400 ÷ 10 = 40 MHz
+		CLKOUT2_DIVIDE => 10, -- CLKOUT2 is 400 ÷ 10 = 40 MHz
+		CLKOUT3_DIVIDE => 40, -- CLKOUT3 is 400 ÷ 40 = 10 MHz
+		CLKOUT4_DIVIDE => 40, -- CLKOUT4 is 400 ÷ 40 = 10 MHz
+		CLKOUT4_PHASE => 180.0, -- CLKOUT4 is 180° phase shifted for use with an ODDR2 clock output generator
+		CLKOUT5_DIVIDE => 10, -- CLKOUT5 is 400 ÷ 10 = 40 MHz
+		CLKOUT5_PHASE => 180.0, -- CLKOUT5 is 180° phase shifted for use with an ODDR2 clock output generator
 		CLKFBOUT_MULT => 10,
 		CLKIN_PERIOD => 1.0e9 / 40.0e6,
 		CLK_FEEDBACK => "CLKFBOUT")
@@ -62,6 +67,9 @@ begin
 		CLKOUT0 => PLLOutputs(0),
 		CLKOUT1 => PLLOutputs(1),
 		CLKOUT2 => PLLOutputs(2),
+		CLKOUT3 => PLLOutputs(3),
+		CLKOUT4 => PLLOutputs(4),
+		CLKOUT5 => PLLOutputs(5),
 		CLKFBOUT => PLLFeedbackClock,
 		LOCKED => PLLLocked);
 
@@ -75,5 +83,8 @@ begin
 
 	Clocks.Clock4MHz <= BufferedPLLOutputs(0);
 	Clocks.Clock8MHz <= BufferedPLLOutputs(1);
+	Clocks.Clock10MHz <= BufferedPLLOutputs(3);
+	Clocks.Clock10MHzI <= BufferedPLLOutputs(4);
 	Clocks.Clock40MHz <= BufferedPLLOutputs(2);
+	Clocks.Clock40MHzI <= BufferedPLLOutputs(5);
 end architecture Behavioural;

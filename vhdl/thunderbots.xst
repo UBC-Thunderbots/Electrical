@@ -5,5 +5,5 @@ run
 -top top
 -opt_level 1
 -opt_mode speed
--arch TestNavre
+-arch Main
 

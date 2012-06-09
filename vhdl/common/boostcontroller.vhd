@@ -21,7 +21,7 @@ entity BoostController is
 		Done : out boolean := false); --! Signals whether charging is complete
 end entity;
 
-architecture Behavioural of BoostController is
+architecture Arch of BoostController is
 	constant ClockPeriod : real := 1.0 / ClockFrequency;
 	--We should probably make some or all of these generic parameters
 	constant Inductance : real := 22.0e-6; --! Inductance in switching element
@@ -169,4 +169,4 @@ begin
 		--MOSFET is controlled by the bottom state machine
 		Charge <= State = ONTIME and not TimeoutBuffer;
 	end process;
-end architecture Behavioural;
+end architecture Arch;
