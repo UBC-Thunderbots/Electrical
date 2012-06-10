@@ -13,7 +13,7 @@ end entity;
 
 architecture behav of device_id is
 	signal clk : std_ulogic := '0';
-	type state_t is (LOAD,SHIFTING,HOLD);
+	type state_t is (INIT,LOAD,SHIFTING,HOLD);
 	signal state : state_t := LOAD;
 	signal device_value : std_ulogic_vector(56 downto 0) := "0"&x"00000000000000";
 	signal data_out : std_ulogic;
@@ -35,9 +35,14 @@ begin
 	begin
 		if(rising_edge(clk)) then
 			case state is
+				when INIT =>
+					read <= '0';
+					shift <= '0';
+					state <= LOAD;
 				when LOAD =>
 					read <= '1';
 					shift <= '0';
+					state <= SHIFTING;
 				when SHIFTING =>
 					shift <= '1';
 					read <= '0';
