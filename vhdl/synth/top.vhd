@@ -294,6 +294,8 @@ architecture Main of Top is
 	signal MRFStrobe : boolean := false;
 	signal MRFBusy : boolean := false;
 
+	signal DeviceID : std_ulogic_vector(56 downto 0);
+
 	signal BreakbeamDrive : boolean := false;
 
 	signal LPSReset : boolean := false;
@@ -522,6 +524,23 @@ begin
 						LPSReset <= to_boolean(NavreDO(1));
 						LPSClock <= to_boolean(NavreDO(0));
 					end if;
+
+				when 16#1C# =>
+					DIBuffer := DeviceID(7 downto 0);
+				when 16#1D# =>
+					DIBuffer := DeviceID(15 downto 8);
+				when 16#1E# =>
+					DIBuffer := DeviceID(23 downto 16);
+				when 16#1F# =>
+					DIBuffer := DeviceID(31 downto 24);
+				when 16#2A# =>
+					DIBuffer := DeviceID(39 downto 32);
+				when 16#2B# =>
+					DIBuffer := DeviceID(47 downto 40);
+				when 16#2C# =>
+					DIBuffer := DeviceID(55 downto 48);
+				when 16#2D# =>
+					DIBuffer := "0000000" & DeviceID(56);
 
 				when others =>
 					DIBuffer := "--------";
@@ -752,6 +771,13 @@ begin
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
 		MISOPin => MRFMISOPin);
+
+	
+	DNAPort : entity work.device_id
+		port map (
+			Clock4Mhz => Clocks.Clock4Mhz,
+			Value => DeviceID
+		);
 
 	BreakbeamDrivePin <= to_stdulogic(BreakbeamDrive);
 

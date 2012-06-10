@@ -160,6 +160,7 @@ vhdl/common/boostcontroller.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/deadband.vhd -text
+vhdl/common/device_id.vhd -text
 vhdl/common/graycounter.vhd -text
 vhdl/common/main.vhd -text
 vhdl/common/mcp3004.vhd -text
