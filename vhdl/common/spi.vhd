@@ -20,8 +20,7 @@ end entity SPI;
 
 architecture Arch of SPI is
 	signal ClockEnable : boolean := false;
-	signal DataWrite : std_ulogic_vector(7 downto 0) := X"00";
-	signal DataRead : std_ulogic_vector(7 downto 0) := X"00";
+	signal ReadShifter : std_ulogic_vector(7 downto 0) := X"00";
 	signal WriteShifter : std_ulogic_vector(7 downto 0) := X"00";
 	signal DataWriteStrobeX : boolean := false;
 	signal DataWriteStrobeY : boolean := false;
@@ -47,7 +46,6 @@ begin
 		if rising_edge(HostClock) then
 			if Strobe then
 				DataWriteStrobeX <= not DataWriteStrobeY;
-				DataWrite <= WriteData;
 			end if;
 		end if;
 	end process;
@@ -58,13 +56,13 @@ begin
 	begin
 		if rising_edge(BusClock) then
 			if ReadBitCount /= 0 then
-				DataRead <= DataRead(6 downto 0) & MISOPin;
+				ReadShifter <= ReadShifter(6 downto 0) & MISOPin;
 				ReadBitCount := ReadBitCount - 1;
 			end if;
 			if DataWriteStrobeX /= DataWriteStrobeZ then
 				ReadBitCount := 7;
 				DataWriteStrobeZ <= DataWriteStrobeX;
-				DataRead <= DataRead(6 downto 0) & MISOPin;
+				ReadShifter <= ReadShifter(6 downto 0) & MISOPin;
 			end if;
 		end if;
 		if falling_edge(BusClock) then
@@ -75,7 +73,7 @@ begin
 				ClockEnable <= false;
 			end if;
 			if DataWriteStrobeX /= DataWriteStrobeY then
-				WriteShifter <= DataWrite;
+				WriteShifter <= WriteData;
 				WriteBitCount := 7;
 				DataWriteStrobeY <= DataWriteStrobeX;
 				ClockEnable <= true;
@@ -84,5 +82,5 @@ begin
 	end process;
 	MOSIPin <= WriteShifter(7);
 	Busy <= Strobe or (DataWriteStrobeX /= DataWriteStrobeY) or (DataWriteStrobeX /= DataWriteStrobeZ) or ClockEnable;
-	ReadData <= DataRead;
+	ReadData <= ReadShifter;
 end architecture Arch;
