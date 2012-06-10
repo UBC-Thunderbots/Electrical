@@ -533,13 +533,13 @@ begin
 					DIBuffer := DeviceID(23 downto 16);
 				when 16#1F# =>
 					DIBuffer := DeviceID(31 downto 24);
-				when 16#2A# =>
+				when 16#20# =>
 					DIBuffer := DeviceID(39 downto 32);
-				when 16#2B# =>
+				when 16#21# =>
 					DIBuffer := DeviceID(47 downto 40);
-				when 16#2C# =>
+				when 16#22# =>
 					DIBuffer := DeviceID(55 downto 48);
-				when 16#2D# =>
+				when 16#23# =>
 					DIBuffer := "0000000" & DeviceID(56);
 
 				when others =>
