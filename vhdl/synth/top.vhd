@@ -286,11 +286,18 @@ architecture Main of Top is
 	signal FlashStrobe : boolean := false;
 	signal FlashBusy : boolean := false;
 
+	signal MRFWake : std_ulogic := '0';
+	signal MRFReset : std_ulogic := '0';
 	signal MRFCS : std_ulogic := '1';
 	signal MRFDataRead : std_ulogic_vector(7 downto 0) := X"00";
 	signal MRFDataWrite : std_ulogic_vector(7 downto 0) := X"00";
 	signal MRFStrobe : boolean := false;
 	signal MRFBusy : boolean := false;
+
+	signal BreakbeamDrive : boolean := false;
+
+	signal LPSReset : boolean := false;
+	signal LPSClock : boolean := false;
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
@@ -315,6 +322,7 @@ begin
 			HallsStuckLowClear <= (others => false);
 			EncodersClear <= (others => false);
 			FlashStrobe <= false;
+			MRFStrobe <= false;
 
 			case NavreIOAddress is
 				when 16#00# => -- LED_CTL
@@ -475,7 +483,7 @@ begin
 					end if;
 
 				when 16#16# => -- FLASH_CTL
-					DIBuffer := "000000" & FlashCS & to_stdulogic(FlashStrobe or FlashBusy);
+					DIBuffer := "000000" & FlashCS & to_stdulogic(FlashBusy);
 					if NavreWriteEnable then
 						FlashCS <= NavreDO(1);
 					end if;
@@ -485,6 +493,34 @@ begin
 					if NavreWriteEnable then
 						FlashDataWrite <= NavreDO;
 						FlashStrobe <= true;
+					end if;
+
+				when 16#18# => -- MRF_CTL
+					DIBuffer := "000" & MRFInterruptPin & MRFWake & MRFReset & MRFCS & to_stdulogic(MRFBusy);
+					if NavreWriteEnable then
+						MRFWake <= NavreDO(3);
+						MRFReset <= NavreDO(2);
+						MRFCS <= NavreDO(1);
+					end if;
+
+				when 16#19# => -- MRF_DATA
+					DIBuffer := MRFDataRead;
+					if NavreWriteEnable then
+						MRFDataWrite <= NavreDO;
+						MRFStrobe <= true;
+					end if;
+
+				when 16#1A# => -- BREAK_BEAM_CTL
+					DIBuffer := "0000000" & to_stdulogic(BreakbeamDrive);
+					if NavreWriteEnable then
+						BreakbeamDrive <= to_boolean(NavreDO(0));
+					end if;
+
+				when 16#1B# => -- LPS_CTL
+					DIBuffer := "000000" & to_stdulogic(LPSReset) & to_stdulogic(LPSClock);
+					if NavreWriteEnable then
+						LPSReset <= to_boolean(NavreDO(1));
+						LPSClock <= to_boolean(NavreDO(0));
 					end if;
 
 				when others =>
@@ -701,6 +737,8 @@ begin
 		MOSIPin => FlashMOSIPin,
 		MISOPin => FlashMISOPin);
 
+	MRFWakePin <= MRFWake;
+	MRFResetPin <= MRFReset;
 	MRFCSPin <= MRFCS;
 	MRFSPI : entity work.SPI(Arch)
 	port map(
@@ -714,4 +752,9 @@ begin
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
 		MISOPin => MRFMISOPin);
+
+	BreakbeamDrivePin <= to_stdulogic(BreakbeamDrive);
+
+	LPSResetPin <= to_stdulogic(not LPSReset);
+	LPSClockPin <= to_stdulogic(LPSClock);
 end architecture Main;
