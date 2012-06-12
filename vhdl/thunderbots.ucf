@@ -28,7 +28,7 @@ net "FlashMISOPin" iostandard=LVCMOS33 | float | loc=P65;
 # MRF24J40
 net "MRFResetPin" iostandard=LVCMOS33 | slew=quietio | loc=P127;
 net "MRFWakePin" iostandard=LVCMOS33 | slew=quietio | loc=P131;
-net "MRFInterruptPin" iostandard=LVCMOS33 | slew=quietio | loc=P132;
+net "MRFInterruptPin" iostandard=LVCMOS33 | float | loc=P132;
 net "MRFCSPin" iostandard=LVCMOS33 | slew=fast | loc=P126;
 net "MRFClockPin" iostandard=LVCMOS33 | slew=fast | loc=P134;
 net "MRFMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P133;
