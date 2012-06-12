@@ -50,7 +50,7 @@ begin
 		end if;
 	end process;
 
-	process(BusClock, DataWriteStrobeX) is
+	process(BusClock) is
 		variable ReadBitCount : natural range 0 to 7 := 0;
 		variable WriteBitCount : natural range 0 to 7 := 0;
 	begin
@@ -59,9 +59,9 @@ begin
 				ReadShifter <= ReadShifter(6 downto 0) & MISOPin;
 				ReadBitCount := ReadBitCount - 1;
 			end if;
-			if DataWriteStrobeX /= DataWriteStrobeZ then
+			if DataWriteStrobeY /= DataWriteStrobeZ then
 				ReadBitCount := 7;
-				DataWriteStrobeZ <= DataWriteStrobeX;
+				DataWriteStrobeZ <= DataWriteStrobeY;
 				ReadShifter <= ReadShifter(6 downto 0) & MISOPin;
 			end if;
 		end if;
