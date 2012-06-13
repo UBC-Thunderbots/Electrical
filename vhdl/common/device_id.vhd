@@ -15,7 +15,7 @@ architecture behav of device_id is
 	signal clk : std_ulogic := '0';
 	type state_t is (INIT,LOAD,SHIFTING,HOLD);
 	signal state : state_t := LOAD;
-	signal device_value : std_ulogic_vector(56 downto 0) := "0"&x"00000000000000";
+	signal device_value : std_ulogic_vector(56 downto 0) := (others => '0');
 	signal data_out : std_ulogic;
 	signal read : std_ulogic := '0';
 	signal shift : std_ulogic := '0';
