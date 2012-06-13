@@ -279,6 +279,8 @@ architecture Main of Top is
 	signal ChargeTimeout : boolean := false;
 	signal ChargeDone : boolean := false;
 	signal ChargePulse : boolean := false;
+	signal Discharge : boolean := false;
+	signal DischargePulse : boolean := false;
 
 	signal FlashCS : std_ulogic := '1';
 	signal FlashDataRead : std_ulogic_vector(7 downto 0) := X"00";
@@ -451,8 +453,9 @@ begin
 					DIBuffer := "0000" & ADS7866Latch(11 downto 8);
 
 				when 16#13# => -- CHICKER_CTL
-					DIBuffer := "000" & to_stdulogic(ChargeDone) & to_stdulogic(ChargeTimeout) & to_stdulogic(ChipActive or (ChipX xor ChipY)) & to_stdulogic(KickActive or (KickX xor KickY)) & to_stdulogic(Charge);
+					DIBuffer := "00" & to_stdulogic(Discharge) & to_stdulogic(ChargeDone) & to_stdulogic(ChargeTimeout) & to_stdulogic(ChipActive or (ChipX xor ChipY)) & to_stdulogic(KickActive or (KickX xor KickY)) & to_stdulogic(Charge);
 					if NavreWriteEnable then
+						Discharge <= to_boolean(NavreDO(5));
 						if NavreDO(2) = '1' then
 							ChipX <= not ChipY;
 						end if;
@@ -739,8 +742,17 @@ begin
 			end if;
 		end if;
 	end process;
-	ChickerChipPin <= to_stdulogic(not ChipActive);
-	ChickerKickPin <= to_stdulogic(not KickActive);
+	process(Clocks.Clock4MHz) is
+		subtype count_t is natural range 0 to 19999;
+		variable Count : count_t := 0;
+	begin
+		if rising_edge(Clocks.Clock4MHz) then
+			Count := (Count + 1) mod (count_t'high + 1);
+		end if;
+		DischargePulse <= (Count < 400) and Discharge;
+	end process;
+	ChickerChipPin <= to_stdulogic(not (ChipActive or DischargePulse));
+	ChickerKickPin <= to_stdulogic(not (KickActive or DischargePulse));
 
 	FlashCSPin <= FlashCS;
 	FlashSPI : entity work.SPI(Arch)
