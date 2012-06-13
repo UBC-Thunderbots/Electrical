@@ -69,7 +69,7 @@ begin
 
 		DeadBand: entity work.DeadBand(Arch)
 		port map(
-			Clock => Clocks.Clock8MHz,
+			Clock => Clocks.Clock4MHz,
 			Input => PWMPhases(I),
 			Output => Phases(I));
 	end generate;
