@@ -320,6 +320,7 @@ begin
 
 	process(Clocks.Clock40MHz) is
 		variable DIBuffer : std_ulogic_vector(7 downto 0);
+		variable LFSR : std_ulogic_vector(31 downto 0) := (others => '1');
 	begin
 		if rising_edge(Clocks.Clock40MHz) then
 			HallsStuckHighClear <= (others => false);
@@ -544,6 +545,14 @@ begin
 					DIBuffer := DeviceID(55 downto 48);
 				when 16#23# =>
 					DIBuffer := "0000000" & DeviceID(56);
+
+				when 16#24# =>
+					DIBuffer := "0000000" & LFSR(0);
+
+					if NavreWriteEnable then
+						LFSR := (LFSR(19) AND LFSR(24) AND LFSR(26) AND LFSR(31))&LFSR(30 downto 0);
+					end if;
+					
 
 				when others =>
 					DIBuffer := "--------";
