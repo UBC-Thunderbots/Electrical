@@ -751,7 +751,7 @@ begin
 			end if;
 		end if;
 	end process;
-	process(Clocks.Clock4MHz) is
+	process(Clocks.Clock4MHz, Discharge) is
 		subtype count_t is natural range 0 to 19999;
 		variable Count : count_t := 0;
 	begin
