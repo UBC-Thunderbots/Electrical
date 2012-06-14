@@ -14,24 +14,24 @@ net "LogicPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P137;
 net "HVPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P138;
 
 # SPI ADC
-net "ADCCSPin" iostandard=LVCMOS33 | slew=fast | loc=P35;
-net "ADCClockPin" iostandard=LVCMOS33 | slew=fast | loc=P87;
-net "ADCMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P34;
+net "ADCCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P35;
+net "ADCClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P87;
+net "ADCMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P34;
 net "ADCMISOPin" iostandard=LVCMOS33 | float | loc=P33;
 
 # SPI flash
-net "FlashCSPin" iostandard=LVCMOS33 | slew=fast | loc=P38;
-net "FlashClockPin" iostandard=LVCMOS33 | slew=fast | loc=P51;
-net "FlashMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P64;
+net "FlashCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P38;
+net "FlashClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P51;
+net "FlashMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P64;
 net "FlashMISOPin" iostandard=LVCMOS33 | float | loc=P65;
 
 # MRF24J40
 net "MRFResetPin" iostandard=LVCMOS33 | slew=quietio | loc=P127;
 net "MRFWakePin" iostandard=LVCMOS33 | slew=quietio | loc=P131;
 net "MRFInterruptPin" iostandard=LVCMOS33 | float | loc=P132;
-net "MRFCSPin" iostandard=LVCMOS33 | slew=fast | loc=P126;
-net "MRFClockPin" iostandard=LVCMOS33 | slew=fast | loc=P134;
-net "MRFMOSIPin" iostandard=LVCMOS33 | slew=fast | loc=P133;
+net "MRFCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P126;
+net "MRFClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P134;
+net "MRFMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P133;
 net "MRFMISOPin" iostandard=LVCMOS33 | float | loc=P124;
 
 # Chicker
@@ -39,8 +39,8 @@ net "ChickerChargePin" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P75;
 net "ChickerKickPin" iostandard=LVCMOS33 | slew=quietio | loc=P78;
 net "ChickerChipPin" iostandard=LVCMOS33 | slew=quietio | loc=P74;
 net "ChickerPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P79;
-net "ChickerCSPin" iostandard=LVCMOS33 | slew=fast | loc=P80;
-net "ChickerClockPin" iostandard=LVCMOS33 | slew=fast | loc=P56;
+net "ChickerCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P80;
+net "ChickerClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P56;
 net "ChickerMISOPin" iostandard=LVCMOS33 | pullup | loc=P67;
 
 # Break beam
