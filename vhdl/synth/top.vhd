@@ -550,7 +550,7 @@ begin
 					DIBuffer := "0000000" & LFSR(0);
 
 					if NavreWriteEnable then
-						LFSR := (LFSR(19) AND LFSR(24) AND LFSR(26) AND LFSR(31))&LFSR(30 downto 0);
+						LFSR := (LFSR(19) XOR LFSR(24) XOR LFSR(26) XOR LFSR(31))&LFSR(31 downto 1);
 					end if;
 					
 
