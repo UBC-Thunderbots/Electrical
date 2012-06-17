@@ -162,7 +162,6 @@ vhdl/common/boostcontroller.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/deadband.vhd -text
-vhdl/common/device_id.vhd -text
 vhdl/common/graycounter.vhd -text
 vhdl/common/mcp3004.vhd -text
 vhdl/common/motor.vhd -text
@@ -174,6 +173,7 @@ vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
 vhdl/sim/deadbandtest.vhd -text
 vhdl/synth/clockgen.vhd -text
+vhdl/synth/devicedna.vhd -text
 vhdl/synth/pintypes.vhd -text
 vhdl/synth/top.vhd -text
 vhdl/thunderbots.bmm -text

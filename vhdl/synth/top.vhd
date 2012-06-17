@@ -817,11 +817,10 @@ begin
 		MISOPin => MRFMISOPin);
 
 	
-	DNAPort : entity work.device_id
-		port map (
-			Clock4Mhz => Clocks.Clock4Mhz,
-			Value => DeviceID
-		);
+	DNAPort : entity work.DeviceDNA
+	port map(
+		Clocks => Clocks,
+		Value => DeviceID);
 
 	BreakbeamDrivePin <= to_stdulogic(BreakbeamDrive);
 

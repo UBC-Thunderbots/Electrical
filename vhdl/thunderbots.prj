@@ -12,7 +12,7 @@ vhdl work common/navrewrapper.vhd
 vhdl work common/pwm.vhd
 vhdl work common/spi.vhd
 vhdl work common/types.vhd
-vhdl work common/device_id.vhd
 vhdl work synth/clockgen.vhd
+vhdl work synth/devicedna.vhd
 vhdl work synth/pintypes.vhd
 vhdl work synth/top.vhd
