@@ -23,7 +23,7 @@ entity Top is
 		FlashCSPin : out std_ulogic := '1';
 		FlashClockPin : out std_ulogic := '0';
 		FlashMOSIPin : out std_ulogic := '0';
-		FlashMISOPin : in std_ulogic;
+		FlashMISODebugPin : inout std_ulogic;
 
 		MRFResetPin : out std_ulogic := '0';
 		MRFWakePin : out std_ulogic := '0';
@@ -303,6 +303,12 @@ architecture Main of Top is
 
 	signal LPSReset : boolean := false;
 	signal LPSClock : boolean := false;
+
+	signal DebugEnabled : boolean := false;
+	signal DebugBusy : boolean := false;
+	signal DebugStrobe : boolean := false;
+	signal DebugData : std_ulogic_vector(7 downto 0) := X"00";
+	signal DebugOut : std_ulogic := '1';
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
@@ -329,6 +335,7 @@ begin
 			EncodersClear <= (others => false);
 			FlashStrobe <= false;
 			MRFStrobe <= false;
+			DebugStrobe <= false;
 
 			case NavreIOAddress is
 				when 16#00# => -- LED_CTL
@@ -530,30 +537,42 @@ begin
 						LPSClock <= to_boolean(NavreDO(0));
 					end if;
 
-				when 16#1C# =>
+				when 16#1C# => -- DEVICE_ID0
 					DIBuffer := DeviceID(7 downto 0);
-				when 16#1D# =>
+				when 16#1D# => -- DEVICE_ID1
 					DIBuffer := DeviceID(15 downto 8);
-				when 16#1E# =>
+				when 16#1E# => -- DEVICE_ID2
 					DIBuffer := DeviceID(23 downto 16);
-				when 16#1F# =>
+				when 16#1F# => -- DEVICE_ID3
 					DIBuffer := DeviceID(31 downto 24);
-				when 16#20# =>
+				when 16#20# => -- DEVICE_ID4
 					DIBuffer := DeviceID(39 downto 32);
-				when 16#21# =>
+				when 16#21# => -- DEVICE_ID5
 					DIBuffer := DeviceID(47 downto 40);
-				when 16#22# =>
+				when 16#22# => -- DEVICE_ID6
 					DIBuffer := DeviceID(55 downto 48);
-				when 16#23# =>
+
+				when 16#23# => -- DEVICE_ID_STATUS
 					DIBuffer := "0000000" & DeviceID(56);
 
-				when 16#24# =>
+				when 16#24# => -- LFSR
 					DIBuffer := "0000000" & LFSR(0);
-
 					if NavreWriteEnable then
-						LFSR := (LFSR(19) XOR LFSR(24) XOR LFSR(26) XOR LFSR(31))&LFSR(31 downto 1);
+						LFSR := (LFSR(19) XOR LFSR(24) XOR LFSR(26) XOR LFSR(31)) & LFSR(31 downto 1);
 					end if;
-					
+
+				when 16#25# => -- DEBUG_CTL
+					DIBuffer := "000000" & to_stdulogic(DebugBusy) & to_stdulogic(DebugEnabled);
+					if NavreWriteEnable then
+						DebugEnabled <= to_boolean(NavreDO(0));
+					end if;
+
+				when 16#26# => -- DEBUG_DATA
+					DIBuffer := X"00";
+					if NavreWriteEnable then
+						DebugData <= NavreDO;
+						DebugStrobe <= true;
+					end if;
 
 				when others =>
 					DIBuffer := "--------";
@@ -779,7 +798,7 @@ begin
 		Busy => FlashBusy,
 		ClockPin => FlashClockPin,
 		MOSIPin => FlashMOSIPin,
-		MISOPin => FlashMISOPin);
+		MISOPin => FlashMISODebugPin);
 
 	MRFWakePin <= MRFWake;
 	MRFResetPin <= MRFReset;
@@ -808,4 +827,16 @@ begin
 
 	LPSResetPin <= to_stdulogic(not LPSReset);
 	LPSClockPin <= to_stdulogic(LPSClock);
+
+	DebugPort : entity work.AsyncSerialTransmitter(Arch)
+	generic map(
+		BusClockDivider => (4000000 + 9600 / 2) / 9600 - 1)
+	port map(
+		HostClock => Clocks.Clock40MHz,
+		BusClock => Clocks.Clock4MHz,
+		Data => DebugData,
+		Strobe => DebugStrobe,
+		Busy => DebugBusy,
+		Output => DebugOut);
+	FlashMISODebugPin <= DebugOut when DebugEnabled else 'Z';
 end architecture Main;

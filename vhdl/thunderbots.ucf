@@ -19,11 +19,11 @@ net "ADCClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P87;
 net "ADCMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P34;
 net "ADCMISOPin" iostandard=LVCMOS33 | float | loc=P33;
 
-# SPI flash
+# SPI flash and debug port
 net "FlashCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P38;
 net "FlashClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P51;
 net "FlashMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P64;
-net "FlashMISOPin" iostandard=LVCMOS33 | float | loc=P65;
+net "FlashMISODebugPin" iostandard=LVCMOS33 | pullup | loc=P65;
 
 # MRF24J40
 net "MRFResetPin" iostandard=LVCMOS33 | slew=quietio | loc=P127;

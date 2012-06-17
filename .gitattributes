@@ -156,6 +156,7 @@ electronics/speedsensor/receiver/breakbeamreceiver.sch -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
 vhdl/common/ads7866.vhd -text
+vhdl/common/asyncserialtransmitter.vhd -text
 vhdl/common/boostcontroller.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
