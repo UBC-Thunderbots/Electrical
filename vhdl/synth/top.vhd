@@ -279,6 +279,7 @@ architecture Main of Top is
 	signal ChargeTimeout : boolean := false;
 	signal ChargeDone : boolean := false;
 	signal ChargePulse : boolean := false;
+	signal CapacitorDangerous : boolean := false;
 	signal Discharge : boolean := false;
 	signal DischargePulse : boolean := false;
 
@@ -703,7 +704,8 @@ begin
 		CS => ChickerCSPin,
 		Level => ADS7866Level);
 	-- 30 V ÷ (2200 R + 220000 R) × 2200 R / 3.3 V × 4096 = 369 ADC counts
-	ChargedLEDPin <= '1' when ADS7866Level > 369 else '0';
+	CapacitorDangerous <= ADS7866Level > 369;
+	ChargedLEDPin <= to_stdulogic(CapacitorDangerous);
 
 	BoostController : entity work.BoostController(Arch)
 	generic map(
@@ -760,7 +762,7 @@ begin
 		if rising_edge(Clocks.Clock4MHz) then
 			Count := (Count + 1) mod (count_t'high + 1);
 		end if;
-		DischargePulse <= (Count < 400) and Discharge and ADS7866Level > 369;
+		DischargePulse <= (Count < 400) and Discharge and CapacitorDangerous;
 	end process;
 	ChickerChipPin <= to_stdulogic(not (ChipActive or DischargePulse));
 	ChickerKickPin <= to_stdulogic(not (KickActive or DischargePulse));
