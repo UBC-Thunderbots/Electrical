@@ -14,5 +14,6 @@ vhdl work common/spi.vhd
 vhdl work common/types.vhd
 vhdl work synth/clockgen.vhd
 vhdl work synth/devicedna.vhd
+vhdl work synth/icapwrapper.vhd
 vhdl work synth/pintypes.vhd
 vhdl work synth/top.vhd

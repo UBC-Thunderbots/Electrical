@@ -309,6 +309,10 @@ architecture Main of Top is
 	signal DebugStrobe : boolean := false;
 	signal DebugData : std_ulogic_vector(7 downto 0) := X"00";
 	signal DebugOut : std_ulogic := '1';
+
+	signal ICAPData : std_ulogic_vector(15 downto 0) := X"0000";
+	signal ICAPStrobe : boolean := false;
+	signal ICAPBusy : boolean := false;
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
@@ -336,6 +340,7 @@ begin
 			FlashStrobe <= false;
 			MRFStrobe <= false;
 			DebugStrobe <= false;
+			ICAPStrobe <= false;
 
 			case NavreIOAddress is
 				when 16#00# => -- LED_CTL
@@ -572,6 +577,22 @@ begin
 					if NavreWriteEnable then
 						DebugData <= NavreDO;
 						DebugStrobe <= true;
+					end if;
+
+				when 16#27# => -- ICAP_CTL
+					DIBuffer := "0000000" & to_stdulogic(ICAPStrobe or ICAPBusy);
+
+				when 16#28# => -- ICAP_LSB
+					DIBuffer := ICAPData(7 downto 0);
+					if NavreWriteEnable then
+						ICAPData(7 downto 0) <= NavreDO;
+						ICAPStrobe <= true;
+					end if;
+
+				when 16#29# => -- ICAP_MSB
+					DIBuffer := ICAPData(15 downto 8);
+					if NavreWriteEnable then
+						ICAPData(15 downto 8) <= NavreDO;
 					end if;
 
 				when others =>
@@ -838,4 +859,12 @@ begin
 		Busy => DebugBusy,
 		Output => DebugOut);
 	FlashMISODebugPin <= DebugOut when DebugEnabled else 'Z';
+
+	ICAPWrapper : entity work.ICAPWrapper(Arch)
+	port map(
+		HostClock => Clocks.Clock40MHz,
+		ICAPClock => Clocks.Clock4MHz,
+		Data => ICAPData,
+		Strobe => ICAPStrobe,
+		Busy => ICAPBusy);
 end architecture Main;
