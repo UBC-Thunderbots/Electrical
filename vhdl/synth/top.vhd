@@ -279,7 +279,8 @@ architecture Main of Top is
 	signal ChargeTimeout : boolean := false;
 	signal ChargeDone : boolean := false;
 	signal ChargePulse : boolean := false;
-	signal CapacitorDangerous : boolean := false;
+	constant CapacitorDangerousThreshold : natural := natural(30.0 / (220000.0 + 2200.0) * 2200.0 / 3.3 * 4095.0);
+	constant CapacitorStopDischargeThreshold : natural := natural(20.0 / (220000.0 + 2200.0) * 2200.0 / 3.3 * 4095.0);
 	signal Discharge : boolean := false;
 	signal DischargePulse : boolean := false;
 
@@ -744,8 +745,7 @@ begin
 		CS => ChickerCSPin,
 		Level => ADS7866Level);
 	-- 30 V ÷ (2200 R + 220000 R) × 2200 R / 3.3 V × 4096 = 369 ADC counts
-	CapacitorDangerous <= ADS7866Level > 369;
-	ChargedLEDPin <= to_stdulogic(CapacitorDangerous);
+	ChargedLEDPin <= to_stdulogic(ADS7866Level > CapacitorDangerousThreshold);
 
 	BoostController : entity work.BoostController(Arch)
 	generic map(
@@ -795,14 +795,14 @@ begin
 			end if;
 		end if;
 	end process;
-	process(Clocks.Clock4MHz, Discharge, CapacitorDangerous) is
+	process(Clocks.Clock4MHz, Discharge, ADS7866Level) is
 		subtype count_t is natural range 0 to 19999;
 		variable Count : count_t := 0;
 	begin
 		if rising_edge(Clocks.Clock4MHz) then
 			Count := (Count + 1) mod (count_t'high + 1);
 		end if;
-		DischargePulse <= (Count < 1200) and Discharge and CapacitorDangerous;
+		DischargePulse <= (Count < 1200) and Discharge and (ADS7866Level > CapacitorStopDischargeThreshold);
 	end process;
 	ChickerChipPin <= to_stdulogic(not (ChipActive or DischargePulse));
 	ChickerKickPin <= to_stdulogic(not (KickActive or DischargePulse));
