@@ -802,7 +802,7 @@ begin
 		if rising_edge(Clocks.Clock4MHz) then
 			Count := (Count + 1) mod (count_t'high + 1);
 		end if;
-		DischargePulse <= (Count < 400) and Discharge and CapacitorDangerous;
+		DischargePulse <= (Count < 1200) and Discharge and CapacitorDangerous;
 	end process;
 	ChickerChipPin <= to_stdulogic(not (ChipActive or DischargePulse));
 	ChickerKickPin <= to_stdulogic(not (KickActive or DischargePulse));
