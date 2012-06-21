@@ -52,9 +52,8 @@ begin
 		CLKOUT0_DIVIDE => 100, -- CLKOUT0 is 400 ÷ 100 = 4 MHz
 		CLKOUT1_DIVIDE => 50, -- CLKOUT1 is 400 ÷ 50 = 8 MHz
 		CLKOUT2_DIVIDE => 10, -- CLKOUT2 is 400 ÷ 10 = 40 MHz
-		CLKOUT3_DIVIDE => 40, -- CLKOUT3 is 400 ÷ 40 = 10 MHz
-		CLKOUT4_DIVIDE => 40, -- CLKOUT4 is 400 ÷ 40 = 10 MHz
-		CLKOUT4_PHASE => 180.0, -- CLKOUT4 is 180° phase shifted for use with an ODDR2 clock output generator
+		CLKOUT3_DIVIDE => 100, -- CLKOUT3 is 400 ÷ 100 = 4 MHz
+		CLKOUT3_PHASE => 180.0, -- CLKOUT3 is 180° phase shifted for use with an ODDR2 clock output generator
 		CLKOUT5_DIVIDE => 10, -- CLKOUT5 is 400 ÷ 10 = 40 MHz
 		CLKOUT5_PHASE => 180.0, -- CLKOUT5 is 180° phase shifted for use with an ODDR2 clock output generator
 		CLKFBOUT_MULT => 10,
@@ -82,9 +81,8 @@ begin
 	end generate;
 
 	Clocks.Clock4MHz <= BufferedPLLOutputs(0);
+	Clocks.Clock4MHzI <= BufferedPLLOutputs(3);
 	Clocks.Clock8MHz <= BufferedPLLOutputs(1);
-	Clocks.Clock10MHz <= BufferedPLLOutputs(3);
-	Clocks.Clock10MHzI <= BufferedPLLOutputs(4);
 	Clocks.Clock40MHz <= BufferedPLLOutputs(2);
 	Clocks.Clock40MHzI <= BufferedPLLOutputs(5);
 end architecture Behavioural;

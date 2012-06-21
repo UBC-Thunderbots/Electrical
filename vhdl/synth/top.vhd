@@ -827,8 +827,8 @@ begin
 	MRFSPI : entity work.SPI(Arch)
 	port map(
 		HostClock => Clocks.Clock40MHz,
-		BusClock => Clocks.Clock10MHz,
-		BusClockI => Clocks.Clock10MHzI,
+		BusClock => Clocks.Clock4MHz,
+		BusClockI => Clocks.Clock4MHzI,
 		WriteData => MRFDataWrite,
 		ReadData => MRFDataRead,
 		Strobe => MRFStrobe,
