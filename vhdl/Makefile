@@ -1,6 +1,9 @@
 # The name of the project.
 PROJ := thunderbots
 
+# The shell to use to run commands.
+override SHELL := /bin/bash
+
 # The names of all the top-level test targets.
 SIM_TARGETS := boostcontrollertest deadbandtest crc16test flashchecksummertest
 
