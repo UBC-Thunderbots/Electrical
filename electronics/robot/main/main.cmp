@@ -358,13 +358,6 @@ IdModule  = SM1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4AD90417/4F651F65;
-Reference = D24;
-ValeurCmp = DIODESCH;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /4AD90417/4F6971B8;
 Reference = F1;
 ValeurCmp = FUSE;

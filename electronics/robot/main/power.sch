@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T16:04:09 PDT
+EESchema Schematic File Version 2  date 2012-09-29T16:13:15 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -295,8 +295,7 @@ U 1 1 4F651F65
 P 5700 3700
 F 0 "D24" H 5700 3800 40  0000 C CNN
 F 1 "DIODESCH" H 5700 3600 40  0000 C CNN
-F 2 "SM0603" H 5700 3700 60  0001 C CNN
-F 4 "RB521G-30T2RCT-ND" H 5700 3700 60  0001 C CNN "Field1"
+F 4 "568-3407-1-ND" H 5700 3700 60  0001 C CNN "Digi-Key Part"
 	1    5700 3700
 	-1   0    0    1   
 $EndComp
