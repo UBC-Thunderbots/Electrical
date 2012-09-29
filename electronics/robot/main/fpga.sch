@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-22T01:11:55 PDT
+EESchema Schematic File Version 2  date 2012-09-28T21:33:03 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,12 +27,14 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-EELAYER 24  0
+LIBS:main-cache
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
-Sheet 2 17
+encoding utf-8
+Sheet 3 14
 Title ""
-Date "22 may 2012"
+Date "29 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -637,10 +639,6 @@ Wire Wire Line
 	5100 5350 5100 6200
 Wire Wire Line
 	5100 6200 4400 6200
-Wire Wire Line
-	4950 5350 4950 6000
-Wire Wire Line
-	4950 6000 4400 6000
 Wire Wire Line
 	4400 7150 5200 7150
 Wire Wire Line
@@ -1306,8 +1304,6 @@ Text HLabel 5450 2150 1    60   Output ~ 0
 MRF_WAKE
 Text HLabel 5650 1600 1    60   Output ~ 0
 /MRF_RESET
-Text HLabel 4400 6000 0    60   Output ~ 0
-BREAKBEAM_DRIVE
 Text HLabel 4250 6700 0    60   Input ~ 0
 M_SENSOR5[0..2]
 Text HLabel 2950 4250 0    60   Input ~ 0
