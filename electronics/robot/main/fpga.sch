@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T15:03:07 PDT
+EESchema Schematic File Version 2  date 2012-09-29T16:04:09 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -1722,11 +1722,11 @@ F 4 "160-1169-1-ND" H 950 3250 60  0001 C CNN "Field1"
 	-1   0    0    -1  
 $EndComp
 Text Label 4450 6950 0    60   ~ 0
-M_CTRL4+2
+M_LEVEL42
 Text Label 4450 6850 0    60   ~ 0
-M_CTRL4+1
+M_LEVEL41
 Text Label 4450 6750 0    60   ~ 0
-M_CTRL4+0
+M_LEVEL40
 Entry Wire Line
 	4400 6950 4300 7050
 Entry Wire Line
@@ -1738,19 +1738,19 @@ Entry Wire Line
 Entry Wire Line
 	4400 7250 4300 7350
 Text Label 4450 7350 0    60   ~ 0
-M_CTRL4-2
+M_ENABLE42
 Text Label 4450 7250 0    60   ~ 0
-M_CTRL4-1
+M_ENABLE41
 Text Label 4450 7150 0    60   ~ 0
-M_CTRL4-0
+M_ENABLE40
 Entry Wire Line
 	4400 7150 4300 7250
 Text Label 3000 2800 0    60   ~ 0
-M_CTRL2-2
+M_ENABLE22
 Text Label 3000 2900 0    60   ~ 0
-M_CTRL2-1
+M_ENABLE21
 Text Label 3000 3000 0    60   ~ 0
-M_CTRL2-0
+M_ENABLE20
 Entry Wire Line
 	2950 3000 2850 2900
 Entry Wire Line
@@ -1762,43 +1762,43 @@ Entry Wire Line
 Entry Wire Line
 	6900 1200 6800 1300
 Text Label 6250 1400 0    60   ~ 0
-M_CTRL1+2
+M_LEVEL12
 Text Label 6250 1300 0    60   ~ 0
-M_CTRL1+1
+M_LEVEL11
 Text Label 6250 1200 0    60   ~ 0
-M_CTRL1+0
+M_LEVEL10
 Entry Wire Line
 	6900 1100 6800 1200
 Entry Wire Line
 	6900 900  6800 1000
 Text Label 6250 1000 0    60   ~ 0
-M_CTRL1-2
+M_ENABLE12
 Text Label 6250 900  0    60   ~ 0
-M_CTRL1-1
+M_ENABLE11
 Entry Wire Line
 	6900 800  6800 900 
 Entry Wire Line
 	6900 700  6800 800 
 Text Label 6250 800  0    60   ~ 0
-M_CTRL1-0
+M_ENABLE10
 Entry Wire Line
 	2950 2650 2850 2550
 Entry Wire Line
 	2950 2550 2850 2450
 Text Label 3000 2450 0    60   ~ 0
-M_CTRL2+2
+M_LEVEL22
 Text Label 3000 2550 0    60   ~ 0
-M_CTRL2+1
+M_LEVEL21
 Text Label 3000 2650 0    60   ~ 0
-M_CTRL2+0
+M_LEVEL20
 Entry Wire Line
 	2950 2450 2850 2350
 Text Label 8700 2800 0    60   ~ 0
-M_CTRL0-2
+M_ENABLE02
 Text Label 8700 2700 0    60   ~ 0
-M_CTRL0-1
+M_ENABLE01
 Text Label 8700 2600 0    60   ~ 0
-M_CTRL0-0
+M_ENABLE00
 Entry Wire Line
 	9350 2700 9250 2800
 Entry Wire Line
@@ -1810,11 +1810,11 @@ Entry Wire Line
 Entry Wire Line
 	9350 2950 9250 3050
 Text Label 8700 3150 0    60   ~ 0
-M_CTRL0+2
+M_LEVEL02
 Text Label 8700 3050 0    60   ~ 0
-M_CTRL0+1
+M_LEVEL01
 Text Label 8700 2950 0    60   ~ 0
-M_CTRL0+0
+M_LEVEL00
 Entry Wire Line
 	9350 2850 9250 2950
 Entry Wire Line
@@ -1830,27 +1830,27 @@ Entry Wire Line
 Entry Wire Line
 	3100 4300 3000 4400
 Text Label 3100 4650 0    60   ~ 0
-M_CTRL3-2
+M_ENABLE32
 Text Label 3100 4750 0    60   ~ 0
-M_CTRL3-1
+M_ENABLE31
 Text Label 3100 4850 0    60   ~ 0
-M_CTRL3-0
+M_ENABLE30
 Text Label 3100 4300 0    60   ~ 0
-M_CTRL3+2
+M_LEVEL32
 Text Label 3100 4400 0    60   ~ 0
-M_CTRL3+1
+M_LEVEL31
 Text Label 3100 4500 0    60   ~ 0
-M_CTRL3+0
+M_LEVEL30
 Text HLabel 4250 7500 0    60   Output ~ 0
-M_CTRL4-[0..2]
+M_ENABLE4[0..2]
 Text HLabel 4250 7100 0    60   Output ~ 0
-M_CTRL4+[0..2]
+M_LEVEL4[0..2]
 Text HLabel 6950 650  2    60   Output ~ 0
-M_CTRL1-[0..2]
+M_ENABLE1[0..2]
 Text HLabel 6950 1050 2    60   Output ~ 0
-M_CTRL1+[0..2]
+M_LEVEL1[0..2]
 Text HLabel 2800 2650 0    60   Output ~ 0
-M_CTRL2-[0..2]
+M_ENABLE2[0..2]
 Text HLabel 8300 4700 2    60   Output ~ 0
 CHICKER_CHIP
 Text HLabel 7450 4500 2    60   Output ~ 0
@@ -1858,15 +1858,15 @@ CHICKER_KICK
 Text HLabel 7450 4650 2    60   Output ~ 0
 CHICKER_CHARGE
 Text HLabel 2800 2300 0    60   Output ~ 0
-M_CTRL2+[0..2]
+M_LEVEL2[0..2]
 Text HLabel 2950 5000 0    60   Output ~ 0
-M_CTRL3-[0..2]
+M_ENABLE3[0..2]
 Text HLabel 2950 4650 0    60   Output ~ 0
-M_CTRL3+[0..2]
+M_LEVEL3[0..2]
 Text HLabel 9400 2450 2    60   Output ~ 0
-M_CTRL0-[0..2]
+M_ENABLE0[0..2]
 Text HLabel 9450 2800 2    60   Output ~ 0
-M_CTRL0+[0..2]
+M_LEVEL0[0..2]
 Text HLabel 7450 3900 2    60   Input ~ 0
 OSC
 Text HLabel 4850 5400 3    60   BiDi ~ 0
