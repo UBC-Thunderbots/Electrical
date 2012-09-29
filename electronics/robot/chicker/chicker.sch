@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T22:58:09 PDT
+EESchema Schematic File Version 2  date 2012-09-28T23:03:46 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -531,7 +531,6 @@ U 1 1 4E627F86
 P 7950 5600
 F 0 "C7" H 8000 5700 50  0000 L CNN
 F 1 "100nF" H 8000 5500 50  0000 L CNN
-F 4 "565-1201-ND" H 7950 5600 60  0001 C CNN "Field1"
 	1    7950 5600
 	1    0    0    -1  
 $EndComp
@@ -659,7 +658,6 @@ U 1 1 4CEDE442
 P 6050 5650
 F 0 "C5" H 6100 5750 50  0000 L CNN
 F 1 "100nF" H 6100 5550 50  0000 L CNN
-F 4 "565-1201-ND" H 6050 5650 60  0001 C CNN "Field1"
 	1    6050 5650
 	1    0    0    -1  
 $EndComp
