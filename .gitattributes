@@ -61,6 +61,7 @@ datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneo
 datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
 datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
+datasheets/ics/L6234[!!-~]Motor[!!-~]Driver.pdf -text
 datasheets/ics/MCUs/AVR/ATtiny26.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/AVR/AVR[!!-~]Instruction[!!-~]Set.pdf -text
 datasheets/ics/MCUs/PIC18F6XJ50/Datasheet.pdf -text svneol=unset#application/octet-stream
