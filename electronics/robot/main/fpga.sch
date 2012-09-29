@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T21:33:03 PDT
+EESchema Schematic File Version 2  date 2012-09-28T21:48:10 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 3 14
+Sheet 2 14
 Title ""
 Date "29 sep 2012"
 Rev ""
@@ -51,8 +51,6 @@ Wire Wire Line
 	5450 2150 5450 2400
 Wire Wire Line
 	5700 2150 5700 2400
-Wire Wire Line
-	6300 5600 6300 5350
 Wire Wire Line
 	4400 6450 5800 6450
 Wire Wire Line
@@ -588,8 +586,6 @@ Wire Wire Line
 Wire Wire Line
 	8450 4250 9150 4250
 Wire Wire Line
-	7450 4400 7150 4400
-Wire Wire Line
 	8300 4700 7150 4700
 Wire Bus Line
 	4250 6700 4300 6700
@@ -739,8 +735,6 @@ Wire Wire Line
 	5850 6550 5850 5350
 Wire Wire Line
 	5800 6450 5800 5350
-Wire Wire Line
-	5750 5600 5750 5350
 Wire Wire Line
 	5800 2150 5800 2400
 Wire Wire Line
@@ -1861,12 +1855,6 @@ Text HLabel 7450 4500 2    60   Output ~ 0
 CHICKER_KICK
 Text HLabel 7450 4650 2    60   Output ~ 0
 CHICKER_CHARGE
-Text HLabel 6300 5600 3    60   Input ~ 0
-CHICKER_MISO
-Text HLabel 5750 5600 3    60   Output ~ 0
-CHICKER_CLK
-Text HLabel 7450 4400 2    60   Output ~ 0
-/CHICKER_CS
 Text HLabel 2800 2300 0    60   Output ~ 0
 M_CTRL3+[0..2]
 Text HLabel 2950 5000 0    60   Output ~ 0

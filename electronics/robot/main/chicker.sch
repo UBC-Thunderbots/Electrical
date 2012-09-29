@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T21:33:03 PDT
+EESchema Schematic File Version 2  date 2012-09-28T21:48:10 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 16 14
+Sheet 13 14
 Title ""
 Date "29 sep 2012"
 Rev ""
@@ -43,17 +43,16 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_1 M1
-U 1 1 4FB9F594
-P 7400 4300
-F 0 "M1" H 7480 4300 40  0000 L CNN
-F 1 "CONN_1" H 7400 4355 30  0001 C CNN
-F 4 "M3_MOUNT" H 7400 4300 60  0001 C CNN "Field1"
-	1    7400 4300
-	1    0    0    -1  
+L GND #PWR?
+U 1 1 50667D7D
+P 5100 4050
+F 0 "#PWR?" H 5100 4050 30  0001 C CNN
+F 1 "GND" H 5100 3980 30  0001 C CNN
+	1    5100 4050
+	0    1    1    0   
 $EndComp
-Text Notes 6900 4250 0    60   ~ 0
-Mounting standoff
+Wire Wire Line
+	5100 4150 5150 4150
 Wire Wire Line
 	5100 3750 5150 3750
 Connection ~ 5100 3400
@@ -85,27 +84,18 @@ Wire Wire Line
 Wire Wire Line
 	5100 4050 5150 4050
 Wire Wire Line
-	5100 4150 5150 4150
-Wire Wire Line
-	5100 4250 5150 4250
-Wire Wire Line
-	5100 4350 5150 4350
-Wire Wire Line
-	5100 4450 5150 4450
-Text Notes 6650 3600 0    60   ~ 0
-Header for mechanical support
-NoConn ~ 7100 3900
-NoConn ~ 7100 3700
+	5150 4250 5100 4250
 $Comp
-L CONN_2 P19
-U 1 1 4F69669B
-P 7450 3800
-F 0 "P19" V 7400 3800 40  0000 C CNN
-F 1 "CONN_2" V 7500 3800 40  0000 C CNN
-F 4 "3M9513-ND" H 7450 3800 60  0001 C CNN "Field1"
-	1    7450 3800
+L CONN_12 P18
+U 1 1 00000000
+P 5500 3700
+F 0 "P18" V 5450 3700 60  0000 C CNN
+F 1 "CONN_12" V 5550 3700 60  0000 C CNN
+	1    5500 3700
 	1    0    0    -1  
 $EndComp
+Text HLabel 5100 4150 0    60   Output ~ 0
+VOLTAGE_SENSE
 $Comp
 L GND #PWR0220
 U 1 1 4F69666B
@@ -133,46 +123,21 @@ F 1 "+BATT" H 5050 3300 30  0000 C CNN
 	1    5050 3200
 	0    -1   -1   0   
 $EndComp
-$Comp
-L CONN_14 P18
-U 1 1 4F696627
-P 5500 3800
-F 0 "P18" V 5470 3800 60  0000 C CNN
-F 1 "CONN_14" V 5580 3800 60  0000 C CNN
-F 4 "S7075-ND" H 5500 3800 60  0001 C CNN "Field1"
-	1    5500 3800
-	1    0    0    -1  
-$EndComp
 Text HLabel 5100 3750 0    60   Input ~ 0
 POWER_CTL
 $Comp
 L GND #PWR0223
 U 1 1 4CEE1DF8
-P 5100 4450
-F 0 "#PWR0223" H 5100 4450 30  0001 C CNN
-F 1 "GND" H 5100 4380 30  0001 C CNN
-	1    5100 4450
+P 5100 4250
+F 0 "#PWR0223" H 5100 4250 30  0001 C CNN
+F 1 "GND" H 5100 4180 30  0001 C CNN
+	1    5100 4250
 	0    1    1    0   
 $EndComp
-Text HLabel 5100 4050 0    60   Input ~ 0
-CLK
 Text HLabel 5100 3650 0    60   Input ~ 0
 CHIP
 Text HLabel 5100 3850 0    60   Input ~ 0
 KICK
 Text HLabel 5100 3550 0    60   Input ~ 0
 CHARGE
-Text HLabel 5100 4250 0    60   Output ~ 0
-MISO
-Text HLabel 5100 4150 0    60   Input ~ 0
-/CS
-$Comp
-L +3.3V #PWR0224
-U 1 1 4CC361B6
-P 5100 4350
-F 0 "#PWR0224" H 5100 4310 30  0001 C CNN
-F 1 "+3.3V" H 5100 4460 30  0000 C CNN
-	1    5100 4350
-	0    -1   -1   0   
-$EndComp
 $EndSCHEMATC
