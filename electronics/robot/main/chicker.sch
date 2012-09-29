@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T21:48:10 PDT
+EESchema Schematic File Version 2  date 2012-09-28T22:45:16 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,6 +42,42 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	5100 4250 5150 4250
+Wire Wire Line
+	5100 4050 5150 4050
+Wire Wire Line
+	5100 3950 5150 3950
+Wire Wire Line
+	5100 3850 5150 3850
+Wire Wire Line
+	5100 3650 5150 3650
+Wire Wire Line
+	5100 3550 5150 3550
+Wire Wire Line
+	5150 3450 5100 3450
+Connection ~ 5100 3200
+Wire Wire Line
+	5100 3200 5050 3200
+Wire Wire Line
+	5150 3150 5100 3150
+Wire Wire Line
+	5100 3150 5100 3250
+Wire Wire Line
+	5100 3250 5150 3250
+Wire Wire Line
+	5100 3400 5050 3400
+Wire Wire Line
+	5150 3350 5100 3350
+Wire Wire Line
+	5100 3350 5100 3450
+Connection ~ 5100 3400
+Wire Wire Line
+	5100 3750 5150 3750
+Wire Wire Line
+	5100 4150 5150 4150
+Text HLabel 5100 4250 0    60   Input ~ 0
+RELAY
 $Comp
 L GND #PWR?
 U 1 1 50667D7D
@@ -51,40 +87,6 @@ F 1 "GND" H 5100 3980 30  0001 C CNN
 	1    5100 4050
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5100 4150 5150 4150
-Wire Wire Line
-	5100 3750 5150 3750
-Connection ~ 5100 3400
-Wire Wire Line
-	5100 3350 5100 3450
-Wire Wire Line
-	5100 3350 5150 3350
-Wire Wire Line
-	5100 3400 5050 3400
-Wire Wire Line
-	5150 3250 5100 3250
-Wire Wire Line
-	5100 3250 5100 3150
-Wire Wire Line
-	5100 3150 5150 3150
-Wire Wire Line
-	5100 3200 5050 3200
-Connection ~ 5100 3200
-Wire Wire Line
-	5100 3450 5150 3450
-Wire Wire Line
-	5100 3550 5150 3550
-Wire Wire Line
-	5100 3650 5150 3650
-Wire Wire Line
-	5100 3850 5150 3850
-Wire Wire Line
-	5100 3950 5150 3950
-Wire Wire Line
-	5100 4050 5150 4050
-Wire Wire Line
-	5150 4250 5100 4250
 $Comp
 L CONN_12 P18
 U 1 1 00000000
@@ -125,15 +127,6 @@ F 1 "+BATT" H 5050 3300 30  0000 C CNN
 $EndComp
 Text HLabel 5100 3750 0    60   Input ~ 0
 POWER_CTL
-$Comp
-L GND #PWR0223
-U 1 1 4CEE1DF8
-P 5100 4250
-F 0 "#PWR0223" H 5100 4250 30  0001 C CNN
-F 1 "GND" H 5100 4180 30  0001 C CNN
-	1    5100 4250
-	0    1    1    0   
-$EndComp
 Text HLabel 5100 3650 0    60   Input ~ 0
 CHIP
 Text HLabel 5100 3850 0    60   Input ~ 0

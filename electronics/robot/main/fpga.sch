@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T21:48:10 PDT
+EESchema Schematic File Version 2  date 2012-09-28T22:45:16 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,6 +42,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 1650 1000 0    60   Output ~ 0
+RELAY
 NoConn ~ 6400 5350
 Wire Wire Line
 	7450 4050 7150 4050
