@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T17:10:19 PDT
+EESchema Schematic File Version 2  date 2012-09-29T18:59:43 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -594,8 +594,7 @@ L CP C6
 U 1 1 4CEECDAA
 P 9550 1450
 F 0 "C6" H 9600 1550 50  0000 L CNN
-F 1 "47uF" H 9600 1350 50  0000 L CNN
-F 4 "493-1065-ND" H 9550 1450 60  0001 C CNN "Field1"
+F 1 "100uF" H 9600 1350 50  0000 L CNN
 	1    9550 1450
 	1    0    0    -1  
 $EndComp

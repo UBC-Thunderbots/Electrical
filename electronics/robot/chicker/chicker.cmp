@@ -29,13 +29,6 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CEECDAA;
-Reference = C6;
-ValeurCmp = 47uF;
-IdModule  = C1V5H;
-EndCmp
-
-BeginCmp
 TimeStamp = /4E627F86;
 Reference = C7;
 ValeurCmp = 100nF;
