@@ -38,6 +38,7 @@ datasheets/ics/ADCs/ADS7866.pdf -text
 datasheets/ics/ADCs/MCP3004_3008.pdf -text
 datasheets/ics/ADG3123[!!-~](Level[!!-~]Shifter).pdf -text
 datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
+datasheets/ics/FET[!!-~]Drivers/MIC5020.pdf -text
 datasheets/ics/FET[!!-~]Drivers/TC4467_4468_4469.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Block[!!-~]RAM.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Clocking.pdf -text
