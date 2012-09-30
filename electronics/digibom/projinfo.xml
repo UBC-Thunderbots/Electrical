@@ -118,11 +118,13 @@
 		<default value="1kR" part="RMCF0805JT1K00CT-ND" />
 		<default value="1.5kR" part="RMCF0805JT1K50CT-ND" />
 		<default value="2.2kR" part="RMCF0805JT2K20CT-ND" />
+		<default value="2.2kR1%" part="311-2.20KCRCT-ND" />
 		<default value="3.3kR1%" part="311-3.30KCRCT-ND" />
 		<default value="4.7kR" part="311-4.7KARCT-ND" />
 		<default value="10kR" part="RMCF0805JT10K0CT-ND" />
 		<default value="26.7kR1%" part="311-26.7KCRCT-ND" />
 		<default value="100kR" part="RMCF0805JT100KCT-ND" />
+		<default value="220kR1%" part="311-220KCRCT-ND" />
 		<default value="15pF" part="490-5532-1-ND" />
 		<default value="27pF" part="478-5017-1-ND" />
 		<default value="10nF" part="490-1664-1-ND" />
