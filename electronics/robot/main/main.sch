@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T18:54:35 PDT
+EESchema Schematic File Version 2  date 2012-09-29T21:11:03 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,10 +42,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 9000 5400
-NoConn ~ 9000 4900
-NoConn ~ 9000 3700
-NoConn ~ 9000 3100
+Connection ~ 2800 4800
+Wire Wire Line
+	2800 4750 2800 4800
 Wire Wire Line
 	9000 3600 10200 3600
 Connection ~ 10200 4050
@@ -273,6 +272,31 @@ Wire Wire Line
 Wire Wire Line
 	10850 3550 10650 3550
 Connection ~ 10650 3550
+Wire Wire Line
+	2800 4300 2800 4350
+$Comp
+L +3.3V #PWR?
+U 1 1 00000000
+P 2800 4300
+F 0 "#PWR?" H 2800 4260 30  0001 C CNN
+F 1 "+3.3V" H 2800 4410 30  0000 C CNN
+	1    2800 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODESCH D?
+U 1 1 00000000
+P 2800 4550
+F 0 "D?" H 2800 4650 40  0000 C CNN
+F 1 "DIODESCH" H 2800 4450 40  0000 C CNN
+F 4 "568-3407-1-ND" H 2800 4550 60  0001 C CNN "Digi-Key Part"
+	1    2800 4550
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 9000 5400
+NoConn ~ 9000 4900
+NoConn ~ 9000 3700
+NoConn ~ 9000 3100
 $Comp
 L +HVBATT #PWR?
 U 1 1 00000000
