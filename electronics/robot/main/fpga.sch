@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T18:54:35 PDT
+EESchema Schematic File Version 2  date 2012-09-29T19:04:09 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,6 +42,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 4800 2400
 Text HLabel 1650 1000 0    60   Output ~ 0
 CHICKER_RELAY
 NoConn ~ 6400 5350
@@ -66,8 +67,6 @@ Wire Wire Line
 	6450 5550 5500 5550
 Wire Wire Line
 	6350 5400 6350 5350
-Wire Wire Line
-	4300 2350 4300 2400
 Wire Wire Line
 	9250 2950 8450 2950
 Wire Wire Line
@@ -728,8 +727,6 @@ Wire Wire Line
 Wire Wire Line
 	8400 2600 9250 2600
 Wire Wire Line
-	4800 2350 4800 2400
-Wire Wire Line
 	5500 5550 5500 5350
 Wire Wire Line
 	6150 5350 6150 5600
@@ -753,16 +750,6 @@ F 0 "#PWR010" H 6350 5400 30  0001 C CNN
 F 1 "GND" H 6350 5330 30  0001 C CNN
 	1    6350 5400
 	1    0    0    -1  
-$EndComp
-$Comp
-L R R57
-U 1 1 4FB977A2
-P 4550 2350
-F 0 "R57" V 4630 2350 50  0000 C CNN
-F 1 "∞R" V 4550 2350 50  0000 C CNN
-F 4 "jumper-wire" H 4550 2350 60  0001 C CNN "Field1"
-	1    4550 2350
-	0    1    1    0   
 $EndComp
 Entry Wire Line
 	3000 4200 3100 4100
@@ -1621,15 +1608,6 @@ P 5250 2350
 F 0 "#PWR054" H 5250 2310 30  0001 C CNN
 F 1 "+3.3V" H 5250 2460 30  0000 C CNN
 	1    5250 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR055
-U 1 1 4F616ED4
-P 4300 2400
-F 0 "#PWR055" H 4300 2400 30  0001 C CNN
-F 1 "GND" H 4300 2330 30  0001 C CNN
-	1    4300 2400
 	1    0    0    -1  
 $EndComp
 $Comp
