@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T21:33:03 PDT
+EESchema Schematic File Version 2  date 2012-09-29T23:18:06 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,9 +32,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 3 14
+Sheet 6 14
 Title ""
-Date "29 sep 2012"
+Date "30 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,18 +42,24 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7450 4000 7100 4000
+Wire Wire Line
+	7100 4000 7100 3650
+Wire Wire Line
+	7100 3650 7200 3650
+Wire Wire Line
+	7200 3450 6900 3450
+Wire Wire Line
+	7200 3250 7050 3250
+Wire Wire Line
+	7200 3050 4750 3050
 Connection ~ 7000 4300
 Wire Wire Line
 	7000 4300 7000 3550
-Wire Wire Line
-	7000 3550 7100 3550
 Connection ~ 4850 4100
 Wire Wire Line
 	4850 4100 4850 3350
-Wire Wire Line
-	4850 3350 7100 3350
-Wire Wire Line
-	7050 3150 7100 3150
 Connection ~ 6650 4050
 Wire Wire Line
 	6650 4050 6700 4050
@@ -76,17 +82,34 @@ Wire Wire Line
 Wire Wire Line
 	6650 4000 6650 4100
 Wire Wire Line
-	7100 3050 4750 3050
-Wire Wire Line
 	4750 3050 4750 4000
 Connection ~ 4750 4000
 Wire Wire Line
-	7050 3250 7100 3250
-Wire Wire Line
-	7100 3450 6900 3450
-Wire Wire Line
 	6900 3450 6900 4200
 Connection ~ 6900 4200
+Wire Wire Line
+	7000 3550 7200 3550
+Wire Wire Line
+	7200 3150 7050 3150
+Wire Wire Line
+	4850 3350 7200 3350
+Wire Wire Line
+	7200 3750 7200 3900
+Wire Wire Line
+	7200 3900 7450 3900
+Text HLabel 7450 4000 2    60   Output ~ 0
+POWER_ON
+Text HLabel 7450 3900 2    60   Output ~ 0
+PROG_B
+$Comp
+L CONN_8 P17
+U 1 1 00000000
+P 7550 3400
+F 0 "P17" V 7500 3400 60  0000 C CNN
+F 1 "CONN_8" V 7600 3400 60  0000 C CNN
+	1    7550 3400
+	1    0    0    -1  
+$EndComp
 $Comp
 L GND #PWR058
 U 1 1 4F6961FE
@@ -104,17 +127,6 @@ F 0 "#PWR059" H 7050 3110 30  0001 C CNN
 F 1 "+3.3V" H 7050 3260 30  0000 C CNN
 	1    7050 3150
 	0    -1   -1   0   
-$EndComp
-$Comp
-L CONN_6 P17
-U 1 1 4F695874
-P 7450 3300
-F 0 "P17" V 7400 3300 60  0000 C CNN
-F 1 "CONN_6" V 7500 3300 60  0000 C CNN
-F 2 "ICSP" H 7450 3300 60  0001 C CNN
-F 4 "ICSP" H 7450 3300 60  0001 C CNN "Field1"
-	1    7450 3300
-	1    0    0    -1  
 $EndComp
 $Comp
 L W25Q16BV U6

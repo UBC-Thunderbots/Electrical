@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T19:04:09 PDT
+EESchema Schematic File Version 2  date 2012-09-29T23:18:06 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,10 +42,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 4800 2400
-Text HLabel 1650 1000 0    60   Output ~ 0
-CHICKER_RELAY
-NoConn ~ 6400 5350
+Wire Wire Line
+	4750 5400 4750 5350
+Wire Wire Line
+	4750 5350 4800 5350
 Wire Wire Line
 	7450 4050 7150 4050
 Wire Wire Line
@@ -321,8 +321,6 @@ Wire Wire Line
 Connection ~ 1200 7150
 Wire Wire Line
 	1200 7150 1200 7200
-Wire Wire Line
-	4650 5400 4800 5400
 Connection ~ 700  4050
 Wire Wire Line
 	700  4050 750  4050
@@ -457,10 +455,6 @@ Connection ~ 700  5250
 Wire Wire Line
 	700  4450 750  4450
 Connection ~ 700  4450
-Wire Wire Line
-	4800 5400 4800 5350
-Wire Wire Line
-	4450 5350 4450 5400
 Wire Wire Line
 	600  7200 600  7150
 Wire Wire Line
@@ -742,6 +736,12 @@ Wire Wire Line
 	5400 1600 5400 2400
 Wire Wire Line
 	5300 1600 5300 2400
+Text HLabel 4750 5400 3    60   Input ~ 0
+PROG_B
+NoConn ~ 4800 2400
+Text HLabel 1650 1000 0    60   Output ~ 0
+CHICKER_RELAY
+NoConn ~ 6400 5350
 $Comp
 L GND #PWR010
 U 1 1 4FB9BD50
@@ -1116,26 +1116,6 @@ F 0 "#PWR016" H 1050 7240 20  0001 C CNN
 F 1 "+1.2V" H 1050 7210 30  0000 C CNN
 	1    1050 7100
 	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_2 P16
-U 1 1 4F698465
-P 4550 5750
-F 0 "P16" V 4500 5750 40  0000 C CNN
-F 1 "CONN_2" V 4600 5750 40  0000 C CNN
-F 2 "R1" H 4550 5750 60  0001 C CNN
-F 4 "2.54mm-header-general" H 4550 5750 60  0001 C CNN "Field1"
-	1    4550 5750
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR017
-U 1 1 4F69842E
-P 4450 5350
-F 0 "#PWR017" H 4450 5350 30  0001 C CNN
-F 1 "GND" H 4450 5280 30  0001 C CNN
-	1    4450 5350
-	-1   0    0    1   
 $EndComp
 Text HLabel 4400 6100 0    60   Output ~ 0
 /LPS_RESET

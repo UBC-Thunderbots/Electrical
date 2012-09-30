@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:08:39 PDT
+EESchema Schematic File Version 2  date 2012-09-29T23:18:06 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,10 +42,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 9000 5400
-NoConn ~ 9000 4900
-NoConn ~ 9000 3700
-NoConn ~ 9000 3100
+Wire Wire Line
+	3200 5900 3200 6900
+Connection ~ 4900 6700
+Wire Wire Line
+	4900 6700 4900 6900
+Wire Wire Line
+	4900 6900 3200 6900
+Wire Wire Line
+	4000 3700 3200 3700
 Wire Wire Line
 	9000 3600 10200 3600
 Connection ~ 10200 4050
@@ -273,6 +278,23 @@ Wire Wire Line
 Wire Wire Line
 	10850 3550 10650 3550
 Connection ~ 10650 3550
+Wire Wire Line
+	5100 4100 4850 4100
+Wire Wire Line
+	3200 3700 3200 5400
+$Comp
+L R R?
+U 1 1 00000000
+P 3200 5650
+F 0 "R?" V 3280 5650 50  0000 C CNN
+F 1 "100R" V 3200 5650 50  0000 C CNN
+	1    3200 5650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9000 5400
+NoConn ~ 9000 4900
+NoConn ~ 9000 3700
+NoConn ~ 9000 3100
 $Comp
 L +HVBATT #PWR?
 U 1 1 00000000
@@ -370,6 +392,7 @@ F39 "LOGIC_PWR" O L 5100 6700 60
 F40 "HV_PWR" O L 5100 6600 60 
 F41 "CHICKER_POWER_CTL" O R 7500 6550 60 
 F42 "CHICKER_RELAY" O R 7500 6650 60 
+F43 "PROG_B" I L 5100 4100 60 
 $EndSheet
 $Sheet
 S 5100 1750 2400 900 
@@ -479,6 +502,8 @@ F2 "MISO" O R 4850 4000 60
 F3 "/CS" I R 4850 3700 60 
 F4 "MOSI" I R 4850 3900 60 
 F5 "CLK" I R 4850 3800 60 
+F6 "POWER_ON" O L 4000 3700 60 
+F7 "PROG_B" O R 4850 4100 60 
 $EndSheet
 $Sheet
 S 4000 4350 850  500 
