@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T16:04:09 PDT
+EESchema Schematic File Version 2  date 2012-09-29T18:54:35 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,9 +32,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 2 14
+Sheet 4 14
 Title ""
-Date "29 sep 2012"
+Date "30 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,7 +43,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text HLabel 1650 1000 0    60   Output ~ 0
-RELAY
+CHICKER_RELAY
 NoConn ~ 6400 5350
 Wire Wire Line
 	7450 4050 7150 4050

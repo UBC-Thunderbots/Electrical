@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T16:04:09 PDT
+EESchema Schematic File Version 2  date 2012-09-29T18:54:35 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 14
 Title ""
-Date "29 sep 2012"
+Date "30 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -369,7 +369,7 @@ F38 "LPS_CLOCK" O L 5100 2900 60
 F39 "LOGIC_PWR" O L 5100 6700 60 
 F40 "HV_PWR" O L 5100 6600 60 
 F41 "CHICKER_POWER_CTL" O R 7500 6550 60 
-F42 "RELAY" O R 7500 6650 60 
+F42 "CHICKER_RELAY" O R 7500 6650 60 
 $EndSheet
 $Sheet
 S 5100 1750 2400 900 
