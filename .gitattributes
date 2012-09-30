@@ -13,6 +13,7 @@ datasheets/cameras/AVT[!!-~]Stingray[!!-~]F046C[!!-~]IRF/Instruction[!!-~]Leafle
 datasheets/cameras/AVT[!!-~]Stingray[!!-~]F046C[!!-~]IRF/Technical[!!-~]Manual[!!-~]4.4.2.pdf -text
 datasheets/cameras/EC1020.pdf -text
 datasheets/cameras/EC750.pdf -text
+datasheets/connectors/114-00841-68[!!-~]µSD.pdf -text
 datasheets/connectors/CUI[!!-~]SJ1-3523N[!!-~](Stereo[!!-~]Phone[!!-~]Jack).pdf -text svneol=unset#application/octet-stream
 datasheets/connectors/Hirose[!!-~]FH12[!!-~](FPC).pdf -text
 datasheets/connectors/Molex/02-20-2xx5[!!-~](Housing;[!!-~]Solenoid).pdf -text
@@ -144,6 +145,7 @@ electronics/robot/lateral_sensor/lateral_sensor.brd -text
 electronics/robot/lateral_sensor/lateral_sensor.cmp -text
 electronics/robot/main/adc.sch -text
 electronics/robot/main/breakoutconn.sch -text
+electronics/robot/main/sdcard.sch -text
 electronics/robot/optical_encoder/optical_encoder.pro -text
 electronics/robot/optical_encoder/optical_encoder.sch -text
 electronics/robot/solenoid/solenoid.pro -text
