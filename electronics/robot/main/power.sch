@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T16:13:15 PDT
+EESchema Schematic File Version 2  date 2012-09-29T20:56:17 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 14 14
 Title ""
-Date "29 sep 2012"
+Date "30 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,6 +42,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	4300 3550 4300 3200
 Connection ~ 4200 4450
 Wire Wire Line
 	4200 4750 4200 4450
@@ -70,8 +72,6 @@ Connection ~ 4850 3200
 Wire Wire Line
 	4600 2500 4600 2550
 Connection ~ 4300 3400
-Wire Wire Line
-	4300 3500 4300 3200
 Wire Wire Line
 	4300 3400 5000 3400
 Wire Wire Line
@@ -205,6 +205,27 @@ Wire Wire Line
 Wire Wire Line
 	4800 4800 4800 4650
 Connection ~ 4800 4750
+Wire Wire Line
+	4300 4000 4300 3950
+$Comp
+L GND #PWR?
+U 1 1 00000000
+P 4300 4000
+F 0 "#PWR?" H 4300 4000 30  0001 C CNN
+F 1 "GND" H 4300 3930 30  0001 C CNN
+	1    4300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D?
+U 1 1 00000000
+P 4300 3750
+F 0 "D?" H 4300 3850 50  0000 C CNN
+F 1 "TVS" H 4300 3650 40  0000 C CNN
+F 4 "SMAJ24CABCT-ND" H 4300 3750 60  0001 C CNN "Digi-Key Part"
+	1    4300 3750
+	0    -1   -1   0   
+$EndComp
 $Comp
 L R R58
 U 1 1 4FB9793E
