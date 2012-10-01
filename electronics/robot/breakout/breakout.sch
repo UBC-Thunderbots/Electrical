@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-28T21:20:06 PDT
+EESchema Schematic File Version 2  date 2012-10-01T11:38:41 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "29 sep 2012"
+Date "1 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +45,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 4450 2050
+Wire Wire Line
+	4450 2050 4450 2100
+Wire Wire Line
+	4650 1600 4650 1550
 Wire Wire Line
 	2650 3800 2600 3800
 Wire Wire Line
@@ -57,6 +62,59 @@ Wire Wire Line
 	1700 3600 1650 3600
 Wire Wire Line
 	1700 3200 1650 3200
+Wire Wire Line
+	4250 1550 4250 1600
+Wire Wire Line
+	4250 2000 4250 2050
+Wire Wire Line
+	4250 2050 4650 2050
+Wire Wire Line
+	4650 2050 4650 2000
+$Comp
+L GND #PWR?
+U 1 1 00000000
+P 4450 2100
+F 0 "#PWR?" H 4450 2100 30  0001 C CNN
+F 1 "GND" H 4450 2030 30  0001 C CNN
+	1    4450 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 00000000
+P 4650 1800
+F 0 "C?" H 4700 1900 50  0000 L CNN
+F 1 "10uF" H 4700 1700 50  0000 L CNN
+	1    4650 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 00000000
+P 4250 1800
+F 0 "C?" H 4300 1900 50  0000 L CNN
+F 1 "10uF" H 4300 1700 50  0000 L CNN
+	1    4250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 00000000
+P 4650 1550
+F 0 "#PWR?" H 4650 1640 20  0001 C CNN
+F 1 "+5V" H 4650 1640 30  0000 C CNN
+	1    4650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 00000000
+P 4250 1550
+F 0 "#PWR?" H 4250 1510 30  0001 C CNN
+F 1 "+3.3V" H 4250 1660 30  0000 C CNN
+	1    4250 1550
+	1    0    0    -1  
+$EndComp
 $Comp
 L +3.3V #PWR?
 U 1 1 00000000
@@ -144,28 +202,28 @@ $EndComp
 $Comp
 L +5V #PWR?
 U 1 1 00000000
-P 8850 4500
-F 0 "#PWR?" H 8850 4590 20  0001 C CNN
-F 1 "+5V" H 8850 4590 30  0000 C CNN
-	1    8850 4500
+P 3500 4400
+F 0 "#PWR?" H 3500 4490 20  0001 C CNN
+F 1 "+5V" H 3500 4490 30  0000 C CNN
+	1    3500 4400
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3.3V #PWR?
 U 1 1 00000000
-P 8600 4550
-F 0 "#PWR?" H 8600 4510 30  0001 C CNN
-F 1 "+3.3V" H 8600 4660 30  0000 C CNN
-	1    8600 4550
+P 3250 4450
+F 0 "#PWR?" H 3250 4410 30  0001 C CNN
+F 1 "+3.3V" H 3250 4560 30  0000 C CNN
+	1    3250 4450
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 00000000
-P 8450 4550
-F 0 "#PWR?" H 8450 4550 30  0001 C CNN
-F 1 "GND" H 8450 4480 30  0001 C CNN
-	1    8450 4550
+P 3100 4450
+F 0 "#PWR?" H 3100 4450 30  0001 C CNN
+F 1 "GND" H 3100 4380 30  0001 C CNN
+	1    3100 4450
 	1    0    0    -1  
 $EndComp
 $Sheet
