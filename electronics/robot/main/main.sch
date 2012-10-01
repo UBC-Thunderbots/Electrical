@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:40:59 PDT
+EESchema Schematic File Version 2  date 2012-10-01T11:25:44 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "30 sep 2012"
+Date "1 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,6 +42,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	10850 3850 10850 3550
 Wire Wire Line
 	7750 7000 7650 7000
 Wire Wire Line
@@ -52,11 +54,9 @@ Wire Wire Line
 	5100 4100 4850 4100
 Connection ~ 10650 3550
 Wire Wire Line
-	10650 3550 10850 3550
+	10850 3550 10650 3550
 Wire Wire Line
-	10850 3550 10850 4300
-Wire Wire Line
-	10850 4300 9000 4300
+	9000 4300 10850 4300
 Connection ~ 10200 4800
 Wire Wire Line
 	9000 4800 10200 4800
@@ -292,6 +292,17 @@ Wire Wire Line
 	7500 6150 7750 6150
 Wire Wire Line
 	7500 6250 7750 6250
+Wire Wire Line
+	10850 4300 10850 4250
+$Comp
+L C C?
+U 1 1 00000000
+P 10850 4050
+F 0 "C?" H 10900 4150 50  0000 L CNN
+F 1 "10nF" H 10900 3950 50  0000 L CNN
+	1    10850 4050
+	1    0    0    -1  
+$EndComp
 $Sheet
 S 7750 5800 850  500 
 U 5067E816
