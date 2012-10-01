@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:40:59 PDT
+EESchema Schematic File Version 2  date 2012-10-01T11:40:50 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,9 +32,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 5 15
+Sheet 9 15
 Title ""
-Date "30 sep 2012"
+Date "1 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -155,7 +155,7 @@ L R R56
 U 1 1 4F696775
 P 7000 4450
 F 0 "R56" V 7080 4450 50  0000 C CNN
-F 1 "4.7kR" V 7000 4450 50  0000 C CNN
+F 1 "10kR" V 7000 4450 50  0000 C CNN
 	1    7000 4450
 	1    0    0    -1  
 $EndComp
@@ -164,7 +164,7 @@ L R R55
 U 1 1 4F696771
 P 6800 4450
 F 0 "R55" V 6880 4450 50  0000 C CNN
-F 1 "4.7kR" V 6800 4450 50  0000 C CNN
+F 1 "10kR" V 6800 4450 50  0000 C CNN
 	1    6800 4450
 	1    0    0    -1  
 $EndComp
@@ -173,7 +173,7 @@ L R R54
 U 1 1 4F69676E
 P 6600 4450
 F 0 "R54" V 6680 4450 50  0000 C CNN
-F 1 "4.7kR" V 6600 4450 50  0000 C CNN
+F 1 "10kR" V 6600 4450 50  0000 C CNN
 	1    6600 4450
 	1    0    0    -1  
 $EndComp
