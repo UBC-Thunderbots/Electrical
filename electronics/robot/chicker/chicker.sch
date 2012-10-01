@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:12:22 PDT
+EESchema Schematic File Version 2  date 2012-10-01T11:28:28 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "30 sep 2012"
+Date "1 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +45,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 8750 2350
+Wire Wire Line
+	8750 2350 8800 2350
+Connection ~ 8250 2250
+Wire Wire Line
+	8300 2250 8250 2250
 Connection ~ 9550 6650
 Wire Wire Line
 	9550 6650 9500 6650
@@ -207,8 +213,6 @@ Connection ~ 1850 1150
 Wire Wire Line
 	3150 2150 3150 2500
 Wire Wire Line
-	8300 2450 8250 2450
-Wire Wire Line
 	8550 1850 8350 1850
 Wire Wire Line
 	7450 2550 7200 2550
@@ -251,6 +255,22 @@ Wire Wire Line
 Wire Wire Line
 	9500 6550 9550 6550
 Connection ~ 9550 6550
+Wire Wire Line
+	8250 2450 8750 2450
+Wire Wire Line
+	8750 2450 8750 2250
+Wire Wire Line
+	8750 2250 8700 2250
+$Comp
+L DIODESCH D?
+U 1 1 00000000
+P 8500 2250
+F 0 "D?" H 8500 2350 40  0000 C CNN
+F 1 "DIODESCH" H 8500 2150 40  0000 C CNN
+F 4 "568-3407-1-ND" H 8500 2250 60  0001 C CNN "Digi-Key Part"
+	1    8500 2250
+	-1   0    0    1   
+$EndComp
 $Comp
 L GND #PWR?
 U 1 1 00000000
@@ -342,10 +362,10 @@ CAP+
 $Comp
 L GND #PWR?
 U 1 1 00000000
-P 8300 2450
-F 0 "#PWR?" H 8300 2450 30  0001 C CNN
-F 1 "GND" H 8300 2380 30  0001 C CNN
-	1    8300 2450
+P 8800 2350
+F 0 "#PWR?" H 8800 2350 30  0001 C CNN
+F 1 "GND" H 8800 2280 30  0001 C CNN
+	1    8800 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
