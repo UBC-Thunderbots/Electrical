@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:40:59 PDT
+EESchema Schematic File Version 2  date 2012-10-01T11:22:47 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,9 +32,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 4 15
+Sheet 8 15
 Title ""
-Date "30 sep 2012"
+Date "1 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -120,7 +120,7 @@ L C C60
 U 1 1 4F619636
 P 4900 4500
 F 0 "C60" H 4950 4600 50  0000 L CNN
-F 1 "100nF" H 4950 4400 50  0000 L CNN
+F 1 "1uF" H 4950 4400 50  0000 L CNN
 	1    4900 4500
 	1    0    0    -1  
 $EndComp
