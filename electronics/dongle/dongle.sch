@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-05-22T00:45:46 PDT
+EESchema Schematic File Version 2  date 2012-10-01T17:22:31 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,12 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-EELAYER 24  0
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
+encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 may 2012"
+Date "2 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -900,7 +901,7 @@ L R R5
 U 1 1 4C9FD839
 P 7600 6650
 F 0 "R5" V 7680 6650 50  0000 C CNN
-F 1 "82R" V 7600 6650 50  0000 C CNN
+F 1 "100R" V 7600 6650 50  0000 C CNN
 	1    7600 6650
 	0    1    1    0   
 $EndComp
@@ -909,7 +910,7 @@ L R R6
 U 1 1 4C9FD831
 P 7600 6850
 F 0 "R6" V 7680 6850 50  0000 C CNN
-F 1 "82R" V 7600 6850 50  0000 C CNN
+F 1 "100R" V 7600 6850 50  0000 C CNN
 	1    7600 6850
 	0    1    1    0   
 $EndComp
@@ -1019,7 +1020,7 @@ L R R4
 U 1 1 4C54C365
 P 7900 4600
 F 0 "R4" V 7980 4600 50  0000 C CNN
-F 1 "82R" V 7900 4600 50  0000 C CNN
+F 1 "100R" V 7900 4600 50  0000 C CNN
 	1    7900 4600
 	0    1    1    0   
 $EndComp
@@ -1047,7 +1048,7 @@ L R R2
 U 1 1 4C54C362
 P 7900 4300
 F 0 "R2" V 7980 4300 50  0000 C CNN
-F 1 "82R" V 7900 4300 50  0000 C CNN
+F 1 "100R" V 7900 4300 50  0000 C CNN
 	1    7900 4300
 	0    1    1    0   
 $EndComp
@@ -1075,7 +1076,7 @@ L R R3
 U 1 1 4C54C35F
 P 7900 4900
 F 0 "R3" V 7980 4900 50  0000 C CNN
-F 1 "56R" V 7900 4900 50  0000 C CNN
+F 1 "100R" V 7900 4900 50  0000 C CNN
 	1    7900 4900
 	0    -1   -1   0   
 $EndComp
