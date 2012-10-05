@@ -57,8 +57,8 @@ class BOM(object):
 		for part, quantity in self._parts.items():
 			self._parts[part] = max(math.ceil(quantity * (1.0 + relative)), quantity + absolute)
 
-	def load_part_info(self, load_quantity_available):
-		self._part_info = digibom.partinfo.lookup(self._parts.keys(), load_quantity_available)
+	def load_part_info(self):
+		self._part_info = digibom.partinfo.lookup(self._parts.keys())
 
 	def check_quantity(self):
 		first = True

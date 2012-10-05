@@ -24,9 +24,6 @@ electronics/Chicker[!!-~]Test[!!-~]Board/*.stf
 electronics/digibom/digibom/*.pyc
 electronics/digibom/digibom/*.pyo
 electronics/digibom/digibom/__pycache__
-electronics/digibom/digibom/xdg/*.pyc
-electronics/digibom/digibom/xdg/*.pyo
-electronics/digibom/digibom/xdg/__pycache__
 electronics/dongle/$savepcb.*
 electronics/dongle/*-cache.*
 electronics/dongle/*.000

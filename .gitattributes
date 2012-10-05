@@ -118,8 +118,6 @@ electronics/digibom/digibom/main.py -text
 electronics/digibom/digibom/octopart.py -text
 electronics/digibom/digibom/partinfo.py -text
 electronics/digibom/digibom/projectinfo.py -text
-electronics/digibom/digibom/xdg/__init__.py -text
-electronics/digibom/digibom/xdg/basedir.py -text
 electronics/dongle/dongle.cmp -text
 electronics/dongle/gerbmerge/dongle10.cfg -text
 electronics/dongle/gerbmerge/dongle10.def -text
