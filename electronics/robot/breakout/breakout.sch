@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-01T18:30:33 PDT
+EESchema Schematic File Version 2  date 2012-10-04T18:06:42 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "2 oct 2012"
+Date "5 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -219,6 +219,7 @@ U 1 1 00000000
 P 5200 4800
 F 0 "P?" H 5200 5850 60  0000 C CNN
 F 1 "CONN_20X2" V 5200 4800 50  0000 C CNN
+F 4 "H10786-ND" H 5200 4800 60  0001 C CNN "Digi-Key Part"
 	1    5200 4800
 	1    0    0    -1  
 $EndComp
