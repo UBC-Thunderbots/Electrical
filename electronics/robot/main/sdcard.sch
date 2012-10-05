@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
+EESchema Schematic File Version 2  date 2012-10-04T17:54:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -103,6 +103,7 @@ U 1 1 506E24B8
 P 5900 4200
 F 0 "P1" V 5850 4200 60  0000 C CNN
 F 1 "CONN_10" V 5950 4200 60  0000 C CNN
+F 4 "114-00841-68-1-ND" V 5900 4200 60  0001 C CNN "Digi-Key Part"
 	1    5900 4200
 	1    0    0    -1  
 $EndComp
