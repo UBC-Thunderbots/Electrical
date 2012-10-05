@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
+EESchema Schematic File Version 2  date 2012-10-04T18:49:32 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -107,6 +107,7 @@ U 1 1 506E24B9
 P 7550 3400
 F 0 "P17" V 7500 3400 60  0000 C CNN
 F 1 "CONN_8" V 7600 3400 60  0000 C CNN
+F 4 "609-3264-ND" V 7550 3400 60  0001 C CNN "Digi-Key Part"
 	1    7550 3400
 	1    0    0    -1  
 $EndComp

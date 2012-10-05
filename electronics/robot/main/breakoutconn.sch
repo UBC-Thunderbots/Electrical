@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
+EESchema Schematic File Version 2  date 2012-10-04T18:49:32 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 2 15
+Sheet 6 15
 Title ""
 Date "5 oct 2012"
 Rev ""
@@ -99,6 +99,7 @@ U 1 1 506E24BA
 P 5350 3900
 F 0 "P2" H 5350 4950 60  0000 C CNN
 F 1 "CONN_20X2" V 5350 3900 50  0000 C CNN
+F 4 "H10805-ND" H 5350 3900 60  0001 C CNN "Digi-Key Part"
 	1    5350 3900
 	1    0    0    -1  
 $EndComp
