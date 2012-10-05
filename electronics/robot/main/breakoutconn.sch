@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:40:59 PDT
+EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 2 15
 Title ""
-Date "30 sep 2012"
+Date "5 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,28 +43,28 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L +5V #PWR?
-U 1 1 00000000
+L +5V #PWR079
+U 1 1 506E24BD
 P 2300 4200
-F 0 "#PWR?" H 2300 4290 20  0001 C CNN
+F 0 "#PWR079" H 2300 4290 20  0001 C CNN
 F 1 "+5V" H 2300 4290 30  0000 C CNN
 	1    2300 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR?
-U 1 1 00000000
+L +3.3V #PWR080
+U 1 1 506E24BC
 P 2150 4200
-F 0 "#PWR?" H 2150 4160 30  0001 C CNN
+F 0 "#PWR080" H 2150 4160 30  0001 C CNN
 F 1 "+3.3V" H 2150 4310 30  0000 C CNN
 	1    2150 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
-U 1 1 00000000
+L GND #PWR081
+U 1 1 506E24BB
 P 1950 4200
-F 0 "#PWR?" H 1950 4200 30  0001 C CNN
+F 0 "#PWR081" H 1950 4200 30  0001 C CNN
 F 1 "GND" H 1950 4130 30  0001 C CNN
 	1    1950 4200
 	1    0    0    -1  
@@ -94,10 +94,10 @@ M1_PHASE[0..2]
 Text HLabel 2850 2200 0    60   Input ~ 0
 M0_PHASE[0..2]
 $Comp
-L CONN_20X2 P?
-U 1 1 00000000
+L CONN_20X2 P2
+U 1 1 506E24BA
 P 5350 3900
-F 0 "P?" H 5350 4950 60  0000 C CNN
+F 0 "P2" H 5350 4950 60  0000 C CNN
 F 1 "CONN_20X2" V 5350 3900 50  0000 C CNN
 	1    5350 3900
 	1    0    0    -1  

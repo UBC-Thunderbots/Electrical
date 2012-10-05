@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-09-29T23:40:59 PDT
+EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 2 15
 Title ""
-Date "30 sep 2012"
+Date "5 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -61,10 +61,10 @@ Wire Wire Line
 Text HLabel 5500 4650 0    60   Output ~ 0
 PRESENT
 $Comp
-L +3.3V #PWR?
-U 1 1 00000000
+L +3.3V #PWR06
+U 1 1 506E24B6
 P 5500 4550
-F 0 "#PWR?" H 5500 4510 30  0001 C CNN
+F 0 "#PWR06" H 5500 4510 30  0001 C CNN
 F 1 "+3.3V" H 5500 4660 30  0000 C CNN
 	1    5500 4550
 	0    -1   -1   0   
@@ -73,10 +73,10 @@ NoConn ~ 5550 4450
 Text HLabel 5500 4350 0    60   Output ~ 0
 MISO
 $Comp
-L GND #PWR?
-U 1 1 00000000
+L GND #PWR07
+U 1 1 506E24BF
 P 5500 4250
-F 0 "#PWR?" H 5500 4250 30  0001 C CNN
+F 0 "#PWR07" H 5500 4250 30  0001 C CNN
 F 1 "GND" H 5500 4180 30  0001 C CNN
 	1    5500 4250
 	0    1    1    0   
@@ -84,10 +84,10 @@ $EndComp
 Text HLabel 5500 4150 0    60   Input ~ 0
 CLOCK
 $Comp
-L +3.3V #PWR?
-U 1 1 00000000
+L +3.3V #PWR08
+U 1 1 506E24B7
 P 5500 4050
-F 0 "#PWR?" H 5500 4010 30  0001 C CNN
+F 0 "#PWR08" H 5500 4010 30  0001 C CNN
 F 1 "+3.3V" H 5500 4160 30  0000 C CNN
 	1    5500 4050
 	0    -1   -1   0   
@@ -98,10 +98,10 @@ Text HLabel 5500 3850 0    60   Input ~ 0
 /CS
 NoConn ~ 5550 3750
 $Comp
-L CONN_10 P?
-U 1 1 00000000
+L CONN_10 P1
+U 1 1 506E24B8
 P 5900 4200
-F 0 "P?" V 5850 4200 60  0000 C CNN
+F 0 "P1" V 5850 4200 60  0000 C CNN
 F 1 "CONN_10" V 5950 4200 60  0000 C CNN
 	1    5900 4200
 	1    0    0    -1  
