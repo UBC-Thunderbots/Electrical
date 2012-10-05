@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-04T17:49:14 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-04T18:00:48 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -438,7 +438,7 @@ BeginCmp
 TimeStamp = /4AD90417/4F651F65;
 Reference = D24;
 ValeurCmp = DIODESCH;
-IdModule  = ;
+IdModule  = SOD-323F;
 EndCmp
 
 BeginCmp
