@@ -16,6 +16,7 @@ datasheets/cameras/EC750.pdf -text
 datasheets/connectors/114-00841-68[!!-~]µSD.pdf -text
 datasheets/connectors/CUI[!!-~]SJ1-3523N[!!-~](Stereo[!!-~]Phone[!!-~]Jack).pdf -text svneol=unset#application/octet-stream
 datasheets/connectors/Hirose[!!-~]FH12[!!-~](FPC).pdf -text
+datasheets/connectors/Hirose[!!-~]FX6.pdf -text
 datasheets/connectors/Molex/02-20-2xx5[!!-~](Housing;[!!-~]Solenoid).pdf -text
 datasheets/connectors/Molex/02-20-3021[!!-~](Header;[!!-~]Solenoid).pdf -text
 datasheets/connectors/Molex/08-5x-0xxx[!!-~](Pin[!!-~]for[!!-~]02-20-2xx5).pdf -text
