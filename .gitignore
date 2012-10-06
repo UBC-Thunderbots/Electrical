@@ -5,6 +5,7 @@ electronics/Chicker[!!-~]Test[!!-~]Board/*-cache.*
 electronics/Chicker[!!-~]Test[!!-~]Board/*.000
 electronics/Chicker[!!-~]Test[!!-~]Board/*.bak
 electronics/Chicker[!!-~]Test[!!-~]Board/*.bck
+electronics/Chicker[!!-~]Test[!!-~]Board/*.csv
 electronics/Chicker[!!-~]Test[!!-~]Board/*.drl
 electronics/Chicker[!!-~]Test[!!-~]Board/*.dsn
 electronics/Chicker[!!-~]Test[!!-~]Board/*.erc
@@ -15,7 +16,6 @@ electronics/Chicker[!!-~]Test[!!-~]Board/*.gbs
 electronics/Chicker[!!-~]Test[!!-~]Board/*.gtl
 electronics/Chicker[!!-~]Test[!!-~]Board/*.gto
 electronics/Chicker[!!-~]Test[!!-~]Board/*.gts
-electronics/Chicker[!!-~]Test[!!-~]Board/*.lst
 electronics/Chicker[!!-~]Test[!!-~]Board/*.mvl
 electronics/Chicker[!!-~]Test[!!-~]Board/*.net
 electronics/Chicker[!!-~]Test[!!-~]Board/*.pho
@@ -29,6 +29,7 @@ electronics/dongle/*-cache.*
 electronics/dongle/*.000
 electronics/dongle/*.bak
 electronics/dongle/*.bck
+electronics/dongle/*.csv
 electronics/dongle/*.drl
 electronics/dongle/*.dsn
 electronics/dongle/*.erc
@@ -39,7 +40,6 @@ electronics/dongle/*.gbs
 electronics/dongle/*.gtl
 electronics/dongle/*.gto
 electronics/dongle/*.gts
-electronics/dongle/*.lst
 electronics/dongle/*.mvl
 electronics/dongle/*.net
 electronics/dongle/*.pho
@@ -60,6 +60,7 @@ electronics/dribbler_testboard/*-cache.*
 electronics/dribbler_testboard/*.000
 electronics/dribbler_testboard/*.bak
 electronics/dribbler_testboard/*.bck
+electronics/dribbler_testboard/*.csv
 electronics/dribbler_testboard/*.drl
 electronics/dribbler_testboard/*.dsn
 electronics/dribbler_testboard/*.erc
@@ -70,7 +71,6 @@ electronics/dribbler_testboard/*.gbs
 electronics/dribbler_testboard/*.gtl
 electronics/dribbler_testboard/*.gto
 electronics/dribbler_testboard/*.gts
-electronics/dribbler_testboard/*.lst
 electronics/dribbler_testboard/*.mvl
 electronics/dribbler_testboard/*.net
 electronics/dribbler_testboard/*.pho
@@ -81,6 +81,7 @@ electronics/estop/*-cache.*
 electronics/estop/*.000
 electronics/estop/*.bak
 electronics/estop/*.bck
+electronics/estop/*.csv
 electronics/estop/*.drl
 electronics/estop/*.dsn
 electronics/estop/*.erc
@@ -91,7 +92,6 @@ electronics/estop/*.gbs
 electronics/estop/*.gtl
 electronics/estop/*.gto
 electronics/estop/*.gts
-electronics/estop/*.lst
 electronics/estop/*.mvl
 electronics/estop/*.net
 electronics/estop/*.pho
@@ -102,6 +102,7 @@ electronics/flashburner/*-cache.*
 electronics/flashburner/*.000
 electronics/flashburner/*.bak
 electronics/flashburner/*.bck
+electronics/flashburner/*.csv
 electronics/flashburner/*.drl
 electronics/flashburner/*.dsn
 electronics/flashburner/*.erc
@@ -112,7 +113,6 @@ electronics/flashburner/*.gbs
 electronics/flashburner/*.gtl
 electronics/flashburner/*.gto
 electronics/flashburner/*.gts
-electronics/flashburner/*.lst
 electronics/flashburner/*.mvl
 electronics/flashburner/*.net
 electronics/flashburner/*.pho
@@ -135,6 +135,7 @@ electronics/robot/breakout/*-cache.*
 electronics/robot/breakout/*.000
 electronics/robot/breakout/*.bak
 electronics/robot/breakout/*.bck
+electronics/robot/breakout/*.csv
 electronics/robot/breakout/*.drl
 electronics/robot/breakout/*.dsn
 electronics/robot/breakout/*.erc
@@ -145,7 +146,6 @@ electronics/robot/breakout/*.gbs
 electronics/robot/breakout/*.gtl
 electronics/robot/breakout/*.gto
 electronics/robot/breakout/*.gts
-electronics/robot/breakout/*.lst
 electronics/robot/breakout/*.mvl
 electronics/robot/breakout/*.net
 electronics/robot/breakout/*.pho
@@ -156,6 +156,7 @@ electronics/robot/chicker/*-cache.*
 electronics/robot/chicker/*.000
 electronics/robot/chicker/*.bak
 electronics/robot/chicker/*.bck
+electronics/robot/chicker/*.csv
 electronics/robot/chicker/*.drl
 electronics/robot/chicker/*.dsn
 electronics/robot/chicker/*.erc
@@ -166,7 +167,6 @@ electronics/robot/chicker/*.gbs
 electronics/robot/chicker/*.gtl
 electronics/robot/chicker/*.gto
 electronics/robot/chicker/*.gts
-electronics/robot/chicker/*.lst
 electronics/robot/chicker/*.mvl
 electronics/robot/chicker/*.net
 electronics/robot/chicker/*.pho
@@ -177,6 +177,7 @@ electronics/robot/dribbler_harness/*-cache.*
 electronics/robot/dribbler_harness/*.000
 electronics/robot/dribbler_harness/*.bak
 electronics/robot/dribbler_harness/*.bck
+electronics/robot/dribbler_harness/*.csv
 electronics/robot/dribbler_harness/*.drl
 electronics/robot/dribbler_harness/*.dsn
 electronics/robot/dribbler_harness/*.erc
@@ -187,7 +188,6 @@ electronics/robot/dribbler_harness/*.gbs
 electronics/robot/dribbler_harness/*.gtl
 electronics/robot/dribbler_harness/*.gto
 electronics/robot/dribbler_harness/*.gts
-electronics/robot/dribbler_harness/*.lst
 electronics/robot/dribbler_harness/*.mvl
 electronics/robot/dribbler_harness/*.net
 electronics/robot/dribbler_harness/*.pho
@@ -198,6 +198,7 @@ electronics/robot/lateral_sensor/*-cache.*
 electronics/robot/lateral_sensor/*.000
 electronics/robot/lateral_sensor/*.bak
 electronics/robot/lateral_sensor/*.bck
+electronics/robot/lateral_sensor/*.csv
 electronics/robot/lateral_sensor/*.drl
 electronics/robot/lateral_sensor/*.dsn
 electronics/robot/lateral_sensor/*.erc
@@ -208,7 +209,6 @@ electronics/robot/lateral_sensor/*.gbs
 electronics/robot/lateral_sensor/*.gtl
 electronics/robot/lateral_sensor/*.gto
 electronics/robot/lateral_sensor/*.gts
-electronics/robot/lateral_sensor/*.lst
 electronics/robot/lateral_sensor/*.mvl
 electronics/robot/lateral_sensor/*.net
 electronics/robot/lateral_sensor/*.pho
@@ -219,6 +219,7 @@ electronics/robot/main/*-cache.*
 electronics/robot/main/*.000
 electronics/robot/main/*.bak
 electronics/robot/main/*.bck
+electronics/robot/main/*.csv
 electronics/robot/main/*.drl
 electronics/robot/main/*.dsn
 electronics/robot/main/*.erc
@@ -229,7 +230,6 @@ electronics/robot/main/*.gbs
 electronics/robot/main/*.gtl
 electronics/robot/main/*.gto
 electronics/robot/main/*.gts
-electronics/robot/main/*.lst
 electronics/robot/main/*.mvl
 electronics/robot/main/*.net
 electronics/robot/main/*.pho
@@ -240,6 +240,7 @@ electronics/robot/optical_encoder/*-cache.*
 electronics/robot/optical_encoder/*.000
 electronics/robot/optical_encoder/*.bak
 electronics/robot/optical_encoder/*.bck
+electronics/robot/optical_encoder/*.csv
 electronics/robot/optical_encoder/*.drl
 electronics/robot/optical_encoder/*.dsn
 electronics/robot/optical_encoder/*.erc
@@ -250,7 +251,6 @@ electronics/robot/optical_encoder/*.gbs
 electronics/robot/optical_encoder/*.gtl
 electronics/robot/optical_encoder/*.gto
 electronics/robot/optical_encoder/*.gts
-electronics/robot/optical_encoder/*.lst
 electronics/robot/optical_encoder/*.mvl
 electronics/robot/optical_encoder/*.net
 electronics/robot/optical_encoder/*.pho
@@ -261,6 +261,7 @@ electronics/robot/solenoid/*-cache.*
 electronics/robot/solenoid/*.000
 electronics/robot/solenoid/*.bak
 electronics/robot/solenoid/*.bck
+electronics/robot/solenoid/*.csv
 electronics/robot/solenoid/*.drl
 electronics/robot/solenoid/*.dsn
 electronics/robot/solenoid/*.erc
@@ -271,7 +272,6 @@ electronics/robot/solenoid/*.gbs
 electronics/robot/solenoid/*.gtl
 electronics/robot/solenoid/*.gto
 electronics/robot/solenoid/*.gts
-electronics/robot/solenoid/*.lst
 electronics/robot/solenoid/*.mvl
 electronics/robot/solenoid/*.net
 electronics/robot/solenoid/*.pho
@@ -282,6 +282,7 @@ electronics/speedsensor/*-cache.*
 electronics/speedsensor/*.000
 electronics/speedsensor/*.bak
 electronics/speedsensor/*.bck
+electronics/speedsensor/*.csv
 electronics/speedsensor/*.drl
 electronics/speedsensor/*.dsn
 electronics/speedsensor/*.erc
@@ -292,7 +293,6 @@ electronics/speedsensor/*.gbs
 electronics/speedsensor/*.gtl
 electronics/speedsensor/*.gto
 electronics/speedsensor/*.gts
-electronics/speedsensor/*.lst
 electronics/speedsensor/*.mvl
 electronics/speedsensor/*.net
 electronics/speedsensor/*.pho
