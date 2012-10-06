@@ -121,11 +121,6 @@ electronics/digibom/digibom/projectinfo.py -text
 electronics/dongle/dongle.cmp -text
 electronics/dongle/gerbmerge/dongle10.cfg -text
 electronics/dongle/gerbmerge/dongle10.def -text
-electronics/dribbler_testboard/dribbler_testboard.brd -text
-electronics/dribbler_testboard/dribbler_testboard.cmp -text
-electronics/dribbler_testboard/dribbler_testboard.net -text
-electronics/dribbler_testboard/dribbler_testboard.pro -text
-electronics/dribbler_testboard/dribbler_testboard.sch -text
 electronics/flashburner/flashburner.cmp -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/computeDiff.m -text
