@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 06 Oct 2012 03:51:21 PM PDT
+EESchema Schematic File Version 2  date Sat 06 Oct 2012 04:27:27 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -383,6 +383,7 @@ U 1 1 5070B57F
 P 6750 750
 F 0 "D4" H 6750 850 40  0000 C CNN
 F 1 "DIODESCH" H 6750 650 40  0000 C CNN
+F 4 "NSR0240HT1GOSCT-ND" H 6750 750 60  0001 C CNN "digikey part"
 	1    6750 750 
 	-1   0    0    1   
 $EndComp
@@ -392,6 +393,7 @@ U 1 1 5070B4DA
 P 9950 2200
 F 0 "D5" H 9950 2300 40  0000 C CNN
 F 1 "DIODESCH" H 9950 2100 40  0000 C CNN
+F 4 "NSR0240HT1GOSCT-ND" H 9950 2200 60  0001 C CNN "digikey part"
 	1    9950 2200
 	1    0    0    -1  
 $EndComp
@@ -543,13 +545,14 @@ F 1 "+5V" H 7550 3890 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 Text Notes 6550 1850 0    60   ~ 0
-Pin 7 - control PROG_B\nPin 8 - drive power control line
+Pin 7 - drive power control line\nPin 8 - control PROG_B
 $Comp
 L CONN_8 P2
 U 1 1 5070898E
 P 7350 1300
 F 0 "P2" V 7300 1300 60  0000 C CNN
 F 1 "CONN_8" V 7400 1300 60  0000 C CNN
+F 4 "WM3006-ND" V 7350 1300 60  0001 C CNN "digikey part"
 	1    7350 1300
 	1    0    0    -1  
 $EndComp
