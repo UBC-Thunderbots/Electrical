@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
+EESchema Schematic File Version 2  date 2012-10-06T00:13:44 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "5 oct 2012"
+Date "6 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,6 +42,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 4200 6150 0    60   Output ~ 0
+LPS_DRIVE[0..3]
 Text HLabel 1650 1500 0    60   Input ~ 0
 SD_PRESENT
 Text HLabel 1650 1100 0    60   Output ~ 0
@@ -1127,10 +1129,6 @@ F 1 "+1.2V" H 1050 7210 30  0000 C CNN
 	1    1050 7100
 	1    0    0    -1  
 $EndComp
-Text HLabel 4400 6100 0    60   Output ~ 0
-/LPS_RESET
-Text HLabel 4400 6200 0    60   Output ~ 0
-LPS_CLOCK
 $Comp
 L GND #PWR016
 U 1 1 4F69766B

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-05T23:12:37 PDT
+EESchema Schematic File Version 2  date 2012-10-06T00:13:45 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -43,6 +43,18 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
+L CONN_30X2 P2
+U 1 1 00000000
+P 7050 3650
+F 0 "P2" H 7050 5200 60  0000 C CNN
+F 1 "CONN_30X2" V 7050 3650 50  0000 C CNN
+F 4 "H10806-ND" H 7050 3650 60  0001 C CNN "Digi-Key Part"
+	1    7050 3650
+	1    0    0    -1  
+$EndComp
+Text HLabel 2850 3150 0    60   Input ~ 0
+LPS_DRIVE[0..3]
+$Comp
 L +5V #PWR077
 U 1 1 506E24BD
 P 2300 4200
@@ -71,10 +83,6 @@ F 1 "GND" H 1950 4130 30  0001 C CNN
 $EndComp
 Text HLabel 2850 3500 0    60   Output ~ 0
 BB_SENSOR
-Text HLabel 2850 3250 0    60   Input ~ 0
-LPS /RESET
-Text HLabel 2850 3150 0    60   Input ~ 0
-LPS_CLOCK
 Text HLabel 2850 3050 0    60   Output ~ 0
 LPS_SENSOR
 Text HLabel 2850 2900 0    60   Input ~ 0
@@ -93,14 +101,4 @@ Text HLabel 2900 2300 0    60   Input ~ 0
 M1_PHASE[0..2]
 Text HLabel 2850 2200 0    60   Input ~ 0
 M0_PHASE[0..2]
-$Comp
-L CONN_20X2 P2
-U 1 1 506E24BA
-P 5350 3900
-F 0 "P2" H 5350 4950 60  0000 C CNN
-F 1 "CONN_20X2" V 5350 3900 50  0000 C CNN
-F 4 "H10805-ND" H 5350 3900 60  0001 C CNN "Digi-Key Part"
-	1    5350 3900
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC

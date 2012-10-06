@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T18:06:42 PDT
+EESchema Schematic File Version 2  date 2012-10-06T00:18:32 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "5 oct 2012"
+Date "6 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,45 +45,73 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 2300 3800
+Text Notes 1750 3200 0    60   ~ 0
+LPS3
+Text Notes 1750 3300 0    60   ~ 0
+LPS2
+Text Notes 1750 3400 0    60   ~ 0
+LPS1
+Text Notes 1750 3500 0    60   ~ 0
+LPS0
 Wire Wire Line
-	2300 3800 1650 3800
-Connection ~ 2900 3800
+	1650 3000 1700 3000
 Wire Wire Line
-	2950 3800 2900 3800
-Connection ~ 4450 2050
+	2350 3900 2300 3900
 Wire Wire Line
-	4450 2050 4450 2100
+	2300 3900 2300 3700
 Wire Wire Line
-	4650 1600 4650 1550
+	2300 3700 2350 3700
 Wire Wire Line
-	1650 3700 1700 3700
+	2850 3900 2900 3900
 Wire Wire Line
-	1700 3900 1650 3900
+	2900 3900 2900 3700
 Wire Wire Line
-	1700 3600 1650 3600
+	2900 3700 2850 3700
 Wire Wire Line
-	1700 3200 1650 3200
+	4650 2000 4650 2050
+Wire Wire Line
+	4650 2050 4250 2050
+Wire Wire Line
+	4250 2050 4250 2000
 Wire Wire Line
 	4250 1550 4250 1600
 Wire Wire Line
-	4250 2000 4250 2050
+	1700 3600 1650 3600
 Wire Wire Line
-	4250 2050 4650 2050
+	1700 3900 1650 3900
 Wire Wire Line
-	4650 2050 4650 2000
+	1650 3700 1700 3700
 Wire Wire Line
-	2850 3700 2900 3700
+	4650 1600 4650 1550
 Wire Wire Line
-	2900 3700 2900 3900
+	4450 2050 4450 2100
+Connection ~ 4450 2050
 Wire Wire Line
-	2900 3900 2850 3900
+	2950 3800 2900 3800
+Connection ~ 2900 3800
 Wire Wire Line
-	2350 3700 2300 3700
-Wire Wire Line
-	2300 3700 2300 3900
-Wire Wire Line
-	2300 3900 2350 3900
+	2300 3800 1650 3800
+Connection ~ 2300 3800
+$Comp
+L CONN_11 P?
+U 1 1 00000000
+P 1300 3500
+F 0 "P?" V 1250 3500 60  0000 C CNN
+F 1 "CONN_11" V 1350 3500 60  0000 C CNN
+F 4 "WM7629CT-ND" V 1300 3500 60  0001 C CNN "Digi-Key Part"
+	1    1300 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_30X2 P?
+U 1 1 00000000
+P 6750 4650
+F 0 "P?" H 6750 6200 60  0000 C CNN
+F 1 "CONN_30X2" V 6750 4650 50  0000 C CNN
+F 4 "H10787-ND" H 6750 4650 60  0001 C CNN "Digi-Key Part"
+	1    6750 4650
+	1    0    0    -1  
+$EndComp
 $Comp
 L R R?
 U 1 1 506A43A5
@@ -150,18 +178,14 @@ $EndComp
 $Comp
 L GND #PWR?
 U 1 1 00000000
-P 1700 3200
-F 0 "#PWR?" H 1700 3200 30  0001 C CNN
-F 1 "GND" H 1700 3130 30  0001 C CNN
-	1    1700 3200
+P 1700 3000
+F 0 "#PWR?" H 1700 3000 30  0001 C CNN
+F 1 "GND" H 1700 2930 30  0001 C CNN
+	1    1700 3000
 	0    -1   -1   0   
 $EndComp
-Text Notes 1750 3300 0    60   ~ 0
+Text Notes 1750 3100 0    60   ~ 0
 LPS sensor
-Text Notes 1750 3400 0    60   ~ 0
-LPS clock
-Text Notes 1750 3500 0    60   ~ 0
-LPS /reset
 $Comp
 L +3.3V #PWR?
 U 1 1 00000000
@@ -201,27 +225,6 @@ F 0 "R?" V 2680 3700 50  0000 C CNN
 F 1 "1kR" V 2600 3700 50  0000 C CNN
 	1    2600 3700
 	0    -1   -1   0   
-$EndComp
-$Comp
-L CONN_9 P?
-U 1 1 00000000
-P 1300 3600
-F 0 "P?" V 1250 3600 60  0000 C CNN
-F 1 "CONN_9" V 1350 3600 60  0000 C CNN
-F 2 "WM7627" H 1300 3600 60  0001 C CNN
-F 4 "WM7627" V 1300 3600 60  0001 C CNN "Field1"
-	1    1300 3600
-	-1   0    0    1   
-$EndComp
-$Comp
-L CONN_20X2 P?
-U 1 1 00000000
-P 5200 4800
-F 0 "P?" H 5200 5850 60  0000 C CNN
-F 1 "CONN_20X2" V 5200 4800 50  0000 C CNN
-F 4 "H10786-ND" H 5200 4800 60  0001 C CNN "Digi-Key Part"
-	1    5200 4800
-	1    0    0    -1  
 $EndComp
 $Comp
 L +5V #PWR?
