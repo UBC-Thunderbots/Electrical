@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-04T18:00:48 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-05T23:12:53 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -365,7 +365,7 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /00000000;
+TimeStamp = /506FCBC7;
 Reference = D1;
 ValeurCmp = DIODE;
 IdModule  = SOD-323F;
@@ -444,6 +444,41 @@ EndCmp
 BeginCmp
 TimeStamp = /4AD90417/4F6971B8;
 Reference = F1;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72C2A/00000000;
+Reference = F2;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EB0/00000000;
+Reference = F3;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EC7/00000000;
+Reference = F4;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EC1/00000000;
+Reference = F5;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EB9/00000000;
+Reference = F6;
 ValeurCmp = FUSE;
 IdModule  = SM1206;
 EndCmp

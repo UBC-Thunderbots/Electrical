@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T17:07:23 PDT
+EESchema Schematic File Version 2  date 2012-10-05T23:12:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "5 oct 2012"
+Date "6 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -427,7 +427,7 @@ F 4 "1N4148WSFSCT-ND" H 10650 3800 60  0001 C CNN "Digi-Key Part"
 $EndComp
 $Comp
 L DIODE D1
-U 1 1 00000000
+U 1 1 506FCBC7
 P 10650 3300
 F 0 "D1" H 10650 3400 40  0000 C CNN
 F 1 "DIODE" H 10650 3200 40  0000 C CNN

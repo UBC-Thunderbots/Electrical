@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-04T18:49:32 PDT
+EESchema Schematic File Version 2  date 2012-10-05T23:12:37 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 6 15
 Title ""
-Date "5 oct 2012"
+Date "6 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,28 +43,28 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L +5V #PWR079
+L +5V #PWR077
 U 1 1 506E24BD
 P 2300 4200
-F 0 "#PWR079" H 2300 4290 20  0001 C CNN
+F 0 "#PWR077" H 2300 4290 20  0001 C CNN
 F 1 "+5V" H 2300 4290 30  0000 C CNN
 	1    2300 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR080
+L +3.3V #PWR078
 U 1 1 506E24BC
 P 2150 4200
-F 0 "#PWR080" H 2150 4160 30  0001 C CNN
+F 0 "#PWR078" H 2150 4160 30  0001 C CNN
 F 1 "+3.3V" H 2150 4310 30  0000 C CNN
 	1    2150 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR081
+L GND #PWR079
 U 1 1 506E24BB
 P 1950 4200
-F 0 "#PWR081" H 1950 4200 30  0001 C CNN
+F 0 "#PWR079" H 1950 4200 30  0001 C CNN
 F 1 "GND" H 1950 4130 30  0001 C CNN
 	1    1950 4200
 	1    0    0    -1  
