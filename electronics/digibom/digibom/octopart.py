@@ -28,6 +28,7 @@ def lookup(parts):
 			"optimize.hide_images": "1",
 			"optimize.hide_unauthorized_offers": "1",
 			"optimize.hide_specs": "1",
+			"apikey": "872e8dde",
 		}
 		url = "http://octopart.com/api/v2/bom/match?" + urllib.parse.urlencode(params)
 		with urllib.request.urlopen(url) as resp:
