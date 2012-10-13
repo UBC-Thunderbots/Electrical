@@ -131,6 +131,7 @@ electronics/models/solenoid2/kickdata.m -text
 electronics/models/solenoid2/moded.csv -text
 electronics/models/solenoid2/plotter.m -text
 electronics/models/solenoid2/solenoidModel.m -text
+electronics/robot/breakout/breakout.cmp -text
 electronics/robot/breakout/breakout.pro -text
 electronics/robot/breakout/breakout.sch -text
 electronics/robot/dribbler_harness/dribbler_harness.pro -text

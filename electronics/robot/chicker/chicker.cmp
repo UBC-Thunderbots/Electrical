@@ -1,31 +1,31 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-05T23:16:39 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T12:10:47 PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
 Reference = C1;
 ValeurCmp = 10uF;
-IdModule  = ;
+IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CEDE442;
 Reference = C5;
 ValeurCmp = 10uF;
-IdModule  = ;
+IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CEECDAA;
 Reference = C6;
 ValeurCmp = 100uF;
-IdModule  = ;
+IdModule  = C1.5V8V;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E627F86;
 Reference = C7;
 ValeurCmp = 10uF;
-IdModule  = ;
+IdModule  = SM1206;
 EndCmp
 
 BeginCmp
@@ -67,7 +67,7 @@ BeginCmp
 TimeStamp = /506FCCB3;
 Reference = D2;
 ValeurCmp = DIODESCH;
-IdModule  = ;
+IdModule  = SOD-323F;
 EndCmp
 
 BeginCmp
@@ -186,21 +186,21 @@ BeginCmp
 TimeStamp = /50668D95;
 Reference = R5;
 ValeurCmp = 68R;
-IdModule  = ;
+IdModule  = SM5329;
 EndCmp
 
 BeginCmp
 TimeStamp = /50668D94;
 Reference = R6;
 ValeurCmp = 68R;
-IdModule  = ;
+IdModule  = SM5329;
 EndCmp
 
 BeginCmp
 TimeStamp = /506A474C;
 Reference = R7;
 ValeurCmp = 100kR;
-IdModule  = ;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
