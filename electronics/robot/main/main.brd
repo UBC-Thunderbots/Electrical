@@ -1,0 +1,173 @@
+PCBNEW-BOARD Version 1 date 2012-10-13T23:09:07 PDT
+
+# Created by Pcbnew(2011-nov-30)-stable
+
+$GENERAL
+encoding utf-8
+LayerCount 2
+Ly 1FFF8001
+EnabledLayers 1FFF8001
+Links 0
+NoConn 0
+Di 22191 8070 83221 72541
+Ndraw 11
+Ntrack 0
+Nzone 0
+BoardThickness 630
+Nmodule 0
+Nnets 1
+$EndGENERAL
+
+$SHEETDESCR
+Sheet A4 11700 8267
+Title ""
+Date "14 oct 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndSHEETDESCR
+
+$SETUP
+InternalUnit 0.000100 INCH
+Layers 2
+Layer[0] Back signal
+Layer[15] Front signal
+TrackWidth 80
+TrackClearence 100
+ZoneClearence 200
+TrackMinWidth 80
+DrawSegmWidth 150
+EdgeSegmWidth 150
+ViaSize 350
+ViaDrill 250
+ViaMinSize 350
+ViaMinDrill 200
+MicroViaSize 200
+MicroViaDrill 50
+MicroViasAllowed 0
+MicroViaMinSize 200
+MicroViaMinDrill 50
+TextPcbWidth 120
+TextPcbSize 600 800
+EdgeModWidth 150
+TextModSize 600 600
+TextModWidth 120
+PadSize 600 600
+PadDrill 320
+Pad2MaskClearance 100
+AuxiliaryAxisOrg 0 0
+PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
+$EndSETUP
+
+$EQUIPOT
+Na 0 ""
+St ~
+$EndEQUIPOT
+$NCLASS
+Name "Default"
+Desc "This is the default net class."
+Clearance 100
+TrackWidth 80
+ViaDia 350
+ViaDrill 250
+uViaDia 200
+uViaDrill 50
+AddNet ""
+$EndNCLASS
+$DRAWSEGMENT
+Po 0 29134 54331 58661 54331 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 58661 66929 29134 66929 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$COTATION
+Ge 0 24 0
+Va 29527
+Te "74.999 mm"
+Po 43897 71900 600 800 120 0 1
+Sb 0 29134 71260 58661 71260 120
+Sd 0 58661 67717 58661 72540 120
+Sg 0 29134 67717 29134 72540 120
+S1 0 58661 71260 58218 71490 120
+S2 0 58661 71260 58218 71030 120
+S3 0 29134 71260 29577 71490 120
+S4 0 29134 71260 29577 71030 120
+$endCOTATION
+$COTATION
+Ge 0 24 0
+Va 12598
+Te "31.999 mm"
+Po 75442 60630 600 800 120 2701 1
+Sb 0 74802 54331 74802 66929 120
+Sd 0 73622 66929 76082 66929 120
+Sg 0 73622 54331 76082 54331 120
+S1 0 74802 66929 74572 66486 120
+S2 0 74802 66929 75032 66486 120
+S3 0 74802 54331 74572 54774 120
+S4 0 74802 54331 75032 54774 120
+$endCOTATION
+$DRAWSEGMENT
+Po 0 29134 66929 29134 54331 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 58661 54331 58661 66929 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$COTATION
+Ge 0 24 0
+Va 33858
+Te "85.999 mm"
+Po 80560 53937 600 800 120 2701 1
+Sb 0 79920 37008 79920 70866 120
+Sd 0 78740 70866 81200 70866 120
+Sg 0 78740 37008 81200 37008 120
+S1 0 79920 70866 79690 70423 120
+S2 0 79920 70866 80150 70423 120
+S3 0 79920 37008 79690 37451 120
+S4 0 79920 37008 80150 37451 120
+$endCOTATION
+$COTATION
+Ge 0 24 0
+Va 25984
+Te "65.999 mm"
+Po 80561 24016 600 800 120 899 1
+Sb 0 79921 37008 79921 11024 120
+Sd 0 78740 11024 81201 11024 120
+Sg 0 78740 37008 81201 37008 120
+S1 0 79921 11024 80151 11467 120
+S2 0 79921 11024 79691 11467 120
+S3 0 79921 37008 80151 36565 120
+S4 0 79921 37008 79691 36565 120
+$endCOTATION
+$DRAWSEGMENT
+Po 2 44095 37008 65749 11024 150
+De 24 0 2800 0 0
+$EndDRAWSEGMENT
+$COTATION
+Ge 0 24 0
+Va 43308
+Te "110.002 mm"
+Po 44095 8810 600 800 120 0 1
+Sb 0 22441 9450 65749 9450 120
+Sd 0 65749 11024 65749 8170 120
+Sg 0 22441 11024 22441 8170 120
+S1 0 65749 9450 65306 9680 120
+S2 0 65749 9450 65306 9220 120
+S3 0 22441 9450 22884 9680 120
+S4 0 22441 9450 22884 9220 120
+$endCOTATION
+$DRAWSEGMENT
+Po 0 22441 11024 65749 11024 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$TRACK
+$EndTRACK
+$ZONE
+$EndZONE
+$EndBOARD
