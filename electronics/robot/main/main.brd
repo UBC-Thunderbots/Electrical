@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2012-10-14T00:13:18 PDT
+PCBNEW-BOARD Version 1 date 2012-10-14T00:15:33 PDT
 
 # Created by Pcbnew(2011-nov-30)-stable
 
@@ -55,8 +55,8 @@ TextPcbSize 600 800
 EdgeModWidth 150
 TextModSize 600 600
 TextModWidth 120
-PadSize 600 600
-PadDrill 320
+PadSize 2362 800
+PadDrill 0
 Pad2MaskClearance 100
 AuxiliaryAxisOrg 0 0
 PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
@@ -6673,107 +6673,6 @@ Of 0.000000 0.000000 0.000000
 Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  pin_array_7x2
-$MODULE MRF24J40M
-Po 90551 25984 0 15 5067811F 507A5F49 ~~
-Li MRF24J40M
-Sc 507A5F49
-AR /4F69649C
-Op 0 0 0
-T0 4100 -5650 600 600 0 120 N V 21 N "U7"
-T1 4100 -4300 600 600 0 120 N V 21 N "MRF24J40MB"
-DS 3050 -9850 3050 -8400 79 21
-DS 3050 -8400 5350 -8400 79 21
-DS 5350 -8400 5350 -9850 79 21
-DS 0 -9850 8200 -9850 79 21
-DS 0 0 8200 0 79 21
-DS 8200 0 8200 -13000 79 21
-DS 8200 -13000 0 -13000 79 21
-DS 0 -13000 0 0 79 21
-$PAD
-Sh "6" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 28 "/fpga/MRF_CLK"
-Po 0 -500
-$EndPAD
-$PAD
-Sh "5" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 31 "/fpga/MRF_MOSI"
-Po 0 -1500
-$EndPAD
-$PAD
-Sh "4" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 29 "/fpga/MRF_INT"
-Po 0 -2500
-$EndPAD
-$PAD
-Sh "3" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 32 "/fpga/MRF_WAKE"
-Po 0 -3500
-$EndPAD
-$PAD
-Sh "2" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 17 "/fpga//MRF_RESET"
-Po 0 -4500
-$EndPAD
-$PAD
-Sh "1" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 75 "GND"
-Po 0 -5500
-$EndPAD
-$PAD
-Sh "7" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 30 "/fpga/MRF_MISO"
-Po 8200 -500
-$EndPAD
-$PAD
-Sh "8" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 16 "/fpga//MRF_CS"
-Po 8200 -1500
-$EndPAD
-$PAD
-Sh "9" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 0 ""
-Po 8200 -2500
-$EndPAD
-$PAD
-Sh "10" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 2 "+3.3V"
-Po 8200 -3500
-$EndPAD
-$PAD
-Sh "11" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 75 "GND"
-Po 8200 -4500
-$EndPAD
-$PAD
-Sh "12" R 1587 800 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 75 "GND"
-Po 8200 -5500
-$EndPAD
-$EndMODULE  MRF24J40M
 $MODULE LM78XX_VERT
 Po 125984 66142 0 15 4D4DD005 507A5F4A ~~
 Li LM78XX_VERT
@@ -7648,6 +7547,107 @@ Ne 0 ""
 Po -581 -2697
 $EndPAD
 $EndMODULE  114-00841-68
+$MODULE MRF24J40M
+Po 90551 25984 0 15 507A667F 507A5F49 ~~
+Li MRF24J40M
+Sc 507A5F49
+AR /4F69649C
+Op 0 0 0
+T0 4100 -5650 600 600 0 120 N V 21 N "U7"
+T1 4100 -4300 600 600 0 120 N V 21 N "MRF24J40MB"
+DS 3050 -9850 3050 -8400 79 21
+DS 3050 -8400 5350 -8400 79 21
+DS 5350 -8400 5350 -9850 79 21
+DS 0 -9850 8200 -9850 79 21
+DS 0 0 8200 0 79 21
+DS 8200 0 8200 -13000 79 21
+DS 8200 -13000 0 -13000 79 21
+DS 0 -13000 0 0 79 21
+$PAD
+Sh "6" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 28 "/fpga/MRF_CLK"
+Po 0 -500
+$EndPAD
+$PAD
+Sh "5" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 31 "/fpga/MRF_MOSI"
+Po 0 -1500
+$EndPAD
+$PAD
+Sh "4" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 29 "/fpga/MRF_INT"
+Po 0 -2500
+$EndPAD
+$PAD
+Sh "3" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 32 "/fpga/MRF_WAKE"
+Po 0 -3500
+$EndPAD
+$PAD
+Sh "2" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 17 "/fpga//MRF_RESET"
+Po 0 -4500
+$EndPAD
+$PAD
+Sh "1" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 75 "GND"
+Po 0 -5500
+$EndPAD
+$PAD
+Sh "7" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 30 "/fpga/MRF_MISO"
+Po 8200 -500
+$EndPAD
+$PAD
+Sh "8" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "/fpga//MRF_CS"
+Po 8200 -1500
+$EndPAD
+$PAD
+Sh "9" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 8200 -2500
+$EndPAD
+$PAD
+Sh "10" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+3.3V"
+Po 8200 -3500
+$EndPAD
+$PAD
+Sh "11" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 75 "GND"
+Po 8200 -4500
+$EndPAD
+$PAD
+Sh "12" R 2362 800 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 75 "GND"
+Po 8200 -5500
+$EndPAD
+$EndMODULE  MRF24J40M
 $TEXTPCB
 Te "Battery"
 Po 44094 60236 600 800 120 0
