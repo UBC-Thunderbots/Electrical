@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T12:10:47 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T21:27:02 PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -88,7 +88,7 @@ BeginCmp
 TimeStamp = /506FCCBA;
 Reference = K1;
 ValeurCmp = RELAY_2RT;
-IdModule  = ;
+IdModule  = PB1163CT-ND;
 EndCmp
 
 BeginCmp

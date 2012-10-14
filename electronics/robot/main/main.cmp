@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T12:12:33 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T21:26:39 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -487,14 +487,14 @@ BeginCmp
 TimeStamp = /5067E816/506E24B8;
 Reference = P1;
 ValeurCmp = CONN_10;
-IdModule  = ;
+IdModule  = 114-00841-68;
 EndCmp
 
 BeginCmp
 TimeStamp = /5066737C/00000000;
 Reference = P2;
 ValeurCmp = CONN_30X2;
-IdModule  = ;
+IdModule  = FX6-60S-0.8SV;
 EndCmp
 
 BeginCmp
@@ -711,35 +711,35 @@ BeginCmp
 TimeStamp = /4CD72C2A/506E24BE;
 Reference = U1;
 ValeurCmp = L6234-SO20;
-IdModule  = ;
+IdModule  = PowerSO20;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB0/506E24BE;
 Reference = U2;
 ValeurCmp = L6234-SO20;
-IdModule  = ;
+IdModule  = PowerSO20;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC7/506E24BE;
 Reference = U3;
 ValeurCmp = L6234-SO20;
-IdModule  = ;
+IdModule  = PowerSO20;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC1/506E24BE;
 Reference = U4;
 ValeurCmp = L6234-SO20;
-IdModule  = ;
+IdModule  = PowerSO20;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/506E24BE;
 Reference = U5;
 ValeurCmp = L6234-SO20;
-IdModule  = ;
+IdModule  = PowerSO20;
 EndCmp
 
 BeginCmp

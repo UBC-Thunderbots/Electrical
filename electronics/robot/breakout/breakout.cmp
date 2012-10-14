@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T11:53:42 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T21:23:03 PDT
 
 BeginCmp
 TimeStamp = /5065530C/4F698233;
@@ -137,7 +137,7 @@ BeginCmp
 TimeStamp = /00000000;
 Reference = P10;
 ValeurCmp = CONN_30X2;
-IdModule  = ;
+IdModule  = FX6-60P-0.8SV;
 EndCmp
 
 BeginCmp
