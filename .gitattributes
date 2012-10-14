@@ -30,7 +30,8 @@ datasheets/diodes/RB521G-30.pdf -text
 datasheets/diodes/RURG3060C.pdf -text
 datasheets/diodes/STTH10R04.pdf -text
 datasheets/electromechanical/Maxon[!!-~]EC[!!-~]Commutation[!!-~]and[!!-~]Wiring.pdf -text svneol=unset#unset
-datasheets/electromechanical/Maxon[!!-~]EC16[!!-~](Dribbler).pdf -text
+datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]15W[!!-~](Dribbler).pdf -text
+datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]30W[!!-~](Dribbler).pdf -text svneol=unset#application/octet-stream
 datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain)[!!-~]\[May[!!-~]2009[!!-~]Edition\].pdf -text
 datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain)[!!-~]\[May[!!-~]2011[!!-~]Edition\].pdf -text
 datasheets/electromechanical/NKK[!!-~]A[!!-~]Series[!!-~](Power[!!-~]Switch).pdf -text
