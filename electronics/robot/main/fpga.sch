@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-14T21:09:35 PDT
+EESchema Schematic File Version 2  date 2012-10-15T00:42:56 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,6 +42,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3200 2400 3200 3400
+Wire Wire Line
+	3000 2400 3000 3500
+Wire Wire Line
+	2800 2400 2800 3650
+Wire Bus Line
+	2550 2250 2550 2300
+Wire Bus Line
+	2350 2250 2350 2300
 Wire Wire Line
 	7150 3200 7400 3200
 Wire Wire Line
@@ -91,17 +101,11 @@ Wire Wire Line
 Wire Wire Line
 	2200 4050 4200 4050
 Wire Wire Line
-	2700 2750 2700 3700
+	4200 3700 2700 3700
 Wire Wire Line
-	2700 3700 4200 3700
+	4200 3550 2900 3550
 Wire Wire Line
-	2900 2750 2900 3550
-Wire Wire Line
-	2900 3550 4200 3550
-Wire Wire Line
-	3100 2750 3100 3450
-Wire Wire Line
-	3100 3450 4200 3450
+	4200 3450 3100 3450
 Wire Wire Line
 	3300 2400 3300 3350
 Wire Wire Line
@@ -122,10 +126,6 @@ Wire Wire Line
 	2850 4450 4200 4450
 Wire Wire Line
 	4200 4300 2200 4300
-Wire Bus Line
-	3150 2300 3150 2250
-Wire Bus Line
-	2450 2600 2450 2650
 Wire Wire Line
 	4850 2400 4850 2300
 Wire Wire Line
@@ -375,8 +375,6 @@ Wire Wire Line
 	5250 2350 5250 2400
 Wire Wire Line
 	5500 2350 5500 2400
-Wire Bus Line
-	2550 2650 2550 2600
 Wire Wire Line
 	5200 2350 5200 2400
 Wire Wire Line
@@ -610,12 +608,6 @@ Wire Wire Line
 	8000 4650 7150 4650
 Wire Wire Line
 	7400 4200 7150 4200
-Wire Bus Line
-	2450 2650 3100 2650
-Wire Bus Line
-	3700 2300 3050 2300
-Wire Bus Line
-	3050 2300 3050 2250
 Wire Wire Line
 	4200 4400 2200 4400
 Wire Wire Line
@@ -631,17 +623,11 @@ Wire Wire Line
 Wire Wire Line
 	3400 3300 3400 2400
 Wire Wire Line
-	4200 3400 3200 3400
+	3200 3400 4200 3400
 Wire Wire Line
-	3200 3400 3200 2750
+	3000 3500 4200 3500
 Wire Wire Line
-	4200 3500 3000 3500
-Wire Wire Line
-	3000 3500 3000 2750
-Wire Wire Line
-	4200 3650 2800 3650
-Wire Wire Line
-	2800 3650 2800 2750
+	2800 3650 4200 3650
 Wire Wire Line
 	4200 4100 2100 4100
 Wire Wire Line
@@ -702,6 +688,18 @@ Wire Wire Line
 	7450 3000 7450 3300
 Wire Wire Line
 	7450 3300 7150 3300
+Wire Bus Line
+	3700 2300 2250 2300
+Wire Bus Line
+	2250 2300 2250 2250
+Wire Bus Line
+	2450 2250 2450 2300
+Wire Wire Line
+	2700 3700 2700 2400
+Wire Wire Line
+	2900 3550 2900 2400
+Wire Wire Line
+	3100 3450 3100 2400
 Entry Wire Line
 	2200 2900 2300 3000
 Entry Wire Line
@@ -1676,11 +1674,11 @@ F 4 "160-1169-1-ND" H 8850 5900 60  0001 C CNN "Field1"
 	1    8850 5900
 	0    1    -1   0   
 $EndComp
-Text Label 2200 3000 3    60   ~ 0
+Text Label 2500 3000 3    60   ~ 0
 M_LEVEL42
-Text Label 2100 3000 3    60   ~ 0
+Text Label 2200 3000 3    60   ~ 0
 M_LEVEL41
-Text Label 2400 3000 3    60   ~ 0
+Text Label 2100 3000 3    60   ~ 0
 M_LEVEL40
 Entry Wire Line
 	2400 3000 2300 2900
@@ -1690,19 +1688,19 @@ Entry Wire Line
 	2000 3000 1900 2900
 Entry Wire Line
 	2100 3000 2000 2900
-Text Label 2300 3000 3    60   ~ 0
+Text Label 2400 3000 3    60   ~ 0
 M_ENABLE42
-Text Label 2000 3000 3    60   ~ 0
+Text Label 2300 3000 3    60   ~ 0
 M_ENABLE41
-Text Label 2500 3000 3    60   ~ 0
+Text Label 2000 3000 3    60   ~ 0
 M_ENABLE40
 Entry Wire Line
 	2200 3000 2100 2900
 Text Label 8800 4000 2    60   ~ 0
 M_ENABLE22
-Text Label 8800 3300 2    60   ~ 0
+Text Label 8800 3500 2    60   ~ 0
 M_ENABLE21
-Text Label 8800 3600 2    60   ~ 0
+Text Label 8800 3900 2    60   ~ 0
 M_ENABLE20
 Entry Wire Line
 	8800 3400 8900 3300
@@ -1711,52 +1709,52 @@ Entry Wire Line
 Entry Wire Line
 	8800 3200 8900 3100
 Entry Wire Line
-	3100 2650 3200 2750
+	3100 2300 3200 2400
 Entry Wire Line
-	3000 2650 3100 2750
-Text Label 3100 2750 3    60   ~ 0
+	3000 2300 3100 2400
+Text Label 3000 2400 3    60   ~ 0
 M_LEVEL12
-Text Label 2800 2750 3    60   ~ 0
+Text Label 3200 2400 3    60   ~ 0
 M_LEVEL11
-Text Label 2900 2750 3    60   ~ 0
+Text Label 3300 2400 3    60   ~ 0
 M_LEVEL10
 Entry Wire Line
-	2900 2650 3000 2750
+	2900 2300 3000 2400
 Entry Wire Line
-	2800 2650 2900 2750
-Text Label 3200 2750 3    60   ~ 0
+	2800 2300 2900 2400
+Text Label 2900 2400 3    60   ~ 0
 M_ENABLE12
-Text Label 2700 2750 3    60   ~ 0
+Text Label 3100 2400 3    60   ~ 0
 M_ENABLE11
 Entry Wire Line
-	2700 2650 2800 2750
+	2700 2300 2800 2400
 Entry Wire Line
-	2600 2650 2700 2750
-Text Label 3000 2750 3    60   ~ 0
+	2600 2300 2700 2400
+Text Label 3400 2400 3    60   ~ 0
 M_ENABLE10
 Entry Wire Line
 	8800 3100 8900 3000
 Entry Wire Line
 	8800 3000 8900 2900
-Text Label 8800 3900 2    60   ~ 0
+Text Label 8800 3800 2    60   ~ 0
 M_LEVEL22
-Text Label 8800 3400 2    60   ~ 0
+Text Label 8800 3600 2    60   ~ 0
 M_LEVEL21
-Text Label 8800 3500 2    60   ~ 0
+Text Label 8800 3700 2    60   ~ 0
 M_LEVEL20
 Entry Wire Line
 	8800 2900 8900 2800
-Text Label 3400 2400 3    60   ~ 0
+Text Label 2700 2400 3    60   ~ 0
 M_ENABLE02
-Text Label 3500 2400 3    60   ~ 0
-M_ENABLE01
-Text Label 3800 2400 3    60   ~ 0
-M_ENABLE00
-Text Label 3300 2400 3    60   ~ 0
-M_LEVEL02
-Text Label 3600 2400 3    60   ~ 0
-M_LEVEL01
 Text Label 3700 2400 3    60   ~ 0
+M_ENABLE01
+Text Label 3500 2400 3    60   ~ 0
+M_ENABLE00
+Text Label 2800 2400 3    60   ~ 0
+M_LEVEL02
+Text Label 3800 2400 3    60   ~ 0
+M_LEVEL01
+Text Label 3600 2400 3    60   ~ 0
 M_LEVEL00
 Entry Wire Line
 	8800 3500 8900 3400
@@ -1770,15 +1768,15 @@ Entry Wire Line
 	8800 3900 8900 3800
 Entry Wire Line
 	8800 4000 8900 3900
-Text Label 8800 3700 2    60   ~ 0
+Text Label 8800 3300 2    60   ~ 0
 M_ENABLE32
-Text Label 8800 2900 2    60   ~ 0
+Text Label 8800 3000 2    60   ~ 0
 M_ENABLE31
 Text Label 8800 3200 2    60   ~ 0
 M_ENABLE30
-Text Label 8800 3800 2    60   ~ 0
+Text Label 8800 3400 2    60   ~ 0
 M_LEVEL32
-Text Label 8800 3000 2    60   ~ 0
+Text Label 8800 2900 2    60   ~ 0
 M_LEVEL31
 Text Label 8800 3100 2    60   ~ 0
 M_LEVEL30
@@ -1786,9 +1784,9 @@ Text HLabel 1850 2850 1    60   Output ~ 0
 M_ENABLE4[0..2]
 Text HLabel 1750 2850 1    60   Output ~ 0
 M_LEVEL4[0..2]
-Text HLabel 2550 2600 1    60   Output ~ 0
+Text HLabel 2550 2250 1    60   Output ~ 0
 M_ENABLE1[0..2]
-Text HLabel 2450 2600 1    60   Output ~ 0
+Text HLabel 2450 2250 1    60   Output ~ 0
 M_LEVEL1[0..2]
 Text HLabel 8950 2650 2    60   Output ~ 0
 M_ENABLE2[0..2]
@@ -1804,9 +1802,9 @@ Text HLabel 8950 2550 2    60   Output ~ 0
 M_ENABLE3[0..2]
 Text HLabel 8950 2450 2    60   Output ~ 0
 M_LEVEL3[0..2]
-Text HLabel 3050 2250 1    60   Output ~ 0
+Text HLabel 2350 2250 1    60   Output ~ 0
 M_ENABLE0[0..2]
-Text HLabel 3150 2250 1    60   Output ~ 0
+Text HLabel 2250 2250 1    60   Output ~ 0
 M_LEVEL0[0..2]
 Text HLabel 5750 6200 3    60   Input ~ 0
 OSC
