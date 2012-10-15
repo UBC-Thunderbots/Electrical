@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-15T00:42:56 PDT
+EESchema Schematic File Version 2  date 2012-10-15T01:53:19 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,6 +42,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 6600 5150
+Wire Wire Line
+	6600 5150 6550 5150
+Connection ~ 7500 3850
+Wire Wire Line
+	7500 3850 7550 3850
+Connection ~ 7500 3800
+Wire Wire Line
+	7450 3800 7500 3800
 Connection ~ 7500 2400
 Wire Wire Line
 	7500 2300 7500 2500
@@ -111,8 +120,6 @@ Wire Wire Line
 	7500 5100 7450 5100
 Wire Wire Line
 	7500 5150 8100 5150
-Wire Wire Line
-	6650 5100 6550 5100
 Wire Wire Line
 	5850 2100 6300 2100
 Wire Wire Line
@@ -257,6 +264,30 @@ Wire Wire Line
 Connection ~ 7500 2450
 Wire Wire Line
 	7500 3600 7450 3600
+Wire Wire Line
+	7450 4000 7500 4000
+Wire Wire Line
+	7500 4000 7500 3700
+Wire Wire Line
+	7500 3700 7450 3700
+Wire Wire Line
+	7450 3900 7500 3900
+Connection ~ 7500 3900
+Wire Wire Line
+	6650 5100 6600 5100
+Wire Wire Line
+	6600 5100 6600 5200
+Wire Wire Line
+	6600 5200 6650 5200
+$Comp
+L GND #PWR?
+U 1 1 00000000
+P 7550 3850
+F 0 "#PWR?" H 7550 3850 30  0001 C CNN
+F 1 "GND" H 7550 3780 30  0001 C CNN
+	1    7550 3850
+	0    -1   -1   0   
+$EndComp
 Entry Wire Line
 	8100 2850 8200 2950
 Entry Wire Line
@@ -436,10 +467,10 @@ $EndComp
 $Comp
 L GND #PWR082
 U 1 1 506E24BB
-P 6550 5100
-F 0 "#PWR082" H 6550 5100 30  0001 C CNN
-F 1 "GND" H 6550 5030 30  0001 C CNN
-	1    6550 5100
+P 6550 5150
+F 0 "#PWR082" H 6550 5150 30  0001 C CNN
+F 1 "GND" H 6550 5080 30  0001 C CNN
+	1    6550 5150
 	0    1    1    0   
 $EndComp
 Text HLabel 5850 2200 0    60   Output ~ 0
