@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-15T01:53:19 PDT
+EESchema Schematic File Version 2  date 2012-10-15T19:07:26 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 6 15
 Title ""
-Date "15 oct 2012"
+Date "16 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,12 +45,6 @@ $EndDescr
 Connection ~ 6600 5150
 Wire Wire Line
 	6600 5150 6550 5150
-Connection ~ 7500 3850
-Wire Wire Line
-	7500 3850 7550 3850
-Connection ~ 7500 3800
-Wire Wire Line
-	7450 3800 7500 3800
 Connection ~ 7500 2400
 Wire Wire Line
 	7500 2300 7500 2500
@@ -265,29 +259,11 @@ Connection ~ 7500 2450
 Wire Wire Line
 	7500 3600 7450 3600
 Wire Wire Line
-	7450 4000 7500 4000
-Wire Wire Line
-	7500 4000 7500 3700
-Wire Wire Line
-	7500 3700 7450 3700
-Wire Wire Line
-	7450 3900 7500 3900
-Connection ~ 7500 3900
-Wire Wire Line
 	6650 5100 6600 5100
 Wire Wire Line
 	6600 5100 6600 5200
 Wire Wire Line
 	6600 5200 6650 5200
-$Comp
-L GND #PWR?
-U 1 1 00000000
-P 7550 3850
-F 0 "#PWR?" H 7550 3850 30  0001 C CNN
-F 1 "GND" H 7550 3780 30  0001 C CNN
-	1    7550 3850
-	0    -1   -1   0   
-$EndComp
 Entry Wire Line
 	8100 2850 8200 2950
 Entry Wire Line
