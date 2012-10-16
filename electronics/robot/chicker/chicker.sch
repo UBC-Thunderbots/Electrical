@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-05T23:16:29 PDT
+EESchema Schematic File Version 2  date 2012-10-16T01:03:16 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "6 oct 2012"
+Date "16 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -687,7 +687,7 @@ F 0 "D3" H 6800 4850 60  0000 C CNN
 F 1 "RURG3060CC" H 6800 5050 60  0000 C CNN
 F 2 "TO247" H 6700 4750 60  0000 C CNN
 	1    6350 4950
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L GND #PWR016

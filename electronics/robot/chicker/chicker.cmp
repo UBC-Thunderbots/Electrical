@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-13T21:27:02 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-16T01:16:01 PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -109,7 +109,7 @@ BeginCmp
 TimeStamp = /506FCCB2;
 Reference = P2;
 ValeurCmp = CONN_12;
-IdModule  = pin_array_7x2;
+IdModule  = pin_array_6x2;
 EndCmp
 
 BeginCmp
@@ -207,7 +207,7 @@ BeginCmp
 TimeStamp = /506FCCB8;
 Reference = U1;
 ValeurCmp = MIC5020;
-IdModule  = SOT23-5;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
@@ -221,7 +221,7 @@ BeginCmp
 TimeStamp = /506FCCB5;
 Reference = U3;
 ValeurCmp = MIC5020;
-IdModule  = SOT23_6;
+IdModule  = SO8E;
 EndCmp
 
 EndListe
