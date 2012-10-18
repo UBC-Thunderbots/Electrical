@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-15T00:42:56 PDT
+EESchema Schematic File Version 2  date 2012-10-18T00:12:00 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "15 oct 2012"
+Date "18 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -732,15 +732,15 @@ Text Label 4400 1800 0    60   ~ 0
 LPS_DRIVE1
 Text Label 4400 1700 0    60   ~ 0
 LPS_DRIVE0
-Text Label 6450 1950 0    60   ~ 0
+Text Label 4550 1500 0    60   ~ 0
 M_SENSOR04
-Text Label 6450 2050 0    60   ~ 0
+Text Label 4550 1600 0    60   ~ 0
 M_SENSOR03
-Text Label 6450 2150 0    60   ~ 0
+Text Label 4550 1400 0    60   ~ 0
 M_SENSOR02
-Text Label 6450 2250 0    60   ~ 0
+Text Label 4550 1200 0    60   ~ 0
 M_SENSOR01
-Text Label 6450 2350 0    60   ~ 0
+Text Label 4550 1300 0    60   ~ 0
 M_SENSOR00
 Entry Wire Line
 	7050 2350 7150 2250
@@ -798,15 +798,15 @@ Entry Wire Line
 	4400 1400 4500 1500
 Entry Wire Line
 	4400 1500 4500 1600
-Text Label 4550 1500 0    60   ~ 0
+Text Label 7000 1950 2    60   ~ 0
 M_SENSOR33
-Text Label 4550 1600 0    60   ~ 0
+Text Label 7000 2050 2    60   ~ 0
 M_SENSOR34
-Text Label 4550 1400 0    60   ~ 0
+Text Label 7000 2150 2    60   ~ 0
 M_SENSOR32
-Text Label 4550 1300 0    60   ~ 0
+Text Label 7000 2350 2    60   ~ 0
 M_SENSOR31
-Text Label 4550 1200 0    60   ~ 0
+Text Label 7000 2250 2    60   ~ 0
 M_SENSOR30
 Entry Wire Line
 	2200 4500 2100 4600
@@ -830,15 +830,15 @@ Entry Wire Line
 	7050 1550 7150 1450
 Entry Wire Line
 	7050 1450 7150 1350
-Text Label 6450 1750 0    60   ~ 0
+Text Label 4650 700  0    60   ~ 0
 M_SENSOR11
-Text Label 6450 1850 0    60   ~ 0
+Text Label 4650 800  0    60   ~ 0
 M_SENSOR10
-Text Label 6450 1650 0    60   ~ 0
+Text Label 4650 900  0    60   ~ 0
 M_SENSOR12
-Text Label 6450 1550 0    60   ~ 0
+Text Label 4650 1100 0    60   ~ 0
 M_SENSOR13
-Text Label 6450 1450 0    60   ~ 0
+Text Label 4650 1000 0    60   ~ 0
 M_SENSOR14
 Entry Wire Line
 	4500 1000 4600 1100
@@ -850,15 +850,15 @@ Entry Wire Line
 	4500 700  4600 800 
 Entry Wire Line
 	4500 600  4600 700 
-Text Label 4650 800  0    60   ~ 0
+Text Label 7000 1850 2    60   ~ 0
 M_SENSOR21
-Text Label 4650 700  0    60   ~ 0
+Text Label 7000 1750 2    60   ~ 0
 M_SENSOR20
-Text Label 4650 900  0    60   ~ 0
+Text Label 7000 1650 2    60   ~ 0
 M_SENSOR22
-Text Label 4650 1000 0    60   ~ 0
+Text Label 7000 1450 2    60   ~ 0
 M_SENSOR23
-Text Label 4650 1100 0    60   ~ 0
+Text Label 7000 1550 2    60   ~ 0
 M_SENSOR24
 Text HLabel 8000 4650 2    60   Output ~ 0
 LOGIC_PWR
@@ -1265,13 +1265,13 @@ Text HLabel 5200 6200 3    60   Output ~ 0
 Text HLabel 2050 4650 0    60   Input ~ 0
 M_SENSOR4[0..2]
 Text HLabel 4350 1050 0    60   Input ~ 0
-M_SENSOR3[0..4]
-Text HLabel 4450 550  0    60   Input ~ 0
-M_SENSOR2[0..4]
-Text HLabel 7200 1300 2    60   Input ~ 0
-M_SENSOR1[0..4]
-Text HLabel 7200 1800 2    60   Input ~ 0
 M_SENSOR0[0..4]
+Text HLabel 4450 550  0    60   Input ~ 0
+M_SENSOR1[0..4]
+Text HLabel 7200 1300 2    60   Input ~ 0
+M_SENSOR2[0..4]
+Text HLabel 7200 1800 2    60   Input ~ 0
+M_SENSOR3[0..4]
 Text HLabel 5700 5600 3    60   Output ~ 0
 OSC_ENABLE
 Text HLabel 8000 4250 2    60   Input ~ 0
@@ -1676,9 +1676,9 @@ F 4 "160-1169-1-ND" H 8850 5900 60  0001 C CNN "Field1"
 $EndComp
 Text Label 2500 3000 3    60   ~ 0
 M_LEVEL42
-Text Label 2200 3000 3    60   ~ 0
-M_LEVEL41
 Text Label 2100 3000 3    60   ~ 0
+M_LEVEL41
+Text Label 2200 3000 3    60   ~ 0
 M_LEVEL40
 Entry Wire Line
 	2400 3000 2300 2900
@@ -1690,17 +1690,17 @@ Entry Wire Line
 	2100 3000 2000 2900
 Text Label 2400 3000 3    60   ~ 0
 M_ENABLE42
-Text Label 2300 3000 3    60   ~ 0
-M_ENABLE41
 Text Label 2000 3000 3    60   ~ 0
+M_ENABLE41
+Text Label 2300 3000 3    60   ~ 0
 M_ENABLE40
 Entry Wire Line
 	2200 3000 2100 2900
 Text Label 8800 4000 2    60   ~ 0
 M_ENABLE22
-Text Label 8800 3500 2    60   ~ 0
-M_ENABLE21
 Text Label 8800 3900 2    60   ~ 0
+M_ENABLE21
+Text Label 8800 3500 2    60   ~ 0
 M_ENABLE20
 Entry Wire Line
 	8800 3400 8900 3300
@@ -1714,9 +1714,9 @@ Entry Wire Line
 	3000 2300 3100 2400
 Text Label 3000 2400 3    60   ~ 0
 M_LEVEL12
-Text Label 3200 2400 3    60   ~ 0
-M_LEVEL11
 Text Label 3300 2400 3    60   ~ 0
+M_LEVEL11
+Text Label 3200 2400 3    60   ~ 0
 M_LEVEL10
 Entry Wire Line
 	2900 2300 3000 2400
@@ -1724,13 +1724,13 @@ Entry Wire Line
 	2800 2300 2900 2400
 Text Label 2900 2400 3    60   ~ 0
 M_ENABLE12
-Text Label 3100 2400 3    60   ~ 0
+Text Label 3400 2400 3    60   ~ 0
 M_ENABLE11
 Entry Wire Line
 	2700 2300 2800 2400
 Entry Wire Line
 	2600 2300 2700 2400
-Text Label 3400 2400 3    60   ~ 0
+Text Label 3100 2400 3    60   ~ 0
 M_ENABLE10
 Entry Wire Line
 	8800 3100 8900 3000
@@ -1738,23 +1738,23 @@ Entry Wire Line
 	8800 3000 8900 2900
 Text Label 8800 3800 2    60   ~ 0
 M_LEVEL22
-Text Label 8800 3600 2    60   ~ 0
-M_LEVEL21
 Text Label 8800 3700 2    60   ~ 0
+M_LEVEL21
+Text Label 8800 3600 2    60   ~ 0
 M_LEVEL20
 Entry Wire Line
 	8800 2900 8900 2800
 Text Label 2700 2400 3    60   ~ 0
 M_ENABLE02
-Text Label 3700 2400 3    60   ~ 0
-M_ENABLE01
 Text Label 3500 2400 3    60   ~ 0
+M_ENABLE01
+Text Label 3700 2400 3    60   ~ 0
 M_ENABLE00
 Text Label 2800 2400 3    60   ~ 0
 M_LEVEL02
-Text Label 3800 2400 3    60   ~ 0
-M_LEVEL01
 Text Label 3600 2400 3    60   ~ 0
+M_LEVEL01
+Text Label 3800 2400 3    60   ~ 0
 M_LEVEL00
 Entry Wire Line
 	8800 3500 8900 3400
@@ -1770,15 +1770,15 @@ Entry Wire Line
 	8800 4000 8900 3900
 Text Label 8800 3300 2    60   ~ 0
 M_ENABLE32
-Text Label 8800 3000 2    60   ~ 0
-M_ENABLE31
 Text Label 8800 3200 2    60   ~ 0
+M_ENABLE31
+Text Label 8800 3000 2    60   ~ 0
 M_ENABLE30
 Text Label 8800 3400 2    60   ~ 0
 M_LEVEL32
-Text Label 8800 2900 2    60   ~ 0
-M_LEVEL31
 Text Label 8800 3100 2    60   ~ 0
+M_LEVEL31
+Text Label 8800 2900 2    60   ~ 0
 M_LEVEL30
 Text HLabel 1850 2850 1    60   Output ~ 0
 M_ENABLE4[0..2]

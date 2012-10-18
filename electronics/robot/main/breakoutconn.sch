@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-15T19:07:26 PDT
+EESchema Schematic File Version 2  date 2012-10-18T00:12:00 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 6 15
 Title ""
-Date "16 oct 2012"
+Date "18 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -270,11 +270,11 @@ Entry Wire Line
 	8100 2650 8200 2750
 Entry Wire Line
 	8100 2450 8200 2550
-Text Label 8050 2450 2    60   ~ 0
+Text Label 7550 2450 0    60   ~ 0
 M2_PHASE2
-Text Label 8050 2850 2    60   ~ 0
+Text Label 7550 2650 0    60   ~ 0
 M2_PHASE1
-Text Label 8050 2650 2    60   ~ 0
+Text Label 7550 2850 0    60   ~ 0
 M2_PHASE0
 Entry Wire Line
 	8100 3450 8200 3550
@@ -282,11 +282,11 @@ Entry Wire Line
 	8100 3250 8200 3350
 Entry Wire Line
 	8100 3050 8200 3150
-Text Label 8050 3050 2    60   ~ 0
+Text Label 7550 3050 0    60   ~ 0
 M3_PHASE2
-Text Label 8050 3450 2    60   ~ 0
+Text Label 7550 3250 0    60   ~ 0
 M3_PHASE1
-Text Label 8050 3250 2    60   ~ 0
+Text Label 7550 3450 0    60   ~ 0
 M3_PHASE0
 Entry Wire Line
 	8100 4550 8200 4650
@@ -294,23 +294,23 @@ Entry Wire Line
 	8100 4350 8200 4450
 Entry Wire Line
 	8100 4150 8200 4250
-Text Label 8050 4150 2    60   ~ 0
+Text Label 7550 4150 0    60   ~ 0
 M0_PHASE2
-Text Label 8050 4550 2    60   ~ 0
+Text Label 7550 4350 0    60   ~ 0
 M0_PHASE1
-Text Label 8050 4350 2    60   ~ 0
+Text Label 7550 4550 0    60   ~ 0
 M0_PHASE0
 Entry Wire Line
 	8100 4750 8200 4850
-Text Label 8050 4750 2    60   ~ 0
+Text Label 7550 4750 0    60   ~ 0
 M1_PHASE2
 Entry Wire Line
 	8100 4950 8200 5050
-Text Label 8050 4950 2    60   ~ 0
+Text Label 7550 5150 0    60   ~ 0
 M1_PHASE0
 Entry Wire Line
 	8100 5150 8200 5250
-Text Label 8050 5150 2    60   ~ 0
+Text Label 7550 4950 0    60   ~ 0
 M1_PHASE1
 Text HLabel 5850 4900 0    60   Output ~ 0
 PRESENT
@@ -362,53 +362,53 @@ Entry Wire Line
 	5900 2700 6000 2800
 Entry Wire Line
 	5900 2400 6000 2500
-Text Label 6050 4800 0    60   ~ 0
+Text Label 6600 4800 2    60   ~ 0
 LPS_DRIVE3
-Text Label 6050 4700 0    60   ~ 0
+Text Label 6600 4700 2    60   ~ 0
 LPS_DRIVE2
-Text Label 6050 4600 0    60   ~ 0
+Text Label 6600 4600 2    60   ~ 0
 LPS_DRIVE1
-Text Label 6050 4500 0    60   ~ 0
+Text Label 6600 4500 2    60   ~ 0
 LPS_DRIVE0
-Text Label 6050 4400 0    60   ~ 0
+Text Label 6600 2800 2    60   ~ 0
 M3_SENSOR4
-Text Label 6050 4300 0    60   ~ 0
+Text Label 6600 2900 2    60   ~ 0
 M3_SENSOR3
-Text Label 6050 4200 0    60   ~ 0
+Text Label 6600 2700 2    60   ~ 0
 M3_SENSOR2
-Text Label 6050 4100 0    60   ~ 0
+Text Label 6600 2500 2    60   ~ 0
 M3_SENSOR1
-Text Label 6050 4000 0    60   ~ 0
+Text Label 6600 2600 2    60   ~ 0
 M3_SENSOR0
-Text Label 6050 3900 0    60   ~ 0
+Text Label 6600 3300 2    60   ~ 0
 M2_SENSOR4
-Text Label 6050 3800 0    60   ~ 0
+Text Label 6600 3400 2    60   ~ 0
 M2_SENSOR3
-Text Label 6050 3700 0    60   ~ 0
+Text Label 6600 3200 2    60   ~ 0
 M2_SENSOR2
-Text Label 6050 3600 0    60   ~ 0
+Text Label 6600 3000 2    60   ~ 0
 M2_SENSOR1
-Text Label 6050 3500 0    60   ~ 0
+Text Label 6600 3100 2    60   ~ 0
 M2_SENSOR0
-Text Label 6050 3400 0    60   ~ 0
+Text Label 6600 3800 2    60   ~ 0
 M1_SENSOR4
-Text Label 6050 3300 0    60   ~ 0
+Text Label 6600 3900 2    60   ~ 0
 M1_SENSOR3
-Text Label 6050 3200 0    60   ~ 0
+Text Label 6600 3700 2    60   ~ 0
 M1_SENSOR2
-Text Label 6050 3100 0    60   ~ 0
+Text Label 6600 3500 2    60   ~ 0
 M1_SENSOR1
-Text Label 6050 3000 0    60   ~ 0
+Text Label 6600 3600 2    60   ~ 0
 M1_SENSOR0
-Text Label 6050 2900 0    60   ~ 0
+Text Label 6600 4300 2    60   ~ 0
 M0_SENSOR4
-Text Label 6050 2800 0    60   ~ 0
+Text Label 6600 4400 2    60   ~ 0
 M0_SENSOR3
-Text Label 6050 2700 0    60   ~ 0
+Text Label 6600 4200 2    60   ~ 0
 M0_SENSOR2
-Text Label 6050 2600 0    60   ~ 0
+Text Label 6600 4000 2    60   ~ 0
 M0_SENSOR1
-Text Label 6050 2500 0    60   ~ 0
+Text Label 6600 4100 2    60   ~ 0
 M0_SENSOR0
 $Comp
 L CONN_30X2 P2

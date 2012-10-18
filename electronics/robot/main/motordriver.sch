@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-15T00:42:56 PDT
+EESchema Schematic File Version 2  date 2012-10-18T00:12:00 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 4 15
 Title ""
-Date "15 oct 2012"
+Date "18 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -263,9 +263,9 @@ F 1 "1uF" H 7950 3500 50  0000 L CNN
 	1    7900 3600
 	0    -1   -1   0   
 $EndComp
-Text Label 5150 3600 2    60   ~ 0
-PHASE1
 Text Label 5150 3700 2    60   ~ 0
+PHASE1
+Text Label 5150 3600 2    60   ~ 0
 PHASE0
 Entry Wire Line
 	4300 3800 4400 3700
@@ -297,13 +297,13 @@ Entry Wire Line
 	4650 3800 4750 3900
 Entry Wire Line
 	4650 3300 4750 3400
-Text Label 5150 3900 2    60   ~ 0
-ENABLE0
-Text Label 5150 3800 2    60   ~ 0
-LEVEL0
-Text Label 5150 3500 2    60   ~ 0
-LEVEL1
 Text Label 5150 3400 2    60   ~ 0
+ENABLE0
+Text Label 5150 3500 2    60   ~ 0
+LEVEL0
+Text Label 5150 3800 2    60   ~ 0
+LEVEL1
+Text Label 5150 3900 2    60   ~ 0
 ENABLE1
 Entry Wire Line
 	7400 3800 7500 3700
