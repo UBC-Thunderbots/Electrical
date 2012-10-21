@@ -149,6 +149,10 @@ electronics/robot/optical_encoder/optical_encoder.pro -text
 electronics/robot/optical_encoder/optical_encoder.sch -text
 electronics/robot/solenoid/solenoid.pro -text
 electronics/robot/solenoid/solenoid.sch -text
+electronics/robot/solidworks_model/breakout_board.SLDPRT -text
+electronics/robot/solidworks_model/chicker_board.SLDPRT -text
+electronics/robot/solidworks_model/electrical_asm.SLDASM -text
+electronics/robot/solidworks_model/main_board.SLDPRT -text
 electronics/speedsensor/emitter/breakbeam.brd -text
 electronics/speedsensor/emitter/breakbeam.cmp -text
 electronics/speedsensor/emitter/breakbeam.pro -text
