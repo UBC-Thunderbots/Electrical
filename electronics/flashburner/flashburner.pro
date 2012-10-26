@@ -1,5 +1,5 @@
-update=27/03/2011 7:07:01 AM
-last_client=pcbnew
+update=2012-10-25T17:36:05 PDT
+last_client=cvpcb
 [general]
 version=1
 RootSch=flashburner.sch
@@ -71,11 +71,6 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=thunderbots-symbols
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=0
@@ -95,15 +90,20 @@ TxtLar=120
 MSegLar=79
 LastNetListRead=flashburner.net
 [pcbnew/libraries]
-LibDir=
-LibName1=../thunderbots-modules
-LibName2=sockets
-LibName3=connect
-LibName4=discret
-LibName5=pin_array
-LibName6=divers
-LibName7=libcms
-LibName8=display
-LibName9=valves
-LibName10=led
-LibName11=dip_sockets
+LibName1=sockets
+LibName2=connect
+LibName3=discret
+LibName4=pin_array
+LibName5=divers
+LibName6=libcms
+LibName7=display
+LibName8=valves
+LibName9=led
+LibName10=dip_sockets
+LibName11=thunderbots-modules
+LibDir=../../electronics
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
