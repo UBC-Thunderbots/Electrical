@@ -1,9 +1,16 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Thu 25 Oct 2012 05:49:37 PM PDT
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Thu 22 Nov 2012 07:14:53 PM PST
 
 BeginCmp
 TimeStamp = /4C55144A;
 Reference = C1;
 ValeurCmp = 2.2uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50AEE94C;
+Reference = C2;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
