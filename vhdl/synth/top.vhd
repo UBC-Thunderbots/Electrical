@@ -9,7 +9,7 @@ use work.types.all;
 
 entity Top is
 	port(
-		OscillatorPin : in std_ulogic_vector(1 downto 0);
+		OscillatorPin : in std_ulogic;
 		OscillatorEnablePin : out std_ulogic := '1';
 
 		LogicPowerPin : out std_ulogic := '1';
@@ -33,190 +33,33 @@ entity Top is
 		MRFMOSIPin : out std_ulogic := '0';
 		MRFMISOPin : in std_ulogic;
 
+		SDPresentPin : in std_ulogic;
+		SDCSPin : out std_ulogic := '1';
+		SDClockPin : out std_ulogic := '0';
+		SDMOSIPin : out std_ulogic := '0';
+		SDMISOPin : in std_ulogic;
+
+		ChickerRelayPin : out std_ulogic := '0';
+		ChickerPowerPin : out std_ulogic := '0';
 		ChickerChargePin : out std_ulogic := '1';
 		ChickerKickPin : out std_ulogic := '1';
 		ChickerChipPin : out std_ulogic := '1';
-		ChickerPowerPin : out std_ulogic := '0';
-		ChickerCSPin : out std_ulogic := '1';
-		ChickerClockPin : out std_ulogic := '0';
-		ChickerMISOPin : in std_ulogic;
-
-		BreakbeamDrivePin : out std_ulogic := '0';
-
-		LPSResetPin : out std_ulogic := '0';
-		LPSClockPin : out std_ulogic := '0';
 
 		ChargedLEDPin : out std_ulogic := '0';
 		RadioLEDPin : out std_ulogic := '0';
 		TestLEDsPin : out std_ulogic_vector(2 downto 0) := (others => '0');
 
+		BreakoutPresentPin : in std_ulogic;
+
+		LPSDrivesPin : out std_ulogic_vector(3 downto 0) := (others => '0');
+
 		EncodersPin : in encoders_pin_t;
 
-		MotorsPhasesPPin : out motors_phases_pin_t := (others => (others => '1'));
-		MotorsPhasesNPin : out motors_phases_pin_t := (others => (others => '0'));
+		MotorsPhasesEPin : out motors_phases_pin_t := (others => (others => '0'));
+		MotorsPhasesLPin : out motors_phases_pin_t := (others => (others => '0'));
 
 		HallsPin : in halls_pin_t);
 end entity Top;
-
-architecture TestStaticLEDs of Top is
-begin
-	ChargedLEDPin <= '1';
-	RadioLEDPin <= '1';
-	TestLEDsPin <= (others => '1');
-end architecture TestStaticLEDs;
-
-architecture TestBasicClock of Top is
-begin
-	process(OscillatorPin(0)) is
-		variable Ticks : natural range 0 to 7999999 := 0;
-		variable Seconds : unsigned(4 downto 0) := to_unsigned(0, 5);
-	begin
-		if rising_edge(OscillatorPin(0)) then
-			if Ticks = 7999999 then
-				Ticks := 0;
-				Seconds := Seconds + 1;
-			else
-				Ticks := Ticks + 1;
-			end if;
-		end if;
-
-		ChargedLEDPin <= Seconds(0);
-		RadioLEDPin <= Seconds(1);
-		TestLEDsPin(2 downto 0) <= std_ulogic_vector(Seconds(4 downto 2));
-	end process;
-end architecture TestBasicClock;
-
-architecture TestFullClock of Top is
-	signal Clocks : clocks_t;
-begin
-	ClockGen : entity work.ClockGen(Behavioural)
-	port map(
-		Oscillator0 => OscillatorPin(0),
-		Oscillator1 => OscillatorPin(1),
-		Clocks => Clocks);
-
-	process(Clocks.Clock40MHz) is
-		subtype ticks_t is natural range 0 to 3999999;
-		variable Ticks : ticks_t := 0;
-		variable Seconds : unsigned(4 downto 0) := to_unsigned(0, 5);
-	begin
-		if rising_edge(Clocks.Clock40MHz) then
-			if Ticks = ticks_t'high then
-				Ticks := 0;
-				Seconds := Seconds + 1;
-			else
-				Ticks := Ticks + 1;
-			end if;
-		end if;
-
-		ChargedLEDPin <= Seconds(0);
-		RadioLEDPin <= Seconds(1);
-		TestLEDsPin(2 downto 0) <= std_ulogic_vector(Seconds(4 downto 2));
-	end process;
-end architecture TestFullClock;
-
-architecture TestMRFBasic of Top is
-	signal Clocks : clocks_t;
-begin
-	ClockGen : entity work.ClockGen(Behavioural)
-	port map(
-		Oscillator0 => OscillatorPin(0),
-		Oscillator1 => OscillatorPin(1),
-		Clocks => Clocks);
-
-	MRFWakePin <= '0';
-	MRFResetPin <= '1';
-
-	process(Clocks.Clock4MHz) is
-		subtype ticks_t is natural range 0 to 3;
-		variable Ticks : ticks_t := 0;
-		type state_t is (IDLE, CS_ASSERTED, CLK_RAISED, DONE);
-		variable State : state_t := IDLE;
-		-- Reset value of ACKTMOUT (0x12) should be 0b00111001 (0x39)
-		variable DataOut : std_ulogic_vector(15 downto 0) := X"2400";
-		variable DataIn : std_ulogic_vector(15 downto 0) := X"0000";
-		variable Count : natural range 0 to 15 := 15;
-	begin
-		if rising_edge(Clocks.Clock4MHz) then
-			if Ticks = ticks_t'high then
-				case State is
-					when IDLE =>
-						MRFCSPin <= '0';
-						State := CS_ASSERTED;
-					when CS_ASSERTED =>
-						MRFClockPin <= '1';
-						State := CLK_RAISED;
-						DataIn := DataIn(14 downto 0) & MRFMISOPin;
-					when CLK_RAISED =>
-						MRFClockPin <= '0';
-						State := CS_ASSERTED;
-						DataOut := DataOut(14 downto 0) & '0';
-						if Count = 0 then
-							TestLEDsPin(2) <= DataIn(4);
-							TestLEDsPin(1) <= DataIn(3);
-							TestLEDsPin(0) <= DataIn(2);
-							RadioLEDPin <= DataIn(1);
-							ChargedLEDPin <= DataIn(0);
-							State := DONE;
-						end if;
-						Count := Count - 1;
-					when DONE =>
-						MRFCSPin <= '1';
-				end case;
-			end if;
-			Ticks := (Ticks + 1) mod (ticks_t'high + 1);
-		end if;
-		MRFMOSIPin <= DataOut(15);
-	end process;
-end architecture TestMRFBasic;
-
-architecture TestADC of Top is
-	signal Clocks : clocks_t;
-begin
-	ClockGen : entity work.ClockGen(Behavioural)
-	port map(
-		Oscillator0 => OscillatorPin(0),
-		Oscillator1 => OscillatorPin(1),
-		Clocks => Clocks);
-
-	process(Clocks.Clock4MHz) is
-		subtype ticks_t is natural range 0 to 3;
-		variable Ticks : ticks_t := 0;
-		type state_t is (IDLE, ACTIVE);
-		variable State : state_t := IDLE;
-		variable CSOut : std_ulogic_vector(17 downto 0) := "100000000000000000";
-		variable DataOut : std_ulogic_vector(17 downto 0) := "111011000000000000";
-		variable DataIn : std_ulogic_vector(9 downto 0);
-		variable Snapshot : std_ulogic_vector(9 downto 0);
-	begin
-		if rising_edge(Clocks.Clock4MHz) then
-			if Ticks = 0 then
-				if CSOut(17) = '1' then
-					Snapshot := DataIn;
-				end if;
-				DataIn := DataIn(8 downto 0) & ADCMISOPin;
-			elsif Ticks = 2 then
-				CSOut := CSOut(16 downto 0) & CSOut(17);
-				DataOut := DataOut(16 downto 0) & DataOut(17);
-			end if;
-			Ticks := (Ticks + 1) mod (ticks_t'high + 1);
-		end if;
-
-		if Ticks = 1 or Ticks = 2 then
-			ADCClockPin <= '1';
-		else
-			ADCClockPin <= '0';
-		end if;
-
-		ADCCSPin <= CSOut(17);
-		ADCMOSIPin <= DataOut(17);
-		TestLEDsPin(2) <= Snapshot(9);
-		TestLEDsPin(1) <= Snapshot(8);
-		TestLEDsPIn(0) <= Snapshot(7);
-		RadioLEDPin <= Snapshot(6);
-		ChargedLEDPin <= Snapshot(5);
-	end process;
-end architecture TestADC;
 
 architecture Main of Top is
 	signal Clocks : clocks_t;
@@ -259,9 +102,6 @@ architecture Main of Top is
 	signal MCP3004Levels : mcp3004s_t := (others => 0);
 	signal MCP3004Latch : std_ulogic_vector(9 downto 0);
 
-	signal ADS7866Level : capacitor_voltage_t := 0;
-	signal ADS7866Latch : std_ulogic_vector(11 downto 0);
-
 	signal ChipX : boolean := false;
 	signal ChipY : boolean := false;
 	signal ChipActive : boolean := false;
@@ -279,10 +119,12 @@ architecture Main of Top is
 	signal ChargeTimeout : boolean := false;
 	signal ChargeDone : boolean := false;
 	signal ChargePulse : boolean := false;
-	constant CapacitorDangerousThreshold : natural := natural(30.0 / (220000.0 + 2200.0) * 2200.0 / 3.3 * 4095.0);
-	constant CapacitorStopDischargeThreshold : natural := natural(20.0 / (220000.0 + 2200.0) * 2200.0 / 3.3 * 4095.0);
+	constant CapacitorDangerousThreshold : natural := natural(30.0 / (220000.0 + 2200.0) * 2200.0 / 3.3 * 1023.0);
+	constant CapacitorStopDischargeThreshold : natural := natural(20.0 / (220000.0 + 2200.0) * 2200.0 / 3.3 * 1023.0);
 	signal Discharge : boolean := false;
 	signal DischargePulse : boolean := false;
+
+	signal LPSDrives : std_ulogic_vector(3 downto 0) := (others => '0');
 
 	signal FlashCS : std_ulogic := '1';
 	signal FlashDataRead : std_ulogic_vector(7 downto 0) := X"00";
@@ -300,11 +142,6 @@ architecture Main of Top is
 
 	signal DeviceID : std_ulogic_vector(56 downto 0);
 
-	signal BreakbeamDrive : boolean := false;
-
-	signal LPSReset : boolean := false;
-	signal LPSClock : boolean := false;
-
 	signal DebugEnabled : boolean := false;
 	signal DebugBusy : boolean := false;
 	signal DebugStrobe : boolean := false;
@@ -317,8 +154,7 @@ architecture Main of Top is
 begin
 	ClockGen : entity work.ClockGen(Behavioural)
 	port map(
-		Oscillator0 => OscillatorPin(0),
-		Oscillator1 => OscillatorPin(1),
+		Oscillator => OscillatorPin,
 		Clocks => Clocks);
 
 	WrapperInstance : entity work.NavreWrapper(Arch)
@@ -458,15 +294,6 @@ begin
 				when 16#10# => -- ADC_MSB
 					DIBuffer := "000000" & MCP3004Latch(9 downto 8);
 
-				when 16#11# => -- CHICKER_ADC_LSB
-					DIBuffer := ADS7866Latch(7 downto 0);
-					if NavreWriteEnable then
-						ADS7866Latch <= std_ulogic_vector(to_unsigned(ADS7866Level, 12));
-					end if;
-
-				when 16#12# => -- CHICKER_ADC_MSB
-					DIBuffer := "0000" & ADS7866Latch(11 downto 8);
-
 				when 16#13# => -- CHICKER_CTL
 					DIBuffer := "00" & to_stdulogic(Discharge) & to_stdulogic(ChargeDone) & to_stdulogic(ChargeTimeout) & to_stdulogic(ChipActive or (ChipX xor ChipY)) & to_stdulogic(KickActive or (KickX xor KickY)) & to_stdulogic(Charge);
 					if NavreWriteEnable then
@@ -530,17 +357,10 @@ begin
 						MRFStrobe <= true;
 					end if;
 
-				when 16#1A# => -- BREAK_BEAM_CTL
-					DIBuffer := "0000000" & to_stdulogic(BreakbeamDrive);
-					if NavreWriteEnable then
-						BreakbeamDrive <= to_boolean(NavreDO(0));
-					end if;
-
 				when 16#1B# => -- LPS_CTL
-					DIBuffer := "000000" & to_stdulogic(LPSReset) & to_stdulogic(LPSClock);
+					DIBuffer := "0000" & LPSDrives;
 					if NavreWriteEnable then
-						LPSReset <= to_boolean(NavreDO(1));
-						LPSClock <= to_boolean(NavreDO(0));
+						LPSDrives <= NavreDO(3 downto 0);
 					end if;
 
 				when 16#1C# => -- DEVICE_ID0
@@ -656,6 +476,7 @@ begin
 	LogicPowerPin <= '1' when PowerLogic else '0';
 	HVPowerPin <= '1' when PowerMotors else '0';
 	ChickerPowerPin <= '1' when PowerChicker else '0';
+	LPSDrivesPin <= LPSDrives;
 
 	process(Clocks.Clock4MHz) is
 		subtype subticks_t is natural range 0 to 19999;
@@ -705,8 +526,8 @@ begin
 			Phases => MotorsPhases(Index));
 
 		Phases : for Phase in 0 to 2 generate
-			MotorsPhasesPPin(Index)(Phase) <= '0' when MotorsPhases(Index)(Phase) = HIGH else '1';
-			MotorsPHasesNPin(Index)(Phase) <= '1' when MotorsPhases(Index)(Phase) = LOW else '0';
+			MotorsPhasesEPin(Index)(Phase) <= '1' when MotorsPhases(Index)(Phase) /= FLOAT else '0';
+			MotorsPhasesLPin(Index)(Phase) <= '1' when MotorsPhases(Index)(Phase) = HIGH else '0';
 		end generate;
 	end generate;
 
@@ -737,15 +558,7 @@ begin
 		CS => ADCCSPin,
 		Levels => MCP3004Levels);
 
-	ADS7866 : entity work.ADS7866(Arch)
-	port map(
-		Clocks => Clocks,
-		MISO => ChickerMISOPin,
-		CLK => ChickerClockPin,
-		CS => ChickerCSPin,
-		Level => ADS7866Level);
-	-- 30 V ÷ (2200 R + 220000 R) × 2200 R / 3.3 V × 4096 = 369 ADC counts
-	ChargedLEDPin <= to_stdulogic(ADS7866Level > CapacitorDangerousThreshold);
+	ChargedLEDPin <= to_stdulogic(MCP3004Levels(0) > CapacitorDangerousThreshold);
 
 	BoostController : entity work.BoostController(Arch)
 	generic map(
@@ -753,8 +566,8 @@ begin
 	port map(
 		Clock => Clocks.Clock4MHz,
 		Enable => Charge,
-		CapacitorVoltage => ADS7866Level,
-		BatteryVoltage => MCP3004Levels(3),
+		CapacitorVoltage => MCP3004Levels(0),
+		BatteryVoltage => MCP3004Levels(1),
 		Charge => ChargePulse,
 		Timeout => ChargeTimeout,
 		Done => ChargeDone);
@@ -795,14 +608,14 @@ begin
 			end if;
 		end if;
 	end process;
-	process(Clocks.Clock4MHz, Discharge, ADS7866Level) is
+	process(Clocks.Clock4MHz, Discharge, MCP3004Levels) is
 		subtype count_t is natural range 0 to 19999;
 		variable Count : count_t := 0;
 	begin
 		if rising_edge(Clocks.Clock4MHz) then
 			Count := (Count + 1) mod (count_t'high + 1);
 		end if;
-		DischargePulse <= (Count < 1200) and Discharge and (ADS7866Level > CapacitorStopDischargeThreshold);
+		DischargePulse <= (Count < 1200) and Discharge and (MCP3004Levels(0) > CapacitorStopDischargeThreshold);
 	end process;
 	ChickerChipPin <= to_stdulogic(not (ChipActive or DischargePulse));
 	ChickerKickPin <= to_stdulogic(not (KickActive or DischargePulse));
@@ -836,17 +649,11 @@ begin
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
 		MISOPin => MRFMISOPin);
-
 	
 	DNAPort : entity work.DeviceDNA
 	port map(
 		Clocks => Clocks,
 		Value => DeviceID);
-
-	BreakbeamDrivePin <= to_stdulogic(BreakbeamDrive);
-
-	LPSResetPin <= to_stdulogic(not LPSReset);
-	LPSClockPin <= to_stdulogic(LPSClock);
 
 	DebugPort : entity work.AsyncSerialTransmitter(Arch)
 	generic map(

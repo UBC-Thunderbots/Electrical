@@ -7,13 +7,12 @@ use work.clock.all;
 
 entity ClockGen is
 	port(
-		Oscillator0 : in std_ulogic;
-		Oscillator1 : in std_ulogic;
+		Oscillator : in std_ulogic;
 		Clocks : out clocks_t);
 end entity ClockGen;
 
 architecture Behavioural of ClockGen is
-	signal Oscillator0Buffered : std_ulogic;
+	signal OscillatorBuffered : std_ulogic;
 	signal PLLInputClock : std_ulogic;
 	signal StepUpDCMStatus : std_logic_vector(7 downto 0);
 	signal StepUpDCMLocked : std_ulogic;
@@ -25,8 +24,8 @@ architecture Behavioural of ClockGen is
 begin
 	IBufferG : IBufG
 	port map(
-		I => Oscillator0,
-		O => Oscillator0Buffered);
+		I => Oscillator,
+		O => OscillatorBuffered);
 
 	-- Input from the oscillator is 8 MHz
 	-- CLKFX output (PLLInputClock) is 8 × 5 = 40 MHz
@@ -37,7 +36,7 @@ begin
 		CLKFX_MULTIPLY => 5,
 		CLKFX_DIVIDE => 1)
 	port map(
-		CLKIN => Oscillator0Buffered,
+		CLKIN => OscillatorBuffered,
 		RST => '0',
 		CLKFX => PLLInputClock,
 		STATUS => StepUpDCMStatus,

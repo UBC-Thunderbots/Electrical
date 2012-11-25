@@ -28,8 +28,8 @@ architecture Arch of BoostController is
 	constant BattBits : real := real(battery_voltage_t'high); --! Number of levels for the battery
 	constant CapBits : real := real(capacitor_voltage_t'high);	--! Number of levels for the Cap
 	constant MaxCurrent : real := 10.0;	--! Maximum inductor Current
-	constant MaxBatt : real := 18.3;	--! Voltage of battery at maximum ADC range 
-	constant MaxCap : real := 330.0;	--! Voltage of Cap at maximum ADC range
+	constant MaxBatt : real := 33.3;	--! Voltage of battery at maximum ADC range 
+	constant MaxCap : real := 303.3;	--! Voltage of Cap at maximum ADC range
 
 	constant CounterMax : natural := natural(Inductance * ClockFrequency * MaxCurrent * BattBits / MaxBatt);
 	constant MaxVoltage : natural := natural(230.0 / MaxCap * CapBits);
@@ -41,9 +41,10 @@ architecture Arch of BoostController is
 	--! Ratio1 + 1 / Ratio2 should be MaxCap * BattBits / MaxBatt / CapBits
 	--! Ratio2 MUST be power of 2, Ratio1 SHOULD be power of 2 to avoid multiplier
 	
-	--! ratio = 4.5
-	constant Ratio1 : natural := 4;	
-	constant Ratio2 : natural := 2;
+	--! ratio = 9.108…
+	--! 9+1/1=10 gives ~1% error
+	constant Ratio1 : natural := 9;
+	constant Ratio2 : natural := 8;
 	
 	constant MaxIncrement : natural := natural((natural(CapBits)) * Ratio1 + (natural(CapBits)) / Ratio2) + Diode;
 

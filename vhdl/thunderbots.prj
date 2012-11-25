@@ -1,9 +1,7 @@
-vhdl work common/ads7866.vhd
 vhdl work common/asyncserialtransmitter.vhd
 vhdl work common/boostcontroller.vhd
 vhdl work common/clock.vhd
 vhdl work common/commutator.vhd
-vhdl work common/deadband.vhd
 vhdl work common/graycounter.vhd
 vhdl work common/mcp3004.vhd
 vhdl work common/motor.vhd

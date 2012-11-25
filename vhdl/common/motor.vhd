@@ -21,7 +21,6 @@ architecture Arch of Motor is
 	signal Direction : boolean;
 	signal CommutatorPhases : motor_phases_t;
 	signal PWMOutput : boolean;
-	signal PWMPhases : motor_phases_t;
 begin
 	Direction <= Mode = REVERSE;
 
@@ -48,29 +47,23 @@ begin
 			if rising_edge(Clocks.Clock8MHz) then
 				case Mode is
 					when FLOAT =>
-						PWMPhases(I) <= FLOAT;
+						Phases(I) <= FLOAT;
 
 					when BRAKE =>
-						PWMPhases(I) <= LOW;
+						Phases(I) <= LOW;
 
 					when FORWARD | REVERSE =>
 						if CommutatorPhases(I) = HIGH then
 							if PWMOutput then
-								PWMPhases(I) <= HIGH;
+								Phases(I) <= HIGH;
 							else
-								PWMPhases(I) <= LOW;
+								Phases(I) <= LOW;
 							end if;
 						else
-							PWMPhases(I) <= CommutatorPhases(I);
+							Phases(I) <= CommutatorPhases(I);
 						end if;
 				end case;
 			end if;
 		end process;
-
-		DeadBand: entity work.DeadBand(Arch)
-		port map(
-			Clock => Clocks.Clock4MHz,
-			Input => PWMPhases(I),
-			Output => Phases(I));
 	end generate;
 end architecture Arch;
