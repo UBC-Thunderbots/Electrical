@@ -76,6 +76,7 @@ architecture Main of Top is
 	signal LEDSoftware : boolean := true;
 	signal LEDValue : std_ulogic_vector(4 downto 0) := "00000";
 
+	signal ChickerRelay : boolean := false;
 	signal PowerChicker : boolean := false;
 	signal PowerMotors : boolean := false;
 	signal PowerLogic : boolean := true;
@@ -192,8 +193,9 @@ begin
 					end if;
 
 				when 16#01# => -- POWER_CTL
-					DIBuffer := "00000" & to_stdulogic(PowerChicker) & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
+					DIBuffer := "0000" & to_stdulogic(ChickerRelay) & to_stdulogic(PowerChicker) & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
 					if NavreWriteEnable then
+						ChickerRelay <= to_boolean(NavreDO(3));
 						PowerChicker <= to_boolean(NavreDO(2));
 						PowerMotors <= to_boolean(NavreDO(1));
 						PowerLogic <= to_boolean(NavreDO(0));
@@ -476,6 +478,7 @@ begin
 	LogicPowerPin <= '1' when PowerLogic else '0';
 	HVPowerPin <= '1' when PowerMotors else '0';
 	ChickerPowerPin <= '1' when PowerChicker else '0';
+	ChickerRelayPin <= '1' when ChickerRelay else '0';
 	LPSDrivesPin <= LPSDrives;
 
 	process(Clocks.Clock4MHz) is
@@ -571,7 +574,7 @@ begin
 		Charge => ChargePulse,
 		Timeout => ChargeTimeout,
 		Done => ChargeDone);
-	ChickerChargePin <= to_stdulogic(not ChargePulse);
+	ChickerChargePin <= to_stdulogic(ChargePulse);
 
 	process(Clocks.Clock4MHz) is
 		variable KickPeriodTemp : unsigned(15 downto 0);
@@ -617,8 +620,8 @@ begin
 		end if;
 		DischargePulse <= (Count < 1200) and Discharge and (MCP3004Levels(0) > CapacitorStopDischargeThreshold);
 	end process;
-	ChickerChipPin <= to_stdulogic(not (ChipActive or DischargePulse));
-	ChickerKickPin <= to_stdulogic(not (KickActive or DischargePulse));
+	ChickerChipPin <= to_stdulogic(ChipActive or DischargePulse);
+	ChickerKickPin <= to_stdulogic(KickActive or DischargePulse);
 
 	FlashCSPin <= FlashCS;
 	FlashSPI : entity work.SPI(Arch)
