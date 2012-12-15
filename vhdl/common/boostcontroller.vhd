@@ -31,7 +31,22 @@ architecture Arch of BoostController is
 	constant MaxBatt : real := 33.3;	--! Voltage of battery at maximum ADC range 
 	constant MaxCap : real := 303.3;	--! Voltage of Cap at maximum ADC range
 
-	constant CounterMax : natural := natural(Inductance * ClockFrequency * MaxCurrent * BattBits / MaxBatt);
+	constant MaxGateDriveFrequency : real := 150.0e3;
+	constant MinPulseWidth : natural := natural(1.0 / (MaxGateDriveFrequency * 2.0) * ClockFrequency);
+
+	function max(x : natural; y : natural) return natural is
+		variable return_value : natural;
+	begin
+		if x > y then
+			return_value := x;
+		else
+			return_value := y;
+		end if;
+		return return_value;
+	end function max;
+
+	constant CounterMaxInductor : natural := natural(Inductance * ClockFrequency * MaxCurrent * BattBits / MaxBatt);
+	constant CounterMax : natural := max(CounterMaxInductor, MinPulseWidth);
 	constant MaxVoltage : natural := natural(230.0 / MaxCap * CapBits);
 	constant Diode : natural := natural(0.7 / MaxBatt * BattBits);
 	
@@ -118,7 +133,7 @@ begin
 			case State is
 				when ONTIME =>
 					--This implements Counts*BatteryVoltage = CounterMax in order to calculate counts
-					if Counter * Multiplier > CounterMax then
+					if Counter * Multiplier > CounterMax and Counter >= MinPulseWidth then
 						CounterDisposition := RESET;
 						State := OFFTIME;
 						Multiplier := Increment;
@@ -128,7 +143,7 @@ begin
 
 				when OFFTIME =>
 					--This implements Counts*(CapacitorVoltage*ratio + Diode - BatteryVoltage) = CounterMax
-					if Counter * Multiplier > CounterMax + Increment then
+					if Counter * Multiplier > CounterMax + Increment and Counter >= MinPulseWidth then
 						CounterDisposition := RESET;
 						State := WAITING;
 						Multiplier := BatteryVoltage;
