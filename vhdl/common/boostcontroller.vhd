@@ -47,7 +47,7 @@ architecture Arch of BoostController is
 
 	constant CounterMaxInductor : natural := natural(Inductance * ClockFrequency * MaxCurrent * BattBits / MaxBatt);
 	constant CounterMax : natural := max(CounterMaxInductor, MinPulseWidth);
-	constant MaxVoltage : natural := natural(230.0 / MaxCap * CapBits);
+	constant MaxVoltage : natural := natural(240.0 / MaxCap * CapBits);
 	constant Diode : natural := natural(0.7 / MaxBatt * BattBits);
 	
 	constant ChargeTimeout : real := 4.0; -- timeout for charge cycle
