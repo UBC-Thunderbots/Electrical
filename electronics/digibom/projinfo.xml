@@ -62,6 +62,11 @@
 		<!-- Chicker boost regulator inductor is ordered from CoilCraft. -->
 		<multipart id="chicker-charge-inductor" />
 
+		<!-- Header for the chicker is not available in 2×6 form, so use two 1×6 headers. -->
+		<multipart id="chicker-waysl-header">
+			<subpart id="A26171-ND" quantity="2" />
+		</multipart>
+
 		<!-- E4P optical encoder kit is ordered from US Digital. -->
 		<multipart id="E4P" />
 
