@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-02T22:46:39 PST
+EESchema Schematic File Version 2  date 2013-01-02T23:14:35 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -790,13 +790,13 @@ F 1 "GND" H 8900 5580 30  0001 C CNN
 $EndComp
 Text HLabel 4200 1550 0    60   Output ~ 0
 LPS_DRIVE[0..3]
-Text HLabel 3950 4700 0    60   Input ~ 0
+Text HLabel 3350 4550 0    60   Input ~ 0
 SD_PRESENT
-Text HLabel 3950 4600 0    60   Output ~ 0
+Text HLabel 3950 4700 0    60   Output ~ 0
 /SD_CS
-Text HLabel 3350 4650 0    60   Input ~ 0
+Text HLabel 3950 4600 0    60   Input ~ 0
 SD_MISO
-Text HLabel 3350 4550 0    60   Output ~ 0
+Text HLabel 3350 4650 0    60   Output ~ 0
 SD_MOSI
 Text HLabel 3950 4150 0    60   Output ~ 0
 SD_CLOCK
