@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-02T22:36:36 PST
+EESchema Schematic File Version 2  date 2013-01-02T22:40:15 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -126,8 +126,8 @@ F 1 "+BATT" H 5050 3300 30  0000 C CNN
 	1    5050 3200
 	0    -1   -1   0   
 $EndComp
-Text HLabel 5100 3750 0    60   Input ~ 0
-POWER_CTL
+Text HLabel 5100 3750 0    60   Output ~ 0
+~PRESENT
 Text HLabel 5100 3650 0    60   Input ~ 0
 CHIP
 Text HLabel 5100 3850 0    60   Input ~ 0

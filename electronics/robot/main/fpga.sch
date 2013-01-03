@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-18T00:12:00 PDT
+EESchema Schematic File Version 2  date 2013-01-02T22:40:15 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "18 oct 2012"
+Date "3 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1246,8 +1246,8 @@ F 4 "160-1169-1-ND" H 8050 5900 60  0001 C CNN "Field1"
 	1    8050 5900
 	0    1    -1   0   
 $EndComp
-Text HLabel 7400 4400 2    60   Output ~ 0
-CHICKER_POWER_CTL
+Text HLabel 7400 4400 2    60   Input ~ 0
+~CHICKER_PRESENT
 Text HLabel 5150 5600 3    60   Output ~ 0
 /MRF_CS
 Text HLabel 5450 5600 3    60   Output ~ 0
