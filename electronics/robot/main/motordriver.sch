@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-02T22:46:39 PST
+EESchema Schematic File Version 2  date 2013-01-03T00:42:59 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 4 15
+Sheet 5 15
 Title ""
 Date "3 jan 2013"
 Rev ""
@@ -155,8 +155,8 @@ AR Path="/4CD72EB0/507B2A09" Ref="F3"  Part="1"
 AR Path="/4CD72EC7/507B2A09" Ref="F4"  Part="1" 
 AR Path="/4CD72EC1/507B2A09" Ref="F5"  Part="1" 
 AR Path="/4CD72EB9/507B2A09" Ref="F6"  Part="1" 
-F 0 "F6" H 4850 4450 40  0000 C CNN
-F 1 "FUSE" H 4650 4350 40  0000 C CNN
+F 0 "F3" H 4850 4450 40  0000 C CNN
+F 1 "5A" H 4650 4350 40  0000 C CNN
 F 4 "F1460CT-ND" H 4750 4400 60  0001 C CNN "Digi-Key Part"
 	1    4750 4400
 	1    0    0    -1  
@@ -198,7 +198,7 @@ AR Path="/4CD72EB0/506E24C6" Ref="C10"  Part="1"
 AR Path="/4CD72EC7/506E24C6" Ref="C13"  Part="1" 
 AR Path="/4CD72EC1/506E24C6" Ref="C17"  Part="1" 
 AR Path="/4CD72EB9/506E24C6" Ref="C20"  Part="1" 
-F 0 "C20" H 9100 3350 50  0000 L CNN
+F 0 "C10" H 9100 3350 50  0000 L CNN
 F 1 "100nF" H 9100 3150 50  0000 L CNN
 	1    9050 3250
 	1    0    0    -1  
@@ -226,7 +226,7 @@ AR Path="/4CD72EB0/506E24C4" Ref="C9"  Part="1"
 AR Path="/4CD72EC7/506E24C4" Ref="C12"  Part="1" 
 AR Path="/4CD72EC1/506E24C4" Ref="C16"  Part="1" 
 AR Path="/4CD72EB9/506E24C4" Ref="C19"  Part="1" 
-F 0 "C19" H 8100 3100 50  0000 L CNN
+F 0 "C9" H 8100 3100 50  0000 L CNN
 F 1 "220nF" H 8100 2900 50  0000 L CNN
 	1    8050 3000
 	1    0    0    -1  
@@ -258,7 +258,7 @@ AR Path="/4CD72EB0/506E24C2" Ref="C8"  Part="1"
 AR Path="/4CD72EC7/506E24C2" Ref="C11"  Part="1" 
 AR Path="/4CD72EC1/506E24C2" Ref="C15"  Part="1" 
 AR Path="/4CD72EB9/506E24C2" Ref="C18"  Part="1" 
-F 0 "C18" H 7950 3700 50  0000 L CNN
+F 0 "C8" H 7950 3700 50  0000 L CNN
 F 1 "1uF" H 7950 3500 50  0000 L CNN
 	1    7900 3600
 	0    -1   -1   0   
@@ -406,7 +406,7 @@ AR Path="/4CD72EB0/506E24BE" Ref="U2"  Part="1"
 AR Path="/4CD72EC7/506E24BE" Ref="U3"  Part="1" 
 AR Path="/4CD72EC1/506E24BE" Ref="U4"  Part="1" 
 AR Path="/4CD72EB9/506E24BE" Ref="U5"  Part="1" 
-F 0 "U5" H 6100 3600 60  0000 C CNN
+F 0 "U2" H 6100 3600 60  0000 C CNN
 F 1 "L6234-SO20" H 6100 3700 60  0000 C CNN
 F 4 "497-5352-1-ND" H 6100 4200 60  0001 C CNN "Digi-Key Part"
 	1    6100 3650
