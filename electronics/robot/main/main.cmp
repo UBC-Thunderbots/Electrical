@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-14T18:14:46 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-02T23:01:58 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -358,20 +358,6 @@ IdModule  = SM1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F618EFD/4F61950F;
-Reference = C58;
-ValeurCmp = 100nF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F618EFD/4F619511;
-Reference = C59;
-ValeurCmp = 10uF;
-IdModule  = SM1206;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F618EFD/4F619636;
 Reference = C60;
 ValeurCmp = 1uF;
@@ -516,6 +502,13 @@ TimeStamp = /5066737C/507B2A08;
 Reference = P2;
 ValeurCmp = CONN_30X2;
 IdModule  = FX6-60S-0.8SV;
+EndCmp
+
+BeginCmp
+TimeStamp = /4AD9040D/50E5294A;
+Reference = P3;
+ValeurCmp = CONN_2;
+IdModule  = SIL-2_bigpins;
 EndCmp
 
 BeginCmp
@@ -817,13 +810,6 @@ TimeStamp = /4CD73194/4F64547F;
 Reference = U47;
 ValeurCmp = 74HC4050;
 IdModule  = SO16N;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F618EFD/4F619459;
-Reference = U48;
-ValeurCmp = LD1117D33;
-IdModule  = SO8E;
 EndCmp
 
 BeginCmp

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-18T00:12:00 PDT
+EESchema Schematic File Version 2  date 2013-01-02T22:46:39 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 6 15
 Title ""
-Date "18 oct 2012"
+Date "3 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -423,28 +423,28 @@ $EndComp
 Text HLabel 5850 4350 0    60   Input ~ 0
 LPS_DRIVE[0..3]
 $Comp
-L +5V #PWR080
+L +5V #PWR081
 U 1 1 506E24BD
 P 7500 3600
-F 0 "#PWR080" H 7500 3690 20  0001 C CNN
+F 0 "#PWR081" H 7500 3690 20  0001 C CNN
 F 1 "+5V" H 7500 3690 30  0000 C CNN
 	1    7500 3600
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR081
+L +3.3V #PWR082
 U 1 1 506E24BC
 P 6600 5000
-F 0 "#PWR081" H 6600 4960 30  0001 C CNN
+F 0 "#PWR082" H 6600 4960 30  0001 C CNN
 F 1 "+3.3V" H 6600 5110 30  0000 C CNN
 	1    6600 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR082
+L GND #PWR083
 U 1 1 506E24BB
 P 6550 5150
-F 0 "#PWR082" H 6550 5150 30  0001 C CNN
+F 0 "#PWR083" H 6550 5150 30  0001 C CNN
 F 1 "GND" H 6550 5080 30  0001 C CNN
 	1    6550 5150
 	0    1    1    0   
