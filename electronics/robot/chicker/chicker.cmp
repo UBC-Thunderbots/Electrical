@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-16T01:16:01 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-02T22:10:22 PST
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -141,20 +141,6 @@ IdModule  = TO247GCE;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FB97180;
-Reference = Q5;
-ValeurCmp = MOSFET_N;
-IdModule  = SOT23_3GDS;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FB97204;
-Reference = Q6;
-ValeurCmp = MOSFET_P;
-IdModule  = SO8E-IRF9310;
-EndCmp
-
-BeginCmp
 TimeStamp = /4CE86DF3;
 Reference = R1;
 ValeurCmp = 100kR;
@@ -200,6 +186,13 @@ BeginCmp
 TimeStamp = /506A474C;
 Reference = R7;
 ValeurCmp = 100kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50E520B8;
+Reference = R8;
+ValeurCmp = 10kR;
 IdModule  = SM0805;
 EndCmp
 
