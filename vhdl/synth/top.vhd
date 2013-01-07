@@ -14,6 +14,7 @@ entity Top is
 
 		LogicPowerPin : out std_ulogic := '1';
 		HVPowerPin : out std_ulogic := '0';
+		LaserPowerPin : out std_ulogic := '0';
 
 		ADCCSPin : out std_ulogic := '1';
 		ADCClockPin : out std_ulogic := '0';
@@ -79,6 +80,7 @@ architecture Main of Top is
 	signal PowerChicker : boolean := false;
 	signal PowerMotors : boolean := false;
 	signal PowerLogic : boolean := true;
+	signal PowerLaser : boolean := false;
 
 	signal FiveMilliTicks : natural range 0 to 255 := 0;
 
@@ -192,8 +194,9 @@ begin
 					end if;
 
 				when 16#01# => -- POWER_CTL
-					DIBuffer := "00000" & to_stdulogic(PowerChicker) & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
+					DIBuffer := "0000" & to_stdulogic(PowerLaser) &  to_stdulogic(PowerChicker) & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
 					if NavreWriteEnable then
+						PowerLaser <= to_boolean(NavreDO(3));
 						PowerChicker <= to_boolean(NavreDO(2));
 						PowerMotors <= to_boolean(NavreDO(1));
 						PowerLogic <= to_boolean(NavreDO(0));
@@ -475,6 +478,7 @@ begin
 
 	LogicPowerPin <= '1' when PowerLogic else '0';
 	HVPowerPin <= '1' when PowerMotors else '0';
+	LaserPowerPin <= '1' when PowerLaser else '0';
 	ChickerPowerPin <= '1' when PowerChicker else '0';
 	LPSDrivesPin <= LPSDrives;
 

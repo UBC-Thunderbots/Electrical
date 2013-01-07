@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-10-20T14:48:44 PDT
+EESchema Schematic File Version 2  date 2013-01-05T14:05:16 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "20 oct 2012"
+Date "5 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +45,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	7150 4600 8000 4600
+Wire Wire Line
+	8000 4600 8000 6600
+Wire Wire Line
+	8000 6600 5750 6600
 Wire Wire Line
 	2500 2650 2550 2650
 Wire Wire Line
@@ -194,8 +200,6 @@ Connection ~ 5150 6600
 Wire Wire Line
 	5150 6600 4500 6600
 Connection ~ 5750 6600
-Wire Wire Line
-	5800 6600 5750 6600
 Connection ~ 4450 2050
 Wire Wire Line
 	4450 2050 4450 2100
@@ -606,15 +610,6 @@ F 0 "#PWR4" H 4250 1510 30  0001 C CNN
 F 1 "+3.3V" H 4250 1660 30  0000 C CNN
 	1    4250 1550
 	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR11
-U 1 1 5079B680
-P 5800 6600
-F 0 "#PWR11" H 5800 6560 30  0001 C CNN
-F 1 "+3.3V" H 5800 6710 30  0000 C CNN
-	1    5800 6600
-	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR6

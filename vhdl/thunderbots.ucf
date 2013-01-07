@@ -11,6 +11,7 @@ net "OscillatorEnablePin" iostandard=LVCMOS33 | slew=quietio | loc=P55;
 # Power control
 net "LogicPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P75;
 net "HVPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P74;
+net "LaserPowerPin" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P105;
 
 # SPI ADC
 net "ADCCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P87;
