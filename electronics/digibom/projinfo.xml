@@ -80,9 +80,7 @@
 		In all cases, if the "Digikey Part" field is filled in in the schematic symbol, that field will override this default mapping.
 	-->
 	<defaults>
-		<default value="4.99R" part="541-4.99CCCT-ND" />
 		<default value="16.5R" part="541-16.5CCT-ND" />
-		<default value="88.7R" part="541-88.7CCT-ND" />
 		<default value="100R" part="311-100CRCT-ND" />
 		<default value="1kR" part="CR0805-FX-1001ELFCT-ND" />
 		<default value="2.2kR" part="311-2.20KCRCT-ND" />
