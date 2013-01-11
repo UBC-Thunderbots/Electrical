@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-05T14:04:22 PST
+EESchema Schematic File Version 2  date 2013-01-11T00:59:54 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "5 jan 2013"
+Date "11 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,6 +42,70 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L M3_MOUNT M6
+U 1 1 50EFD200
+P 3050 1050
+F 0 "M6" H 3050 1050 60  0000 C CNN
+F 1 "16mm" H 3050 1150 60  0000 C CNN
+F 4 "952-1507-ND" H 3050 1050 60  0001 C CNN "Digi-Key Part"
+	1    3050 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M5
+U 1 1 50EFD1FE
+P 2500 1050
+F 0 "M5" H 2500 1050 60  0000 C CNN
+F 1 "16mm" H 2500 1150 60  0000 C CNN
+F 4 "952-1507-ND" H 2500 1050 60  0001 C CNN "Digi-Key Part"
+	1    2500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M4
+U 1 1 50EFD1E4
+P 1950 1050
+F 0 "M4" H 1950 1050 60  0000 C CNN
+F 1 "16mm" H 1950 1150 60  0000 C CNN
+F 4 "952-1507-ND" H 1950 1050 60  0001 C CNN "Digi-Key Part"
+	1    1950 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M3
+U 1 1 50EFD1DC
+P 3050 700
+F 0 "M3" H 3050 700 60  0000 C CNN
+F 1 "5mm" H 3050 800 60  0000 C CNN
+F 4 "952-1496-ND" H 3050 700 60  0001 C CNN "Digi-Key Part"
+	1    3050 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M2
+U 1 1 50EFD1DB
+P 2500 700
+F 0 "M2" H 2500 700 60  0000 C CNN
+F 1 "5mm" H 2500 800 60  0000 C CNN
+F 4 "952-1496-ND" H 2500 700 60  0001 C CNN "Digi-Key Part"
+	1    2500 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M1
+U 1 1 50EFD1E0
+P 1950 700
+F 0 "M1" H 1950 700 60  0000 C CNN
+F 1 "5mm" H 1950 800 60  0000 C CNN
+F 4 "952-1496-ND" H 1950 700 60  0001 C CNN "Digi-Key Part"
+	1    1950 700 
+	1    0    0    -1  
+$EndComp
+Text Notes 1650 1050 2    60   ~ 0
+Up to Chicker Board:
+Text Notes 1650 750  2    60   ~ 0
+Down to Breakout Board:
 Wire Wire Line
 	5100 2350 4800 2350
 Wire Wire Line
@@ -418,10 +482,10 @@ NoConn ~ 9000 4900
 NoConn ~ 9000 3700
 NoConn ~ 9000 3100
 $Comp
-L +HVBATT #PWR01
+L +HVBATT #PWR5
 U 1 1 506E24CC
 P 10650 3050
-F 0 "#PWR01" H 10650 3000 20  0001 C CNN
+F 0 "#PWR5" H 10650 3000 20  0001 C CNN
 F 1 "+HVBATT" H 10650 3150 30  0000 C CNN
 	1    10650 3050
 	1    0    0    -1  
@@ -488,19 +552,19 @@ F13 "PRESENT" O L 5100 2450 60
 F14 "LASER_DRIVE" I L 5100 2350 60 
 $EndSheet
 $Comp
-L GND #PWR02
+L GND #PWR4
 U 1 1 4F74094A
 P 4450 5900
-F 0 "#PWR02" H 4450 5900 30  0001 C CNN
+F 0 "#PWR4" H 4450 5900 30  0001 C CNN
 F 1 "GND" H 4450 5830 30  0001 C CNN
 	1    4450 5900
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3.3V #PWR03
+L +3.3V #PWR3
 U 1 1 4F740946
 P 3950 5900
-F 0 "#PWR03" H 3950 5860 30  0001 C CNN
+F 0 "#PWR3" H 3950 5860 30  0001 C CNN
 F 1 "+3.3V" H 3950 6010 30  0000 C CNN
 	1    3950 5900
 	0    -1   -1   0   
@@ -533,10 +597,10 @@ F 1 "MRF24J40MB" H 4100 5450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L GND #PWR2
 U 1 1 4F644EA8
 P 2450 5400
-F 0 "#PWR04" H 2450 5400 30  0001 C CNN
+F 0 "#PWR2" H 2450 5400 30  0001 C CNN
 F 1 "GND" H 2450 5330 30  0001 C CNN
 	1    2450 5400
 	1    0    0    -1  
@@ -560,10 +624,10 @@ F 1 "10kR" V 2450 4500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR05
+L +BATT #PWR1
 U 1 1 4F644E6B
 P 2450 3650
-F 0 "#PWR05" H 2450 3600 20  0001 C CNN
+F 0 "#PWR1" H 2450 3600 20  0001 C CNN
 F 1 "+BATT" H 2450 3750 30  0000 C CNN
 	1    2450 3650
 	1    0    0    -1  

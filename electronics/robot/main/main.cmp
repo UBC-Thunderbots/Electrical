@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-02T23:01:58 PST
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-11T00:49:32 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -451,43 +451,85 @@ EndCmp
 BeginCmp
 TimeStamp = /4AD90417/4F6971B8;
 Reference = F1;
-ValeurCmp = FUSE;
+ValeurCmp = 15A;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72C2A/507B2A09;
 Reference = F2;
-ValeurCmp = FUSE;
+ValeurCmp = 5A;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB0/507B2A09;
 Reference = F3;
-ValeurCmp = FUSE;
+ValeurCmp = 5A;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC7/507B2A09;
 Reference = F4;
-ValeurCmp = FUSE;
+ValeurCmp = 5A;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC1/507B2A09;
 Reference = F5;
-ValeurCmp = FUSE;
+ValeurCmp = 5A;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/507B2A09;
 Reference = F6;
-ValeurCmp = FUSE;
+ValeurCmp = 5A;
 IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD1E0;
+Reference = M1;
+ValeurCmp = 5mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD1DB;
+Reference = M2;
+ValeurCmp = 5mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD1DC;
+Reference = M3;
+ValeurCmp = 5mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD1E4;
+Reference = M4;
+ValeurCmp = 16mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD1FE;
+Reference = M5;
+ValeurCmp = 16mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD200;
+Reference = M6;
+ValeurCmp = 16mm;
+IdModule  = M3_MOUNT;
 EndCmp
 
 BeginCmp

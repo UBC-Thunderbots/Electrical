@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-02T22:46:39 PST
+EESchema Schematic File Version 2  date 2013-01-11T00:59:54 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 14 15
 Title ""
-Date "3 jan 2013"
+Date "11 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -79,10 +79,10 @@ Wire Wire Line
 Text HLabel 5100 4250 0    60   Input ~ 0
 RELAY
 $Comp
-L GND #PWR0143
+L GND #PWR146
 U 1 1 50667D7D
 P 5100 4050
-F 0 "#PWR0143" H 5100 4050 30  0001 C CNN
+F 0 "#PWR146" H 5100 4050 30  0001 C CNN
 F 1 "GND" H 5100 3980 30  0001 C CNN
 	1    5100 4050
 	0    1    1    0   
@@ -100,28 +100,28 @@ $EndComp
 Text HLabel 5100 4150 0    60   Output ~ 0
 VOLTAGE_SENSE
 $Comp
-L GND #PWR0144
+L GND #PWR145
 U 1 1 4F69666B
 P 5100 3950
-F 0 "#PWR0144" H 5100 3950 30  0001 C CNN
+F 0 "#PWR145" H 5100 3950 30  0001 C CNN
 F 1 "GND" H 5100 3880 30  0001 C CNN
 	1    5100 3950
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR0145
+L GND #PWR144
 U 1 1 4F696643
 P 5050 3400
-F 0 "#PWR0145" H 5050 3400 30  0001 C CNN
+F 0 "#PWR144" H 5050 3400 30  0001 C CNN
 F 1 "GND" H 5050 3330 30  0001 C CNN
 	1    5050 3400
 	0    1    1    0   
 $EndComp
 $Comp
-L +BATT #PWR0146
+L +BATT #PWR143
 U 1 1 4F696638
 P 5050 3200
-F 0 "#PWR0146" H 5050 3150 20  0001 C CNN
+F 0 "#PWR143" H 5050 3150 20  0001 C CNN
 F 1 "+BATT" H 5050 3300 30  0000 C CNN
 	1    5050 3200
 	0    -1   -1   0   

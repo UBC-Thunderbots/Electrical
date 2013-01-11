@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-05T14:05:16 PST
+EESchema Schematic File Version 2  date 2013-01-11T00:47:01 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "5 jan 2013"
+Date "11 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +45,80 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L M3_MOUNT M7
+U 1 1 50EFD17E
+P 2750 1050
+F 0 "M7" H 2750 1050 60  0000 C CNN
+F 1 "5mm" H 2750 1150 60  0000 C CNN
+F 4 "952-1496-ND" H 2750 1050 60  0001 C CNN "Digi-Key Part"
+	1    2750 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M6
+U 1 1 50EFD17C
+P 2200 1050
+F 0 "M6" H 2200 1050 60  0000 C CNN
+F 1 "5mm" H 2200 1150 60  0000 C CNN
+F 4 "952-1496-ND" H 2200 1050 60  0001 C CNN "Digi-Key Part"
+	1    2200 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M5
+U 1 1 50EFD179
+P 1650 1050
+F 0 "M5" H 1650 1050 60  0000 C CNN
+F 1 "5mm" H 1650 1150 60  0000 C CNN
+F 4 "952-1496-ND" H 1650 1050 60  0001 C CNN "Digi-Key Part"
+	1    1650 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M4
+U 1 1 50EFD172
+P 3300 700
+F 0 "M4" H 3300 700 60  0000 C CNN
+F 1 "5mm" H 3300 800 60  0000 C CNN
+F 4 "952-1496-ND" H 3300 700 60  0001 C CNN "Digi-Key Part"
+	1    3300 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M3
+U 1 1 50EFD171
+P 2750 700
+F 0 "M3" H 2750 700 60  0000 C CNN
+F 1 "5mm" H 2750 800 60  0000 C CNN
+F 4 "952-1496-ND" H 2750 700 60  0001 C CNN "Digi-Key Part"
+	1    2750 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M2
+U 1 1 50EFD16D
+P 2200 700
+F 0 "M2" H 2200 700 60  0000 C CNN
+F 1 "5mm" H 2200 800 60  0000 C CNN
+F 4 "952-1496-ND" H 2200 700 60  0001 C CNN "Digi-Key Part"
+	1    2200 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L M3_MOUNT M1
+U 1 1 50EFD176
+P 1650 700
+F 0 "M1" H 1650 700 60  0000 C CNN
+F 1 "5mm" H 1650 800 60  0000 C CNN
+F 4 "952-1496-ND" H 1650 700 60  0001 C CNN "Digi-Key Part"
+	1    1650 700 
+	1    0    0    -1  
+$EndComp
+Text Notes 1350 1100 2    60   ~ 0
+Up to Main Board:
+Text Notes 1350 750  2    60   ~ 0
+Down to Midplate:
 Wire Wire Line
 	7150 4600 8000 4600
 Wire Wire Line
@@ -663,28 +737,28 @@ F 1 "1kR" V 5450 6500 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +5V #PWR14
+L +5V #PWR13
 U 1 1 5079B67B
 P 7200 4500
-F 0 "#PWR14" H 7200 4590 20  0001 C CNN
+F 0 "#PWR13" H 7200 4590 20  0001 C CNN
 F 1 "+5V" H 7200 4590 30  0000 C CNN
 	1    7200 4500
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR12
+L +3.3V #PWR11
 U 1 1 5079B67A
 P 6250 5850
-F 0 "#PWR12" H 6250 5810 30  0001 C CNN
+F 0 "#PWR11" H 6250 5810 30  0001 C CNN
 F 1 "+3.3V" H 6250 5960 30  0000 C CNN
 	1    6250 5850
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR13
+L GND #PWR12
 U 1 1 5079B679
 P 6250 6050
-F 0 "#PWR13" H 6250 6050 30  0001 C CNN
+F 0 "#PWR12" H 6250 6050 30  0001 C CNN
 F 1 "GND" H 6250 5980 30  0001 C CNN
 	1    6250 6050
 	0    1    1    0   

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-04-06T20:11:23 PDT
+EESchema Schematic File Version 2  date 2013-01-11T01:05:17 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:optical_encoder-cache
-EELAYER 24  0
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
+encoding utf-8
 Sheet 1 1
 Title ""
-Date "7 apr 2012"
+Date "11 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -80,7 +80,7 @@ U 1 1 4F7FB015
 P 7150 3850
 F 0 "P?" V 7100 3850 50  0000 C CNN
 F 1 "CONN_4" V 7200 3850 50  0000 C CNN
-F 4 "WM1722-ND" H 7150 3850 60  0001 C CNN "Field1"
+F 4 "WM1722-ND" H 7150 3850 60  0001 C CNN "Digi-Key Part"
 	1    7150 3850
 	1    0    0    -1  
 $EndComp
@@ -90,7 +90,7 @@ U 1 1 4F7FB012
 P 6400 3850
 F 0 "P?" V 6350 3850 50  0000 C CNN
 F 1 "CONN_4" V 6450 3850 50  0000 C CNN
-F 4 "WM1722-ND" H 6400 3850 60  0001 C CNN "Field1"
+F 4 "WM1722-ND" H 6400 3850 60  0001 C CNN "Digi-Key Part"
 	1    6400 3850
 	-1   0    0    -1  
 $EndComp
@@ -118,6 +118,7 @@ U 1 1 4F7FAF2A
 P 4600 3850
 F 0 "U?" H 4600 3800 60  0000 C CNN
 F 1 "E4P" H 4600 3900 60  0000 C CNN
+F 4 "none" H 4600 3850 60  0001 C CNN "Digi-Key Part"
 	1    4600 3850
 	1    0    0    -1  
 $EndComp
@@ -145,6 +146,7 @@ U 1 1 4F7FA4A8
 P 6100 3850
 F 0 "P?" V 6050 3850 50  0000 C CNN
 F 1 "CONN_4" V 6150 3850 50  0000 C CNN
+F 4 "none" V 6100 3850 60  0001 C CNN "Digi-Key Part"
 	1    6100 3850
 	1    0    0    -1  
 $EndComp

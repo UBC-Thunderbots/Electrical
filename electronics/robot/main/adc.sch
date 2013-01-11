@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-02T22:46:39 PST
+EESchema Schematic File Version 2  date 2013-01-11T00:59:54 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 8 15
 Title ""
-Date "3 jan 2013"
+Date "11 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -81,10 +81,10 @@ Wire Wire Line
 	4750 3850 4750 4200
 Connection ~ 4750 4000
 $Comp
-L +3.3V #PWR091
+L +3.3V #PWR91
 U 1 1 50E52949
 P 4600 3950
-F 0 "#PWR091" H 4600 3910 30  0001 C CNN
+F 0 "#PWR91" H 4600 3910 30  0001 C CNN
 F 1 "+3.3V" H 4600 4060 30  0000 C CNN
 	1    4600 3950
 	1    0    0    -1  
@@ -92,10 +92,10 @@ $EndComp
 Text HLabel 4550 4000 0    60   Output ~ 0
 VREF
 $Comp
-L GND #PWR092
+L GND #PWR92
 U 1 1 4F619657
 P 4750 4650
-F 0 "#PWR092" H 4750 4650 30  0001 C CNN
+F 0 "#PWR92" H 4750 4650 30  0001 C CNN
 F 1 "GND" H 4750 4580 30  0001 C CNN
 	1    4750 4650
 	1    0    0    -1  
@@ -110,10 +110,10 @@ F 1 "1uF" H 4800 4300 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR093
+L GND #PWR93
 U 1 1 4F619488
 P 5050 4250
-F 0 "#PWR093" H 5050 4250 30  0001 C CNN
+F 0 "#PWR93" H 5050 4250 30  0001 C CNN
 F 1 "GND" H 5050 4180 30  0001 C CNN
 	1    5050 4250
 	1    0    0    -1  

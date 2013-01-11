@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2012-10-20T14:49:07 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-11T00:43:19 PST
 
 BeginCmp
 TimeStamp = /5065530C/4F698233;
@@ -75,6 +75,55 @@ TimeStamp = /50831B03;
 Reference = K1;
 ValeurCmp = CONN_3;
 IdModule  = SIL-3;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD084;
+Reference = M1;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD075;
+Reference = M2;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD079;
+Reference = M3;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD07B;
+Reference = M4;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD07C;
+Reference = M5;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD07F;
+Reference = M6;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD080;
+Reference = M7;
+ValeurCmp = M3_MOUNT;
+IdModule  = M3_MOUNT;
 EndCmp
 
 BeginCmp

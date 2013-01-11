@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-02T22:10:22 PST
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-11T00:51:48 PST
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -80,7 +80,7 @@ EndCmp
 BeginCmp
 TimeStamp = /506FCCB1;
 Reference = F1;
-ValeurCmp = FUSE;
+ValeurCmp = 5A;
 IdModule  = SM1206;
 EndCmp
 
@@ -96,6 +96,27 @@ TimeStamp = /4CE86DAF;
 Reference = L1;
 ValeurCmp = 22uH;
 IdModule  = 22uH_INDUCTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /00000000;
+Reference = M1;
+ValeurCmp = 16mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD28A;
+Reference = M2;
+ValeurCmp = 16mm;
+IdModule  = M3_MOUNT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EFD28C;
+Reference = M3;
+ValeurCmp = 16mm;
+IdModule  = M3_MOUNT;
 EndCmp
 
 BeginCmp

@@ -47,49 +47,27 @@
 		Parts should appear here if:
 			(1) The part requires more than one physical part, such as an XBee (consists of a radio plus two headers), OR
 			(2) The part is ordered from someone other than Digikey, such as a GA3460 transformer (ordered from Coilcraft), OR
-			(3) The part is not ordered at all, such as an ICSP connector (snapped off from a standard-length SIP header)
+			(3) The part is not ordered at all, because it is made from other bulk parts or it is ordered from another board
 	-->
 	<multiparts>
-		<!-- Battery inlet consists of a pair of holes with soldered wires, not a component. -->
-		<multipart id="battery-inlet" />
-
-		<!-- Chicker, dribbler, ICSP, and other headers are snapped off from a standard-length SIP header. -->
-		<multipart id="chicker-header" />
-		<multipart id="dribbler-header" />
-		<multipart id="ICSP" />
-		<multipart id="2.54mm-header-general" />
-
-		<!-- Chicker boost regulator inductor is ordered from CoilCraft. -->
-		<multipart id="chicker-charge-inductor" />
-
 		<!-- Header for the chicker is not available in 2×6 form, so use two 1×6 headers. -->
 		<multipart id="chicker-waysl-header">
 			<subpart id="A26171-ND" quantity="2" />
 		</multipart>
 
-		<!-- E4P optical encoder kit is ordered from US Digital. -->
-		<multipart id="E4P" />
-
-		<!-- Some components are just representations of jumper wires between two points. -->
-		<multipart id="jumper-wire" />
-
-		<!-- The kicker solenoid is manufactured locally, not purchased. -->
-		<multipart id="KICKER_SOLENOID" />
-
 		<!-- Long-pin headers are one assembly per chicker board; they come in 5×1 lengths and each board needs 7×2 plus 2×1. -->
 		<multipart id="long-pin-male-header">
 			<subpart id="609-4535-1-ND" quantity="4" />
 		</multipart>
-		<multipart id="long-pin-male-header2" />
-
-		<!-- An M3 mounting system consists solely of a hole in the board; the mechanical team takes care of nuts and bolts. -->
-		<multipart id="M3_MOUNT" />
 
 		<!-- An MRF24J40MC requires an external antenna. -->
 		<multipart id="MRF24J40MC">
 			<subpart id="MRF24J40MCT-I/RMCT-ND" />
 			<subpart id="0600-00039-ND" />
 		</multipart>
+
+		<!-- Some parts we just don't order from Digi-Key. This is a catch-all for those parts. -->
+		<multipart id="none" />
 	</multiparts>
 
 	<!--
@@ -127,7 +105,6 @@
 		<default value="AO4616" part="785-1043-1-ND" />
 		<default value="E4P" part="E4P" />
 		<default value="FT232" part="768-1007-1-ND" />
-		<default value="ICSP" part="ICSP" />
 		<default value="LD1117V33C" part="497-1492-5-ND" />
 		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
 		<default value="MIC7300" part="576-1319-1-ND" />

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2012-02-29T20:22:39 PST
+EESchema Schematic File Version 2  date 2013-01-11T01:06:15 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,12 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-EELAYER 24  0
+LIBS:thunderbots-symbols
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
+encoding utf-8
 Sheet 1 1
 Title ""
-Date "1 mar 2012"
+Date "11 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -62,7 +64,7 @@ U 1 1 4F4A9B88
 P 5350 2650
 F 0 "P1" V 5300 2650 40  0000 C CNN
 F 1 "CONN_2" V 5400 2650 40  0000 C CNN
-F 4 "jumper-wire" H 5350 2650 60  0001 C CNN "Field1"
+F 4 "none" H 5350 2650 60  0001 C CNN "Digi-Key Part"
 	1    5350 2650
 	1    0    0    -1  
 $EndComp
