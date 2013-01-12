@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 22 Nov 2012 07:14:15 PM PST
+EESchema Schematic File Version 2  date 2013-01-12T13:21:59 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "23 nov 2012"
+Date "12 jan 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -414,7 +414,7 @@ U 1 1 5070B57F
 P 6750 750
 F 0 "D4" H 6750 850 40  0000 C CNN
 F 1 "DIODESCH" H 6750 650 40  0000 C CNN
-F 4 "NSR0240HT1GOSCT-ND" H 6750 750 60  0001 C CNN "digikey part"
+F 4 "BAT60AE6327INCT-ND" H 6750 750 60  0001 C CNN "digikey part"
 	1    6750 750 
 	-1   0    0    1   
 $EndComp
@@ -424,7 +424,7 @@ U 1 1 5070B4DA
 P 9950 2200
 F 0 "D5" H 9950 2300 40  0000 C CNN
 F 1 "DIODESCH" H 9950 2100 40  0000 C CNN
-F 4 "NSR0240HT1GOSCT-ND" H 9950 2200 60  0001 C CNN "digikey part"
+F 4 "BAT60AE6327INCT-ND" H 9950 2200 60  0001 C CNN "digikey part"
 	1    9950 2200
 	1    0    0    -1  
 $EndComp
