@@ -91,13 +91,13 @@
 		<default value="15pF" part="490-5532-1-ND" />
 		<default value="27pF" part="478-5017-1-ND" />
 		<default value="10nF" part="490-1664-1-ND" />
-		<default value="100nF" part="445-1349-1-ND" />
+		<default value="100nF" part="399-1170-1-ND" />
 		<default value="220nF" part="445-1350-1-ND" /> <!-- must be 50V rated (for L6234) -->
 		<default value="470nF" part="311-1364-1-ND" />
 		<default value="1uF" part="445-7625-1-ND" />
 		<default value="2.2uF" part="587-1292-1-ND" />
 		<default value="4.7uF" part="587-1782-1-ND" />
-		<default value="10uF" part="445-3469-1-ND" />
+		<default value="10uF" part="587-1337-1-ND" />
 		<default value="100uF" part="P5182-ND" />
 		<default value="74AHC74" part="568-4458-1-ND" />
 		<default value="7805" part="LM7805CT-ND" />
