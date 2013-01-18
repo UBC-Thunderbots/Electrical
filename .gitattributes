@@ -132,6 +132,10 @@ electronics/models/solenoid2/kickdata.m -text
 electronics/models/solenoid2/moded.csv -text
 electronics/models/solenoid2/plotter.m -text
 electronics/models/solenoid2/solenoidModel.m -text
+electronics/oven_controller/oven_controller.brd -text
+electronics/oven_controller/oven_controller.cmp -text
+electronics/oven_controller/oven_controller.pro -text
+electronics/oven_controller/oven_controller.sch -text
 electronics/robot/breakout/breakout.brd -text
 electronics/robot/breakout/breakout.cmp -text
 electronics/robot/breakout/breakout.pro -text
