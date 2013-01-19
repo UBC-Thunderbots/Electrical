@@ -1,3 +1,15 @@
+controls/kalman-test-data/*.d
+controls/kalman-test-data/*.o
+controls/kalman-test-data/*.txt
+controls/kalman-test-data/parser
+controls/kalman-test-data/replay
+controls/kalman-test-data/stdderiv
+controls/kalman-test-data/%007fELF
+controls/kalman/*.d
+controls/kalman/main
+controls/robot_model/*.d
+controls/robot_model/*.o
+controls/robot_model/robot_sim
 electronics/*.bak
 electronics/*.bck
 electronics/Chicker[!!-~]Test[!!-~]Board/$savepcb.*

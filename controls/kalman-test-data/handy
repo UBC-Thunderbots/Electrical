@@ -1,0 +1,33 @@
+for f in one-robot-stationary-*.tsv
+do 
+	echo "processing $f"
+	#./parser -L --\"SSL-Vision-Ball-0 --N-N-\(Y-Y\) $f
+	#./parser -L --Ball-Data --Y-Y $f
+	#./parser -S --0={--\"SSL-Vision-Ball-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+	./parser -S --0={--\"SSL-Vision-Robot-Y-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+
+done
+
+for f in one-ball-rolling-*.tsv
+do 
+	echo "processing $f"
+	#./parser -L --\"SSL-Vision-Ball-0 --N-N-\(Y-Y\) $f
+	#./parser -L --Ball-Data --Y-Y $f
+	./parser -S --0={--\"SSL-Vision-Ball-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+	#./parser -S --0={--\"SSL-Vision-Robot-Y-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+
+done
+
+./parser -S --0={--\"SSL-Vision-Ball-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} one-ball-rolling-overlay-area.tsv
+
+for f in one-robot-rotating*.tsv
+do 
+	echo "processing $f"
+	#./parser -L --\"SSL-Vision-Ball-0 --N-N-\(Y-Y\) $f
+	./parser -L --Friendly-Robot-Data-2 --Y-Y-Y-Y-Y-Y $f
+	#./parser -S --0={--\"SSL-Vision-Ball-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+	#./parser -S --0={--\"SSL-Vision-Robot-Y-0}{--N-N-\(Y-Y\)} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+	./parser -S --0={--\"SSL-Vision-Robot-Y-0}{--N-N-\(Y-Y\)-Y-\(Y-Y\)-Y} --1={--\"SSL-Vision-Detection}{--N-Y-N-N-N-N-N-N-N-Y-N-N-N-N-N-N-N-Y} $f
+
+
+done

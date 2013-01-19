@@ -1,0 +1,4 @@
+The motor data files are raw counter outputs from testbench at 1ms sampling
+counters are 90 counts per rotation
+the MotorBot files are in raw adc values of gyro,x,y for a 0.2 step to each motor
+

@@ -1,0 +1,12 @@
+data01.txt: LFSR10 driving PWM levels 0 and 200 to wheel 1, sample rate = LFSR rate = 20Hz, robot upside-down on desk
+data02.txt: LFSR10 driving PWM levels 0 and 200 to wheel 2, sample rate = LFSR rate = 20Hz, robot upside-down on desk
+data03.txt: LFSR10 driving PWM levels 0 and 200 to wheel 3, sample rate = LFSR rate = 20Hz, robot upside-down on desk
+data04.txt: LFSR10 driving PWM levels 0 and 200 to wheel 4, sample rate = LFSR rate = 20Hz, robot upside-down on desk
+data05.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 1, sample rate = 20Hz, robot upside-down on desk
+data06.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 2, sample rate = 20Hz, robot upside-down on desk
+data07.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 3, sample rate = 20Hz, robot upside-down on desk
+data08.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 4, sample rate = 20Hz, robot upside-down on desk
+data09.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 1, sample rate = 20Hz, robot on field
+data10.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 2, sample rate = 20Hz, robot on field
+data11.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 3, sample rate = 20Hz, robot on field
+data12.txt: 1Hz square wave driving PWM levels 0 and 200 to wheel 4, sample rate = 20Hz, robot on field
