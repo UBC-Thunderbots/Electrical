@@ -119,8 +119,9 @@ begin
 		type counter_disposition_t is (HOLD, INC, RESET);
 		variable CounterDisposition : counter_disposition_t;
 		variable Multiplier : natural range 0 to MaxIncrement;
-		constant ThermalAmbient : natural := natural(30.0 / 0.4472e-3);
-		constant ThermalLimit : natural := natural(140.0 / 0.4472e-3);
+		constant TempPerPulse : real := real(0.1118e-3);
+		constant ThermalAmbient : natural := natural(30.0 / TempPerPulse);
+		constant ThermalLimit : natural := natural(140.0 / TempPerPulse);
 		constant ThermalRange : natural := ThermalLimit - ThermalAmbient;
 		variable ThermalAccumulator : natural range 0 to ThermalRange := 0;
 		constant ThermalTimeInterval : real := 23.0 / 256.0;
