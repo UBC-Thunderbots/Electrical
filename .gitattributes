@@ -230,7 +230,6 @@ datasheets/ics/MCUs/STM32/STM32F4/Cortex[!!-~]M4[!!-~]Technical[!!-~]Reference[!
 datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Datasheet.pdf -text
 datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Development[!!-~]Board[!!-~]Manual.pdf -text
 datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Errata.pdf -text
-datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Flash[!!-~]Programming[!!-~]Manual.pdf -text
 datasheets/ics/MCUs/STM32/STM32F4/STM32F40x/Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/STM32/System[!!-~]Memory[!!-~]Boot[!!-~]Mode[!!-~]AN2606[!!-~](Bootloader).pdf -text
 datasheets/ics/Micrel[!!-~]MIC7300[!!-~](Opamp).pdf -text
