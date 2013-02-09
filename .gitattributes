@@ -145,6 +145,7 @@ controls/robot_model/robot.cpp -text
 controls/robot_model/robot.h -text
 controls/robot_model/util.cpp -text
 controls/robot_model/util.h -text
+controls/useful_numbers -text
 controls/wheel-data/dual-rail-25-50.txt -text
 controls/wheel-data/dual-rail-50-25.txt -text
 controls/wheel-data/single-rail-25-50.txt -text

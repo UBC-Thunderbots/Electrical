@@ -1,0 +1,10 @@
+LargeGear = 70;
+SmallGear = 37;
+GearRatio = 1.9;
+MaxMotorTorque = 255 mNm/10 Amps * 2.2 Amps = 56.1 mNm
+MaxWheelTorque = 29.5 mNm
+WheelRadius = 1in
+MaxTangentialWheelForce = 0.185 N  **this is both average current limit force and a measure wheel slip force (approx)
+MaxSpeed = 374 RPM / Volt * 17 Volts = 6358 RPM
+MaxWheelSpeed = 6358 RPM * gearRatio = 12080 RPM
+MaxforwardSpeed = 32.13 meters/second **this is the forward speed for a single wheel under not torque**
