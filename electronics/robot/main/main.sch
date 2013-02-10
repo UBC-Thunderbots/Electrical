@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-11T00:59:54 PST
+EESchema Schematic File Version 2  date Sat 09 Feb 2013 04:45:32 PM PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -27,14 +27,13 @@ LIBS:siliconi
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "11 jan 2013"
+Date "10 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -42,6 +41,26 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L DIODESCH D2
+U 1 1 5116ED7E
+P 10650 3800
+F 0 "D2" H 10650 3900 40  0000 C CNN
+F 1 "DIODESCH" H 10650 3700 40  0000 C CNN
+F 4 "NSR0240HT1GOSCT-ND" H 10650 3800 60  0001 C CNN "Digi-Key Part"
+	1    10650 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L DIODESCH D1
+U 1 1 5116ED5E
+P 10650 3300
+F 0 "D1" H 10650 3400 40  0000 C CNN
+F 1 "DIODESCH" H 10650 3200 40  0000 C CNN
+F 4 "NSR0240HT1GOSCT-ND" H 10650 3300 60  0001 C CNN "Digi-Key Part"
+	1    10650 3300
+	0    1    1    0   
+$EndComp
 $Comp
 L M3_MOUNT M6
 U 1 1 50EFD200
@@ -489,26 +508,6 @@ F 0 "#PWR5" H 10650 3000 20  0001 C CNN
 F 1 "+HVBATT" H 10650 3150 30  0000 C CNN
 	1    10650 3050
 	1    0    0    -1  
-$EndComp
-$Comp
-L DIODE D2
-U 1 1 50677D45
-P 10650 3800
-F 0 "D2" H 10650 3900 40  0000 C CNN
-F 1 "DIODE" H 10650 3700 40  0000 C CNN
-F 4 "1N4148WSFSCT-ND" H 10650 3800 60  0001 C CNN "Digi-Key Part"
-	1    10650 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L DIODE D1
-U 1 1 506FCBC7
-P 10650 3300
-F 0 "D1" H 10650 3400 40  0000 C CNN
-F 1 "DIODE" H 10650 3200 40  0000 C CNN
-F 4 "1N4148WSFSCT-ND" H 10650 3300 60  0001 C CNN "Digi-Key Part"
-	1    10650 3300
-	0    1    1    0   
 $EndComp
 $Sheet
 S 7750 2850 1250 300 
