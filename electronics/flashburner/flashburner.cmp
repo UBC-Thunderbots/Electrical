@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Thu 06 Dec 2012 07:07:47 PM PST
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Thu 14 Feb 2013 06:33:46 PM PST
 
 BeginCmp
 TimeStamp = /4C55144A;
@@ -137,14 +137,14 @@ BeginCmp
 TimeStamp = /5070B57F;
 Reference = D4;
 ValeurCmp = DIODESCH;
-IdModule  = SOT23DIODE;
+IdModule  = SOD-323F;
 EndCmp
 
 BeginCmp
 TimeStamp = /5070B4DA;
 Reference = D5;
 ValeurCmp = DIODESCH;
-IdModule  = SOT23DIODE;
+IdModule  = SOD-323F;
 EndCmp
 
 BeginCmp
