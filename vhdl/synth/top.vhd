@@ -16,6 +16,8 @@ entity Top is
 		HVPowerPin : out std_ulogic := '0';
 		LaserPowerPin : out std_ulogic := '0';
 
+		InterlockOverridePin : in std_ulogic;
+
 		ADCCSPin : out std_ulogic := '1';
 		ADCClockPin : out std_ulogic := '0';
 		ADCMOSIPin : out std_ulogic := '0';
@@ -40,8 +42,8 @@ entity Top is
 		SDMOSIPin : out std_ulogic := '0';
 		SDMISOPin : in std_ulogic;
 
+		ChickerPresentPin : in std_ulogic;
 		ChickerRelayPin : out std_ulogic := '1';
-		ChickerPowerPin : out std_ulogic := '0';
 		ChickerChargePin : out std_ulogic := '1';
 		ChickerKickPin : out std_ulogic := '1';
 		ChickerChipPin : out std_ulogic := '1';
@@ -77,7 +79,6 @@ architecture Main of Top is
 	signal LEDSoftware : boolean := true;
 	signal LEDValue : std_ulogic_vector(4 downto 0) := "00000";
 
-	signal PowerChicker : boolean := false;
 	signal PowerMotors : boolean := false;
 	signal PowerLogic : boolean := true;
 	signal PowerLaser : boolean := false;
@@ -104,6 +105,7 @@ architecture Main of Top is
 	signal MCP3004Levels : mcp3004s_t := (others => 0);
 	signal MCP3004Latch : std_ulogic_vector(9 downto 0);
 
+	signal ChickerPresent : boolean := false;
 	signal ChipX : boolean := false;
 	signal ChipY : boolean := false;
 	signal ChipActive : boolean := false;
@@ -194,10 +196,9 @@ begin
 					end if;
 
 				when 16#01# => -- POWER_CTL
-					DIBuffer := "0000" & to_stdulogic(PowerLaser) &  to_stdulogic(PowerChicker) & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
+					DIBuffer := "0000" & to_stdulogic(PowerLaser) & '0' & to_stdulogic(PowerMotors) & to_stdulogic(PowerLogic);
 					if NavreWriteEnable then
 						PowerLaser <= to_boolean(NavreDO(3));
-						PowerChicker <= to_boolean(NavreDO(2));
 						PowerMotors <= to_boolean(NavreDO(1));
 						PowerLogic <= to_boolean(NavreDO(0));
 					end if;
@@ -479,7 +480,6 @@ begin
 	LogicPowerPin <= '1' when PowerLogic else '0';
 	HVPowerPin <= '1' when PowerMotors else '0';
 	LaserPowerPin <= '1' when PowerLaser else '0';
-	ChickerPowerPin <= '1' when PowerChicker else '0';
 	LPSDrivesPin <= LPSDrives;
 
 	process(Clocks.Clock4MHz) is

@@ -13,6 +13,9 @@ net "LogicPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P75;
 net "HVPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P74;
 net "LaserPowerPin" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P105;
 
+# Interlock override jumper
+net "InterlockOverridePin" iostandard=LVCMOS33 | pulldown | loc=P40;
+
 # SPI ADC
 net "ADCCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P87;
 net "ADCClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P84;
@@ -35,15 +38,15 @@ net "MRFMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P48;
 net "MRFMISOPin" iostandard=LVCMOS33 | float | loc=P43;
 
 # SD card
-net "SDPresentPin" iostandard=LVCMOS33 | pulldown | loc=P35;
-net "SDCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P33;
+net "SDPresentPin" iostandard=LVCMOS33 | pulldown | loc=P32;
+net "SDCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P35;
 net "SDClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P24;
-net "SDMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P32;
-net "SDMISOPin" iostandard=LVCMOS33 | float | loc=P34;
+net "SDMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P34;
+net "SDMISOPin" iostandard=LVCMOS33 | float | loc=P33;
 
 # Chicker
+net "ChickerPresentPin" iostandard=LVCMOS33 | pullup | loc=P80;
 net "ChickerRelayPin" iostandard=LVCMOS33 | slew=quietio | drive=24 | loc=P82;
-net "ChickerPowerPin" iostandard=LVCMOS33 | slew=quietio | loc=P80;
 net "ChickerChargePin" iostandard=LVCMOS33 | slew=quietio | drive=16 | loc=P78;
 net "ChickerKickPin" iostandard=LVCMOS33 | slew=quietio | loc=P81;
 net "ChickerChipPin" iostandard=LVCMOS33 | slew=quietio | loc=P79;
