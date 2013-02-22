@@ -37,6 +37,8 @@ def main():
 	if options.spares != 0 or options.spares_percent != 0:
 		bom.apply_spares(options.spares, options.spares_percent / 100.0)
 
+	bom.round_quantities_up()
+
 	# Load part information for the parts in the BOM.
 	bom.load_part_info()
 

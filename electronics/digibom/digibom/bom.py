@@ -55,7 +55,11 @@ class BOM(object):
 
 	def apply_spares(self, absolute, relative):
 		for part, quantity in self._parts.items():
-			self._parts[part] = max(math.ceil(quantity * (1.0 + relative)), quantity + absolute)
+			self._parts[part] = max(quantity * (1.0 + relative), quantity + absolute)
+
+	def round_quantities_up(self):
+		for part, quantity in self._parts.items():
+			self._parts[part] = math.ceil(self._parts[part])
 
 	def load_part_info(self):
 		self._part_info = digibom.partinfo.lookup(self._parts.keys())

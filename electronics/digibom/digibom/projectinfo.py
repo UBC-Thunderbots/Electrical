@@ -33,7 +33,7 @@ class ProjectInfo(object):
 						self._current_multipart = (attrs.getValue("id"), [])
 					elif name == "subpart":
 						assert self._current_multipart is not None
-						self._current_multipart[1].append(Subpart(attrs.getValue("id"), int(attrs.getValue("quantity"))))
+						self._current_multipart[1].append(Subpart(attrs.getValue("id"), float(attrs.getValue("quantity"))))
 					elif name == "default":
 						value = attrs.getValue("value")
 						part = attrs.getValue("part")
