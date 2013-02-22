@@ -50,9 +50,9 @@
 			(3) The part is not ordered at all, because it is made from other bulk parts or it is ordered from another board
 	-->
 	<multiparts>
-		<!-- Header for the chicker is not available in 2×6 form, so use two 1×6 headers. -->
+		<!-- Each row of headers is 50 pins. We need 12 per board. -->
 		<multipart id="chicker-waysl-header">
-			<subpart id="A26171-ND" quantity="2" />
+			<subpart id="SAM1067-50-ND" quantity="0.24" />
 		</multipart>
 
 		<!-- Long-pin headers are one assembly per chicker board; they come in 5×1 lengths and each board needs 7×2 plus 2×1. -->
