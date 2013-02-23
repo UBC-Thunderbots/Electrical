@@ -66,6 +66,12 @@
 			<subpart id="0600-00039-ND" />
 		</multipart>
 
+		<multipart id="solenoid-connector-accessory">
+			<subpart id="WM4300-ND" />
+			<subpart id="WM2613-ND" />
+			<subpart id="WM2623-ND" quantity="2" />
+		</multipart>
+
 		<!-- Some parts we just don't order from Digi-Key. This is a catch-all for those parts. -->
 		<multipart id="none" />
 	</multiparts>
