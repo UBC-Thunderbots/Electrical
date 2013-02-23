@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-11T00:49:32 PST
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-02-22T17:01:35 PST
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -372,16 +372,16 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /506FCBC7;
+TimeStamp = /5116ED5E;
 Reference = D1;
-ValeurCmp = DIODE;
+ValeurCmp = DIODESCH;
 IdModule  = SOD-323F;
 EndCmp
 
 BeginCmp
-TimeStamp = /50677D45;
+TimeStamp = /5116ED7E;
 Reference = D2;
-ValeurCmp = DIODE;
+ValeurCmp = DIODESCH;
 IdModule  = SOD-323F;
 EndCmp
 
@@ -619,7 +619,7 @@ EndCmp
 BeginCmp
 TimeStamp = /506E24CB;
 Reference = R2;
-ValeurCmp = 100R;
+ValeurCmp = 1kR;
 IdModule  = SM0805;
 EndCmp
 
@@ -627,6 +627,20 @@ BeginCmp
 TimeStamp = /506A42F8;
 Reference = R3;
 ValeurCmp = 100R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /512814D0;
+Reference = R4;
+ValeurCmp = 10kR;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /512814D1;
+Reference = R5;
+ValeurCmp = THERM;
 IdModule  = SM0805;
 EndCmp
 
@@ -855,10 +869,10 @@ IdModule  = SO16N;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F618EFD/4F618F15;
+TimeStamp = /4F618EFD/512814D3;
 Reference = U49;
-ValeurCmp = MCP3004;
-IdModule  = SO14E;
+ValeurCmp = MCP3008;
+IdModule  = SO16E;
 EndCmp
 
 EndListe
