@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-12T13:21:59 PST
+EESchema Schematic File Version 2  date 2013-02-24T00:40:22 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:flashburner-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "12 jan 2013"
+Date "24 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -998,8 +997,8 @@ L LED D2
 U 1 1 4C54C364
 P 8400 4600
 F 0 "D2" H 8400 4700 50  0000 C CNN
-F 1 "LED" H 8400 4500 50  0000 C CNN
-F 4 "160-1167-1-ND" H 8400 4600 60  0001 C CNN "Digikey Part"
+F 1 "YEL" H 8400 4500 50  0000 C CNN
+F 4 "160-1170-1-ND" H 8400 4600 60  0001 C CNN "Digikey Part"
 	1    8400 4600
 	1    0    0    -1  
 $EndComp
@@ -1026,7 +1025,7 @@ L LED D3
 U 1 1 4C54C361
 P 8400 4300
 F 0 "D3" H 8400 4400 50  0000 C CNN
-F 1 "LED" H 8400 4200 50  0000 C CNN
+F 1 "RED" H 8400 4200 50  0000 C CNN
 F 4 "160-1167-1-ND" H 8400 4300 60  0001 C CNN "Digikey Part"
 	1    8400 4300
 	1    0    0    -1  
@@ -1054,7 +1053,7 @@ L LED D1
 U 1 1 4C54C35E
 P 8400 4900
 F 0 "D1" H 8400 5000 50  0000 C CNN
-F 1 "LED" H 8400 4800 50  0000 C CNN
+F 1 "GRN" H 8400 4800 50  0000 C CNN
 F 4 "160-1169-1-ND" H 8400 4900 60  0001 C CNN "Digikey Part"
 	1    8400 4900
 	1    0    0    -1  
