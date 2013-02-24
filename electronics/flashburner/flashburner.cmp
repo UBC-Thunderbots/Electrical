@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Thu 14 Feb 2013 06:33:46 PM PST
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-02-24T01:26:50 PST
 
 BeginCmp
 TimeStamp = /4C55144A;
@@ -115,21 +115,21 @@ EndCmp
 BeginCmp
 TimeStamp = /4C54C35E;
 Reference = D1;
-ValeurCmp = LED;
+ValeurCmp = GRN;
 IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4C54C364;
 Reference = D2;
-ValeurCmp = LED;
+ValeurCmp = YEL;
 IdModule  = LED-1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4C54C361;
 Reference = D3;
-ValeurCmp = LED;
+ValeurCmp = RED;
 IdModule  = LED-1206;
 EndCmp
 
@@ -158,7 +158,7 @@ BeginCmp
 TimeStamp = /5070898E;
 Reference = P2;
 ValeurCmp = CONN_8;
-IdModule  = SIL-8;
+IdModule  = WM3006;
 EndCmp
 
 BeginCmp
