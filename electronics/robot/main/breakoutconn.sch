@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-02-24T01:10:04 PST
+EESchema Schematic File Version 2  date 2013-02-24T01:49:34 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -453,9 +453,9 @@ F 1 "GND" H 6550 5080 30  0001 C CNN
 	1    6550 5150
 	0    1    1    0   
 $EndComp
-Text HLabel 5850 2200 0    60   Output ~ 0
-BB_SENSOR
 Text HLabel 5850 2100 0    60   Output ~ 0
+BB_SENSOR
+Text HLabel 5850 2200 0    60   Output ~ 0
 LPS_SENSOR
 Text HLabel 5850 3850 0    60   Output ~ 0
 M3_SENSOR[0..4]
