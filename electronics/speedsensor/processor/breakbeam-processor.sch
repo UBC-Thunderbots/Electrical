@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 21 May 2012 10:05:55 PM PDT
+EESchema Schematic File Version 2  date Sat 23 Feb 2013 05:27:14 PM PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:breakbeam-processor-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 may 2012"
+Date "24 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1124,6 +1123,7 @@ U 1 1 4FB82E3D
 P 9050 4950
 F 0 "K1" V 9000 4950 50  0000 C CNN
 F 1 "CONN_3" V 9100 4950 40  0000 C CNN
+F 4 "molex-two-pin" V 9050 4950 60  0001 C CNN "Digikey Part"
 	1    9050 4950
 	1    0    0    -1  
 $EndComp
