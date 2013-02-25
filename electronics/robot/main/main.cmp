@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-02-22T17:01:35 PST
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 2/24/2013 7:08:34 PM
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -351,6 +351,41 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /4CD72C2A/512AD584;
+Reference = C51;
+ValeurCmp = 10uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EB0/512AD584;
+Reference = C52;
+ValeurCmp = 10uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EC7/512AD584;
+Reference = C53;
+ValeurCmp = 10uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EC1/512AD584;
+Reference = C54;
+ValeurCmp = 10uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /4CD72EB9/512AD584;
+Reference = C55;
+ValeurCmp = 10uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
 TimeStamp = /4CD73194/4F698278;
 Reference = C57;
 ValeurCmp = 10uF;
@@ -395,49 +430,49 @@ EndCmp
 BeginCmp
 TimeStamp = /4AD9040D/4CDF343B;
 Reference = D16;
-ValeurCmp = LED;
+ValeurCmp = RED;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AD9040D/4CDF3432;
 Reference = D18;
-ValeurCmp = LED;
+ValeurCmp = GRN;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AD9040D/4CDF3436;
 Reference = D19;
-ValeurCmp = LED;
+ValeurCmp = GRN;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AD9040D/4F697420;
 Reference = D20;
-ValeurCmp = LED;
+ValeurCmp = GRN;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AD9040D/4F697423;
 Reference = D21;
-ValeurCmp = LED;
+ValeurCmp = YEL;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AD9040D/4F69742B;
 Reference = D22;
-ValeurCmp = LED;
+ValeurCmp = YEL;
 IdModule  = SM1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /4AD9040D/4F69742C;
 Reference = D23;
-ValeurCmp = LED;
+ValeurCmp = YEL;
 IdModule  = SM1206;
 EndCmp
 
