@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-11T01:19:33 PST
+EESchema Schematic File Version 2  date 2/24/2013 6:07:47 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:lateral_sensor-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "11 jan 2013"
+Date "25 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -226,7 +225,7 @@ U 1 1 509574B0
 P 1350 4150
 F 0 "P1" V 1320 4150 60  0000 C CNN
 F 1 "CONN_7" V 1420 4150 60  0000 C CNN
-F 4 "WM7624CT-ND" V 1350 4150 60  0001 C CNN "Digi-Key Part"
+F 4 "WM7625CT-ND" V 1350 4150 60  0001 C CNN "Digi-Key Part"
 	1    1350 4150
 	-1   0    0    1   
 $EndComp
