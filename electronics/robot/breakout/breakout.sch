@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-11T00:47:01 PST
+EESchema Schematic File Version 2  date 2/24/2013 6:11:43 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "11 jan 2013"
+Date "25 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -617,7 +617,7 @@ U 1 1 5079B686
 P 4150 6300
 F 0 "P9" V 4100 6300 60  0000 C CNN
 F 1 "CONN_11" V 4200 6300 60  0000 C CNN
-F 4 "WM7629CT-ND" V 4150 6300 60  0001 C CNN "Digi-Key Part"
+F 4 "dribbler-harness-connector-and-components" V 4150 6300 60  0001 C CNN "Digi-Key Part"
 	1    4150 6300
 	-1   0    0    1   
 $EndComp

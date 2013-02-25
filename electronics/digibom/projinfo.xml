@@ -71,6 +71,16 @@
 			<subpart id="WM2613-ND" />
 			<subpart id="WM2623-ND" quantity="2" />
 		</multipart>
+		
+		<multipart id="dribbler-harness-connector-and-components">
+			<subpart id="WM7629CT-ND" />
+			<subpart id="WM1729-ND" />
+			<subpart id="WM1142CT-ND" quantity="11" />
+			<subpart id="WM1725-ND" />
+			<subpart id="WM1142CT-ND" quantity="7" />
+			<subpart id="365-1145-ND" />
+			<subpart id="PNA2602M-ND" />
+		</multipart>
 
 		<!-- Some parts we just don't order from Digi-Key. This is a catch-all for those parts. -->
 		<multipart id="none" />
