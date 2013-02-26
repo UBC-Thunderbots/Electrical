@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 2/26/2013 12:49:32 AM
+PCBNEW-BOARD Version 1 date 2/26/2013 12:51:06 AM
 
 # Created by Pcbnew(2012-01-19 BZR 3256)-stable
 
@@ -57,11 +57,11 @@ TextPcbSize 600 800
 EdgeModWidth 79
 TextModSize 600 600
 TextModWidth 120
-PadSize 303 414
-PadDrill 0
+PadSize 1063 1063
+PadDrill 906
 Pad2MaskClearance 100
 AuxiliaryAxisOrg 0 0
-PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
+PcbPlotParams (pcbplotparams (layerselection 15761409) (usegerberextensions true) (excludeedgelayer false) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ../../../../mfg/flashburner/))
 $EndSETUP
 
 $EQUIPOT
@@ -1613,7 +1613,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  TQFP_64
 $MODULE USB_B
-Po 48500 45600 2700 15 48A935FA 508C92C0 ~~
+Po 48500 45600 2700 15 512C7777 508C92C0 ~~
 Li USB_B
 Kw USB
 Sc 508C92C0
@@ -1656,7 +1656,7 @@ $EndPAD
 $PAD
 Sh "5" C 1063 1063 0 0 2700
 Dr 906 0 0
-At HOLE N 00F0FFFF
+At STD N 00E0FFFF
 Ne 0 ""
 Po 2362 0
 $EndPAD
