@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-02-26T23:28:28 PST
+EESchema Schematic File Version 2  date 2/26/2013 11:57:50 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -120,7 +120,7 @@ U 1 1 4E03DD91
 P 6650 4800
 F 0 "Q?" H 6650 4650 50  0000 R CNN
 F 1 "PHOTOTRANSISTOR" H 6650 4950 50  0000 R CNN
-F 4 "PNA2602M-ND" H 6650 4800 60  0001 C CNN "Digi-Key Part"
+F 4 "475-1419-ND" H 6650 4800 60  0001 C CNN "Digi-Key Part"
 	1    6650 4800
 	1    0    0    -1  
 $EndComp
