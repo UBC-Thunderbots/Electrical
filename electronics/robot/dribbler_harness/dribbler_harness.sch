@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2/24/2013 6:13:20 PM
+EESchema Schematic File Version 2  date 2013-02-26T23:28:28 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,13 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:dribbler_harness-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "noname.sch"
-Date "25 feb 2013"
+Date "27 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -95,6 +96,7 @@ U 1 1 00000000
 P 6500 3900
 F 0 "P?" V 6470 3900 60  0000 C CNN
 F 1 "CONN_7" V 6570 3900 60  0000 C CNN
+F 4 "dribbler-harness-to-lps" V 6500 3900 60  0001 C CNN "Digi-Key Part"
 	1    6500 3900
 	1    0    0    -1  
 $EndComp
@@ -104,6 +106,7 @@ U 1 1 00000000
 P 5050 4100
 F 0 "P?" V 5000 4100 60  0000 C CNN
 F 1 "CONN_11" V 5100 4100 60  0000 C CNN
+F 4 "dribbler-harness-to-breakout-board" V 5050 4100 60  0001 C CNN "Digi-Key Part"
 	1    5050 4100
 	-1   0    0    1   
 $EndComp
@@ -117,6 +120,7 @@ U 1 1 4E03DD91
 P 6650 4800
 F 0 "Q?" H 6650 4650 50  0000 R CNN
 F 1 "PHOTOTRANSISTOR" H 6650 4950 50  0000 R CNN
+F 4 "PNA2602M-ND" H 6650 4800 60  0001 C CNN "Digi-Key Part"
 	1    6650 4800
 	1    0    0    -1  
 $EndComp
@@ -126,6 +130,7 @@ U 1 1 4E03DCF1
 P 7150 4450
 F 0 "D?" H 7150 4550 50  0000 C CNN
 F 1 "LED" H 7150 4350 50  0000 C CNN
+F 4 "365-1145-ND" H 7150 4450 60  0001 C CNN "Digi-Key Part"
 	1    7150 4450
 	1    0    0    -1  
 $EndComp

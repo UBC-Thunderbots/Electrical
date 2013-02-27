@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-11T00:53:55 PST
+EESchema Schematic File Version 2  date 2013-02-26T23:31:04 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:solenoid-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "11 jan 2013"
+Date "27 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -62,7 +63,7 @@ U 1 1 4F7FB0A2
 P 5250 3650
 F 0 "P?" V 5200 3650 40  0000 C CNN
 F 1 "CONN_2" V 5300 3650 40  0000 C CNN
-F 4 "WM2613-ND" H 5250 3650 60  0001 C CNN "Digi-Key Part"
+F 4 "solenoid-plug" H 5250 3650 60  0001 C CNN "Digi-Key Part"
 	1    5250 3650
 	-1   0    0    -1  
 $EndComp

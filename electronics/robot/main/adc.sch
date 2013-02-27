@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2/24/2013 7:08:39 PM
+EESchema Schematic File Version 2  date 2013-02-26T23:32:31 PST
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 8 15
 Title ""
-Date "25 feb 2013"
+Date "27 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -123,6 +123,7 @@ U 1 1 512814D3
 P 5950 4000
 F 0 "U49" H 5950 3950 60  0000 C CNN
 F 1 "MCP3008" H 5950 4050 60  0000 C CNN
+F 4 "MCP3008-I/SL-ND" H 5950 4000 60  0001 C CNN "Digi-Key Part"
 	1    5950 4000
 	1    0    0    -1  
 $EndComp

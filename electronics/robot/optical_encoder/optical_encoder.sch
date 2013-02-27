@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-01-11T01:05:17 PST
+EESchema Schematic File Version 2  date 2013-02-26T23:30:32 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:optical_encoder-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "11 jan 2013"
+Date "27 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -80,7 +81,7 @@ U 1 1 4F7FB015
 P 7150 3850
 F 0 "P?" V 7100 3850 50  0000 C CNN
 F 1 "CONN_4" V 7200 3850 50  0000 C CNN
-F 4 "WM1722-ND" H 7150 3850 60  0001 C CNN "Digi-Key Part"
+F 4 "optical-encoder-plug" H 7150 3850 60  0001 C CNN "Digi-Key Part"
 	1    7150 3850
 	1    0    0    -1  
 $EndComp
@@ -90,7 +91,7 @@ U 1 1 4F7FB012
 P 6400 3850
 F 0 "P?" V 6350 3850 50  0000 C CNN
 F 1 "CONN_4" V 6450 3850 50  0000 C CNN
-F 4 "WM1722-ND" H 6400 3850 60  0001 C CNN "Digi-Key Part"
+F 4 "optical-encoder-plug" H 6400 3850 60  0001 C CNN "Digi-Key Part"
 	1    6400 3850
 	-1   0    0    -1  
 $EndComp

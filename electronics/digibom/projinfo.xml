@@ -55,31 +55,34 @@
 			<subpart id="SAM1067-50-ND" quantity="0.24" />
 		</multipart>
 
-		<!-- Long-pin headers are one assembly per chicker board; they come in 5×1 lengths and each board needs 7×2 plus 2×1. -->
-		<multipart id="long-pin-male-header">
-			<subpart id="609-4535-1-ND" quantity="4" />
-		</multipart>
-
 		<!-- An MRF24J40MC requires an external antenna. -->
 		<multipart id="MRF24J40MC">
 			<subpart id="MRF24J40MCT-I/RMCT-ND" />
 			<subpart id="0600-00039-ND" />
 		</multipart>
 
-		<multipart id="solenoid-connector-accessory">
-			<subpart id="WM4300-ND" />
-			<subpart id="WM2613-ND" />
-			<subpart id="WM2623-ND" quantity="2" />
+		<!-- A WM1722-ND optical-encoder-cable-plug requires four pins. -->
+		<multipart id="optical-encoder-plug">
+			<subpart id="WM1722-ND" />
+			<subpart id="WM1142CT-ND" quantity="4" />
 		</multipart>
-		
-		<multipart id="dribbler-harness-connector-and-components">
-			<subpart id="WM7629CT-ND" />
+
+		<!-- A WM1729-ND dribbler-harness-to-breakout-board plug requires eleven pins. -->
+		<multipart id="dribbler-harness-to-breakout-board">
 			<subpart id="WM1729-ND" />
 			<subpart id="WM1142CT-ND" quantity="11" />
+		</multipart>
+
+		<!-- A WM1725-ND dribbler-harness-to-LPS plug requires seven pins. -->
+		<multipart id="dribbler-harness-to-lps">
 			<subpart id="WM1725-ND" />
 			<subpart id="WM1142CT-ND" quantity="7" />
-			<subpart id="365-1145-ND" />
-			<subpart id="PNA2602M-ND" />
+		</multipart>
+
+		<!-- A WM2613-ND solenoid connector requires two pins. -->
+		<multipart id="solenoid-plug">
+			<subpart id="WM2613-ND" />
+			<subpart id="WM2623-ND" quantity="2" />
 		</multipart>
 
 		<!-- Some parts we just don't order from Digi-Key. This is a catch-all for those parts. -->

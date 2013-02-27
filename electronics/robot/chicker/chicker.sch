@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 23 Feb 2013 05:28:03 PM PST
+EESchema Schematic File Version 2  date 2013-02-26T23:24:22 PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "24 feb 2013"
+Date "27 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -690,7 +690,7 @@ U 1 1 4E627F5E
 P 10400 5150
 F 0 "P1" V 10350 5150 40  0000 C CNN
 F 1 "CONN_2" V 10450 5150 40  0000 C CNN
-F 4 "solenoid-connector-accessory" H 10400 5150 60  0001 C CNN "Field1"
+F 4 "WM4300-ND" H 10400 5150 60  0001 C CNN "Digi-Key Part"
 	1    10400 5150
 	1    0    0    -1  
 $EndComp
@@ -893,7 +893,7 @@ U 1 1 4CE85E9F
 P 7300 5150
 F 0 "P3" V 7250 5150 40  0000 C CNN
 F 1 "CONN_2" V 7350 5150 40  0000 C CNN
-F 4 "solenoid-connector-accessory" H 7300 5150 60  0001 C CNN "Digikey Part"
+F 4 "WM4300-ND" H 7300 5150 60  0001 C CNN "Digi-Key Part"
 	1    7300 5150
 	1    0    0    -1  
 $EndComp
