@@ -274,6 +274,13 @@ electronics/dongle/dongle.cmp -text
 electronics/dongle/gerbmerge/dongle10.cfg -text
 electronics/dongle/gerbmerge/dongle10.def -text
 electronics/flashburner/flashburner.cmp -text
+electronics/models/mainboard_thermal/Assem1.SLDASM -text
+electronics/models/mainboard_thermal/Part1.SLDPRT -text
+electronics/models/mainboard_thermal/X.BAT -text
+electronics/models/mainboard_thermal/Y.clg -text
+electronics/models/mainboard_thermal/board.SLDPRT -text
+electronics/models/mainboard_thermal/copper.SLDPRT -text
+electronics/models/mainboard_thermal/heat_source.SLDPRT -text
 electronics/models/solenoid/solenoid.mdl -text
 electronics/models/solenoid2/computeDiff.m -text
 electronics/models/solenoid2/getMuR.m -text
