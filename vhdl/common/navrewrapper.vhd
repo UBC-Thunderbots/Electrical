@@ -46,6 +46,8 @@ architecture Arch of NavreWrapper is
 		io_a : out std_ulogic_vector(5 downto 0);
 		io_do : out std_ulogic_vector(7 downto 0);
 		io_di : in std_ulogic_vector(7 downto 0);
+		irq : in std_ulogic_vector(7 downto 0);
+		irq_ack : out std_ulogic_vector(7 downto 0);
 		dbg_pc : out std_ulogic_vector(pmem_width - 1 downto 0));
 	end component navre;
 begin
@@ -69,6 +71,8 @@ begin
 		unsigned(io_a) => IOAddressU,
 		io_do => IODO,
 		io_di => IODI,
+		irq => X"00",
+		irq_ack => open,
 		dbg_pc => open);
 
 	PMemAddress <= to_integer(PMemAddressU);
