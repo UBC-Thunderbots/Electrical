@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2/24/2013 6:07:47 PM
+EESchema Schematic File Version 2  date Thu 28 Feb 2013 06:45:47 PM PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "25 feb 2013"
+Date "1 mar 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -280,6 +280,7 @@ U 1 1 4B27D7C7
 P 10200 4250
 F 0 "U9" H 10200 4300 60  0000 C CNN
 F 1 "OPB733TR" H 10200 4200 60  0000 C CNN
+F 4 "365-1510-1-ND" H 10200 4250 60  0001 C CNN "Digi-Key Part"
 	1    10200 4250
 	-1   0    0    1   
 $EndComp
@@ -316,6 +317,7 @@ U 1 1 4B27D7B8
 P 8050 4150
 F 0 "U7" H 8050 4200 60  0000 C CNN
 F 1 "OPB733TR" H 8050 4100 60  0000 C CNN
+F 4 "365-1510-1-ND" H 8050 4150 60  0001 C CNN "Digi-Key Part"
 	1    8050 4150
 	-1   0    0    1   
 $EndComp
@@ -352,6 +354,7 @@ U 1 1 4B27D7A5
 P 5850 4200
 F 0 "U5" H 5850 4250 60  0000 C CNN
 F 1 "OPB733TR" H 5850 4150 60  0000 C CNN
+F 4 "365-1510-1-ND" H 5850 4200 60  0001 C CNN "Digi-Key Part"
 	1    5850 4200
 	-1   0    0    1   
 $EndComp
@@ -388,6 +391,7 @@ U 1 1 4B27D6A6
 P 3550 4200
 F 0 "U3" H 3550 4250 60  0000 C CNN
 F 1 "OPB733TR" H 3550 4150 60  0000 C CNN
+F 4 "365-1510-1-ND" H 3550 4200 60  0001 C CNN "Digi-Key Part"
 	1    3550 4200
 	-1   0    0    1   
 $EndComp
@@ -451,6 +455,7 @@ U 1 1 4B1F46E6
 P 3300 2450
 F 0 "U1" H 3300 2500 60  0000 C CNN
 F 1 "MIC7300" H 3300 2400 60  0000 C CNN
+F 4 "576-1319-1-ND" H 3300 2450 60  0001 C CNN "Digi-Key Part"
 	1    3300 2450
 	-1   0    0    -1  
 $EndComp
