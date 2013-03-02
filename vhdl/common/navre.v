@@ -115,6 +115,7 @@ wire [6:0] Ks = pmem_d[9:3];
 wire [1:0] Rd16 = pmem_d[5:4];
 wire [5:0] K16 = {pmem_d[7:6], pmem_d[3:0]};
 wire [5:0] q = {pmem_d[13], pmem_d[11:10], pmem_d[2:0]};
+ 
 
 wire [7:0] GPR_Rd8 = GPR[Rd];
 wire [7:0] GPR_Rr8 = GPR[Rr];
@@ -182,6 +183,7 @@ localparam PC_SEL_DMEMH		= 4'd6;
 localparam PC_SEL_DEC		= 4'd7;
 localparam PC_SEL_Z		= 4'd8;
 localparam PC_SEL_EX		= 4'd9;
+localparam PC_SEL_K     = 4'd10;
 
 /* Exceptions */
 
@@ -250,8 +252,13 @@ always @(posedge clk) begin
 		case(pc_sel)
 			PC_SEL_NOP:;
 			PC_SEL_INC: PC <= PC + 1;
-			// !!! WARNING !!! replace with PC <= PC + {{pmem_width-12{Kl[11]}}, Kl}; if pmem_width>12
-			PC_SEL_KL: PC <= PC + Kl;
+			PC_SEL_K: PC <= pmem_d[pmem_width-1:0]; 
+			PC_SEL_KL: 
+				if(pmem_width>12) begin
+					PC <= PC + {{pmem_width-12{Kl[11]}}, Kl};
+				end else begin
+					PC <= PC + Kl;
+				end	
 			PC_SEL_KS: PC <= PC + {{pmem_width-7{Ks[6]}}, Ks};
 			PC_SEL_DMEML: PC[7:0] <= dmem_di;
 			PC_SEL_DMEMH: PC[pmem_width-1:8] <= dmem_di;
@@ -696,6 +703,9 @@ localparam RETI1	= 5'd14;
 localparam RETI2	= 5'd15;
 localparam RETI3	= 5'd16;
 localparam RETI4	= 5'd17;
+localparam CALL1 = 5'd18;
+localparam CALL2 = 5'd19;
+localparam JMP = 5'd20;
 
 always @(posedge clk) begin
 	if(rst)
@@ -877,6 +887,16 @@ always @(*) begin
 						push = 1'b1;
 						next_state = ICALL;
 					end
+					16'b1001_010x_xxxx_11xx: begin
+						/*CALL*/
+						/*JMP*/
+						pc_sel = PC_SEL_INC;
+						pmem_ce = 1'b1;
+						if(pmem_d[1] == 1'b0) 
+							next_state = JMP;
+						else
+							next_state = CALL1;
+					end
 					default: begin
 						pc_sel = PC_SEL_INC;
 						normal_en = 1'b1;
@@ -884,6 +904,23 @@ always @(*) begin
 					end
 				endcase
 			end
+		end
+		CALL1: begin
+			dmem_sel = DMEM_SEL_SP_PCL;
+			dmem_we = 1'b1;
+			push = 1'b1;
+			next_state = CALL2;
+		end
+		CALL2: begin
+			dmem_sel = DMEM_SEL_SP_PCH;
+			dmem_we = 1'b1;
+			push = 1'b1;
+			pc_sel = PC_SEL_K;
+			next_state = STALL;
+		end
+		JMP: begin
+			pc_sel = PC_SEL_K;
+			next_state = STALL;
 		end
 		RCALL: begin
 			dmem_sel = DMEM_SEL_SP_PCH;
