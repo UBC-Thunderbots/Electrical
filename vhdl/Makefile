@@ -11,6 +11,7 @@ SIM_TARGETS := boostcontrollertest deadbandtest crc16test flashchecksummertest
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
 
 # Gather all the VHDL source files in the three directories.
+Vs_common := $(shell find common -name .svn -prune -o -name '*.v' -print)
 VHDs_common := $(shell find common -name .svn -prune -o -name '*.vhd' -print)
 VHDs_sim    := $(shell find sim    -name .svn -prune -o -name '*.vhd' -print)
 VHDs_synth  := $(shell find synth  -name .svn -prune -o -name '*.vhd' -print)
@@ -171,7 +172,7 @@ $(PROJ).ngd : $(PROJ).ngc $(PROJ).ucf $(PROJ).bmm
 
 # We can make an NCD file from an XST file, a PRJ file, and a bunch of VHD files
 # using Xilinx XST.
-$(PROJ).ngc : $(PROJ).xst $(PROJ).prj $(VHDs_common) $(VHDs_synth)
+$(PROJ).ngc : $(PROJ).xst $(PROJ).prj $(Vs_common) $(VHDs_common) $(VHDs_synth)
 	( source $(XILINX_SETTINGS) && xst -ifn $(PROJ).xst )
 
 
