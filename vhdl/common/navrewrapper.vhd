@@ -15,16 +15,44 @@ entity NavreWrapper is
 end entity NavreWrapper;
 
 architecture Arch of NavreWrapper is
+	constant PMemAddressWidth : natural := 14;
+	constant DMemAddressWidth : natural := 12;
+
+	subtype pmem_address_t is natural range 0 to 2 ** PMemAddressWidth - 1;
+	type program_memory_t is array(0 to pmem_address_t'high) of std_ulogic_vector(15 downto 0);
+	subtype dmem_address_t is natural range 0 to 2 ** DMemAddressWidth - 1;
+	type data_memory_t is array(0 to dmem_address_t'high) of std_ulogic_vector(7 downto 0);
+
+	-- If a read-only RAM contains all zeroes, XST will delete it before Bitgen has a chance to copy the ELF section into it.
+	-- This function generates a pile of crap to fill the RAM with so that it will NOT contain all zeroes and will not be optimized away.
+	-- This function implements a basic linear congruential random number generator that should spew enough unpredictable bits around that none of the BRAMs are all-zero or all-one.
+	function GenerateFakeRAMContents return program_memory_t is
+		variable Result : program_memory_t;
+		variable Address : natural range program_memory_t'range;
+		variable Temp : natural range 0 to 65535 := 65521;
+	begin
+		for Address in program_memory_t'range loop
+			Result(Address) := std_ulogic_vector(to_unsigned(Temp, 16));
+			Temp := (Temp * 509 + 1021) mod 65536;
+		end loop;
+		return Result;
+	end function GenerateFakeRAMContents;
+
 	signal Reset : std_ulogic;
+
+	signal PMem : program_memory_t := GenerateFakeRAMContents;
 	signal PMemClockEnable : boolean;
-	signal PMemAddress : natural range 0 to 2 ** 12 - 1;
-	signal PMemAddressU : unsigned(11 downto 0);
+	signal PMemAddress : pmem_address_t;
+	signal PMemAddressU : unsigned(PMemAddressWidth - 1 downto 0);
 	signal PMemData : std_ulogic_vector(15 downto 0);
+
+	signal DMem : data_memory_t := (others => X"00");
 	signal DMemWriteEnable : boolean;
-	signal DMemAddress : natural range 0 to 2 ** 12 - 1;
-	signal DMemAddressU : unsigned(11 downto 0);
+	signal DMemAddress : dmem_address_t;
+	signal DMemAddressU : unsigned(DMemAddressWidth - 1 downto 0);
 	signal DMemDI : std_ulogic_vector(7 downto 0);
 	signal DMemDO : std_ulogic_vector(7 downto 0);
+
 	signal IOAddressU : unsigned(5 downto 0);
 
 	component navre
@@ -54,8 +82,8 @@ begin
 	-- Instantiate the CPU
 	NavreInstance : navre
 	generic map(
-		pmem_width => 12,
-		dmem_width => 12)
+		pmem_width => PMemAddressWidth,
+		dmem_width => DMemAddressWidth)
 	port map(
 		clk => Clock,
 		rst => Reset,
@@ -91,32 +119,21 @@ begin
 
 	-- Provide the CPU with access to program memory
 	process(Clock) is
-		type program_memory_lane_t is array(0 to 4095) of std_ulogic_vector(3 downto 0);
-		type program_memory_t is array(3 downto 0) of program_memory_lane_t;
-		variable PMem : program_memory_t := (0 => (others => X"1"), 1 => (others => X"2"), 2 => (others => X"3"), 3 => (others => X"4"));
 	begin
 		if rising_edge(Clock) then
 			if PMemClockEnable then
-				PMemData(15 downto 12) <= PMem(3)(PMemAddress);
-				PMemData(11 downto 8) <= PMem(2)(PMemAddress);
-				PMemData(7 downto 4) <= PMem(1)(PMemAddress);
-				PMemData(3 downto 0) <= PMem(0)(PMemAddress);
+				PMemData <= PMem(PMemAddress);
 			end if;
 		end if;
 	end process;
 
 	-- Provide the CPU with access to data memory
 	process(Clock) is
-		type data_memory_lane_t is array(0 to 4095) of std_ulogic_vector(3 downto 0);
-		type data_memory_t is array(1 downto 0) of data_memory_lane_t;
-		variable DMem : data_memory_t;
 	begin
 		if rising_edge(Clock) then
-			DMemDI(7 downto 4) <= DMem(1)(DMemAddress);
-			DMemDI(3 downto 0) <= DMem(0)(DMemAddress);
+			DMemDI <= DMem(DMemAddress);
 			if DMemWriteEnable then
-				DMem(1)(DMemAddress) := DMemDO(7 downto 4);
-				DMem(0)(DMemAddress) := DMemDO(3 downto 0);
+				DMem(DMemAddress) <= DMemDO;
 			end if;
 		end if;
 	end process;

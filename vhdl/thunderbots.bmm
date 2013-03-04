@@ -1,15 +1,27 @@
-ADDRESS_SPACE PMem RAMB16 [0x000000:0x001FFF]
+ADDRESS_SPACE PMem RAMB16 [0x000000:0x007FFF]
 	BUS_BLOCK
-		WrapperInstance_Mram_PMem_1 [7:4];
-		WrapperInstance_Mram_PMem_0 [3:0];
-		WrapperInstance_Mram_PMem_3 [15:12];
-		WrapperInstance_Mram_PMem_2 [11:8];
+		WrapperInstance_Mram_PMem8  [7 :7];
+		WrapperInstance_Mram_PMem7  [6 :6];
+		WrapperInstance_Mram_PMem6  [5 :5];
+		WrapperInstance_Mram_PMem5  [4 :4];
+		WrapperInstance_Mram_PMem4  [3 :3];
+		WrapperInstance_Mram_PMem3  [2 :2];
+		WrapperInstance_Mram_PMem2  [1 :1];
+		WrapperInstance_Mram_PMem1  [0 :0];
+		WrapperInstance_Mram_PMem16 [15:15];
+		WrapperInstance_Mram_PMem15 [14:14];
+		WrapperInstance_Mram_PMem14 [13:13];
+		WrapperInstance_Mram_PMem13 [12:12];
+		WrapperInstance_Mram_PMem12 [11:11];
+		WrapperInstance_Mram_PMem11 [10:10];
+		WrapperInstance_Mram_PMem10 [9 :9];
+		WrapperInstance_Mram_PMem9  [8 :8];
 	END_BUS_BLOCK;
 END_ADDRESS_SPACE;
 
 ADDRESS_SPACE DMem RAMB16 [0x800000:0x800FFF]
 	BUS_BLOCK
-		WrapperInstance/Mram_DMem_1 [7:4];
-		WrapperInstance/Mram_DMem_0 [3:0];
+		WrapperInstance/Mram_DMem2 [7:4];
+		WrapperInstance/Mram_DMem1 [3:0];
 	END_BUS_BLOCK;
 END_ADDRESS_SPACE;
