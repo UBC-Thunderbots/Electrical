@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 28 Feb 2013 06:45:47 PM PST
+EESchema Schematic File Version 2  date Sat 09 Mar 2013 03:28:06 PM PST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "1 mar 2013"
+Date "9 mar 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -225,7 +225,7 @@ U 1 1 509574B0
 P 1350 4150
 F 0 "P1" V 1320 4150 60  0000 C CNN
 F 1 "CONN_7" V 1420 4150 60  0000 C CNN
-F 4 "WM7625CT-ND" V 1350 4150 60  0001 C CNN "Digi-Key Part"
+F 4 "WM7610CT-ND" V 1350 4150 60  0001 C CNN "Digi-Key Part"
 	1    1350 4150
 	-1   0    0    1   
 $EndComp
