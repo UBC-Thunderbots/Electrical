@@ -8,7 +8,7 @@ entity Motor is
 		PWMMax : positive;
 		PWMPhase : natural);
 	port(
-		Clocks : in clocks_t;
+		Clock : in std_ulogic;
 		Mode : in motor_mode_t;
 		Power : in natural range 0 to PWMMax;
 		Hall : in hall_t;
@@ -37,14 +37,14 @@ begin
 		Max => PWMMax,
 		Phase => PWMPhase)
 	port map(
-		Clock => Clocks.Clock8MHz,
+		Clock => Clock,
 		Value => Power,
 		Output => PWMOutput);
 
 	GeneratePhases: for I in 0 to 2 generate
-		process(Clocks.Clock8MHz) is
+		process(Clock) is
 		begin
-			if rising_edge(Clocks.Clock8MHz) then
+			if rising_edge(Clock) then
 				case Mode is
 					when FLOAT =>
 						Phases(I) <= FLOAT;

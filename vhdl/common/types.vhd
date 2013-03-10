@@ -34,6 +34,99 @@ package types is
 	subtype motor_power_t is natural range 0 to 2 ** 8 - 1;
 	type motors_power_t is array(0 to 4) of motor_power_t;
 
+	type cpu_inputs_t is record
+		-- System timer tick count
+		Ticks : natural range 0 to 255;
+
+		-- Hall sensor failure detection
+		HallsStuckHigh : halls_stuck_t;
+		HallsStuckLow : halls_stuck_t;
+
+		-- Optical encoder counts
+		EncodersCount : encoders_count_t;
+
+		-- ADC readings
+		MCP3004Levels : mcp3004s_t;
+
+		-- Chicker status
+		ChargeDone : boolean;
+		ChargeTimeout : boolean;
+		KickActive : boolean;
+		ChipActive : boolean;
+
+		-- SPI Flash status
+		FlashBusy : boolean;
+		FlashDataRead : std_ulogic_vector(7 downto 0);
+
+		-- MRF status
+		MRFInterrupt : std_ulogic;
+		MRFBusy : boolean;
+		MRFDataRead : std_ulogic_vector(7 downto 0);
+
+		-- Device ID
+		DeviceID : std_ulogic_vector(55 downto 0);
+		DeviceIDReady : boolean;
+
+		-- LFSR output
+		LFSRBit : std_ulogic;
+
+		-- Debug port status
+		DebugBusy : boolean;
+
+		-- Internal configuration access port status
+		ICAPBusy : boolean;
+	end record;
+
+	type cpu_outputs_t is record
+		-- LED control
+		RadioLED : boolean;
+		TestLEDsSoftware : boolean;
+		TestLEDsValue : std_ulogic_vector(4 downto 0);
+
+		-- Power control
+		PowerLaser : boolean;
+		PowerMotors : boolean;
+		PowerLogic : boolean;
+
+		-- Motor control
+		MotorsMode : motors_mode_t;
+		MotorsPower : motors_power_t;
+
+		-- Chicker control
+		Charge : boolean;
+		Discharge : boolean;
+		KickPeriod : natural range 0 to 65535;
+		StartKick : boolean;
+		StartChip : boolean;
+
+		-- SPI Flash control
+		FlashCS : std_ulogic;
+		FlashDataWrite : std_ulogic_vector(7 downto 0);
+		FlashStrobe : boolean;
+
+		-- MRF control
+		MRFReset : std_ulogic;
+		MRFWake : std_ulogic;
+		MRFCS : std_ulogic;
+		MRFDataWrite : std_ulogic_vector(7 downto 0);
+		MRFStrobe : boolean;
+
+		-- Lateral position sensor control
+		LPSDrives : std_ulogic_vector(3 downto 0);
+
+		-- LFSR control
+		LFSRTick : boolean;
+
+		-- Debug port control
+		DebugEnabled : boolean;
+		DebugData : std_ulogic_vector(7 downto 0);
+		DebugStrobe : boolean;
+
+		-- Internal configuration access port control
+		ICAPData : std_ulogic_vector(15 downto 0);
+		ICAPStrobe : boolean;
+	end record;
+
 	function to_boolean(X : std_ulogic) return boolean;
 
 	function to_stdulogic(X : boolean) return std_ulogic;
