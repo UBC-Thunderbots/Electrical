@@ -252,7 +252,7 @@ always @(posedge clk) begin
 		case(pc_sel)
 			PC_SEL_NOP:;
 			PC_SEL_INC: PC <= PC + 1;
-			PC_SEL_K: PC <= pmem_d[pmem_width-1:0] - 1; 
+			PC_SEL_K: PC <= pmem_d - 1; 
 			PC_SEL_KL: 
 				if(pmem_width>12) begin
 					PC <= PC + {{pmem_width-12{Kl[11]}}, Kl};
