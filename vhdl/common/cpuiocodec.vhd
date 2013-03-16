@@ -24,8 +24,7 @@ architecture Arch of CPUIOCodec is
 		PowerLaser => false,
 		PowerMotors => false,
 		PowerLogic => true,
-		MotorsMode => (others => FLOAT),
-		MotorsPower => (others => 0),
+		MotorsControl => (others => (Phases => (others => FLOAT), AutoCommutate => false, Direction => false, Power => 0)),
 		Charge => false,
 		Discharge => false,
 		KickPeriod => 0,
@@ -50,6 +49,8 @@ architecture Arch of CPUIOCodec is
 	signal RadioLEDLevel : boolean := false;
 	signal RadioLEDBlinkX : boolean := false;
 	signal RadioLEDBlinkY : boolean := false;
+
+	signal MotorIndex : natural range 0 to 4 := 0;
 
 	signal HallsStuckHighLatch : halls_stuck_t := (others => false);
 	signal HallsStuckHighClear : halls_stuck_t := (others => false);
@@ -108,74 +109,55 @@ begin
 				when 16#02# => -- TICKS
 					DIBuffer := std_ulogic_vector(to_unsigned(Inputs.Ticks, 8));
 
-				when 16#03# => -- WHEEL_CTL
-					for Index in 0 to 3 loop
-						case OBuf.MotorsMode(Index) is
-							when FLOAT => DIBuffer(Index * 2 + 1 downto Index * 2) := "00";
-							when BRAKE => DIBuffer(Index * 2 + 1 downto Index * 2) := "01";
-							when FORWARD => DIBuffer(Index * 2 + 1 downto Index * 2) := "10";
-							when REVERSE => DIBuffer(Index * 2 + 1 downto Index * 2) := "11";
+				when 16#03# => -- MOTOR_INDEX
+					DIBuffer := std_ulogic_vector(to_unsigned(MotorIndex, 8));
+					if WriteEnable then
+						if to_integer(unsigned(DO)) <= 4 then
+							MotorIndex <= to_integer(unsigned(DO));
+						end if;
+					end if;
+
+				when 16#04# => -- MOTOR_CTL
+					for Index in 0 to 2 loop
+						case OBuf.MotorsControl(MotorIndex).Phases(Index) is
+							when FLOAT => DIBuffer(Index * 2 + 3 downto Index * 2 + 2) := "00";
+							when PWM => DIBuffer(Index * 2 + 3 downto Index * 2 + 2) := "01";
+							when LOW => DIBuffer(Index * 2 + 3 downto Index * 2 + 2) := "10";
+							when HIGH => DIBuffer(Index * 2 + 3 downto Index * 2 + 2) := "11";
 						end case;
 					end loop;
+					DIBuffer(1) := to_stdulogic(OBuf.MotorsControl(MotorIndex).AutoCommutate);
+					DIBuffer(0) := to_stdulogic(OBuf.MotorsControl(MotorIndex).Direction);
 					if WriteEnable then
-						for Index in 0 to 3 loop
-							case DO(Index * 2 + 1 downto Index * 2) is
-								when "00" => OBuf.MotorsMode(Index) <= FLOAT;
-								when "01" => OBuf.MotorsMode(Index) <= BRAKE;
-								when "10" => OBuf.MotorsMode(Index) <= FORWARD;
-								when "11" => OBuf.MotorsMode(Index) <= REVERSE;
-								when others => null;
+						for Index in 0 to 2 loop
+							case DO(Index * 2 + 3 downto Index * 2 + 2) is
+								when "00" => OBuf.MotorsControl(MotorIndex).Phases(Index) <= FLOAT;
+								when "01" => OBuf.MotorsControl(MotorIndex).Phases(Index) <= PWM;
+								when "10" => OBuf.MotorsControl(MotorIndex).Phases(Index) <= LOW;
+								when "11" => OBuf.MotorsControl(MotorIndex).Phases(Index) <= HIGH;
+								when others => OBuf.MotorsControl(MotorIndex).Phases(Index) <= FLOAT;
 							end case;
 						end loop;
+						OBuf.MotorsControl(MotorIndex).AutoCommutate <= to_boolean(DO(1));
+						OBuf.MotorsControl(MotorIndex).Direction <= to_boolean(DO(0));
 					end if;
 
-				when 16#04# => -- WHEEL_HALL_FAIL
-					for Index in 0 to 3 loop
-						DIBuffer(Index) := to_stdulogic(HallsStuckLowLatch(Index));
-						DIBuffer(Index + 4) := to_stdulogic(HallsStuckHighLatch(Index));
-					end loop;
+				when 16#05# => -- MOTOR_STATUS
+					DIBuffer(1) := to_stdulogic(HallsStuckHighLatch(MotorIndex));
+					DIBuffer(0) := to_stdulogic(HallsStuckLowLatch(MotorIndex));
 					if WriteEnable then
-						for Index in 0 to 3 loop
-							HallsStuckLowClear(Index) <= to_boolean(DO(Index));
-							HallsStuckHighClear(Index) <= to_boolean(DO(Index + 4));
-						end loop;
+						if DO(1) = '1' then
+							HallsStuckHighClear(MotorIndex) <= true;
+						end if;
+						if DO(0) = '1' then
+							HallsStuckLowClear(MotorIndex) <= true;
+						end if;
 					end if;
 
-				when 16#05# to 16#08# => -- WHEEL0_PWM … WHEEL3_PWM
-					DIBuffer := std_ulogic_vector(to_unsigned(OBuf.MotorsPower(IOAddress - 16#05#), 8));
+				when 16#06# => -- MOTOR_PWM
+					DIBuffer := std_ulogic_vector(to_unsigned(OBuf.MotorsControl(MotorIndex).Power, 8));
 					if WriteEnable then
-						OBuf.MotorsPower(IOAddress - 16#05#) <= to_integer(unsigned(DO));
-					end if;
-
-				when 16#09# => -- DRIBBLER_CTL
-					DIBuffer(7 downto 2) := "000000";
-					case OBuf.MotorsMode(4) is
-						when FLOAT => DIBuffer(1 downto 0) := "00";
-						when BRAKE => DIBuffer(1 downto 0) := "01";
-						when FORWARD => DIBuffer(1 downto 0) := "10";
-						when REVERSE => DIBuffer(1 downto 0) := "11";
-					end case;
-					if WriteEnable then
-						case DO(1 downto 0) is
-							when "00" => OBuf.MotorsMode(4) <= FLOAT;
-							when "01" => OBuf.MotorsMode(4) <= BRAKE;
-							when "10" => OBuf.MotorsMode(4) <= FORWARD;
-							when "11" => OBuf.MotorsMode(4) <= REVERSE;
-							when others => null;
-						end case;
-					end if;
-
-				when 16#0A# => -- DRIBBLER_HALL_FAIL
-					DIBuffer := "000000" & to_stdulogic(HallsStuckHighLatch(4)) & to_stdulogic(HallsStuckLowLatch(4));
-					if WriteEnable then
-						HallsStuckHighClear(4) <= to_boolean(DO(1));
-						HallsStuckLowClear(4) <= to_boolean(DO(0));
-					end if;
-
-				when 16#0B# => -- DRIBBLER_PWM
-					DIBuffer := std_ulogic_vector(to_unsigned(OBuf.MotorsPower(4), 8));
-					if WriteEnable then
-						OBuf.MotorsPower(4) <= to_integer(unsigned(DO));
+						OBuf.MotorsControl(MotorIndex).Power <= to_integer(unsigned(DO));
 					end if;
 
 				when 16#0C# => -- ENCODER_LSB
@@ -314,6 +296,17 @@ begin
 				when others =>
 					DIBuffer := "--------";
 			end case;
+
+			if not Inputs.InterlockOverride then
+				-- If interlocks are not overridden, the only direct phase control options legal are all low or all float.
+				for I in 0 to 4 loop
+					if OBuf.MotorsControl(I).Phases /= (FLOAT, FLOAT, FLOAT) and OBuf.MotorsControl(I).Phases /= (LOW, LOW, LOW) then
+						OBuf.MotorsControl(I).Phases(0) <= FLOAT;
+						OBuf.MotorsControl(I).Phases(1) <= FLOAT;
+						OBuf.MotorsControl(I).Phases(2) <= FLOAT;
+					end if;
+				end loop;
+			end if;
 
 			if ReadEnable then
 				DI <= DIBuffer;

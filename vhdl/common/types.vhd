@@ -24,19 +24,27 @@ package types is
 
 	type halls_stuck_t is array(0 to 4) of boolean;
 
-	type motor_mode_t is (FLOAT, BRAKE, FORWARD, REVERSE);
-	type motors_mode_t is array(4 downto 0) of motor_mode_t;
+	type motor_control_phase_t is (FLOAT, PWM, LOW, HIGH);
+	type motor_control_phases_t is array(0 to 2) of motor_control_phase_t;
+	subtype motor_control_power_t is natural range 0 to 2 ** 8 - 1;
+	type motor_control_t is record
+		Phases : motor_control_phases_t;
+		AutoCommutate : boolean;
+		Direction : boolean;
+		Power : motor_control_power_t;
+	end record;
+	type motors_control_t is array(0 to 4) of motor_control_t;
 
-	type motor_phase_t is (FLOAT, LOW, HIGH);
-	type motor_phases_t is array(0 to 2) of motor_phase_t;
-	type motors_phases_t is array(0 to 4) of motor_phases_t;
-
-	subtype motor_power_t is natural range 0 to 2 ** 8 - 1;
-	type motors_power_t is array(0 to 4) of motor_power_t;
+	type motor_drive_phase_t is (FLOAT, LOW, HIGH);
+	type motor_drive_phases_t is array(0 to 2) of motor_drive_phase_t;
+	type motors_drive_phases_t is array(0 to 4) of motor_drive_phases_t;
 
 	type cpu_inputs_t is record
 		-- System timer tick count
 		Ticks : natural range 0 to 255;
+
+		-- Whether interlocks are overridden
+		InterlockOverride : boolean;
 
 		-- Hall sensor failure detection
 		HallsStuckHigh : halls_stuck_t;
@@ -89,8 +97,7 @@ package types is
 		PowerLogic : boolean;
 
 		-- Motor control
-		MotorsMode : motors_mode_t;
-		MotorsPower : motors_power_t;
+		MotorsControl : motors_control_t;
 
 		-- Chicker control
 		Charge : boolean;

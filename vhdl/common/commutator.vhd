@@ -8,7 +8,7 @@ entity Commutator is
 		Hall : in hall_t;
 		HallStuckHigh : out boolean;
 		HallStuckLow : out boolean;
-		Phase : out motor_phases_t);
+		Phase : out motor_control_phases_t);
 end entity Commutator;
 
 architecture Arch of Commutator is
@@ -34,7 +34,7 @@ begin
 		Phase(I) <=
 			FLOAT when (HallStuckHighInternal or HallStuckLowInternal) else
 			LOW when NPhase(I) else
-			HIGH when PPhase(I) else
+			PWM when PPhase(I) else
 			FLOAT;
 	end generate;
 end architecture Arch;

@@ -9,61 +9,57 @@ entity Motor is
 		PWMPhase : natural);
 	port(
 		Clock : in std_ulogic;
-		Mode : in motor_mode_t;
-		Power : in natural range 0 to PWMMax;
+		Control : in motor_control_t;
 		Hall : in hall_t;
 		HallStuckHigh : out boolean;
 		HallStuckLow : out boolean;
-		Phases : out motor_phases_t);
+		Drive : out motor_drive_phases_t);
 end entity Motor;
 
 architecture Arch of Motor is
-	signal Direction : boolean;
-	signal CommutatorPhases : motor_phases_t;
+	signal CommutatorPhases : motor_control_phases_t;
 	signal PWMOutput : boolean;
 begin
-	Direction <= Mode = REVERSE;
-
 	Commutator: entity work.Commutator(Arch)
 	port map(
-		Direction => Direction,
+		Direction => Control.Direction,
 		Hall => Hall,
 		HallStuckHigh => HallStuckHigh,
 		HallStuckLow => HallStuckLow,
 		Phase => CommutatorPhases);
 
-	PWM: entity work.PWM(Arch)
+	PWMGenerator: entity work.PWM(Arch)
 	generic map(
 		Max => PWMMax,
 		Phase => PWMPhase)
 	port map(
 		Clock => Clock,
-		Value => Power,
+		Value => Control.Power,
 		Output => PWMOutput);
 
-	GeneratePhases: for I in 0 to 2 generate
-		process(Clock) is
-		begin
-			if rising_edge(Clock) then
-				case Mode is
-					when FLOAT =>
-						Phases(I) <= FLOAT;
-
-					when BRAKE =>
-						Phases(I) <= LOW;
-
-					when FORWARD | REVERSE =>
-						if CommutatorPhases(I) = HIGH then
-							if PWMOutput then
-								Phases(I) <= HIGH;
-							else
-								Phases(I) <= LOW;
-							end if;
-						else
-							Phases(I) <= CommutatorPhases(I);
-						end if;
-				end case;
+	process(Clock) is
+		variable ControlPhase : motor_control_phase_t;
+		variable PWMPhase : motor_drive_phase_t;
+	begin
+		if rising_edge(Clock) then
+			if PWMOutput then
+				PWMPhase := HIGH;
+			else
+				PWMPhase := LOW;
 			end if;
-		end process;
-	end generate;
+			for I in 0 to 2 loop
+				if Control.AutoCommutate then
+					ControlPhase := CommutatorPhases(I);
+				else
+					ControlPhase := Control.Phases(I);
+				end if;
+				case ControlPhase is
+					when FLOAT => Drive(I) <= FLOAT;
+					when PWM => Drive(I) <= PWMPhase;
+					when LOW => Drive(I) <= LOW;
+					when HIGH => Drive(I) <= HIGH;
+				end case;
+			end loop;
+		end if;
+	end process;
 end architecture Arch;

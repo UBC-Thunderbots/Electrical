@@ -74,7 +74,7 @@ architecture Main of Top is
 
 	signal Halls : halls_t := (others => (others => false));
 
-	signal MotorsPhases : motors_phases_t := (others => (others => FLOAT));
+	signal MotorsDrive : motors_drive_phases_t := (others => (others => FLOAT));
 
 	signal Encoders : encoders_t := (others => (others => false));
 	signal EncodersCount : encoders_count_t := (others => 0);
@@ -106,6 +106,7 @@ begin
 		Outputs => CPUOutputs);
 
 	CPUInputs.Ticks <= FiveMilliTicks;
+	CPUInputs.InterlockOverride <= InterlockOverridePin = '1';
 
 	process(CPUOutputs.TestLEDsSoftware, CPUOutputs.TestLEDsValue, Halls, Encoders) is
 	begin
@@ -169,16 +170,15 @@ begin
 			PWMPhase => Index * 51)
 		port map(
 			Clock => Clocks.Clock8MHz,
-			Mode => CPUOutputs.MotorsMode(Index),
-			Power => CPUOutputs.MotorsPower(Index),
+			Control => CPUOutputs.MotorsControl(Index),
 			Hall => Halls(Index),
 			HallStuckHigh => CPUInputs.HallsStuckHigh(Index),
 			HallStuckLow => CPUInputs.HallsStuckLow(Index),
-			Phases => MotorsPhases(Index));
+			Drive => MotorsDrive(Index));
 
 		Phases : for Phase in 0 to 2 generate
-			MotorsPhasesEPin(Index)(Phase) <= '1' when MotorsPhases(Index)(Phase) /= FLOAT else '0';
-			MotorsPhasesLPin(Index)(Phase) <= '1' when MotorsPhases(Index)(Phase) = HIGH else '0';
+			MotorsPhasesEPin(Index)(Phase) <= '1' when MotorsDrive(Index)(Phase) /= FLOAT else '0';
+			MotorsPhasesLPin(Index)(Phase) <= '1' when MotorsDrive(Index)(Phase) = HIGH else '0';
 		end generate;
 	end generate;
 
