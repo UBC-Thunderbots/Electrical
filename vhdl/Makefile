@@ -110,7 +110,7 @@ map : $(PROJ)_map.ncd
 $(PROJ).mcs : $(PROJ).bit
 	( source $(XILINX_SETTINGS) && promgen -spi -u 0 $(PROJ).bit -p mcs -s 2048 -w )
 
-# We can make a BIT file from a routed NCD file using Xilinx BITGEN.
+# We can make a BIT file from a routed NCD file and an ELF file to initialize block RAMs using Xilinx BITGEN.
 # Options
 #  -bd ../firmware/main/main.elf
 #    Loads the firmware from the ELF file into the block RAMs.
@@ -170,7 +170,7 @@ $(PROJ)_map.ncd : $(PROJ).ngd
 $(PROJ).ngd : $(PROJ).ngc $(PROJ).ucf $(PROJ).bmm
 	( source $(XILINX_SETTINGS) && ngdbuild -bm $(PROJ).bmm $(PROJ).ngc )
 
-# We can make an NCD file from an XST file, a PRJ file, and a bunch of VHD files
+# We can make an NGC file from an XST file, a PRJ file, and a bunch of VHD files
 # using Xilinx XST.
 $(PROJ).ngc : $(PROJ).xst $(PROJ).prj $(Vs_common) $(VHDs_common) $(VHDs_synth)
 	( source $(XILINX_SETTINGS) && xst -ifn $(PROJ).xst )
