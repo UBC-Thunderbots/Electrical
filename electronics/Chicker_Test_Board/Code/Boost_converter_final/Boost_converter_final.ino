@@ -10,7 +10,7 @@ const int PCAPACITOR = A1;
 const int PBUTTON = 13;//charge button
 const int PESTOP = 11;    
 const int PKICK = 8; //assuming that active low discharges cap
-const int PCHIP = 9;
+const int PCHIP = 9;172
 
 //time variables for charge/discharge of inductor
 float tCharge;
