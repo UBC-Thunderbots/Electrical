@@ -57,7 +57,7 @@ architecture Arch of BoostController is
 	--! Ratio2 MUST be power of 2, Ratio1 SHOULD be power of 2 to avoid multiplier
 	
 	--! ratio = 9.108…
-	--! 9+1/1=10 gives ~1% error
+	--! 9+1/8=9.125 gives ~0.1% error
 	constant Ratio1 : natural := 9;
 	constant Ratio2 : natural := 8;
 	
