@@ -289,7 +289,6 @@ vhdl/common/pwm.vhd -text
 vhdl/common/spi.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
-vhdl/sim/deadbandtest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/devicedna.vhd -text
 vhdl/synth/icapwrapper.vhd -text

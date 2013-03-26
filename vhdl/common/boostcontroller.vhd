@@ -1,6 +1,5 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use work.clock.all;
 use work.types.all;
 
 --! Boost converted controller
@@ -56,7 +55,7 @@ architecture Arch of BoostController is
 	--! Ratio1 + 1 / Ratio2 should be MaxCap * BattBits / MaxBatt / CapBits
 	--! Ratio2 MUST be power of 2, Ratio1 SHOULD be power of 2 to avoid multiplier
 	
-	--! ratio = 9.108…
+	--! ratio = 9.108
 	--! 9+1/8=9.125 gives ~0.1% error
 	constant Ratio1 : natural := 9;
 	constant Ratio2 : natural := 8;
