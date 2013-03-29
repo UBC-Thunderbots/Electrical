@@ -132,6 +132,9 @@ package types is
 		-- Internal configuration access port control
 		ICAPData : std_ulogic_vector(15 downto 0);
 		ICAPStrobe : boolean;
+
+		-- For simulation only, a random magic value
+		SimMagic : std_ulogic_vector(7 downto 0);
 	end record;
 
 	function to_boolean(X : std_ulogic) return boolean;

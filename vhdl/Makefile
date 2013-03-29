@@ -5,7 +5,7 @@ PROJ := thunderbots
 override SHELL := /bin/bash
 
 # The names of all the top-level test targets.
-SIM_TARGETS := boostcontrollertest
+SIM_TARGETS := boostcontrollertest pavrtest
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -31,17 +31,25 @@ ghdl/obj/asyncserialtransmitter.o :
 ghdl/obj/boostcontroller.o : ghdl/obj/types.o
 ghdl/obj/clock.o :
 ghdl/obj/commutator.o : ghdl/obj/types.o
-ghdl/obj/cpuiocodec.o : ghdl/obj/clock.o ghdl/obj/navrewrapper.o ghdl/obj/types.o
+ghdl/obj/cpuiocodec.o : ghdl/obj/clock.o ghdl/obj/pavr_control.o ghdl/obj/types.o
 ghdl/obj/downclock.o :
 ghdl/obj/graycounter.o : ghdl/obj/types.o
 ghdl/obj/mcp3004.o : ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/pwm.o ghdl/obj/types.o
-ghdl/obj/navrewrapper.o : ghdl/obj/navre.o ghdl/obj/types.o
 ghdl/obj/pwm.o :
 ghdl/obj/spi.o : ghdl/obj/types.o
 ghdl/obj/types.o :
+ghdl/obj/pavr_alu.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
+ghdl/obj/pavr_constants.o : ghdl/obj/pavr_util.o ghdl/obj/std_util.o
+ghdl/obj/pavr_control.o : ghdl/obj/pavr_alu.o ghdl/obj/pavr_constants.o ghdl/obj/pavr_data_mem.o ghdl/obj/pavr_io_file.o ghdl/obj/pavr_register_file.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o ghdl/obj/types.o
+ghdl/obj/pavr_data_mem.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
+ghdl/obj/pavr_io_file.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o ghdl/obj/types.o
+ghdl/obj/pavr_register_file.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
+ghdl/obj/pavr_util.o : ghdl/obj/std_util.o
+ghdl/obj/std_util.o :
 
 ghdl/obj/boostcontrollertest.o : ghdl/obj/boostcontroller.o ghdl/obj/clock.o ghdl/obj/types.o
+ghdl/obj/pavrtest.o : ghdl/obj/pavr_control.o
 
 
 
@@ -142,7 +150,7 @@ $(PROJ).bit : $(PROJ).ncd ../firmware/main/main.elf
 
 # The ELF file depends on all its source and header files and the Makefile and linker script.
 # It can be rebuilt by recursively making in the firmware/main directory.
-../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h) ../firmware/main/Makefile ../firmware/main/navre.ld
+../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h) ../firmware/main/Makefile ../firmware/main/pavr.ld
 	$(MAKE) -C ../firmware/main
 
 # We can make a routed NCD file from an unrouted NCD file using Xilinx PAR.
@@ -194,13 +202,13 @@ define sim_target_template
 # Target to run this simulation target.
 test-$(1) : ghdl/bin/$(1)
 	@mkdir -p ghdl/bin
-	ghdl/bin/$(1)
+	ghdl/bin/$(1) --stack-size=16777216 --ieee-asserts=disable
 .PHONY : test-$(1)
 
 # Target to elaborate the final executable.
 ghdl/bin/$(1) : ghdl/obj/$(1).o
 	@mkdir -p ghdl/bin
-	cd ghdl/bin && ghdl -e --workdir=../obj $(1)
+	cd ghdl/bin && ghdl -e --ieee=synopsys --workdir=../obj $(1)
 
 endef
 
@@ -212,7 +220,7 @@ define sim_analyze_template
 
 $(patsubst %.vhd,ghdl/obj/%.o,$(notdir $(1))) : $(1)
 	@mkdir -p ghdl/obj
-	ghdl -a --std=93 --workdir=ghdl/obj $(1)
+	ghdl -a --std=93c --ieee=synopsys --workdir=ghdl/obj $(1)
 
 endef
 
