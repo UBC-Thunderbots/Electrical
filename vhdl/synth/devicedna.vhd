@@ -13,9 +13,6 @@ end entity;
 
 architecture Arch of DeviceDNA is
 	signal Clock1MHz : std_ulogic := '0';
-	signal Reset : boolean := true;
-	type state_t is (LOAD, SHIFT);
-	signal State : state_t := LOAD;
 	signal Shifter : std_ulogic_vector(56 downto 0) := (others => '0');
 	signal DataOut : std_ulogic;
 	signal Read : std_ulogic := '1';
@@ -35,29 +32,25 @@ begin
 		end if;
 	end process;
 
-	-- Assert synchronous reset for 16 clock cycles after startup, then release.
 	process(Clock1MHz) is
+		type state_t is (RESET, LOAD, SHIFT);
+		variable State : state_t := RESET;
 		variable ResetShifter : std_ulogic_vector(15 downto 0) := X"FFFF";
 	begin
 		if rising_edge(Clock1MHz) then
-			ResetShifter := '0' & ResetShifter(15 downto 1);
-		end if;
-		Reset <= ResetShifter(0) = '1';
-	end process;
-
-	process(Clock1MHz) is
-	begin
-		if rising_edge(Clock1MHz) then
-			if Reset then
-				State <= LOAD;
+			if ResetShifter(0) = '1' then
+				State := RESET;
 				Shifter <= (others => '0');
+				Read <= '0';
+				ResetShifter := '0' & ResetShifter(15 downto 1);
+			elsif State = RESET then
+				State := LOAD;
 				Read <= '1';
-			else
-				if Read = '1' then
-					Read <= '0';
-				elsif Shifter(56) /= '1' then
-					Shifter <= Shifter(55 downto 0) & DataOut;
-				end if;
+			elsif State = LOAD then
+				State := SHIFT;
+				Read <= '0';
+			elsif Shifter(56) /= '1' then
+				Shifter <= Shifter(55 downto 0) & DataOut;
 			end if;
 		end if;
 	end process;
