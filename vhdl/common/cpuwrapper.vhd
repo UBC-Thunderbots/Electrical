@@ -4,14 +4,14 @@ use ieee.numeric_std.all;
 use work.clock.all;
 use work.types.all;
 
-entity CPUIOCodec is
+entity CPUWrapper is
 	port(
 		Clocks : in work.clock.clocks_t;
 		Inputs : in work.types.cpu_inputs_t;
 		Outputs : out work.types.cpu_outputs_t);
-end entity CPUIOCodec;
+end entity CPUWrapper;
 
-architecture Arch of CPUIOCodec is
+architecture Arch of CPUWrapper is
 	constant PMemAddressWidth : natural := 14;
 
 	subtype pmem_address_t is natural range 0 to 2 ** PMemAddressWidth - 1;

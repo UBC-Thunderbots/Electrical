@@ -31,7 +31,7 @@ ghdl/obj/asyncserialtransmitter.o :
 ghdl/obj/boostcontroller.o : ghdl/obj/types.o
 ghdl/obj/clock.o :
 ghdl/obj/commutator.o : ghdl/obj/types.o
-ghdl/obj/cpuiocodec.o : ghdl/obj/clock.o ghdl/obj/pavr_control.o ghdl/obj/types.o
+ghdl/obj/cpuwrapper.o : ghdl/obj/clock.o ghdl/obj/pavr_control.o ghdl/obj/types.o
 ghdl/obj/downclock.o :
 ghdl/obj/graycounter.o : ghdl/obj/types.o
 ghdl/obj/mcp3004.o : ghdl/obj/clock.o ghdl/obj/types.o

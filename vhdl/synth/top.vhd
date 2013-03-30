@@ -99,7 +99,7 @@ begin
 		Oscillator => OscillatorPin,
 		Clocks => Clocks);
 
-	CPU : entity work.CPUIOCodec(Arch)
+	CPU : entity work.CPUWrapper(Arch)
 	port map(
 		Clocks => Clocks,
 		Inputs => CPUInputs,
