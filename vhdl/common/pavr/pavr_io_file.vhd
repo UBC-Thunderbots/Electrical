@@ -161,7 +161,7 @@ architecture pavr_iof_arch of pavr_iof is
 
 	signal EncoderCountLatch : std_ulogic_vector(15 downto 0) := X"0000";
 
-	signal MCP3004Latch : std_ulogic_vector(9 downto 0);
+	signal MCP3008Latch : std_ulogic_vector(9 downto 0);
 
 	-- Temporary stuff
 	signal TempDI : std_ulogic_vector(7 downto 0);
@@ -212,7 +212,7 @@ begin
 			HallsStuckHighClear <= (others => true);
 			HallsStuckLowClear <= (others => true);
 			EncoderCountLatch <= X"0000";
-			MCP3004Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
+			MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
 		elsif rising_edge(pavr_iof_clk) then
 			pavr_iof_bitout <= '0';
 			pavr_int_rq  <= '0';
@@ -268,9 +268,9 @@ begin
 						when IO_REG_ENCODER_FAIL =>
 							TempDO := "00000000";
 						when IO_REG_ADC_LSB =>
-							TempDO := MCP3004Latch(7 downto 0);
+							TempDO := MCP3008Latch(7 downto 0);
 						when IO_REG_ADC_MSB =>
-							TempDO := "000000" & MCP3004Latch(9 downto 8);
+							TempDO := "000000" & MCP3008Latch(9 downto 8);
 						when IO_REG_CHICKER_CTL =>
 							TempDO := "00" & to_stdulogic(OBuf.Discharge) & to_stdulogic(Inputs.ChargeDone) & to_stdulogic(Inputs.ChargeTimeout) & to_stdulogic(Inputs.ChipActive) & to_stdulogic(Inputs.KickActive) & to_stdulogic(OBuf.Charge);
 						when IO_REG_CHICKER_PULSE_LSB =>
@@ -384,7 +384,7 @@ begin
 						when IO_REG_ENCODER_MSB =>
 						when IO_REG_ENCODER_FAIL =>
 						when IO_REG_ADC_LSB =>
-							MCP3004Latch <= std_ulogic_vector(to_unsigned(Inputs.MCP3004Levels(to_integer(unsigned(TempDI))), 10));
+							MCP3008Latch <= std_ulogic_vector(to_unsigned(Inputs.MCP3008Levels(to_integer(unsigned(TempDI))), 10));
 						when IO_REG_ADC_MSB =>
 						when IO_REG_CHICKER_CTL =>
 							OBuf.Discharge <= to_boolean(TempDI(5));
@@ -530,7 +530,7 @@ begin
 				HallsStuckHighClear <= (others => true);
 				HallsStuckLowClear <= (others => true);
 				EncoderCountLatch <= X"0000";
-				MCP3004Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
+				MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
 			end if;
 		end if;
 	end process;

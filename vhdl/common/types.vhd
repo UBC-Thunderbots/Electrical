@@ -6,8 +6,8 @@ package types is
 
 	subtype capacitor_voltage_t is natural range 0 to 2 ** 10 - 1;
 
-	subtype mcp3004_t is natural range 0 to 2 ** 10 - 1;
-	type mcp3004s_t is array(0 to 3) of mcp3004_t;
+	subtype mcp3008_t is natural range 0 to 2 ** 10 - 1;
+	type mcp3008s_t is array(0 to 7) of mcp3008_t;
 
 	type encoder_t is array(0 to 1) of boolean;
 	type encoders_t is array(0 to 3) of encoder_t;
@@ -54,7 +54,7 @@ package types is
 		EncodersCount : encoders_count_t;
 
 		-- ADC readings
-		MCP3004Levels : mcp3004s_t;
+		MCP3008Levels : mcp3008s_t;
 
 		-- Chicker status
 		ChargeDone : boolean;

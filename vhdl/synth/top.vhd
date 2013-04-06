@@ -200,16 +200,16 @@ begin
 			Value => EncodersCount(Index));
 	end generate;
 
-	MCP3004 : entity work.MCP3004(Arch)
+	MCP3008 : entity work.MCP3008(Arch)
 	port map(
 		Clocks => Clocks,
 		MOSI => ADCMOSIPin,
 		MISO => ADCMISOPin,
 		CLK => ADCClockPin,
 		CS => ADCCSPin,
-		Levels => CPUInputs.MCP3004Levels);
+		Levels => CPUInputs.MCP3008Levels);
 
-	ChargedLEDPin <= to_stdulogic(CPUInputs.MCP3004Levels(0) > CapacitorDangerousThreshold);
+	ChargedLEDPin <= to_stdulogic(CPUInputs.MCP3008Levels(0) > CapacitorDangerousThreshold);
 
 	StartKickDC : entity work.DownClock(Arch)
 	port map(
@@ -231,8 +231,8 @@ begin
 	port map(
 		Clock => Clocks.Clock4MHz,
 		Enable => CPUOutputs.Charge,
-		CapacitorVoltage => CPUInputs.MCP3004Levels(0),
-		BatteryVoltage => CPUInputs.MCP3004Levels(1),
+		CapacitorVoltage => CPUInputs.MCP3008Levels(0),
+		BatteryVoltage => CPUInputs.MCP3008Levels(1),
 		Charge => ChargePulse,
 		Timeout => CPUInputs.ChargeTimeout,
 		Done => CPUInputs.ChargeDone);
@@ -254,14 +254,14 @@ begin
 			end if;
 		end if;
 	end process;
-	process(Clocks.Clock4MHz, CPUOutputs.Discharge, CPUInputs.MCP3004Levels) is
+	process(Clocks.Clock4MHz, CPUOutputs.Discharge, CPUInputs.MCP3008Levels) is
 		subtype count_t is natural range 0 to 19999;
 		variable Count : count_t := 0;
 	begin
 		if rising_edge(Clocks.Clock4MHz) then
 			Count := (Count + 1) mod (count_t'high + 1);
 		end if;
-		DischargePulse <= (Count < 1200) and CPUOutputs.Discharge and (CPUInputs.MCP3004Levels(0) > CapacitorStopDischargeThreshold);
+		DischargePulse <= (Count < 1200) and CPUOutputs.Discharge and (CPUInputs.MCP3008Levels(0) > CapacitorStopDischargeThreshold);
 	end process;
 	ChickerChipPin <= to_stdulogic(CPUInputs.ChipActive or DischargePulse);
 	ChickerKickPin <= to_stdulogic(CPUInputs.KickActive or DischargePulse);

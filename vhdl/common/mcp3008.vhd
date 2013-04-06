@@ -4,17 +4,19 @@ use ieee.numeric_std.all;
 use work.clock.all;
 use work.types.all;
 
-entity MCP3004 is
+entity MCP3008 is
 	port(
 		Clocks : in clocks_t;
 		MOSI : out std_ulogic := '0';
 		MISO : in std_ulogic;
 		CLK : out std_ulogic := '0';
 		CS : out std_ulogic := '1';
-		Levels : out mcp3004s_t := (others => 0));
-end entity MCP3004;
+		Levels : out mcp3008s_t := (others => 0));
+end entity MCP3008;
 
-architecture Arch of MCP3004 is
+architecture Arch of MCP3008 is
+	type channel_sequence_t is array(natural range <>) of natural;
+	constant ChannelSequence : channel_sequence_t := (0, 1, 5, 6, 7);
 begin
 	process(Clocks.Clock4MHz) is
 		variable Subtick : boolean := false;
@@ -25,13 +27,13 @@ begin
 		variable MISOLatch : std_ulogic := '0';
 		variable DataOut : std_ulogic_vector(4 downto 0);
 		variable DataIn : std_ulogic_vector(9 downto 0);
-		variable Channel : natural range 0 to 3 := 0;
+		variable ChannelSequenceIndex : natural range ChannelSequence'range := 0;
 	begin
 		if rising_edge(Clocks.Clock4MHz) then
 			if Subtick then
 				if not CSInternal then
 					CSInternal := true;
-					DataOut := "110" & std_ulogic_vector(to_unsigned(Channel, 2));
+					DataOut := "11" & std_ulogic_vector(to_unsigned(ChannelSequence(ChannelSequenceIndex), 3));
 				elsif not CLKInternal then
 					CLKInternal := true;
 					MISOLatch := MISO;
@@ -42,8 +44,8 @@ begin
 					if BitCount = bit_count_t'high then
 						BitCount := 0;
 						CSInternal := false;
-						Levels(Channel) <= to_integer(unsigned(DataIn));
-						Channel := (Channel + 1) mod 4;
+						Levels(ChannelSequence(ChannelSequenceIndex)) <= to_integer(unsigned(DataIn));
+						ChannelSequenceIndex := (ChannelSequenceIndex + 1) mod ChannelSequence'length;
 					else
 						BitCount := BitCount + 1;
 					end if;
