@@ -369,10 +369,10 @@ begin
 							OBuf.MotorsControl(MotorIndex).AutoCommutate <= to_boolean(TempDI(1));
 							OBuf.MotorsControl(MotorIndex).Direction <= to_boolean(TempDI(0));
 						when IO_REG_MOTOR_STATUS =>
-							if TempDI(1) = '1' then
+							if TempDI(1) = '0' then
 								HallsStuckHighClear(MotorIndex) <= true;
 							end if;
-							if TempDI(0) = '1' then
+							if TempDI(0) = '0' then
 								HallsStuckLowClear(MotorIndex) <= true;
 							end if;
 						when IO_REG_MOTOR_PWM =>
