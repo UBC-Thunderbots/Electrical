@@ -61,7 +61,7 @@ ghdl/obj/pavrtest.o : ghdl/obj/pavr_control.o
 help :
 	@echo "This is a multi-purpose Makefile which can do many things."
 	@echo "To synthesize an Intel HEX file, run \"make synth\" or \"make synthesize\"."
-	@echo "  (we expect to find the Xilinx settings32.sh file at $(XILINX_SETTINGS);"
+	@echo "  (we expect to find the Xilinx settings{32,64}.sh file at $(XILINX_SETTINGS);"
 	@echo "   if this path is wrong, please set the XILINX_SETTINGS environment variable"
 	@echo "   to the correct path)"
 	@echo "To just run the synthesis phase but not the mapper or anything after, run"
