@@ -163,7 +163,8 @@ architecture pavr_iof_arch of pavr_iof is
 	signal HallsStuckLowLatch : halls_stuck_t := (others => false);
 	signal HallsStuckLowClear : halls_stuck_t := (others => true);
 
-	signal EncoderCountLatch : std_ulogic_vector(15 downto 0) := X"0000";
+	signal EncodersCountLatch : encoders_count_t := (others => 0);
+	signal EncoderIndex : natural range 0 to 3 := 0;
 
 	signal MCP3008Latch : std_ulogic_vector(9 downto 0);
 
@@ -215,7 +216,8 @@ begin
 			MotorIndex <= 0;
 			HallsStuckHighClear <= (others => true);
 			HallsStuckLowClear <= (others => true);
-			EncoderCountLatch <= X"0000";
+			EncodersCountLatch <= (others => 0);
+			EncoderIndex <= 0;
 			MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
 		elsif rising_edge(pavr_iof_clk) then
 			pavr_iof_bitout <= '0';
@@ -271,9 +273,9 @@ begin
 						when IO_REG_SD_DATA =>
 							TempDO := Inputs.SDDataRead;
 						when IO_REG_ENCODER_LSB =>
-							TempDO := EncoderCountLatch(7 downto 0);
+							TempDO := std_ulogic_vector(to_unsigned(EncodersCountLatch(EncoderIndex), 16)(7 downto 0));
 						when IO_REG_ENCODER_MSB =>
-							TempDO := EncoderCountLatch(15 downto 8);
+							TempDO := std_ulogic_vector(to_unsigned(EncodersCountLatch(EncoderIndex), 16)(15 downto 8));
 						when IO_REG_ENCODER_FAIL =>
 							TempDO := "00000000";
 						when IO_REG_ADC_LSB =>
@@ -392,7 +394,8 @@ begin
 							OBuf.SDDataWrite <= TempDI;
 							OBuf.SDStrobe <= true;
 						when IO_REG_ENCODER_LSB =>
-							EncoderCountLatch <= std_ulogic_vector(to_unsigned(Inputs.EncodersCount(to_integer(unsigned(TempDI))), 16));
+							EncodersCountLatch <= Inputs.EncodersCount;
+							EncoderIndex <= to_integer(unsigned(TempDI));
 						when IO_REG_ENCODER_MSB =>
 						when IO_REG_ENCODER_FAIL =>
 						when IO_REG_ADC_LSB =>
@@ -541,7 +544,8 @@ begin
 				MotorIndex <= 0;
 				HallsStuckHighClear <= (others => true);
 				HallsStuckLowClear <= (others => true);
-				EncoderCountLatch <= X"0000";
+				EncodersCountLatch <= (others => 0);
+				EncoderIndex <= 0;
 				MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
 			end if;
 		end if;
