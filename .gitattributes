@@ -292,7 +292,6 @@ vhdl/common/pavr/pavr_register_file.vhd -text
 vhdl/common/pavr/pavr_util.vhd -text
 vhdl/common/pavr/std_util.vhd -text
 vhdl/common/pwm.vhd -text
-vhdl/common/spi.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
 vhdl/sim/pavrtest.vhd -text
@@ -300,6 +299,7 @@ vhdl/synth/clockgen.vhd -text
 vhdl/synth/devicedna.vhd -text
 vhdl/synth/icapwrapper.vhd -text
 vhdl/synth/pintypes.vhd -text
+vhdl/synth/spi.vhd -text
 vhdl/synth/top.vhd -text
 vhdl/thunderbots.bmm -text
 vhdl/thunderbots.prj -text

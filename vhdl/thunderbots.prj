@@ -8,7 +8,6 @@ vhdl work common/graycounter.vhd
 vhdl work common/mcp3008.vhd
 vhdl work common/motor.vhd
 vhdl work common/pwm.vhd
-vhdl work common/spi.vhd
 vhdl work common/types.vhd
 vhdl work common/pavr/std_util.vhd
 vhdl work common/pavr/pavr_util.vhd
@@ -22,4 +21,5 @@ vhdl work synth/clockgen.vhd
 vhdl work synth/devicedna.vhd
 vhdl work synth/icapwrapper.vhd
 vhdl work synth/pintypes.vhd
+vhdl work synth/spi.vhd
 vhdl work synth/top.vhd
