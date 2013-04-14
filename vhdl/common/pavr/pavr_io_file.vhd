@@ -242,7 +242,7 @@ begin
 						when IO_REG_LED_CTL =>
 							TempDO := to_stdulogic(RadioLEDLevel) & '0' & to_stdulogic(OBuf.TestLEDsSoftware) & OBuf.TestLEDsValue;
 						when IO_REG_POWER_CTL =>
-							TempDO := "000" & to_stdulogic(Inputs.BreakoutPresent) & to_stdulogic(OBuf.PowerLaser) & '0' & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
+							TempDO := "000" & to_stdulogic(Inputs.BreakoutPresent) & to_stdulogic(OBuf.PowerLaser) & to_stdulogic(Inputs.InterlockOverride) & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
 						when IO_REG_TICKS =>
 							TempDO := std_ulogic_vector(to_unsigned(Inputs.Ticks, 8));
 						when IO_REG_MOTOR_INDEX =>
