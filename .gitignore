@@ -332,6 +332,9 @@ vhdl/*.pcf
 vhdl/*.prm
 vhdl/*.ptwx
 vhdl/*.srp
+vhdl/*.tsi
+vhdl/*.twr
+vhdl/*.twx
 vhdl/*.unroutes
 vhdl/*.xml
 vhdl/*.xpi

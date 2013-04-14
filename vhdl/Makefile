@@ -67,6 +67,7 @@ help :
 	@echo "To just run the synthesis phase but not the mapper or anything after, run"
 	@echo "  \"make xst\"."
 	@echo "To run up to the mapper but not P&R or anything after, run \"make map\"."
+	@echo "To run up to the P&R phase and then generate a timing report, run \"make trce\" or \"make trace\"."
 	@echo "To run VHDL testbenches in GHDL, run \"make test\"."
 	@echo "To run proofs of correctness in NuSMV, run \"make prove\"."
 	@echo "To generate HTML documentation, run \"make doc\"."
@@ -97,6 +98,8 @@ synth : synthesize
 synthesize : $(PROJ).mcs
 xst : $(PROJ).ngc
 map : $(PROJ)_map.ncd
+trace : $(PROJ).tsi $(PROJ).twr $(PROJ).twx
+trce : trace
 .PHONY : synth synthesize xst map
 
 # We can make a HEX file from a BIT file using Xilinx PROMGEN.
@@ -152,6 +155,17 @@ $(PROJ).bit : $(PROJ).ncd ../firmware/main/main.elf
 ../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h) ../firmware/main/Makefile ../firmware/main/pavr.ld
 	$(MAKE) -C ../firmware/main
 
+# We can make a timing report file (in text and XML formats) and a timing specification interaction report from a routed NCD file and a physical constraints file using Xilinx Trace.
+# Options
+#  -v
+#    Generates a verbose timing report.
+#  -u
+#    Reports unconstrained paths.
+#  -tsi $(PROJ).tsi
+#    Outputs a timing specification interaction report.
+$(PROJ).tsi $(PROJ).twr $(PROJ).twx : $(PROJ).ncd $(PROJ)_map.pcf
+	( source $(XILINX_SETTINGS) && trce -v -u -tsi $(PROJ).tsi $(PROJ).ncd $(PROJ)_map.pcf )
+
 # We can make a routed NCD file from an unrouted NCD file using Xilinx PAR.
 # Options
 #  -w
@@ -159,7 +173,7 @@ $(PROJ).bit : $(PROJ).ncd ../firmware/main/main.elf
 $(PROJ).ncd : $(PROJ)_map.ncd
 	( source $(XILINX_SETTINGS) && par $(PROJ)_map.ncd $(PROJ).ncd $(PROJ)_map.pcf -w )
 
-# We can make an unrouted NCD file from an NGD file using Xilinx MAP.
+# We can make an unrouted NCD file and a physical constraints file from an NGD file using Xilinx MAP.
 # Options
 #  -pr b
 #    Uses flip-flops and latches built into the I/O pin drivers whenever
@@ -168,7 +182,7 @@ $(PROJ).ncd : $(PROJ)_map.ncd
 #    Overwrites any existing file.
 #  -detail
 #    Generates a more detailed report file.
-$(PROJ)_map.ncd : $(PROJ).ngd
+$(PROJ)_map.ncd $(PROJ)_map.pcf : $(PROJ).ngd
 	( source $(XILINX_SETTINGS) && map -pr b $(PROJ).ngd -o $(PROJ)_map.ncd -w -detail )
 
 # We can make an NGD file from an NGC file and a UCF file using Xilinx NGDBUILD.
