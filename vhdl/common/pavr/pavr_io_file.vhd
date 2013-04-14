@@ -89,6 +89,8 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_MOTOR_STATUS : natural := 16#05#;
 	constant IO_REG_MOTOR_PWM : natural := 16#06#;
 	constant IO_REG_SIM_MAGIC : natural := 16#07#;
+	constant IO_REG_SD_CTL : natural := 16#08#;
+	constant IO_REG_SD_DATA : natural := 16#09#;
 	constant IO_REG_ENCODER_LSB : natural := 16#0C#;
 	constant IO_REG_ENCODER_MSB : natural := 16#0D#;
 	constant IO_REG_ENCODER_FAIL : natural := 16#0E#;
@@ -137,6 +139,8 @@ architecture pavr_iof_arch of pavr_iof is
 		MRFCS => '1',
 		MRFDataWrite => X"00",
 		MRFStrobe => false,
+		SDDataWrite => X"00",
+		SDStrobe => false,
 		LPSDrives => (others => '0'),
 		LFSRTick => false,
 		DebugEnabled => false,
@@ -261,6 +265,10 @@ begin
 							TempDO := std_ulogic_vector(to_unsigned(OBuf.MotorsControl(MotorIndex).Power, 8));
 						when IO_REG_SIM_MAGIC =>
 							TempDO := OBuf.SimMagic;
+						when IO_REG_SD_CTL =>
+							TempDO := "000000" & to_stdulogic(Inputs.SDPresent) & to_stdulogic(Inputs.SDBusy);
+						when IO_REG_SD_DATA =>
+							TempDO := Inputs.SDDataRead;
 						when IO_REG_ENCODER_LSB =>
 							TempDO := EncoderCountLatch(7 downto 0);
 						when IO_REG_ENCODER_MSB =>
@@ -379,6 +387,9 @@ begin
 							OBuf.MotorsControl(MotorIndex).Power <= to_integer(unsigned(TempDI));
 						when IO_REG_SIM_MAGIC =>
 							OBuf.SimMagic <= TempDI;
+						when IO_REG_SD_DATA =>
+							OBuf.SDDataWrite <= TempDI;
+							OBuf.SDStrobe <= true;
 						when IO_REG_ENCODER_LSB =>
 							EncoderCountLatch <= std_ulogic_vector(to_unsigned(Inputs.EncodersCount(to_integer(unsigned(TempDI))), 16));
 						when IO_REG_ENCODER_MSB =>

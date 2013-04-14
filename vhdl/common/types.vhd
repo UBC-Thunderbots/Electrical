@@ -71,6 +71,11 @@ package types is
 		MRFBusy : boolean;
 		MRFDataRead : std_ulogic_vector(7 downto 0);
 
+		-- SD card status
+		SDBusy : boolean;
+		SDPresent : boolean;
+		SDDataRead : std_ulogic_vector(7 downto 0);
+
 		-- Device ID
 		DeviceID : std_ulogic_vector(55 downto 0);
 		DeviceIDReady : boolean;
@@ -117,6 +122,10 @@ package types is
 		MRFCS : std_ulogic;
 		MRFDataWrite : std_ulogic_vector(7 downto 0);
 		MRFStrobe : boolean;
+
+		-- SD card control
+		SDDataWrite : std_ulogic_vector(7 downto 0);
+		SDStrobe : boolean;
 
 		-- Lateral position sensor control
 		LPSDrives : std_ulogic_vector(3 downto 0);

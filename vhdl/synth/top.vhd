@@ -296,6 +296,21 @@ begin
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
 		MISOPin => MRFMISOPin);
+
+	CPUInputs.SDPresent <= to_boolean(SDPresentPin);
+	SDCSPin <= '0';
+	SDSPI : entity work.SPI(Arch)
+	port map(
+		HostClock => Clocks.Clock40MHz,
+		BusClock => Clocks.Clock4MHz,
+		BusClockI => Clocks.Clock4MHzI,
+		WriteData => CPUOutputs.SDDataWrite,
+		ReadData => CPUInputs.SDDataRead,
+		Strobe => CPUOutputs.SDStrobe,
+		Busy => CPUInputs.SDBusy,
+		ClockPin => SDClockPin,
+		MOSIPin => SDMOSIPin,
+		MISOPin => SDMISOPin);
 	
 	DNAPort : entity work.DeviceDNA
 	port map(
