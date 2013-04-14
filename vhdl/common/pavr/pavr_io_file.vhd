@@ -242,7 +242,7 @@ begin
 						when IO_REG_LED_CTL =>
 							TempDO := to_stdulogic(RadioLEDLevel) & '0' & to_stdulogic(OBuf.TestLEDsSoftware) & OBuf.TestLEDsValue;
 						when IO_REG_POWER_CTL =>
-							TempDO := "0000" & to_stdulogic(OBuf.PowerLaser) & '0' & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
+							TempDO := "000" & to_stdulogic(Inputs.BreakoutPresent) & to_stdulogic(OBuf.PowerLaser) & '0' & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
 						when IO_REG_TICKS =>
 							TempDO := std_ulogic_vector(to_unsigned(Inputs.Ticks, 8));
 						when IO_REG_MOTOR_INDEX =>
@@ -280,7 +280,7 @@ begin
 						when IO_REG_ADC_MSB =>
 							TempDO := "000000" & MCP3008Latch(9 downto 8);
 						when IO_REG_CHICKER_CTL =>
-							TempDO := "00" & to_stdulogic(OBuf.Discharge) & to_stdulogic(Inputs.ChargeDone) & to_stdulogic(Inputs.ChargeTimeout) & to_stdulogic(Inputs.ChipActive) & to_stdulogic(Inputs.KickActive) & to_stdulogic(OBuf.Charge);
+							TempDO := "0" & to_stdulogic(Inputs.ChickerPresent) & to_stdulogic(OBuf.Discharge) & to_stdulogic(Inputs.ChargeDone) & to_stdulogic(Inputs.ChargeTimeout) & to_stdulogic(Inputs.ChipActive) & to_stdulogic(Inputs.KickActive) & to_stdulogic(OBuf.Charge);
 						when IO_REG_CHICKER_PULSE_LSB =>
 							TempDO := std_ulogic_vector(to_unsigned(OBuf.KickPeriod mod 256, 8));
 						when IO_REG_CHICKER_PULSE_MSB =>

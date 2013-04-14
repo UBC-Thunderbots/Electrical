@@ -46,6 +46,9 @@ package types is
 		-- Whether interlocks are overridden
 		InterlockOverride : boolean;
 
+		-- Whether the breakout board is present
+		BreakoutPresent : boolean;
+
 		-- Hall sensor failure detection
 		HallsStuckHigh : halls_stuck_t;
 		HallsStuckLow : halls_stuck_t;
@@ -57,6 +60,7 @@ package types is
 		MCP3008Levels : mcp3008s_t;
 
 		-- Chicker status
+		ChickerPresent : boolean;
 		ChargeDone : boolean;
 		ChargeTimeout : boolean;
 		KickActive : boolean;

@@ -137,6 +137,8 @@ begin
 	LaserPowerPin <= '1' when CPUOutputs.PowerLaser else '0';
 	LPSDrivesPin <= CPUOutputs.LPSDrives;
 
+	CPUInputs.BreakoutPresent <= to_boolean(BreakoutPresentPin);
+
 	process(Clocks.Clock4MHz) is
 		subtype subticks_t is natural range 0 to 19999;
 		variable Subticks : subticks_t := 0;
@@ -208,6 +210,8 @@ begin
 		CLK => ADCClockPin,
 		CS => ADCCSPin,
 		Levels => CPUInputs.MCP3008Levels);
+
+	CPUInputs.ChickerPresent <= to_boolean(not ChickerPresentPin);
 
 	ChargedLEDPin <= to_stdulogic(CPUInputs.MCP3008Levels(0) > CapacitorDangerousThreshold);
 
