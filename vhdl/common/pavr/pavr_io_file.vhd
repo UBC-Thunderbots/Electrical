@@ -228,6 +228,7 @@ begin
 			OBuf.StartChip <= false;
 			OBuf.FlashStrobe <= false;
 			OBuf.MRFStrobe <= false;
+			OBuf.SDStrobe <= false;
 			OBuf.LFSRTick <= false;
 			OBuf.DebugStrobe <= false;
 			OBuf.ICAPStrobe <= false;
