@@ -279,6 +279,9 @@ begin
 							TempDO := std_ulogic_vector(to_unsigned(EncodersCountLatch(EncoderIndex), 16)(15 downto 8));
 						when IO_REG_ENCODER_FAIL =>
 							TempDO := "00000000";
+							for Index in 0 to 3 loop
+								TempDO(Index) := to_stdulogic(Inputs.EncodersFail(Index));
+							end loop;
 						when IO_REG_ADC_LSB =>
 							TempDO := MCP3008Latch(7 downto 0);
 						when IO_REG_ADC_MSB =>

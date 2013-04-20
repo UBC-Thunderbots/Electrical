@@ -53,8 +53,9 @@ package types is
 		HallsStuckHigh : halls_stuck_t;
 		HallsStuckLow : halls_stuck_t;
 
-		-- Optical encoder counts
+		-- Optical encoder counts and failure detection
 		EncodersCount : encoders_count_t;
+		EncodersFail : encoders_fail_t;
 
 		-- ADC readings
 		MCP3008Levels : mcp3008s_t;

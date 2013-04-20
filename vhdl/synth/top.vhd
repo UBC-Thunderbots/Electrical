@@ -200,6 +200,13 @@ begin
 			Input => Encoders(Index),
 			Clear => EncodersClear,
 			Value => EncodersCount(Index));
+
+		EncoderFail : entity work.EncoderFail(Arch)
+		port map(
+			Clock => Clocks.Clock4MHz,
+			Encoder => Encoders(Index),
+			Hall => Halls(Index),
+			Fail => CPUInputs.EncodersFail(Index));
 	end generate;
 
 	MCP3008 : entity work.MCP3008(Arch)
