@@ -302,7 +302,7 @@ begin
 		MISOPin => MRFMISOPin);
 
 	CPUInputs.SDPresent <= to_boolean(SDPresentPin);
-	SDCSPin <= '0';
+	SDCSPin <= CPUOutputs.SDCS;
 	SDSPI : entity work.SPI(Arch)
 	port map(
 		HostClock => Clocks.Clock40MHz,

@@ -128,6 +128,7 @@ package types is
 		MRFStrobe : boolean;
 
 		-- SD card control
+		SDCS : std_ulogic;
 		SDDataWrite : std_ulogic_vector(7 downto 0);
 		SDStrobe : boolean;
 

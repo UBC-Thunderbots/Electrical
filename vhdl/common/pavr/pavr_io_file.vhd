@@ -139,6 +139,7 @@ architecture pavr_iof_arch of pavr_iof is
 		MRFCS => '1',
 		MRFDataWrite => X"00",
 		MRFStrobe => false,
+		SDCS => '1',
 		SDDataWrite => X"00",
 		SDStrobe => false,
 		LPSDrives => (others => '0'),
@@ -269,7 +270,7 @@ begin
 						when IO_REG_SIM_MAGIC =>
 							TempDO := OBuf.SimMagic;
 						when IO_REG_SD_CTL =>
-							TempDO := "000000" & to_stdulogic(Inputs.SDPresent) & to_stdulogic(Inputs.SDBusy);
+							TempDO := "00000" & OBuf.SDCS & to_stdulogic(Inputs.SDPresent) & to_stdulogic(Inputs.SDBusy);
 						when IO_REG_SD_DATA =>
 							TempDO := Inputs.SDDataRead;
 						when IO_REG_ENCODER_LSB =>
@@ -390,6 +391,8 @@ begin
 							OBuf.MotorsControl(MotorIndex).Power <= to_integer(unsigned(TempDI));
 						when IO_REG_SIM_MAGIC =>
 							OBuf.SimMagic <= TempDI;
+						when IO_REG_SD_CTL =>
+							OBuf.SDCS <= TempDI(2);
 						when IO_REG_SD_DATA =>
 							OBuf.SDDataWrite <= TempDI;
 							OBuf.SDStrobe <= true;
