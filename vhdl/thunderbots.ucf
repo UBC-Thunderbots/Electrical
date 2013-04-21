@@ -42,7 +42,7 @@ net "SDPresentPin" iostandard=LVCMOS33 | pulldown | loc=P32;
 net "SDCSPin" iostandard=LVCMOS33 | slew=quietio | loc=P35;
 net "SDClockPin" iostandard=LVCMOS33 | slew=quietio | loc=P24;
 net "SDMOSIPin" iostandard=LVCMOS33 | slew=quietio | loc=P34;
-net "SDMISOPin" iostandard=LVCMOS33 | float | loc=P33;
+net "SDMISOPin" iostandard=LVCMOS33 | pullup | loc=P33;
 
 # Chicker
 net "ChickerPresentPin" iostandard=LVCMOS33 | pullup | loc=P80;
