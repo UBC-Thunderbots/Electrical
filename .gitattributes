@@ -248,6 +248,7 @@ datasheets/mosfets/IRF9310.pdf -text
 datasheets/mosfets/STx20NK50Z.pdf -text
 datasheets/mosfets/STx45N65M5.pdf -text
 datasheets/optoelectronics/E4P[!!-~](Rotary[!!-~]Encoder).pdf -text
+datasheets/optoelectronics/LPT80A[!!-~](Phototransistor).pdf -text svneol=unset#application/pdf
 datasheets/optoelectronics/LTST-C150CKT[!!-~](Red[!!-~]LED).pdf -text
 datasheets/optoelectronics/LTST-C150GKT[!!-~](Green[!!-~]LED).pdf -text
 datasheets/optoelectronics/OPB733T[!!-~](LED+Phototransistor).pdf -text
