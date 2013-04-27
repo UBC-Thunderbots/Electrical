@@ -6,7 +6,10 @@ package types is
 
 	subtype capacitor_voltage_t is natural range 0 to 2 ** 10 - 1;
 
-	subtype mcp3008_t is natural range 0 to 2 ** 10 - 1;
+	type mcp3008_t is record
+		Value : natural range 0 to 2 ** 10 - 1;
+		Strobe : boolean;
+	end record;
 	type mcp3008s_t is array(0 to 7) of mcp3008_t;
 
 	type encoder_t is array(0 to 1) of boolean;
@@ -58,7 +61,7 @@ package types is
 		EncodersFail : encoders_fail_t;
 
 		-- ADC readings
-		MCP3008Levels : mcp3008s_t;
+		MCP3008 : mcp3008s_t;
 
 		-- Chicker status
 		ChickerPresent : boolean;

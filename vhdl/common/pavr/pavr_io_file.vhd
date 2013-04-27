@@ -405,7 +405,7 @@ begin
 						when IO_REG_ENCODER_MSB =>
 						when IO_REG_ENCODER_FAIL =>
 						when IO_REG_ADC_LSB =>
-							MCP3008Latch <= std_ulogic_vector(to_unsigned(Inputs.MCP3008Levels(to_integer(unsigned(TempDI))), 10));
+							MCP3008Latch <= std_ulogic_vector(to_unsigned(Inputs.MCP3008(to_integer(unsigned(TempDI))).Value, 10));
 						when IO_REG_ADC_MSB =>
 						when IO_REG_CHICKER_CTL =>
 							OBuf.Discharge <= to_boolean(TempDI(5));

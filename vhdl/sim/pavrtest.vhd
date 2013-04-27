@@ -18,7 +18,7 @@ architecture Behavioural of PAVRTest is
 		HallsStuckLow => (others => false),
 		EncodersCount => (others => 0),
 		EncodersFail => (others => false),
-		MCP3008Levels => (others => 0),
+		MCP3008 => (others => (Value => 0, Strobe => false)),
 		ChickerPresent => false,
 		ChargeDone => false,
 		ChargeTimeout => false,

@@ -11,7 +11,7 @@ entity MCP3008 is
 		MISO : in std_ulogic;
 		CLK : out std_ulogic := '0';
 		CS : out std_ulogic := '1';
-		Levels : out mcp3008s_t := (others => 0));
+		Levels : out mcp3008s_t := (others => (Value => 0, Strobe => false)));
 end entity MCP3008;
 
 architecture Arch of MCP3008 is
@@ -30,6 +30,9 @@ begin
 		variable ChannelSequenceIndex : natural range ChannelSequence'range := 0;
 	begin
 		if rising_edge(Clocks.Clock4MHz) then
+			for I in Levels'range loop
+				Levels(I).Strobe <= false;
+			end loop;
 			if Subtick then
 				if not CSInternal then
 					CSInternal := true;
@@ -44,7 +47,8 @@ begin
 					if BitCount = bit_count_t'high then
 						BitCount := 0;
 						CSInternal := false;
-						Levels(ChannelSequence(ChannelSequenceIndex)) <= to_integer(unsigned(DataIn));
+						Levels(ChannelSequence(ChannelSequenceIndex)).Value <= to_integer(unsigned(DataIn));
+						Levels(ChannelSequence(ChannelSequenceIndex)).Strobe <= true;
 						ChannelSequenceIndex := (ChannelSequenceIndex + 1) mod ChannelSequence'length;
 					else
 						BitCount := BitCount + 1;
