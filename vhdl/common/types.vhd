@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 package types is
-	subtype battery_voltage_t is natural range 0 to 2 ** 10 - 1;
-
-	subtype capacitor_voltage_t is natural range 0 to 2 ** 10 - 1;
-
+	subtype mcp3008_value_t is natural range 0 to 2 ** 10 - 1;
 	type mcp3008_t is record
-		Value : natural range 0 to 2 ** 10 - 1;
+		Value : mcp3008_value_t;
 		Strobe : boolean;
 	end record;
 	type mcp3008s_t is array(0 to 7) of mcp3008_t;
+
+	subtype battery_voltage_t is mcp3008_value_t;
+	subtype capacitor_voltage_t is mcp3008_value_t;
 
 	type encoder_t is array(0 to 1) of boolean;
 	type encoders_t is array(0 to 3) of encoder_t;
