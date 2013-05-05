@@ -274,7 +274,7 @@ $(eval $(foreach smv,$(SMVs),$(call prove_target_template,$(smv))))
 #####################
 
 clean :
-	$(RM) *.bgn *.bit *.bld *.cfi *.drc *.html *.log *.lso *.lst *.map *.mcs *.mrp *.ncd *.ngc *.ngd *.ngm *_pad.csv *_pad.txt *.pad *.par *.pcf *.prm *.ptwx *.srp *.unroutes *.xml *.xpi *.xrpt $(PROJ)_bd.bmm $(PROJ)_bitgen.xwbt $(PROJ)_vhdl.prj work-obj93.cf
+	$(RM) *.bgn *.bit *.bld *.cfi *.drc *.html *.log *.lso *.lst *.map *.mcs *.mrp *.ncd *.ngc *.ngd *.ngm *_pad.csv *_pad.txt *.pad *.par *.pcf *.prm *.ptwx *.srp *.tsi *.twi *.twx *.unroutes *.xml *.xpi *.xrpt $(PROJ)_bd.bmm $(PROJ)_bitgen.xwbt $(PROJ)_vhdl.prj work-obj93.cf
 	$(RM) -r ghdl html xlnx_auto_0_xdb xst _xmsgs
 .PHONY : clean
 
