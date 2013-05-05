@@ -262,11 +262,7 @@ datasheets/regulators/OKI-78SR.pdf -text
 datasheets/regulators/XC6222.pdf -text
 datasheets/sdcard/part1_410.pdf -text svneol=unset#application/pdf
 electronics/Chicker_Test_Board/Code/Boost_converter_final/Boost_converter_final.ino -text
-electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board-cache.bak -text
-electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board-cache.lib -text
-electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board.bak -text
 electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board.pro -text
-electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board.sch -text
 electronics/models/mainboard_thermal/Assem1.SLDASM -text
 electronics/models/mainboard_thermal/Part1.SLDPRT -text
 electronics/models/mainboard_thermal/X.BAT -text
