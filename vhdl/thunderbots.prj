@@ -7,6 +7,7 @@ vhdl work common/downclock.vhd
 vhdl work common/encoderfail.vhd
 vhdl work common/graycounter.vhd
 vhdl work common/mcp3008.vhd
+vhdl work common/mrf.vhd
 vhdl work common/motor.vhd
 vhdl work common/pwm.vhd
 vhdl work common/types.vhd

@@ -127,9 +127,12 @@ package types is
 		-- MRF control
 		MRFReset : std_ulogic;
 		MRFWake : std_ulogic;
-		MRFCS : std_ulogic;
 		MRFDataWrite : std_ulogic_vector(7 downto 0);
-		MRFStrobe : boolean;
+		MRFAddress : std_ulogic_vector(9 downto 0);
+		MRFStrobeShortRead : boolean;
+		MRFStrobeLongRead : boolean;
+		MRFStrobeShortWrite : boolean;
+		MRFStrobeLongWrite : boolean;
 
 		-- SD card control
 		SDCS : std_ulogic;

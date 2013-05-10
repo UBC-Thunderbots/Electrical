@@ -282,6 +282,7 @@ vhdl/common/encoderfail.vhd -text
 vhdl/common/graycounter.vhd -text
 vhdl/common/mcp3008.vhd -text
 vhdl/common/motor.vhd -text
+vhdl/common/mrf.vhd -text
 vhdl/common/pavr/pavr_alu.vhd -text
 vhdl/common/pavr/pavr_constants.vhd -text
 vhdl/common/pavr/pavr_control.vhd -text

@@ -103,6 +103,7 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_FLASH_DATA : natural := 16#17#;
 	constant IO_REG_MRF_CTL : natural := 16#18#;
 	constant IO_REG_MRF_DATA : natural := 16#19#;
+	constant IO_REG_MRF_ADDR : natural := 16#1A#;
 	constant IO_REG_LPS_CTL : natural := 16#1B#;
 	constant IO_REG_DEVICE_ID0 : natural := 16#1C#;
 	constant IO_REG_DEVICE_ID1 : natural := 16#1D#;
@@ -136,9 +137,12 @@ architecture pavr_iof_arch of pavr_iof is
 		FlashStrobe => false,
 		MRFReset => '1',
 		MRFWake => '0',
-		MRFCS => '1',
 		MRFDataWrite => X"00",
-		MRFStrobe => false,
+		MRFAddress => (others => '0'),
+		MRFStrobeShortRead => false,
+		MRFStrobeLongRead => false,
+		MRFStrobeShortWrite => false,
+		MRFStrobeLongWrite => false,
 		SDCS => '1',
 		SDDataWrite => X"00",
 		SDStrobe => false,
@@ -230,7 +234,10 @@ begin
 			OBuf.StartKick <= false;
 			OBuf.StartChip <= false;
 			OBuf.FlashStrobe <= false;
-			OBuf.MRFStrobe <= false;
+			OBuf.MRFStrobeShortRead <= false;
+			OBuf.MRFStrobeLongRead <= false;
+			OBuf.MRFStrobeShortWrite <= false;
+			OBuf.MRFStrobeLongWrite <= false;
 			OBuf.SDStrobe <= false;
 			OBuf.LFSRTick <= false;
 			OBuf.DebugStrobe <= false;
@@ -297,7 +304,7 @@ begin
 						when IO_REG_FLASH_DATA =>
 							TempDO := Inputs.FlashDataRead;
 						when IO_REG_MRF_CTL =>
-							TempDO := "000" & Inputs.MRFInterrupt & OBuf.MRFWake & OBuf.MRFReset & OBuf.MRFCS & to_stdulogic(Inputs.MRFBusy);
+							TempDO := to_stdulogic(Inputs.MRFBusy) & "0000" & Inputs.MRFInterrupt & OBuf.MRFWake & OBuf.MRFReset;
 						when IO_REG_MRF_DATA =>
 							TempDO := Inputs.MRFDataRead;
 						when IO_REG_LPS_CTL =>
@@ -426,12 +433,16 @@ begin
 							OBuf.FlashDataWrite <= TempDI;
 							OBuf.FlashStrobe <= true;
 						when IO_REG_MRF_CTL =>
-							OBuf.MRFWake <= TempDI(3);
-							OBuf.MRFReset <= TempDI(2);
-							OBuf.MRFCS <= TempDI(1);
+							OBuf.MRFStrobeLongWrite <= to_boolean(TempDI(6));
+							OBuf.MRFStrobeShortWrite <= to_boolean(TempDI(5));
+							OBuf.MRFStrobeLongRead <= to_boolean(TempDI(4));
+							OBuf.MRFStrobeShortRead <= to_boolean(TempDI(3));
+							OBuf.MRFWake <= TempDI(1);
+							OBuf.MRFReset <= TempDI(0);
 						when IO_REG_MRF_DATA =>
 							OBuf.MRFDataWrite <= TempDI;
-							OBuf.MRFStrobe <= true;
+						when IO_REG_MRF_ADDR =>
+							OBuf.MRFAddress <= OBuf.MRFAddress(OBuf.MRFAddress'high - 8 downto 0) & TempDI;
 						when IO_REG_LPS_CTL =>
 							OBuf.LPSDrives <= TempDI(3 downto 0);
 						when IO_REG_DEVICE_ID0 =>

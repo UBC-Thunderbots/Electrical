@@ -293,17 +293,21 @@ begin
 
 	MRFWakePin <= CPUOutputs.MRFWake;
 	MRFResetPin <= CPUOutputs.MRFReset;
-	MRFCSPin <= CPUOutputs.MRFCS;
 	CPUInputs.MRFInterrupt <= MRFInterruptPin;
-	MRFSPI : entity work.SPI(Arch)
+	MRF : entity work.MRF(Arch)
 	port map(
 		HostClock => Clocks.Clock40MHz,
 		BusClock => Clocks.Clock8MHz,
 		BusClockI => Clocks.Clock8MHzI,
 		WriteData => CPUOutputs.MRFDataWrite,
 		ReadData => CPUInputs.MRFDataRead,
-		Strobe => CPUOutputs.MRFStrobe,
+		Address => CPUOutputs.MRFAddress,
+		StrobeShortRead => CPUOutputs.MRFStrobeShortRead,
+		StrobeLongRead => CPUOutputs.MRFStrobeLongRead,
+		StrobeShortWrite => CPUOutputs.MRFStrobeShortWrite,
+		StrobeLongWrite => CPUOutputs.MRFStrobeLongWrite,
 		Busy => CPUInputs.MRFBusy,
+		CSPin => MRFCSPin,
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
 		MISOPin => MRFMISOPin);

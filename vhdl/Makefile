@@ -36,6 +36,7 @@ ghdl/obj/downclock.o :
 ghdl/obj/encoderfail.o : ghdl/obj/types.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o
 ghdl/obj/mcp3008.o : ghdl/obj/clock.o ghdl/obj/types.o
+ghdl/obj/mrf.o : ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/pwm.o ghdl/obj/types.o
 ghdl/obj/pwm.o :
 ghdl/obj/types.o :
