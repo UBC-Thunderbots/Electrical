@@ -6,6 +6,7 @@ package clock is
 		Clock4MHz : std_ulogic;
 		Clock4MHzI : std_ulogic;
 		Clock8MHz : std_ulogic;
+		Clock8MHzI : std_ulogic;
 		Clock40MHz : std_ulogic;
 		Clock40MHzI : std_ulogic;
 	end record;
