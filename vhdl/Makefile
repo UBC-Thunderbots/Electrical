@@ -5,7 +5,7 @@ PROJ := thunderbots
 override SHELL := /bin/bash
 
 # The names of all the top-level test targets.
-SIM_TARGETS := boostcontrollertest pavrtest
+SIM_TARGETS := boostcontrollertest crc16test pavrtest
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -32,6 +32,8 @@ ghdl/obj/boostcontroller.o : ghdl/obj/types.o
 ghdl/obj/clock.o :
 ghdl/obj/commutator.o : ghdl/obj/types.o
 ghdl/obj/cpuwrapper.o : ghdl/obj/clock.o ghdl/obj/pavr_control.o ghdl/obj/types.o
+ghdl/obj/crc16.o :
+ghdl/obj/crc16test.o : ghdl/obj/crc16.o
 ghdl/obj/downclock.o :
 ghdl/obj/encoderfail.o : ghdl/obj/types.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o

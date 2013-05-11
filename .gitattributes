@@ -277,6 +277,7 @@ vhdl/common/boostcontroller.vhd -text
 vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/cpuwrapper.vhd -text
+vhdl/common/crc16.vhd -text
 vhdl/common/downclock.vhd -text
 vhdl/common/encoderfail.vhd -text
 vhdl/common/graycounter.vhd -text
@@ -294,6 +295,7 @@ vhdl/common/pavr/std_util.vhd -text
 vhdl/common/pwm.vhd -text
 vhdl/common/types.vhd -text
 vhdl/sim/boostcontrollertest.vhd -text
+vhdl/sim/crc16test.vhd -text
 vhdl/sim/pavrtest.vhd -text
 vhdl/synth/clockgen.vhd -text
 vhdl/synth/devicedna.vhd -text
