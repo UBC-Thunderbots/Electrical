@@ -116,6 +116,12 @@ entity pavr is
       pavr_pm_do:   in  std_logic_vector(15 downto 0);
       pavr_pm_wr:   out std_logic;
 
+      -- DMA interface to program memory
+      pavr_dma_wr:  in  std_logic;
+      pavr_dma_addr:in  std_logic_vector(pavr_dm_addr_w - 1 downto 0);
+      pavr_dma_di:  in  std_logic_vector(7 downto 0);
+      pavr_dma_do:  out std_logic_vector(7 downto 0);
+
       -- IO interface
       Inputs : in work.types.cpu_inputs_t;
       Outputs : out work.types.cpu_outputs_t;
@@ -892,7 +898,11 @@ architecture pavr_arch of pavr is
       pavr_dm_wr:   in  std_logic;
       pavr_dm_addr: in  std_logic_vector(pavr_dm_addr_w - 1 downto 0);
       pavr_dm_di:   in  std_logic_vector(7 downto 0);
-      pavr_dm_do:   out std_logic_vector(7 downto 0)
+      pavr_dm_do:   out std_logic_vector(7 downto 0);
+      pavr_dm_wr2:  in  std_logic;
+      pavr_dm_addr2:in  std_logic_vector(pavr_dm_addr_w - 1 downto 0);
+      pavr_dm_di2:  in  std_logic_vector(7 downto 0);
+      pavr_dm_do2:  out std_logic_vector(7 downto 0)
    );
    end component;
    for all: pavr_dm use entity work.pavr_dm(pavr_dm_arch);
@@ -1021,7 +1031,11 @@ begin
       pavr_dm_wr,
       pavr_dm_addr,
       pavr_dm_di,
-      pavr_dm_do
+      pavr_dm_do,
+      pavr_dma_wr,
+      pavr_dma_addr,
+      pavr_dma_di,
+      pavr_dma_do
    );
 
    -- Instantiate the ALU.

@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use work.pavr_constants.all;
 
 package types is
 	subtype mcp3008_value_t is natural range 0 to 2 ** 10 - 1;
@@ -41,6 +42,27 @@ package types is
 	type motor_drive_phase_t is (FLOAT, LOW, HIGH);
 	type motor_drive_phases_t is array(0 to 2) of motor_drive_phase_t;
 	type motors_drive_phases_t is array(0 to 4) of motor_drive_phases_t;
+
+	-- The number of DMA read and write channels.
+	constant DMAReadChannels : natural := 1;
+	constant DMAWriteChannels : natural := 2;
+	constant DMAChannels : natural := DMAReadChannels + DMAWriteChannels;
+
+	type cpu_input_dma_info_t is record
+		Pointer : natural range 0 to pavr_dm_len - 1;
+		Count : natural range 0 to 255;
+		Enabled : boolean;
+	end record;
+	type cpu_input_dma_infos_t is array(0 to DMAChannels - 1) of cpu_input_dma_info_t;
+
+	type cpu_output_dma_info_t is record
+		Value : std_ulogic_vector(7 downto 0);
+		StrobePointerLow : boolean;
+		StrobePointerHigh : boolean;
+		StrobeCount : boolean;
+		StrobeEnable : boolean;
+	end record;
+	type cpu_output_dma_infos_t is array(0 to DMAChannels - 1) of cpu_output_dma_info_t;
 
 	type cpu_inputs_t is record
 		-- System timer tick count
@@ -96,6 +118,9 @@ package types is
 
 		-- Internal configuration access port status
 		ICAPBusy : boolean;
+
+		-- DMA channel pointers, counts, and enable flags
+		DMA : cpu_input_dma_infos_t;
 	end record;
 
 	type cpu_outputs_t is record
@@ -129,6 +154,7 @@ package types is
 		MRFWake : std_ulogic;
 		MRFDataWrite : std_ulogic_vector(7 downto 0);
 		MRFAddress : std_ulogic_vector(9 downto 0);
+		MRFStrobeAddress : boolean;
 		MRFStrobeShortRead : boolean;
 		MRFStrobeLongRead : boolean;
 		MRFStrobeShortWrite : boolean;
@@ -156,7 +182,50 @@ package types is
 
 		-- For simulation only, a random magic value
 		SimMagic : std_ulogic_vector(7 downto 0);
+
+		-- DMA channel pointers, counts, and enable flags
+		DMA : cpu_output_dma_infos_t;
 	end record;
+
+	-- Control lines sent from a peripheral to the DMA controller for a read channel.
+	-- All lines in this record operate on the rising edge of the 40 MHz clock.
+	type dmar_request_t is record
+		-- Peripheral must set Consumed to true for exactly one clock cycle after it has consumed the byte provided on the response port.
+		-- Peripheral must not set Consumed to true unless Valid is true before the clock edge on which Consumed becomes true.
+		Consumed : boolean;
+	end record;
+	type dmar_requests_t is array(0 to DMAReadChannels - 1) of dmar_request_t;
+
+	-- Control and data lines from the DMA controller to a peripheral for a read channel.
+	-- All lines in this record operate on the rising edge of the 40 MHz clock.
+	type dmar_response_t is record
+		-- Peripheral may consume a byte whenever this is true at a clock edge.
+		Valid : boolean;
+		-- The byte of data read from RAM.
+		-- Data becomes valid at the same time as Valid becomes true and remains valid until after the clock edge on which Consumed becomes true.
+		Data : std_ulogic_vector(7 downto 0);
+	end record;
+	type dmar_responses_t is array(0 to DMAReadChannels - 1) of dmar_response_t;
+
+	-- Control and data lines sent from a peripheral to the DMA controller for a write channel.
+	-- All lines in this record operate on the rising edge of the 40 MHz clock.
+	type dmaw_request_t is record
+		-- Peripheral must set Write to true for exactly one clock cycle to push a byte to RAM.
+		-- Peripheral must not set Write to true unless Ready is true before the clock edge on which Write becomes true.
+		Write : boolean;
+		-- The byte of data to write to RAM.
+		-- Peripheral must ensure Data becomes valid at the same time as Write becomes true and remains valid until after the subsequent clock edge.
+		Data : std_ulogic_vector(7 downto 0);
+	end record;
+	type dmaw_requests_t is array(DMAReadChannels to DMAChannels - 1) of dmaw_request_t;
+
+	-- Control lines from the DMA controller to a peripheral for a write channel.
+	-- All lines in this record operate on the rising edge of the 40 MHz clock.
+	type dmaw_response_t is record
+		-- Peripheral may write a byte whenever this is true at a clock edge.
+		Ready : boolean;
+	end record;
+	type dmaw_responses_t is array(DMAReadChannels to DMAChannels - 1) of dmaw_response_t;
 
 	function to_boolean(X : std_ulogic) return boolean;
 

@@ -4,6 +4,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use unisim.vcomponents.all;
 use work.clock.all;
+use work.pavr_constants.all;
 use work.pintypes.all;
 use work.types.all;
 
@@ -65,10 +66,26 @@ entity Top is
 end entity Top;
 
 architecture Main of Top is
+	constant DMA_READ_CHANNEL_0 : natural := 0;
+	constant DMA_WRITE_CHANNEL_MRF : natural := 1;
+	constant DMA_WRITE_CHANNEL_2 : natural := 2;
+
 	signal Clocks : clocks_t;
+
+	signal SystemReset : boolean;
 
 	signal CPUInputs : work.types.cpu_inputs_t;
 	signal CPUOutputs : work.types.cpu_outputs_t;
+
+	signal DMAReadRequests : dmar_requests_t := (others => (Consumed => false));
+	signal DMAReadResponses : dmar_responses_t;
+	signal DMAWriteRequests : dmaw_requests_t := (others => (Write => false, Data => X"00"));
+	signal DMAWriteResponses : dmaw_responses_t;
+
+	signal DMAWrite : boolean;
+	signal DMAAddress : natural range 0 to pavr_dm_len - 1;
+	signal DMADataWrite : std_ulogic_vector(7 downto 0);
+	signal DMADataRead : std_ulogic_vector(7 downto 0);
 
 	signal FiveMilliTicks : natural range 0 to 255 := 0;
 
@@ -99,14 +116,44 @@ begin
 		Oscillator => OscillatorPin,
 		Clocks => Clocks);
 
+	-- Assert system reset for 16 cycles of the slowest clock after startup, then release.
+	process(Clocks.Clock4MHz) is
+		variable ResetShifter : std_ulogic_vector(15 downto 0) := X"FFFF";
+	begin
+		if rising_edge(Clocks.Clock4MHz) then
+			ResetShifter := '0' & ResetShifter(15 downto 1);
+		end if;
+		SystemReset <= to_boolean(ResetShifter(0));
+	end process;
+
 	CPU : entity work.CPUWrapper(Arch)
 	port map(
 		Clocks => Clocks,
+		Reset => SystemReset,
 		Inputs => CPUInputs,
-		Outputs => CPUOutputs);
+		Outputs => CPUOutputs,
+		DMAWrite => DMAWrite,
+		DMAAddress => DMAAddress,
+		DMADataWrite => DMADataWrite,
+		DMADataRead => DMADataRead);
 
 	CPUInputs.Ticks <= FiveMilliTicks;
 	CPUInputs.InterlockOverride <= InterlockOverridePin = '1';
+
+	DMA : entity work.DMAController(Arch)
+	port map(
+		Clock => Clocks.Clock40MHz,
+		Reset => SystemReset,
+		CPUInputs => CPUInputs.DMA,
+		CPUOutputs => CPUOutputs.DMA,
+		ReadRequests => DMAReadRequests,
+		ReadResponses => DMAReadResponses,
+		WriteRequests => DMAWriteRequests,
+		WriteResponses => DMAWriteResponses,
+		DMAWrite => DMAWrite,
+		DMAAddress => DMAAddress,
+		DMADataWrite => DMADataWrite,
+		DMADataRead => DMADataRead);
 
 	process(CPUOutputs.TestLEDsSoftware, CPUOutputs.TestLEDsValue, Halls, Encoders) is
 	begin
@@ -302,6 +349,7 @@ begin
 		WriteData => CPUOutputs.MRFDataWrite,
 		ReadData => CPUInputs.MRFDataRead,
 		Address => CPUOutputs.MRFAddress,
+		StrobeAddress => CPUOutputs.MRFStrobeAddress,
 		StrobeShortRead => CPUOutputs.MRFStrobeShortRead,
 		StrobeLongRead => CPUOutputs.MRFStrobeLongRead,
 		StrobeShortWrite => CPUOutputs.MRFStrobeShortWrite,
@@ -310,7 +358,9 @@ begin
 		CSPin => MRFCSPin,
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
-		MISOPin => MRFMISOPin);
+		MISOPin => MRFMISOPin,
+		DMAWriteRequest => DMAWriteRequests(DMA_WRITE_CHANNEL_MRF),
+		DMAWriteResponse => DMAWriteResponses(DMA_WRITE_CHANNEL_MRF));
 
 	CPUInputs.SDPresent <= to_boolean(SDPresentPin);
 	SDCSPin <= CPUOutputs.SDCS;

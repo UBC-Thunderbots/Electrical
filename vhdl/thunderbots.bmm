@@ -1,21 +1,21 @@
 ADDRESS_SPACE PMem RAMB16 [0x000000:0x007FFF]
 	BUS_BLOCK
-		CPU_Mram_PMem8  [7 :7];
-		CPU_Mram_PMem7  [6 :6];
-		CPU_Mram_PMem6  [5 :5];
-		CPU_Mram_PMem5  [4 :4];
-		CPU_Mram_PMem4  [3 :3];
-		CPU_Mram_PMem3  [2 :2];
-		CPU_Mram_PMem2  [1 :1];
-		CPU_Mram_PMem1  [0 :0];
-		CPU_Mram_PMem16 [15:15];
-		CPU_Mram_PMem15 [14:14];
-		CPU_Mram_PMem14 [13:13];
-		CPU_Mram_PMem13 [12:12];
-		CPU_Mram_PMem12 [11:11];
-		CPU_Mram_PMem11 [10:10];
-		CPU_Mram_PMem10 [9 :9];
-		CPU_Mram_PMem9  [8 :8];
+		CPU/Mram_PMem8  [7 :7];
+		CPU/Mram_PMem7  [6 :6];
+		CPU/Mram_PMem6  [5 :5];
+		CPU/Mram_PMem5  [4 :4];
+		CPU/Mram_PMem4  [3 :3];
+		CPU/Mram_PMem3  [2 :2];
+		CPU/Mram_PMem2  [1 :1];
+		CPU/Mram_PMem1  [0 :0];
+		CPU/Mram_PMem16 [15:15];
+		CPU/Mram_PMem15 [14:14];
+		CPU/Mram_PMem14 [13:13];
+		CPU/Mram_PMem13 [12:12];
+		CPU/Mram_PMem12 [11:11];
+		CPU/Mram_PMem11 [10:10];
+		CPU/Mram_PMem10 [9 :9];
+		CPU/Mram_PMem9  [8 :8];
 	END_BUS_BLOCK;
 END_ADDRESS_SPACE;
 

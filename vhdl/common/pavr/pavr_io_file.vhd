@@ -91,34 +91,39 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_SIM_MAGIC : natural := 16#07#;
 	constant IO_REG_SD_CTL : natural := 16#08#;
 	constant IO_REG_SD_DATA : natural := 16#09#;
-	constant IO_REG_ENCODER_LSB : natural := 16#0C#;
-	constant IO_REG_ENCODER_MSB : natural := 16#0D#;
-	constant IO_REG_ENCODER_FAIL : natural := 16#0E#;
-	constant IO_REG_ADC_LSB : natural := 16#0F#;
-	constant IO_REG_ADC_MSB : natural := 16#10#;
-	constant IO_REG_CHICKER_CTL : natural := 16#13#;
-	constant IO_REG_CHICKER_PULSE_LSB : natural := 16#14#;
-	constant IO_REG_CHICKER_PULSE_MSB : natural := 16#15#;
-	constant IO_REG_FLASH_CTL : natural := 16#16#;
-	constant IO_REG_FLASH_DATA : natural := 16#17#;
-	constant IO_REG_MRF_CTL : natural := 16#18#;
-	constant IO_REG_MRF_DATA : natural := 16#19#;
-	constant IO_REG_MRF_ADDR : natural := 16#1A#;
-	constant IO_REG_LPS_CTL : natural := 16#1B#;
-	constant IO_REG_DEVICE_ID0 : natural := 16#1C#;
-	constant IO_REG_DEVICE_ID1 : natural := 16#1D#;
-	constant IO_REG_DEVICE_ID2 : natural := 16#1E#;
-	constant IO_REG_DEVICE_ID3 : natural := 16#1F#;
-	constant IO_REG_DEVICE_ID4 : natural := 16#20#;
-	constant IO_REG_DEVICE_ID5 : natural := 16#21#;
-	constant IO_REG_DEVICE_ID6 : natural := 16#22#;
-	constant IO_REG_DEVICE_ID_STATUS : natural := 16#23#;
-	constant IO_REG_LFSR : natural := 16#24#;
-	constant IO_REG_DEBUG_CTL : natural := 16#25#;
-	constant IO_REG_DEBUG_DATA : natural := 16#26#;
-	constant IO_REG_ICAP_CTL : natural := 16#27#;
-	constant IO_REG_ICAP_LSB : natural := 16#28#;
-	constant IO_REG_ICAP_MSB : natural := 16#29#;
+	constant IO_REG_ENCODER_LSB : natural := 16#0A#;
+	constant IO_REG_ENCODER_MSB : natural := 16#0B#;
+	constant IO_REG_ENCODER_FAIL : natural := 16#0C#;
+	constant IO_REG_ADC_LSB : natural := 16#0D#;
+	constant IO_REG_ADC_MSB : natural := 16#0E#;
+	constant IO_REG_CHICKER_CTL : natural := 16#0F#;
+	constant IO_REG_CHICKER_PULSE_LSB : natural := 16#10#;
+	constant IO_REG_CHICKER_PULSE_MSB : natural := 16#11#;
+	constant IO_REG_FLASH_CTL : natural := 16#12#;
+	constant IO_REG_FLASH_DATA : natural := 16#13#;
+	constant IO_REG_MRF_CTL : natural := 16#14#;
+	constant IO_REG_MRF_DATA : natural := 16#15#;
+	constant IO_REG_MRF_ADDR : natural := 16#16#;
+	constant IO_REG_LPS_CTL : natural := 16#17#;
+	constant IO_REG_DEVICE_ID0 : natural := 16#18#;
+	constant IO_REG_DEVICE_ID1 : natural := 16#19#;
+	constant IO_REG_DEVICE_ID2 : natural := 16#1A#;
+	constant IO_REG_DEVICE_ID3 : natural := 16#1B#;
+	constant IO_REG_DEVICE_ID4 : natural := 16#1C#;
+	constant IO_REG_DEVICE_ID5 : natural := 16#1D#;
+	constant IO_REG_DEVICE_ID6 : natural := 16#1E#;
+	constant IO_REG_DEVICE_ID_STATUS : natural := 16#1F#;
+	constant IO_REG_LFSR : natural := 16#20#;
+	constant IO_REG_DEBUG_CTL : natural := 16#21#;
+	constant IO_REG_DEBUG_DATA : natural := 16#22#;
+	constant IO_REG_ICAP_CTL : natural := 16#23#;
+	constant IO_REG_ICAP_LSB : natural := 16#24#;
+	constant IO_REG_ICAP_MSB : natural := 16#25#;
+	constant IO_REG_DMA_CHANNEL : natural := 16#26#;
+	constant IO_REG_DMA_PTRL : natural := 16#27#;
+	constant IO_REG_DMA_PTRH : natural := 16#28#;
+	constant IO_REG_DMA_COUNT : natural := 16#29#;
+	constant IO_REG_DMA_CTL : natural := 16#2A#;
 	constant OBufResetValues : work.types.cpu_outputs_t := (
 		RadioLED => false,
 		TestLEDsSoftware => true,
@@ -139,6 +144,7 @@ architecture pavr_iof_arch of pavr_iof is
 		MRFWake => '0',
 		MRFDataWrite => X"00",
 		MRFAddress => (others => '0'),
+		MRFStrobeAddress => false,
 		MRFStrobeShortRead => false,
 		MRFStrobeLongRead => false,
 		MRFStrobeShortWrite => false,
@@ -153,7 +159,8 @@ architecture pavr_iof_arch of pavr_iof is
 		DebugStrobe => false,
 		ICAPData => X"0000",
 		ICAPStrobe => false,
-		SimMagic => X"00");
+		SimMagic => X"00",
+		DMA => (others => (Value => X"00", StrobePointerLow => false, StrobePointerHigh => false, StrobeCount => false, StrobeEnable => false)));
 	signal OBuf : work.types.cpu_outputs_t := OBufResetValues;
 
 	signal RadioLEDLevel : boolean := false;
@@ -172,6 +179,8 @@ architecture pavr_iof_arch of pavr_iof is
 	signal EncoderIndex : natural range 0 to 3 := 0;
 
 	signal MCP3008Latch : std_ulogic_vector(9 downto 0);
+
+	signal DMAChannel : natural range 0 to DMAChannels - 1;
 
 	-- Temporary stuff
 	signal TempDI : std_ulogic_vector(7 downto 0);
@@ -234,6 +243,7 @@ begin
 			OBuf.StartKick <= false;
 			OBuf.StartChip <= false;
 			OBuf.FlashStrobe <= false;
+			OBuf.MRFStrobeAddress <= false;
 			OBuf.MRFStrobeShortRead <= false;
 			OBuf.MRFStrobeLongRead <= false;
 			OBuf.MRFStrobeShortWrite <= false;
@@ -242,6 +252,9 @@ begin
 			OBuf.LFSRTick <= false;
 			OBuf.DebugStrobe <= false;
 			OBuf.ICAPStrobe <= false;
+			for Channel in 0 to DMAChannels - 1 loop
+				OBuf.DMA(Channel) <= (Value => TempDI, StrobePointerLow => false, StrobePointerHigh => false, StrobeCount => false, StrobeEnable => false);
+			end loop;
 
 			TempDO := X"00";
 
@@ -337,6 +350,16 @@ begin
 							TempDO := OBuf.ICAPData(7 downto 0);
 						when IO_REG_ICAP_MSB =>
 							TempDO := OBuf.ICAPData(15 downto 8);
+						when IO_REG_DMA_CHANNEL =>
+							TempDO := std_ulogic_vector(to_unsigned(DMAChannel, 8));
+						when IO_REG_DMA_PTRL =>
+							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Pointer mod 256, 8));
+						when IO_REG_DMA_PTRH =>
+							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Pointer / 256, 8));
+						when IO_REG_DMA_COUNT =>
+							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Count, 8));
+						when IO_REG_DMA_CTL =>
+							TempDO := "0000000" & to_stdulogic(Inputs.DMA(DMAChannel).Enabled);
 						when pavr_sreg_addr =>
 							TempDO := std_ulogic_vector(pavr_iof_sreg_int);
 						when pavr_sph_addr =>
@@ -443,6 +466,7 @@ begin
 							OBuf.MRFDataWrite <= TempDI;
 						when IO_REG_MRF_ADDR =>
 							OBuf.MRFAddress <= OBuf.MRFAddress(OBuf.MRFAddress'high - 8 downto 0) & TempDI;
+							OBuf.MRFStrobeAddress <= true;
 						when IO_REG_LPS_CTL =>
 							OBuf.LPSDrives <= TempDI(3 downto 0);
 						when IO_REG_DEVICE_ID0 =>
@@ -466,6 +490,16 @@ begin
 							OBuf.ICAPStrobe <= true;
 						when IO_REG_ICAP_MSB =>
 							OBuf.ICAPData(15 downto 8) <= TempDI;
+						when IO_REG_DMA_CHANNEL =>
+							DMAChannel <= to_integer(unsigned(TempDI));
+						when IO_REG_DMA_PTRL =>
+							OBuf.DMA(DMAChannel).StrobePointerLow <= true;
+						when IO_REG_DMA_PTRH =>
+							OBuf.DMA(DMAChannel).StrobePointerHigh <= true;
+						when IO_REG_DMA_COUNT =>
+							OBuf.DMA(DMAChannel).StrobeCount <= true;
+						when IO_REG_DMA_CTL =>
+							OBuf.DMA(DMAChannel).StrobeEnable <= to_boolean(TempDI(0));
 						when pavr_sreg_addr =>
 							pavr_iof_sreg_int <= std_logic_vector(TempDI);
 						when pavr_sph_addr =>

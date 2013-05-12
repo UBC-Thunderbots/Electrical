@@ -4,6 +4,7 @@ vhdl work common/clock.vhd
 vhdl work common/commutator.vhd
 vhdl work common/cpuwrapper.vhd
 vhdl work common/crc16.vhd
+vhdl work common/dmacontroller.vhd
 vhdl work common/downclock.vhd
 vhdl work common/encoderfail.vhd
 vhdl work common/graycounter.vhd

@@ -56,7 +56,11 @@ entity pavr_dm is
       pavr_dm_wr:   in  std_logic;
       pavr_dm_addr: in  std_logic_vector(pavr_dm_addr_w - 1 downto 0);
       pavr_dm_di:   in  std_logic_vector(7 downto 0);
-      pavr_dm_do:   out std_logic_vector(7 downto 0)
+      pavr_dm_do:   out std_logic_vector(7 downto 0);
+      pavr_dm_wr2:  in  std_logic;
+      pavr_dm_addr2:in  std_logic_vector(pavr_dm_addr_w - 1 downto 0);
+      pavr_dm_di2:  in  std_logic_vector(7 downto 0);
+      pavr_dm_do2:  out std_logic_vector(7 downto 0)
    );
 end;
 
@@ -73,6 +77,11 @@ begin
          pavr_dm_do <= data_array(std_logic_vector_to_nat(pavr_dm_addr));
       else
          data_array(std_logic_vector_to_nat(pavr_dm_addr)) <= pavr_dm_di;
+      end if;
+      if (pavr_dm_wr2 = '0') then
+         pavr_dm_do2 <= data_array(std_logic_vector_to_nat(pavr_dm_addr2));
+      else
+         data_array(std_logic_vector_to_nat(pavr_dm_addr2)) <= pavr_dm_di2;
       end if;
    end process;
 end;

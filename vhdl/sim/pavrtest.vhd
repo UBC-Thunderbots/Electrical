@@ -36,7 +36,8 @@ architecture Behavioural of PAVRTest is
 		DeviceIDReady => true,
 		LFSRBit => '0',
 		DebugBusy => false,
-		ICAPBusy => false);
+		ICAPBusy => false,
+		DMA => (others => (Pointer => 0, Count => 0, Enabled => false)));
 
 	signal Done : boolean := false;
 	signal Clock : std_ulogic := '1';
@@ -44,6 +45,10 @@ architecture Behavioural of PAVRTest is
 	signal PMAddressU : std_ulogic_vector(21 downto 0) := (others => '0');
 	subtype pm_address_t is natural range 0 to 2 ** 14 - 1;
 	signal PMData : std_ulogic_vector(15 downto 0) := X"0000";
+	signal DMAWrite : std_ulogic := '0';
+	signal DMAAddress : std_ulogic_vector(11 downto 0) := X"000";
+	signal DMADataWrite : std_ulogic_vector(7 downto 0) := X"00";
+	signal DMADataRead : std_ulogic_vector(7 downto 0);
 	signal Inputs : work.types.cpu_inputs_t;
 	signal Outputs : work.types.cpu_outputs_t;
 
@@ -72,6 +77,10 @@ begin
 		std_ulogic_vector(pavr_pm_addr) => PMAddressU,
 		pavr_pm_do => std_logic_vector(PMData),
 		pavr_pm_wr => open,
+		pavr_dma_wr => DMAWrite,
+		pavr_dma_addr => std_logic_vector(DMAAddress),
+		pavr_dma_di => std_logic_vector(DMADataWrite),
+		std_ulogic_vector(pavr_dma_do) => DMADataRead,
 		Inputs => Inputs,
 		Outputs => Outputs,
 		pavr_inc_instr_cnt => open);

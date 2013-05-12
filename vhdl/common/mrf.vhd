@@ -1,4 +1,5 @@
 library ieee;
+use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 use work.types.all;
 
@@ -10,6 +11,7 @@ entity MRF is
 		WriteData : in std_ulogic_vector(7 downto 0);
 		ReadData : out std_ulogic_vector(7 downto 0);
 		Address : in std_ulogic_vector(9 downto 0);
+		StrobeAddress : in boolean;
 		StrobeShortRead : in boolean;
 		StrobeLongRead : in boolean;
 		StrobeShortWrite : in boolean;
@@ -18,7 +20,9 @@ entity MRF is
 		CSPin : out std_ulogic;
 		ClockPin : out std_ulogic;
 		MOSIPin : out std_ulogic;
-		MISOPin : in std_ulogic);
+		MISOPin : in std_ulogic;
+		DMAWriteRequest : out dmaw_request_t := (Write => false, Data => X"00");
+		DMAWriteResponse : in dmaw_response_t);
 end entity MRF;
 
 architecture Arch of MRF is
@@ -26,6 +30,7 @@ architecture Arch of MRF is
 	signal State : state_t := IDLE;
 	signal Write : boolean;
 
+	signal AddressLatch : std_ulogic_vector(9 downto 0);
 	signal CS : boolean := false;
 	signal CSDelayed : boolean := false;
 	signal SPIStrobe : boolean := false;
@@ -37,11 +42,16 @@ begin
 	begin
 		if rising_edge(HostClock) then
 			SPIStrobe <= false;
+			DMAWriteRequest.Write <= false;
+
+			if StrobeAddress then
+				AddressLatch <= Address;
+			end if;
 
 			if not SPIBusy and CS = CSDelayed then
 				case State is
 					when IDLE =>
-						if StrobeShortRead or StrobeLongRead or StrobeShortWrite or StrobeLongWrite then
+						if StrobeShortRead or StrobeLongRead or StrobeShortWrite or StrobeLongWrite or DMAWriteResponse.Ready then
 							CS <= true;
 							if StrobeShortRead or StrobeShortWrite then
 								State <= ADDR_SHORT;
@@ -53,17 +63,17 @@ begin
 
 					when ADDR_MSB =>
 						SPIStrobe <= true;
-						SPIWriteData <= '1' & Address(9 downto 3);
+						SPIWriteData <= '1' & AddressLatch(9 downto 3);
 						State <= ADDR_LSB;
 
 					when ADDR_LSB =>
 						SPIStrobe <= true;
-						SPIWriteData <= Address(2 downto 0) & to_stdulogic(Write) & "0000";
+						SPIWriteData <= AddressLatch(2 downto 0) & to_stdulogic(Write) & "0000";
 						State <= DATA;
 
 					when ADDR_SHORT =>
 						SPIStrobe <= true;
-						SPIWriteData <= "0" & Address(5 downto 0) & to_stdulogic(Write);
+						SPIWriteData <= "0" & AddressLatch(5 downto 0) & to_stdulogic(Write);
 						State <= DATA;
 
 					when DATA =>
@@ -74,7 +84,10 @@ begin
 					when POST_DATA =>
 						CS <= false;
 						ReadData <= SPIReadData;
+						DMAWriteRequest.Data <= SPIReadData;
+						DMAWriteRequest.Write <= DMAWriteResponse.Ready;
 						State <= IDLE;
+						AddressLatch <= std_ulogic_vector(unsigned(AddressLatch) + 1);
 				end case;
 			end if;
 		end if;
