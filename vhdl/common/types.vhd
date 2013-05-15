@@ -10,6 +10,8 @@ package types is
 	end record;
 	type mcp3008s_t is array(0 to 7) of mcp3008_t;
 
+	subtype laser_diff_t is integer range -mcp3008_value_t'high to mcp3008_value_t'high;
+
 	subtype battery_voltage_t is mcp3008_value_t;
 	subtype capacitor_voltage_t is mcp3008_value_t;
 
@@ -85,6 +87,9 @@ package types is
 		-- ADC readings
 		MCP3008 : mcp3008s_t;
 
+		-- Laser Difference
+		LaserDiff : laser_diff_t;
+
 		-- Chicker status
 		ChickerPresent : boolean;
 		ChargeDone : boolean;
@@ -130,7 +135,6 @@ package types is
 		TestLEDsValue : std_ulogic_vector(4 downto 0);
 
 		-- Power control
-		PowerLaser : boolean;
 		PowerMotors : boolean;
 		PowerLogic : boolean;
 

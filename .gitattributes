@@ -278,6 +278,7 @@ vhdl/common/clock.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/cpuwrapper.vhd -text
 vhdl/common/crc16.vhd -text
+vhdl/common/deltalaser.vhd -text
 vhdl/common/dmacontroller.vhd -text
 vhdl/common/downclock.vhd -text
 vhdl/common/encoderfail.vhd -text

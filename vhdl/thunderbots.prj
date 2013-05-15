@@ -13,6 +13,7 @@ vhdl work common/mrf.vhd
 vhdl work common/motor.vhd
 vhdl work common/pwm.vhd
 vhdl work common/types.vhd
+vhdl work common/deltalaser.vhd
 vhdl work common/pavr/std_util.vhd
 vhdl work common/pavr/pavr_util.vhd
 vhdl work common/pavr/pavr_constants.vhd

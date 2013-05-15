@@ -44,6 +44,7 @@ ghdl/obj/mrf.o : ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/pwm.o ghdl/obj/types.o
 ghdl/obj/pwm.o :
 ghdl/obj/types.o : ghdl/obj/pavr_constants.o
+ghdl/obj/deltalaser.o : ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/pavr_alu.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
 ghdl/obj/pavr_constants.o : ghdl/obj/pavr_util.o ghdl/obj/std_util.o
 ghdl/obj/pavr_control.o : ghdl/obj/pavr_alu.o ghdl/obj/pavr_constants.o ghdl/obj/pavr_data_mem.o ghdl/obj/pavr_io_file.o ghdl/obj/pavr_register_file.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o ghdl/obj/types.o

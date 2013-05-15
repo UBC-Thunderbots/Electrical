@@ -124,11 +124,13 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_DMA_PTRH : natural := 16#28#;
 	constant IO_REG_DMA_COUNT : natural := 16#29#;
 	constant IO_REG_DMA_CTL : natural := 16#2A#;
+	constant IO_REG_BREAKBEAM_DIFF_L : natural := 16#2B#;
+	constant IO_REG_BREAKBEAM_DIFF_H : natural := 16#2C#;
+
 	constant OBufResetValues : work.types.cpu_outputs_t := (
 		RadioLED => false,
 		TestLEDsSoftware => true,
 		TestLEDsValue => (others => '0'),
-		PowerLaser => false,
 		PowerMotors => false,
 		PowerLogic => true,
 		MotorsControl => (others => (Phases => (others => FLOAT), AutoCommutate => false, Direction => false, Power => 0)),
@@ -182,6 +184,8 @@ architecture pavr_iof_arch of pavr_iof is
 
 	signal DMAChannel : natural range 0 to DMAChannels - 1;
 
+	signal BreakbeamLatch : std_ulogic_vector(15 downto 0);
+
 	-- Temporary stuff
 	signal TempDI : std_ulogic_vector(7 downto 0);
 begin
@@ -233,6 +237,7 @@ begin
 			EncodersCountLatch <= (others => 0);
 			EncoderIndex <= 0;
 			MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
+			BreakbeamLatch <= std_ulogic_vector(int_to_std_logic_vector(0, 16));
 		elsif rising_edge(pavr_iof_clk) then
 			pavr_iof_bitout <= '0';
 			pavr_int_rq  <= '0';
@@ -266,7 +271,7 @@ begin
 						when IO_REG_LED_CTL =>
 							TempDO := to_stdulogic(RadioLEDLevel) & '0' & to_stdulogic(OBuf.TestLEDsSoftware) & OBuf.TestLEDsValue;
 						when IO_REG_POWER_CTL =>
-							TempDO := "000" & to_stdulogic(Inputs.BreakoutPresent) & to_stdulogic(OBuf.PowerLaser) & to_stdulogic(Inputs.InterlockOverride) & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
+							TempDO := "000" & to_stdulogic(Inputs.BreakoutPresent) & "0" & to_stdulogic(Inputs.InterlockOverride) & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
 						when IO_REG_TICKS =>
 							TempDO := std_ulogic_vector(to_unsigned(Inputs.Ticks, 8));
 						when IO_REG_MOTOR_INDEX =>
@@ -360,6 +365,10 @@ begin
 							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Count, 8));
 						when IO_REG_DMA_CTL =>
 							TempDO := "0000000" & to_stdulogic(Inputs.DMA(DMAChannel).Enabled);
+						when IO_REG_BREAKBEAM_DIFF_L =>
+							TempDO := BreakbeamLatch(7 downto 0);
+						when IO_REG_BREAKBEAM_DIFF_H =>
+							TempDO := BreakbeamLatch(15 downto 8);
 						when pavr_sreg_addr =>
 							TempDO := std_ulogic_vector(pavr_iof_sreg_int);
 						when pavr_sph_addr =>
@@ -392,7 +401,6 @@ begin
 							OBuf.TestLEDsSoftware <= to_boolean(TempDI(5));
 							OBuf.TestLEDsValue <= TempDI(4 downto 0);
 						when IO_REG_POWER_CTL =>
-							OBuf.PowerLaser <= to_boolean(TempDI(3));
 							OBuf.PowerMotors <= to_boolean(TempDI(1));
 							OBuf.PowerLogic <= to_boolean(TempDI(0));
 						when IO_REG_TICKS =>
@@ -500,6 +508,9 @@ begin
 							OBuf.DMA(DMAChannel).StrobeCount <= true;
 						when IO_REG_DMA_CTL =>
 							OBuf.DMA(DMAChannel).StrobeEnable <= to_boolean(TempDI(0));
+						when IO_REG_BREAKBEAM_DIFF_L =>
+							BreakbeamLatch <= std_ulogic_vector(to_signed(Inputs.LaserDiff, 16));
+						when IO_REG_BREAKBEAM_DIFF_H =>
 						when pavr_sreg_addr =>
 							pavr_iof_sreg_int <= std_logic_vector(TempDI);
 						when pavr_sph_addr =>

@@ -19,6 +19,7 @@ architecture Behavioural of PAVRTest is
 		EncodersCount => (others => 0),
 		EncodersFail => (others => false),
 		MCP3008 => (others => (Value => 0, Strobe => false)),
+		LaserDiff => 0,
 		ChickerPresent => false,
 		ChargeDone => false,
 		ChargeTimeout => false,

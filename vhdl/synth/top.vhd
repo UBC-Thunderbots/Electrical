@@ -137,6 +137,13 @@ begin
 		DMADataWrite => DMADataWrite,
 		DMADataRead => DMADataRead);
 
+	LaserDiff : entity work.DeltaLaser(Arch)
+	port map(
+		Clock => Clocks,
+		Input => CPUInputs.MCP3008(7),
+		Difference => CPUInputs.LaserDiff,
+		to_stdulogic(Laser) => LaserPowerPin);
+
 	CPUInputs.Ticks <= FiveMilliTicks;
 	CPUInputs.InterlockOverride <= InterlockOverridePin = '1';
 
@@ -181,7 +188,6 @@ begin
 	RadioLEDPin <= '1' when CPUOutputs.RadioLED else '0';
 	LogicPowerPin <= '1' when CPUOutputs.PowerLogic else '0';
 	HVPowerPin <= '1' when CPUOutputs.PowerMotors else '0';
-	LaserPowerPin <= '1' when CPUOutputs.PowerLaser else '0';
 	LPSDrivesPin <= CPUOutputs.LPSDrives;
 
 	CPUInputs.BreakoutPresent <= to_boolean(BreakoutPresentPin);
