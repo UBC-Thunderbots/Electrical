@@ -19,14 +19,7 @@ architecture Arch of AsyncSerialTransmitter is
 	signal Shifter : std_ulogic_vector(8 downto 0);
 	signal Counter : natural range 0 to 11;
 begin
-	process(HostClock) is
-	begin
-		if rising_edge(HostClock) then
-			if Strobe then
-				StrobeX <= not StrobeY;
-			end if;
-		end if;
-	end process;
+	StrobeX <= not StrobeY when rising_edge(HostClock) and Strobe;
 
 	process(BusClock) is
 		subtype divider_t is natural range 0 to BusClockDivider - 1;

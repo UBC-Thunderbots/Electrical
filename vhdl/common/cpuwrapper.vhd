@@ -65,13 +65,7 @@ begin
 		Outputs => Outputs,
 		pavr_inc_instr_cnt => open);
 
-	PMemAddress <= to_integer(PMemAddressU);
-
 	-- Provide the CPU with access to program memory
-	process(Clocks.Clock40MHz) is
-	begin
-		if rising_edge(Clocks.Clock40MHz) then
-			PMemData <= PMem(PMemAddress);
-		end if;
-	end process;
+	PMemAddress <= to_integer(PMemAddressU);
+	PMemData <= PMem(PMemAddress) when rising_edge(Clocks.Clock40MHz);
 end architecture Arch;

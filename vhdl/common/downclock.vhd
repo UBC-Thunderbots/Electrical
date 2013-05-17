@@ -13,20 +13,7 @@ architecture Arch of DownClock is
 	signal DiffIn : boolean := false;
 	signal DiffOut : boolean := false;
 begin
-	process(HighClock) is
-	begin
-		if rising_edge(HighClock) then
-			if StrobeIn then
-				DiffIn <= not DiffOut;
-			end if;
-		end if;
-	end process;
-
-	process(LowClock) is
-	begin
-		if rising_edge(LowClock) then
-			StrobeOut <= DiffIn /= DiffOut;
-			DiffOut <= DiffIn;
-		end if;
-	end process;
+	DiffIn <= not DiffOut when rising_edge(HighClock) and StrobeIn;
+	StrobeOut <= DiffIn /= DiffOut when rising_edge(LowClock);
+	DiffOut <= DiffIn when rising_edge(LowClock);
 end architecture Arch;
