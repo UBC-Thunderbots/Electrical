@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 09 Mar 2013 03:28:06 PM PST
+EESchema Schematic File Version 2  date Sat 11 May 2013 08:10:16 PM PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:lateral_sensor-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "9 mar 2013"
+Date "12 may 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -418,7 +419,7 @@ L R R2
 U 1 1 4B1F474B
 P 6900 2500
 F 0 "R2" V 6980 2500 50  0000 C CNN
-F 1 "5R" V 6900 2500 50  0000 C CNN
+F 1 "3.3Ohms" V 6900 2500 50  0000 C CNN
 	1    6900 2500
 	1    0    0    -1  
 $EndComp
@@ -427,7 +428,7 @@ L R R1
 U 1 1 4B1F4749
 P 6900 1850
 F 0 "R1" V 6980 1850 50  0000 C CNN
-F 1 "88R" V 6900 1850 50  0000 C CNN
+F 1 "1.5kOhms" V 6900 1850 50  0000 C CNN
 	1    6900 1850
 	1    0    0    -1  
 $EndComp
