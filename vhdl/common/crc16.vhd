@@ -1,8 +1,8 @@
 ----------------------------------------------------------------------------------
 -- Engineer: Koko
--- Create Date:    22:23:36 05/03/2013 
+-- Create Date:	22:23:36 05/03/2013 
 -- Design Name: 
--- Module Name:    CRC16 - Behav
+-- Module Name:	CRC16 - Behav
 -- 
 -- This CRC16 module implement generator polynomial 
 -- x^16 + x^12 + x^5 + x^1
@@ -10,61 +10,55 @@
 -- 	1.	Datasheet/sdcard/part1_410.pdf section 4.5 
 --	2. 	wikipedia Computation of CRC/parallel implementation
 ----------------------------------------------------------------------------------
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std;
 
-entity crc16 is
-    Port ( 	data_in : in  STD_LOGIC_VECTOR (7 downto 0);
-           	clock 	: in  STD_LOGIC;
-           	clear 	: in  STD_LOGIC;
-		enable 	: in STD_LOGIC;
-           	checksum : out  STD_LOGIC_VECTOR (15 downto 0));
-end crc16;
+entity CRC16 is
+	port(
+		Clock : in std_ulogic;
+		Data : in std_ulogic_vector(7 downto 0);
+		Clear : in boolean;
+		Enable : in boolean;
+		Checksum : out std_ulogic_vector(15 downto 0));
+end entity CRC16;
 
-architecture Behav of crc16 is
-	
+architecture Arch of CRC16 is
 begin
-	Process(clock, clear, data_in) is
-		variable interm : STD_LOGIC_VECTOR (7 downto 0);
-		variable next_check : STD_LOGIC_VECTOR (15 downto 0);
-		variable last_check : STD_LOGIC_VECTOR (15 downto 0);
-		variable interm_parity : STD_LOGIC;
+	process(Clock) is
+		variable Interm : std_ulogic_vector(7 downto 0);
+		variable NextCheck : std_ulogic_vector(15 downto 0);
+		variable LastCheck : std_ulogic_vector(15 downto 0);
+		variable IntermParity : std_ulogic;
 	begin
-		if (clock' event and clock = '1') then
-			if enable = '1' then 
-			last_check := next_check;
-			interm := data_in xor next_check(15 downto 8);
-				
-			-- refer to 
-			next_check(0) := interm(4) xor interm(0);
-			next_check(1) := interm(5) xor interm(1);
-			next_check(2) := interm(6) xor interm(2);
-			next_check(3) := interm(7) xor interm(3);
-			next_check(4) := interm(4);
-			next_check(5) := interm(5) xor interm(4) xor interm(0);
-			next_check(6) := interm(6) xor interm(5) xor interm(1);
-			next_check(7) := interm(7) xor interm(6) xor interm(2);
-			next_check(8) := last_check(0) xor interm(7) xor interm(3);
-			next_check(9) := last_check(1) xor interm(4);
-			next_check(10) := last_check(2) xor interm(5);
-			next_check(11) := last_check(3) xor interm(6);
-			next_check(12) := last_check(4) xor interm(7) xor interm(4) xor interm(0);
-			next_check(13) := last_check(5) xor interm(5) xor interm(1);
-			next_check(14) := last_check(6) xor interm(6) xor interm(2);
-			next_check(15) := last_check(7) xor interm(7) xor interm(3);
-			
-			checksum <= next_check;
-			end if;
+		if rising_edge(Clock) then
+			if Clear then
+				Checksum <= "0000000000000000";
+				NextCheck := "0000000000000000";
+			elsif Enable then
+				LastCheck := NextCheck;
+				Interm := Data xor NextCheck(15 downto 8);
 
-			if clear = '1' then
-				checksum <= "0000000000000000";
-				next_check := "0000000000000000";
+				-- refer to 
+				NextCheck(0) := Interm(4) xor Interm(0);
+				NextCheck(1) := Interm(5) xor Interm(1);
+				NextCheck(2) := Interm(6) xor Interm(2);
+				NextCheck(3) := Interm(7) xor Interm(3);
+				NextCheck(4) := Interm(4);
+				NextCheck(5) := Interm(5) xor Interm(4) xor Interm(0);
+				NextCheck(6) := Interm(6) xor Interm(5) xor Interm(1);
+				NextCheck(7) := Interm(7) xor Interm(6) xor Interm(2);
+				NextCheck(8) := LastCheck(0) xor Interm(7) xor Interm(3);
+				NextCheck(9) := LastCheck(1) xor Interm(4);
+				NextCheck(10) := LastCheck(2) xor Interm(5);
+				NextCheck(11) := LastCheck(3) xor Interm(6);
+				NextCheck(12) := LastCheck(4) xor Interm(7) xor Interm(4) xor Interm(0);
+				NextCheck(13) := LastCheck(5) xor Interm(5) xor Interm(1);
+				NextCheck(14) := LastCheck(6) xor Interm(6) xor Interm(2);
+				NextCheck(15) := LastCheck(7) xor Interm(7) xor Interm(3);
+
+				Checksum <= NextCheck;
 			end if;
 		end if;
-
 	end process;
-
-end Behav;
-
-
+end architecture Arch;
