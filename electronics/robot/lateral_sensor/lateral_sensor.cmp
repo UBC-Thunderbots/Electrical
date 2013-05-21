@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Sat 18 May 2013 11:32:31 PM PDT
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 03/11/2012 13:03:33
 
 BeginCmp
 TimeStamp = /50957676;
@@ -8,51 +8,23 @@ IdModule  = SM1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /4B27D6A6;
-Reference = LPS0;
-ValeurCmp = OPB733TR;
-IdModule  = OPB733T;
-EndCmp
-
-BeginCmp
-TimeStamp = /4B27D7A5;
-Reference = LPS1;
-ValeurCmp = OPB733TR;
-IdModule  = OPB733T;
-EndCmp
-
-BeginCmp
-TimeStamp = /4B27D7B8;
-Reference = LPS2;
-ValeurCmp = OPB733TR;
-IdModule  = OPB733T;
-EndCmp
-
-BeginCmp
-TimeStamp = /4B27D7C7;
-Reference = LPS3;
-ValeurCmp = OPB733TR;
-IdModule  = OPB733T;
-EndCmp
-
-BeginCmp
 TimeStamp = /509574B0;
 Reference = P1;
 ValeurCmp = CONN_7;
-IdModule  = WM7625CT-ND;
+IdModule  = WM7624CT-ND;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B1F4749;
 Reference = R1;
-ValeurCmp = 1.5kOhms;
+ValeurCmp = 88R;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4B1F474B;
 Reference = R2;
-ValeurCmp = 3.3Ohms;
+ValeurCmp = 5R;
 IdModule  = SM0805;
 EndCmp
 
@@ -89,6 +61,34 @@ TimeStamp = /4B1F46E6;
 Reference = U1;
 ValeurCmp = MIC7300;
 IdModule  = SOT23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D6A6;
+Reference = U3;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7A5;
+Reference = U5;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7B8;
+Reference = U7;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
+EndCmp
+
+BeginCmp
+TimeStamp = /4B27D7C7;
+Reference = U9;
+ValeurCmp = OPB733TR;
+IdModule  = OPB733T;
 EndCmp
 
 EndListe
