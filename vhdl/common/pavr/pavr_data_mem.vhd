@@ -67,22 +67,28 @@ end;
 
 
 architecture pavr_dm_arch of pavr_dm is
-   type tdata_array is array (0 to pavr_dm_len - 1) of std_logic_vector(7 downto 0);
-   signal data_array: tdata_array;
+	type tdata_array is array (0 to pavr_dm_len - 1) of std_logic_vector(7 downto 0);
+	shared variable data_array: tdata_array;
 begin
-   process
-   begin
-      wait until pavr_dm_clk'event and pavr_dm_clk='1';
-      if (pavr_dm_wr = '0') then
-         pavr_dm_do <= data_array(std_logic_vector_to_nat(pavr_dm_addr));
-      else
-         data_array(std_logic_vector_to_nat(pavr_dm_addr)) <= pavr_dm_di;
-      end if;
-      if (pavr_dm_wr2 = '0') then
-         pavr_dm_do2 <= data_array(std_logic_vector_to_nat(pavr_dm_addr2));
-      else
-         data_array(std_logic_vector_to_nat(pavr_dm_addr2)) <= pavr_dm_di2;
-      end if;
-   end process;
+	pavr_dm_do <= data_array(std_logic_vector_to_nat(pavr_dm_addr)) when rising_edge(pavr_dm_clk);
+	pavr_dm_do2 <= data_array(std_logic_vector_to_nat(pavr_dm_addr2)) when rising_edge(pavr_dm_clk);
+
+	process(pavr_dm_clk) is
+	begin
+		if rising_edge(pavr_dm_clk) then
+			if pavr_dm_wr = '1' then
+				data_array(std_logic_vector_to_nat(pavr_dm_addr)) := pavr_dm_di;
+			end if;
+		end if;
+	end process;
+
+	process(pavr_dm_clk) is
+	begin
+		if rising_edge(pavr_dm_clk) then
+			if pavr_dm_wr2 = '1' then
+				data_array(std_logic_vector_to_nat(pavr_dm_addr2)) := pavr_dm_di2;
+			end if;
+		end if;
+	end process;
 end;
 -- </File body>
