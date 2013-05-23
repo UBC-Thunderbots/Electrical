@@ -222,6 +222,7 @@ begin
 			wait until rising_edge(Clock);
 		end loop;
 		assert Reader1ExpectedIndex = Reader1ExpectedLength severity failure;
+		assert RAM = ExpectedRAM severity failure;
 
 		Reader1WaitStates <= 4;
 		Writer1WaitStates <= 5;
@@ -251,6 +252,7 @@ begin
 			wait until rising_edge(Clock);
 		end loop;
 		assert Reader1ExpectedIndex = Reader1ExpectedLength severity failure;
+		assert RAM = ExpectedRAM severity failure;
 
 		Done <= true;
 		wait;
