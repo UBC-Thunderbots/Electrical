@@ -44,6 +44,7 @@ ghdl/obj/mcp3008.o : ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/mrf.o : ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/pwm.o ghdl/obj/types.o
 ghdl/obj/pwm.o :
+ghdl/obj/sd.o : ghdl/obj/spi.o ghdl/obj/types.o
 ghdl/obj/types.o : ghdl/obj/pavr_constants.o
 ghdl/obj/pavr_alu.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
 ghdl/obj/pavr_constants.o : ghdl/obj/pavr_util.o ghdl/obj/std_util.o

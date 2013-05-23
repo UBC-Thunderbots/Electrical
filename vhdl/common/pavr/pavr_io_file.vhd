@@ -295,7 +295,7 @@ begin
 						when IO_REG_SIM_MAGIC =>
 							TempDO := OBuf.SimMagic;
 						when IO_REG_SD_CTL =>
-							TempDO := "00000" & OBuf.SDCS & to_stdulogic(Inputs.SDPresent) & to_stdulogic(Inputs.SDBusy);
+							TempDO := "00" & to_stdulogic(Inputs.SDDRTUnknownError) & to_stdulogic(Inputs.SDDRTWriteError) & to_stdulogic(Inputs.SDDRTCRCError) & OBuf.SDCS & to_stdulogic(Inputs.SDPresent) & to_stdulogic(Inputs.SDBusy);
 						when IO_REG_SD_DATA =>
 							TempDO := Inputs.SDDataRead;
 						when IO_REG_ENCODER_LSB =>

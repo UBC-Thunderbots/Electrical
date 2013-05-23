@@ -110,6 +110,9 @@ package types is
 		SDBusy : boolean;
 		SDPresent : boolean;
 		SDDataRead : std_ulogic_vector(7 downto 0);
+		SDDRTCRCError : boolean;
+		SDDRTWriteError : boolean;
+		SDDRTUnknownError : boolean;
 
 		-- Device ID
 		DeviceID : std_ulogic_vector(55 downto 0);

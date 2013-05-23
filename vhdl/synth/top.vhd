@@ -66,7 +66,7 @@ entity Top is
 end entity Top;
 
 architecture Main of Top is
-	constant DMA_READ_CHANNEL_0 : natural := 0;
+	constant DMA_READ_CHANNEL_SD : natural := 0;
 	constant DMA_WRITE_CHANNEL_MRF : natural := 1;
 	constant DMA_WRITE_CHANNEL_2 : natural := 2;
 
@@ -370,18 +370,23 @@ begin
 
 	CPUInputs.SDPresent <= to_boolean(SDPresentPin);
 	SDCSPin <= CPUOutputs.SDCS;
-	SDSPI : entity work.SPI(Arch)
+	SD : entity work.SD(Arch)
 	port map(
 		HostClock => Clocks.Clock40MHz,
 		BusClock => Clocks.Clock4MHz,
 		BusClockI => Clocks.Clock4MHzI,
-		WriteData => CPUOutputs.SDDataWrite,
-		ReadData => CPUInputs.SDDataRead,
-		Strobe => CPUOutputs.SDStrobe,
+		PIOWriteData => CPUOutputs.SDDataWrite,
+		PIOReadData => CPUInputs.SDDataRead,
+		PIOStrobe => CPUOutputs.SDStrobe,
 		Busy => CPUInputs.SDBusy,
+		DRTCRCError => CPUInputs.SDDRTCRCError,
+		DRTWriteError => CPUInputs.SDDRTWriteError,
+		DRTUnknownError => CPUInputs.SDDRTUnknownError,
 		ClockPin => SDClockPin,
 		MOSIPin => SDMOSIPin,
-		MISOPin => SDMISOPin);
+		MISOPin => SDMISOPin,
+		DMAReadRequest => DMAReadRequests(DMA_READ_CHANNEL_SD),
+		DMAReadResponse => DMAReadResponses(DMA_READ_CHANNEL_SD));
 	
 	DNAPort : entity work.DeviceDNA
 	port map(
