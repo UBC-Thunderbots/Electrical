@@ -170,7 +170,11 @@ begin
 	process(Clock, DMADataRead) is
 	begin
 		if rising_edge(Clock) then
-			CorePostPipeline(0) <= CorePrePipeline(PrePipelineDepth - 1);
+			if Reset then
+				CorePostPipeline(0).Valid <= false;
+			else
+				CorePostPipeline(0) <= CorePrePipeline(PrePipelineDepth - 1);
+			end if;
 		end if;
 		CorePostPipeline(0).Data <= DMADataRead;
 	end process;
