@@ -110,7 +110,7 @@ architecture Arch of DMAController is
 	-- The pointer, count, and enable signals and the two-byte FIFOs for all channels.
 	type pointers_t is array(0 to DMAChannels - 1) of natural range 0 to pavr_dm_len - 1;
 	signal Pointers : pointers_t;
-	type counts_t is array(0 to DMAChannels - 1) of natural range 0 to 255;
+	type counts_t is array(0 to DMAChannels - 1) of natural range 0 to pavr_dm_len - 1;
 	signal Counts : counts_t;
 	type enables_t is array(0 to DMAChannels - 1) of boolean;
 	signal Enables : enables_t := (others => false);
@@ -206,7 +206,6 @@ begin
 
 	GenerateReadChannels : for Channel in 0 to DMAReadChannels - 1 generate
 		process(Clock) is
-			variable TempPointer : std_ulogic_vector(pavr_dm_addr_w - 1 downto 0);
 		begin
 			if rising_edge(Clock) then
 				-- Unless an operation is specifically issued, by default, we do not issue an operation.
@@ -253,16 +252,11 @@ begin
 						end if;
 					else
 						-- Allow the CPU to modify the transfer parameters.
-						TempPointer := std_ulogic_vector(to_unsigned(Pointers(Channel), pavr_dm_addr_w));
-						if CPUOutputs(Channel).StrobePointerLow then
-							TempPointer(7 downto 0) := CPUOutputs(Channel).Value;
+						if CPUOutputs(Channel).StrobePointerByte then
+							Pointers(Channel) <= (Pointers(Channel) * 256 + to_integer(unsigned(CPUOutputs(Channel).Value))) mod pavr_dm_len;
 						end if;
-						if CPUOutputs(Channel).StrobePointerHigh then
-							TempPointer(pavr_dm_addr_w - 1 downto 8) := CPUOutputs(Channel).Value(pavr_dm_addr_w - 9 downto 0);
-						end if;
-						Pointers(Channel) <= to_integer(unsigned(TempPointer));
-						if CPUOutputs(Channel).StrobeCount then
-							Counts(Channel) <= to_integer(unsigned(CPUOutputs(Channel).Value));
+						if CPUOutputs(Channel).StrobeCountByte then
+							Counts(Channel) <= (Counts(Channel) * 256 + to_integer(unsigned(CPUOutputs(Channel).Value))) mod pavr_dm_len;
 						end if;
 						if CPUOutputs(Channel).StrobeEnable then
 							Enables(Channel) <= true;
@@ -283,7 +277,6 @@ begin
 
 	GenerateWriteChannels : for Channel in DMAReadChannels to DMAChannels - 1 generate
 		process(Clock) is
-			variable TempPointer : std_ulogic_vector(pavr_dm_addr_w - 1 downto 0);
 		begin
 			if rising_edge(Clock) then
 				-- Unless an operation is specifically issued, by default, we do not issue an operation.
@@ -326,16 +319,11 @@ begin
 						end if;
 					else
 						-- Allow the CPU to modify the transfer parameters.
-						TempPointer := std_ulogic_vector(to_unsigned(Pointers(Channel), pavr_dm_addr_w));
-						if CPUOutputs(Channel).StrobePointerLow then
-							TempPointer(7 downto 0) := CPUOutputs(Channel).Value;
+						if CPUOutputs(Channel).StrobePointerByte then
+							Pointers(Channel) <= (Pointers(Channel) * 256 + to_integer(unsigned(CPUOutputs(Channel).Value))) mod pavr_dm_len;
 						end if;
-						if CPUOutputs(Channel).StrobePointerHigh then
-							TempPointer(pavr_dm_addr_w - 1 downto 8) := CPUOutputs(Channel).Value(pavr_dm_addr_w - 9 downto 0);
-						end if;
-						Pointers(Channel) <= to_integer(unsigned(TempPointer));
-						if CPUOutputs(Channel).StrobeCount then
-							Counts(Channel) <= to_integer(unsigned(CPUOutputs(Channel).Value));
+						if CPUOutputs(Channel).StrobeCountByte then
+							Counts(Channel) <= (Counts(Channel) * 256 + to_integer(unsigned(CPUOutputs(Channel).Value))) mod pavr_dm_len;
 						end if;
 						if CPUOutputs(Channel).StrobeEnable then
 							Enables(Channel) <= true;

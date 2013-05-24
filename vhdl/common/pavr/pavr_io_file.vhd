@@ -120,12 +120,11 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_ICAP_LSB : natural := 16#24#;
 	constant IO_REG_ICAP_MSB : natural := 16#25#;
 	constant IO_REG_DMA_CHANNEL : natural := 16#26#;
-	constant IO_REG_DMA_PTRL : natural := 16#27#;
-	constant IO_REG_DMA_PTRH : natural := 16#28#;
-	constant IO_REG_DMA_COUNT : natural := 16#29#;
-	constant IO_REG_DMA_CTL : natural := 16#2A#;
-	constant IO_REG_BREAKBEAM_DIFF_L : natural := 16#2B#;
-	constant IO_REG_BREAKBEAM_DIFF_H : natural := 16#2C#;
+	constant IO_REG_DMA_PTR : natural := 16#27#;
+	constant IO_REG_DMA_COUNT : natural := 16#28#;
+	constant IO_REG_DMA_CTL : natural := 16#29#;
+	constant IO_REG_BREAKBEAM_DIFF_L : natural := 16#2A#;
+	constant IO_REG_BREAKBEAM_DIFF_H : natural := 16#2B#;
 
 	constant OBufResetValues : work.types.cpu_outputs_t := (
 		RadioLED => false,
@@ -162,7 +161,7 @@ architecture pavr_iof_arch of pavr_iof is
 		ICAPData => X"0000",
 		ICAPStrobe => false,
 		SimMagic => X"00",
-		DMA => (others => (Value => X"00", StrobePointerLow => false, StrobePointerHigh => false, StrobeCount => false, StrobeEnable => false)));
+		DMA => (others => (Value => X"00", StrobePointerByte => false, StrobeCountByte => false, StrobeEnable => false)));
 	signal OBuf : work.types.cpu_outputs_t := OBufResetValues;
 
 	signal RadioLEDLevel : boolean := false;
@@ -258,7 +257,7 @@ begin
 			OBuf.DebugStrobe <= false;
 			OBuf.ICAPStrobe <= false;
 			for Channel in 0 to DMAChannels - 1 loop
-				OBuf.DMA(Channel) <= (Value => TempDI, StrobePointerLow => false, StrobePointerHigh => false, StrobeCount => false, StrobeEnable => false);
+				OBuf.DMA(Channel) <= (Value => TempDI, StrobePointerByte => false, StrobeCountByte => false, StrobeEnable => false);
 			end loop;
 
 			TempDO := X"00";
@@ -357,10 +356,6 @@ begin
 							TempDO := OBuf.ICAPData(15 downto 8);
 						when IO_REG_DMA_CHANNEL =>
 							TempDO := std_ulogic_vector(to_unsigned(DMAChannel, 8));
-						when IO_REG_DMA_PTRL =>
-							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Pointer mod 256, 8));
-						when IO_REG_DMA_PTRH =>
-							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Pointer / 256, 8));
 						when IO_REG_DMA_COUNT =>
 							TempDO := std_ulogic_vector(to_unsigned(Inputs.DMA(DMAChannel).Count, 8));
 						when IO_REG_DMA_CTL =>
@@ -500,12 +495,10 @@ begin
 							OBuf.ICAPData(15 downto 8) <= TempDI;
 						when IO_REG_DMA_CHANNEL =>
 							DMAChannel <= to_integer(unsigned(TempDI));
-						when IO_REG_DMA_PTRL =>
-							OBuf.DMA(DMAChannel).StrobePointerLow <= true;
-						when IO_REG_DMA_PTRH =>
-							OBuf.DMA(DMAChannel).StrobePointerHigh <= true;
+						when IO_REG_DMA_PTR =>
+							OBuf.DMA(DMAChannel).StrobePointerByte <= true;
 						when IO_REG_DMA_COUNT =>
-							OBuf.DMA(DMAChannel).StrobeCount <= true;
+							OBuf.DMA(DMAChannel).StrobeCountByte <= true;
 						when IO_REG_DMA_CTL =>
 							OBuf.DMA(DMAChannel).StrobeEnable <= to_boolean(TempDI(0));
 						when IO_REG_BREAKBEAM_DIFF_L =>

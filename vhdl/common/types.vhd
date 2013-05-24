@@ -59,9 +59,8 @@ package types is
 
 	type cpu_output_dma_info_t is record
 		Value : std_ulogic_vector(7 downto 0);
-		StrobePointerLow : boolean;
-		StrobePointerHigh : boolean;
-		StrobeCount : boolean;
+		StrobePointerByte : boolean;
+		StrobeCountByte : boolean;
 		StrobeEnable : boolean;
 	end record;
 	type cpu_output_dma_infos_t is array(0 to DMAChannels - 1) of cpu_output_dma_info_t;

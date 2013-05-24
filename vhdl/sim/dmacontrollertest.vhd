@@ -19,9 +19,8 @@ architecture Arch of DMAControllerTest is
 	signal CPUOutputs : cpu_output_dma_infos_t := (
 		others => (
 			Value => X"00",
-			StrobePointerLow => false,
-			StrobePointerHigh => false,
-			StrobeCount => false,
+			StrobePointerByte => false,
+			StrobeCountByte => false,
 			StrobeEnable => false));
 
 	signal ReadRequests : dmar_requests_t := (others => (Consumed => false));
@@ -67,18 +66,18 @@ architecture Arch of DMAControllerTest is
 	procedure DoSetupDMA(constant Channel : natural; constant Address : natural; constant Length : natural; signal Control : out cpu_output_dma_info_t) is
 	begin
 		wait until rising_edge(Clock);
-		Control.Value <= std_ulogic_vector(to_unsigned(Address mod 256, 8));
-		Control.StrobePointerLow <= true;
-		wait until rising_edge(Clock);
 		Control.Value <= std_ulogic_vector(to_unsigned(Address / 256, 8));
-		Control.StrobePointerLow <= false;
-		Control.StrobePointerHigh <= true;
+		Control.StrobePointerByte <= true;
 		wait until rising_edge(Clock);
-		Control.Value <= std_ulogic_vector(to_unsigned(Length, 8));
-		Control.StrobePointerHigh <= false;
-		Control.StrobeCount <= true;
+		Control.Value <= std_ulogic_vector(to_unsigned(Address mod 256, 8));
 		wait until rising_edge(Clock);
-		Control.StrobeCount <= false;
+		Control.StrobePointerByte <= false;
+		Control.Value <= std_ulogic_vector(to_unsigned(Length / 256, 8));
+		Control.StrobeCountByte <= true;
+		wait until rising_edge(Clock);
+		Control.Value <= std_ulogic_vector(to_unsigned(Length mod 256, 8));
+		wait until rising_edge(Clock);
+		Control.StrobeCountByte <= false;
 		Control.StrobeEnable <= true;
 		wait until rising_edge(Clock);
 		Control.StrobeEnable <= false;
