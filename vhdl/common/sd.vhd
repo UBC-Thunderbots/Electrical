@@ -30,6 +30,10 @@ architecture Arch of SD is
 	signal SPIReadData : std_ulogic_vector(7 downto 0);
 	signal SPIStrobe : boolean := false;
 	signal SPIBusy : boolean;
+
+	signal CRCClear : boolean := false;
+	signal CRCEnable : boolean := false;
+	signal CRCValue : std_ulogic_vector(15 downto 0);
 begin
 	SPI : entity work.SPI(Arch)
 	port map(
@@ -44,10 +48,20 @@ begin
 		MOSIPin => MOSIPin,
 		MISOPin => MISOPin);
 
+	CRC : entity work.CRC16(Arch)
+	port map(
+		Clock => HostClock,
+		Data => SPIWriteData,
+		Clear => CRCClear,
+		Enable => CRCEnable,
+		Checksum => CRCValue);
+
 	process(HostClock) is
 	begin
 		if rising_edge(HostClock) then
 			SPIStrobe <= false;
+			CRCClear <= false;
+			CRCEnable <= false;
 			DMAReadRequest.Consumed <= false;
 
 			if not SPIBusy then
@@ -59,6 +73,7 @@ begin
 							State <= WAIT_PIO;
 						elsif DMAReadResponse.Valid then
 							State <= SEND_START_NOP;
+							CRCClear <= true;
 						end if;
 
 					when SEND_START_NOP =>
@@ -76,6 +91,7 @@ begin
 						if DMAReadResponse.Valid then
 							SPIWriteData <= DMAReadResponse.Data;
 							SPIStrobe <= true;
+							CRCEnable <= true;
 							DMAReadRequest.Consumed <= true;
 							if DataIndex = 0 then
 								State <= SEND_CRC_MSB;
@@ -85,12 +101,12 @@ begin
 						end if;
 
 					when SEND_CRC_MSB =>
-						SPIWriteData <= X"00";
+						SPIWriteData <= CRCValue(15 downto 8);
 						SPIStrobe <= true;
 						State <= SEND_CRC_LSB;
 
 					when SEND_CRC_LSB =>
-						SPIWriteData <= X"00";
+						SPIWriteData <= CRCValue(7 downto 0);
 						SPIStrobe <= true;
 						State <= SEND_FIRST_NOP_FOR_DRT;
 
