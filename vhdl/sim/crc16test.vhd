@@ -15,6 +15,9 @@ architecture Behavioural of CRC16Test is
 	signal Clear : boolean;
 	signal Enable : boolean;
 	signal Checksum : std_ulogic_vector(15 downto 0);
+
+	type barray_t is array(natural range <>) of std_ulogic_vector(7 downto 0);
+	constant CSDSample : barray_t := (X"00", X"5E", X"00", X"32", X"5B", X"5A", X"A3", X"B0", X"7F", X"FF", X"FF", X"80", X"0A", X"80", X"00", X"1D");
 begin
 	UUT : entity work.CRC16(Arch)
 	port map(
@@ -46,7 +49,7 @@ begin
 		Clear <= true;
 		Count := 512;
 		wait for ClockTime * 2.0;
-		
+
 		-- clocking in 512 bytes of 0xFF
 		Clear <= false;
 		Enable <= true;
@@ -64,13 +67,45 @@ begin
 
 		--data_in <= "00000000";
 		--wait for ClockTime * 1.0;
-		
+
 		-- this prints out check sum result
 		write(L, bit_vector'(to_bitvector(Checksum)));
 		writeline(output, L);
-		
+
 		-- Datasheet say 512 bytes of 0xFF should produce 0x7FA1
 		assert Checksum = x"7FA1" severity failure;
+
+
+
+		-- clearing
+		Clear <= true;
+		Count := 16;
+		wait for ClockTime * 2.0;
+
+		-- clocking in data from a real card's CSD
+		Clear <= false;
+		Enable <= true;
+		while Count > 0 loop
+			Data <= CSDSample(16 - Count);
+			wait for ClockTime * 1.0;
+			Count := Count - 1;
+			write(Progress, bit_vector'(to_bitvector(Data)));
+		end loop;
+		-- this prints out the data being clocked in
+		--writeline(output, progress);
+
+		--data_in <= "00000000";
+		--wait for ClockTime * 1.0;
+
+		--data_in <= "00000000";
+		--wait for ClockTime * 1.0;
+
+		-- this prints out check sum result
+		write(L, bit_vector'(to_bitvector(Checksum)));
+		writeline(output, L);
+
+		-- Sample card has checksum 0xCEBE
+		assert Checksum = x"CEBE" severity failure;
 
 		Done <= true;
 		wait;
