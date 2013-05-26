@@ -16,7 +16,7 @@ end entity MCP3008;
 
 architecture Arch of MCP3008 is
 	type channel_sequence_t is array(natural range <>) of natural;
-	constant ChannelSequence : channel_sequence_t := (0, 1, 5, 6, 7);
+	constant ChannelSequence : channel_sequence_t := (0, 1, 7, 5, 6, 7);
 begin
 	process(Clocks.Clock4MHz) is
 		variable Subtick : boolean := false;
