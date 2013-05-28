@@ -171,11 +171,6 @@ architecture pavr_iof_arch of pavr_iof is
 
 	signal MotorIndex : natural range 0 to 4 := 0;
 
-	signal HallsStuckHighLatch : halls_stuck_t := (others => false);
-	signal HallsStuckHighClear : halls_stuck_t := (others => true);
-	signal HallsStuckLowLatch : halls_stuck_t := (others => false);
-	signal HallsStuckLowClear : halls_stuck_t := (others => true);
-
 	signal EncodersCountLatch : encoders_count_t := (others => 0);
 	signal EncoderIndex : natural range 0 to 3 := 0;
 
@@ -231,8 +226,6 @@ begin
 			OBuf <= OBufResetValues;
 			RadioLEDLevel <= false;
 			MotorIndex <= 0;
-			HallsStuckHighClear <= (others => true);
-			HallsStuckLowClear <= (others => true);
 			EncodersCountLatch <= (others => 0);
 			EncoderIndex <= 0;
 			MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
@@ -242,8 +235,6 @@ begin
 			pavr_int_rq  <= '0';
 			pavr_int_vec <= int_to_std_logic_vector(0, 22);
 
-			HallsStuckHighClear <= (others => false);
-			HallsStuckLowClear <= (others => false);
 			OBuf.StartKick <= false;
 			OBuf.StartChip <= false;
 			OBuf.FlashStrobe <= false;
@@ -287,8 +278,8 @@ begin
 							TempDO(1) := to_stdulogic(OBuf.MotorsControl(MotorIndex).AutoCommutate);
 							TempDO(0) := to_stdulogic(OBuf.MotorsControl(MotorIndex).Direction);
 						when IO_REG_MOTOR_STATUS =>
-							TempDO(1) := to_stdulogic(HallsStuckHighLatch(MotorIndex));
-							TempDO(0) := to_stdulogic(HallsStuckLowLatch(MotorIndex));
+							TempDO(1) := to_stdulogic(Inputs.HallsStuckHigh(MotorIndex));
+							TempDO(0) := to_stdulogic(Inputs.HallsStuckLow(MotorIndex));
 						when IO_REG_MOTOR_PWM =>
 							TempDO := std_ulogic_vector(to_unsigned(OBuf.MotorsControl(MotorIndex).Power, 8));
 						when IO_REG_SIM_MAGIC =>
@@ -416,13 +407,6 @@ begin
 							end loop;
 							OBuf.MotorsControl(MotorIndex).AutoCommutate <= to_boolean(TempDI(1));
 							OBuf.MotorsControl(MotorIndex).Direction <= to_boolean(TempDI(0));
-						when IO_REG_MOTOR_STATUS =>
-							if TempDI(1) = '0' then
-								HallsStuckHighClear(MotorIndex) <= true;
-							end if;
-							if TempDI(0) = '0' then
-								HallsStuckLowClear(MotorIndex) <= true;
-							end if;
 						when IO_REG_MOTOR_PWM =>
 							OBuf.MotorsControl(MotorIndex).Power <= to_integer(unsigned(TempDI));
 						when IO_REG_SIM_MAGIC =>
@@ -597,8 +581,6 @@ begin
 				OBuf <= OBufResetValues;
 				RadioLEDLevel <= false;
 				MotorIndex <= 0;
-				HallsStuckHighClear <= (others => true);
-				HallsStuckLowClear <= (others => true);
 				EncodersCountLatch <= (others => 0);
 				EncoderIndex <= 0;
 				MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
@@ -634,15 +616,5 @@ begin
 		end if;
 
 		RadioLEDBlinkOut <= RadioLEDLevel and not Polarity;
-	end process;
-
-	process(pavr_iof_clk) is
-	begin
-		if rising_edge(pavr_iof_clk) then
-			for Index in 0 to 4 loop
-				HallsStuckHighLatch(Index) <= (HallsStuckHighLatch(Index) and not HallsStuckHighClear(Index)) or Inputs.HallsStuckHigh(Index);
-				HallsStuckLowLatch(Index) <= (HallsStuckLowLatch(Index) and not HallsStuckLowClear(Index)) or Inputs.HallsStuckLow(Index);
-			end loop;
-		end if;
 	end process;
 end architecture pavr_iof_arch;

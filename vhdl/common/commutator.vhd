@@ -4,6 +4,7 @@ use work.types.all;
 
 entity Commutator is
 	port(
+		Clock : in std_ulogic;
 		Direction : in boolean;
 		Hall : in hall_t;
 		HallStuckHigh : out boolean;
@@ -16,13 +17,13 @@ architecture Arch of Commutator is
 	signal Swapped : hall_t;
 	signal NPhase : phase_half_t;
 	signal PPhase : phase_half_t;
-	signal HallStuckHighInternal : boolean;
-	signal HallStuckLowInternal : boolean;
+	signal HallStuckHighInternal : boolean := false;
+	signal HallStuckLowInternal : boolean := false;
 begin
 	Swapped <= Hall when Direction else not Hall;
 
-	HallStuckHighInternal <= Hall(0) and Hall(1) and Hall(2);
-	HallStuckLowInternal <= (not Hall(0)) and (not Hall(1)) and (not Hall(2));
+	HallStuckHighInternal <= HallStuckHighInternal or (Hall(0) and Hall(1) and Hall(2)) when rising_edge(Clock);
+	HallStuckLowInternal <= HallStuckLowInternal or ((not Hall(0)) and (not Hall(1)) and (not Hall(2))) when rising_edge(Clock);
 
 	HallStuckHigh <= HallStuckHighInternal;
 	HallStuckLow <= HallStuckLowInternal;
