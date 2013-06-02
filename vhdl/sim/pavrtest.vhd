@@ -257,6 +257,60 @@ begin
 		Inputs <= InputsInitial;
 		RunTestCase(10, 40, Reset, AnyFailed);
 
+		-- Test #11
+		-- Do an RCALL .+0; PUSH which is used to adjust the stack pointer sometimes.
+		ProgramMemory <= (
+			X"E500", -- ldi	r16, 0x50	; 80
+			X"BF0E", -- out	0x3e, r16	; 62
+			X"E00E", -- ldi	r16, 0x0E	; 14
+			X"BF0D", -- out	0x3d, r16	; 61
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"D000", -- rcall	.+0      	;  0x14
+			X"920F", -- push	r0
+			X"B7ED", -- in	r30, 0x3d	; 61
+			X"B7FE", -- in	r31, 0x3e	; 62
+			X"27EF", -- eor	r30, r31
+			X"B9E7", -- out	0x07, r30	; 7
+			X"CFFF", -- RJMP .-2
+			others => X"0000");
+		Inputs <= InputsInitial;
+		RunTestCase(11, 40, Reset, AnyFailed);
+
+		-- Test #12
+		-- Test SBIC
+		ProgramMemory <= (
+			X"ea05", -- ldi	r16, 0xA5	; 0
+			X"9300", -- sts 0x0100, r16
+			X"0100", -- <second half of 16-bit insn>
+			X"e000", -- ldi	r16, 0x00	; 0
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"99c7", -- sbic	0x18, 7	; 24
+			X"650a", -- ori	r16, 0x5A	; 90
+			X"99c6", -- sbic	0x18, 6	; 24
+			X"6f0f", -- ori	r16, 0xFF	; 255
+			X"9300", -- sts 0x0100, r16
+			X"0100", -- <second half of 16-bit insn>
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"9130", -- lds r19, 0x0100
+			X"0100", -- <second half of 16-bit insn>
+			X"b937", -- out 0x07, r19	; 7
+			X"CFFF", -- RJMP .-2
+			others => X"0000");
+		Inputs <= InputsInitial;
+		Inputs.DeviceID(7 downto 0) <= X"80";
+		RunTestCase(12, 40, Reset, AnyFailed);
+
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
 		Done <= true;
