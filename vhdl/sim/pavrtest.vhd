@@ -67,7 +67,7 @@ architecture Behavioural of PAVRTest is
 		Reset <= '0';
 		wait for Ticks * ClockTime;
 		if Outputs.SimMagic /= X"5A" then
-			report "Test case " & natural'image(TestCase) & " failed." severity error;
+			report "Test case " & natural'image(TestCase) & " failed, expected 90, got " & natural'image(to_integer(unsigned(Outputs.SimMagic))) & "." severity error;
 			AnyFailed := true;
 		end if;
 	end procedure RunTestCase;
