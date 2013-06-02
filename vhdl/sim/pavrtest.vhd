@@ -136,6 +136,7 @@ begin
 			X"B907", -- OUT 0x07, r16
 			X"CFFF", -- RJMP .-2
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(1, 40, Reset, AnyFailed);
 
 		-- Test #2
@@ -146,6 +147,7 @@ begin
 			X"B907", -- OUT 0x07, r16
 			X"CFFF", -- RJMP .-2
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(2, 40, Reset, AnyFailed);
 
 		-- Test #3
@@ -157,6 +159,7 @@ begin
 			X"9A3E", -- SBI 0x07, 6
 			X"CFFF", -- RJMP .-2
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(3, 40, Reset, AnyFailed);
 
 		-- Test #4
@@ -173,6 +176,7 @@ begin
 			X"CFFF", -- RJMP .-2
 			X"5A00", -- .word 0x5A00
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(4, 40, Reset, AnyFailed);
 
 		-- Test #5
@@ -185,6 +189,7 @@ begin
 			X"CFFF", -- RJMP .-2
 			X"5A00", -- .word 0x5A00
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(5, 40, Reset, AnyFailed);
 
 		-- Test #6
@@ -199,6 +204,7 @@ begin
 			X"B9E7", -- OUT 0x07, r30
 			X"CFFF", -- RJMP .-2
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(6, 40, Reset, AnyFailed);
 
 		-- Test #7
@@ -209,6 +215,7 @@ begin
 			X"B9E7", -- OUT 0x07, r30
 			X"CFFF", -- RJMP .-2
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(7, 40, Reset, AnyFailed);
 
 		-- Test #8
@@ -222,6 +229,7 @@ begin
 			X"CFFF", -- RJMP .-2
 			X"5A00", -- .word 0x5A00
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(8, 40, Reset, AnyFailed);
 
 		-- Test #9
@@ -235,6 +243,7 @@ begin
 			X"CFFF", -- RJMP .-2
 			X"005A", -- .word 0x005A
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(9, 40, Reset, AnyFailed);
 
 		-- Test #10
@@ -245,6 +254,7 @@ begin
 			X"B9E7", -- OUT 0x07, r30
 			X"CFFF", -- RJMP .-2
 			others => X"0000");
+		Inputs <= InputsInitial;
 		RunTestCase(10, 40, Reset, AnyFailed);
 
 		-- Finished all tests.
