@@ -399,6 +399,28 @@ begin
 		Inputs.DeviceID(7 downto 0) <= X"80";
 		RunTestCase(16, 40, Reset, AnyFailed);
 
+		-- Test #17
+		-- Test that skipping an instruction does not affect a following instruction when they both write to the same register
+		ProgramMemory <= (
+			X"e50a", -- ldi	r16, 0x5A	; 165
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"99c6", -- sbic	0x18, 6	; 24
+			X"6f0f", -- ori	r16, 0xFF	; 255
+			X"6000", -- ori	r16, 0x00	; 0
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"b907", -- out	0x07, r16	; 7
+			X"CFFF", -- RJMP .-2
+			others => X"0000");
+		Inputs <= InputsInitial;
+		Inputs.DeviceID(7 downto 0) <= X"80";
+		RunTestCase(17, 40, Reset, AnyFailed);
+
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
 		Done <= true;
