@@ -281,7 +281,7 @@ begin
 		RunTestCase(11, 40, Reset, AnyFailed);
 
 		-- Test #12
-		-- Test SBIC
+		-- Test SBIC followed by STS
 		ProgramMemory <= (
 			X"ea05", -- ldi	r16, 0xA5	; 0
 			X"9300", -- sts 0x0100, r16
@@ -310,6 +310,28 @@ begin
 		Inputs <= InputsInitial;
 		Inputs.DeviceID(7 downto 0) <= X"80";
 		RunTestCase(12, 40, Reset, AnyFailed);
+
+		-- Test #13
+		-- Test SBIC followed by MOV
+		ProgramMemory <= (
+			X"e50a", -- ldi	r16, 0x5A	; 90
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"99c0", -- sbic	0x18, 0	; 24
+			X"6f0f", -- ori	r16, 0xFF	; 255
+			X"2f10", -- mov	r17, r16
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"b917", -- out	0x07, r17	; 7
+			X"CFFF", -- RJMP .-2
+			others => X"0000");
+		Inputs <= InputsInitial;
+		Inputs.DeviceID(7 downto 0) <= X"80";
+		RunTestCase(13, 40, Reset, AnyFailed);
 
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
