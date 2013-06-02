@@ -298,6 +298,7 @@ vhdl/common/pavr/std_util.vhd -text
 vhdl/common/pwm.vhd -text
 vhdl/common/sd.vhd -text
 vhdl/common/types.vhd -text
+vhdl/get_processors.sh -text
 vhdl/sim/boostcontrollertest.vhd -text
 vhdl/sim/crc16test.vhd -text
 vhdl/sim/dmacontrollertest.vhd -text

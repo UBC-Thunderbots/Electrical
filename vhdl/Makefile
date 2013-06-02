@@ -10,6 +10,11 @@ SIM_TARGETS := boostcontrollertest crc16test dmacontrollertest pavrtest
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
 
+# The number of processors in the machine.
+ifeq ($(origin PROCESSORS), undefined)
+PROCESSORS := $(shell ./get_processors.sh)
+endif
+
 # Gather all the VHDL source files in the three directories.
 Vs_common := $(shell find common -name .svn -prune -o -name '*.v' -print)
 VHDs_common := $(shell find common -name .svn -prune -o -name '*.vhd' -print)
@@ -179,7 +184,7 @@ $(PROJ).tsi $(PROJ).twr $(PROJ).twx : $(PROJ).ncd $(PROJ)_map.pcf
 #  -w
 #    Overwrites any existing file.
 $(PROJ).ncd : $(PROJ)_map.ncd
-	( source $(XILINX_SETTINGS) && par $(PROJ)_map.ncd $(PROJ).ncd $(PROJ)_map.pcf -w )
+	( source $(XILINX_SETTINGS) && par -mt $(PROCESSORS) $(PROJ)_map.ncd $(PROJ).ncd $(PROJ)_map.pcf -w )
 
 # We can make an unrouted NCD file and a physical constraints file from an NGD file using Xilinx MAP.
 # Options
@@ -191,7 +196,7 @@ $(PROJ).ncd : $(PROJ)_map.ncd
 #  -detail
 #    Generates a more detailed report file.
 $(PROJ)_map.ncd $(PROJ)_map.pcf : $(PROJ).ngd
-	( source $(XILINX_SETTINGS) && map -pr b $(PROJ).ngd -o $(PROJ)_map.ncd -w -detail )
+	( source $(XILINX_SETTINGS) && map -mt $(PROCESSORS) -pr b $(PROJ).ngd -o $(PROJ)_map.ncd -w -detail )
 
 # We can make an NGD file from an NGC file and a UCF file using Xilinx NGDBUILD.
 $(PROJ).ngd : $(PROJ).ngc $(PROJ).ucf $(PROJ).bmm
