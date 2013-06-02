@@ -357,7 +357,7 @@ begin
 		-- Test #15
 		-- Test skipping SBIC jumping over a 32-bit STS, making sure it does not accidentally execute the second half of the skipped instruction and DOES execute all and only those following
 		ProgramMemory <= (
-			X"e508", -- ldi	r16, 0x58	; 88
+			X"e506", -- ldi	r16, 0x56	; 88
 			X"0000", -- nop
 			X"0000", -- nop
 			X"0000", -- nop
@@ -370,10 +370,34 @@ begin
 			X"9503", -- inc	r16
 			X"9503", -- inc	r16
 			X"b907", -- out	0x07, r16	; 7
+			X"CFFF", -- RJMP .-2
 			others => X"0000");
 		Inputs <= InputsInitial;
 		Inputs.DeviceID(7 downto 0) <= X"80";
 		RunTestCase(15, 40, Reset, AnyFailed);
+
+		-- Test #16
+		-- Test skipping SBRC jumping over a 32-bit STS, making sure it does not accidentally execute the second half of the skipped instruction and DOES execute all and only those following
+		ProgramMemory <= (
+			X"e506", -- ldi	r16, 0x56	; 88
+			X"e010", -- ldi	r17, 0x00	; 0
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"fd10", -- sbrc	r17, 0
+			X"9300", -- sts	0xE000, r16
+			X"e000", -- second half of sts, which if executed would be ldi r16, 0x00
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"b907", -- out	0x07, r16	; 7
+			X"CFFF", -- RJMP .-2
+			others => X"0000");
+		Inputs <= InputsInitial;
+		Inputs.DeviceID(7 downto 0) <= X"80";
+		RunTestCase(16, 40, Reset, AnyFailed);
 
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
