@@ -281,7 +281,7 @@ begin
 		RunTestCase(11, 40, Reset, AnyFailed);
 
 		-- Test #12
-		-- Test SBIC followed by STS
+		-- Test skipping SBIC followed by STS
 		ProgramMemory <= (
 			X"ea05", -- ldi	r16, 0xA5	; 0
 			X"9300", -- sts 0x0100, r16
@@ -312,7 +312,7 @@ begin
 		RunTestCase(12, 40, Reset, AnyFailed);
 
 		-- Test #13
-		-- Test SBIC followed by MOV
+		-- Test skipping SBIC followed by MOV
 		ProgramMemory <= (
 			X"e50a", -- ldi	r16, 0x5A	; 90
 			X"0000", -- nop
@@ -332,6 +332,48 @@ begin
 		Inputs <= InputsInitial;
 		Inputs.DeviceID(7 downto 0) <= X"80";
 		RunTestCase(13, 40, Reset, AnyFailed);
+
+		-- Test #14
+		-- Test skipping SBIC followed by a sled of INCs to ensure no instruction is being duplicated
+		ProgramMemory <= (
+			X"e506", -- ldi	r16, 0x56	; 86
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"99c0", -- sbic	0x18, 0	; 24
+			X"6f0f", -- ori	r16, 0xFF	; 255
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"b907", -- out	0x07, r16	; 7
+			X"CFFF", -- RJMP .-2
+			others => X"0000");
+		Inputs <= InputsInitial;
+		Inputs.DeviceID(7 downto 0) <= X"80";
+		RunTestCase(14, 40, Reset, AnyFailed);
+
+		-- Test #15
+		-- Test skipping SBIC jumping over a 32-bit STS, making sure it does not accidentally execute the second half of the skipped instruction and DOES execute all and only those following
+		ProgramMemory <= (
+			X"e508", -- ldi	r16, 0x58	; 88
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"0000", -- nop
+			X"99c0", -- sbic	0x18, 0	; 24
+			X"9300", -- sts	0xE000, r16
+			X"e000", -- second half of sts, which if executed would be ldi r16, 0x00
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"9503", -- inc	r16
+			X"b907", -- out	0x07, r16	; 7
+			others => X"0000");
+		Inputs <= InputsInitial;
+		Inputs.DeviceID(7 downto 0) <= X"80";
+		RunTestCase(15, 40, Reset, AnyFailed);
 
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
