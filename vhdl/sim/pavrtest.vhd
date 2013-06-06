@@ -421,6 +421,50 @@ begin
 		Inputs.DeviceID(7 downto 0) <= X"80";
 		RunTestCase(17, 40, Reset, AnyFailed);
 
+		-- Test #18
+		-- Test basic operation of EICALL
+		ProgramMemory <= (
+			16#000# => X"e00c", --   0: ldi r16, 0x0C ; 12
+			16#001# => X"bf0e", --   2: out 0x3e, r16 ; 62
+			16#002# => X"ef0f", --   4: ldi r16, 0xFF ; 255
+			16#003# => X"bf0d", --   6: out 0x3d, r16 ; 61
+			16#004# => X"e0f0", --   8: ldi r31, 0x00 ; 0
+			16#005# => X"e0ea", --   a: ldi r30, 0x0A ; 10
+			16#006# => X"9519", --   c: eicall
+			16#007# => X"e50a", --   e: ldi r16, 0x5A ; 90
+			16#008# => X"b907", --  10: out 0x07, r16 ; 7
+			16#009# => X"cfff", --  12: rjmp .-2 ; 0x12
+			16#00a# => X"9508", --  14: ret
+			others => X"0000");
+		Inputs <= InputsInitial;
+		RunTestCase(18, 40, Reset, AnyFailed);
+
+		-- Test #19
+		-- Test that an EICALL whose address is one word before a multiple of 256 words does not byte tear its return address on the stack
+		ProgramMemory <= (
+			16#000# => X"e00c", --   0: ldi r16, 0x0C ; 12
+			16#001# => X"bf0e", --   2: out 0x3e, r16 ; 62
+			16#002# => X"ef0f", --   4: ldi r16, 0xFF ; 255
+			16#003# => X"bf0d", --   6: out 0x3d, r16 ; 61
+			16#004# => X"e0f3", --   8: ldi r31, 0x03 ; 3
+			16#005# => X"e0e0", --   a: ldi r30, 0x00 ; 0
+			16#006# => X"c0f1", --   c: rjmp .+490 ; 0x1f0
+			-- ...
+			16#0fe# => X"0000", -- 1fc: nop
+			16#0ff# => X"9519", -- 1fe: eicall
+			16#100# => X"e50a", -- 200: ldi r16, 0x5A ; 90
+			16#101# => X"b907", -- 202: out 0x07, r16 ; 7
+			16#102# => X"cfff", -- 204: rjmp .-2 ; 0x204
+			-- ...
+			16#1ff# => X"ea05", -- 3fe: ldi r16, 0xA5 ; 165
+			16#200# => X"b907", -- 400: out 0x07, r16 ; 7
+			16#201# => X"cfff", -- 402: rjmp .-2 ; 0x402
+			-- ...
+			16#302# => X"9508", -- 604: ret
+			others => X"0000");
+		Inputs <= InputsInitial;
+		RunTestCase(19, 40, Reset, AnyFailed);
+
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
 		Done <= true;
