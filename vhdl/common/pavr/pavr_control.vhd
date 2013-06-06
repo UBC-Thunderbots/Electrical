@@ -5625,7 +5625,7 @@ begin
          end if;
       end if;
       if pavr_s61_skip_pm_rq='1' then
-         if v_instr32bits ='0' then
+         if pavr_s4_instr32bits ='0' then
             v_22b_op1(22 downto 1) := int_to_std_logic_vector(0, 22);
             v_22b_op2(22 downto 1) := pavr_s4_pc;
          else
