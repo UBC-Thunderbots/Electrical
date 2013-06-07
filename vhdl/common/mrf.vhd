@@ -21,6 +21,8 @@ entity MRF is
 		ClockPin : out std_ulogic;
 		MOSIPin : out std_ulogic;
 		MISOPin : in std_ulogic;
+		DMAReadRequest : out dmar_request_t := (Consumed => false);
+		DMAReadResponse : in dmar_response_t;
 		DMAWriteRequest : out dmaw_request_t := (Write => false, Data => X"00");
 		DMAWriteResponse : in dmaw_response_t);
 end entity MRF;
@@ -42,6 +44,7 @@ begin
 	begin
 		if rising_edge(HostClock) then
 			SPIStrobe <= false;
+			DMAReadRequest.Consumed <= false;
 			DMAWriteRequest.Write <= false;
 
 			if StrobeAddress then
@@ -51,14 +54,17 @@ begin
 			if not SPIBusy and CS = CSDelayed then
 				case State is
 					when IDLE =>
-						if StrobeShortRead or StrobeLongRead or StrobeShortWrite or StrobeLongWrite or DMAWriteResponse.Ready then
+						if StrobeShortRead or StrobeLongRead or StrobeShortWrite or StrobeLongWrite or DMAReadResponse.Valid or DMAWriteResponse.Ready then
 							CS <= true;
 							if StrobeShortRead or StrobeShortWrite then
 								State <= ADDR_SHORT;
 							else
 								State <= ADDR_MSB;
 							end if;
-							Write <= StrobeShortWrite or StrobeLongWrite;
+							-- The Write signal is from the point of view of the MRF24J40 registers.
+							-- The word Read in DMAReadResponse is from the point of view of the AVR data memory.
+							-- Therefore, a DMA read corresponds to a series of MRF24J40 register writes.
+							Write <= StrobeShortWrite or StrobeLongWrite or DMAReadResponse.Valid;
 						end if;
 
 					when ADDR_MSB =>
@@ -78,7 +84,12 @@ begin
 
 					when DATA =>
 						SPIStrobe <= true;
-						SPIWriteData <= WriteData;
+						if DMAReadResponse.Valid then
+							SPIWriteData <= DMAReadResponse.Data;
+							DMAReadRequest.Consumed <= true;
+						else
+							SPIWriteData <= WriteData;
+						end if;
 						State <= POST_DATA;
 
 					when POST_DATA =>

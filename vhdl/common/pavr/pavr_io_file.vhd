@@ -83,7 +83,7 @@ architecture pavr_iof_arch of pavr_iof is
 	-- Peripheral registers
 	constant IO_REG_LED_CTL : natural := 16#00#;
 	constant IO_REG_POWER_CTL : natural := 16#01#;
-	constant IO_REG_TICKS : natural := 16#02#;
+	constant IO_REG_TSC : natural := 16#02#;
 	constant IO_REG_MOTOR_INDEX : natural := 16#03#;
 	constant IO_REG_MOTOR_CTL : natural := 16#04#;
 	constant IO_REG_MOTOR_STATUS : natural := 16#05#;
@@ -91,9 +91,8 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_SIM_MAGIC : natural := 16#07#;
 	constant IO_REG_SD_CTL : natural := 16#08#;
 	constant IO_REG_SD_DATA : natural := 16#09#;
-	constant IO_REG_ENCODER_LSB : natural := 16#0A#;
-	constant IO_REG_ENCODER_MSB : natural := 16#0B#;
-	constant IO_REG_ENCODER_FAIL : natural := 16#0C#;
+	constant IO_REG_ENCODER_DATA : natural := 16#0A#;
+	constant IO_REG_ENCODER_FAIL : natural := 16#0B#;
 	constant IO_REG_ADC_LSB : natural := 16#0D#;
 	constant IO_REG_ADC_MSB : natural := 16#0E#;
 	constant IO_REG_CHICKER_CTL : natural := 16#0F#;
@@ -126,53 +125,19 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_BREAKBEAM_DIFF_L : natural := 16#2A#;
 	constant IO_REG_BREAKBEAM_DIFF_H : natural := 16#2B#;
 
-	constant OBufResetValues : work.types.cpu_outputs_t := (
-		RadioLED => false,
-		TestLEDsSoftware => true,
-		TestLEDsValue => (others => '0'),
-		PowerMotors => false,
-		PowerLogic => true,
-		MotorsControl => (others => (Phases => (others => FLOAT), AutoCommutate => false, Direction => false, Power => 0)),
-		Charge => false,
-		Discharge => false,
-		KickPeriod => 0,
-		StartKick => false,
-		StartChip => false,
-		FlashCS => '1',
-		FlashDataWrite => X"00",
-		FlashStrobe => false,
-		MRFReset => '1',
-		MRFWake => '0',
-		MRFDataWrite => X"00",
-		MRFAddress => (others => '0'),
-		MRFStrobeAddress => false,
-		MRFStrobeShortRead => false,
-		MRFStrobeLongRead => false,
-		MRFStrobeShortWrite => false,
-		MRFStrobeLongWrite => false,
-		SDCS => '1',
-		SDDataWrite => X"00",
-		SDStrobe => false,
-		LPSDrives => (others => '0'),
-		LFSRTick => false,
-		DebugEnabled => false,
-		DebugData => X"00",
-		DebugStrobe => false,
-		ICAPData => X"0000",
-		ICAPStrobe => false,
-		SimMagic => X"00",
-		DMA => (others => (Value => X"00", StrobePointerByte => false, StrobeCountByte => false, StrobeEnable => false)));
-	signal OBuf : work.types.cpu_outputs_t := OBufResetValues;
+	signal OBuf : cpu_outputs_t;
+
+	signal TSC : unsigned(31 downto 0) := to_unsigned(0, 32);
+	signal TSCLatch : unsigned(31 downto 0);
 
 	signal RadioLEDLevel : boolean := false;
 	signal RadioLEDBlinkX : boolean := false;
 	signal RadioLEDBlinkY : boolean := false;
 	signal RadioLEDBlinkOut : boolean := false;
 
-	signal MotorIndex : natural range 0 to 4 := 0;
+	signal MotorIndex : natural range 0 to 4;
 
-	signal EncodersCountLatch : encoders_count_t := (others => 0);
-	signal EncoderIndex : natural range 0 to 3 := 0;
+	signal EncoderCountLatch : signed(15 downto 0);
 
 	signal MCP3008Latch : std_ulogic_vector(9 downto 0);
 
@@ -182,6 +147,50 @@ architecture pavr_iof_arch of pavr_iof is
 
 	-- Temporary stuff
 	signal TempDI : std_ulogic_vector(7 downto 0);
+
+	procedure ResetOBuf(signal OBuf : out cpu_outputs_t) is
+	begin
+		OBuf.RadioLED <= false;
+		OBuf.TestLEDsSoftware <= true;
+		OBuf.TestLEDsValue <= "00000";
+		OBuf.PowerMotors <= false;
+		OBuf.PowerLogic <= true;
+		OBuf.EncodersClear <= (others => true);
+		OBuf.MotorsControl <= (others => (Phases => (others => FLOAT), AutoCommutate => false, Direction => false, Power => 0));
+		OBuf.Charge <= false;
+		OBuf.Discharge <= false;
+		-- KickPeriod can be omitted because StartKick and StartChip are false
+		OBuf.StartKick <= false;
+		OBuf.StartChip <= false;
+		OBuf.FlashCS <= '1';
+		-- FlashDataWrite can be omitted because FlashStrobe is false
+		OBuf.FlashStrobe <= false;
+		OBuf.MRFReset <= '1';
+		OBuf.MRFWake <= '0';
+		-- MRFDataWrite and MRFAddress can be omitted because MRFStrobe* are false
+		OBuf.MRFStrobeAddress <= false;
+		OBuf.MRFStrobeShortRead <= false;
+		OBuf.MRFStrobeLongRead <= false;
+		OBuf.MRFStrobeShortWrite <= false;
+		OBuf.MRFStrobeLongWrite <= false;
+		OBuf.SDCS <= '1';
+		-- SDDataWrite can be omitted because SDStrobe is false
+		OBuf.SDStrobe <= false;
+		OBuf.LPSDrives <= (others => '0');
+		OBuf.LFSRTick <= false;
+		OBuf.DebugEnabled <= false;
+		-- DebugData can be omitted because DebugStrobe is false
+		OBuf.DebugStrobe <= false;
+		-- ICAPData can be omitted because ICAPStrobe is false
+		OBuf.ICAPStrobe <= false;
+		OBuf.SimMagic <= X"00";
+		for I in OBuf.DMA'range loop
+			-- Value can be omitted because Strobe* are false
+			OBuf.DMA(I).StrobePointerByte <= false;
+			OBuf.DMA(I).StrobeCountByte <= false;
+			OBuf.DMA(I).StrobeEnable <= false;
+		end loop;
+	end procedure ResetOBuf;
 begin
 	-- Pass stuff out.
 	process(OBuf, RadioLEDBlinkOut) is
@@ -223,18 +232,14 @@ begin
 			pavr_iof_rampz_int <= X"00";
 			pavr_iof_rampd_int <= X"00";
 			pavr_iof_eind_int <= X"00";
-			OBuf <= OBufResetValues;
+			ResetOBuf(OBuf);
 			RadioLEDLevel <= false;
-			MotorIndex <= 0;
-			EncodersCountLatch <= (others => 0);
-			EncoderIndex <= 0;
-			MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
-			BreakbeamLatch <= std_ulogic_vector(int_to_std_logic_vector(0, 16));
 		elsif rising_edge(pavr_iof_clk) then
 			pavr_iof_bitout <= '0';
 			pavr_int_rq  <= '0';
 			pavr_int_vec <= int_to_std_logic_vector(0, 22);
 
+			OBuf.EncodersClear <= (others => false);
 			OBuf.StartKick <= false;
 			OBuf.StartChip <= false;
 			OBuf.FlashStrobe <= false;
@@ -262,8 +267,9 @@ begin
 							TempDO := to_stdulogic(RadioLEDLevel) & '0' & to_stdulogic(OBuf.TestLEDsSoftware) & OBuf.TestLEDsValue;
 						when IO_REG_POWER_CTL =>
 							TempDO := "000" & to_stdulogic(Inputs.BreakoutPresent) & "0" & to_stdulogic(Inputs.InterlockOverride) & to_stdulogic(OBuf.PowerMotors) & to_stdulogic(OBuf.PowerLogic);
-						when IO_REG_TICKS =>
-							TempDO := std_ulogic_vector(to_unsigned(Inputs.Ticks, 8));
+						when IO_REG_TSC =>
+							TempDO := std_ulogic_vector(TSCLatch(31 downto 24));
+							TSCLatch <= TSCLatch sll 8;
 						when IO_REG_MOTOR_INDEX =>
 							TempDO := std_ulogic_vector(to_unsigned(MotorIndex, 8));
 						when IO_REG_MOTOR_CTL =>
@@ -288,10 +294,9 @@ begin
 							TempDO := "00" & to_stdulogic(Inputs.SDDRTUnknownError) & to_stdulogic(Inputs.SDDRTWriteError) & to_stdulogic(Inputs.SDDRTCRCError) & OBuf.SDCS & to_stdulogic(Inputs.SDPresent) & to_stdulogic(Inputs.SDBusy);
 						when IO_REG_SD_DATA =>
 							TempDO := Inputs.SDDataRead;
-						when IO_REG_ENCODER_LSB =>
-							TempDO := std_ulogic_vector(to_unsigned(EncodersCountLatch(EncoderIndex), 16)(7 downto 0));
-						when IO_REG_ENCODER_MSB =>
-							TempDO := std_ulogic_vector(to_unsigned(EncodersCountLatch(EncoderIndex), 16)(15 downto 8));
+						when IO_REG_ENCODER_DATA =>
+							TempDO := std_ulogic_vector(EncoderCountLatch(15 downto 8));
+							EncoderCountLatch <= EncoderCountLatch sll 8;
 						when IO_REG_ENCODER_FAIL =>
 							TempDO := "00000000";
 							for Index in 0 to 3 loop
@@ -389,7 +394,8 @@ begin
 						when IO_REG_POWER_CTL =>
 							OBuf.PowerMotors <= to_boolean(TempDI(1));
 							OBuf.PowerLogic <= to_boolean(TempDI(0));
-						when IO_REG_TICKS =>
+						when IO_REG_TSC =>
+							TSCLatch <= TSC;
 						when IO_REG_MOTOR_INDEX =>
 							if to_integer(unsigned(TempDI)) <= 4 then
 								MotorIndex <= to_integer(unsigned(TempDI));
@@ -416,10 +422,9 @@ begin
 						when IO_REG_SD_DATA =>
 							OBuf.SDDataWrite <= TempDI;
 							OBuf.SDStrobe <= true;
-						when IO_REG_ENCODER_LSB =>
-							EncodersCountLatch <= Inputs.EncodersCount;
-							EncoderIndex <= to_integer(unsigned(TempDI));
-						when IO_REG_ENCODER_MSB =>
+						when IO_REG_ENCODER_DATA =>
+							EncoderCountLatch <= to_signed(Inputs.EncodersCount(to_integer(unsigned(TempDI))), 16);
+							OBuf.EncodersClear(to_integer(unsigned(TempDI))) <= true;
 						when IO_REG_ENCODER_FAIL =>
 						when IO_REG_ADC_LSB =>
 							MCP3008Latch <= std_ulogic_vector(to_unsigned(Inputs.MCP3008(to_integer(unsigned(TempDI))).Value, 10));
@@ -578,12 +583,8 @@ begin
 				pavr_iof_rampz_int <= X"00";
 				pavr_iof_rampd_int <= X"00";
 				pavr_iof_eind_int <= X"00";
-				OBuf <= OBufResetValues;
+				ResetOBuf(OBuf);
 				RadioLEDLevel <= false;
-				MotorIndex <= 0;
-				EncodersCountLatch <= (others => 0);
-				EncoderIndex <= 0;
-				MCP3008Latch <= std_ulogic_vector(int_to_std_logic_vector(0, 10));
 			end if;
 		end if;
 	end process;
@@ -616,5 +617,18 @@ begin
 		end if;
 
 		RadioLEDBlinkOut <= RadioLEDLevel and not Polarity;
+	end process;
+
+	process(pavr_iof_clk, pavr_iof_res) is
+	begin
+		if pavr_iof_res = '1' then
+			TSC <= to_unsigned(0, 32);
+		elsif rising_edge(pavr_iof_clk) then
+			if pavr_iof_syncres = '1' then
+				TSC <= to_unsigned(0, 32);
+			else
+				TSC <= TSC + 1;
+			end if;
+		end if;
 	end process;
 end architecture pavr_iof_arch;

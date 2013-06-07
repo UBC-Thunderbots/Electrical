@@ -11,7 +11,6 @@ architecture Behavioural of PAVRTest is
 	constant ClockTimeSecs : real := real(ClockTime / 1 ns) * 1.0e-9;
 
 	constant InputsInitial : work.types.cpu_inputs_t := (
-		Ticks => 0,
 		InterlockOverride => false,
 		BreakoutPresent => false,
 		HallsStuckHigh => (others => false),

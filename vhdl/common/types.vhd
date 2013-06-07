@@ -46,7 +46,7 @@ package types is
 	type motors_drive_phases_t is array(0 to 4) of motor_drive_phases_t;
 
 	-- The number of DMA read and write channels.
-	constant DMAReadChannels : natural := 1;
+	constant DMAReadChannels : natural := 2;
 	constant DMAWriteChannels : natural := 2;
 	constant DMAChannels : natural := DMAReadChannels + DMAWriteChannels;
 
@@ -66,9 +66,6 @@ package types is
 	type cpu_output_dma_infos_t is array(0 to DMAChannels - 1) of cpu_output_dma_info_t;
 
 	type cpu_inputs_t is record
-		-- System timer tick count
-		Ticks : natural range 0 to 255;
-
 		-- Whether interlocks are overridden
 		InterlockOverride : boolean;
 
@@ -139,6 +136,9 @@ package types is
 		-- Power control
 		PowerMotors : boolean;
 		PowerLogic : boolean;
+
+		-- Optical encoder clearing
+		EncodersClear : encoders_clear_t;
 
 		-- Motor control
 		MotorsControl : motors_control_t;

@@ -67,8 +67,9 @@ end entity Top;
 
 architecture Main of Top is
 	constant DMA_READ_CHANNEL_SD : natural := 0;
-	constant DMA_WRITE_CHANNEL_MRF : natural := 1;
-	constant DMA_WRITE_CHANNEL_2 : natural := 2;
+	constant DMA_READ_CHANNEL_MRF : natural := 1;
+	constant DMA_WRITE_CHANNEL_MRF : natural := 2;
+	constant DMA_WRITE_CHANNEL_3 : natural := 3;
 
 	signal Clocks : clocks_t;
 
@@ -87,15 +88,11 @@ architecture Main of Top is
 	signal DMADataWrite : std_ulogic_vector(7 downto 0);
 	signal DMADataRead : std_ulogic_vector(7 downto 0);
 
-	signal FiveMilliTicks : natural range 0 to 255 := 0;
-
 	signal Halls : halls_t := (others => (others => false));
 
 	signal MotorsDrive : motors_drive_phases_t := (others => (others => FLOAT));
 
 	signal Encoders : encoders_t := (others => (others => false));
-	signal EncodersCount : encoders_count_t := (others => 0);
-	signal EncodersClear : boolean := false;
 
 	signal ChickerPresent : boolean := false;
 	signal StartKick : boolean := false;
@@ -144,7 +141,6 @@ begin
 		Difference => CPUInputs.LaserDiff,
 		to_stdulogic(Laser) => LaserPowerPin);
 
-	CPUInputs.Ticks <= FiveMilliTicks;
 	CPUInputs.InterlockOverride <= InterlockOverridePin = '1';
 
 	DMA : entity work.DMAController(Arch)
@@ -192,21 +188,6 @@ begin
 
 	CPUInputs.BreakoutPresent <= to_boolean(BreakoutPresentPin);
 
-	process(Clocks.Clock4MHz) is
-		subtype subticks_t is natural range 0 to 19999;
-		variable Subticks : subticks_t := 0;
-	begin
-		if rising_edge(Clocks.Clock4MHz) then
-			EncodersClear <= false;
-			if Subticks = subticks_t'high then
-				FiveMilliTicks <= (FiveMilliTicks + 1) mod 256;
-				CPUInputs.EncodersCount <= EncodersCount;
-				EncodersClear <= true;
-			end if;
-			Subticks := (Subticks + 1) mod (subticks_t'high + 1);
-		end if;
-	end process;
-
 	process(Clocks.Clock8MHz) is
 	begin
 		if rising_edge(Clocks.Clock8MHz) then
@@ -251,8 +232,8 @@ begin
 		port map(
 			Clock => Clocks.Clock40MHz,
 			Input => Encoders(Index),
-			Clear => EncodersClear,
-			Value => EncodersCount(Index));
+			Clear => CPUOutputs.EncodersClear(Index),
+			Value => CPUInputs.EncodersCount(Index));
 
 		EncoderFail : entity work.EncoderFail(Arch)
 		port map(
@@ -365,6 +346,8 @@ begin
 		ClockPin => MRFClockPin,
 		MOSIPin => MRFMOSIPin,
 		MISOPin => MRFMISOPin,
+		DMAReadRequest => DMAReadRequests(DMA_READ_CHANNEL_MRF),
+		DMAReadResponse => DMAReadResponses(DMA_READ_CHANNEL_MRF),
 		DMAWriteRequest => DMAWriteRequests(DMA_WRITE_CHANNEL_MRF),
 		DMAWriteResponse => DMAWriteResponses(DMA_WRITE_CHANNEL_MRF));
 
