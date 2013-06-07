@@ -3400,7 +3400,7 @@ begin
                                                 next_pavr_s4_s5s51_retinc_spwr_rq <= '1';     -- Request SP write access. SP will be (post-) incremented.
                                                 pavr_s3_flush_s2_rq <= '1';             -- Request flush s2 in s3.
                                                 next_pavr_s4_ret_flush_s2_rq <= '1';    -- Many, many flushes here (7 flushes; they shift from one stage into another, from s4 till s55).
-                                                --next_pavr_s4_stall_rq <= '1';
+                                                next_pavr_s4_stall_rq <= '1';
                                              when "0001" =>
                                                 -- RETI (Return from interrupt)
                                                 next_pavr_s4_s51s52s53_retpc_ld <= '1';
@@ -3411,7 +3411,7 @@ begin
                                                 next_pavr_s4_s5s51_retinc_spwr_rq <= '1';
                                                 pavr_s3_flush_s2_rq <= '1';
                                                 next_pavr_s4_ret_flush_s2_rq <= '1';
-                                                --next_pavr_s4_stall_rq <= '1';
+                                                next_pavr_s4_stall_rq <= '1';
                                              when "1000" =>
                                                 -- SLEEP (Low power mode, not implemented)
                                                 null;
@@ -3453,7 +3453,7 @@ begin
                                                 next_pavr_s4_z_pm_rq <= '1';                  -- Request PM access. Also, update PC.
                                                 next_pavr_s4_s5s51s52_pc_dacuwr_rq <= '1';    -- Request DACU write access in s5, s51 and s52.
                                                 next_pavr_s4_s5s51s52_calldec_spwr_rq <= '1'; -- Decrement SP.
-                                                --next_pavr_s4_stall_rq <= '1';
+                                                next_pavr_s4_stall_rq <= '1';
                                              when "0001" =>
                                                 -- EICALL (Extended indirect call (24 bit absolute address), via Z and EIND registers)
                                                 pavr_s3_flush_s2_rq <= '1';                   -- Flush the instructions that were already fetched but don't follow the normal instruction flow.
@@ -3462,7 +3462,7 @@ begin
                                                 next_pavr_s4_zeind_pm_rq <= '1';              -- Request PM access. Also, update PC.
                                                 next_pavr_s4_s5s51s52_pc_dacuwr_rq <= '1';    -- Request DACU write access in s5, s51 and s52.
                                                 next_pavr_s4_s5s51s52_calldec_spwr_rq <= '1'; -- Decrement SP.
-                                                --next_pavr_s4_stall_rq <= '1';
+                                                next_pavr_s4_stall_rq <= '1';
                                              when others =>
                                                 -- Invalid opcode (1001_0101_xxxx_1001, with xxxx != 0000, 0001)
                                                 null;
@@ -3760,7 +3760,7 @@ begin
                      next_pavr_s4_k12rel_pm_rq <= '1';               -- Request PM access. Also, update PC.
                      next_pavr_s4_s5s51s52_pc_dacuwr_rq <= '1';      -- Request DACU write access in s5, s51 and s52.
                      next_pavr_s4_s5s51s52_calldec_spwr_rq <= '1';   -- Decrement SP.
-                     --next_pavr_s4_stall_rq <= '1';
+                     next_pavr_s4_stall_rq <= '1';
                   else
                      tmp2_a := pavr_s3_instr(11 downto 10);
                      case tmp2_a is
@@ -3848,7 +3848,7 @@ begin
          next_pavr_s4_k22int <= pavr_int_vec;            -- Get absolute call address from interrupt vector.
          next_pavr_s4_s5_clriflag_sregwr_rq  <= '1';     -- Request clear I flag (general interrupt enable flag).
          next_pavr_s4_disable_int <= '1';                -- Disable interrupts in the next 4 clocks, so that at least an instruction is executed in the current interrupt routine.
-         --next_pavr_s4_stall_rq <= '1';       -- !!! Needed?
+         next_pavr_s4_stall_rq <= '1';       -- !!! Needed?
 
       end if;
    end process instr_decoder;
