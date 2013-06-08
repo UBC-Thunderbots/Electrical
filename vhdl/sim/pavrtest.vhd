@@ -464,6 +464,77 @@ begin
 		Inputs <= InputsInitial;
 		RunTestCase(19, 40, Reset, AnyFailed);
 
+		-- Test #20
+		-- Test that an CALL whose address is one word before a multiple of 256 words does not byte tear its return address on the stack
+		ProgramMemory <= (
+			16#000# => X"e00c", --   0: ldi r16, 0x0C ; 12
+			16#001# => X"bf0e", --   2: out 0x3e, r16 ; 
+			16#002# => X"ef0f", --   4: ldi r16, 0xff ; 255
+			16#003# => X"bf0d", --   6: out 0x3d, r16 ; 
+			16#004# => X"e00c", --   8: ldi r16, 0x0C ; 12
+			16#005# => X"b907", --   a: out 0x07, r16 ; 
+			16#006# => X"0000", --   c: nop
+			16#007# => X"c0f5", --   e: rjmp .+490; 0x1fa 
+			-- ...
+			16#0fc# => X"e00d", -- 1f8: ldi r16, 0x0D ; 13
+			16#0fd# => X"b907", -- 1fa: out 0x07, r16  
+			16#0fe# => X"0000", -- 1fc: nop
+			16#0ff# => X"940e", -- 1fe: call 0x600
+			16#100# => X"0300", -- 200: 
+			16#101# => X"e50a", -- 202: ldi r16, 0x5A
+			16#102# => X"b907", -- 204: out 0x07, r16
+			-- ...
+			16#1ff# => X"0000", -- 3fe: nop
+			16#200# => X"e006", -- 400: ldi r16, 0x06
+			16#201# => X"b907", -- 402: out 0x07, r16 ; 7
+			-- ...
+			16#300# => X"e005", -- 600: ldi r16, 0x05
+			16#301# => X"b907", -- 602: out 0x07, r16
+			-- ...
+			16#305# => X"9508", -- 60a: ret
+			16#306# => X"e004", -- 600: ldi r16, 0x04
+			16#307# => X"b907", -- 602: out 0x07, r16
+
+			others => X"0000");
+		Inputs <= InputsInitial;
+		RunTestCase(20, 40, Reset, AnyFailed);
+
+		-- Test #21
+		-- Test that an CALL whose address is two words before a multiple of 256 words does not byte tear its return address on the stack
+		ProgramMemory <= (
+			16#000# => X"e00c", --   0: ldi r16, 0x0C ; 12
+			16#001# => X"bf0e", --   2: out 0x3e, r16 ; 
+			16#002# => X"ef0f", --   4: ldi r16, 0xff ; 255
+			16#003# => X"bf0d", --   6: out 0x3d, r16 ; 
+			16#004# => X"e00c", --   8: ldi r16, 0x0C ; 12
+			16#005# => X"b907", --   a: out 0x07, r16 ; 
+			16#006# => X"0000", --   c: nop
+			16#007# => X"c0f5", --   e: rjmp .+490; 0x1fa 
+			-- ...
+			16#0fb# => X"e00d", -- 1f6: ldi r16, 0x0D ; 13
+			16#0fc# => X"b907", -- 1f8: out 0x07, r16  
+			16#0fd# => X"0000", -- 1fa: nop
+			16#0fe# => X"940e", -- 1fc: call 0x600
+			16#0ff# => X"0300", -- 1fe: 
+			16#100# => X"e50a", -- 200: ldi r16, 0x5A
+			16#101# => X"b907", -- 202: out 0x07, r16
+			-- ...
+			16#1ff# => X"0000", -- 3fe: nop
+			16#200# => X"e006", -- 400: ldi r16, 0x06
+			16#201# => X"b907", -- 402: out 0x07, r16 ; 7
+			-- ...
+			16#300# => X"e005", -- 600: ldi r16, 0x05
+			16#301# => X"b907", -- 602: out 0x07, r16
+			-- ...
+			16#305# => X"9508", -- 60a: ret
+			16#306# => X"e004", -- 600: ldi r16, 0x04
+			16#307# => X"b907", -- 602: out 0x07, r16
+
+			others => X"0000");
+		Inputs <= InputsInitial;
+		RunTestCase(21, 40, Reset, AnyFailed);
+
+
 		-- Finished all tests.
 		assert not AnyFailed report "At least one test case failed." severity failure;
 		Done <= true;
