@@ -70,10 +70,10 @@ end entity DMAController;
 
 architecture Arch of DMAController is
 	-- The number of pipeline stages leading up to the block RAM.
-	constant PrePipelineDepth : positive := 3;
+	constant PrePipelineDepth : positive := 1;
 
 	-- The number of pipeline stages coming from the block RAM.
-	constant PostPipelineDepth : positive := 3;
+	constant PostPipelineDepth : positive := 1;
 
 	-- This is the type of data associated with one stage in the core pipeline.
 	type core_stage_t is record
