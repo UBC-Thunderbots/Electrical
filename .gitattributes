@@ -284,6 +284,7 @@ vhdl/common/dmacontroller.vhd -text
 vhdl/common/downclock.vhd -text
 vhdl/common/encoderfail.vhd -text
 vhdl/common/graycounter.vhd -text
+vhdl/common/hallspeed.vhd -text
 vhdl/common/mcp3008.vhd -text
 vhdl/common/motor.vhd -text
 vhdl/common/mrf.vhd -text

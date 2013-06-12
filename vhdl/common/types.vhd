@@ -30,6 +30,8 @@ package types is
 
 	type halls_stuck_t is array(0 to 4) of boolean;
 
+	subtype hall_speed_t is natural range 0 to 255;
+
 	type motor_control_phase_t is (FLOAT, PWM, LOW, HIGH);
 	type motor_control_phases_t is array(0 to 2) of motor_control_phase_t;
 	subtype motor_control_power_t is natural range 0 to 2 ** 8 - 1;
@@ -79,6 +81,9 @@ package types is
 		-- Optical encoder counts and failure detection
 		EncodersCount : encoders_count_t;
 		EncodersFail : encoders_fail_t;
+
+		-- Dribbler speed
+		DribblerSpeed : hall_speed_t;
 
 		-- ADC readings
 		MCP3008 : mcp3008s_t;
@@ -139,6 +144,9 @@ package types is
 
 		-- Optical encoder clearing
 		EncodersClear : encoders_clear_t;
+
+		-- Dribbler speed clearing
+		DribblerSpeedClear : boolean;
 
 		-- Motor control
 		MotorsControl : motors_control_t;

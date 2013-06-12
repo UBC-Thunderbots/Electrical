@@ -45,6 +45,7 @@ ghdl/obj/dmacontrollertest.o : ghdl/obj/dmacontroller.o ghdl/obj/pavr_constants.
 ghdl/obj/downclock.o :
 ghdl/obj/encoderfail.o : ghdl/obj/types.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o
+ghdl/obj/hallspeed.o : ghdl/obj/types.o
 ghdl/obj/mcp3008.o : ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/mrf.o : ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/pwm.o ghdl/obj/types.o

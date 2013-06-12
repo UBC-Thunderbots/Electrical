@@ -93,6 +93,7 @@ architecture pavr_iof_arch of pavr_iof is
 	constant IO_REG_SD_DATA : natural := 16#09#;
 	constant IO_REG_ENCODER_DATA : natural := 16#0A#;
 	constant IO_REG_ENCODER_FAIL : natural := 16#0B#;
+	constant IO_REG_DRIBBLER_SPEED : natural := 16#0C#;
 	constant IO_REG_ADC_LSB : natural := 16#0D#;
 	constant IO_REG_ADC_MSB : natural := 16#0E#;
 	constant IO_REG_CHICKER_CTL : natural := 16#0F#;
@@ -139,6 +140,8 @@ architecture pavr_iof_arch of pavr_iof is
 
 	signal EncoderCountLatch : signed(15 downto 0);
 
+	signal DribblerSpeedLatch : unsigned(7 downto 0);
+
 	signal MCP3008Latch : std_ulogic_vector(9 downto 0);
 
 	signal DMAChannel : natural range 0 to DMAChannels - 1;
@@ -156,6 +159,7 @@ architecture pavr_iof_arch of pavr_iof is
 		OBuf.PowerMotors <= false;
 		OBuf.PowerLogic <= true;
 		OBuf.EncodersClear <= (others => true);
+		OBuf.DribblerSpeedClear <= true;
 		OBuf.MotorsControl <= (others => (Phases => (others => FLOAT), AutoCommutate => false, Direction => false, Power => 0));
 		OBuf.Charge <= false;
 		OBuf.Discharge <= false;
@@ -240,6 +244,7 @@ begin
 			pavr_int_vec <= int_to_std_logic_vector(0, 22);
 
 			OBuf.EncodersClear <= (others => false);
+			OBuf.DribblerSpeedClear <= false;
 			OBuf.StartKick <= false;
 			OBuf.StartChip <= false;
 			OBuf.FlashStrobe <= false;
@@ -302,6 +307,8 @@ begin
 							for Index in 0 to 3 loop
 								TempDO(Index) := to_stdulogic(Inputs.EncodersFail(Index));
 							end loop;
+						when IO_REG_DRIBBLER_SPEED =>
+							TempDO := std_ulogic_vector(DribblerSpeedLatch);
 						when IO_REG_ADC_LSB =>
 							TempDO := MCP3008Latch(7 downto 0);
 						when IO_REG_ADC_MSB =>
@@ -426,6 +433,9 @@ begin
 							EncoderCountLatch <= to_signed(Inputs.EncodersCount(to_integer(unsigned(TempDI))), 16);
 							OBuf.EncodersClear(to_integer(unsigned(TempDI))) <= true;
 						when IO_REG_ENCODER_FAIL =>
+						when IO_REG_DRIBBLER_SPEED =>
+							DribblerSpeedLatch <= to_unsigned(Inputs.DribblerSpeed, 8);
+							OBuf.DribblerSpeedClear <= true;
 						when IO_REG_ADC_LSB =>
 							MCP3008Latch <= std_ulogic_vector(to_unsigned(Inputs.MCP3008(to_integer(unsigned(TempDI))).Value, 10));
 						when IO_REG_ADC_MSB =>

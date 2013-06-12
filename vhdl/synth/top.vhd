@@ -243,6 +243,13 @@ begin
 			Fail => CPUInputs.EncodersFail(Index));
 	end generate;
 
+	DribblerSpeed : entity work.HallSpeed(Arch)
+	port map(
+		Clock => Clocks.Clock40MHz,
+		Reset => CPUOutputs.DribblerSpeedClear,
+		Hall => Halls(4),
+		Count => CPUInputs.DribblerSpeed);
+
 	MCP3008 : entity work.MCP3008(Arch)
 	port map(
 		Clocks => Clocks,
