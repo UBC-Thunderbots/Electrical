@@ -4,6 +4,9 @@ GearRatio = 1.9;
 MaxMotorTorque = 255 mNm/10 Amps * 2.2 Amps = 56.1 mNm
 MaxWheelTorque = 29.5 mNm
 WheelRadius = 1in
+RobotMass = 2.48 kg
+RobotInertia = 0.0044714 kg*m^2
+For a robot wheel radius of 8 cm the inertial factor is 0.28172
 MaxTangentialWheelForce = 0.185 N  **this is both average current limit force and a measure wheel slip force (approx)
 MaxSpeed = 374 RPM / Volt * 17 Volts = 6358 RPM
 MaxWheelSpeed = 6358 RPM * gearRatio = 12080 RPM
