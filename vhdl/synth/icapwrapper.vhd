@@ -15,11 +15,24 @@ entity ICAPWrapper is
 end entity ICAPWrapper;
 
 architecture Arch of ICAPWrapper is
+	pure function ReverseBits(Input : std_ulogic_vector) return std_ulogic_vector is
+		variable Result : std_ulogic_vector(Input'reverse_range);
+	begin
+		for I in Input'range loop
+			Result(I) := Input(I);
+		end loop;
+		return Result;
+	end function ReverseBits;
+
+	signal DataReversed : std_ulogic_vector(15 downto 0);
 	signal StrobeX : boolean := false;
 	signal StrobeY : boolean := false;
 	signal StrobeZ : boolean := false;
 	signal ClockDisable : boolean := false;
 begin
+	DataReversed(15 downto 8) <= ReverseBits(Data(15 downto 8));
+	DataReversed(7 downto 0) <= ReverseBits(Data(7 downto 0));
+
 	process(HostClock) is
 	begin
 		if rising_edge(HostClock) then
@@ -44,7 +57,7 @@ begin
 		CLK => ICAPClock,
 		CE => to_stdulogic(ClockDisable),
 		WRITE => '0',
-		I => std_logic_vector(Data),
+		I => std_logic_vector(DataReversed),
 		O => open,
 		BUSY => open);
 
