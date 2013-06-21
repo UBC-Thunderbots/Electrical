@@ -80,6 +80,9 @@ architecture pavr_iof_arch of pavr_iof is
 	signal pavr_iof_rampd_int:  std_logic_vector(7 downto 0) := X"00";
 	signal pavr_iof_eind_int:   std_logic_vector(7 downto 0) := X"00";
 
+	-- Initial stack pointer value
+	constant InitialSP : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(pavr_dm_len + 96 - 1, 16));
+
 	-- Peripheral registers
 	constant IO_REG_LED_CTL : natural := 16#00#;
 	constant IO_REG_POWER_CTL : natural := 16#01#;
@@ -229,8 +232,8 @@ begin
 	begin
 		if pavr_iof_res = '1' then
 			pavr_iof_sreg_int <= X"00";
-			pavr_iof_sph_int <= X"00";
-			pavr_iof_spl_int <= X"00";
+			pavr_iof_sph_int <= InitialSP(15 downto 8);
+			pavr_iof_spl_int <= InitialSP(7 downto 0);
 			pavr_iof_rampx_int <= X"00";
 			pavr_iof_rampy_int <= X"00";
 			pavr_iof_rampz_int <= X"00";
@@ -586,8 +589,8 @@ begin
 
 			if pavr_iof_syncres = '1' then
 				pavr_iof_sreg_int <= X"00";
-				pavr_iof_sph_int <= X"00";
-				pavr_iof_spl_int <= X"00";
+				pavr_iof_sph_int <= InitialSP(15 downto 8);
+				pavr_iof_spl_int <= InitialSP(7 downto 0);
 				pavr_iof_rampx_int <= X"00";
 				pavr_iof_rampy_int <= X"00";
 				pavr_iof_rampz_int <= X"00";
