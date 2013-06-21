@@ -315,7 +315,7 @@ begin
 		end if;
 		DischargePulse <= (Count < 1200) and CPUOutputs.Discharge and (CPUInputs.MCP3008(0).Value > CapacitorStopDischargeThreshold);
 	end process;
-	ChickerChipPin <= to_stdulogic(CPUInputs.ChipActive or DischargePulse);
+	ChickerChipPin <= to_stdulogic(CPUInputs.ChipActive);
 	ChickerKickPin <= to_stdulogic(CPUInputs.KickActive or DischargePulse);
 
 	FlashCSPin <= CPUOutputs.FlashCS;
