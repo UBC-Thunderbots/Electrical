@@ -397,7 +397,7 @@ begin
 
 	DebugPort : entity work.AsyncSerialTransmitter(Arch)
 	generic map(
-		BusClockDivider => (4000000 + 9600 / 2) / 9600 - 1)
+		BusClockDivider => 4)
 	port map(
 		HostClock => Clocks.Clock40MHz,
 		BusClock => Clocks.Clock4MHz,
