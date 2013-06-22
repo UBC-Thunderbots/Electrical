@@ -59,8 +59,8 @@ package pavr_constants is
 
    -- Data memory RAM-related constants. Take care, these must be self-consistent.
    -- Data memory length and address width
-   constant pavr_dm_len    : natural := 4096;
-   constant pavr_dm_addr_w : natural := 12;
+   constant pavr_dm_len    : natural := 8192;
+   constant pavr_dm_addr_w : natural := 13;
 
    -- Is data memory bigger than  256 bytes? (to be corellated with the
    --    above) We need this to know whether to update both bytes of pointer

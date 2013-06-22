@@ -19,9 +19,11 @@ ADDRESS_SPACE PMem RAMB16 [0x000000:0x007FFF]
 	END_BUS_BLOCK;
 END_ADDRESS_SPACE;
 
-ADDRESS_SPACE DMem RAMB16 [0x800060:0x80105F]
+ADDRESS_SPACE DMem RAMB16 [0x800060:0x80205F]
 	BUS_BLOCK
-		CPU/pavr/pavr_dm_instance1/Mram_data_array2 [7:4];
-		CPU/pavr/pavr_dm_instance1/Mram_data_array1 [3:0];
+		CPU/pavr/pavr_dm_instance1/Mram_data_array4 [7:6];
+		CPU/pavr/pavr_dm_instance1/Mram_data_array3 [5:4];
+		CPU/pavr/pavr_dm_instance1/Mram_data_array2 [3:2];
+		CPU/pavr/pavr_dm_instance1/Mram_data_array1 [1:0];
 	END_BUS_BLOCK;
 END_ADDRESS_SPACE;
