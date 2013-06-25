@@ -141,9 +141,6 @@ architecture pavr_iof_arch of pavr_iof is
 
 	signal MotorIndex : natural range 0 to 4;
 
-	signal HallsStuckHighLatch : halls_stuck_t;
-	signal HallsStuckLowLatch : halls_stuck_t;
-
 	signal EncoderCountLatch : signed(15 downto 0);
 
 	signal DribblerSpeedLatch : unsigned(7 downto 0);
@@ -267,11 +264,6 @@ begin
 				OBuf.DMA(Channel) <= (Value => TempDI, StrobePointerByte => false, StrobeCountByte => false, StrobeEnable => false);
 			end loop;
 
-			for StuckMotorIndex in 0 to 4 loop
-				HallsStuckHighLatch(StuckMotorIndex) <= HallsStuckHighLatch(StuckMotorIndex) or Inputs.HallsStuckHigh(StuckMotorIndex);
-				HallsStuckLowLatch(StuckMotorIndex) <= HallsStuckLowLatch(StuckMotorIndex) or Inputs.HallsStuckLow(StuckMotorIndex);
-			end loop;
-
 			TempDO := X"00";
 
 			-- Check IOF opcode and process it.
@@ -300,10 +292,8 @@ begin
 							TempDO(1) := to_stdulogic(OBuf.MotorsControl(MotorIndex).AutoCommutate);
 							TempDO(0) := to_stdulogic(OBuf.MotorsControl(MotorIndex).Direction);
 						when IO_REG_MOTOR_STATUS =>
-							TempDO(1) := to_stdulogic(HallsStuckHighLatch(MotorIndex));
-							TempDO(0) := to_stdulogic(HallsStuckLowLatch(MotorIndex));
-							HallsStuckHighLatch(MotorIndex) <= false;
-							HallsStuckLowLatch(MotorIndex) <= false;
+							TempDO(1) := to_stdulogic(Inputs.HallsStuckHigh(MotorIndex));
+							TempDO(0) := to_stdulogic(Inputs.HallsStuckLow(MotorIndex));
 						when IO_REG_MOTOR_PWM =>
 							TempDO := std_ulogic_vector(to_unsigned(OBuf.MotorsControl(MotorIndex).Power, 8));
 						when IO_REG_SIM_MAGIC =>

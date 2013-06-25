@@ -22,8 +22,11 @@ architecture Arch of Commutator is
 begin
 	Swapped <= Hall when Direction else not Hall;
 
-	HallStuckHigh <= (Hall(0) and Hall(1) and Hall(2)) when rising_edge(Clock);
-	HallStuckLow <= ((not Hall(0)) and (not Hall(1)) and (not Hall(2))) when rising_edge(Clock);
+	HallStuckHighInternal <= HallStuckHighInternal or (Hall(0) and Hall(1) and Hall(2)) when rising_edge(Clock);
+	HallStuckLowInternal <= HallStuckLowInternal or ((not Hall(0)) and (not Hall(1)) and (not Hall(2))) when rising_edge(Clock);
+
+	HallStuckHigh <= HallStuckHighInternal;
+	HallStuckLow <= HallStuckLowInternal;
 
 	GeneratePhases: for I in 0 to 2 generate
 		PPhase(I) <= not (Swapped((I + 1) mod 3) or not Swapped(I));
