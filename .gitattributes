@@ -182,6 +182,7 @@ datasheets/connectors/Molex/638190300[!!-~](Crimp[!!-~]Tool[!!-~]for[!!-~]50079-
 datasheets/diodes/RB521G-30.pdf -text
 datasheets/diodes/RURG3060C.pdf -text
 datasheets/diodes/STTH10R04.pdf -text
+datasheets/electromechanical/IM[!!-~]Relay.pdf -text svneol=unset#application/pdf
 datasheets/electromechanical/Maxon[!!-~]EC[!!-~]Commutation[!!-~]and[!!-~]Wiring.pdf -text svneol=unset#unset
 datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]15W[!!-~](Dribbler).pdf -text
 datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]30W[!!-~](Dribbler).pdf -text svneol=unset#application/octet-stream
