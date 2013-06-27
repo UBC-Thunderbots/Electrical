@@ -141,8 +141,8 @@ architecture pavr_iof_arch of pavr_iof is
 
 	signal MotorIndex : natural range 0 to 4;
 
-	signal HallsStuckHighLatch : halls_stuck_t;
-	signal HallsStuckLowLatch : halls_stuck_t;
+	signal HallsStuckHighLatch : halls_stuck_t := (others => false);
+	signal HallsStuckLowLatch : halls_stuck_t := (others => false);
 
 	signal EncoderCountLatch : signed(15 downto 0);
 
@@ -244,6 +244,8 @@ begin
 			pavr_iof_eind_int <= X"00";
 			ResetOBuf(OBuf);
 			RadioLEDLevel <= false;
+			HallsStuckHighLatch <= (others => false);
+			HallsStuckLowLatch <= (others => false);
 		elsif rising_edge(pavr_iof_clk) then
 			pavr_iof_bitout <= '0';
 			pavr_int_rq  <= '0';
@@ -420,6 +422,7 @@ begin
 							if to_integer(unsigned(TempDI)) <= 4 then
 								MotorIndex <= to_integer(unsigned(TempDI));
 							end if;
+						when IO_REG_MOTOR_STATUS =>
 						when IO_REG_MOTOR_CTL =>
 							for Index in 0 to 2 loop
 								Temp2b := TempDI(Index * 2 + 3 downto Index * 2 + 2);
@@ -608,6 +611,8 @@ begin
 				pavr_iof_eind_int <= X"00";
 				ResetOBuf(OBuf);
 				RadioLEDLevel <= false;
+				HallsStuckHighLatch <= (others => false);
+				HallsStuckLowLatch <= (others => false);
 			end if;
 		end if;
 	end process;
