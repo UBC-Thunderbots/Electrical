@@ -22,7 +22,6 @@ architecture Arch of Motor is
 begin
 	Commutator: entity work.Commutator(Arch)
 	port map(
-		Clock => Clock,
 		Direction => Control.Direction,
 		Hall => Hall,
 		HallStuckHigh => HallStuckHigh,
