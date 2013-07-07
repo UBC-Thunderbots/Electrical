@@ -221,6 +221,9 @@ datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
 datasheets/ics/L6234[!!-~]Motor[!!-~]Driver.pdf -text
 datasheets/ics/MCUs/AVR/ATtiny26.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/AVR/AVR[!!-~]Instruction[!!-~]Set.pdf -text
+datasheets/ics/MCUs/LEON3/AMBA[!!-~]Specification[!!-~]2.0.pdf -text svneol=unset#application/pdf
+datasheets/ics/MCUs/LEON3/GRLIB[!!-~]IP[!!-~]Core[!!-~]Manual.pdf -text svneol=unset#application/pdf
+datasheets/ics/MCUs/LEON3/GRLIB[!!-~]Manual.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/PIC18F6XJ50/Datasheet.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/PIC18F6XJ50/Errata.pdf -text
 datasheets/ics/MCUs/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
