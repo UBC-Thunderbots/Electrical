@@ -45,9 +45,9 @@ entity Top is
 
 		ChickerPresentPin : in std_ulogic;
 		ChickerRelayPin : out std_ulogic := '1';
-		ChickerChargePin : out std_ulogic := '1';
-		ChickerKickPin : out std_ulogic := '1';
-		ChickerChipPin : out std_ulogic := '1';
+		ChickerChargePin : out std_ulogic := '0';
+		ChickerKickPin : out std_ulogic := '0';
+		ChickerChipPin : out std_ulogic := '0';
 
 		ChargedLEDPin : out std_ulogic := '0';
 		RadioLEDPin : out std_ulogic := '0';
