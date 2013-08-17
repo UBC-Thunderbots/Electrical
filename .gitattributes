@@ -268,6 +268,12 @@ datasheets/regulators/XC6222.pdf -text
 datasheets/sdcard/part1_410.pdf -text svneol=unset#application/pdf
 electronics/Chicker_Test_Board/Code/Boost_converter_final/Boost_converter_final.ino -text
 electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board.pro -text
+electronics/Prototype/SingleMotorDriver.brd -text
+electronics/Prototype/SingleMotorDriver.cmp -text
+electronics/Prototype/SingleMotorDriver.lib -text
+electronics/Prototype/SingleMotorDriver.mod -text
+electronics/Prototype/SingleMotorDriver.pro -text
+electronics/Prototype/SingleMotorDriver.sch -text
 electronics/models/mainboard_thermal/Assem1.SLDASM -text
 electronics/models/mainboard_thermal/Part1.SLDPRT -text
 electronics/models/mainboard_thermal/X.BAT -text
