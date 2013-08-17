@@ -1,4 +1,4 @@
-update=Sat 17 Aug 2013 11:24:07 AM PDT
+update=Sat 17 Aug 2013 11:40:02 AM PDT
 version=1
 last_client=eeschema
 [cvpcb]
@@ -40,7 +40,7 @@ LibName11=valves
 version=1
 [eeschema]
 version=1
-LibDir=../workshop_board;../../trunk/electronics
+LibDir=../workshop_board;../../electronics
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
