@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Sat 17 Aug 2013 06:48:14 PM PDT
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Sat Aug 17 22:18:30 2013
 
 BeginCmp
 TimeStamp = /4C55144A;
@@ -200,21 +200,21 @@ BeginCmp
 TimeStamp = /4F28E12F;
 Reference = SW1;
 ValeurCmp = SW_PUSH;
-IdModule  = SW_PUSH_SM;
+IdModule  = SW_SMD_TAC;
 EndCmp
 
 BeginCmp
 TimeStamp = /5070ACA7;
 Reference = SW2;
 ValeurCmp = SW_PUSH;
-IdModule  = SW_PUSH_SM;
+IdModule  = SW_SMD_TAC;
 EndCmp
 
 BeginCmp
 TimeStamp = /5070ACA9;
 Reference = SW3;
 ValeurCmp = SW_PUSH;
-IdModule  = SW_PUSH_SM;
+IdModule  = SW_SMD_TAC;
 EndCmp
 
 BeginCmp
@@ -249,7 +249,7 @@ BeginCmp
 TimeStamp = /4C54C369;
 Reference = X1;
 ValeurCmp = 8MHz;
-IdModule  = HC49US;
+IdModule  = CRYSTAL_5x3.2;
 EndCmp
 
 EndListe
