@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 17 Aug 2013 06:40:27 PM PDT
+EESchema Schematic File Version 2  date Sat Aug 17 23:01:11 2013
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,9 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:thunderbots-symbols
 LIBS:workshop_board
-LIBS:workshop_board-cache
+LIBS:thunderbots-symbols
 EELAYER 25  0
 EELAYER END
 $Descr A3 16535 11700
@@ -935,7 +934,7 @@ U 1 1 5070ACA9
 P 4950 3300
 F 0 "SW3" H 5100 3410 50  0000 C CNN
 F 1 "SW_PUSH" H 4950 3220 50  0000 C CNN
-F 4 "450-1129-ND" H 4950 3300 60  0001 C CNN "Field1"
+F 4 "P8046SCT-ND" H 4950 3300 60  0001 C CNN "Field1"
 	1    4950 3300
 	0    1    1    0   
 $EndComp
@@ -945,7 +944,7 @@ U 1 1 5070ACA7
 P 4450 3300
 F 0 "SW2" H 4600 3410 50  0000 C CNN
 F 1 "SW_PUSH" H 4450 3220 50  0000 C CNN
-F 4 "450-1129-ND" H 4450 3300 60  0001 C CNN "Field1"
+F 4 "P8046SCT-ND" H 4450 3300 60  0001 C CNN "Field1"
 	1    4450 3300
 	0    1    1    0   
 $EndComp
@@ -1040,7 +1039,7 @@ U 1 1 4F28E12F
 P 7950 2300
 F 0 "SW1" H 8100 2410 50  0000 C CNN
 F 1 "SW_PUSH" H 7950 2220 50  0000 C CNN
-F 4 "450-1129-ND" H 7950 2300 60  0001 C CNN "Digikey Part"
+F 4 "P8046SCT-ND" H 7950 2300 60  0001 C CNN "Digikey Part"
 	1    7950 2300
 	0    -1   -1   0   
 $EndComp
@@ -1307,7 +1306,7 @@ U 1 1 4C54C369
 P 3750 5050
 F 0 "X1" H 3750 5200 60  0000 C CNN
 F 1 "8MHz" H 3750 4900 60  0000 C CNN
-F 4 "535-10212-1-ND" H 3750 5050 60  0001 C CNN "Digikey Part"
+F 4 "887-1448-1-ND" H 3750 5050 60  0001 C CNN "Digikey Part"
 	1    3750 5050
 	0    -1   1    0   
 $EndComp
