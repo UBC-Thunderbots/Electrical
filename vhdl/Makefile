@@ -5,7 +5,7 @@ PROJ := thunderbots
 override SHELL := /bin/bash
 
 # The names of all the top-level test targets.
-SIM_TARGETS := boostcontrollertest crc16test dmacontrollertest pavrtest
+SIM_TARGETS := boostcontrollertest crc16test dmacontrollertest
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -34,14 +34,12 @@ default : help
 # Files in common first, then files in sim.
 ghdl/obj/asyncserialtransmitter.o :
 ghdl/obj/boostcontroller.o : ghdl/obj/types.o
+ghdl/obj/boostcontrollertest.o : ghdl/obj/boostcontroller.o ghdl/obj/clock.o ghdl/obj/types.o
 ghdl/obj/clock.o :
 ghdl/obj/commutator.o : ghdl/obj/types.o
-ghdl/obj/cpuwrapper.o : ghdl/obj/clock.o ghdl/obj/pavr_constants.o ghdl/obj/pavr_control.o ghdl/obj/types.o
 ghdl/obj/crc16.o :
 ghdl/obj/crc16test.o : ghdl/obj/crc16.o
 ghdl/obj/deltalaser.o : ghdl/obj/clock.o ghdl/obj/types.o
-ghdl/obj/dmacontroller.o : ghdl/obj/clock.o ghdl/obj/pavr_constants.o ghdl/obj/types.o
-ghdl/obj/dmacontrollertest.o : ghdl/obj/dmacontroller.o ghdl/obj/pavr_constants.o ghdl/obj/types.o
 ghdl/obj/downclock.o :
 ghdl/obj/encoderfail.o : ghdl/obj/types.o
 ghdl/obj/graycounter.o : ghdl/obj/types.o
@@ -51,18 +49,7 @@ ghdl/obj/mrf.o : ghdl/obj/types.o
 ghdl/obj/motor.o : ghdl/obj/clock.o ghdl/obj/commutator.o ghdl/obj/pwm.o ghdl/obj/types.o
 ghdl/obj/pwm.o :
 ghdl/obj/sd.o : ghdl/obj/spi.o ghdl/obj/types.o
-ghdl/obj/types.o : ghdl/obj/pavr_constants.o
-ghdl/obj/pavr_alu.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
-ghdl/obj/pavr_constants.o : ghdl/obj/pavr_util.o ghdl/obj/std_util.o
-ghdl/obj/pavr_control.o : ghdl/obj/pavr_alu.o ghdl/obj/pavr_constants.o ghdl/obj/pavr_data_mem.o ghdl/obj/pavr_io_file.o ghdl/obj/pavr_register_file.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o ghdl/obj/types.o
-ghdl/obj/pavr_data_mem.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
-ghdl/obj/pavr_io_file.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o ghdl/obj/types.o
-ghdl/obj/pavr_register_file.o : ghdl/obj/pavr_constants.o ghdl/obj/pavr_util.o ghdl/obj/std_util.o
-ghdl/obj/pavr_util.o : ghdl/obj/std_util.o
-ghdl/obj/std_util.o :
-
-ghdl/obj/boostcontrollertest.o : ghdl/obj/boostcontroller.o ghdl/obj/clock.o ghdl/obj/types.o
-ghdl/obj/pavrtest.o : ghdl/obj/pavr_control.o
+ghdl/obj/types.o :
 
 
 
@@ -134,7 +121,7 @@ $(PROJ).mcs : $(PROJ).bit
 
 # We can make a BIT file from a routed NCD file and an ELF file to initialize block RAMs using Xilinx BITGEN.
 # Options
-#  -bd ../firmware/main/main.elf
+#  -bd ../firmware/main/bios.elf
 #    Loads the firmware from the ELF file into the block RAMs.
 #  -d
 #    Skips DRC, since it's done by MAP/PAR anyway.
@@ -161,13 +148,13 @@ $(PROJ).mcs : $(PROJ).bit
 #    application.
 #  -w
 #    Overwrites any existing file.
-$(PROJ).bit : $(PROJ).ncd ../firmware/main/main.elf
-	( source $(XILINX_SETTINGS) && bitgen -bd ../firmware/main/main.elf -d -g Compress -g ConfigRate:10 -g DriveDone:yes -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
+$(PROJ).bit : $(PROJ).ncd ../firmware/bios/bios.elf
+	( source $(XILINX_SETTINGS) && bitgen -bd ../firmware/bios/bios.elf -d -g Compress -g ConfigRate:10 -g DriveDone:yes -g GTS_cycle:3 -g LCK_cycle:4 -g GWE_cycle:5 -g DONE_cycle:6 -g UnusedPin:PULLUP $(PROJ).ncd $(PROJ).bit $(PROJ)_map.pcf -w )
 
-# The ELF file depends on all its source and header files and the Makefile and linker script.
+# The ELF file depends on all its source files and the Makefile and linker script.
 # It can be rebuilt by recursively making in the firmware/main directory.
-../firmware/main/main.elf : $(wildcard ../firmware/main/*.c) $(wildcard ../firmware/main/*.h) ../firmware/main/Makefile ../firmware/main/pavr.ld
-	$(MAKE) -C ../firmware/main
+../firmware/bios/bios.elf : $(wildcard ../firmware/bios/*.s) $(wildcard ../firmware/bios/*.inc) ../firmware/bios/Makefile ../firmware/bios/leon3.ld
+	$(MAKE) -C ../firmware/bios
 
 # We can make a timing report file (in text and XML formats) and a timing specification interaction report from a routed NCD file and a physical constraints file using Xilinx Trace.
 # Options

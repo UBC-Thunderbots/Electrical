@@ -20,10 +20,10 @@ entity CRC16 is
 		Data : in std_ulogic_vector(7 downto 0);
 		Clear : in boolean;
 		Enable : in boolean;
-		Checksum : out std_ulogic_vector(15 downto 0));
+		Checksum : buffer std_ulogic_vector(15 downto 0));
 end entity CRC16;
 
-architecture Arch of CRC16 is
+architecture RTL of CRC16 is
 begin
 	process(Clock) is
 		variable Interm : std_ulogic_vector(7 downto 0);
@@ -61,4 +61,4 @@ begin
 			end if;
 		end if;
 	end process;
-end architecture Arch;
+end architecture RTL;

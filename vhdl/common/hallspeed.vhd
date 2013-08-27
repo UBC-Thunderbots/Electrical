@@ -5,17 +5,16 @@ use work.types.all;
 
 entity HallSpeed is
 	port(
-		Clock : in std_ulogic;
-		Reset : in boolean;
-		Hall : in hall_t;
-		Count : out hall_speed_t);
+		clk : in std_ulogic;
+		Hall : in work.types.hall_t;
+		Value : buffer work.types.motor_position_t);
 end entity HallSpeed;
 
-architecture Arch of HallSpeed is
-	signal CountInternal : hall_speed_t := 0;
-	signal OldHall : hall_t := (others => false);
+architecture RTL of HallSpeed is
+	signal CountInternal : work.types.motor_position_t;
+	signal OldHall : work.types.hall_t;
 
-	pure function IsForward(signal Hall : in hall_t; signal OldHall : in hall_t) return boolean is
+	pure function IsForward(constant Hall : work.types.hall_t; constant OldHall : work.types.hall_t) return boolean is
 		variable HallBits : std_ulogic_vector(5 downto 0);
 	begin
 		for I in 0 to 2 loop
@@ -39,17 +38,17 @@ architecture Arch of HallSpeed is
 		end if;
 	end function IsForward;
 begin
-	process(Clock) is
+	process(clk) is
 	begin
-		if rising_edge(Clock) then
-			if Reset then
-				CountInternal <= 0;
-			elsif IsForward(Hall, OldHall) then
-				CountInternal <= CountInternal + 1;
+		if rising_edge(clk) then
+			if Hall /= OldHall then
+				if IsForward(Hall, OldHall) then
+					Value <= Value + 1;
+				else
+					Value <= Value - 1;
+				end if;
 			end if;
 			OldHall <= Hall;
 		end if;
 	end process;
-
-	Count <= CountInternal;
-end architecture Arch;
+end architecture RTL;

@@ -1,29 +1,5 @@
-ADDRESS_SPACE PMem RAMB16 [0x000000:0x007FFF]
+ADDRESS_SPACE BIOS RAMB16 [0x20000000:0x200007FF]
 	BUS_BLOCK
-		CPU/Mram_PMem8  [7 :7];
-		CPU/Mram_PMem7  [6 :6];
-		CPU/Mram_PMem6  [5 :5];
-		CPU/Mram_PMem5  [4 :4];
-		CPU/Mram_PMem4  [3 :3];
-		CPU/Mram_PMem3  [2 :2];
-		CPU/Mram_PMem2  [1 :1];
-		CPU/Mram_PMem1  [0 :0];
-		CPU/Mram_PMem16 [15:15];
-		CPU/Mram_PMem15 [14:14];
-		CPU/Mram_PMem14 [13:13];
-		CPU/Mram_PMem13 [12:12];
-		CPU/Mram_PMem12 [11:11];
-		CPU/Mram_PMem11 [10:10];
-		CPU/Mram_PMem10 [9 :9];
-		CPU/Mram_PMem9  [8 :8];
-	END_BUS_BLOCK;
-END_ADDRESS_SPACE;
-
-ADDRESS_SPACE DMem RAMB16 [0x800060:0x80205F]
-	BUS_BLOCK
-		CPU/pavr/pavr_dm_instance1/Mram_data_array4 [7:6];
-		CPU/pavr/pavr_dm_instance1/Mram_data_array3 [5:4];
-		CPU/pavr/pavr_dm_instance1/Mram_data_array2 [3:2];
-		CPU/pavr/pavr_dm_instance1/Mram_data_array1 [1:0];
+		CPUROM/ROM/xc2v.x0/a9.x[0].r [31:0];
 	END_BUS_BLOCK;
 END_ADDRESS_SPACE;

@@ -6,27 +6,26 @@ entity PWM is
 		Max : in positive;
 		Phase : in natural);
 	port(
-		Clock : in std_ulogic;
+		rst : in std_ulogic;
+		clk : in std_ulogic;
 		Value : in natural range 0 to Max;
-		Output : out boolean := false);
+		Output : buffer boolean);
 end entity PWM;
 
-architecture Arch of PWM is
+architecture RTL of PWM is
+	subtype count_t is natural range 0 to Max - 1;
+	signal Count : count_t;
 begin
-	process(Clock) is
-		subtype count_t is natural range 0 to Max - 1;
-		variable ValueLatch : natural range 0 to Max := 0;
-		variable Count : count_t := Phase;
+	process(clk) is
 	begin
-		if rising_edge(Clock) then
-			if Count = count_t'high then
-				Count := 0;
-				ValueLatch := Value;
+		if rising_edge(clk) then
+			if rst = '0' then
+				Count <= Phase;
 			else
-				Count := Count + 1;
+				Count <= (Count + 1) mod Max;
 			end if;
 		end if;
-
-		Output <= Count < ValueLatch;
 	end process;
-end architecture Arch;
+
+	Output <= Count < Value;
+end architecture RTL;

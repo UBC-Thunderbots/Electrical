@@ -1,59 +1,50 @@
 library ieee;
+use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
-use work.types.all;
+use work.types;
 
 entity GrayCounter is
 	port(
-		Clock : in std_ulogic;
-		Input : in encoder_t;
-		Clear : in boolean;
-		Value : out encoder_count_t);
+		clk : in std_ulogic;
+		Input : in work.types.encoder_t;
+		Value : buffer work.types.motor_position_t);
 end entity GrayCounter;
 
-architecture Arch of GrayCounter is
+architecture RTL of GrayCounter is
+	signal OldInput : work.types.encoder_t;
 begin
-	process(Clock) is
-		type DeltaType is (NONE, ADD, SUB);
-		variable OldInput : encoder_t;
-		variable Delta : DeltaType;
-		variable ValueInternal : encoder_count_t := 0;
+	process(clk) is
+		type delta_t is (NONE, ADD, SUB);
+		variable Delta : delta_t;
 	begin
-		if rising_edge(Clock) then
-			if Clear then
-				ValueInternal := 0;
+		if rising_edge(clk) then
+			if not OldInput(0) and not OldInput(1) and Input(0) and not Input(1) then 
+				Delta := SUB;
+			elsif OldInput(0) and not OldInput(1) and Input(0) and Input(1) then 
+				Delta := SUB;
+			elsif OldInput(0) and OldInput(1) and not Input(0) and Input(1) then 
+				Delta := SUB;
+			elsif not OldInput(0) and OldInput(1) and not Input(0) and not Input(1) then 
+				Delta := SUB;
+			elsif not OldInput(0) and not OldInput(1) and not Input(0) and Input(1) then 
+				Delta := ADD;
+			elsif not OldInput(0) and OldInput(1) and Input(0) and Input(1) then 
+				Delta := ADD;
+			elsif OldInput(0) and OldInput(1) and Input(0) and not Input(1) then 
+				Delta := ADD;
+			elsif OldInput(0) and not OldInput(1) and not Input(0) and not Input(1) then 
+				Delta := ADD;
 			else
-				if not OldInput(0) and not OldInput(1) and Input(0) and not Input(1) then 
-					Delta := SUB;
-				elsif OldInput(0) and not OldInput(1) and Input(0) and Input(1) then 
-					Delta := SUB;
-				elsif OldInput(0) and OldInput(1) and not Input(0) and Input(1) then 
-					Delta := SUB;
-				elsif not OldInput(0) and OldInput(1) and not Input(0) and not Input(1) then 
-					Delta := SUB;
-				elsif not OldInput(0) and not OldInput(1) and not Input(0) and Input(1) then 
-					Delta := ADD;
-				elsif not OldInput(0) and OldInput(1) and Input(0) and Input(1) then 
-					Delta := ADD;
-				elsif OldInput(0) and OldInput(1) and Input(0) and not Input(1) then 
-					Delta := ADD;
-				elsif OldInput(0) and not OldInput(1) and not Input(0) and not Input(1) then 
-					Delta := ADD;
-				else
-					Delta := NONE;
-				end if;
-
-				if Delta /= NONE then
-					if Delta = ADD then
-						ValueInternal := ValueInternal + 1;
-					else
-						ValueInternal := ValueInternal - 1;
-					end if;
-				end if;
-
-				OldInput := Input;
+				Delta := NONE;
 			end if;
-		end if;
 
-		Value <= ValueInternal;
+			case Delta is
+				when NONE => null;
+				when ADD => Value <= Value + 1;
+				when SUB => Value <= Value - 1;
+			end case;
+
+			OldInput <= Input;
+		end if;
 	end process;
-end architecture Arch;
+end architecture RTL;

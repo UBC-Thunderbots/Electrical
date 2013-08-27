@@ -14,13 +14,13 @@ entity BoostController is
 		Enable : in boolean; --!Enables the Charger
 		CapacitorVoltage : in capacitor_voltage_t; --! Current Capacitor Voltage
 		BatteryVoltage : in battery_voltage_t; --! Current Battery Voltage
-		Charge : out boolean; --! To the MOSFET
-		Timeout : out boolean; --! Signals a fault in the charger
-		Activity : out boolean; --! Signals whether the it is actively charging
-		Done : out boolean := false); --! Signals whether charging is complete
+		Charge : buffer boolean; --! To the MOSFET
+		Timeout : buffer boolean; --! Signals a fault in the charger
+		Activity : buffer boolean; --! Signals whether the it is actively charging
+		Done : buffer boolean := false); --! Signals whether charging is complete
 end entity;
 
-architecture Arch of BoostController is
+architecture RTL of BoostController is
 	constant ClockPeriod : real := 1.0 / ClockFrequency;
 	--We should probably make some or all of these generic parameters
 	constant Inductance : real := 22.0e-6; --! Inductance in switching element
@@ -185,4 +185,4 @@ begin
 		--MOSFET is controlled by the bottom state machine
 		Charge <= State = ONTIME and not TimeoutBuffer;
 	end process;
-end architecture Arch;
+end architecture RTL;

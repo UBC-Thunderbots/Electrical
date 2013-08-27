@@ -1,59 +1,42 @@
 library ieee;
 library unisim;
-
 use ieee.std_logic_1164.all;
 use unisim.vcomponents.all;
-use work.clock.all;
 
 entity DeviceDNA is
 	port(
-		signal Clocks : in clocks_t;
-		signal Value : out std_ulogic_vector(56 downto 0));
-end entity;
+		rst : in std_ulogic;
+		Clock1MHz : in std_ulogic;
+		Ready : buffer boolean;
+		Value : buffer std_ulogic_vector(54 downto 0));
+end entity DeviceDNA;
 
-architecture Arch of DeviceDNA is
-	signal Clock1MHz : std_ulogic := '0';
-	signal Shifter : std_ulogic_vector(56 downto 0) := (others => '0');
+architecture RTL of DeviceDNA is
+	type state_t is (RESET, LOAD, SHIFT);
+	signal State : state_t;
+	signal BitsLeft : natural range 0 to 56;
 	signal DataOut : std_ulogic;
-	signal Read : std_ulogic := '1';
+	signal Read : std_ulogic;
 begin
-	Value <= Shifter;
-
-	-- The DNA port allows clocks up to 2 MHz.
-	-- Run a clock at 1 MHz.
-	process(Clocks.Clock4MHz) is
-		variable Clock2MHz : boolean := false;
-	begin
-		if rising_edge(Clocks.Clock4Mhz) then
-			if Clock2MHz then
-				Clock1MHz <= not Clock1MHz;
-			end if;
-			Clock2MHz := not Clock2MHz;
-		end if;
-	end process;
-
 	process(Clock1MHz) is
-		type state_t is (RESET, LOAD, SHIFT);
-		variable State : state_t := RESET;
-		variable ResetShifter : std_ulogic_vector(15 downto 0) := X"FFFF";
 	begin
 		if rising_edge(Clock1MHz) then
-			if ResetShifter(0) = '1' then
-				State := RESET;
-				Shifter <= (others => '0');
-				Read <= '0';
-				ResetShifter := '0' & ResetShifter(15 downto 1);
+			if rst = '0' then
+				State <= RESET;
+				BitsLeft <= 56;
 			elsif State = RESET then
-				State := LOAD;
-				Read <= '1';
+				State <= LOAD;
 			elsif State = LOAD then
-				State := SHIFT;
-				Read <= '0';
-			elsif Shifter(56) /= '1' then
-				Shifter <= Shifter(55 downto 0) & DataOut;
+				State <= SHIFT;
+			elsif BitsLeft /= 0 then
+				Value <= Value(53 downto 0) & DataOut;
+				BitsLeft <= BitsLeft - 1;
 			end if;
 		end if;
 	end process;
+
+	Read <= '1' when State = LOAD else '0';
+	Ready <= State = SHIFT and BitsLeft = 0;
 
 	DNAPort : DNA_PORT
 	port map(
@@ -62,4 +45,4 @@ begin
 		READ => Read,
 		SHIFT => '1',
 		CLK => Clock1MHz);
-end architecture;
+end architecture RTL;
