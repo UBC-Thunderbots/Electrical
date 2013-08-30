@@ -1,6 +1,6 @@
-update=Sat 17 Aug 2013 07:02:52 PM PDT
+update=Thu 29 Aug 2013 09:27:36 PM PDT
 version=1
-last_client=kicad
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -70,21 +70,23 @@ LibName29=contrib
 LibName30=valves
 LibName31=workshop_board
 LibName32=thunderbots-symbols
+[general]
+version=1
 [pcbnew]
 version=1
-PadDrlX=512
-PadDimH=591
-PadDimV=591
+PadDrlX=0
+PadDimH=236
+PadDimV=394
 BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
+TxtPcbV=320
+TxtPcbH=320
+TxtModV=320
+TxtModH=320
+TxtModW=60
 VEgarde=100
-DrawLar=150
+DrawLar=60
 EdgeLar=150
-TxtLar=120
+TxtLar=60
 MSegLar=41
 LastNetListRead=
 [pcbnew/libraries]
@@ -101,6 +103,4 @@ LibName9=dip_sockets
 LibName10=pga_sockets
 LibName11=valves
 LibName12=workshop_board
-LibName13=thunderbots-modules
-[general]
-version=1
+LibName13=/home/ellis/Desktop/trunk/electronics/thunderbots-modules
