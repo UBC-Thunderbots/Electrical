@@ -44,7 +44,7 @@ begin
 			if Hall /= OldHall then
 				if IsForward(Hall, OldHall) then
 					Value <= Value + 1;
-				else
+				elsif IsForward(OldHall, Hall) then
 					Value <= Value - 1;
 				end if;
 			end if;
