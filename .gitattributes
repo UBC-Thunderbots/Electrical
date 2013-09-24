@@ -194,6 +194,7 @@ datasheets/ics/74HC4050[!!-~](Level[!!-~]Shifter).pdf -text
 datasheets/ics/ADCs/ADS7866.pdf -text
 datasheets/ics/ADCs/MCP3004_3008.pdf -text
 datasheets/ics/ADG3123[!!-~](Level[!!-~]Shifter).pdf -text
+datasheets/ics/FET[!!-~]Drivers/LM5107.pdf -text svneol=unset#application/pdf
 datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
 datasheets/ics/FET[!!-~]Drivers/MIC5020.pdf -text
 datasheets/ics/FET[!!-~]Drivers/TC4467_4468_4469.pdf -text
@@ -251,6 +252,7 @@ datasheets/mechanical/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
 datasheets/mechanical/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
 datasheets/mosfets/2N7002P.pdf -text
 datasheets/mosfets/AO4616.pdf -text
+datasheets/mosfets/AO4882.pdf -text svneol=unset#application/pdf
 datasheets/mosfets/IRF9310.pdf -text
 datasheets/mosfets/STx20NK50Z.pdf -text
 datasheets/mosfets/STx45N65M5.pdf -text
@@ -264,6 +266,7 @@ datasheets/optoelectronics/PNA2602M[!!-~](Phototransistor).pdf -text
 datasheets/optoelectronics/TEMT1000[!!-~](Phototransistor).pdf -text
 datasheets/optoelectronics/VSMY2850[!!-~](IR[!!-~]LED).pdf -text
 datasheets/regulators/LD1117V33C.pdf -text
+datasheets/regulators/LP2951.pdf -text svneol=unset#application/pdf
 datasheets/regulators/MCP1726.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/regulators/XC6222.pdf -text

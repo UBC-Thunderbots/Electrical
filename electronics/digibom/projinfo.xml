@@ -105,6 +105,7 @@
 		<default value="100R" part="311-100CRCT-ND" />
 		<default value="1kR" part="1276-5272-1-ND" />
 		<default value="2.2kR" part="311-2.20KCRCT-ND" />
+		<default value="6kR" part="RMCF0805FT6K04CT-ND" />
 		<default value="10kR" part="311-10.0KCRCT-ND" />
 		<default value="100kR" part="311-100KCRCT-ND" />
 		<default value="15pF" part="490-5532-1-ND" />
@@ -122,9 +123,12 @@
 		<default value="7805" part="LM7805CT-ND" />
 		<default value="ADS7866IDBVT" part="296-18216-1-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
+		<default value="AO4882" part="785-1317-1-ND" />
 		<default value="E4P" part="E4P" />
 		<default value="FT232" part="768-1007-1-ND" />
 		<default value="LD1117V33C" part="497-1492-5-ND" />
+		<default value="LM5107" part="LM5107MAX/NOPBCT-ND" />
+		<default value="LP2951" part="LP2951CMXFSCT-ND" />
 		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
 		<default value="MIC7300" part="576-1319-1-ND" />
 		<default value="MRF24J40MB" part="MRF24J40MB-I/RM-ND" />

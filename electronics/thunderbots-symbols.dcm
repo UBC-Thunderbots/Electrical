@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2013-02-22T16:49:06 PST
+EESchema-DOCLIB  Version 2.0  Date: 2013-09-24T13:35:23 PDT
 #
 $CMP 10KR7
 D Resistance
@@ -14,6 +14,10 @@ D Quad level shifter
 $ENDCMP
 #
 $CMP AO4616
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP AO4882
 F transistors/mos/*.*
 $ENDCMP
 #
