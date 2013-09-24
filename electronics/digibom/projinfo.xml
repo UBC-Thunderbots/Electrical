@@ -103,7 +103,7 @@
 		<default value="16.5R" part="541-16.5CCT-ND" />
 		<default value="88R" part="311-88.7CRCT-ND" />
 		<default value="100R" part="311-100CRCT-ND" />
-		<default value="1kR" part="CR0805-FX-1001ELFCT-ND" />
+		<default value="1kR" part="1276-5272-1-ND" />
 		<default value="2.2kR" part="311-2.20KCRCT-ND" />
 		<default value="10kR" part="311-10.0KCRCT-ND" />
 		<default value="100kR" part="311-100KCRCT-ND" />
@@ -116,7 +116,7 @@
 		<default value="1uF" part="445-7625-1-ND" />
 		<default value="2.2uF" part="587-1292-1-ND" />
 		<default value="4.7uF" part="587-1782-1-ND" />
-		<default value="10uF" part="587-1337-1-ND" />
+		<default value="10uF" part="1276-1075-1-ND" />
 		<default value="100uF" part="P5182-ND" />
 		<default value="74AHC74" part="568-4458-1-ND" />
 		<default value="7805" part="LM7805CT-ND" />
