@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-09-24T15:17:21 PDT
+EESchema Schematic File Version 2  date 2013-09-24T16:19:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -211,8 +211,6 @@ Wire Wire Line
 	3950 4600 4200 4600
 Wire Wire Line
 	3950 4150 4200 4150
-Wire Wire Line
-	5700 5600 5700 5350
 Wire Wire Line
 	8050 6650 8050 6900
 Wire Wire Line
@@ -554,10 +552,6 @@ Wire Wire Line
 	3350 4550 4200 4550
 Wire Wire Line
 	3350 4650 4200 4650
-Wire Wire Line
-	7400 4400 7150 4400
-Wire Wire Line
-	7400 4300 7150 4300
 Wire Bus Line
 	7200 1800 7150 1800
 Wire Bus Line
@@ -622,10 +616,6 @@ Wire Wire Line
 	8000 4150 7150 4150
 Wire Wire Line
 	7400 4050 7150 4050
-Wire Wire Line
-	4750 2300 4850 2300
-Wire Wire Line
-	4850 2300 4850 2400
 Wire Wire Line
 	4200 4300 2200 4300
 Wire Wire Line
@@ -749,8 +739,6 @@ Entry Wire Line
 	3300 2300 3400 2400
 Entry Wire Line
 	3200 2300 3300 2400
-Text HLabel 4750 2300 0    60   Input ~ 0
-BREAKOUT_PRESENT
 Entry Wire Line
 	4250 1900 4350 2000
 Entry Wire Line
@@ -811,8 +799,6 @@ SD_CLOCK
 Text HLabel 4750 5400 3    60   Input ~ 0
 PROG_B
 NoConn ~ 4800 2400
-Text HLabel 7400 4300 2    60   Output ~ 0
-CHICKER_RELAY
 NoConn ~ 6400 5350
 $Comp
 L GND #PWR53
@@ -1281,8 +1267,6 @@ F 4 "160-1169-1-ND" H 8050 5900 60  0001 C CNN "Field1"
 	1    8050 5900
 	0    1    -1   0   
 $EndComp
-Text HLabel 7400 4400 2    60   Input ~ 0
-~CHICKER_PRESENT
 Text HLabel 5150 5600 3    60   Output ~ 0
 /MRF_CS
 Text HLabel 5450 5600 3    60   Output ~ 0
@@ -1307,8 +1291,6 @@ Text HLabel 7200 1300 2    60   Input ~ 0
 M_SENSOR2[0..4]
 Text HLabel 7200 1800 2    60   Input ~ 0
 M_SENSOR3[0..4]
-Text HLabel 5700 5600 3    60   Output ~ 0
-OSC_ENABLE
 Text HLabel 8000 4250 2    60   Input ~ 0
 ADC_MISO
 Text HLabel 8000 4150 2    60   Output ~ 0

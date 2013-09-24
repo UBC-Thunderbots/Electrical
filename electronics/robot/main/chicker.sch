@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-09-24T15:17:21 PDT
+EESchema Schematic File Version 2  date 2013-09-24T16:19:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -42,42 +42,52 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 4900 4300 2    60   ~ 0
+RELAY
 Wire Wire Line
-	5100 4250 5150 4250
+	5050 4250 5150 4250
 Wire Wire Line
-	5100 4050 5150 4050
+	5100 4150 5150 4150
+Connection ~ 5100 3400
 Wire Wire Line
-	5100 3950 5150 3950
+	5100 3350 5100 3450
 Wire Wire Line
-	5100 3850 5150 3850
-Wire Wire Line
-	5100 3650 5150 3650
-Wire Wire Line
-	5100 3550 5150 3550
-Wire Wire Line
-	5150 3450 5100 3450
-Connection ~ 5100 3200
-Wire Wire Line
-	5100 3200 5050 3200
-Wire Wire Line
-	5150 3150 5100 3150
-Wire Wire Line
-	5100 3150 5100 3250
-Wire Wire Line
-	5100 3250 5150 3250
+	5100 3350 5150 3350
 Wire Wire Line
 	5100 3400 5050 3400
 Wire Wire Line
-	5150 3350 5100 3350
+	5150 3250 5100 3250
 Wire Wire Line
-	5100 3350 5100 3450
-Connection ~ 5100 3400
+	5100 3250 5100 3150
 Wire Wire Line
-	5100 3750 5150 3750
+	5100 3150 5150 3150
 Wire Wire Line
-	5100 4150 5150 4150
-Text HLabel 5100 4250 0    60   Input ~ 0
-RELAY
+	5100 3200 5050 3200
+Connection ~ 5100 3200
+Wire Wire Line
+	5100 3450 5150 3450
+Wire Wire Line
+	5100 3550 5150 3550
+Wire Wire Line
+	5100 3650 5150 3650
+Wire Wire Line
+	5100 3850 5150 3850
+Wire Wire Line
+	5100 3950 5150 3950
+Wire Wire Line
+	5100 4050 5150 4050
+$Comp
+L +3.3V #PWR?
+U 1 1 00000000
+P 5050 4250
+F 0 "#PWR?" H 5050 4210 30  0001 C CNN
+F 1 "+3.3V" H 5050 4360 30  0000 C CNN
+	1    5050 4250
+	0    -1   -1   0   
+$EndComp
+Text Notes 5100 3800 2    60   ~ 0
+~PRESENT
+NoConn ~ 5150 3750
 $Comp
 L GND #PWR160
 U 1 1 50667D7D
@@ -126,8 +136,6 @@ F 1 "+BATT" H 5050 3300 30  0000 C CNN
 	1    5050 3200
 	0    -1   -1   0   
 $EndComp
-Text HLabel 5100 3750 0    60   Output ~ 0
-~PRESENT
 Text HLabel 5100 3650 0    60   Input ~ 0
 CHIP
 Text HLabel 5100 3850 0    60   Input ~ 0

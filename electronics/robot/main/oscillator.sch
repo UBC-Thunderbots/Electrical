@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-09-24T15:17:21 PDT
+EESchema Schematic File Version 2  date 2013-09-24T16:19:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 15 15
+Sheet 13 15
 Title ""
 Date "24 sep 2013"
 Rev ""
@@ -43,17 +43,26 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	5150 3900 5200 3900
+	5100 3900 5200 3900
 Wire Wire Line
-	4150 4300 4150 4250
-Wire Wire Line
-	5150 4100 5200 4100
-Wire Wire Line
-	5150 4200 5200 4200
+	4150 3850 4150 3800
 Wire Wire Line
 	5200 4000 5150 4000
 Wire Wire Line
-	4150 3850 4150 3800
+	5150 4200 5200 4200
+Wire Wire Line
+	5150 4100 5200 4100
+Wire Wire Line
+	4150 4300 4150 4250
+$Comp
+L +3.3V #PWR?
+U 1 1 00000000
+P 5100 3900
+F 0 "#PWR?" H 5100 3860 30  0001 C CNN
+F 1 "+3.3V" H 5100 4010 30  0000 C CNN
+	1    5100 3900
+	0    -1   -1   0   
+$EndComp
 $Comp
 L ECS-3953M U12
 U 1 1 4FB9D6EE
@@ -65,8 +74,6 @@ F 4 "XC287CT-ND" H 6100 4050 60  0001 C CNN "Field1"
 	1    6100 4050
 	1    0    0    -1  
 $EndComp
-Text HLabel 5150 3900 0    60   Input ~ 0
-ENABLE
 $Comp
 L GND #PWR154
 U 1 1 4CC50E98

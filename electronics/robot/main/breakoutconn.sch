@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-09-24T15:17:21 PDT
+EESchema Schematic File Version 2  date 2013-09-24T16:19:36 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 6 15
+Sheet 7 15
 Title ""
 Date "24 sep 2013"
 Rev ""
@@ -42,6 +42,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 6650 4900
+Text Notes 6600 4950 2    60   ~ 0
+PRESENT
 Wire Wire Line
 	7450 3700 8250 3700
 Wire Wire Line
@@ -110,8 +113,6 @@ Wire Wire Line
 	7500 4900 7450 4900
 Wire Wire Line
 	7450 5200 7500 5200
-Wire Wire Line
-	5850 4900 6650 4900
 Wire Wire Line
 	6600 5000 6650 5000
 Wire Wire Line
@@ -316,8 +317,6 @@ Entry Wire Line
 	8100 5150 8200 5250
 Text Label 7550 4950 0    60   ~ 0
 M1_PHASE1
-Text HLabel 5850 4900 0    60   Output ~ 0
-PRESENT
 Entry Wire Line
 	5900 4700 6000 4800
 Entry Wire Line
