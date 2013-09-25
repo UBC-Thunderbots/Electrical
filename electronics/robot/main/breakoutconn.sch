@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-09-24T20:57:41 PDT
+EESchema Schematic File Version 2  date 2013-09-25T12:44:19 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -32,7 +32,7 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 7 15
+Sheet 3 14
 Title ""
 Date "25 sep 2013"
 Rev ""
@@ -42,9 +42,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 6650 4900
-Text Notes 6600 4950 2    60   ~ 0
-PRESENT
+Wire Bus Line
+	5850 3950 5900 3950
+Wire Bus Line
+	5850 2950 5900 2950
 Wire Wire Line
 	7450 3700 8250 3700
 Wire Wire Line
@@ -267,6 +268,21 @@ Connection ~ 7500 2400
 Wire Wire Line
 	6600 5150 6550 5150
 Connection ~ 6600 5150
+Wire Bus Line
+	5850 2450 5900 2450
+Wire Bus Line
+	5850 3450 5900 3450
+Text HLabel 5850 3950 0    60   Output ~ 0
+M3_ENCODER[0..1]
+Text HLabel 5850 3450 0    60   Output ~ 0
+M2_ENCODER[0..1]
+Text HLabel 5850 2950 0    60   Output ~ 0
+M1_ENCODER[0..1]
+Text HLabel 5850 2450 0    60   Output ~ 0
+M0_ENCODER[0..1]
+NoConn ~ 6650 4900
+Text Notes 6600 4950 2    60   ~ 0
+PRESENT
 Text HLabel 8250 3700 2    60   Input ~ 0
 LASER_DRIVE
 Entry Wire Line
@@ -374,45 +390,45 @@ LPS_DRIVE1
 Text Label 6600 4500 2    60   ~ 0
 LPS_DRIVE0
 Text Label 6600 2800 2    60   ~ 0
-M3_SENSOR4
+M3_ENCODER1
 Text Label 6600 2900 2    60   ~ 0
-M3_SENSOR3
+M3_ENCODER0
 Text Label 6600 2700 2    60   ~ 0
-M3_SENSOR2
+M3_HALL2
 Text Label 6600 2500 2    60   ~ 0
-M3_SENSOR1
+M3_HALL1
 Text Label 6600 2600 2    60   ~ 0
-M3_SENSOR0
+M3_HALL0
 Text Label 6600 3300 2    60   ~ 0
-M2_SENSOR4
+M2_ENCODER1
 Text Label 6600 3400 2    60   ~ 0
-M2_SENSOR3
+M2_ENCODER0
 Text Label 6600 3200 2    60   ~ 0
-M2_SENSOR2
+M2_HALL2
 Text Label 6600 3000 2    60   ~ 0
-M2_SENSOR1
+M2_HALL1
 Text Label 6600 3100 2    60   ~ 0
-M2_SENSOR0
+M2_HALL0
 Text Label 6600 3800 2    60   ~ 0
-M1_SENSOR4
+M1_ENCODER1
 Text Label 6600 3900 2    60   ~ 0
-M1_SENSOR3
+M1_ENCODER0
 Text Label 6600 3700 2    60   ~ 0
-M1_SENSOR2
+M1_HALL2
 Text Label 6600 3500 2    60   ~ 0
-M1_SENSOR1
+M1_HALL1
 Text Label 6600 3600 2    60   ~ 0
-M1_SENSOR0
+M1_HALL0
 Text Label 6600 4300 2    60   ~ 0
-M0_SENSOR4
+M0_ENCODER1
 Text Label 6600 4400 2    60   ~ 0
-M0_SENSOR3
+M0_ENCODER0
 Text Label 6600 4200 2    60   ~ 0
-M0_SENSOR2
+M0_HALL2
 Text Label 6600 4000 2    60   ~ 0
-M0_SENSOR1
+M0_HALL1
 Text Label 6600 4100 2    60   ~ 0
-M0_SENSOR0
+M0_HALL0
 $Comp
 L CONN_30X2 P2
 U 1 1 507B2A08
@@ -426,28 +442,28 @@ $EndComp
 Text HLabel 5850 4350 0    60   Input ~ 0
 LPS_DRIVE[0..3]
 $Comp
-L +5V #PWR07
+L +5V #PWR8
 U 1 1 506E24BD
 P 7500 3600
-F 0 "#PWR07" H 7500 3690 20  0001 C CNN
+F 0 "#PWR8" H 7500 3690 20  0001 C CNN
 F 1 "+5V" H 7500 3690 30  0000 C CNN
 	1    7500 3600
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR08
+L +3.3V #PWR7
 U 1 1 506E24BC
 P 6600 5000
-F 0 "#PWR08" H 6600 4960 30  0001 C CNN
+F 0 "#PWR7" H 6600 4960 30  0001 C CNN
 F 1 "+3.3V" H 6600 5110 30  0000 C CNN
 	1    6600 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR09
+L GND #PWR6
 U 1 1 506E24BB
 P 6550 5150
-F 0 "#PWR09" H 6550 5150 30  0001 C CNN
+F 0 "#PWR6" H 6550 5150 30  0001 C CNN
 F 1 "GND" H 6550 5080 30  0001 C CNN
 	1    6550 5150
 	0    1    1    0   
@@ -457,13 +473,13 @@ BB_SENSOR
 Text HLabel 5850 2200 0    60   Output ~ 0
 LPS_SENSOR
 Text HLabel 5850 3850 0    60   Output ~ 0
-M3_SENSOR[0..4]
+M3_HALL[0..2]
 Text HLabel 5850 3350 0    60   Output ~ 0
-M2_SENSOR[0..4]
+M2_HALL[0..2]
 Text HLabel 5850 2850 0    60   Output ~ 0
-M1_SENSOR[0..4]
+M1_HALL[0..2]
 Text HLabel 5850 2350 0    60   Output ~ 0
-M0_SENSOR[0..4]
+M0_HALL[0..2]
 Text HLabel 8250 3600 2    60   Input ~ 0
 M3_PHASE[0..2]
 Text HLabel 8250 3000 2    60   Input ~ 0

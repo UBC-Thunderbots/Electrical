@@ -286,6 +286,7 @@ electronics/models/mainboard_thermal/Y.clg -text
 electronics/models/mainboard_thermal/board.SLDPRT -text
 electronics/models/mainboard_thermal/copper.SLDPRT -text
 electronics/models/mainboard_thermal/heat_source.SLDPRT -text
+electronics/robot/main/microcontroller.sch -text
 electronics/workshop_board/tbots.emp -text
 electronics/workshop_board/tbots_stacked.emp -text
 electronics/workshop_board/workshop_board.brd -text
