@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-09-24T15:17:21 PDT
+EESchema Schematic File Version 2  date 2013-09-24T20:57:41 PDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -34,7 +34,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 2 15
 Title ""
-Date "24 sep 2013"
+Date "25 sep 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -63,19 +63,19 @@ Wire Wire Line
 Wire Wire Line
 	6350 3950 6350 3900
 $Comp
-L GND #PWR71
+L GND #PWR070
 U 1 1 52420F7F
 P 6350 4400
-F 0 "#PWR71" H 6350 4400 30  0001 C CNN
+F 0 "#PWR070" H 6350 4400 30  0001 C CNN
 F 1 "GND" H 6350 4330 30  0001 C CNN
 	1    6350 4400
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR70
+L +3.3V #PWR071
 U 1 1 507B4D54
 P 6350 3900
-F 0 "#PWR70" H 6350 3860 30  0001 C CNN
+F 0 "#PWR071" H 6350 3860 30  0001 C CNN
 F 1 "+3.3V" H 6350 4010 30  0000 C CNN
 	1    6350 3900
 	1    0    0    -1  
@@ -92,10 +92,10 @@ $EndComp
 Text HLabel 5500 4650 0    60   Output ~ 0
 PRESENT
 $Comp
-L +3.3V #PWR69
+L +3.3V #PWR072
 U 1 1 506E24B6
 P 5500 4550
-F 0 "#PWR69" H 5500 4510 30  0001 C CNN
+F 0 "#PWR072" H 5500 4510 30  0001 C CNN
 F 1 "+3.3V" H 5500 4660 30  0000 C CNN
 	1    5500 4550
 	0    -1   -1   0   
@@ -104,10 +104,10 @@ NoConn ~ 5550 4450
 Text HLabel 5500 4350 0    60   Output ~ 0
 MISO
 $Comp
-L GND #PWR68
+L GND #PWR073
 U 1 1 506E24BF
 P 5500 4250
-F 0 "#PWR68" H 5500 4250 30  0001 C CNN
+F 0 "#PWR073" H 5500 4250 30  0001 C CNN
 F 1 "GND" H 5500 4180 30  0001 C CNN
 	1    5500 4250
 	0    1    1    0   
@@ -115,10 +115,10 @@ $EndComp
 Text HLabel 5500 4150 0    60   Input ~ 0
 CLOCK
 $Comp
-L +3.3V #PWR67
+L +3.3V #PWR074
 U 1 1 506E24B7
 P 5500 4050
-F 0 "#PWR67" H 5500 4010 30  0001 C CNN
+F 0 "#PWR074" H 5500 4010 30  0001 C CNN
 F 1 "+3.3V" H 5500 4160 30  0000 C CNN
 	1    5500 4050
 	0    -1   -1   0   

@@ -108,6 +108,7 @@
 		<default value="6kR" part="RMCF0805FT6K04CT-ND" />
 		<default value="10kR" part="311-10.0KCRCT-ND" />
 		<default value="100kR" part="311-100KCRCT-ND" />
+		<default value="1MR" part="311-1.00MCRCT-ND" />
 		<default value="15pF" part="490-5532-1-ND" />
 		<default value="27pF" part="478-5017-1-ND" />
 		<default value="10nF" part="490-1664-1-ND" />
