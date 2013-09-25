@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2013-09-24T16:12:24 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2013-09-25T13:11:36 PDT
 #
 $CMP 10KR7
 D Resistance
@@ -19,6 +19,11 @@ $ENDCMP
 #
 $CMP AO4882
 F transistors/mos/*.*
+$ENDCMP
+#
+$CMP DIP5
+D Interrupteur simple
+K switch
 $ENDCMP
 #
 $CMP ECS-3953M
