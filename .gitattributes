@@ -194,6 +194,7 @@ datasheets/ics/74HC4050[!!-~](Level[!!-~]Shifter).pdf -text
 datasheets/ics/ADCs/ADS7866.pdf -text
 datasheets/ics/ADCs/MCP3004_3008.pdf -text
 datasheets/ics/ADG3123[!!-~](Level[!!-~]Shifter).pdf -text
+datasheets/ics/BMG160[!!-~]Gyroscope.pdf -text svneol=unset#application/pdf
 datasheets/ics/FET[!!-~]Drivers/LM5107.pdf -text svneol=unset#application/pdf
 datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
 datasheets/ics/FET[!!-~]Drivers/MIC5020.pdf -text
@@ -220,6 +221,7 @@ datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
 datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
 datasheets/ics/L6234[!!-~]Motor[!!-~]Driver.pdf -text
+datasheets/ics/LIS3DH[!!-~]Accelerometer.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/AVR/ATtiny26.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/AVR/AVR[!!-~]Instruction[!!-~]Set.pdf -text
 datasheets/ics/MCUs/LEON3/AMBA[!!-~]Specification[!!-~]2.0.pdf -text svneol=unset#application/pdf
