@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-09-25T13:20:16 PDT
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-09-25T21:06:28 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -589,6 +589,34 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /52438F48/5243AAB6;
+Reference = C85;
+ValeurCmp = 100nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52438F48/5243AAB7;
+Reference = C86;
+ValeurCmp = 100nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52438F48/5243AAB2;
+Reference = C87;
+ValeurCmp = 100nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52438F48/5243B29F;
+Reference = C88;
+ValeurCmp = 10uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
 TimeStamp = /4AD90417/506E24CD;
 Reference = D3;
 ValeurCmp = TVS;
@@ -1107,6 +1135,13 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
+TimeStamp = /52438F48/5243AAB4;
+Reference = U6;
+ValeurCmp = BMG160;
+IdModule  = ;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F69649C;
 Reference = U7;
 ValeurCmp = MRF24J40MB;
@@ -1230,6 +1265,13 @@ TimeStamp = /52431B80/524321D2;
 Reference = U24;
 ValeurCmp = STM32F405RXT;
 IdModule  = TQFP_64;
+EndCmp
+
+BeginCmp
+TimeStamp = /52438F48/5243AAB5;
+Reference = U25;
+ValeurCmp = LIS3DH;
+IdModule  = ;
 EndCmp
 
 BeginCmp
