@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-09-25T21:06:28 PDT
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = 2013年10月03日 星期四 17时57分25秒
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -1138,7 +1138,7 @@ BeginCmp
 TimeStamp = /52438F48/5243AAB4;
 Reference = U6;
 ValeurCmp = BMG160;
-IdModule  = ;
+IdModule  = LGA12;
 EndCmp
 
 BeginCmp
@@ -1271,7 +1271,7 @@ BeginCmp
 TimeStamp = /52438F48/5243AAB5;
 Reference = U25;
 ValeurCmp = LIS3DH;
-IdModule  = ;
+IdModule  = LGA16;
 EndCmp
 
 BeginCmp
