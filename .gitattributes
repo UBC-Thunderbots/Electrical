@@ -36,6 +36,24 @@ controls/DataCurves/README -text
 controls/DataCurves/Ramp.txt -text
 controls/DataCurves/X_Log -text
 controls/DataCurves/Y_Log -text
+controls/DataCurves/loadRobot_old.m -text
+controls/DataCurves/sd_datadumps/backlash.tsv -text
+controls/DataCurves/sd_datadumps/checking_gains.tsv -text
+controls/DataCurves/sd_datadumps/dirp.tsv -text
+controls/DataCurves/sd_datadumps/free_matrix.tsv -text
+controls/DataCurves/sd_datadumps/ground_matrix.tsv -text
+controls/DataCurves/sd_datadumps/harlem_shake.tsv -text
+controls/DataCurves/sd_datadumps/jitter.tsv -text
+controls/DataCurves/sd_datadumps/new_kalman.tsv -text
+controls/DataCurves/sd_datadumps/not_y.tsv -text
+controls/DataCurves/sd_datadumps/slew_rate_test.tsv -text
+controls/DataCurves/sd_datadumps/spinny.tsv -text
+controls/DataCurves/sd_datadumps/spinny2.tsv -text
+controls/DataCurves/sd_datadumps/values.tsv -text
+controls/DataCurves/wheeldata/dual-rail-25-50.txt -text
+controls/DataCurves/wheeldata/dual-rail-50-25.txt -text
+controls/DataCurves/wheeldata/single-rail-25-50.txt -text
+controls/DataCurves/wheeldata/single-rail-50-25.txt -text
 controls/GPCpart1.pdf -text svneol=unset#unset
 controls/GPCpart2.pdf -text svneol=unset#unset
 controls/PowerConv.m -text
@@ -146,10 +164,6 @@ controls/robot_model/robot.h -text
 controls/robot_model/util.cpp -text
 controls/robot_model/util.h -text
 controls/useful_numbers -text
-controls/wheel-data/dual-rail-25-50.txt -text
-controls/wheel-data/dual-rail-50-25.txt -text
-controls/wheel-data/single-rail-25-50.txt -text
-controls/wheel-data/single-rail-50-25.txt -text
 controls/wheelspeed.mdl -text
 datasheets/ECS-3951M-3953M[!!-~](Oscillator).pdf -text
 datasheets/Fairchild[!!-~]FGA180N33AT[!!-~](IGBT).pdf -text
