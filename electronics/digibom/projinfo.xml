@@ -140,7 +140,7 @@
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="SD1209T3-A1" part="445-2530-ND" />
-		<default value="STM32F405RXT" part="497-11907-ND" />
+		<default value="STM32F405RXT" part="497-11767-ND" />
 		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="TEMT1000" part="751-1052-1-ND" />
 		<default value="VSMY2850RG" part="VSMY2850RGCT-ND" />
