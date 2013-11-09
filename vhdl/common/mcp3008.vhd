@@ -68,48 +68,4 @@ begin
 		ClockOE => ClockOE,
 		MOSIPin => MOSIPin,
 		MISOPin => MISOPin);
---	process(Clocks.Clock4MHz) is
---		variable Subtick : boolean := false;
---		subtype bit_count_t is natural range 0 to 16;
---		variable CLKInternal : boolean := false;
---		variable CSInternal : boolean := false;
---		variable BitCount : bit_count_t := 0;
---		variable MISOLatch : std_ulogic := '0';
---		variable DataOut : std_ulogic_vector(4 downto 0);
---		variable DataIn : std_ulogic_vector(9 downto 0);
---		variable ChannelSequenceIndex : natural range ChannelSequence'range := 0;
---	begin
---		if rising_edge(Clocks.Clock4MHz) then
---			for I in Levels'range loop
---				Levels(I).Strobe <= false;
---			end loop;
---			if Subtick then
---				if not CSInternal then
---					CSInternal := true;
---					DataOut := "11" & std_ulogic_vector(to_unsigned(ChannelSequence(ChannelSequenceIndex), 3));
---				elsif not CLKInternal then
---					CLKInternal := true;
---					MISOLatch := MISO;
---				else
---					CLKInternal := false;
---					DataIn := DataIn(8 downto 0) & MISOLatch;
---					DataOut := DataOut(3 downto 0) & '0';
---					if BitCount = bit_count_t'high then
---						BitCount := 0;
---						CSInternal := false;
---						Levels(ChannelSequence(ChannelSequenceIndex)).Value <= to_integer(unsigned(DataIn));
---						Levels(ChannelSequence(ChannelSequenceIndex)).Strobe <= true;
---						ChannelSequenceIndex := (ChannelSequenceIndex + 1) mod ChannelSequence'length;
---					else
---						BitCount := BitCount + 1;
---					end if;
---				end if;
---			end if;
---			Subtick := not Subtick;
---		end if;
---
---		CS <= to_stdulogic(not CSInternal);
---		CLK <= to_stdulogic(CLKInternal);
---		MOSI <= DataOut(4);
---	end process;
 end architecture RTL;
