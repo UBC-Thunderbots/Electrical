@@ -5,7 +5,7 @@ PROJ := thunderbots
 override SHELL := /bin/bash
 
 # The names of all the top-level test targets.
-SIM_TARGETS := boostcontrollertest crc16test dmacontrollertest
+SIM_TARGETS := boostcontrollertest crc16test
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh

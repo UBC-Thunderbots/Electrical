@@ -25,7 +25,7 @@ architecture Behavioural of BoostControllerTest is
 	signal InductorCurrent : real := 0.0;
 	signal InductorCurrentMilliamps : natural;
 begin
-	UUT: entity work.BoostController(Arch)
+	UUT: entity work.BoostController(RTL)
 	generic map(
 		ClockFrequency => real(1.0 sec / ClockTime))
 	port map(

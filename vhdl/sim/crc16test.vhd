@@ -19,7 +19,7 @@ architecture Behavioural of CRC16Test is
 	type barray_t is array(natural range <>) of std_ulogic_vector(7 downto 0);
 	constant CSDSample : barray_t := (X"00", X"5E", X"00", X"32", X"5B", X"5A", X"A3", X"B0", X"7F", X"FF", X"FF", X"80", X"0A", X"80", X"00", X"1D");
 begin
-	UUT : entity work.CRC16(Arch)
+	UUT : entity work.CRC16(RTL)
 	port map(
 		Clock => Clock,
 		Data => Data,
