@@ -1,6 +1,7 @@
-EESchema Schematic File Version 2  date 2013-09-25T21:05:59 PDT
+EESchema Schematic File Version 2  date 2014年01月26日 星期日 00时29分18秒
 LIBS:power
 LIBS:device
+LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
@@ -24,6 +25,8 @@ LIBS:philips
 LIBS:display
 LIBS:cypress
 LIBS:siliconi
+LIBS:opto
+LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
@@ -34,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "26 sep 2013"
+Date "26 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""

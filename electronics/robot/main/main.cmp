@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = 2013年10月03日 星期四 17时57分25秒
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = 2013年10月26日 星期六 18时52分08秒
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -781,7 +781,7 @@ BeginCmp
 TimeStamp = /52431B80/524331DD;
 Reference = P4;
 ValeurCmp = CONN_4;
-IdModule  = USB_B;
+IdModule  = USB_B_V;
 EndCmp
 
 BeginCmp
@@ -806,7 +806,7 @@ IdModule  = pin_array_6x2;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC7/52420F7A;
+TimeStamp = /4CD72EC7/52420F7B;
 Reference = Q1;
 ValeurCmp = AO4882;
 IdModule  = SO8E;
@@ -827,7 +827,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72C2A/52420F7A;
+TimeStamp = /4CD72C2A/52420F7B;
 Reference = Q4;
 ValeurCmp = AO4882;
 IdModule  = SO8E;
@@ -848,7 +848,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB0/52420F7A;
+TimeStamp = /4CD72EB0/52420F7B;
 Reference = Q7;
 ValeurCmp = AO4882;
 IdModule  = SO8E;
@@ -869,7 +869,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EC1/52420F7A;
+TimeStamp = /4CD72EC1/52420F7B;
 Reference = Q10;
 ValeurCmp = AO4882;
 IdModule  = SO8E;
@@ -890,7 +890,7 @@ IdModule  = SO8E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4CD72EB9/52420F7A;
+TimeStamp = /4CD72EB9/52420F7B;
 Reference = Q13;
 ValeurCmp = AO4882;
 IdModule  = SO8E;
@@ -1093,10 +1093,10 @@ IdModule  = A27xP;
 EndCmp
 
 BeginCmp
-TimeStamp = /52431B80/5243438D;
+TimeStamp = /52431B80/526C709E;
 Reference = SW2;
-ValeurCmp = DIP5;
-IdModule  = 219-5MST;
+ValeurCmp = DIP6;
+IdModule  = 219-6MST;
 EndCmp
 
 BeginCmp

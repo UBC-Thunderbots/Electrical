@@ -1,6 +1,7 @@
-EESchema Schematic File Version 2  date 2013-09-25T21:05:59 PDT
+EESchema Schematic File Version 2  date 2014年01月26日 星期日 00时29分18秒
 LIBS:power
 LIBS:device
+LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
@@ -24,6 +25,8 @@ LIBS:philips
 LIBS:display
 LIBS:cypress
 LIBS:siliconi
+LIBS:opto
+LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
@@ -32,9 +35,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 13 15
+Sheet 14 15
 Title ""
-Date "26 sep 2013"
+Date "26 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -55,10 +58,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 4300 4150 4250
 $Comp
-L +3.3V #PWR0170
+L +3.3V #PWR0173
 U 1 1 52425F2F
 P 5100 3900
-F 0 "#PWR0170" H 5100 3860 30  0001 C CNN
+F 0 "#PWR0173" H 5100 3860 30  0001 C CNN
 F 1 "+3.3V" H 5100 4010 30  0000 C CNN
 	1    5100 3900
 	0    -1   -1   0   
@@ -75,19 +78,19 @@ F 4 "XC287CT-ND" H 6100 4050 60  0001 C CNN "Field1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR0171
+L GND #PWR0174
 U 1 1 4CC50E98
 P 4150 4300
-F 0 "#PWR0171" H 4150 4300 30  0001 C CNN
+F 0 "#PWR0174" H 4150 4300 30  0001 C CNN
 F 1 "GND" H 4150 4230 30  0001 C CNN
 	1    4150 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR0172
+L +3.3V #PWR0175
 U 1 1 4CC50E96
 P 4150 3800
-F 0 "#PWR0172" H 4150 3760 30  0001 C CNN
+F 0 "#PWR0175" H 4150 3760 30  0001 C CNN
 F 1 "+3.3V" H 4150 3910 30  0000 C CNN
 	1    4150 3800
 	1    0    0    -1  
@@ -105,19 +108,19 @@ $EndComp
 Text HLabel 5150 4100 0    60   Output ~ 0
 OSC
 $Comp
-L +3.3V #PWR0173
+L +3.3V #PWR0176
 U 1 1 4CC50DEA
 P 5150 4200
-F 0 "#PWR0173" H 5150 4160 30  0001 C CNN
+F 0 "#PWR0176" H 5150 4160 30  0001 C CNN
 F 1 "+3.3V" H 5150 4310 30  0000 C CNN
 	1    5150 4200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR0174
+L GND #PWR0177
 U 1 1 4CC50DE7
 P 5150 4000
-F 0 "#PWR0174" H 5150 4000 30  0001 C CNN
+F 0 "#PWR0177" H 5150 4000 30  0001 C CNN
 F 1 "GND" H 5150 3930 30  0001 C CNN
 	1    5150 4000
 	0    1    1    0   

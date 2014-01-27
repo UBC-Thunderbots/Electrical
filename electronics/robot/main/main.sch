@@ -1,6 +1,7 @@
-EESchema Schematic File Version 2  date 2013-09-25T21:05:59 PDT
+EESchema Schematic File Version 2  date 2014年01月26日 星期日 00时29分18秒
 LIBS:power
 LIBS:device
+LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
@@ -24,6 +25,8 @@ LIBS:philips
 LIBS:display
 LIBS:cypress
 LIBS:siliconi
+LIBS:opto
+LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
@@ -34,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "26 sep 2013"
+Date "26 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -92,8 +95,6 @@ Wire Wire Line
 	2600 3700 900  3700
 Wire Wire Line
 	2300 5500 2600 5500
-Wire Wire Line
-	2300 5400 2600 5400
 Wire Wire Line
 	2300 5300 2600 5300
 Wire Wire Line
@@ -262,6 +263,8 @@ Wire Wire Line
 	1900 1750 5100 1750
 Wire Wire Line
 	4600 3700 6100 3700
+Wire Bus Line
+	2600 5400 2300 5400
 $Sheet
 S 6100 2850 2400 3700
 U 4AD9040D
