@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年01月27日 星期一 22时10分24秒
+EESchema Schematic File Version 2  date 2014年01月28日 星期二 13时04分52秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,11 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 4 15
+Sheet 2 15
 Title ""
 Date "28 jan 2014"
 Rev ""
@@ -44,10 +45,38 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 6600 3300 2    60   ~ 0
+M2_ENCODER1
+Text Label 6600 3400 2    60   ~ 0
+M2_ENCODER0
+Wire Wire Line
+	6000 2750 6000 2800
+Wire Wire Line
+	6000 2750 5850 2750
+Wire Wire Line
+	6000 3250 6000 3300
+Wire Wire Line
+	6000 3250 5850 3250
+Wire Wire Line
+	6000 3750 6000 3800
+Wire Wire Line
+	6000 3750 5850 3750
+Wire Wire Line
+	5850 4350 5950 4350
+Wire Wire Line
+	5950 4350 5950 4400
+Wire Wire Line
+	5950 4400 6650 4400
 Wire Bus Line
-	5850 3950 5900 3950
+	5850 4500 5900 4500
 Wire Bus Line
-	5850 2950 5900 2950
+	5900 4000 5850 4000
+Wire Bus Line
+	5900 3500 5850 3500
+Wire Bus Line
+	5900 3050 5850 3050
+Wire Bus Line
+	5850 2450 5900 2450
 Wire Wire Line
 	7450 3700 8250 3700
 Wire Wire Line
@@ -124,12 +153,6 @@ Wire Wire Line
 	6200 2200 6200 2400
 Wire Wire Line
 	6200 2400 6650 2400
-Wire Bus Line
-	5900 4300 5900 3850
-Wire Bus Line
-	5850 3350 5900 3350
-Wire Bus Line
-	5900 3350 5900 3800
 Wire Wire Line
 	6000 4800 6650 4800
 Wire Wire Line
@@ -139,17 +162,13 @@ Wire Wire Line
 Wire Wire Line
 	6000 4500 6650 4500
 Wire Wire Line
-	6000 4400 6650 4400
-Wire Wire Line
-	6000 4300 6650 4300
+	6650 4300 6000 4300
 Wire Wire Line
 	6000 4200 6650 4200
 Wire Wire Line
 	6000 4100 6650 4100
 Wire Wire Line
 	6000 4000 6650 4000
-Wire Wire Line
-	6000 3900 6650 3900
 Wire Wire Line
 	6000 3800 6650 3800
 Wire Wire Line
@@ -159,8 +178,6 @@ Wire Wire Line
 Wire Wire Line
 	6000 3500 6650 3500
 Wire Wire Line
-	6000 3400 6650 3400
-Wire Wire Line
 	6000 3300 6650 3300
 Wire Wire Line
 	6000 3200 6650 3200
@@ -168,10 +185,6 @@ Wire Wire Line
 	6000 3100 6650 3100
 Wire Wire Line
 	6000 3000 6650 3000
-Wire Bus Line
-	5850 2350 5900 2350
-Wire Bus Line
-	5900 2350 5900 2800
 Wire Wire Line
 	6000 2500 6650 2500
 Wire Wire Line
@@ -180,18 +193,6 @@ Wire Wire Line
 	6000 2700 6650 2700
 Wire Wire Line
 	6000 2800 6650 2800
-Wire Wire Line
-	6000 2900 6650 2900
-Wire Bus Line
-	5900 3300 5900 2850
-Wire Bus Line
-	5900 2850 5850 2850
-Wire Bus Line
-	5900 3850 5850 3850
-Wire Bus Line
-	5900 4700 5900 4350
-Wire Bus Line
-	5900 4350 5850 4350
 Wire Wire Line
 	6650 2300 6300 2300
 Wire Wire Line
@@ -271,17 +272,55 @@ Wire Wire Line
 	6600 5150 6550 5150
 Connection ~ 6600 5150
 Wire Bus Line
-	5850 2450 5900 2450
+	5900 2600 5900 2350
 Wire Bus Line
-	5850 3450 5900 3450
-Text HLabel 5850 3950 0    60   Output ~ 0
-M3_ENCODER[0..1]
-Text HLabel 5850 3450 0    60   Output ~ 0
-M2_ENCODER[0..1]
-Text HLabel 5850 2950 0    60   Output ~ 0
-M1_ENCODER[0..1]
+	5900 2900 5900 3100
+Wire Bus Line
+	5900 3400 5900 3600
+Wire Bus Line
+	5900 3900 5900 4100
+Wire Bus Line
+	5900 4400 5900 4700
+Wire Wire Line
+	6000 4300 6000 4250
+Wire Wire Line
+	6000 4250 5850 4250
+Wire Wire Line
+	6650 3900 5950 3900
+Wire Wire Line
+	5950 3900 5950 3850
+Wire Wire Line
+	5950 3850 5850 3850
+Wire Wire Line
+	6650 3400 5950 3400
+Wire Wire Line
+	5950 3400 5950 3350
+Wire Wire Line
+	5950 3350 5850 3350
+Wire Wire Line
+	6650 2900 5950 2900
+Wire Wire Line
+	5950 2900 5950 2850
+Wire Wire Line
+	5950 2850 5850 2850
+Text HLabel 5850 4250 0    60   Output ~ 0
+M0_ENCODER1
+Text HLabel 5850 4350 0    60   Output ~ 0
+M0_ENCODER0
+Text HLabel 5850 3850 0    60   Output ~ 0
+M1_ENCODER0
+Text HLabel 5850 3750 0    60   Output ~ 0
+M1_ENCODER1
+Text HLabel 5850 3350 0    60   Output ~ 0
+M2_ENCODER0
+Text HLabel 5850 3250 0    60   Output ~ 0
+M2_ENCODER1
+Text HLabel 5850 2750 0    60   Output ~ 0
+M3_ENCODER1
+Text HLabel 5850 2850 0    60   Output ~ 0
+M3_ENCODER0
 Text HLabel 5850 2450 0    60   Output ~ 0
-M0_ENCODER[0..1]
+M3_HALL[0..2]
 NoConn ~ 6650 4900
 Text Notes 6600 4950 2    60   ~ 0
 PRESENT
@@ -344,29 +383,17 @@ Entry Wire Line
 Entry Wire Line
 	5900 4400 6000 4500
 Entry Wire Line
-	5900 4300 6000 4400
-Entry Wire Line
-	5900 4200 6000 4300
-Entry Wire Line
 	5900 4100 6000 4200
 Entry Wire Line
 	5900 4000 6000 4100
 Entry Wire Line
 	5900 3900 6000 4000
 Entry Wire Line
-	5900 3800 6000 3900
-Entry Wire Line
-	5900 3700 6000 3800
-Entry Wire Line
 	5900 3600 6000 3700
 Entry Wire Line
 	5900 3500 6000 3600
 Entry Wire Line
 	5900 3400 6000 3500
-Entry Wire Line
-	5900 3300 6000 3400
-Entry Wire Line
-	5900 3200 6000 3300
 Entry Wire Line
 	5900 3100 6000 3200
 Entry Wire Line
@@ -378,10 +405,6 @@ Entry Wire Line
 Entry Wire Line
 	5900 2600 6000 2700
 Entry Wire Line
-	5900 2800 6000 2900
-Entry Wire Line
-	5900 2700 6000 2800
-Entry Wire Line
 	5900 2400 6000 2500
 Text Label 6600 4800 2    60   ~ 0
 LPS_DRIVE3
@@ -391,20 +414,12 @@ Text Label 6600 4600 2    60   ~ 0
 LPS_DRIVE1
 Text Label 6600 4500 2    60   ~ 0
 LPS_DRIVE0
-Text Label 6600 2800 2    60   ~ 0
-M3_ENCODER1
-Text Label 6600 2900 2    60   ~ 0
-M3_ENCODER0
 Text Label 6600 2700 2    60   ~ 0
 M3_HALL2
 Text Label 6600 2500 2    60   ~ 0
 M3_HALL1
 Text Label 6600 2600 2    60   ~ 0
 M3_HALL0
-Text Label 6600 3300 2    60   ~ 0
-M2_ENCODER1
-Text Label 6600 3400 2    60   ~ 0
-M2_ENCODER0
 Text Label 6600 3200 2    60   ~ 0
 M2_HALL2
 Text Label 6600 3000 2    60   ~ 0
@@ -441,31 +456,31 @@ F 4 "H10806-ND" H 7050 3750 60  0001 C CNN "Digi-Key Part"
 	1    7050 3750
 	1    0    0    1   
 $EndComp
-Text HLabel 5850 4350 0    60   Input ~ 0
+Text HLabel 5850 4500 0    60   Input ~ 0
 LPS_DRIVE[0..3]
 $Comp
-L +5V #PWR060
+L +5V #PWR06
 U 1 1 506E24BD
 P 7500 3600
-F 0 "#PWR060" H 7500 3690 20  0001 C CNN
+F 0 "#PWR06" H 7500 3690 20  0001 C CNN
 F 1 "+5V" H 7500 3690 30  0000 C CNN
 	1    7500 3600
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR061
+L +3.3V #PWR07
 U 1 1 506E24BC
 P 6600 5000
-F 0 "#PWR061" H 6600 4960 30  0001 C CNN
+F 0 "#PWR07" H 6600 4960 30  0001 C CNN
 F 1 "+3.3V" H 6600 5110 30  0000 C CNN
 	1    6600 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR062
+L GND #PWR08
 U 1 1 506E24BB
 P 6550 5150
-F 0 "#PWR062" H 6550 5150 30  0001 C CNN
+F 0 "#PWR08" H 6550 5150 30  0001 C CNN
 F 1 "GND" H 6550 5080 30  0001 C CNN
 	1    6550 5150
 	0    1    1    0   
@@ -474,14 +489,12 @@ Text HLabel 5850 2100 0    60   Output ~ 0
 BB_SENSOR
 Text HLabel 5850 2200 0    60   Output ~ 0
 LPS_SENSOR
-Text HLabel 5850 3850 0    60   Output ~ 0
-M3_HALL[0..2]
-Text HLabel 5850 3350 0    60   Output ~ 0
-M2_HALL[0..2]
-Text HLabel 5850 2850 0    60   Output ~ 0
-M1_HALL[0..2]
-Text HLabel 5850 2350 0    60   Output ~ 0
+Text HLabel 5850 4000 0    60   Output ~ 0
 M0_HALL[0..2]
+Text HLabel 5850 3500 0    60   Output ~ 0
+M1_HALL[0..2]
+Text HLabel 5850 3050 0    60   Output ~ 0
+M2_HALL[0..2]
 Text HLabel 8250 3600 2    60   Input ~ 0
 M3_PHASE[0..2]
 Text HLabel 8250 3000 2    60   Input ~ 0
