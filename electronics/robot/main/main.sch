@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年01月26日 星期日 00时29分18秒
+EESchema Schematic File Version 2  date 2014年01月27日 星期一 22时10分24秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "26 jan 2014"
+Date "28 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
