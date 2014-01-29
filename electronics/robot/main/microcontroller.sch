@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年01月28日 星期二 15时26分36秒
+EESchema Schematic File Version 2  date 2014年01月28日 星期二 21时38分21秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 5 15
 Title ""
-Date "28 jan 2014"
+Date "29 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -369,11 +369,11 @@ $EndComp
 Text Label 6400 5650 0    60   ~ 0
 VCAP1
 Text Label 7950 5100 0    60   ~ 0
-LED3
+LED_S
 Text Label 8050 4800 0    60   ~ 0
-LED2
+LED_L
 Text Label 8150 4500 0    60   ~ 0
-LED1
+LED_C
 Text Label 5250 5950 3    60   ~ 0
 SW5
 Text Label 7700 5300 0    60   ~ 0
@@ -596,41 +596,41 @@ $EndComp
 $Comp
 L LED D19
 U 1 1 52433B69
-P 9150 4500
-F 0 "D19" H 9150 4600 50  0000 C CNN
-F 1 "GRN" H 9150 4400 50  0000 C CNN
-F 4 "160-1169-1-ND" H 9150 4500 60  0001 C CNN "Field1"
-	1    9150 4500
+P 9150 5100
+F 0 "D19" H 9150 5200 50  0000 C CNN
+F 1 "GRN" H 9150 5000 50  0000 C CNN
+F 4 "160-1169-1-ND" H 9150 5100 60  0001 C CNN "Field1"
+	1    9150 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D16
 U 1 1 52433B68
-P 9150 5100
-F 0 "D16" H 9150 5200 50  0000 C CNN
-F 1 "RED" H 9150 5000 50  0000 C CNN
-F 4 "160-1167-1-ND" H 9150 5100 60  0001 C CNN "Field1"
-	1    9150 5100
+P 9150 4500
+F 0 "D16" H 9150 4600 50  0000 C CNN
+F 1 "RED" H 9150 4400 50  0000 C CNN
+F 4 "160-1167-1-ND" H 9150 4500 60  0001 C CNN "Field1"
+	1    9150 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R37
 U 1 1 52433B67
-P 8650 5100
-F 0 "R37" V 8730 5100 50  0000 C CNN
-F 1 "100R" V 8650 5100 50  0000 C CNN
-F 4 "" H 8650 5100 60  0001 C CNN "Digikey Part"
-	1    8650 5100
+P 8650 4500
+F 0 "R37" V 8730 4500 50  0000 C CNN
+F 1 "100R" V 8650 4500 50  0000 C CNN
+F 4 "" H 8650 4500 60  0001 C CNN "Digikey Part"
+	1    8650 4500
 	0    1    -1   0   
 $EndComp
 $Comp
 L R R40
 U 1 1 52433B65
-P 8650 4500
-F 0 "R40" V 8730 4500 50  0000 C CNN
-F 1 "100R" V 8650 4500 50  0000 C CNN
-F 4 "" H 8650 4500 60  0001 C CNN "Digikey Part"
-	1    8650 4500
+P 8650 5100
+F 0 "R40" V 8730 5100 50  0000 C CNN
+F 1 "100R" V 8650 5100 50  0000 C CNN
+F 4 "" H 8650 5100 60  0001 C CNN "Digikey Part"
+	1    8650 5100
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -662,11 +662,11 @@ F 1 "GND" H 9400 4430 30  0001 C CNN
 	1    9400 4500
 	0    -1   -1   0   
 $EndComp
-Text Notes 8550 4650 0    60   ~ 0
+Text Notes 8500 5250 0    60   ~ 0
 Status
-Text Notes 8550 5250 0    60   ~ 0
+Text Notes 8500 4650 0    60   ~ 0
 Charged
-Text Notes 8670 4950 0    60   ~ 0
+Text Notes 8550 4950 0    60   ~ 0
 Link
 Text Notes 1750 4750 2    60   ~ 0
 Any GPIO
