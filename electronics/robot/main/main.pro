@@ -10,7 +10,7 @@ EquName1=devcms
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../..
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -70,7 +70,7 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=/home/kokola/thunderbots/trunk/electronics/thunderbots-symbols
+LibName31=thunderbots-symbols
 [pcbnew]
 version=1
 PadDrlX=0
@@ -101,4 +101,4 @@ LibName8=led
 LibName9=dip_sockets
 LibName10=pga_sockets
 LibName11=valves
-LibName12=/home/kokola/thunderbots/trunk/electronics/thunderbots-modules
+LibName12=../../thunderbots-modules
