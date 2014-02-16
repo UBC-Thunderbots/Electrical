@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年01月28日 星期二 21时38分21秒
+EESchema Schematic File Version 2  date 2014年02月15日 星期六 18时30分29秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "29 jan 2014"
+Date "16 feb 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -679,7 +679,7 @@ Wire Wire Line
 Wire Wire Line
 	7450 4450 7450 5000
 Wire Wire Line
-	7250 5800 7300 5800
+	7300 5800 7250 5800
 Wire Wire Line
 	7150 4650 7250 4650
 Wire Wire Line
@@ -791,7 +791,7 @@ Wire Bus Line
 Wire Bus Line
 	7200 1500 7300 1500
 Text Label 7350 2100 0    60   ~ 0
-M2_LOW0
+M2_LOW2
 Text Label 7350 2000 0    60   ~ 0
 M2_LOW1
 Text Label 7350 1600 0    60   ~ 0
@@ -801,7 +801,7 @@ M2_HIGH1
 Text Label 7350 1800 0    60   ~ 0
 M2_HIGH2
 Text Label 7350 1900 0    60   ~ 0
-M2_LOW2
+M2_LOW0
 Entry Wire Line
 	6600 1100 6700 1200
 Text Label 7950 3550 0    60   ~ 0
@@ -856,18 +856,18 @@ Entry Wire Line
 	8250 2000 8350 2100
 Entry Wire Line
 	8250 1900 8350 2000
-Text Label 5950 800  0    60   ~ 0
-M4_LOW2
 Text Label 6050 1100 0    60   ~ 0
-M4_HIGH2
-Text Label 6050 1200 0    60   ~ 0
-M4_HIGH1
-Text Label 6050 1300 0    60   ~ 0
+M4_LOW0
+Text Label 5950 800  0    60   ~ 0
 M4_HIGH0
 Text Label 5950 900  0    60   ~ 0
-M4_LOW1
+M4_HIGH1
 Text Label 5950 1000 0    60   ~ 0
-M4_LOW0
+M4_HIGH2
+Text Label 6050 1200 0    60   ~ 0
+M4_LOW1
+Text Label 6050 1300 0    60   ~ 0
+M4_LOW2
 Entry Wire Line
 	8500 2600 8600 2700
 Entry Wire Line
