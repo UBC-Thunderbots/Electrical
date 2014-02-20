@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年02月15日 星期六 18时30分29秒
+EESchema Schematic File Version 2  date 2014年02月20日 星期四 04时27分53秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 8 15
 Title ""
-Date "16 feb 2014"
+Date "20 feb 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -90,10 +90,10 @@ SD_D1
 Text Label 5250 4350 0    60   ~ 0
 SD_D0
 $Comp
-L GND #PWR0104
+L GND #PWR0106
 U 1 1 524331E5
 P 5500 4250
-F 0 "#PWR0104" H 5500 4250 30  0001 C CNN
+F 0 "#PWR0106" H 5500 4250 30  0001 C CNN
 F 1 "GND" H 5500 4180 30  0001 C CNN
 	1    5500 4250
 	0    1    1    0   
@@ -101,10 +101,10 @@ $EndComp
 Text HLabel 4800 4150 0    60   Input ~ 0
 SD_CK
 $Comp
-L +3.3V #PWR0105
+L +3.3V #PWR0107
 U 1 1 524331F5
 P 5500 4050
-F 0 "#PWR0105" H 5500 4010 30  0001 C CNN
+F 0 "#PWR0107" H 5500 4010 30  0001 C CNN
 F 1 "+3.3V" H 5500 4160 30  0000 C CNN
 	1    5500 4050
 	0    -1   -1   0   
@@ -116,19 +116,19 @@ SD_D2
 Text Label 5250 3850 0    60   ~ 0
 SD_D3
 $Comp
-L GND #PWR0106
+L GND #PWR0108
 U 1 1 52420F7F
 P 6350 4400
-F 0 "#PWR0106" H 6350 4400 30  0001 C CNN
+F 0 "#PWR0108" H 6350 4400 30  0001 C CNN
 F 1 "GND" H 6350 4330 30  0001 C CNN
 	1    6350 4400
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR0107
+L +3.3V #PWR0109
 U 1 1 507B4D54
 P 6350 3900
-F 0 "#PWR0107" H 6350 3860 30  0001 C CNN
+F 0 "#PWR0109" H 6350 3860 30  0001 C CNN
 F 1 "+3.3V" H 6350 4010 30  0000 C CNN
 	1    6350 3900
 	1    0    0    -1  
@@ -145,10 +145,10 @@ $EndComp
 Text HLabel 4800 4650 0    60   Output ~ 0
 SD_CD
 $Comp
-L +3.3V #PWR0108
+L +3.3V #PWR0110
 U 1 1 506E24B6
 P 5500 4550
-F 0 "#PWR0108" H 5500 4510 30  0001 C CNN
+F 0 "#PWR0110" H 5500 4510 30  0001 C CNN
 F 1 "+3.3V" H 5500 4660 30  0000 C CNN
 	1    5500 4550
 	0    -1   -1   0   

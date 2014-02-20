@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年02月15日 星期六 18时30分29秒
+EESchema Schematic File Version 2  date 2014年02月20日 星期四 04时27分53秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 14 15
 Title ""
-Date "16 feb 2014"
+Date "20 feb 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -58,10 +58,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 4300 4150 4250
 $Comp
-L +3.3V #PWR0174
+L +3.3V #PWR0176
 U 1 1 52425F2F
 P 5100 3900
-F 0 "#PWR0174" H 5100 3860 30  0001 C CNN
+F 0 "#PWR0176" H 5100 3860 30  0001 C CNN
 F 1 "+3.3V" H 5100 4010 30  0000 C CNN
 	1    5100 3900
 	0    -1   -1   0   
@@ -78,19 +78,19 @@ F 4 "XC287CT-ND" H 6100 4050 60  0001 C CNN "Field1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR0175
+L GND #PWR0177
 U 1 1 4CC50E98
 P 4150 4300
-F 0 "#PWR0175" H 4150 4300 30  0001 C CNN
+F 0 "#PWR0177" H 4150 4300 30  0001 C CNN
 F 1 "GND" H 4150 4230 30  0001 C CNN
 	1    4150 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR0176
+L +3.3V #PWR0178
 U 1 1 4CC50E96
 P 4150 3800
-F 0 "#PWR0176" H 4150 3760 30  0001 C CNN
+F 0 "#PWR0178" H 4150 3760 30  0001 C CNN
 F 1 "+3.3V" H 4150 3910 30  0000 C CNN
 	1    4150 3800
 	1    0    0    -1  
@@ -108,19 +108,19 @@ $EndComp
 Text HLabel 5150 4100 0    60   Output ~ 0
 OSC
 $Comp
-L +3.3V #PWR0177
+L +3.3V #PWR0179
 U 1 1 4CC50DEA
 P 5150 4200
-F 0 "#PWR0177" H 5150 4160 30  0001 C CNN
+F 0 "#PWR0179" H 5150 4160 30  0001 C CNN
 F 1 "+3.3V" H 5150 4310 30  0000 C CNN
 	1    5150 4200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR0178
+L GND #PWR0180
 U 1 1 4CC50DE7
 P 5150 4000
-F 0 "#PWR0178" H 5150 4000 30  0001 C CNN
+F 0 "#PWR0180" H 5150 4000 30  0001 C CNN
 F 1 "GND" H 5150 3930 30  0001 C CNN
 	1    5150 4000
 	0    1    1    0   

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = 2013年10月26日 星期六 18时52分08秒
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = 2014年02月19日 星期三 23时22分44秒
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -778,6 +778,13 @@ IdModule  = FX6-60S-0.8SV;
 EndCmp
 
 BeginCmp
+TimeStamp = /52431B80/5305AB98;
+Reference = P3;
+ValeurCmp = CONN_6;
+IdModule  = PIN_ARRAY-6X1;
+EndCmp
+
+BeginCmp
 TimeStamp = /52431B80/524331DD;
 Reference = P4;
 ValeurCmp = CONN_4;
@@ -1093,7 +1100,7 @@ IdModule  = A27xP;
 EndCmp
 
 BeginCmp
-TimeStamp = /52431B80/526C709E;
+TimeStamp = /4AD9040D/53058E67;
 Reference = SW2;
 ValeurCmp = DIP6;
 IdModule  = 219-6MST;
