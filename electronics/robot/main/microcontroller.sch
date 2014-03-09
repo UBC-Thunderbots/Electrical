@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年02月22日 星期六 19时21分16秒
+EESchema Schematic File Version 2  date 2014年03月08日 星期六 17时53分50秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 5 15
 Title ""
-Date "20 feb 2014"
+Date "9 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,8 +45,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3050 3800 3900 3800
 Wire Bus Line
-	3050 3100 3050 3000
+	2950 3700 2950 3600
+Wire Bus Line
+	2950 3600 2850 3600
 Wire Wire Line
 	3900 3100 3150 3100
 Wire Wire Line
@@ -91,16 +95,12 @@ Wire Bus Line
 	8650 3700 8100 3700
 Wire Wire Line
 	7500 3500 7700 3500
-Wire Bus Line
-	3050 3000 2800 3000
 Wire Wire Line
 	5750 1300 5750 1950
 Wire Wire Line
 	5550 1950 5550 1200
 Wire Wire Line
 	5650 5750 5650 5550
-Wire Wire Line
-	3900 3700 3700 3700
 Wire Wire Line
 	3900 4500 3900 4850
 Wire Wire Line
@@ -282,8 +282,6 @@ Wire Wire Line
 Wire Wire Line
 	5250 1300 5100 1300
 Wire Wire Line
-	3900 3800 3700 3800
-Wire Wire Line
 	5750 5750 5750 5550
 Wire Wire Line
 	5450 1200 5450 1950
@@ -334,8 +332,16 @@ Wire Wire Line
 	2550 1300 2200 1300
 Wire Wire Line
 	3900 3200 3150 3200
+Wire Wire Line
+	3050 3700 3900 3700
+Text HLabel 3700 4000 0    60   Input ~ 0
+CHICKER_VOLTAGE
+Text HLabel 3700 3900 0    60   Input ~ 0
+BATTERY
 Entry Wire Line
-	3050 3100 3150 3200
+	2950 3600 3050 3700
+Entry Wire Line
+	2950 3700 3050 3800
 $Comp
 L +3.3V #PWR064
 U 1 1 5305AC98
@@ -436,13 +442,11 @@ Text Label 7550 3400 0    60   ~ 0
 USB_DM
 Text Label 7550 3300 0    60   ~ 0
 USB_DP
-Text Label 3250 3100 0    60   ~ 0
+Text Label 3150 3800 0    60   ~ 0
 LPS_DRIVE0
-Entry Wire Line
-	3150 3100 3050 3000
-Text HLabel 2800 3000 0    60   Output ~ 0
+Text HLabel 2850 3600 0    60   Output ~ 0
 LPS_DRIVE[0..3]
-Text Label 3250 3200 0    60   ~ 0
+Text Label 3150 3700 0    60   ~ 0
 LPS_DRIVE1
 Text Label 5750 1800 1    60   ~ 0
 LPS_DRIVE2
@@ -905,8 +909,6 @@ F 1 "100nF" H 3900 2650 50  0000 L CNN
 $EndComp
 Text HLabel 5850 5750 3    60   Input ~ 0
 ICB_IRQ
-Text HLabel 3700 3800 0    60   Input ~ 0
-BATTERY
 Text HLabel 5450 5750 3    60   Input ~ 0
 ICB_MISO
 Text HLabel 5550 5750 3    60   Output ~ 0
@@ -923,8 +925,6 @@ Text HLabel 6250 5750 3    60   Output ~ 0
 PROG_B
 Text HLabel 3850 3400 0    60   Input ~ 0
 OSC
-Text HLabel 3700 3700 0    60   Input ~ 0
-CHICKER_VOLTAGE
 Text HLabel 3900 4850 0    60   Output ~ 0
 CHICKER_CHIP
 Text HLabel 5100 1400 0    60   Output ~ 0
@@ -939,9 +939,9 @@ Text HLabel 5950 1850 1    60   BiDi ~ 0
 SD_CMD
 Text HLabel 6050 1850 1    60   Output ~ 0
 SD_CK
-Text HLabel 3700 4000 0    60   Output ~ 0
+Text HLabel 3150 3200 0    60   Output ~ 0
 LOGIC_PWR
-Text HLabel 3700 3900 0    60   Output ~ 0
+Text HLabel 3150 3100 0    60   Output ~ 0
 HV_PWR
 Text HLabel 5950 1200 2    60   Output ~ 0
 LPS_DRIVE[0..3]
