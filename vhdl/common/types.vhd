@@ -26,6 +26,22 @@ package types is
 	type motor_drive_phases_t is array(0 to 2) of motor_drive_phase_t;
 
 	subtype motor_position_t is unsigned(15 downto 0);
+	
+	subtype WORD is std_ulogic_vector(7 downto 0);
+
+	type SPIOutput_t is record
+		ReadData : WORD;
+		ReadStrobe : boolean;
+		ReadCRCOk : boolean;
+		ReadFirst : boolean;
+		WriteReady : boolean;
+	end record;
+
+	type SPIInput_t is record
+		WriteData : WORD;
+		WriteStrobe : boolean;
+		WriteCRC : boolean;
+	end record;
 
 	function to_boolean(X : std_ulogic) return boolean;
 

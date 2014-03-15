@@ -323,6 +323,7 @@ vhdl/common/boostcontroller.vhd -text
 vhdl/common/chicker.vhd -text
 vhdl/common/commutator.vhd -text
 vhdl/common/crc16.vhd -text
+vhdl/common/crc_step.vhd -text
 vhdl/common/deltalaser.vhd -text
 vhdl/common/downclock.vhd -text
 vhdl/common/encoderfail.vhd -text
@@ -334,6 +335,9 @@ vhdl/common/mrf.vhd -text
 vhdl/common/pwm.vhd -text
 vhdl/common/sd.vhd -text
 vhdl/common/spi.vhd -text
+vhdl/common/spi_slave.vhd -text
+vhdl/common/spi_slave_receiver.vhd -text
+vhdl/common/spi_slave_transmitter.vhd -text
 vhdl/common/spiflash.vhd -text
 vhdl/common/sysctl.vhd -text
 vhdl/common/types.vhd -text
