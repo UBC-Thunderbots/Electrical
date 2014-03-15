@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月08日 星期六 17时53分50秒
+EESchema Schematic File Version 2  date 2014年03月15日 星期六 13时34分32秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 5 15
 Title ""
-Date "9 mar 2014"
+Date "15 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -484,6 +484,7 @@ U 1 1 526C709E
 P 4750 950
 F 0 "SW2" H 4750 1050 70  0000 C CNN
 F 1 "DIP6" H 4750 850 70  0000 C CNN
+F 3 "CKN6145-ND" H 4750 950 60  0001 C CNN
 	1    4750 950 
 	1    0    0    -1  
 $EndComp
