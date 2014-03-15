@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月08日 星期六 17时53分50秒
+EESchema Schematic File Version 2  date 2014-03-15T13:01:41 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "9 mar 2014"
+Date "15 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +44,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L +3.3V #PWR09
+U 1 1 00000000
+P 7800 6300
+F 0 "#PWR09" H 7800 6260 30  0001 C CNN
+F 1 "+3.3V" H 7800 6410 30  0000 C CNN
+	1    7800 6300
+	0    1    1    0   
+$EndComp
 Text Label 6350 7100 0    60   ~ 0
 SW1
 Text Label 6350 6900 0    60   ~ 0
@@ -828,15 +836,6 @@ Wire Wire Line
 Connection ~ 7650 6700
 Wire Wire Line
 	7800 6300 7550 6300
-$Comp
-L GND #PWR09
-U 1 1 5305905C
-P 7800 6300
-F 0 "#PWR09" H 7800 6300 30  0001 C CNN
-F 1 "GND" H 7800 6230 30  0001 C CNN
-	1    7800 6300
-	0    -1   1    0   
-$EndComp
 $Comp
 L DIP6 SW2
 U 6 1 53058E67
