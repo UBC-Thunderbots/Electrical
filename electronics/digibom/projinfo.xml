@@ -120,9 +120,7 @@
 		<default value="4.7uF" part="587-1782-1-ND" />
 		<default value="10uF" part="1276-1075-1-ND" />
 		<default value="100uF" part="P5182-ND" />
-		<default value="74AHC74" part="568-4458-1-ND" />
 		<default value="7805" part="LM7805CT-ND" />
-		<default value="ADS7866IDBVT" part="296-18216-1-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
 		<default value="AO4882" part="785-1317-1-ND" />
 		<default value="E4P" part="E4P" />
@@ -130,18 +128,14 @@
 		<default value="LD1117V33C" part="497-1492-5-ND" />
 		<default value="LM5107" part="LM5107MAX/NOPBCT-ND" />
 		<default value="LP2951" part="LP2951CMXFSCT-ND" />
-		<default value="MCP1415" part="MCP1415T-E/OTCT-ND" />
 		<default value="MIC7300" part="576-1319-1-ND" />
 		<default value="MRF24J40MB" part="MRF24J40MB-I/RM-ND" />
 		<default value="MRF24J40MC" part="MRF24J40MC" />
 		<default value="OPB733TR" part="365-1510-1-ND" />
-		<default value="PIC18F65J50" part="PIC18F65J50-I/PT-ND" />
-		<default value="PIC18F67J50" part="PIC18F67J50-I/PT-ND" />
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="SD1209T3-A1" part="445-2530-ND" />
 		<default value="STM32F405RXT" part="497-11767-ND" />
-		<default value="TC4469" part="TC4469COE-ND" />
 		<default value="TEMT1000" part="751-1052-1-ND" />
 		<default value="VSMY2850RG" part="VSMY2850RGCT-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />

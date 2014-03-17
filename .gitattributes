@@ -193,7 +193,6 @@ datasheets/connectors/Molex/53261-0671_0771[!!-~](Header;[!!-~]Lateral[!!-~]Sens
 datasheets/connectors/Molex/53261-1171[!!-~](Header;[!!-~]Dribbler[!!-~]Harness).pdf -text
 datasheets/connectors/Molex/53398-0771_LateralSensorCon7_right-angle.pdf -text svneol=unset#unset
 datasheets/connectors/Molex/638190300[!!-~](Crimp[!!-~]Tool[!!-~]for[!!-~]50079-8x00).pdf -text
-datasheets/diodes/RB521G-30.pdf -text
 datasheets/diodes/RURG3060C.pdf -text
 datasheets/diodes/STTH10R04.pdf -text
 datasheets/electromechanical/IM[!!-~]Relay.pdf -text svneol=unset#application/pdf
@@ -203,16 +202,11 @@ datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]30W[!!-~](Dribbler).pdf -text 
 datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain)[!!-~]\[May[!!-~]2009[!!-~]Edition\].pdf -text
 datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain)[!!-~]\[May[!!-~]2011[!!-~]Edition\].pdf -text
 datasheets/electromechanical/NKK[!!-~]A[!!-~]Series[!!-~](Power[!!-~]Switch).pdf -text
-datasheets/ics/74AHC74[!!-~](Dual[!!-~]D[!!-~]FF).pdf -text
 datasheets/ics/74HC4050[!!-~](Level[!!-~]Shifter).pdf -text
-datasheets/ics/ADCs/ADS7866.pdf -text
 datasheets/ics/ADCs/MCP3004_3008.pdf -text
-datasheets/ics/ADG3123[!!-~](Level[!!-~]Shifter).pdf -text
 datasheets/ics/BMG160[!!-~]Gyroscope.pdf -text svneol=unset#application/pdf
 datasheets/ics/FET[!!-~]Drivers/LM5107.pdf -text svneol=unset#application/pdf
-datasheets/ics/FET[!!-~]Drivers/MCP1415_1416.pdf -text svneol=unset#unset
 datasheets/ics/FET[!!-~]Drivers/MIC5020.pdf -text
-datasheets/ics/FET[!!-~]Drivers/TC4467_4468_4469.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Block[!!-~]RAM.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Clocking.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Configurable[!!-~]Logic[!!-~]Blocks.pdf -text
@@ -225,26 +219,16 @@ datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/PCB[!!-~]Design[!!-~]and[!!-~]Pi
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Packaging[!!-~]and[!!-~]Pinout.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Power[!!-~]Management.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/SelectIO.pdf -text
-datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Configuration[!!-~]User[!!-~]Guide.pdf -text
-datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Datasheet.pdf -text
-datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/In-System[!!-~]Flash[!!-~]Guide.pdf -text
-datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Overview.pdf -text
-datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/Package[!!-~]Drawing.pdf -text
-datasheets/ics/FPGAs/Xilinx[!!-~]XC3S50A-4TQ144C/User[!!-~]Guide.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
 datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
 datasheets/ics/L6234[!!-~]Motor[!!-~]Driver.pdf -text
 datasheets/ics/LIS3DH[!!-~]Accelerometer.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/AVR/ATtiny26.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/MCUs/AVR/AVR[!!-~]Instruction[!!-~]Set.pdf -text
 datasheets/ics/MCUs/LEON3/AMBA[!!-~]Specification[!!-~]2.0.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/LEON3/GRLIB[!!-~]IP[!!-~]Core[!!-~]Manual.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/LEON3/GRLIB[!!-~]Manual.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/LEON3/SPARC[!!-~]Architecture[!!-~]Manual.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/LEON3/System[!!-~]V[!!-~]ABI[!!-~]SPARC[!!-~]Processor[!!-~]Supplement.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/PIC18F6XJ50/Datasheet.pdf -text svneol=unset#application/octet-stream
-datasheets/ics/MCUs/PIC18F6XJ50/Errata.pdf -text
 datasheets/ics/MCUs/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/STM32/Bootloader[!!-~]DFU[!!-~]File[!!-~]Format.pdf -text
 datasheets/ics/MCUs/STM32/Bootloader[!!-~]DFU[!!-~]Protocol.pdf -text svneol=unset#application/octet-stream
@@ -262,7 +246,6 @@ datasheets/ics/Radios/MRF24J40/MRF24J40MA.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MB.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MC.pdf -text
 datasheets/ics/Radios/MRF24J40/Silicon[!!-~]Errata.pdf -text
-datasheets/ics/Radios/XBee.pdf -text
 datasheets/ics/Winbond[!!-~]W25Q16BV[!!-~](SPI[!!-~]Flash).pdf -text
 datasheets/mechanical/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
 datasheets/mechanical/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset

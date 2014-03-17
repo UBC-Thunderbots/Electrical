@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2013-09-25T13:11:36 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2014-03-17T00:20:53 PDT
 #
 $CMP 10KR7
 D Resistance
@@ -7,10 +7,6 @@ $ENDCMP
 #
 $CMP 74HC4050
 D Hex level shifter
-$ENDCMP
-#
-$CMP ADG3123
-D Quad level shifter
 $ENDCMP
 #
 $CMP AO4616
@@ -54,14 +50,6 @@ $ENDCMP
 #
 $CMP MCP3008
 D 8-input 10-bit ADC
-$ENDCMP
-#
-$CMP PIC18F65J50
-F ../datasheets/ics/PIC18F65J50/Datasheet.pdf
-$ENDCMP
-#
-$CMP PIC18F67J50
-F ../datasheets/ics/PIC18F65J50/Datasheet.pdf
 $ENDCMP
 #
 $CMP SP3T
