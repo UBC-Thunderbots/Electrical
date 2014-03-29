@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月15日 星期六 13时34分32秒
+EESchema Schematic File Version 2  date 2014-03-29T13:18:59 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 2 15
 Title ""
-Date "15 mar 2014"
+Date "29 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,38 +44,30 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 6600 3300 2    60   ~ 0
-M2_ENCODER1
-Text Label 6600 3400 2    60   ~ 0
-M2_ENCODER0
-Wire Wire Line
-	6000 2750 6000 2800
-Wire Wire Line
-	6000 2750 5850 2750
-Wire Wire Line
-	6000 3250 6000 3300
-Wire Wire Line
-	6000 3250 5850 3250
-Wire Wire Line
-	6000 3750 6000 3800
-Wire Wire Line
-	6000 3750 5850 3750
-Wire Wire Line
-	5850 4350 5950 4350
-Wire Wire Line
-	5950 4350 5950 4400
-Wire Wire Line
-	5950 4400 6650 4400
 Wire Bus Line
-	5850 4500 5900 4500
+	5750 2750 5800 2750
 Wire Bus Line
-	5900 4000 5850 4000
+	5750 3750 5800 3750
 Wire Bus Line
-	5900 3500 5850 3500
+	5800 4200 5800 4300
 Wire Bus Line
-	5900 3050 5850 3050
+	5800 3200 5800 3300
+Wire Wire Line
+	5900 3300 6650 3300
+Wire Wire Line
+	6650 2700 5900 2700
+Wire Wire Line
+	5900 2500 6650 2500
 Wire Bus Line
-	5850 2450 5900 2450
+	5750 4500 5800 4500
+Wire Bus Line
+	5800 4000 5750 4000
+Wire Bus Line
+	5800 3500 5750 3500
+Wire Bus Line
+	5800 3050 5750 3050
+Wire Bus Line
+	5750 2450 5800 2450
 Wire Wire Line
 	7450 3700 8250 3700
 Wire Wire Line
@@ -153,46 +144,6 @@ Wire Wire Line
 	6200 2200 6200 2400
 Wire Wire Line
 	6200 2400 6650 2400
-Wire Wire Line
-	6000 4800 6650 4800
-Wire Wire Line
-	6000 4700 6650 4700
-Wire Wire Line
-	6000 4600 6650 4600
-Wire Wire Line
-	6000 4500 6650 4500
-Wire Wire Line
-	6650 4300 6000 4300
-Wire Wire Line
-	6000 4200 6650 4200
-Wire Wire Line
-	6000 4100 6650 4100
-Wire Wire Line
-	6000 4000 6650 4000
-Wire Wire Line
-	6000 3800 6650 3800
-Wire Wire Line
-	6000 3700 6650 3700
-Wire Wire Line
-	6000 3600 6650 3600
-Wire Wire Line
-	6000 3500 6650 3500
-Wire Wire Line
-	6000 3300 6650 3300
-Wire Wire Line
-	6000 3200 6650 3200
-Wire Wire Line
-	6000 3100 6650 3100
-Wire Wire Line
-	6000 3000 6650 3000
-Wire Wire Line
-	6000 2500 6650 2500
-Wire Wire Line
-	6000 2600 6650 2600
-Wire Wire Line
-	6000 2700 6650 2700
-Wire Wire Line
-	6000 2800 6650 2800
 Wire Wire Line
 	6650 2300 6300 2300
 Wire Wire Line
@@ -272,54 +223,98 @@ Wire Wire Line
 	6600 5150 6550 5150
 Connection ~ 6600 5150
 Wire Bus Line
-	5900 2600 5900 2350
+	5800 2900 5800 3100
 Wire Bus Line
-	5900 2900 5900 3100
+	5800 3400 5800 3600
 Wire Bus Line
-	5900 3400 5900 3600
+	5800 3900 5800 4100
 Wire Bus Line
-	5900 3900 5900 4100
+	5800 4400 5800 4700
 Wire Bus Line
-	5900 4400 5900 4700
+	5800 2600 5800 2400
 Wire Wire Line
-	6000 4300 6000 4250
+	5900 2600 6650 2600
 Wire Wire Line
-	6000 4250 5850 4250
+	5900 2800 6650 2800
 Wire Wire Line
-	6650 3900 5950 3900
+	5900 2900 6650 2900
 Wire Wire Line
-	5950 3900 5950 3850
+	5900 3000 6650 3000
 Wire Wire Line
-	5950 3850 5850 3850
+	5900 3100 6650 3100
 Wire Wire Line
-	6650 3400 5950 3400
+	5900 3200 6650 3200
 Wire Wire Line
-	5950 3400 5950 3350
+	5900 3400 6650 3400
 Wire Wire Line
-	5950 3350 5850 3350
+	5900 3500 6650 3500
 Wire Wire Line
-	6650 2900 5950 2900
+	5900 3600 6650 3600
 Wire Wire Line
-	5950 2900 5950 2850
+	5900 3700 6650 3700
 Wire Wire Line
-	5950 2850 5850 2850
-Text HLabel 5850 4250 0    60   Output ~ 0
-M0_ENCODER1
-Text HLabel 5850 4350 0    60   Output ~ 0
-M0_ENCODER0
-Text HLabel 5850 3850 0    60   Output ~ 0
-M1_ENCODER0
-Text HLabel 5850 3750 0    60   Output ~ 0
-M1_ENCODER1
-Text HLabel 5850 3350 0    60   Output ~ 0
-M2_ENCODER0
-Text HLabel 5850 3250 0    60   Output ~ 0
-M2_ENCODER1
-Text HLabel 5850 2750 0    60   Output ~ 0
-M3_ENCODER1
-Text HLabel 5850 2850 0    60   Output ~ 0
+	5900 3800 6650 3800
+Wire Wire Line
+	5900 3900 6650 3900
+Wire Wire Line
+	5900 4000 6650 4000
+Wire Wire Line
+	5900 4100 6650 4100
+Wire Wire Line
+	5900 4200 6650 4200
+Wire Wire Line
+	5900 4300 6650 4300
+Wire Wire Line
+	5900 4400 6650 4400
+Wire Wire Line
+	5900 4500 6650 4500
+Wire Wire Line
+	5900 4600 6650 4600
+Wire Wire Line
+	5900 4700 6650 4700
+Wire Wire Line
+	5900 4800 6650 4800
+Wire Bus Line
+	5800 2700 5800 2800
+Wire Bus Line
+	5800 3700 5800 3800
+Wire Bus Line
+	5750 4250 5800 4250
+Wire Bus Line
+	5750 3250 5800 3250
+Entry Wire Line
+	5800 4300 5900 4400
+Entry Wire Line
+	5800 4200 5900 4300
+Entry Wire Line
+	5800 3800 5900 3900
+Entry Wire Line
+	5800 3700 5900 3800
+Entry Wire Line
+	5800 3300 5900 3400
+Entry Wire Line
+	5800 3200 5900 3300
+Entry Wire Line
+	5800 2800 5900 2900
+Entry Wire Line
+	5800 2700 5900 2800
+Text Label 6600 2900 2    60   ~ 0
 M3_ENCODER0
-Text HLabel 5850 2450 0    60   Output ~ 0
+Text Label 6600 2800 2    60   ~ 0
+M3_ENCODER1
+Text Label 6600 3300 2    60   ~ 0
+M2_ENCODER1
+Text Label 6600 3400 2    60   ~ 0
+M2_ENCODER0
+Text HLabel 5750 4250 0    60   Output ~ 0
+M0_ENCODER[0..1]
+Text HLabel 5750 3750 0    60   Output ~ 0
+M1_ENCODER[0..1]
+Text HLabel 5750 3250 0    60   Output ~ 0
+M2_ENCODER[0..1]
+Text HLabel 5750 2750 0    60   Output ~ 0
+M3_ENCODER[0..1]
+Text HLabel 5750 2450 0    60   Output ~ 0
 M3_HALL[0..2]
 NoConn ~ 6650 4900
 Text Notes 6600 4950 2    60   ~ 0
@@ -375,37 +370,37 @@ Entry Wire Line
 Text Label 7550 4950 0    60   ~ 0
 M1_PHASE1
 Entry Wire Line
-	5900 4700 6000 4800
+	5800 4700 5900 4800
 Entry Wire Line
-	5900 4600 6000 4700
+	5800 4600 5900 4700
 Entry Wire Line
-	5900 4500 6000 4600
+	5800 4500 5900 4600
 Entry Wire Line
-	5900 4400 6000 4500
+	5800 4400 5900 4500
 Entry Wire Line
-	5900 4100 6000 4200
+	5800 4100 5900 4200
 Entry Wire Line
-	5900 4000 6000 4100
+	5800 4000 5900 4100
 Entry Wire Line
-	5900 3900 6000 4000
+	5800 3900 5900 4000
 Entry Wire Line
-	5900 3600 6000 3700
+	5800 3600 5900 3700
 Entry Wire Line
-	5900 3500 6000 3600
+	5800 3500 5900 3600
 Entry Wire Line
-	5900 3400 6000 3500
+	5800 3400 5900 3500
 Entry Wire Line
-	5900 3100 6000 3200
+	5800 3100 5900 3200
 Entry Wire Line
-	5900 3000 6000 3100
+	5800 3000 5900 3100
 Entry Wire Line
-	5900 2900 6000 3000
+	5800 2900 5900 3000
 Entry Wire Line
-	5900 2500 6000 2600
+	5800 2500 5900 2600
 Entry Wire Line
-	5900 2600 6000 2700
+	5800 2600 5900 2700
 Entry Wire Line
-	5900 2400 6000 2500
+	5800 2400 5900 2500
 Text Label 6600 4800 2    60   ~ 0
 LPS_DRIVE3
 Text Label 6600 4700 2    60   ~ 0
@@ -456,7 +451,7 @@ F 4 "H10806-ND" H 7050 3750 60  0001 C CNN "Digi-Key Part"
 	1    7050 3750
 	1    0    0    1   
 $EndComp
-Text HLabel 5850 4500 0    60   Input ~ 0
+Text HLabel 5750 4500 0    60   Input ~ 0
 LPS_DRIVE[0..3]
 $Comp
 L +5V #PWR06
@@ -489,11 +484,11 @@ Text HLabel 5850 2100 0    60   Output ~ 0
 BB_SENSOR
 Text HLabel 5850 2200 0    60   Output ~ 0
 LPS_SENSOR
-Text HLabel 5850 4000 0    60   Output ~ 0
+Text HLabel 5750 4000 0    60   Output ~ 0
 M0_HALL[0..2]
-Text HLabel 5850 3500 0    60   Output ~ 0
+Text HLabel 5750 3500 0    60   Output ~ 0
 M1_HALL[0..2]
-Text HLabel 5850 3050 0    60   Output ~ 0
+Text HLabel 5750 3050 0    60   Output ~ 0
 M2_HALL[0..2]
 Text HLabel 8250 3600 2    60   Input ~ 0
 M3_PHASE[0..2]

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月15日 星期六 13时34分32秒
+EESchema Schematic File Version 2  date 2014-03-29T13:18:59 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "15 mar 2014"
+Date "29 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1104,14 +1103,6 @@ Entry Wire Line
 	3100 3650 3200 3750
 Entry Wire Line
 	3100 3700 3200 3800
-Text Notes 1650 1250 0    60   Italic 0
-M3_ENCODER[0..1]
-Text Notes 1650 1150 0    60   Italic 0
-M2_ENCODER[0..1]
-Text Notes 1650 1050 0    60   Italic 0
-M1_ENCODER[0..1]
-Text Notes 1650 950  0    60   Italic 0
-M0_ENCODER[0..1]
 Text HLabel 3000 3600 0    60   Input ~ 0
 M3_ENCODER[0..1]
 Text HLabel 3000 3300 0    60   Input ~ 0
@@ -1120,72 +1111,6 @@ Text HLabel 3050 2650 0    60   Input ~ 0
 M1_ENCODER[0..1]
 Text HLabel 4550 1400 1    60   Input ~ 0
 M0_ENCODER[0..1]
-Text Notes 1650 4550 0    60   Italic 0
-ACCEL_INT
-Text Notes 1650 4450 0    60   Italic 0
-ACCEL_MISO
-Text Notes 1650 4350 0    60   Italic 0
-ACCEL_MOSI
-Text Notes 1650 4250 0    60   Italic 0
-ACCEL_CLK
-Text Notes 1650 4150 0    60   Italic 0
-/ACCEL_CS
-Text Notes 1650 4050 0    60   Italic 0
-GYRO_INT
-Text Notes 1650 3950 0    60   Italic 0
-GYRO_MISO
-Text Notes 1650 3850 0    60   Italic 0
-GYRO_MOSI
-Text Notes 1650 3750 0    60   Italic 0
-GYRO_CLK
-Text Notes 1650 3650 0    60   Italic 0
-/GYRO_CS
-Text Notes 1650 3450 0    60   Italic 0
-MRF_MISO
-Text Notes 1650 3350 0    60   Italic 0
-/MRF_RESET
-Text Notes 1650 3250 0    60   Italic 0
-MRF_INT
-Text Notes 1650 3150 0    60   Italic 0
-/MRF_CS
-Text Notes 1650 3050 0    60   Italic 0
-MRF_WAKE
-Text Notes 1650 2950 0    60   Italic 0
-MRF_MOSI
-Text Notes 1650 2850 0    60   Italic 0
-MRF_CLK
-Text Notes 1650 2750 0    60   Italic 0
-M_HIGH4[0..2]
-Text Notes 1650 2650 0    60   Italic 0
-M_HIGH3[0..2]
-Text Notes 1650 2550 0    60   Italic 0
-M_HIGH2[0..2]
-Text Notes 1650 2450 0    60   Italic 0
-M_HIGH1[0..2]
-Text Notes 1650 2350 0    60   Italic 0
-M_HIGH0[0..2]
-Text Notes 1650 2250 0    60   Italic 0
-M_LOW4[0..2]
-Text Notes 1650 2150 0    60   Italic 0
-M_LOW3[0..2]
-Text Notes 1650 2050 0    60   Italic 0
-M_LOW2[0..2]
-Text Notes 1650 1950 0    60   Italic 0
-M_LOW1[0..2]
-Text Notes 1650 1850 0    60   Italic 0
-M_LOW0[0..2]
-Text Notes 1650 3550 0    60   Italic 0
-ICB_IRQ
-Text Notes 1650 1750 0    60   Italic 0
-M_HALL4[0..2]
-Text Notes 1650 1650 0    60   Italic 0
-M_HALL3[0..2]
-Text Notes 1650 1550 0    60   Italic 0
-M_HALL2[0..2]
-Text Notes 1650 1450 0    60   Italic 0
-M_HALL1[0..2]\n
-Text Notes 1650 1350 0    60   Italic 0
-M_HALL0[0..2]
 Text HLabel 3100 3900 0    60   Input ~ 0
 ACCEL_INT
 Text HLabel 3100 4100 0    60   Input ~ 0

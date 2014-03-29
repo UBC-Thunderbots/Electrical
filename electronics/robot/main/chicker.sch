@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月15日 星期六 13时34分32秒
+EESchema Schematic File Version 2  date 2014-03-29T13:18:59 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 6 15
 Title ""
-Date "15 mar 2014"
+Date "29 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -80,10 +79,10 @@ Wire Wire Line
 Wire Wire Line
 	5100 4050 5150 4050
 $Comp
-L +3.3V #PWR087
+L +3.3V #PWR085
 U 1 1 52425F30
 P 5050 4250
-F 0 "#PWR087" H 5050 4210 30  0001 C CNN
+F 0 "#PWR085" H 5050 4210 30  0001 C CNN
 F 1 "+3.3V" H 5050 4360 30  0000 C CNN
 	1    5050 4250
 	0    -1   -1   0   
@@ -92,10 +91,10 @@ Text Notes 5100 3800 2    60   ~ 0
 ~PRESENT
 NoConn ~ 5150 3750
 $Comp
-L GND #PWR088
+L GND #PWR086
 U 1 1 50667D7D
 P 5100 4050
-F 0 "#PWR088" H 5100 4050 30  0001 C CNN
+F 0 "#PWR086" H 5100 4050 30  0001 C CNN
 F 1 "GND" H 5100 3980 30  0001 C CNN
 	1    5100 4050
 	0    1    1    0   
@@ -113,28 +112,28 @@ $EndComp
 Text HLabel 5100 4150 0    60   Output ~ 0
 VOLTAGE
 $Comp
-L GND #PWR089
+L GND #PWR087
 U 1 1 4F69666B
 P 5100 3950
-F 0 "#PWR089" H 5100 3950 30  0001 C CNN
+F 0 "#PWR087" H 5100 3950 30  0001 C CNN
 F 1 "GND" H 5100 3880 30  0001 C CNN
 	1    5100 3950
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR090
+L GND #PWR088
 U 1 1 4F696643
 P 5050 3400
-F 0 "#PWR090" H 5050 3400 30  0001 C CNN
+F 0 "#PWR088" H 5050 3400 30  0001 C CNN
 F 1 "GND" H 5050 3330 30  0001 C CNN
 	1    5050 3400
 	0    1    1    0   
 $EndComp
 $Comp
-L +BATT #PWR091
+L +BATT #PWR089
 U 1 1 4F696638
 P 5050 3200
-F 0 "#PWR091" H 5050 3150 20  0001 C CNN
+F 0 "#PWR089" H 5050 3150 20  0001 C CNN
 F 1 "+BATT" H 5050 3300 30  0000 C CNN
 	1    5050 3200
 	0    -1   -1   0   

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月15日 星期六 13时34分32秒
+EESchema Schematic File Version 2  date 2014-03-29T13:18:59 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 5 15
 Title ""
-Date "15 mar 2014"
+Date "29 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -66,8 +65,6 @@ Wire Wire Line
 Wire Wire Line
 	8400 4800 7950 4800
 Wire Wire Line
-	9500 5500 9500 5400
-Wire Wire Line
 	3700 4000 3900 4000
 Wire Wire Line
 	3900 4200 2750 4200
@@ -85,8 +82,6 @@ Wire Wire Line
 	5150 6200 5150 5550
 Wire Wire Line
 	5450 5550 5450 5750
-Wire Wire Line
-	9500 5400 9150 5400
 Wire Wire Line
 	7950 4800 7950 4300
 Wire Wire Line
@@ -310,8 +305,6 @@ Wire Wire Line
 	4700 6050 4650 6050
 Connection ~ 4650 6050
 Wire Wire Line
-	5250 7200 5250 7300
-Wire Wire Line
 	2750 4100 3900 4100
 Wire Wire Line
 	3900 3900 3700 3900
@@ -412,24 +405,6 @@ F 1 "GND" H 4150 1630 30  0001 C CNN
 $EndComp
 Text Label 7600 3000 0    60   ~ 0
 VCAP2
-$Comp
-L GND #PWR068
-U 1 1 52E4243E
-P 5250 7300
-F 0 "#PWR068" H 5250 7300 30  0001 C CNN
-F 1 "GND" H 5250 7230 30  0001 C CNN
-	1    5250 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR069
-U 1 1 52E4238B
-P 9500 5500
-F 0 "#PWR069" H 9500 5500 30  0001 C CNN
-F 1 "GND" H 9500 5430 30  0001 C CNN
-	1    9500 5500
-	1    0    0    -1  
-$EndComp
 Entry Wire Line
 	8000 3900 8100 3800
 Entry Wire Line
@@ -456,28 +431,6 @@ Entry Wire Line
 	5650 1300 5750 1200
 Entry Wire Line
 	5750 1300 5850 1200
-Text Notes 450  4350 0    60   Italic 0
-HV_PWR
-Text Notes 300  4250 0    60   Italic 0
-LOGIC_PWR
-Text Notes 100  4150 0    60   Italic 0
-LPS_DRIVE[0..3]
-Text Notes 350  4050 0    60   Italic 0
-LASER_DRIVE
-Text Notes 600  4450 0    60   Italic 0
-PROG_B
-Text Notes 800  5050 0    60   Italic 0
-SD_CS
-Text Notes 800  4950 0    60   Italic 0
-DONE
-Text Notes 800  4850 0    60   Italic 0
-INIT_B
-Text Notes 800  2350 0    60   Italic 0
-ICB_MISO
-Text Notes 800  2250 0    60   Italic 0
-ICB_MOSI
-Text Notes 800  2150 0    60   Italic 0
-ICB_CLK
 $Comp
 L DIP6 SW2
 U 1 1 526C709E
@@ -488,18 +441,6 @@ F 3 "CKN6145-ND" H 4750 950 60  0001 C CNN
 	1    4750 950 
 	1    0    0    -1  
 $EndComp
-Text Notes 450  3150 0    60   Italic 0
-BATTERY\nBB_SENSOR\nLPS_SENSOR\nCHICKER_VOLTAGE
-Text Notes 1000 2650 0    60   Italic 0
-CHICKER_CHARGE\nCHICKER_KICK\nCHICKER_CHIP
-Text Notes 1250 1850 0    60   Italic 0
-M3_ENCODER
-Text Notes 1250 1750 0    60   Italic 0
-M2_ENCODER
-Text Notes 1250 1650 0    60   Italic 0
-M1_ENCODER
-Text Notes 1250 1550 0    60   Italic 0
-M0_ENCODER
 Text Label 3200 4700 0    60   ~ 0
 M3_ENCODER1
 Text Label 3200 4600 0    60   ~ 0
@@ -541,19 +482,19 @@ Entry Wire Line
 Text HLabel 8650 3700 2    60   BiDi ~ 0
 SD_D[0..3]
 $Comp
-L GND #PWR070
+L GND #PWR068
 U 1 1 52433D12
 P 9400 4800
-F 0 "#PWR070" H 9400 4800 30  0001 C CNN
+F 0 "#PWR068" H 9400 4800 30  0001 C CNN
 F 1 "GND" H 9400 4730 30  0001 C CNN
 	1    9400 4800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR071
+L GND #PWR069
 U 1 1 52433D0F
 P 9400 5100
-F 0 "#PWR071" H 9400 5100 30  0001 C CNN
+F 0 "#PWR069" H 9400 5100 30  0001 C CNN
 F 1 "GND" H 9400 5030 30  0001 C CNN
 	1    9400 5100
 	0    -1   -1   0   
@@ -619,10 +560,10 @@ F 4 "" H 8650 4800 60  0001 C CNN "Digikey Part"
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR072
+L GND #PWR070
 U 1 1 52433B5E
 P 9400 4500
-F 0 "#PWR072" H 9400 4500 30  0001 C CNN
+F 0 "#PWR070" H 9400 4500 30  0001 C CNN
 F 1 "GND" H 9400 4430 30  0001 C CNN
 	1    9400 4500
 	0    -1   -1   0   
@@ -633,20 +574,6 @@ Text Notes 8500 4650 0    60   ~ 0
 Charged
 Text Notes 8550 4950 0    60   ~ 0
 Link
-Text Notes 1750 4750 2    60   ~ 0
-Any GPIO
-Text Notes 1750 3950 2    60   ~ 0
-Any GPIO except PC13-15
-Text Notes 1750 3650 2    60   ~ 0
-Any GPIO except P*9
-Text Notes 1750 2550 2    60   ~ 0
-Timers 1 and 8 to 14
-Text Notes 1750 2050 2    60   ~ 0
-SPI1 or SPI2
-Text Notes 1750 1450 2    60   ~ 0
-Timers 2 to 5
-Text Notes 1750 3050 2    60   ~ 0
-ADC
 Text Label 7850 3800 2    60   ~ 0
 SD_D1
 Text Label 7850 3900 2    60   ~ 0
@@ -662,10 +589,10 @@ SD_D2
 Text Label 6150 1500 3    60   ~ 0
 SD_D3
 $Comp
-L GND #PWR073
+L GND #PWR071
 U 1 1 524331E2
 P 6050 950
-F 0 "#PWR073" H 6050 950 30  0001 C CNN
+F 0 "#PWR071" H 6050 950 30  0001 C CNN
 F 1 "GND" H 6050 880 30  0001 C CNN
 	1    6050 950 
 	0    -1   -1   0   
@@ -680,10 +607,10 @@ F 1 "1kR" V 5700 950 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3.3V #PWR074
+L +3.3V #PWR072
 U 1 1 524331E0
 P 4150 950
-F 0 "#PWR074" H 4150 910 30  0001 C CNN
+F 0 "#PWR072" H 4150 910 30  0001 C CNN
 F 1 "+3.3V" H 4150 1060 30  0000 C CNN
 	1    4150 950 
 	0    -1   -1   0   
@@ -691,10 +618,10 @@ $EndComp
 Text Notes 4500 750  0    60   ~ 0
 Bootloader
 $Comp
-L +3.3V #PWR075
+L +3.3V #PWR073
 U 1 1 524331D4
 P 4150 2200
-F 0 "#PWR075" H 4150 2160 30  0001 C CNN
+F 0 "#PWR073" H 4150 2160 30  0001 C CNN
 F 1 "+3.3V" H 4150 2310 30  0000 C CNN
 	1    4150 2200
 	0    -1   -1   0   
@@ -718,28 +645,28 @@ F 1 "4.7uF" H 4550 1850 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR076
+L GND #PWR074
 U 1 1 524331DA
 P 3850 2500
-F 0 "#PWR076" H 3850 2500 30  0001 C CNN
+F 0 "#PWR074" H 3850 2500 30  0001 C CNN
 F 1 "GND" H 3850 2430 30  0001 C CNN
 	1    3850 2500
 	-1   0    0    1   
 $EndComp
 $Comp
-L +3.3V #PWR077
+L +3.3V #PWR075
 U 1 1 524331D9
 P 7500 2450
-F 0 "#PWR077" H 7500 2410 30  0001 C CNN
+F 0 "#PWR075" H 7500 2410 30  0001 C CNN
 F 1 "+3.3V" H 7500 2560 30  0000 C CNN
 	1    7500 2450
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR078
+L GND #PWR076
 U 1 1 524331D8
 P 8050 2650
-F 0 "#PWR078" H 8050 2650 30  0001 C CNN
+F 0 "#PWR076" H 8050 2650 30  0001 C CNN
 F 1 "GND" H 8050 2580 30  0001 C CNN
 	1    8050 2650
 	0    -1   -1   0   
@@ -763,10 +690,10 @@ F 1 "2.2uF" H 7850 2700 50  0000 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR079
+L GND #PWR077
 U 1 1 524331D5
 P 8700 3200
-F 0 "#PWR079" H 8700 3200 30  0001 C CNN
+F 0 "#PWR077" H 8700 3200 30  0001 C CNN
 F 1 "GND" H 8700 3130 30  0001 C CNN
 	1    8700 3200
 	0    1    1    0   
@@ -782,10 +709,10 @@ F 4 "ED2980-ND" V 9100 3350 60  0001 C CNN "Digi-Key Part"
 	1    0    0    1   
 $EndComp
 $Comp
-L GND #PWR080
+L GND #PWR078
 U 1 1 524331E6
 P 6900 6150
-F 0 "#PWR080" H 6900 6150 30  0001 C CNN
+F 0 "#PWR078" H 6900 6150 30  0001 C CNN
 F 1 "GND" H 6900 6080 30  0001 C CNN
 	1    6900 6150
 	1    0    0    -1  
@@ -818,28 +745,28 @@ F 1 "2.2uF" H 6650 5750 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR081
+L GND #PWR079
 U 1 1 524331EA
 P 6050 5600
-F 0 "#PWR081" H 6050 5600 30  0001 C CNN
+F 0 "#PWR079" H 6050 5600 30  0001 C CNN
 F 1 "GND" H 6050 5530 30  0001 C CNN
 	1    6050 5600
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR082
+L +3.3V #PWR080
 U 1 1 524331EB
 P 5150 6200
-F 0 "#PWR082" H 5150 6160 30  0001 C CNN
+F 0 "#PWR080" H 5150 6160 30  0001 C CNN
 F 1 "+3.3V" H 5150 6310 30  0000 C CNN
 	1    5150 6200
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR083
+L GND #PWR081
 U 1 1 524331EC
 P 4650 6200
-F 0 "#PWR083" H 4650 6200 30  0001 C CNN
+F 0 "#PWR081" H 4650 6200 30  0001 C CNN
 F 1 "GND" H 4650 6130 30  0001 C CNN
 	1    4650 6200
 	1    0    0    -1  
@@ -854,19 +781,19 @@ F 1 "100nF" H 4950 5950 50  0000 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3.3V #PWR084
+L +3.3V #PWR082
 U 1 1 524331EE
 P 2150 4400
-F 0 "#PWR084" H 2150 4360 30  0001 C CNN
+F 0 "#PWR082" H 2150 4360 30  0001 C CNN
 F 1 "+3.3V" H 2150 4510 30  0000 C CNN
 	1    2150 4400
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR085
+L GND #PWR083
 U 1 1 524331EF
 P 2150 3900
-F 0 "#PWR085" H 2150 3900 30  0001 C CNN
+F 0 "#PWR083" H 2150 3900 30  0001 C CNN
 F 1 "GND" H 2150 3830 30  0001 C CNN
 	1    2150 3900
 	0    1    1    0   
@@ -891,10 +818,10 @@ F 1 "10nF" H 2550 4050 50  0000 L CNN
 $EndComp
 NoConn ~ 3900 3500
 $Comp
-L +3.3V #PWR086
+L +3.3V #PWR084
 U 1 1 524331F2
 P 3800 3000
-F 0 "#PWR086" H 3800 2960 30  0001 C CNN
+F 0 "#PWR084" H 3800 2960 30  0001 C CNN
 F 1 "+3.3V" H 3800 3110 30  0000 C CNN
 	1    3800 3000
 	0    -1   -1   0   

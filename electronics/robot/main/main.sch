@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月15日 星期六 13时34分32秒
+EESchema Schematic File Version 2  date 2014-03-29T13:18:59 PDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "15 mar 2014"
+Date "29 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +44,30 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 2550 3050
+Connection ~ 2450 2950
+Connection ~ 2350 2850
+Connection ~ 2250 2750
+Wire Bus Line
+	2250 2750 8950 2750
+Wire Bus Line
+	8950 2750 8950 3550
+Wire Bus Line
+	8950 3550 8550 3550
+Wire Bus Line
+	2450 2950 8750 2950
+Wire Bus Line
+	8750 2950 8750 3350
+Wire Bus Line
+	8750 3350 8550 3350
+Wire Bus Line
+	5150 1900 2550 1900
+Wire Bus Line
+	2550 1900 2550 3200
+Wire Bus Line
+	5150 1700 2350 1700
+Wire Bus Line
+	2350 1700 2350 3400
 Wire Bus Line
 	10850 1050 10850 6050
 Wire Bus Line
@@ -55,52 +78,6 @@ Wire Bus Line
 	10250 1650 10250 4250
 Wire Bus Line
 	10450 4850 8550 4850
-Connection ~ 4200 2300
-Wire Wire Line
-	4200 2300 4200 3100
-Wire Wire Line
-	4200 3100 8900 3100
-Wire Wire Line
-	8900 3100 8900 3150
-Connection ~ 4400 2100
-Wire Wire Line
-	4400 2100 4400 2950
-Wire Wire Line
-	4400 2950 9100 2950
-Wire Wire Line
-	9100 2950 9100 3250
-Connection ~ 4600 1900
-Wire Wire Line
-	4600 1900 4600 2750
-Wire Wire Line
-	4600 2750 9300 2750
-Wire Wire Line
-	9300 2750 9300 3350
-Connection ~ 4800 1700
-Wire Wire Line
-	4800 1700 4800 2550
-Wire Wire Line
-	4800 2550 9500 2550
-Wire Wire Line
-	9500 2550 9500 3450
-Wire Wire Line
-	2450 1800 5150 1800
-Wire Bus Line
-	9300 3450 8550 3450
-Wire Bus Line
-	8900 3250 8550 3250
-Wire Wire Line
-	2450 1900 5150 1900
-Wire Wire Line
-	2350 1700 5150 1700
-Wire Wire Line
-	2550 2100 5150 2100
-Wire Wire Line
-	2650 2300 5150 2300
-Wire Bus Line
-	2350 1900 2350 3400
-Wire Wire Line
-	2350 1600 5150 1600
 Wire Wire Line
 	1850 1200 1850 3900
 Wire Wire Line
@@ -109,8 +86,6 @@ Wire Wire Line
 	2050 1400 2050 3700
 Wire Wire Line
 	2050 1400 5150 1400
-Wire Bus Line
-	9500 3550 8550 3550
 Wire Wire Line
 	5900 6450 6150 6450
 Wire Wire Line
@@ -270,7 +245,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 6800 2650 6800
 Wire Bus Line
-	2650 3200 2550 3200
+	2550 3200 2650 3200
 Wire Bus Line
 	2350 3400 2650 3400
 Wire Bus Line
@@ -290,46 +265,6 @@ Wire Wire Line
 Wire Wire Line
 	1950 1300 1950 3800
 Wire Bus Line
-	2250 3500 2250 1700
-Wire Bus Line
-	2450 3300 2450 2100
-Wire Wire Line
-	2650 2200 5150 2200
-Wire Bus Line
-	2550 3200 2550 2300
-Wire Wire Line
-	2550 2000 5150 2000
-Wire Bus Line
-	9100 3350 8550 3350
-Wire Wire Line
-	9600 3450 9600 2450
-Wire Wire Line
-	9600 2450 4900 2450
-Wire Wire Line
-	4900 2450 4900 1600
-Connection ~ 4900 1600
-Wire Wire Line
-	9400 3350 9400 2650
-Wire Wire Line
-	9400 2650 4700 2650
-Wire Wire Line
-	4700 2650 4700 1800
-Connection ~ 4700 1800
-Wire Wire Line
-	9200 3250 9200 2850
-Wire Wire Line
-	9200 2850 4500 2850
-Wire Wire Line
-	4500 2850 4500 2000
-Connection ~ 4500 2000
-Wire Wire Line
-	9000 3150 9000 3050
-Wire Wire Line
-	9000 3050 4300 3050
-Wire Wire Line
-	4300 3050 4300 2200
-Connection ~ 4300 2200
-Wire Bus Line
 	10150 1750 10150 4000
 Wire Bus Line
 	10350 1550 10350 4600
@@ -337,70 +272,34 @@ Wire Bus Line
 	10550 1350 10550 5200
 Wire Bus Line
 	10750 1150 10750 5800
-Text Label 8650 3250 0    60   ~ 0
-M3_ENCODER[0..1]
-Text Label 8650 3350 0    60   ~ 0
-M2_ENCODER[0..1]
-Text Label 8650 3450 0    60   ~ 0
-M1_ENCODER[0..1]
-Text Label 8650 3550 0    60   ~ 0
+Wire Bus Line
+	5150 1600 2250 1600
+Wire Bus Line
+	2250 1600 2250 3500
+Wire Bus Line
+	5150 1800 2450 1800
+Wire Bus Line
+	2450 1800 2450 3300
+Wire Bus Line
+	8550 3250 8650 3250
+Wire Bus Line
+	8650 3250 8650 3050
+Wire Bus Line
+	8650 3050 2550 3050
+Wire Bus Line
+	8550 3450 8850 3450
+Wire Bus Line
+	8850 3450 8850 2850
+Wire Bus Line
+	8850 2850 2350 2850
+Text Label 2950 1600 0    60   ~ 0
 M0_ENCODER[0..1]
-Text Label 2250 3150 1    60   ~ 0
-M0_ENCODER[0..1]
-Text Label 2350 3150 1    60   ~ 0
+Text Label 2950 1700 0    60   ~ 0
 M1_ENCODER[0..1]
-Text Label 2450 3150 1    60   ~ 0
+Text Label 2950 1800 0    60   ~ 0
 M2_ENCODER[0..1]
-Text Label 2550 3150 1    60   ~ 0
+Text Label 2950 1900 0    60   ~ 0
 M3_ENCODER[0..1]
-Text Label 3700 2300 0    60   ~ 0
-M3_ENCODER1
-Text Label 3700 2200 0    60   ~ 0
-M3_ENCODER0
-Text Label 3700 2100 0    60   ~ 0
-M2_ENCODER1
-Text Label 3700 2000 0    60   ~ 0
-M2_ENCODER0
-Text Label 3700 1900 0    60   ~ 0
-M1_ENCODER1
-Text Label 3700 1800 0    60   ~ 0
-M1_ENCODER0
-Text Label 3700 1700 0    60   ~ 0
-M0_ENCODER1
-Text Label 3700 1600 0    60   ~ 0
-M0_ENCODER0
-Entry Wire Line
-	2550 2400 2650 2300
-Entry Wire Line
-	2550 2300 2650 2200
-Entry Wire Line
-	2450 2200 2550 2100
-Entry Wire Line
-	2450 2100 2550 2000
-Entry Wire Line
-	2350 2000 2450 1900
-Entry Wire Line
-	2350 1900 2450 1800
-Entry Wire Line
-	2250 1800 2350 1700
-Entry Wire Line
-	2250 1700 2350 1600
-Entry Wire Line
-	9400 3550 9500 3450
-Entry Wire Line
-	9500 3550 9600 3450
-Entry Wire Line
-	9200 3450 9300 3350
-Entry Wire Line
-	9300 3450 9400 3350
-Entry Wire Line
-	9000 3350 9100 3250
-Entry Wire Line
-	9100 3350 9200 3250
-Entry Wire Line
-	8900 3250 9000 3150
-Entry Wire Line
-	8800 3250 8900 3150
 $Sheet
 S 5150 750  2400 1600
 U 5066737C
@@ -418,14 +317,10 @@ F10 "M3_HALL[0..2]" O R 7550 1050 60
 F11 "M2_HALL[0..2]" O R 7550 1250 60 
 F12 "M1_HALL[0..2]" O R 7550 1450 60 
 F13 "M0_HALL[0..2]" O R 7550 1650 60 
-F14 "M0_ENCODER1" O L 5150 1700 60 
-F15 "M0_ENCODER0" O L 5150 1600 60 
-F16 "M1_ENCODER0" O L 5150 1800 60 
-F17 "M1_ENCODER1" O L 5150 1900 60 
-F18 "M2_ENCODER0" O L 5150 2000 60 
-F19 "M2_ENCODER1" O L 5150 2100 60 
-F20 "M3_ENCODER1" O L 5150 2300 60 
-F21 "M3_ENCODER0" O L 5150 2200 60 
+F14 "M0_ENCODER[0..1]" O L 5150 1600 60 
+F15 "M1_ENCODER[0..1]" O L 5150 1700 60 
+F16 "M2_ENCODER[0..1]" O L 5150 1800 60 
+F17 "M3_ENCODER[0..1]" O L 5150 1900 60 
 $EndSheet
 $Sheet
 S 6150 3150 2400 3700
