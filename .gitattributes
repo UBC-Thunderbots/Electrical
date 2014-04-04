@@ -245,6 +245,7 @@ datasheets/ics/Radios/MRF24J40/MRF24J40.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MA.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MB.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MC.pdf -text
+datasheets/ics/Radios/MRF24J40/MRF24J40MD_ME.pdf -text svneol=unset#application/pdf
 datasheets/ics/Radios/MRF24J40/Silicon[!!-~]Errata.pdf -text
 datasheets/ics/Winbond[!!-~]W25Q16BV[!!-~](SPI[!!-~]Flash).pdf -text
 datasheets/mechanical/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
