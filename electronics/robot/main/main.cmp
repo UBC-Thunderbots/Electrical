@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = 2014年02月19日 星期三 23时22分44秒
+Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2014-04-03T18:04:11 PDT
 
 BeginCmp
 TimeStamp = /4AD90417/4ABE8019;
@@ -10,7 +10,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EC7/52420F76;
 Reference = C2;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -24,7 +24,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EC7/524202C8;
 Reference = C4;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -38,7 +38,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EC7/524202E1;
 Reference = C6;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -73,21 +73,21 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72C2A/52420F76;
 Reference = C11;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72C2A/524202C8;
 Reference = C12;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72C2A/524202E1;
 Reference = C13;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -129,14 +129,14 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EB0/52420F76;
 Reference = C19;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB0/524202C8;
 Reference = C20;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -353,7 +353,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EB0/524202E1;
 Reference = C51;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -388,7 +388,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EC1/52420F76;
 Reference = C56;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -402,14 +402,14 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EC1/524202C8;
 Reference = C58;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EC1/524202E1;
 Reference = C59;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
@@ -458,21 +458,21 @@ EndCmp
 BeginCmp
 TimeStamp = /4CD72EB9/52420F76;
 Reference = C66;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/524202C8;
 Reference = C67;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4CD72EB9/524202E1;
 Reference = C68;
-ValeurCmp = 1uF;
+ValeurCmp = 100nF;
 IdModule  = SM0805;
 EndCmp
 
