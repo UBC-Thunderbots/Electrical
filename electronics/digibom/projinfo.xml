@@ -85,9 +85,9 @@
 			<subpart id="WM2623-ND" quantity="2" />
 		</multipart>
 		
-		<!-- A WM2613-ND solenoid connector requires two pins. -->
+		<!-- A 6-pin header is a fraction of a 36-pin header. -->
 		<multipart id="Header1x6">
-			<subpart id="S1012E-36-ND" quantity="0.6" />
+			<subpart id="S1012E-36-ND" quantity="0.17" />
 		</multipart>
 
 		<!-- Some parts we just don't order from Digi-Key. This is a catch-all for those parts. -->
