@@ -1,6 +1,7 @@
 import optparse
 
 import digibom.bom
+import digibom.inventory
 import digibom.projectinfo
 
 # Application entry point.
@@ -11,6 +12,7 @@ def main():
 	parser.add_option("-s", "--spares", type="int", dest="spares", default=0, help="order at least SPARES more of each part than needed", metavar="SPARES")
 	parser.add_option("-p", "--spares-percent", type="float", dest="spares_percent", default=0, help="order at least SP% (rounded up) more of each part than needed", metavar="SP")
 	parser.add_option("-i", "--project-info", type="string", dest="project_info", default=None, help="read a project info file with default and multipart information", metavar="FILE")
+	parser.add_option("--inventory", type="string", dest="inventory", default=None, help="read an inventory file for parts on hand and subtract from order", metavar="FILE")
 	(options, args) = parser.parse_args()
 
 	# Parse remaining arguments as (list, quantity) pairs.
@@ -37,6 +39,11 @@ def main():
 	if options.spares != 0 or options.spares_percent != 0:
 		bom.apply_spares(options.spares, options.spares_percent / 100.0)
 
+	# If an inventory file is to be used, apply it now.
+	if options.inventory is not None:
+		bom.subtract_inventory(digibom.inventory.Inventory(options.inventory))
+
+	# Round quantities to integers.
 	bom.round_quantities_up()
 
 	# Load part information for the parts in the BOM.

@@ -57,6 +57,10 @@ class BOM(object):
 		for part, quantity in self._parts.items():
 			self._parts[part] = max(quantity * (1.0 + relative), quantity + absolute)
 
+	def subtract_inventory(self, inventory):
+		for part, quantity in self._parts.items():
+			self._parts[part] -= inventory.get_quantity(part)
+
 	def round_quantities_up(self):
 		for part, quantity in self._parts.items():
 			self._parts[part] = math.ceil(self._parts[part])

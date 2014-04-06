@@ -279,6 +279,8 @@ electronics/Prototype/SingleMotorDriver.lib -text
 electronics/Prototype/SingleMotorDriver.mod -text
 electronics/Prototype/SingleMotorDriver.pro -text
 electronics/Prototype/SingleMotorDriver.sch -text
+electronics/digibom/digibom/inventory.py -text
+electronics/digibom/inventory.csv -text
 electronics/models/mainboard_thermal/Assem1.SLDASM -text
 electronics/models/mainboard_thermal/Part1.SLDPRT -text
 electronics/models/mainboard_thermal/X.BAT -text
