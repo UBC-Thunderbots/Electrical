@@ -84,6 +84,11 @@
 			<subpart id="WM2613-ND" />
 			<subpart id="WM2623-ND" quantity="2" />
 		</multipart>
+		
+		<!-- A WM2613-ND solenoid connector requires two pins. -->
+		<multipart id="Header1x6">
+			<subpart id="S1012E-36-ND" quantity="0.6" />
+		</multipart>
 
 		<!-- Some parts we just don't order from Digi-Key. This is a catch-all for those parts. -->
 		<multipart id="none" />
@@ -135,10 +140,13 @@
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="SD1209T3-A1" part="445-2530-ND" />
-		<default value="STM32F405RXT" part="497-11767-ND" />
+		<default value="STM32F405RXT" part="none" />
 		<default value="TEMT1000" part="751-1052-1-ND" />
 		<default value="VSMY2850RG" part="VSMY2850RGCT-ND" />
 		<default value="W25Q16BV" part="W25Q16BVSSIG-ND" />
 		<default value="XC6222B331PR" part="893-1138-1-ND" />
+		<default value="DIP6" part="CT1936MS-ND" />
+		<default value="BMG160" part="828-1042-1-ND" />
+		<default value="LIS3DH" part="497-10613-1-ND" />
 	</defaults>
 </project-info>
