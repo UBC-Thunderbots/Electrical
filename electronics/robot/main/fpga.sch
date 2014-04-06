@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年03月30日 星期日 23时08分42秒
+EESchema Schematic File Version 2  date 2014年04月05日 星期六 18时23分43秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 3 15
 Title ""
-Date "31 mar 2014"
+Date "6 apr 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1860,7 +1860,7 @@ P 5650 3900
 F 0 "U8" H 5650 3850 60  0000 C CNN
 F 1 "XC6SLX9TQG144" H 5650 3950 60  0000 C CNN
 F 2 "TQFP144" H 5550 3750 60  0001 C CNN
-F 4 "122-1745-ND" H 5650 3900 60  0001 C CNN "Field1"
+F 4 "122-1747-ND" H 5650 3900 60  0001 C CNN "Field1"
 	1    5650 3900
 	1    0    0    -1  
 $EndComp
