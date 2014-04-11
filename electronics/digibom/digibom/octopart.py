@@ -6,7 +6,7 @@ import digibom.partinfo
 
 def url_for_part(part):
 	params = [("name", part), ("lang", "en")]
-	return "http://search.digikey.com/scripts/DkSearch/dksus.dll?Detail&" + urllib.parse.urlencode(params)
+	return "http://search.digikey.ca/scripts/DkSearch/dksus.dll?Detail&" + urllib.parse.urlencode(params)
 
 
 def lookup(parts):
