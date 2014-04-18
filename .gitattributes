@@ -211,6 +211,7 @@ datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Block[!!-~]RAM.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Clocking.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Configurable[!!-~]Logic[!!-~]Blocks.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Configuration.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Constraints[!!-~]Guide.pdf -text svneol=unset#application/pdf
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/DSP48A1[!!-~]Slices.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Datasheet.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Errata.pdf -text
@@ -219,6 +220,7 @@ datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/PCB[!!-~]Design[!!-~]and[!!-~]Pi
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Packaging[!!-~]and[!!-~]Pinout.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Power[!!-~]Management.pdf -text
 datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/SelectIO.pdf -text
+datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Timing[!!-~]Closure[!!-~]User[!!-~]Guide.pdf -text svneol=unset#application/pdf
 datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
 datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
