@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年04月05日 星期六 18时23分43秒
+EESchema Schematic File Version 2  date 2014年04月25日 星期五 16时00分09秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "6 apr 2014"
+Date "25 apr 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +45,37 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L C C89
+U 1 1 535AE8E5
+P 5800 5550
+F 0 "C89" H 5850 5650 50  0000 L CNN
+F 1 "100nF" H 5850 5450 50  0000 L CNN
+	1    5800 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR4
+U 1 1 535AE8E4
+P 5550 5550
+F 0 "#PWR4" H 5550 5510 30  0001 C CNN
+F 1 "+3.3V" H 5550 5660 30  0000 C CNN
+	1    5550 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 535AE8E3
+P 6050 5550
+F 0 "#PWR5" H 6050 5550 30  0001 C CNN
+F 1 "GND" H 6050 5480 30  0001 C CNN
+	1    6050 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6050 5550 6000 5550
+Wire Wire Line
+	5600 5550 5550 5550
 Connection ~ 2550 3050
 Connection ~ 2450 2950
 Connection ~ 2350 2850
@@ -435,10 +466,10 @@ F4 "CHARGE" I R 2350 6500 60
 F5 "VOLTAGE" O R 2350 6800 60 
 $EndSheet
 $Comp
-L +3.3V #PWR01
+L +3.3V #PWR1
 U 1 1 524343A4
 P 700 2200
-F 0 "#PWR01" H 700 2160 30  0001 C CNN
+F 0 "#PWR1" H 700 2160 30  0001 C CNN
 F 1 "+3.3V" H 700 2310 30  0000 C CNN
 	1    700  2200
 	0    -1   -1   0   
@@ -563,19 +594,19 @@ F3 "LOW[0..2]" I L 8800 4550 60
 F4 "HIGH[0..2]" I L 8800 4650 60 
 $EndSheet
 $Comp
-L GND #PWR02
+L GND #PWR7
 U 1 1 4F74094A
 P 9900 7000
-F 0 "#PWR02" H 9900 7000 30  0001 C CNN
+F 0 "#PWR7" H 9900 7000 30  0001 C CNN
 F 1 "GND" H 9900 6930 30  0001 C CNN
 	1    9900 7000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3.3V #PWR03
+L +3.3V #PWR6
 U 1 1 4F740946
 P 9400 7000
-F 0 "#PWR03" H 9400 6960 30  0001 C CNN
+F 0 "#PWR6" H 9400 6960 30  0001 C CNN
 F 1 "+3.3V" H 9400 7110 30  0000 C CNN
 	1    9400 7000
 	0    -1   -1   0   
@@ -608,10 +639,10 @@ F 1 "MRF24J40MB" H 5150 6200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L GND #PWR3
 U 1 1 4F644EA8
 P 950 4600
-F 0 "#PWR04" H 950 4600 30  0001 C CNN
+F 0 "#PWR3" H 950 4600 30  0001 C CNN
 F 1 "GND" H 950 4530 30  0001 C CNN
 	1    950  4600
 	1    0    0    -1  
@@ -635,10 +666,10 @@ F 1 "10kR" V 950 3700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR05
+L +BATT #PWR2
 U 1 1 4F644E6B
 P 950 2850
-F 0 "#PWR05" H 950 2800 20  0001 C CNN
+F 0 "#PWR2" H 950 2800 20  0001 C CNN
 F 1 "+BATT" H 950 2950 30  0000 C CNN
 	1    950  2850
 	1    0    0    -1  

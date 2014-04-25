@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年04月05日 星期六 18时23分43秒
+EESchema Schematic File Version 2  date 2014年04月25日 星期五 16时00分09秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 2 15
 Title ""
-Date "6 apr 2014"
+Date "25 apr 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -458,28 +458,28 @@ $EndComp
 Text HLabel 5750 4500 0    60   Input ~ 0
 LPS_DRIVE[0..3]
 $Comp
-L +5V #PWR06
+L +5V #PWR10
 U 1 1 506E24BD
 P 7500 3600
-F 0 "#PWR06" H 7500 3690 20  0001 C CNN
+F 0 "#PWR10" H 7500 3690 20  0001 C CNN
 F 1 "+5V" H 7500 3690 30  0000 C CNN
 	1    7500 3600
 	0    1    1    0   
 $EndComp
 $Comp
-L +3.3V #PWR07
+L +3.3V #PWR9
 U 1 1 506E24BC
 P 6600 5000
-F 0 "#PWR07" H 6600 4960 30  0001 C CNN
+F 0 "#PWR9" H 6600 4960 30  0001 C CNN
 F 1 "+3.3V" H 6600 5110 30  0000 C CNN
 	1    6600 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR08
+L GND #PWR8
 U 1 1 506E24BB
 P 6550 5150
-F 0 "#PWR08" H 6550 5150 30  0001 C CNN
+F 0 "#PWR8" H 6550 5150 30  0001 C CNN
 F 1 "GND" H 6550 5080 30  0001 C CNN
 	1    6550 5150
 	0    1    1    0   
