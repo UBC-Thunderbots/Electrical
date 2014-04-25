@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年04月25日 星期五 16时00分09秒
+EESchema Schematic File Version 2  date 2014年04月25日 星期五 16时31分44秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,45 +45,70 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 4900 4300 2    60   ~ 0
-RELAY
 Wire Wire Line
-	5050 4250 5150 4250
+	4450 3450 4450 3550
 Wire Wire Line
-	5100 4150 5150 4150
-Connection ~ 5100 3400
+	4850 4150 5150 4150
 Wire Wire Line
-	5100 3350 5100 3450
-Wire Wire Line
-	5100 3350 5150 3350
-Wire Wire Line
-	5100 3400 5050 3400
-Wire Wire Line
-	5150 3250 5100 3250
-Wire Wire Line
-	5100 3250 5100 3150
-Wire Wire Line
-	5100 3150 5150 3150
-Wire Wire Line
-	5100 3200 5050 3200
-Connection ~ 5100 3200
-Wire Wire Line
-	5100 3450 5150 3450
-Wire Wire Line
-	5100 3550 5150 3550
-Wire Wire Line
-	5100 3650 5150 3650
-Wire Wire Line
-	5100 3850 5150 3850
+	5100 4050 5150 4050
 Wire Wire Line
 	5100 3950 5150 3950
 Wire Wire Line
-	5100 4050 5150 4050
+	5100 3850 5150 3850
+Wire Wire Line
+	5100 3650 5150 3650
+Wire Wire Line
+	5100 3550 5150 3550
+Wire Wire Line
+	5150 3450 5100 3450
+Connection ~ 5100 3200
+Wire Wire Line
+	5100 3200 5050 3200
+Wire Wire Line
+	5150 3150 5100 3150
+Wire Wire Line
+	5100 3150 5100 3250
+Wire Wire Line
+	5100 3250 5150 3250
+Wire Wire Line
+	5100 3400 5050 3400
+Wire Wire Line
+	5150 3350 5100 3350
+Wire Wire Line
+	5100 3350 5100 3450
+Connection ~ 5100 3400
+Wire Wire Line
+	5050 4250 5150 4250
+Wire Wire Line
+	4900 4150 4900 4050
+Connection ~ 4900 4150
+Wire Wire Line
+	4900 4050 4450 4050
 $Comp
-L +3.3V #PWR89
+L +3.3V #PWR87
+U 1 1 535AEFD6
+P 4450 3450
+F 0 "#PWR87" H 4450 3410 30  0001 C CNN
+F 1 "+3.3V" H 4450 3560 30  0000 C CNN
+	1    4450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 535AEFB6
+P 4450 3800
+F 0 "R4" V 4530 3800 50  0000 C CNN
+F 1 "100K" V 4450 3800 50  0000 C CNN
+	1    4450 3800
+	1    0    0    -1  
+$EndComp
+Text Notes 4900 4300 2    60   ~ 0
+RELAY
+$Comp
+L +3.3V #PWR90
 U 1 1 52425F30
 P 5050 4250
-F 0 "#PWR89" H 5050 4210 30  0001 C CNN
+F 0 "#PWR90" H 5050 4210 30  0001 C CNN
 F 1 "+3.3V" H 5050 4360 30  0000 C CNN
 	1    5050 4250
 	0    -1   -1   0   
@@ -92,10 +117,10 @@ Text Notes 5100 3800 2    60   ~ 0
 ~PRESENT
 NoConn ~ 5150 3750
 $Comp
-L GND #PWR91
+L GND #PWR92
 U 1 1 50667D7D
 P 5100 4050
-F 0 "#PWR91" H 5100 4050 30  0001 C CNN
+F 0 "#PWR92" H 5100 4050 30  0001 C CNN
 F 1 "GND" H 5100 3980 30  0001 C CNN
 	1    5100 4050
 	0    1    1    0   
@@ -110,31 +135,31 @@ F 4 "chicker-waysl-header" V 5500 3700 60  0001 C CNN "Digi-Key Part"
 	1    5500 3700
 	1    0    0    -1  
 $EndComp
-Text HLabel 5100 4150 0    60   Output ~ 0
+Text HLabel 4850 4150 0    60   Output ~ 0
 VOLTAGE
 $Comp
-L GND #PWR90
+L GND #PWR91
 U 1 1 4F69666B
 P 5100 3950
-F 0 "#PWR90" H 5100 3950 30  0001 C CNN
+F 0 "#PWR91" H 5100 3950 30  0001 C CNN
 F 1 "GND" H 5100 3880 30  0001 C CNN
 	1    5100 3950
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR88
+L GND #PWR89
 U 1 1 4F696643
 P 5050 3400
-F 0 "#PWR88" H 5050 3400 30  0001 C CNN
+F 0 "#PWR89" H 5050 3400 30  0001 C CNN
 F 1 "GND" H 5050 3330 30  0001 C CNN
 	1    5050 3400
 	0    1    1    0   
 $EndComp
 $Comp
-L +BATT #PWR87
+L +BATT #PWR88
 U 1 1 4F696638
 P 5050 3200
-F 0 "#PWR87" H 5050 3150 20  0001 C CNN
+F 0 "#PWR88" H 5050 3150 20  0001 C CNN
 F 1 "+BATT" H 5050 3300 30  0000 C CNN
 	1    5050 3200
 	0    -1   -1   0   
