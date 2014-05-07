@@ -12,10 +12,12 @@ def url_for_part(part):
 def lookup(parts):
 	def get_digikey_description_from_item(item):
 		descriptions = item["descriptions"]
+		# Use Digi-Key description first.
 		for description in descriptions:
 			if description["credit_domain"] == "digikey.com":
 				return description["text"]
-		raise Exception("Octopart search result contains no part description credited to digikey.com")
+		# Last-ditch attempt, use generic description.
+		return item["short_description"]
 
 	max_lines_per_request = 20
 	parts = [p for p in parts]
