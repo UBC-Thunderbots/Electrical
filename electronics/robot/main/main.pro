@@ -1,6 +1,6 @@
-update=2014年04月10日 星期四 16时47分22秒
+update=2014-06-10T20:24:58 PDT
 version=1
-last_client=eeschema
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -27,18 +27,18 @@ MSegLar=150
 LastNetListRead=main.net
 [pcbnew/libraries]
 LibDir=
-LibName1=sockets
-LibName2=connect
-LibName3=discret
-LibName4=pin_array
-LibName5=divers
-LibName6=libcms
-LibName7=display
-LibName8=led
-LibName9=dip_sockets
-LibName10=pga_sockets
-LibName11=valves
-LibName12=../../thunderbots-modules
+LibName1=../../thunderbots-modules
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=pin_array
+LibName6=divers
+LibName7=libcms
+LibName8=display
+LibName9=led
+LibName10=dip_sockets
+LibName11=pga_sockets
+LibName12=valves
 [eeschema]
 version=1
 LibDir=../..

@@ -1,6 +1,6 @@
-update=2012-10-13T11:53:11 PDT
+update=2014-06-10T20:28:57 PDT
 version=1
-last_client=kicad
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -69,6 +69,8 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=thunderbots-symbols
+[general]
+version=1
 [pcbnew]
 version=1
 PadDrlX=320
@@ -88,17 +90,15 @@ MSegLar=150
 LastNetListRead=
 [pcbnew/libraries]
 LibDir=../../../electronics
-LibName1=sockets
-LibName2=connect
-LibName3=discret
-LibName4=pin_array
-LibName5=divers
-LibName6=libcms
-LibName7=display
-LibName8=led
-LibName9=dip_sockets
-LibName10=pga_sockets
-LibName11=valves
-LibName12=thunderbots-modules
-[general]
-version=1
+LibName1=thunderbots-modules
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=pin_array
+LibName6=divers
+LibName7=libcms
+LibName8=display
+LibName9=led
+LibName10=dip_sockets
+LibName11=pga_sockets
+LibName12=valves
