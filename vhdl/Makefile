@@ -106,7 +106,7 @@ doc :
 
 # Targets to perform synthesis.
 synth : synthesize
-synthesize : $(PROJ).mcs $(PROJ).bin
+synthesize : $(PROJ).bin
 xst : $(PROJ).ngc
 map : $(PROJ)_map.ncd
 trace : $(PROJ).tsi $(PROJ).twr $(PROJ).twx
@@ -128,22 +128,6 @@ trce : trace
 #    Overwrites any existing file.
 $(PROJ).bin : $(PROJ).bit
 	( source $(XILINX_SETTINGS) && promgen -spi -u 0 $(PROJ).bit -p bin -s 2048 -w )
-
-# We can make a HEX file from a BIT file using Xilinx PROMGEN.
-# Options:
-#  -spi
-#    Prevents reversing the bits in each byte (reversal is needed for parallel
-#    Flash memories but not SPI memories).
-#  -u 0 $(PROJ).bit
-#    Inserts the BIT file into the generated image at address zero.
-#  -p mcs
-#    Generates an Intel HEX file.
-#  -s 2048
-#    Generates data for a 2MB (16Mb) Flash.
-#  -w
-#    Overwrites any existing file.
-$(PROJ).mcs : $(PROJ).bit
-	( source $(XILINX_SETTINGS) && promgen -spi -u 0 $(PROJ).bit -p mcs -s 2048 -w )
 
 # We can make a BIT file from a routed NCD file using Xilinx BITGEN.
 # Options
