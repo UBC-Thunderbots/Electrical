@@ -332,6 +332,7 @@ electronics/speedsensor/receiver/*.pho
 electronics/speedsensor/receiver/*.ses
 electronics/speedsensor/receiver/*.stf
 vhdl/*.bgn
+vhdl/*.bin
 vhdl/*.bit
 vhdl/*.bld
 vhdl/*.cfi
@@ -357,6 +358,7 @@ vhdl/*.tsi
 vhdl/*.twr
 vhdl/*.twx
 vhdl/*.unroutes
+vhdl/*.vcd
 vhdl/*.xml
 vhdl/*.xpi
 vhdl/*.xrpt

@@ -1,2 +1,0 @@
-cycloneiii_atoms.vhd
-cycloneiii_components.vhd

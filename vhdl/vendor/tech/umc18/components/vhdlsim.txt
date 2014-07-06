@@ -1,3 +1,0 @@
-umc_components.vhd
-umc_simprims.vhd
-pll.vhd

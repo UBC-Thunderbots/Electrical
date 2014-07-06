@@ -1,3 +1,0 @@
-grspw_gen.vhd
-grspw2_gen.vhd
-grspw_codec_gen.vhd

@@ -1,2 +1,0 @@
-altera_primitives_components.vhd
-altera_primitives.vhd

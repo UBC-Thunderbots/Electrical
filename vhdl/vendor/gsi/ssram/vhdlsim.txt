@@ -1,3 +1,0 @@
-functions.vhd
-core_burst.vhd
-g880e18bt.vhd

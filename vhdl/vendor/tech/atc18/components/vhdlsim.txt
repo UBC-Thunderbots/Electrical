@@ -1,3 +1,0 @@
-atmel_components.vhd
-atmel_simprims.vhd
-virage_simprims.vhd

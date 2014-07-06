@@ -1,4 +1,0 @@
-DWpackages.vhd
-DW_Foundation_arith.vhd
-DW_Foundation_comp.vhd
-DW_Foundation_comp_arith.vhd
