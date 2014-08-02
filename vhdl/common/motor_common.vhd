@@ -3,8 +3,8 @@ use ieee.numeric_std.all;
 
 --! \brief Miscellaneous objects used across the motors subsystem.
 package motor_common is
-	--! \brief The commutation data source options.
-	type commutation_data_source is (MCU, HALL);
+	--! \brief The commutation mode options.
+	type commutation_mode is (COAST, BRAKE, DRIVE);
 
 	--! \brief The commutation direction options for Hall sensor control.
 	type commutation_direction is (FORWARD, REVERSE);
@@ -15,9 +15,8 @@ package motor_common is
 
 	--! \brief The decoded motor parameter block for a motor.
 	type motor_drive_mode is record
-		DataSource : commutation_data_source;
+		Mode : commutation_mode;
 		Direction : commutation_direction;
-		Phases : phase_drive_mode_vector(0 to 2);
 		DutyCycle : natural range 0 to 255;
 	end record motor_drive_mode;
 	type motor_drive_mode_vector is array(integer range <>) of motor_drive_mode;

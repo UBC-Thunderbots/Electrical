@@ -44,10 +44,7 @@ begin
 			if Reset then
 				State := IDLE;
 				for I in DriveModes'range loop
-					DriveModes(I).DataSource <= MCU;
-					for J in DriveModes(I).Phases'range loop
-						DriveModes(I).Phases(J) <= FLOAT;
-					end loop;
+					DriveModes(I).Mode <= COAST;
 				end loop;
 			elsif ICBIn.ReadStrobe and ICBIn.ReadFirst then
 				Command := to_integer(unsigned(ICBIn.ReadData));
@@ -88,25 +85,12 @@ begin
 							if ByteIndex = DataBuffer'right then
 								for I in DriveModes'range loop
 									ModeByte := DataBuffer(I * 2);
-									if ModeByte(7) = '1' then
-										DriveModes(I).DataSource <= HALL;
-									else
-										DriveModes(I).DataSource <= MCU;
-									end if;
-									if ModeByte(6) = '1' then
-										DriveModes(I).Direction <= REVERSE;
-									else
-										DriveModes(I).Direction <= FORWARD;
-									end if;
-									for J in DriveModes(I).Phases'range loop
-										ModePhaseBits := ModeByte(J * 2 + 1 downto J * 2);
-										case ModePhaseBits is
-											when "00"   => DriveModes(I).Phases(J) <= FLOAT;
-											when "01"   => DriveModes(I).Phases(J) <= PWM;
-											when "10"   => DriveModes(I).Phases(J) <= LOW;
-											when others => DriveModes(I).Phases(J) <= HIGH;
-										end case;
-									end loop;
+									case ModeByte(1 downto 0) is
+										when "00" => DriveModes(I).Mode <= COAST; DriveModes(I).Direction <= FORWARD;
+										when "01" => DriveModes(I).Mode <= BRAKE; DriveModes(I).Direction <= REVERSE;
+										when "10" => DriveModes(I).Mode <= DRIVE; DriveModes(I).Direction <= FORWARD;
+										when others => DriveModes(I).Mode <= DRIVE; DriveModes(I).Direction <= REVERSE;
+									end case;
 									DriveModes(I).DutyCycle <= to_integer(unsigned(DataBuffer(I * 2 + 1)));
 								end loop;
 								State := IDLE;

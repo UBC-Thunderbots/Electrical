@@ -76,19 +76,11 @@ begin
 			-- Work the phases.
 			for I in PhasesHPin'range loop
 				-- Choose what phase drive will be used on this phase.
-				if DriveMode.DataSource = MCU then
-					if DriveMode.Phases(I) = HIGH and not Interlock then
-						PhaseDrive := HIGH;
-					elsif DriveMode.Phases(I) = PWM and not Interlock then
-						PhaseDrive := PWM;
-					elsif DriveMode.Phases(I) = LOW then
-						PhaseDrive := LOW;
-					else
-						PhaseDrive := FLOAT;
-					end if;
-				else
-					PhaseDrive := CommutatorPhases(I);
-				end if;
+				case DriveMode.Mode is
+					when COAST => PhaseDrive := FLOAT;
+					when BRAKE => PhaseDrive := LOW;
+					when DRIVE => PhaseDrive := CommutatorPhases(I);
+				end case;
 
 				-- Apply PWM if selected.
 				if PhaseDrive = PWM then
