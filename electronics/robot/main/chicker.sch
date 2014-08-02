@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年05月03日 星期六 16时53分45秒
+EESchema Schematic File Version 2  date 2014年06月18日 星期三 19时58分55秒
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 6 15
 Title ""
-Date "3 may 2014"
+Date "19 jun 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -131,7 +131,7 @@ U 1 1 506E24B5
 P 5500 3700
 F 0 "P18" V 5450 3700 60  0000 C CNN
 F 1 "CONN_12" V 5550 3700 60  0000 C CNN
-F 4 "chicker-waysl-header" V 5500 3700 60  0001 C CNN "Digi-Key Part"
+F 4 "952-1366-5-ND" V 5500 3700 60  0001 C CNN "Digi-Key Part"
 	1    5500 3700
 	1    0    0    -1  
 $EndComp
