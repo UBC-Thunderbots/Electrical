@@ -228,11 +228,11 @@ begin
 		INIT => '0',
 		SRTYPE => "SYNC")
 	port map(
-		D0 => '1',
+		D0 => to_stdulogic(MRFClockOE),
 		D1 => '0',
 		C0 => Clock10MHz,
 		C1 => Clock10MHzI,
-		CE => to_stdulogic(MRFClockOE),
+		CE => '1',
 		R => to_stdulogic(Reset),
 		S => '0',
 		Q => MRFClockPin);
@@ -281,11 +281,11 @@ begin
 		INIT => '1',
 		SRTYPE => "SYNC")
 	port map(
-		D0 => '0',
+		D0 => to_stdulogic(not AccelClockOE),
 		D1 => '1',
 		C0 => Clock10MHz,
 		C1 => Clock10MHzI,
-		CE => to_stdulogic(AccelClockOE),
+		CE => '1',
 		R => '0',
 		S => to_stdulogic(Reset),
 		Q => AccelClockPin);
@@ -310,11 +310,11 @@ begin
 		INIT => '1',
 		SRTYPE => "SYNC")
 	port map(
-		D0 => '0',
+		D0 => to_stdulogic(not GyroClockOE),
 		D1 => '1',
 		C0 => Clock10MHz,
 		C1 => Clock10MHzI,
-		CE => to_stdulogic(GyroClockOE),
+		CE => '1',
 		R => '0',
 		S => to_stdulogic(Reset),
 		Q => GyroClockPin);
