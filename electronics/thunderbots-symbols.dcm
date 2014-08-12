@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2014-03-17T00:20:53 PDT
+EESchema-DOCLIB  Version 2.0  Date: 2014-08-11T22:00:33 PDT
 #
 $CMP 10KR7
 D Resistance
@@ -44,22 +44,9 @@ $CMP MCP1726
 D LDO voltage regulator
 $ENDCMP
 #
-$CMP MCP3004
-D 4-input 10-bit ADC
-$ENDCMP
-#
-$CMP MCP3008
-D 8-input 10-bit ADC
-$ENDCMP
-#
 $CMP SP3T
 D Switch inverseur
 K switch
-$ENDCMP
-#
-$CMP W25Q16BV
-D Flash Memory
-K FLASH MEMORY
 $ENDCMP
 #
 $CMP XC6SLX9TQG144

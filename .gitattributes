@@ -168,8 +168,6 @@ controls/wheelspeed.mdl -text
 datasheets/ECS-3951M-3953M[!!-~](Oscillator).pdf -text
 datasheets/Fairchild[!!-~]FGA180N33AT[!!-~](IGBT).pdf -text
 datasheets/IEEE[!!-~]802.15.4.pdf -text
-datasheets/Microchip[!!-~]PICkit2.pdf -text
-datasheets/NXP[!!-~]KTY83[!!-~](Thermistor).pdf -text
 datasheets/Nippon[!!-~]Chemi-Con[!!-~]SMQ[!!-~](Capacitor).pdf -text
 datasheets/Turnigy[!!-~]Accucell[!!-~]6[!!-~]Charger.pdf -text
 datasheets/bjts/BC847A.pdf -text
@@ -194,7 +192,6 @@ datasheets/connectors/Molex/53261-1171[!!-~](Header;[!!-~]Dribbler[!!-~]Harness)
 datasheets/connectors/Molex/53398-0771_LateralSensorCon7_right-angle.pdf -text svneol=unset#unset
 datasheets/connectors/Molex/638190300[!!-~](Crimp[!!-~]Tool[!!-~]for[!!-~]50079-8x00).pdf -text
 datasheets/diodes/RURG3060C.pdf -text
-datasheets/diodes/STTH10R04.pdf -text
 datasheets/electromechanical/IM[!!-~]Relay.pdf -text svneol=unset#application/pdf
 datasheets/electromechanical/Maxon[!!-~]EC[!!-~]Commutation[!!-~]and[!!-~]Wiring.pdf -text svneol=unset#unset
 datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]15W[!!-~](Dribbler).pdf -text
@@ -203,7 +200,6 @@ datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain)[!!-~]\[May[!!-~]2
 datasheets/electromechanical/Maxon[!!-~]EC45[!!-~](Drivetrain)[!!-~]\[May[!!-~]2011[!!-~]Edition\].pdf -text
 datasheets/electromechanical/NKK[!!-~]A[!!-~]Series[!!-~](Power[!!-~]Switch).pdf -text
 datasheets/ics/74HC4050[!!-~](Level[!!-~]Shifter).pdf -text
-datasheets/ics/ADCs/MCP3004_3008.pdf -text
 datasheets/ics/BMG160[!!-~]Gyroscope.pdf -text svneol=unset#application/pdf
 datasheets/ics/FET[!!-~]Drivers/LM5107.pdf -text svneol=unset#application/pdf
 datasheets/ics/FET[!!-~]Drivers/MIC5020.pdf -text
@@ -224,13 +220,7 @@ datasheets/ics/FPGAs/Xilinx[!!-~]Spartan[!!-~]6/Timing[!!-~]Closure[!!-~]User[!!
 datasheets/ics/HCT[!!-~]Package[!!-~]Information.pdf -text
 datasheets/ics/HCT[!!-~]Package[!!-~]Outlines.pdf -text
 datasheets/ics/HCT[!!-~]User[!!-~]Guide.pdf -text
-datasheets/ics/L6234[!!-~]Motor[!!-~]Driver.pdf -text
 datasheets/ics/LIS3DH[!!-~]Accelerometer.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/LEON3/AMBA[!!-~]Specification[!!-~]2.0.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/LEON3/GRLIB[!!-~]IP[!!-~]Core[!!-~]Manual.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/LEON3/GRLIB[!!-~]Manual.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/LEON3/SPARC[!!-~]Architecture[!!-~]Manual.pdf -text svneol=unset#application/pdf
-datasheets/ics/MCUs/LEON3/System[!!-~]V[!!-~]ABI[!!-~]SPARC[!!-~]Processor[!!-~]Supplement.pdf -text svneol=unset#application/pdf
 datasheets/ics/MCUs/STM32/ARMv7-M[!!-~]Architecture[!!-~]Reference[!!-~]Manual.pdf -text svneol=unset#application/octet-stream
 datasheets/ics/MCUs/STM32/Bootloader[!!-~]DFU[!!-~]File[!!-~]Format.pdf -text
 datasheets/ics/MCUs/STM32/Bootloader[!!-~]DFU[!!-~]Protocol.pdf -text svneol=unset#application/octet-stream
@@ -249,14 +239,12 @@ datasheets/ics/Radios/MRF24J40/MRF24J40MB.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MC.pdf -text
 datasheets/ics/Radios/MRF24J40/MRF24J40MD_ME.pdf -text svneol=unset#application/pdf
 datasheets/ics/Radios/MRF24J40/Silicon[!!-~]Errata.pdf -text
-datasheets/ics/Winbond[!!-~]W25Q16BV[!!-~](SPI[!!-~]Flash).pdf -text
 datasheets/mechanical/Maxon[!!-~]Gearbox.pdf -text svneol=unset#unset
 datasheets/mechanical/dribbler[!!-~]bearing(A[!!-~]7Y[!!-~]5MFSS1006).pdf -text svneol=unset#unset
 datasheets/mosfets/2N7002P.pdf -text
 datasheets/mosfets/AO4616.pdf -text
 datasheets/mosfets/AO4882.pdf -text svneol=unset#application/pdf
 datasheets/mosfets/IRF9310.pdf -text
-datasheets/mosfets/STx20NK50Z.pdf -text
 datasheets/mosfets/STx45N65M5.pdf -text
 datasheets/optoelectronics/E4P[!!-~](Rotary[!!-~]Encoder).pdf -text
 datasheets/optoelectronics/LPT80A[!!-~](Phototransistor).pdf -text svneol=unset#application/pdf
@@ -271,7 +259,6 @@ datasheets/regulators/LD1117V33C.pdf -text
 datasheets/regulators/LP2951.pdf -text svneol=unset#application/pdf
 datasheets/regulators/MCP1726.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
-datasheets/regulators/XC6222.pdf -text
 datasheets/sdcard/part1_410.pdf -text svneol=unset#application/pdf
 electronics/Chicker_Test_Board/Code/Boost_converter_final/Boost_converter_final.ino -text
 electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board.pro -text
