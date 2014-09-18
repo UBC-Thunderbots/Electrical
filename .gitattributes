@@ -268,8 +268,20 @@ electronics/Prototype/SingleMotorDriver.lib -text
 electronics/Prototype/SingleMotorDriver.mod -text
 electronics/Prototype/SingleMotorDriver.pro -text
 electronics/Prototype/SingleMotorDriver.sch -text
+electronics/digibom/digibom.py -text
+electronics/digibom/digibom/__init__.py -text
+electronics/digibom/digibom/bom.py -text
 electronics/digibom/digibom/inventory.py -text
-electronics/digibom/inventory.csv -text
+electronics/digibom/digibom/main.py -text
+electronics/digibom/digibom/octopart.py -text
+electronics/digibom/digibom/partinfo.py -text
+electronics/digibom/digibom/projectinfo.py -text
+electronics/models/boost/Makefile -text
+electronics/models/boost/main.cpp -text
+electronics/models/charge_pump/Makefile -text
+electronics/models/charge_pump/main.cpp -text
+electronics/models/flyback/Makefile -text
+electronics/models/flyback/main.cpp -text
 electronics/models/mainboard_thermal/Assem1.SLDASM -text
 electronics/models/mainboard_thermal/Part1.SLDPRT -text
 electronics/models/mainboard_thermal/X.BAT -text
@@ -277,6 +289,8 @@ electronics/models/mainboard_thermal/Y.clg -text
 electronics/models/mainboard_thermal/board.SLDPRT -text
 electronics/models/mainboard_thermal/copper.SLDPRT -text
 electronics/models/mainboard_thermal/heat_source.SLDPRT -text
+electronics/models/solenoid/Makefile -text
+electronics/models/solenoid/main.cpp -text
 electronics/robot/main/STM32[!!-~]Pins.xls -text svneol=unset#application/vnd.ms-office
 electronics/robot/main/imu.sch -text
 electronics/robot/main/microcontroller.sch -text

@@ -2441,7 +2441,7 @@ Po 2500 0
 $EndPAD
 $EndMODULE  SIL-6
 $TEXTPCB
-Te "$Rev$"
+Te "$Rev: 7801 $"
 Po 72400 42200 600 800 120 0
 De 21 1 0 Normal
 $EndTEXTPCB
