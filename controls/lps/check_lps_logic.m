@@ -1,3 +1,5 @@
+% this files implement Hadamard transform adapted to lps
+
 i=[0:3]'*ones(1,16);
 n=ones(4,1)*[0:15];
 trans=(-1).^(floor(n./(2.^i))+1)
