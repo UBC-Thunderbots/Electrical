@@ -147,6 +147,7 @@ controls/kalman/main.cpp -text
 controls/kalman/matrix.cpp -text
 controls/kalman/matrix.h -text
 controls/kalman/sample_ouput -text
+controls/lps/check_lps_logic.m -text
 controls/omnidrive_kiart_preprint.pdf -text
 controls/parameter_setup.asv -text
 controls/parameter_setup.m -text
