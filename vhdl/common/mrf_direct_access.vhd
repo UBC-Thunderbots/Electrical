@@ -10,8 +10,8 @@ entity MRFDirectAccess is
 	port(
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
-		ICBIn : in spi_input_t; --! The ICB data input.
-		ICBOut : buffer spi_output_t; --! The ICB data output.
+		ICBIn : in icb_input_t; --! The ICB data input.
+		ICBOut : buffer icb_output_t; --! The ICB data output.
 		IRQ : buffer boolean; --! The ICB interrupt request.
 		ArbRequest : buffer boolean; --! The request signal to the arbiter.
 		ArbGrant : in boolean; --! The grant signal from the arbiter.
@@ -25,16 +25,16 @@ end entity MRFDirectAccess;
 architecture RTL of MRFDirectAccess is
 begin
 	process(HostClock) is
-		type state_t is (IDLE, ICB_ADDRESS_HIGH, ICB_ADDRESS_LOW, ICB_WRITE_DATA, MRF_WAIT_ARB, MRF_WAIT_BUSY, ICB_READ_DATA, ICB_READ_AUX);
+		type state_t is (IDLE, ICB_ADDRESS_HIGH, ICB_ADDRESS_LOW, ICB_WRITE_DATA, MRF_WAIT_ARB, MRF_WAIT_BUSY, ICB_WRITE_AUX);
 		variable State : state_t;
 		variable Command : natural range 0 to 255;
 		variable AddressHigh : natural range 0 to 3;
 		variable LastReadData : std_ulogic_vector(7 downto 0);
 	begin
 		if rising_edge(HostClock) then
-			ICBOut.WriteData <= X"00";
-			ICBOut.WriteStrobe <= false;
-			ICBOut.WriteCRC <= false;
+			ICBOut.TXStrobe <= false;
+			ICBOut.TXData <= X"00";
+			ICBOut.TXLast <= false;
 			IRQ <= false;
 			LLControl.Strobe <= false;
 
@@ -42,9 +42,9 @@ begin
 				State := IDLE;
 				MRFResetPin <= '0';
 				MRFWakePin <= '0';
-			elsif ICBIn.ReadStrobe and ICBIn.ReadFirst then
+			elsif ICBIn.RXStrobe = ICB_RX_STROBE_COMMAND then
 				AddressHigh := 0;
-				Command := to_integer(unsigned(ICBIn.ReadData));
+				Command := to_integer(unsigned(ICBIn.RXData));
 				case Command is
 					when COMMAND_MRF_DA_READ_SHORT =>
 						LLControl.RegType <= SHORT;
@@ -67,17 +67,19 @@ begin
 						State := ICB_ADDRESS_HIGH;
 
 					when COMMAND_MRF_DA_GET_DATA =>
-						State := ICB_READ_DATA;
-						ICBOut.WriteData <= LastReadData;
-						ICBOut.WriteStrobe <= true;
+						ICBOut.TXStrobe <= true;
+						ICBOut.TXData <= LastReadData;
+						ICBOut.TXLast <= true;
+						State := IDLE;
 
 					when COMMAND_MRF_DA_GET_INT =>
-						State := ICB_READ_DATA;
-						ICBOut.WriteData <= "0000000" & MRFIntPin;
-						ICBOut.WriteStrobe <= true;
+						ICBOut.TXStrobe <= true;
+						ICBOut.TXData <= "0000000" & MRFIntPin;
+						ICBOut.TXLast <= true;
+						State := IDLE;
 
 					when COMMAND_MRF_DA_SET_AUX =>
-						State := ICB_READ_AUX;
+						State := ICB_WRITE_AUX;
 
 					when others =>
 						if State /= MRF_WAIT_ARB and State /= MRF_WAIT_BUSY then
@@ -90,14 +92,14 @@ begin
 						null;
 
 					when ICB_ADDRESS_HIGH =>
-						if ICBIn.ReadStrobe then
-							AddressHigh := to_integer(unsigned(ICBIn.ReadData));
+						if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
+							AddressHigh := to_integer(unsigned(ICBIn.RXData));
 							State := ICB_ADDRESS_LOW;
 						end if;
 
 					when ICB_ADDRESS_LOW =>
-						if ICBIn.ReadStrobe then
-							LLControl.Address <= AddressHigh * 256 + to_integer(unsigned(ICBIn.ReadData));
+						if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
+							LLControl.Address <= AddressHigh * 256 + to_integer(unsigned(ICBIn.RXData));
 							case LLControl.OpType is
 								when READ =>
 									State := MRF_WAIT_ARB;
@@ -107,8 +109,8 @@ begin
 						end if;
 
 					when ICB_WRITE_DATA =>
-						if ICBIn.ReadStrobe then
-							LLControl.WriteData <= ICBIn.ReadData;
+						if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
+							LLControl.WriteData <= ICBIn.RXData;
 							State := MRF_WAIT_ARB;
 						end if;
 
@@ -125,17 +127,10 @@ begin
 							IRQ <= true;
 						end if;
 
-					when ICB_READ_DATA =>
-						if ICBIn.WriteReady then
-							ICBOut.WriteCRC <= true;
-							ICBOut.WriteStrobe <= true;
-							State := IDLE;
-						end if;
-
-					when ICB_READ_AUX =>
-						if ICBIn.ReadStrobe then
-							MRFResetPin <= ICBIn.ReadData(0);
-							MRFWakePin <= ICBIn.ReadData(1);
+					when ICB_WRITE_AUX =>
+						if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
+							MRFResetPin <= ICBIn.RXData(0);
+							MRFWakePin <= ICBIn.RXData(1);
 							State := IDLE;
 						end if;
 				end case;
@@ -149,8 +144,7 @@ begin
 			when ICB_WRITE_DATA => ArbRequest <= true;
 			when MRF_WAIT_ARB => ArbRequest <= true;
 			when MRF_WAIT_BUSY => ArbRequest <= false;
-			when ICB_READ_DATA => ArbRequest <= false;
-			when ICB_READ_AUX => ArbRequest <= false;
+			when ICB_WRITE_AUX => ArbRequest <= false;
 		end case;
 	end process;
 end architecture RTL;

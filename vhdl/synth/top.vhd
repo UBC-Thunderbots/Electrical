@@ -58,10 +58,9 @@ architecture Main of Top is
 
 	signal Interlock : boolean;
 
-	constant SPI_OUTPUT_COUNT : natural := 9;
-	signal SPIInput : spi_input_t;
-	signal SPIOutput : spi_outputs_t(0 to SPI_OUTPUT_COUNT - 1);
-	signal SPIOutputCombined : spi_output_t;
+	constant ICB_OUTPUT_COUNT : natural := 10;
+	signal ICBInput : icb_input_t;
+	signal ICBOutput : icb_outputs_t(0 to ICB_OUTPUT_COUNT - 1);
 
 	constant ICB_INTERRUPT_COUNT : natural := 5;
 	signal ICBInterrupts : boolean_vector(0 to ICB_INTERRUPT_COUNT - 1);
@@ -112,17 +111,18 @@ begin
 	Interlock <= not to_boolean(OverridePin) when rising_edge(Clock80MHz);
 
 	-- Instantiate the inter-chip bus transceiver.
-	ICB : entity work.SPISlave(RTL)
+	ICB : entity work.ICB(RTL)
+	generic map(
+		EndpointCount => ICB_OUTPUT_COUNT)
 	port map(
 		HostClock => Clock80MHz,
 		BusClock => ICBClockPin,
-		CSLine => ICBCSPin,
-		Input => SPIInput,
-		Output => SPIOutputCombined,
-		CRCErrorIRQ => ICBInterrupts(3),
+		CSPin => ICBCSPin,
 		MOSIPin => ICBMOSIPin,
-		MISOPin => ICBMISOPin);
-	SPIOutputCombined <= spi_output_combine(SPIOutput);
+		MISOPin => ICBMISOPin,
+		Input => ICBInput,
+		Outputs => ICBOutput,
+		CRCErrorIRQ => ICBInterrupts(3));
 
 	-- Instantiate the interrupt controller.
 	InterruptController : entity work.InterruptController(RTL)
@@ -131,8 +131,8 @@ begin
 	port map(
 		Reset => Reset,
 		HostClock => Clock80MHz,
-		SPIIn => SPIInput,
-		SPIOut => SPIOutput(0),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(0),
 		InterruptPin => ICBInterruptPin,
 		IRQs => ICBInterrupts);
 
@@ -150,8 +150,8 @@ begin
 	port map(
 		Reset => Reset,
 		HostClock => Clock80MHz,
-		SPIIn => SPIInput,
-		SPIOut => SPIOutput(1),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(1),
 		Value(0) => DeviceDNA(7 downto 0),
 		Value(1) => DeviceDNA(15 downto 8),
 		Value(2) => DeviceDNA(23 downto 16),
@@ -159,7 +159,8 @@ begin
 		Value(4) => DeviceDNA(39 downto 32),
 		Value(5) => DeviceDNA(47 downto 40),
 		Value(6)(7) => to_stdulogic(DeviceDNAReady),
-		Value(6)(6 downto 0) => DeviceDNA(54 downto 48));
+		Value(6)(6 downto 0) => DeviceDNA(54 downto 48),
+		AtomicReadClearStrobe => open);
 
 	-- Instantiate the configuration DIP switch reader.
 	SwitchReader : entity work.ReadableRegister(RTL)
@@ -169,13 +170,14 @@ begin
 	port map(
 		Reset => Reset,
 		HostClock => Clock80MHz,
-		SPIIn => SPIInput,
-		SPIOut => SPIOutput(2),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(2),
 		Value(0)(7 downto 3) => "00000",
 		Value(0)(2 downto 0) => IDPin,
 		Value(1)(7 downto 2) => "000000",
 		Value(1)(1) => to_stdulogic(Interlock),
-		Value(1)(0) => ChannelPin);
+		Value(1)(0) => ChannelPin,
+		AtomicReadClearStrobe => open);
 
 	-- Instantiate the LED driver.
 	LEDWriter : entity work.WritableRegister(RTL)
@@ -186,7 +188,7 @@ begin
 	port map(
 		Reset => Reset,
 		HostClock => Clock80MHz,
-		SPIIn => SPIInput,
+		ICBIn => ICBInput,
 		Value(0) => TestLEDsMode,
 		Value(1) => TestLEDsValue);
 	process(TestLEDsMode, TestLEDsValue, HallsPinFiltered, ICBInterrupts) is
@@ -207,10 +209,8 @@ begin
 		Reset => Reset,
 		HostClock => Clock80MHz,
 		BusClock => Clock10MHz,
-		ICBIn => SPIInput,
-		DAICBOut => SPIOutput(3),
-		RXICBOut => SPIOutput(4),
-		TXICBOut => SPIOutput(5),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(3 to 5),
 		DAIRQ => ICBInterrupts(0),
 		RXIRQ => ICBInterrupts(1),
 		TXIRQ => ICBInterrupts(2),
@@ -255,8 +255,8 @@ begin
 		Reset => Reset,
 		HostClock => Clock80MHz,
 		PWMClock => Clock8MHz,
-		ICBIn => SPIInput,
-		ICBOut => SPIOutput(6),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(6 to 7),
 		Interlock => Interlock,
 		HallsPin => HallsPinFiltered,
 		PhasesHPin => MotorsPhasesHPin,
@@ -269,8 +269,8 @@ begin
 		Reset => Reset,
 		HostClock => Clock80MHz,
 		BusClock => Clock10MHz,
-		ICBIn => SPIInput,
-		ICBOut => SPIOutput(7),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(8),
 		ClockOE => AccelClockOE,
 		CSPin => AccelCSPin,
 		MOSIPin => AccelMOSIPin,
@@ -298,8 +298,8 @@ begin
 		Reset => Reset,
 		HostClock => Clock80MHz,
 		BusClock => Clock10MHz,
-		ICBIn => SPIInput,
-		ICBOut => SPIOutput(8),
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(9),
 		ClockOE => GyroClockOE,
 		CSPin => GyroCSPin,
 		MOSIPin => GyroMOSIPin,

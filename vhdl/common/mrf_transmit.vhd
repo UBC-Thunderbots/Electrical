@@ -10,8 +10,8 @@ entity MRFTransmitOffload is
 	port(
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
-		ICBIn : in spi_input_t; --! The ICB data input.
-		ICBOut : buffer spi_output_t; --! The ICB data output.
+		ICBIn : in icb_input_t; --! The ICB data input.
+		ICBOut : buffer icb_output_t; --! The ICB data output.
 		IRQ : buffer boolean; --! The ICB interrupt request for transmit complete.
 		ArbRequest : buffer boolean; --! The request signal to the arbiter.
 		ArbGrant : in boolean; --! The grant signal from the arbiter.
@@ -52,15 +52,15 @@ begin
 	end process;
 
 	process(HostClock) is
-		type state_t is (IDLE, READ_HLEN, READ_LEN, READ_DATA, SEND_CRC);
+		type state_t is (IDLE, READ_HLEN, READ_LEN, READ_DATA);
 		variable State : state_t;
 		variable Command : natural range 0 to 255;
 		variable DataIndex : positive range 2 to 255;
 	begin
 		if rising_edge(HostClock) then
-			ICBOut.WriteData <= X"00";
-			ICBOut.WriteStrobe <= false;
-			ICBOut.WriteCRC <= false;
+			ICBOut.TXStrobe <= false;
+			ICBOut.TXData <= X"00";
+			ICBOut.TXLast <= false;
 			DisableStrobe <= false;
 			FrameBufferWritePort.Strobe <= false;
 
@@ -72,16 +72,17 @@ begin
 					FramePending <= false;
 				end if;
 
-				if ICBIn.ReadStrobe and ICBIn.ReadFirst then
-					Command := to_integer(unsigned(ICBIn.ReadData));
+				if ICBIn.RXStrobe = ICB_RX_STROBE_COMMAND then
+					Command := to_integer(unsigned(ICBIn.RXData));
 					case Command is
 						when COMMAND_MRF_TX_PUSH =>
 							State := READ_HLEN;
 
 						when COMMAND_MRF_TX_GET_STATUS =>
-							ICBOut.WriteData <= TransmitStatus;
-							ICBOut.WriteStrobe <= true;
-							State := SEND_CRC;
+							ICBOut.TXStrobe <= true;
+							ICBOut.TXData <= TransmitStatus;
+							ICBOut.TXLast <= true;
+							State := IDLE;
 
 						when COMMAND_MRF_OFFLOAD_DISABLE =>
 							State := IDLE;
@@ -97,39 +98,38 @@ begin
 							null;
 
 						when READ_HLEN =>
-							if ICBIn.ReadStrobe then
+							if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
 								FrameBufferWritePort.Strobe <= true;
 								FrameBufferWritePort.Address <= 0;
-								FrameBufferWritePort.Data <= ICBIn.ReadData;
+								FrameBufferWritePort.Data <= ICBIn.RXData;
 								State := READ_LEN;
+							elsif ICBIn.RXStrobe /= ICB_RX_STROBE_NONE then
+								State := IDLE;
 							end if;
 
 						when READ_LEN =>
-							if ICBIn.ReadStrobe then
+							if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
 								FrameBufferWritePort.Strobe <= true;
 								FrameBufferWritePort.Address <= 1;
-								FrameBufferWritePort.Data <= ICBIn.ReadData;
-								FrameLength <= to_integer(unsigned(ICBIn.ReadData)) + 2; -- HLEN(1) + LEN(1)
+								FrameBufferWritePort.Data <= ICBIn.RXData;
+								FrameLength <= to_integer(unsigned(ICBIn.RXData)) + 2; -- HLEN(1) + LEN(1)
 								State := READ_DATA;
 								DataIndex := 2;
+							elsif ICBIn.RXStrobe /= ICB_RX_STROBE_NONE then
+								State := IDLE;
 							end if;
 
 						when READ_DATA =>
-							if ICBIn.ReadStrobe then
+							if ICBIn.RXStrobe = ICB_RX_STROBE_DATA then
 								FrameBufferWritePort.Strobe <= true;
 								FrameBufferWritePort.Address <= DataIndex;
-								FrameBufferWritePort.Data <= ICBIn.ReadData;
+								FrameBufferWritePort.Data <= ICBIn.RXData;
 								DataIndex := DataIndex + 1;
 								if DataIndex = FrameLength then
 									State := IDLE;
 									FramePending <= true;
 								end if;
-							end if;
-
-						when SEND_CRC =>
-							if ICBIn.WriteReady then
-								ICBOut.WriteCRC <= true;
-								ICBOut.WriteStrobe <= true;
+							elsif ICBIn.RXStrobe /= ICB_RX_STROBE_NONE then
 								State := IDLE;
 							end if;
 					end case;

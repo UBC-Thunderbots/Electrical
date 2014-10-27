@@ -310,6 +310,9 @@ vhdl/common/accelerometer.vhd -text
 vhdl/common/arbiter.vhd -text
 vhdl/common/commands.vhd -text
 vhdl/common/gyro.vhd -text
+vhdl/common/icb.vhd -text
+vhdl/common/icb_receiver.vhd -text
+vhdl/common/icb_transmitter.vhd -text
 vhdl/common/imu_low_level.vhd -text
 vhdl/common/interrupt_controller.vhd -text
 vhdl/common/majority.vhd -text
@@ -329,15 +332,13 @@ vhdl/common/mrf_receive.vhd -text
 vhdl/common/mrf_transmit.vhd -text
 vhdl/common/readable_register.vhd -text
 vhdl/common/spi_master.vhd -text
-vhdl/common/spi_slave.vhd -text
-vhdl/common/spi_slave_receiver.vhd -text
-vhdl/common/spi_slave_transmitter.vhd -text
 vhdl/common/types.vhd -text
 vhdl/common/utils.vhd -text
 vhdl/common/writable_register.vhd -text
 vhdl/get_processors.sh -text
 vhdl/sim/crc_step_test.vhd -text
-vhdl/sim/spi_slave_test.vhd -text
+vhdl/sim/icb_receiver_test.vhd -text
+vhdl/sim/icb_transmitter_test.vhd -text
 vhdl/synth/clock_gen.vhd -text
 vhdl/synth/device_dna.vhd -text
 vhdl/synth/top.vhd -text

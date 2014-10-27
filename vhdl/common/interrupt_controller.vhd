@@ -11,8 +11,8 @@ entity InterruptController is
 	port(
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
-		SPIIn : in spi_input_t; --! The ICB data input.
-		SPIOut : buffer spi_output_t; --! The ICB data output.
+		ICBIn : in icb_input_t; --! The ICB data input.
+		ICBOut : buffer icb_output_t; --! The ICB data output.
 		InterruptPin : buffer std_ulogic; --! The ICB interrupt pin.
 
 		--! \brief The interrupt requests.
@@ -24,69 +24,64 @@ entity InterruptController is
 end entity InterruptController;
 
 architecture RTL of InterruptController is
-	signal LatchForPin : boolean_vector(0 to Count - 1);
+	constant ByteCount : natural := (Count + 7) / 8;
+	signal Latch : boolean_vector(0 to Count - 1);
+	signal Bytes : byte_vector(0 to ByteCount - 1);
+	signal AtomicReadClearStrobe : boolean;
 begin
+	-- Pad the latched bits out to a multiple of a byte.
+	process(Latch) is
+		variable IRQIndex : natural;
+	begin
+		for ByteIndex in Bytes'range loop
+			for BitIndex in 0 to 7 loop
+				IRQIndex := ByteIndex * 8 + BitIndex;
+				if IRQIndex < Count then
+					if Latch(IRQIndex) then
+						Bytes(ByteIndex)(BitIndex) <= '1';
+					else
+						Bytes(ByteIndex)(BitIndex) <= '0';
+					end if;
+				else
+					Bytes(ByteIndex)(BitIndex) <= '0';
+				end if;
+			end loop;
+		end loop;
+	end process;
+
+	-- Instantiate a ReadableRegister to provide the ICB infrastructure.
+	RReg : entity work.ReadableRegister(RTL)
+	generic map(
+		Command => COMMAND_GET_CLEAR_IRQS,
+		Length => ByteCount)
+	port map(
+		Reset => Reset,
+		HostClock => HostClock,
+		ICBIn => ICBIn,
+		ICBOut => ICBOut,
+		Value => Bytes,
+		AtomicReadClearStrobe => AtomicReadClearStrobe);
+
+	-- Update the latch based on incoming IRQs and the atomic read-and-clear strobe.
 	process(HostClock) is
-		constant ByteCount : natural := (Count + 7) / 8;
-		type state_t is (IDLE, RESPOND);
-		variable State : state_t;
-		variable Latch : boolean_vector(0 to Count - 1);
-		variable NextByte : natural range 0 to ByteCount;
-		variable IRQIndex : natural range 0 to Count - 1;
 	begin
 		if rising_edge(HostClock) then
-			-- Default idle state for SPI outputs.
-			SPIOut.WriteData <= X"00";
-			SPIOut.WriteStrobe <= false;
-			SPIOut.WriteCRC <= false;
-
-			-- Latch IRQs.
-			for I in 0 to Count - 1 loop
-				Latch(I) := Latch(I) or IRQs(I);
-			end loop;
-
-			-- Handle reset and start of transaction.
-			if Reset then
-				State := IDLE;
-				for I in 0 to Count - 1 loop
-					Latch(I) := false;
-				end loop;
-			elsif SPIIn.ReadStrobe and SPIIn.ReadFirst and to_integer(unsigned(SPIIn.ReadData)) = COMMAND_GET_CLEAR_IRQS then
-				State := RESPOND;
-				NextByte := 0;
-			end if;
-
-			-- Send out response data, clearing edge-sensitive IRQs as we go.
-			if State = RESPOND and SPIIn.WriteReady then
-				if NextByte = ByteCount then
-					SPIOut.WriteCRC <= true;
-					SPIOut.WriteStrobe <= true;
-					State := IDLE;
+			for IRQIndex in Latch'range loop
+				if AtomicReadClearStrobe then
+					Latch(IRQIndex) <= IRQs(IRQIndex);
 				else
-					for BitIndex in 0 to 7 loop
-						IRQIndex := BitIndex + NextByte * 8;
-						if IRQIndex < Count then
-							SPIOut.WriteData(BitIndex) <= to_stdulogic(Latch(IRQIndex));
-							Latch(IRQIndex) := false;
-						else
-							SPIOut.WriteData(BitIndex) <= '0';
-						end if;
-					end loop;
-					SPIOut.WriteStrobe <= true;
-					NextByte := NextByte + 1;
+					Latch(IRQIndex) <= Latch(IRQIndex) or IRQs(IRQIndex);
 				end if;
-			end if;
+			end loop;
 		end if;
-
-		LatchForPin <= Latch;
 	end process;
 
 	-- Control the output pin.
-	process(LatchForPin) is
+	process(Latch) is
 	begin
 		InterruptPin <= '0';
 		for I in 0 to Count - 1 loop
-			if LatchForPin(I) then
+			if Latch(I) then
 				InterruptPin <= '1';
 			end if;
 		end loop;

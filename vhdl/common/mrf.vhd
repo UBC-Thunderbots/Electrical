@@ -9,10 +9,8 @@ entity MRF is
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
 		BusClock : in std_ulogic; --! The SPI bus clock.
-		ICBIn : in spi_input_t; --! The ICB data input.
-		DAICBOut : buffer spi_output_t; --! The ICB data output from the direct access engine.
-		RXICBOut : buffer spi_output_t; --! The ICB data output from the receive offload engine.
-		TXICBOut : buffer spi_output_t; --! The ICB data output from the transmit offload engine.
+		ICBIn : in icb_input_t; --! The ICB data input.
+		ICBOut : buffer icb_outputs_t(0 to 2); --! The ICB data outputs from the three engines.
 		DAIRQ : buffer boolean; --! The ICB interrupt request for direct access complete.
 		RXIRQ : buffer boolean; --! The ICB interrupt request for receive complete.
 		TXIRQ : buffer boolean; --! The ICB interrupt request for transmit complete.
@@ -40,7 +38,7 @@ begin
 		Reset => Reset,
 		HostClock => HostClock,
 		ICBIn => ICBIn,
-		ICBOut => DAICBOut,
+		ICBOut => ICBOut(0),
 		IRQ => DAIRQ,
 		ArbRequest => ArbRequests(0),
 		ArbGrant => ArbGrants(0),
@@ -68,7 +66,7 @@ begin
 		Reset => Reset,
 		HostClock => HostClock,
 		ICBIn => ICBIn,
-		ICBOut => RXICBOut,
+		ICBOut => ICBOut(1),
 		ReceiveIRQ => RXIRQ,
 		FCSFailIRQ => RXFCSFailIRQ,
 		ArbRequest => ArbRequests(2),
@@ -82,7 +80,7 @@ begin
 		Reset => Reset,
 		HostClock => HostClock,
 		ICBIn => ICBIn,
-		ICBOut => TXICBOut,
+		ICBOut => ICBOut(2),
 		IRQ => TXIRQ,
 		ArbRequest => ArbRequests(3),
 		ArbGrant => ArbGrants(3),

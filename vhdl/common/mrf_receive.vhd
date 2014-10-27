@@ -10,8 +10,8 @@ entity MRFReceiveOffload is
 	port(
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
-		ICBIn : in spi_input_t; --! The ICB data input.
-		ICBOut : buffer spi_output_t; --! The ICB data output.
+		ICBIn : in icb_input_t; --! The ICB data input.
+		ICBOut : buffer icb_output_t; --! The ICB data output.
 		ReceiveIRQ : buffer boolean; --! The ICB interrupt request for frame received.
 		FCSFailIRQ : buffer boolean; --! The ICB interrupt request for frame received with bad FCS.
 		ArbRequest : buffer boolean; --! The request signal to the arbiter.
@@ -29,14 +29,12 @@ architecture RTL of MRFReceiveOffload is
 	signal PendingFrameLength : positive range 1 to 255;
 	signal FlushFrame : boolean;
 
-	type frame_buffer_port is record
-		Strobe : boolean;
-		Address : natural range 0 to 255;
-		Data : std_ulogic_vector(7 downto 0);
-	end record frame_buffer_port;
+	signal FrameBuffer : byte_vector(0 to 255);
 
-	signal FrameBufferReadPort : frame_buffer_port := (Strobe => true, Address => 0, Data => X"00");
-	signal FrameBufferWritePort : frame_buffer_port;
+	signal FrameBufferWriteStrobe : boolean;
+	signal FrameBufferReadAddress : natural range 0 to 255 := 1;
+	signal FrameBufferWriteAddress : natural range 0 to 255;
+	signal FrameBufferReadData, FrameBufferWriteData : byte;
 
 	signal CRCReset : boolean;
 	signal CRCData : std_ulogic_vector(7 downto 0);
@@ -46,55 +44,52 @@ architecture RTL of MRFReceiveOffload is
 	signal CRCZeroTwoBytesAgo : boolean;
 begin
 	process(HostClock) is
-		type frame_buffer_t is array(0 to 255) of std_ulogic_vector(7 downto 0);
-		variable FrameBuffer : frame_buffer_t;
 	begin
 		if rising_edge(HostClock) then
-			if FrameBufferReadPort.Strobe then
-				FrameBufferReadPort.Data <= FrameBuffer(FrameBufferReadPort.Address);
-			end if;
-			if FrameBufferWritePort.Strobe then
-				FrameBuffer(FrameBufferWritePort.Address) := FrameBufferWritePort.Data;
+			FrameBufferReadData <= FrameBuffer(FrameBufferReadAddress);
+			if FrameBufferWriteStrobe then
+				FrameBuffer(FrameBufferWriteAddress) <= FrameBufferWriteData;
 			end if;
 		end if;
 	end process;
 
 	process(HostClock) is
-		type state_t is (IDLE, SEND_DATA, SEND_CRC);
+		type state_t is (IDLE, SEND_DATA);
 		variable State : state_t;
 		variable Command : natural range 0 to 255;
 	begin
 		if rising_edge(HostClock) then
-			ICBOut.WriteData <= X"00";
-			ICBOut.WriteStrobe <= false;
-			ICBOut.WriteCRC <= false;
+			ICBOut.TXStrobe <= false;
+			ICBOut.TXData <= X"00";
+			ICBOut.TXLast <= false;
 			FlushFrame <= false;
 
 			if Reset then
 				State := IDLE;
 				EnableEngine <= false;
-			elsif ICBIn.ReadStrobe and ICBIn.ReadFirst then
-				Command := to_integer(unsigned(ICBIn.ReadData));
+			elsif ICBIn.RXStrobe = ICB_RX_STROBE_COMMAND then
+				Command := to_integer(unsigned(ICBIn.RXData));
 				case Command is
 					when COMMAND_MRF_OFFLOAD =>
 						EnableEngine <= true;
 
 					when COMMAND_MRF_RX_GET_SIZE =>
+						ICBOut.TXStrobe <= true;
 						if FramePending then
-							ICBOut.WriteData <= std_ulogic_vector(to_unsigned(PendingFrameLength, 8));
+							ICBOut.TXData <= std_ulogic_vector(to_unsigned(PendingFrameLength, 8));
 						else
-							ICBOut.WriteData <= X"00";
+							ICBOut.TXData <= X"00";
 						end if;
-						ICBOut.WriteStrobe <= true;
-						State := SEND_CRC;
+						ICBOut.TXLast <= true;
+						State := IDLE;
 
 					when COMMAND_MRF_RX_READ =>
-						-- PendingFrameLength will never be 1 so no need to check for that and jump directly to SEND_CRC.
+						-- PendingFrameLength will never be 1 so no need to check for that and set TXLast.
 						if FramePending then
-							ICBOut.WriteData <= FrameBufferReadPort.Data;
-							ICBOut.WriteStrobe <= true;
+							ICBOut.TXData <= FrameBufferReadData;
+							ICBOut.TXStrobe <= true;
 							State := SEND_DATA;
-							FrameBufferReadPort.Address <= 1;
+							FrameBufferReadAddress <= 1;
 						else
 							State := IDLE;
 						end if;
@@ -109,24 +104,18 @@ begin
 			else
 				case State is
 					when IDLE =>
-						FrameBufferReadPort.Address <= 0;
+						FrameBufferReadAddress <= 0;
 
 					when SEND_DATA =>
-						if ICBIn.WriteReady then
-							ICBOut.WriteData <= FrameBufferReadPort.Data;
-							ICBOut.WriteStrobe <= true;
-							if FrameBufferReadPort.Address + 1 = PendingFrameLength then
-								State := SEND_CRC;
+						if ICBIn.TXReady then
+							ICBOut.TXStrobe <= true;
+							ICBOut.TXData <= FrameBufferReadData;
+							if FrameBufferReadAddress + 1 = PendingFrameLength then
+								ICBOut.TXLast <= true;
+								State := IDLE;
 								FlushFrame <= true;
 							end if;
-							FrameBufferReadPort.Address <= FrameBufferReadPort.Address + 1;
-						end if;
-
-					when SEND_CRC =>
-						if ICBIn.WriteReady then
-							ICBOut.WriteCRC <= true;
-							ICBOut.WriteStrobe <= true;
-							State := IDLE;
+							FrameBufferReadAddress <= FrameBufferReadAddress + 1;
 						end if;
 				end case;
 			end if;
@@ -144,7 +133,7 @@ begin
 			ReceiveIRQ <= false;
 			FCSFailIRQ <= false;
 			LLControl.Strobe <= false;
-			FrameBufferWritePort.Strobe <= false;
+			FrameBufferWriteStrobe <= false;
 			CRCReset <= false;
 			CRCStrobe <= false;
 			CRCData <= LLStatus.ReadData;
@@ -203,9 +192,9 @@ begin
 
 					when READ_DATA =>
 						if not LLStatus.Busy then
-							FrameBufferWritePort.Strobe <= true;
-							FrameBufferWritePort.Address <= ReadOffset;
-							FrameBufferWritePort.Data <= LLStatus.ReadData;
+							FrameBufferWriteStrobe <= true;
+							FrameBufferWriteAddress <= ReadOffset;
+							FrameBufferWriteData <= LLStatus.ReadData;
 							ReadOffset := ReadOffset + 1;
 							if ReadOffset = PendingFrameLength then
 								if CRCZeroTwoBytesAgo then

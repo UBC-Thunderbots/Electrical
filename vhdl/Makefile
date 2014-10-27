@@ -5,7 +5,7 @@ PROJ := thunderbots
 override SHELL := /bin/bash
 
 # The names of all the top-level test targets.
-SIM_TARGETS := crc_step_test spi_slave_test
+SIM_TARGETS := crc_step_test icb_receiver_test icb_transmitter_test
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -36,6 +36,9 @@ ghdl/obj/accelerometer.o : ghdl/obj/imu_low_level.o ghdl/obj/readable_register.o
 ghdl/obj/arbiter.o : ghdl/obj/types.o
 ghdl/obj/clock.o :
 ghdl/obj/gyro.o : ghdl/obj/imu_low_level.o ghdl/obj/readable_register.o ghdl/obj/types.o
+ghdl/obj/icb.o : ghdl/obj/icb_receiver.o ghdl/obj/icb_transmitter.o ghdl/obj/types.o
+ghdl/obj/icb_receiver.o : ghdl/obj/types.o ghdl/obj/utils.o
+ghdl/obj/icb_transmitter.o : ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/imu_low_level.o : ghdl/obj/spi_master.o ghdl/obj/types.o
 ghdl/obj/interrupt_controller.o : ghdl/obj/commands.o ghdl/obj/types.o
 ghdl/obj/majority.o :
@@ -54,13 +57,11 @@ ghdl/obj/motor_pwm.o :
 ghdl/obj/motors.o : ghdl/obj/commands.o ghdl/obj/motor.o ghdl/obj/motor_common.o ghdl/obj/types.o
 ghdl/obj/readable_register.o : ghdl/obj/types.o
 ghdl/obj/spi_master.o :
-ghdl/obj/spi_slave_receiver.o : ghdl/obj/types.o ghdl/obj/utils.o
-ghdl/obj/spi_slave_transmitter.o : ghdl/obj/types.o ghdl/obj/utils.o
-ghdl/obj/spi_slave.o : ghdl/obj/spi_slave_receiver.o ghdl/obj/spi_slave_transmitter.o ghdl/obj/types.o
 ghdl/obj/types.o :
 ghdl/obj/writable_register.o : ghdl/obj/types.o
 ghdl/obj/crc_step_test.o : ghdl/obj/types.o ghdl/obj/utils.o
-ghdl/obj/spi_slave_test.o : ghdl/obj/spi_slave.o
+ghdl/obj/icb_receiver_test.o : ghdl/obj/icb_receiver.o ghdl/obj/types.o ghdl/obj/utils.o
+ghdl/obj/icb_transmitter_test.o : ghdl/obj/icb_transmitter.o ghdl/obj/types.o ghdl/obj/utils.o
 
 
 
@@ -217,7 +218,7 @@ define sim_target_template
 # Target to run this simulation target.
 test-$(1) : ghdl/bin/$(1)
 	@mkdir -p ghdl/bin
-	ghdl/bin/$(1) --stack-size=16777216 --ieee-asserts=disable
+	ghdl/bin/$(1)
 .PHONY : test-$(1)
 
 # Target to elaborate the final executable.

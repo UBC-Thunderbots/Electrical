@@ -10,8 +10,8 @@ entity Accelerometer is
 		Reset : in boolean;
 		HostClock : in std_ulogic;
 		BusClock : in std_ulogic; --! SPI Clock max 10 MHz
-		ICBIn : in spi_input_t;
-		ICBOut : buffer spi_output_t;
+		ICBIn : in icb_input_t;
+		ICBOut : buffer icb_output_t;
 		ClockOE : buffer boolean;
 		CSPin : buffer std_ulogic;
 		MOSIPin : buffer std_ulogic;
@@ -153,7 +153,8 @@ begin
 	port map(
 		Reset => Reset,
 		HostClock => HostClock,
-		SPIIn => ICBIn,
-		SPIOut => ICBOut,
-		Value => CurrentRegs.ICBData);
+		ICBIn => ICBIn,
+		ICBOut => ICBOut,
+		Value => CurrentRegs.ICBData,
+		AtomicReadClearStrobe => open);
 end architecture RTL;

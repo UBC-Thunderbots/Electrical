@@ -10,7 +10,7 @@ entity MRFInterruptOffload is
 	port(
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
-		ICBIn : in spi_input_t; --! The ICB data input.
+		ICBIn : in icb_input_t; --! The ICB data input.
 		ArbRequest : buffer boolean; --! The request signal to the arbiter.
 		ArbGrant : in boolean; --! The grant signal from the arbiter.
 		LLControl : buffer low_level_control_t; --! The control lines to the low-level module.
@@ -34,12 +34,12 @@ begin
 			ReceiveInt <= false;
 			TransmitInt <= false;
 
-			if Reset or (ICBIn.ReadStrobe and ICBIn.ReadFirst and to_integer(unsigned(ICBIn.ReadData)) = COMMAND_MRF_OFFLOAD_DISABLE) then
+			if Reset or (ICBIn.RXStrobe = ICB_RX_STROBE_COMMAND and to_integer(unsigned(ICBIn.RXData)) = COMMAND_MRF_OFFLOAD_DISABLE) then
 				State := DISABLED;
 			else
 				case State is
 					when DISABLED =>
-						if ICBIn.ReadStrobe and ICBIn.ReadFirst and to_integer(unsigned(ICBIn.ReadData)) = COMMAND_MRF_OFFLOAD then
+						if ICBIn.RXStrobe = ICB_RX_STROBE_COMMAND and to_integer(unsigned(ICBIn.RXData)) = COMMAND_MRF_OFFLOAD then
 							State := IDLE;
 						end if;
 
