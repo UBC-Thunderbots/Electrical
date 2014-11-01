@@ -27,22 +27,7 @@ PushECOToAnnotationFile=1
 DItemRevisionGUID=
 
 [Document1]
-DocumentPath=..\..\..\..\..\..\..\..\..\Program Files (x86)\Altium Designer Summer 09\Library\STM\STM32F405.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-
-[Document2]
-DocumentPath=..\..\..\..\..\..\..\..\..\Program Files (x86)\Altium Designer Summer 09\Library\STM\STM.SchDoc
+DocumentPath=STM32F405.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
