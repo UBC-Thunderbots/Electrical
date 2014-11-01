@@ -293,6 +293,7 @@ electronics/models/mainboard_thermal/heat_source.SLDPRT -text
 electronics/models/solenoid/Makefile -text
 electronics/models/solenoid/main.cpp -text
 electronics/oven_controller/altium/Integrated_Library1.LibPkg -text
+electronics/oven_controller/altium/STM32F405.SchLib -text
 electronics/robot/main/STM32[!!-~]Pins.xls -text svneol=unset#application/vnd.ms-office
 electronics/robot/main/imu.sch -text
 electronics/robot/main/microcontroller.sch -text
