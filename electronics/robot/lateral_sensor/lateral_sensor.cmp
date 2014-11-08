@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 03/11/2012 13:03:33
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Sat 08 Nov 2014 01:06:52 PM PST
 
 BeginCmp
 TimeStamp = /50957676;
@@ -11,7 +11,7 @@ BeginCmp
 TimeStamp = /509574B0;
 Reference = P1;
 ValeurCmp = CONN_7;
-IdModule  = WM7624CT-ND;
+IdModule  = WM7625CT-ND;
 EndCmp
 
 BeginCmp
