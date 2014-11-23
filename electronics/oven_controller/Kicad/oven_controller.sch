@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:oven_controller-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 nov 2014"
+Date "23 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -256,4 +257,17 @@ F 3 "" H 1450 3350 60  0000 C CNN
 	1    1450 3350
 	-1   0    0    -1  
 $EndComp
+$Comp
+L GND #PWR?
+U 1 1 54712834
+P 8400 3300
+F 0 "#PWR?" H 8400 3300 30  0001 C CNN
+F 1 "GND" H 8400 3230 30  0001 C CNN
+F 2 "" H 8400 3300 60  0000 C CNN
+F 3 "" H 8400 3300 60  0000 C CNN
+	1    8400 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 3300 8700 3300
 $EndSCHEMATC
