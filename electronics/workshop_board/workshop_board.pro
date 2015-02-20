@@ -1,4 +1,4 @@
-update=Thu 29 Aug 2013 09:27:36 PM PDT
+update=Tue 19 Aug 2014 10:22:10 PM PDT
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -87,7 +87,7 @@ VEgarde=100
 DrawLar=60
 EdgeLar=150
 TxtLar=60
-MSegLar=41
+MSegLar=20
 LastNetListRead=
 [pcbnew/libraries]
 LibDir=../../electronics;../workshop_board
@@ -104,3 +104,5 @@ LibName10=pga_sockets
 LibName11=valves
 LibName12=workshop_board
 LibName13=/home/ellis/Desktop/trunk/electronics/thunderbots-modules
+LibName14=dandalion
+LibName15=dandalion2
