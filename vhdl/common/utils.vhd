@@ -10,9 +10,7 @@ package body utils is
 	function crc_step(PreviousCRC : std_ulogic_vector; GeneratorPolynomial : std_ulogic_vector; Input : std_ulogic) return std_ulogic_vector is
 		variable NextCRC : std_ulogic_vector(PreviousCRC'range);
 		variable CarryBit : std_ulogic := Input xor PreviousCRC(PreviousCRC'high);
-		variable IString : character;
 	begin
-		if Input = '1' then IString := '1'; else IString := '0'; end if;
 		for I in PreviousCRC'range loop
 			if I = PreviousCRC'low then 
 				NextCRC(I) := CarryBit;
