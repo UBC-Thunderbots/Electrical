@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "21 feb 2015"
+Date "28 feb 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -224,24 +224,24 @@ $EndComp
 $Comp
 L GND #PWR?
 U 1 1 54C16D49
-P 3500 5350
-F 0 "#PWR?" H 3500 5350 30  0001 C CNN
-F 1 "GND" H 3500 5280 30  0001 C CNN
-F 2 "" H 3500 5350 60  0000 C CNN
-F 3 "" H 3500 5350 60  0000 C CNN
-	1    3500 5350
-	1    0    0    -1  
+P 3500 4650
+F 0 "#PWR?" H 3500 4650 30  0001 C CNN
+F 1 "GND" H 3500 4580 30  0001 C CNN
+F 2 "" H 3500 4650 60  0000 C CNN
+F 3 "" H 3500 4650 60  0000 C CNN
+	1    3500 4650
+	1    0    0    1   
 $EndComp
 $Comp
 L +3.3V #PWR?
 U 1 1 54C16D94
-P 3500 4700
-F 0 "#PWR?" H 3500 4660 30  0001 C CNN
-F 1 "+3.3V" H 3500 4810 30  0000 C CNN
-F 2 "" H 3500 4700 60  0000 C CNN
-F 3 "" H 3500 4700 60  0000 C CNN
-	1    3500 4700
-	1    0    0    -1  
+P 3500 5300
+F 0 "#PWR?" H 3500 5260 30  0001 C CNN
+F 1 "+3.3V" H 3500 5410 30  0000 C CNN
+F 2 "" H 3500 5300 60  0000 C CNN
+F 3 "" H 3500 5300 60  0000 C CNN
+	1    3500 5300
+	1    0    0    1   
 $EndComp
 $Comp
 L C 4.7uF
@@ -902,7 +902,7 @@ Wire Wire Line
 	3700 5300 3700 4950
 Connection ~ 2900 5200
 Wire Wire Line
-	3500 5300 3500 5350
+	3500 4700 3500 4650
 Wire Wire Line
 	2900 5300 3700 5300
 Wire Wire Line
@@ -1237,4 +1237,23 @@ Wire Wire Line
 	8750 1300 8400 1300
 Text Notes 8450 1100 0    26   ~ 0
 Thermocouple\nConnector
+Wire Wire Line
+	4050 4750 3950 4750
+Connection ~ 3950 4750
+Wire Wire Line
+	4050 4850 3950 4850
+Connection ~ 3950 4850
+$Comp
+L GND #PWR?
+U 1 1 54F232A2
+P 6200 6100
+F 0 "#PWR?" H 6200 6100 30  0001 C CNN
+F 1 "GND" H 6200 6030 30  0001 C CNN
+F 2 "" H 6200 6100 60  0000 C CNN
+F 3 "" H 6200 6100 60  0000 C CNN
+	1    6200 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 6000 6200 6100
 $EndSCHEMATC
