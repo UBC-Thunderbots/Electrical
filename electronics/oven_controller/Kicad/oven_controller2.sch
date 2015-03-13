@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:thunderbots-symbols
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:thunderbots-symbols
 LIBS:oven_controller2-cache
 EELAYER 27 0
 EELAYER END
