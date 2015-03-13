@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  3/12/2015 7:20:19 PM
+PCBNEW-LibModule-V1  3/12/2015 7:32:18 PM
 # encoding utf-8
 Units mm
 $INDEX
@@ -6517,7 +6517,7 @@ Po 12.49934 0
 $EndPAD
 $EndMODULE WM7629CT-ND
 $MODULE connect24
-Po 0 0 0 15 5502495C 00000000 ~~
+Po 0 0 0 15 55024C23 00000000 ~~
 Li connect24
 Sc 0
 AR 
@@ -6571,7 +6571,7 @@ Sh "7" R 0.3 0.8 0 0 0
 Dr 0 0 0
 At SMD N 00888000
 Ne 0 ""
-Po 6 0
+Po 3 0
 $EndPAD
 $PAD
 Sh "8" R 0.3 0.8 0 0 0
