@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Thu 12 Mar 2015 11:45:09 PM PDT
+PCBNEW-LibModule-V1  12/03/2015 20:14:17
 # encoding utf-8
 Units mm
 $INDEX
@@ -6877,7 +6877,7 @@ Po 12.49934 0
 $EndPAD
 $EndMODULE WM7629CT-ND
 $MODULE connect24
-Po 0 0 0 15 55024C23 00000000 ~~
+Po 0 0 0 15 55025518 00000000 ~~
 Li connect24
 Sc 0
 AR 
@@ -7051,6 +7051,20 @@ Dr 0 0 0
 At SMD N 00888000
 Ne 0 ""
 Po 11.5 0
+$EndPAD
+$PAD
+Sh "1" R 0.95 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 12.725 2.7
+$EndPAD
+$PAD
+Sh "2" R 0.95 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.225 2.7
 $EndPAD
 $EndMODULE connect24
 $MODULE connector_0_49_in_2pin
