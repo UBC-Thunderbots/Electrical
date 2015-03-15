@@ -12,7 +12,6 @@ entity Motor is
 		Reset : in boolean; --! The system reset signal.
 		HostClock : in std_ulogic; --! The system clock.
 		PWMClock : in std_ulogic; --! The PWM timebase clock.
-		Interlock : in boolean; --! Whether to apply safety interlocks.
 		DriveMode : in motor_drive_mode; --! The requested operation mode.
 		HallCount : buffer hall_count; --! The accumulated Hall sensor edge count.
 		StuckLow : buffer boolean; --! Whether the sensors are currently stuck low.

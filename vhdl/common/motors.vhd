@@ -13,7 +13,6 @@ entity Motors is
 		PWMClock : in std_ulogic; --! The PWM timebase clock.
 		ICBIn : in icb_input_t; --! The ICB data input.
 		ICBOut : buffer icb_outputs_t(0 to 1); --! The ICB data outputs.
-		Interlock : in boolean; --! Whether to apply safety interlocks.
 		HallsPin : in halls_pin_t; --! The wires from the Hall sensors.
 		PhasesHPin : buffer motors_phases_pin_t; --! The wires to the high-side motor phase drivers.
 		PhasesLPin : buffer motors_phases_pin_t); --! The wires to the low-side motor phase drivers.
@@ -143,7 +142,6 @@ begin
 			Reset => Reset,
 			HostClock => HostClock,
 			PWMClock => PWMClock,
-			Interlock => Interlock,
 			DriveMode => DriveModes(I),
 			HallCount => HallCounts(I),
 			StuckLow => StuckLow(I),

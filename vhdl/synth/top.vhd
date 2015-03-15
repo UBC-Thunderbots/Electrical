@@ -17,8 +17,7 @@ entity Top is
 		ICBInterruptPin : buffer std_ulogic;
 
 		IDPin : in std_ulogic_vector(2 downto 0);
-		ChannelPin : in std_ulogic;
-		OverridePin : in std_ulogic;
+		ChannelPin : in std_ulogic_vector(1 downto 0);
 
 		MRFCSPin : buffer std_ulogic;
 		MRFClockPin : out std_ulogic;
@@ -55,8 +54,6 @@ architecture Main of Top is
 	signal ClocksReady : boolean;
 
 	signal Reset : boolean;
-
-	signal Interlock : boolean;
 
 	constant ICB_OUTPUT_COUNT : natural := 10;
 	signal ICBInput : icb_input_t;
@@ -106,9 +103,6 @@ begin
 		end if;
 		Reset <= not to_boolean(ResetShifter(0));
 	end process;
-
-	-- Drive the interlock control.
-	Interlock <= not to_boolean(OverridePin) when rising_edge(Clock80MHz);
 
 	-- Instantiate the inter-chip bus transceiver.
 	ICB : entity work.ICB(RTL)
@@ -175,8 +169,8 @@ begin
 		Value(0)(7 downto 3) => "00000",
 		Value(0)(2 downto 0) => IDPin,
 		Value(1)(7 downto 2) => "000000",
-		Value(1)(1) => to_stdulogic(Interlock),
-		Value(1)(0) => ChannelPin,
+		Value(1)(1) => ChannelPin(1),
+		Value(1)(0) => ChannelPin(0),
 		AtomicReadClearStrobe => open);
 
 	-- Instantiate the LED driver.
@@ -257,7 +251,6 @@ begin
 		PWMClock => Clock8MHz,
 		ICBIn => ICBInput,
 		ICBOut => ICBOutput(6 to 7),
-		Interlock => Interlock,
 		HallsPin => HallsPinFiltered,
 		PhasesHPin => MotorsPhasesHPin,
 		PhasesLPin => MotorsPhasesLPin);

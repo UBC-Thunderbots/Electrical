@@ -50,8 +50,8 @@ net "ICBInterruptPin" iostandard=LVCMOS33 | slew=quietio | drive=12 | loc=P40;
 net "IDPin<2>" iostandard=LVCMOS33 | pulldown | loc=P59;
 net "IDPin<1>" iostandard=LVCMOS33 | pulldown | loc=P61;
 net "IDPin<0>" iostandard=LVCMOS33 | pulldown | loc=P62;
-net "ChannelPin" iostandard=LVCMOS33 | pulldown | loc=P66;
-net "OverridePin" iostandard=LVCMOS33 | pulldown | loc=P67;
+net "ChannelPin<1>" iostandard=LVCMOS33 | pulldown | loc=P66;
+net "ChannelPin<0>" iostandard=LVCMOS33 | pulldown | loc=P67;
 
 # MRF24J40
 net "MRFCSPin" iostandard=LVCMOS33 | slew=quietio | drive=12 | loc=P29;
