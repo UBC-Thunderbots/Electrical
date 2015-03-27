@@ -270,6 +270,7 @@ electronics/Prototype/SingleMotorDriver.mod -text
 electronics/Prototype/SingleMotorDriver.pro -text
 electronics/Prototype/SingleMotorDriver.sch -text
 electronics/breakup[!!-~]board/break-up[!!-~]board.kicad_pcb -text
+electronics/breakup[!!-~]board/break-up[!!-~]board.kicad_pcb-bak -text
 electronics/digibom/digibom.py -text
 electronics/digibom/digibom/__init__.py -text
 electronics/digibom/digibom/bom.py -text
