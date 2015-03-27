@@ -1,0 +1,17 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 3/12/2015 8:33:53 PM
+
+BeginCmp
+TimeStamp = /55025950;
+Reference = U1;
+ValeurCmp = CONN24;
+IdModule  = HEADER_2x12;
+EndCmp
+
+BeginCmp
+TimeStamp = /5502585E;
+Reference = U2;
+ValeurCmp = CONN24;
+IdModule  = connect24;
+EndCmp
+
+EndListe
