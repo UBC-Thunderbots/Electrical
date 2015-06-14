@@ -61,6 +61,7 @@ controls/RoboController.mdl -text
 controls/TF_to_params.m -text
 controls/Updated.mdl -text
 controls/comparePlot.m -text
+controls/control_matrix_calc.m -text
 controls/controller.mat -text
 controls/drive_mosfet_control.odt -text
 controls/dutycycles.txt -text
