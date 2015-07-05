@@ -44,6 +44,8 @@ begin
 	-- Generate an automatic commutation pattern given the motor's current position.
 	Commutator : entity work.MotorCommutator(RTL)
 	port map(
+		Reset => Reset,
+		HostClock => HostClock,
 		Direction => DriveMode.Direction,
 		Hall => Hall,
 		Phases => CommutatorPhases,
