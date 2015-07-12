@@ -10,6 +10,7 @@ entity MotorCommutator is
 		HostClock : in std_ulogic; --! The system clock.
 		Direction : in commutation_direction; --! The desired drive direction.
 		Hall : in boolean_vector(0 to 2); --! The Hall sensor readings.
+		HallValid : in boolean; --! Whether the Hall sensor readings are valid.
 		Phases : buffer phase_drive_mode_vector(0 to 2); --! The phase drive pattern.
 		StuckHigh : buffer boolean; --! Whether all Hall sensors are stuck high.
 		StuckLow : buffer boolean); --! Whether all Hall sensors are stuck low.
@@ -30,7 +31,7 @@ begin
 		variable I : natural range 0 to 2;
 	begin
 		if rising_edge(HostClock) then
-			if Reset then
+			if not HallValid then
 				StuckHighBits <= (false, false, false);
 				StuckLowBits <= (false, false, false);
 			else
@@ -49,10 +50,10 @@ begin
 
 	Swapped <= Hall when Direction = REVERSE else not Hall;
 
-	process(Swapped, StuckHigh, StuckLow) is
+	process(HallValid, Swapped, StuckHigh, StuckLow) is
 	begin
 		for I in Phases'range loop
-			if StuckHigh or StuckLow then
+			if (not HallValid) or StuckHigh or StuckLow then
 				Phases(I) <= FLOAT;
 			elsif not Swapped(I) and Swapped((I + 1) mod 3) then
 				Phases(I) <= LOW;

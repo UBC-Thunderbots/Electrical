@@ -54,6 +54,8 @@ package types is
 
 	type halls_pin_t is array(0 to 4) of std_ulogic_vector(0 to 2);
 
+	type halls_pin_valid_t is array(0 to 4) of boolean_vector(0 to 2);
+
 	type motors_phases_pin_t is array(0 to 4) of std_ulogic_vector(0 to 2);
 
 	function icb_output_combine(Outputs : icb_outputs_t) return icb_output_t;

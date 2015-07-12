@@ -17,6 +17,7 @@ entity Motor is
 		StuckLow : buffer boolean; --! Whether the sensors are currently stuck low.
 		StuckHigh : buffer boolean; --! Whether the sensors are currently stuck high.
 		HallFiltered : in std_ulogic_vector(0 to 2); --! The majority-detected Hall sensor signals.
+		HallFilteredValid : in boolean; --! Whether the Hall sensor signals are valid.
 		PhasesHPin : buffer std_ulogic_vector(0 to 2); --! The wires to the high-side motor phase drivers.
 		PhasesLPin : buffer std_ulogic_vector(0 to 2)); --! The wires to the low-side motor phase drivers.
 end entity Motor;
@@ -47,6 +48,7 @@ begin
 		HostClock => HostClock,
 		Direction => DriveMode.Direction,
 		Hall => Hall,
+		HallValid => HallFilteredValid,
 		Phases => CommutatorPhases,
 		StuckHigh => StuckHigh,
 		StuckLow => StuckLow);

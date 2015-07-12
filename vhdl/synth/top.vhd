@@ -75,6 +75,7 @@ architecture Main of Top is
 	type hall_filter_widths_t is array(0 to 4) of positive;
 	constant HALL_FILTER_WIDTHS : hall_filter_widths_t := (80, 80, 80, 80, 800);
 	signal HallsPinFiltered : halls_pin_t;
+	signal HallsPinFilteredValid : halls_pin_valid_t;
 begin
 	-- Generate system clocks.
 	ClockGen : entity work.ClockGen(Behavioural)
@@ -241,7 +242,8 @@ begin
 				Reset => Reset,
 				Clock => Clock80MHz,
 				Input => HallsPin(Motor)(Pin),
-				Output => HallsPinFiltered(Motor)(Pin));
+				Output => HallsPinFiltered(Motor)(Pin),
+				OutputValid => HallsPinFilteredValid(Motor)(Pin));
 		end generate;
 	end generate;
 	Motors : entity work.Motors(RTL)
@@ -252,6 +254,7 @@ begin
 		ICBIn => ICBInput,
 		ICBOut => ICBOutput(6 to 7),
 		HallsFiltered => HallsPinFiltered,
+		HallsFilteredValid => HallsPinFilteredValid,
 		PhasesHPin => MotorsPhasesHPin,
 		PhasesLPin => MotorsPhasesLPin);
 
