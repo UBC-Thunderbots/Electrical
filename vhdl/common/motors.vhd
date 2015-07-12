@@ -13,7 +13,7 @@ entity Motors is
 		PWMClock : in std_ulogic; --! The PWM timebase clock.
 		ICBIn : in icb_input_t; --! The ICB data input.
 		ICBOut : buffer icb_outputs_t(0 to 1); --! The ICB data outputs.
-		HallsPin : in halls_pin_t; --! The wires from the Hall sensors.
+		HallsFiltered : in halls_pin_t; --! The wires from the Hall sensors.
 		PhasesHPin : buffer motors_phases_pin_t; --! The wires to the high-side motor phase drivers.
 		PhasesLPin : buffer motors_phases_pin_t); --! The wires to the low-side motor phase drivers.
 end entity Motors;
@@ -146,7 +146,7 @@ begin
 			HallCount => HallCounts(I),
 			StuckLow => StuckLow(I),
 			StuckHigh => StuckHigh(I),
-			HallPin => HallsPin(I),
+			HallFiltered => HallsFiltered(I),
 			PhasesHPin => PhasesHPin(I),
 			PhasesLPin => PhasesLPin(I));
 	end generate;

@@ -251,7 +251,7 @@ begin
 		PWMClock => Clock8MHz,
 		ICBIn => ICBInput,
 		ICBOut => ICBOutput(6 to 7),
-		HallsPin => HallsPinFiltered,
+		HallsFiltered => HallsPinFiltered,
 		PhasesHPin => MotorsPhasesHPin,
 		PhasesLPin => MotorsPhasesLPin);
 
