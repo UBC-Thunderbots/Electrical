@@ -14,8 +14,8 @@ entity Majority is
 end entity Majority;
 
 architecture RTL of Majority is
-	signal Counter : natural range 0 to Width + 2;
-	signal ValidCounter : natural range 0 to Width;
+	signal Counter : natural range 0 to Width;
+	signal ValidCounter : natural range 0 to Width + 2;
 	signal ShiftRegister : std_ulogic_vector(0 to Width - 1);
 	signal InputFiltered : std_ulogic;
 begin
