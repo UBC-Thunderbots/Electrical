@@ -134,7 +134,7 @@
 		<default value="LM5107" part="LM5107MAX/NOPBCT-ND" />
 		<default value="LP2951" part="LP2951CMXFSCT-ND" />
 		<default value="MIC7300" part="576-1319-1-ND" />
-		<default value="MRF24J40MB" part="MRF24J40MB-I/RM-ND" />
+		<default value="MRF24J40MD" part="MRF24J40MD-I/RM-ND" />
 		<default value="MRF24J40MC" part="MRF24J40MC" />
 		<default value="OPB733TR" part="365-1510-1-ND" />
 		<default value="PNA2602M-ND" part="PNA2602M-ND" />
