@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-05-25T18:17:18 PDT
+EESchema Schematic File Version 2  date Sat 19 Sep 2015 04:13:17 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:breakout-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 5
 Title ""
-Date "26 may 2013"
+Date "19 sep 2015"
 Rev ""
 Comp ""
 Comment1 ""

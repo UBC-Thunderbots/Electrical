@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-05-25T18:17:18 PDT
+EESchema Schematic File Version 2  date Sat 19 Sep 2015 04:13:17 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:breakout-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 4 5
 Title ""
-Date "26 may 2013"
+Date "19 sep 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -221,7 +222,7 @@ AR Path="/506552F4/4FB9E1A3" Ref="R3"  Part="5"
 AR Path="/5065526E/4FB9E1A3" Ref="R2"  Part="5" 
 F 0 "R1" V 6180 2650 50  0000 C CNN
 F 1 "10KR7" V 6100 2650 50  0000 C CNN
-F 4 "SOMC10KCCT-ND" H 6100 2650 60  0001 C CNN "Field1"
+F 4 "4814P-1-103LFCT-ND" H 6100 2650 60  0001 C CNN "Field1"
 	5    6100 2650
 	1    0    0    -1  
 $EndComp
@@ -235,7 +236,7 @@ AR Path="/506552F4/4FB9E1A0" Ref="R3"  Part="6"
 AR Path="/5065526E/4FB9E1A0" Ref="R2"  Part="6" 
 F 0 "R1" V 6330 2650 50  0000 C CNN
 F 1 "10KR7" V 6250 2650 50  0000 C CNN
-F 4 "SOMC10KCCT-ND" H 6250 2650 60  0001 C CNN "Field1"
+F 4 "4814P-1-103LFCT-ND" H 6250 2650 60  0001 C CNN "Field1"
 	6    6250 2650
 	1    0    0    -1  
 $EndComp
@@ -249,7 +250,7 @@ AR Path="/506552F4/4FB9E19A" Ref="R3"  Part="4"
 AR Path="/5065526E/4FB9E19A" Ref="R2"  Part="4" 
 F 0 "R1" V 6780 2650 50  0000 C CNN
 F 1 "10KR7" V 6700 2650 50  0000 C CNN
-F 4 "SOMC10KCCT-ND" H 6700 2650 60  0001 C CNN "Field1"
+F 4 "4814P-1-103LFCT-ND" H 6700 2650 60  0001 C CNN "Field1"
 	4    6700 2650
 	1    0    0    -1  
 $EndComp
@@ -263,7 +264,7 @@ AR Path="/506552F4/4FB9E197" Ref="R3"  Part="3"
 AR Path="/5065526E/4FB9E197" Ref="R2"  Part="3" 
 F 0 "R1" V 6630 2650 50  0000 C CNN
 F 1 "10KR7" V 6550 2650 50  0000 C CNN
-F 4 "SOMC10KCCT-ND" H 6550 2650 60  0001 C CNN "Field1"
+F 4 "4814P-1-103LFCT-ND" H 6550 2650 60  0001 C CNN "Field1"
 	3    6550 2650
 	1    0    0    -1  
 $EndComp
@@ -277,7 +278,7 @@ AR Path="/506552F4/4FB9E193" Ref="R3"  Part="7"
 AR Path="/5065526E/4FB9E193" Ref="R2"  Part="7" 
 F 0 "R1" V 6480 2650 50  0000 C CNN
 F 1 "10KR7" V 6400 2650 50  0000 C CNN
-F 4 "SOMC10KCCT-ND" H 6400 2650 60  0001 C CNN "Field1"
+F 4 "4814P-1-103LFCT-ND" H 6400 2650 60  0001 C CNN "Field1"
 	7    6400 2650
 	1    0    0    -1  
 $EndComp

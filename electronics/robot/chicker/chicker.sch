@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2013-02-26T23:24:22 PST
+EESchema Schematic File Version 2  date Sat 19 Sep 2015 04:15:05 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:chicker-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "27 feb 2013"
+Date "19 sep 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -516,7 +515,7 @@ U 1 1 506FCCBA
 P 7850 2700
 F 0 "K1" H 7800 3100 70  0000 C CNN
 F 1 "RELAY_2RT" H 8000 2200 70  0000 C CNN
-F 4 "PB1163CT-ND" H 7850 2700 60  0001 C CNN "Digi-Key Part"
+F 4 "PB1167-ND" H 7850 2700 60  0001 C CNN "Digi-Key Part"
 	1    7850 2700
 	-1   0    0    1   
 $EndComp

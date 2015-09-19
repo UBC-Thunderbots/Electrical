@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 2014年06月18日 星期三 19时58分55秒
+EESchema Schematic File Version 2  date Sat 19 Sep 2015 04:08:33 PM CST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 15
 Title ""
-Date "19 jun 2014"
+Date "19 sep 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -634,7 +634,7 @@ L MRF24J40M U7
 U 1 1 4F69649C
 P 5150 6150
 F 0 "U7" H 5150 6100 60  0000 C CNN
-F 1 "MRF24J40MB" H 5150 6200 60  0000 C CNN
+F 1 "MRF24J40MD" H 5150 6200 60  0000 C CNN
 	1    5150 6150
 	1    0    0    -1  
 $EndComp

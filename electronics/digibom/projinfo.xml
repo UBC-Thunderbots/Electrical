@@ -109,7 +109,7 @@
 		<default value="88R" part="311-88.7CRCT-ND" />
 		<default value="100R" part="311-100CRCT-ND" />
 		<default value="1kR" part="1276-5272-1-ND" />
-		<default value="2.2kR" part="311-2.20KCRCT-ND" />
+		<default value="2.2kR" part="RMCF0805FT2K20CT-ND" />
 		<default value="6kR" part="RMCF0805FT6K04CT-ND" />
 		<default value="10kR" part="311-10.0KCRCT-ND" />
 		<default value="100kR" part="311-100KCRCT-ND" />
