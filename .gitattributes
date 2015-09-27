@@ -150,6 +150,9 @@ controls/kalman/matrix.h -text
 controls/kalman/sample_ouput -text
 controls/lps/check_lps_logic.m -text
 controls/move_spin/move_spin.m -text
+controls/octave_activity/activity.m -text
+controls/octave_activity/data.txt -text
+controls/octave_activity/filter.txt -text
 controls/omnidrive_kiart_preprint.pdf -text
 controls/parameter_setup.asv -text
 controls/parameter_setup.m -text
