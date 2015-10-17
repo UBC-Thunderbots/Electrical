@@ -266,6 +266,7 @@ datasheets/regulators/LP2951.pdf -text svneol=unset#application/pdf
 datasheets/regulators/MCP1726.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/sdcard.pdf -text svneol=unset#application/pdf
+datasheets/specs/USB[!!-~]2.0.pdf -text svneol=unset#application/octet-stream
 electronics/Chicker_Test_Board/Code/Boost_converter_final/Boost_converter_final.ino -text
 electronics/Chicker_Test_Board/Schematic/Chicker_Test_Board.pro -text
 electronics/Prototype/SingleMotorDriver.brd -text
