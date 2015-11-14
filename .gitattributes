@@ -199,6 +199,7 @@ datasheets/connectors/Molex/53261-1171[!!-~](Header;[!!-~]Dribbler[!!-~]Harness)
 datasheets/connectors/Molex/53398-0771_LateralSensorCon7_right-angle.pdf -text svneol=unset#unset
 datasheets/connectors/Molex/638190300[!!-~](Crimp[!!-~]Tool[!!-~]for[!!-~]50079-8x00).pdf -text
 datasheets/diodes/RURG3060C.pdf -text
+datasheets/do3316p[!!-~](Inductor).pdf -text
 datasheets/electromechanical/IM[!!-~]Relay.pdf -text svneol=unset#application/pdf
 datasheets/electromechanical/Maxon[!!-~]EC[!!-~]Commutation[!!-~]and[!!-~]Wiring.pdf -text svneol=unset#unset
 datasheets/electromechanical/Maxon[!!-~]EC16[!!-~]15W[!!-~](Dribbler).pdf -text
