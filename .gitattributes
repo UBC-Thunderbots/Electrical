@@ -150,6 +150,12 @@ controls/kalman/matrix.h -text
 controls/kalman/sample_ouput -text
 controls/lps/characterization/open_file.m -text
 controls/lps/check_lps_logic.m -text
+controls/lps/invert/data.txt -text
+controls/lps/invert/data1d.txt -text
+controls/lps/invert/data_confirm.txt -text
+controls/lps/invert/demo.m -text
+controls/lps/invert/process_data_1d.m -text
+controls/lps/invert/process_data_2d.m -text
 controls/move_spin/move_spin.m -text
 controls/octave_activity/activity.m -text
 controls/octave_activity/data.txt -text
