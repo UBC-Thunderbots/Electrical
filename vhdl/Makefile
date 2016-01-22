@@ -59,7 +59,7 @@ ghdl/obj/readable_register.o : ghdl/obj/types.o
 ghdl/obj/spi_master.o :
 ghdl/obj/types.o :
 ghdl/obj/writable_register.o : ghdl/obj/types.o
-ghdl/obj/arbiter_test.o : ghdl/obj/arbiter.o ghdl/obj/types.o ghdl/obj/utils.o
+ghdl/obj/arbiter_test.o : ghdl/obj/arbiter.o ghdl/obj/types.o
 ghdl/obj/crc_step_test.o : ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/icb_receiver_test.o : ghdl/obj/icb_receiver.o ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/icb_transmitter_test.o : ghdl/obj/icb_transmitter.o ghdl/obj/types.o ghdl/obj/utils.o

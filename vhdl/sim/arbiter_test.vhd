@@ -3,7 +3,6 @@ use ieee.std_logic_1164.all;
 
 library work;
 use work.types.all;
-use work.utils.all;
 
 entity arbiter_test is
 end entity arbiter_test;
