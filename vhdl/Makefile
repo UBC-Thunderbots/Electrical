@@ -5,7 +5,7 @@ PROJ := thunderbots
 override SHELL := /bin/bash
 
 # The names of all the top-level test targets.
-SIM_TARGETS := crc_step_test icb_receiver_test icb_transmitter_test
+SIM_TARGETS := arbiter_test crc_step_test icb_receiver_test icb_transmitter_test
 
 # The path to the Xilinx settings32.sh file.
 XILINX_SETTINGS ?= /opt/xilinx/settings32.sh
@@ -59,6 +59,7 @@ ghdl/obj/readable_register.o : ghdl/obj/types.o
 ghdl/obj/spi_master.o :
 ghdl/obj/types.o :
 ghdl/obj/writable_register.o : ghdl/obj/types.o
+ghdl/obj/arbiter_test.o : ghdl/obj/arbiter.o ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/crc_step_test.o : ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/icb_receiver_test.o : ghdl/obj/icb_receiver.o ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/icb_transmitter_test.o : ghdl/obj/icb_transmitter.o ghdl/obj/types.o ghdl/obj/utils.o

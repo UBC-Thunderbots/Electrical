@@ -361,6 +361,7 @@ vhdl/common/types.vhd -text
 vhdl/common/utils.vhd -text
 vhdl/common/writable_register.vhd -text
 vhdl/get_processors.sh -text
+vhdl/sim/arbiter_test.vhd -text
 vhdl/sim/crc_step_test.vhd -text
 vhdl/sim/icb_receiver_test.vhd -text
 vhdl/sim/icb_transmitter_test.vhd -text
