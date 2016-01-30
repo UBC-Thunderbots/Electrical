@@ -60,6 +60,7 @@ controls/PowerConv.m -text
 controls/RoboController.mdl -text
 controls/TF_to_params.m -text
 controls/Updated.mdl -text
+controls/catch/catch_sim.m -text
 controls/comparePlot.m -text
 controls/control_matrix_calc.m -text
 controls/controller.mat -text
