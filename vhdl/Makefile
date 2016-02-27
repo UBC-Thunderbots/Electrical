@@ -40,7 +40,7 @@ ghdl/obj/icb.o : ghdl/obj/icb_receiver.o ghdl/obj/icb_transmitter.o ghdl/obj/typ
 ghdl/obj/icb_receiver.o : ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/icb_transmitter.o : ghdl/obj/types.o ghdl/obj/utils.o
 ghdl/obj/imu_low_level.o : ghdl/obj/spi_master.o ghdl/obj/types.o
-ghdl/obj/interrupt_controller.o : ghdl/obj/commands.o ghdl/obj/types.o
+ghdl/obj/interrupt_controller.o : ghdl/obj/commands.o ghdl/obj/readable_register.o ghdl/obj/types.o
 ghdl/obj/majority.o :
 ghdl/obj/mrf.o : ghdl/obj/arbiter.o ghdl/obj/mrf_common.o ghdl/obj/mrf_direct_access.o ghdl/obj/mrf_interrupt.o ghdl/obj/mrf_low_level.o ghdl/obj/mrf_receive.o ghdl/obj/mrf_transmit.o ghdl/obj/types.o
 ghdl/obj/mrf_common.o :
