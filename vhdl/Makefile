@@ -118,7 +118,7 @@ trce : trace
 # We can make a DFU file from a BIN file using dfu-suffix.
 $(PROJ).dfu : $(PROJ).bin
 	cp $< $@
-	dfu-suffix -v 0483 -p 497f -a $@
+	dfu-suffix -v 0483 -p 497e -a $@
 
 # We can make a BIN file from a BIT file using Xilinx PROMGEN.
 # Options:
