@@ -258,7 +258,7 @@ $(eval $(foreach vhd,$(VHDs_common) $(VHDs_sim),$(call sim_analyze_template,$(vh
 #####################
 
 dfu : $(PROJ).dfu
-	dfu-util -d 0483 -c 1 -i 0 -a 1 -D $<
+	dfu-util -a "FPGA Bitstream" -D $<
 
 
 
