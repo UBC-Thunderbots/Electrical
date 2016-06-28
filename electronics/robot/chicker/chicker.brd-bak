@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date Sat 21 May 2016 12:01:12 PM PDT
+PCBNEW-BOARD Version 2 date Sat 21 May 2016 11:59:07 AM PDT
 
 # Created by Pcbnew(2013-jul-07)-stable
 
@@ -7,6 +7,7 @@ encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 1FFF8001
+VisibleLayers 1FD00001
 Links 77
 NoConn 0
 Di 9.421223 13.12164 167.578679 186.575701

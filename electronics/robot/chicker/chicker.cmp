@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2011-nov-30)-stable date = 2013-01-11T00:51:48 PST
+Cmp-Mod V01 Created by PcbNew date = Sat 26 Mar 2016 01:27:40 PM PDT
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -43,13 +43,6 @@ IdModule  = ESMQ251VSN102MQ45S_HORIZONTAL;
 EndCmp
 
 BeginCmp
-TimeStamp = /4E629A85;
-Reference = C10;
-ValeurCmp = 1mF;
-IdModule  = ESMQ251VSN102MQ45S_HORIZONTAL;
-EndCmp
-
-BeginCmp
 TimeStamp = /4E629A87;
 Reference = C11;
 ValeurCmp = 1mF;
@@ -78,6 +71,13 @@ IdModule  = TO-3PN_H;
 EndCmp
 
 BeginCmp
+TimeStamp = /56EB4249;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = LED-1206;
+EndCmp
+
+BeginCmp
 TimeStamp = /506FCCB1;
 Reference = F1;
 ValeurCmp = 5A;
@@ -95,7 +95,7 @@ BeginCmp
 TimeStamp = /4CE86DAF;
 Reference = L1;
 ValeurCmp = 22uH;
-IdModule  = 22uH_INDUCTOR;
+IdModule  = SRP1770TA;
 EndCmp
 
 BeginCmp
@@ -190,20 +190,6 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /50668D95;
-Reference = R5;
-ValeurCmp = 68R;
-IdModule  = SM5329;
-EndCmp
-
-BeginCmp
-TimeStamp = /50668D94;
-Reference = R6;
-ValeurCmp = 68R;
-IdModule  = SM5329;
-EndCmp
-
-BeginCmp
 TimeStamp = /506A474C;
 Reference = R7;
 ValeurCmp = 100kR;
@@ -215,6 +201,34 @@ TimeStamp = /50E520B8;
 Reference = R8;
 ValeurCmp = 10kR;
 IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56EB4083;
+Reference = R10;
+ValeurCmp = 160R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56EB4092;
+Reference = R11;
+ValeurCmp = 160R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /56EB40A1;
+Reference = R12;
+ValeurCmp = 2kR;
+IdModule  = PF2203;
+EndCmp
+
+BeginCmp
+TimeStamp = /56EB40B0;
+Reference = R13;
+ValeurCmp = 2kR;
+IdModule  = PF2203;
 EndCmp
 
 BeginCmp

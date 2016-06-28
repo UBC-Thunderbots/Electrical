@@ -318,6 +318,15 @@ electronics/oven_controller/Kicad/_autosave-oven_controller.kicad_pcb -text
 electronics/oven_controller/PowerSchematics.png -text
 electronics/oven_controller/altium/Integrated_Library1.LibPkg -text
 electronics/oven_controller/altium/STM32F405.SchLib -text
+electronics/robot/chicker/Chicker_parts.xlsx -text
+electronics/robot/chicker/Gerber[!!-~]files.zip -text
+electronics/robot/chicker/chicker-cache.lib -text
+electronics/robot/chicker/chicker.bak -text
+electronics/robot/chicker/chicker.brd-bak -text
+electronics/robot/chicker/chicker.csv -text
+electronics/robot/chicker/chicker.kicad_pcb-bak -text
+electronics/robot/chicker/chicker.lst -text
+electronics/robot/chicker/chicker.net -text
 electronics/robot/main/STM32[!!-~]Pins.xls -text svneol=unset#application/vnd.ms-office
 electronics/robot/main/imu.sch -text
 electronics/robot/main/microcontroller.sch -text
