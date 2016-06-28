@@ -24,6 +24,8 @@ architecture RTL of Motors is
 
 	constant SETTINGS_RAW_RESET_VALUE : byte_vector(0 to MotorCount * 2 - 1) := (others => X"00");
 
+	constant SquelchCycles : positive := 800000;
+
 	signal SettingsRaw : byte_vector(0 to MotorCount * 2 - 1);
 	signal DriveModes : motor_drive_mode_vector(0 to MotorCount - 1);
 
@@ -32,8 +34,42 @@ architecture RTL of Motors is
 	signal FlushStuck : boolean;
 
 	signal HallCounts : hall_count_vector(DriveModes'range);
-	signal HallCountsRaw : byte_vector(0 to MotorCount * 2 - 1);
+	signal HallCountsRaw : byte_vector(0 to MotorCount * 2 - 1 + 1);
+	signal HallCountsReadStrobe : boolean;
+
+	signal SquelchRequested : boolean;
+	signal SquelchCounter : natural range 0 to SquelchCycles - 1;
+	signal Squelched : boolean;
+	signal SquelchedLatched : boolean;
+	signal SquelchedVector : boolean_vector(0 to MotorCount - 1);
 begin
+	-- Allow setting the squelch counter via an ICB command.
+	process(HostClock) is
+	begin
+		if rising_edge(HostClock) then
+			if Reset then
+				SquelchRequested <= false;
+				SquelchCounter <= SquelchCycles - 1;
+			else
+				-- This assignment is overridden on reset.
+				if SquelchCounter /= 0 then
+					SquelchCounter <= SquelchCounter - 1;
+				end if;
+				if ICBIn.RXStrobe = ICB_RX_STROBE_COMMAND and to_integer(unsigned(ICBIn.RXData)) = COMMAND_MOTORS_SQUELCH_NOISE then
+					SquelchRequested <= true;
+				elsif ICBIn.RXStrobe = ICB_RX_STROBE_EOT_OK then
+					if SquelchRequested then
+						SquelchCounter <= SquelchCycles - 1;
+					end if;
+					SquelchRequested <= false;
+				elsif ICBIn.RXStrobe = ICB_RX_STROBE_EOT_CORRUPT then
+					SquelchRequested <= false;
+				end if;
+			end if;
+		end if;
+	end process;
+	Squelched <= SquelchCounter /= 0;
+
 	-- Instantiate a writable register to receive new motor settings from the MCU.
 	SettingsWR : entity work.WritableRegister(RTL)
 	generic map(
@@ -63,7 +99,7 @@ begin
 	end process;
 
 	-- Pack the Hall sensor counts into a block of bytes.
-	process(HallCounts) is
+	process(HallCounts, SquelchedLatched) is
 		variable MotorWord : byte_vector(0 to 1);
 	begin
 		for I in 0 to MotorCount - 1 loop
@@ -71,6 +107,11 @@ begin
 			MotorWord(1) := std_ulogic_vector(HallCounts(I)(15 downto 8));
 			HallCountsRaw(I * 2 to I * 2 + 1) <= MotorWord;
 		end loop;
+		if SquelchedLatched then
+			HallCountsRaw(MotorCount * 2) <= X"01";
+		else
+			HallCountsRaw(MotorCount * 2) <= X"00";
+		end if;
 	end process;
 
 	-- Instantiate a readable register to send Hall sensor counts to the MCU.
@@ -84,7 +125,20 @@ begin
 		ICBIn => ICBIn,
 		ICBOut => ICBOut(0),
 		Value => HallCountsRaw,
-		AtomicReadClearStrobe => open);
+		AtomicReadClearStrobe => HallCountsReadStrobe);
+
+	-- Set and clear the squelched flag based on the squelched counter and hall
+	-- counts read strobe.
+	process(HostClock) is
+	begin
+		if rising_edge(HostClock) then
+			if Reset or Squelched then
+				SquelchedLatched <= true;
+			elsif HallCountsReadStrobe then
+				SquelchedLatched <= false;
+			end if;
+		end if;
+	end process;
 
 	-- Latch stuck Hall sensor flags.
 	process(HostClock) is
@@ -134,6 +188,9 @@ begin
 		Value => StuckRaw,
 		AtomicReadClearStrobe => FlushStuck);
 
+	-- Squelching only applies to the dribbler.
+	SquelchedVector <= (false, false, false, false, SquelchedLatched);
+
 	-- Instantiate a set of motor drivers.
 	Motors : for I in DriveModes'range generate
 		Motor : entity work.Motor(RTL)
@@ -149,6 +206,7 @@ begin
 			StuckHigh => StuckHigh(I),
 			HallFiltered => HallsFiltered(I),
 			HallFilteredValid => HallsFilteredValid(I)(0),
+			Squelched => SquelchedVector(I),
 			PhasesHPin => PhasesHPin(I),
 			PhasesLPin => PhasesLPin(I));
 	end generate;
