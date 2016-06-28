@@ -73,7 +73,7 @@ begin
 		end loop;
 	end process;
 
-	-- Instantiate a readable regsiter to send Hall sensor counts to the MCU.
+	-- Instantiate a readable register to send Hall sensor counts to the MCU.
 	HallCountsRR : entity work.ReadableRegister(RTL)
 	generic map(
 		Command => COMMAND_MOTORS_GET_HALL_COUNT,
