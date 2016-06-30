@@ -11,7 +11,6 @@ entity MotorCommutator is
 		Direction : in commutation_direction; --! The desired drive direction.
 		Hall : in boolean_vector(0 to 2); --! The Hall sensor readings.
 		HallValid : in boolean; --! Whether the Hall sensor readings are valid.
-		Squelched : in boolean; --! Whether the stuck signals should not be set.
 		Phases : buffer phase_drive_mode_vector(0 to 2); --! The phase drive pattern.
 		StuckHigh : buffer boolean; --! Whether all Hall sensors are stuck high.
 		StuckLow : buffer boolean); --! Whether all Hall sensors are stuck low.
@@ -32,7 +31,7 @@ begin
 		variable I : natural range 0 to 2;
 	begin
 		if rising_edge(HostClock) then
-			if Squelched or not HallValid then
+			if not HallValid then
 				StuckHighBits <= (false, false, false);
 				StuckLowBits <= (false, false, false);
 			else

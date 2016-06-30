@@ -9,7 +9,6 @@ entity MotorHallSpeed is
 	port(
 		HostClock : in std_ulogic; --! The system clock.
 		Hall : in boolean_vector(0 to 2); --! The Hall sensor states.
-		Freeze : in boolean; --! Whether to freeze the count.
 		Value : buffer hall_count); --! The accumulated count.
 end entity MotorHallSpeed;
 
@@ -44,7 +43,7 @@ begin
 	process(HostClock) is
 	begin
 		if rising_edge(HostClock) then
-			if Hall /= OldHall and not Freeze then
+			if Hall /= OldHall then
 				if IsForward(Hall, OldHall) then
 					Value <= Value + 1;
 				elsif IsForward(OldHall, Hall) then
