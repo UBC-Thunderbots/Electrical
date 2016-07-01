@@ -55,7 +55,7 @@ architecture Main of Top is
 
 	signal Reset : boolean;
 
-	constant ICB_OUTPUT_COUNT : natural := 10;
+	constant ICB_OUTPUT_COUNT : natural := 11;
 	signal ICBInput : icb_input_t;
 	signal ICBOutput : icb_outputs_t(0 to ICB_OUTPUT_COUNT - 1);
 
@@ -314,4 +314,17 @@ begin
 		R => '0',
 		S => to_stdulogic(Reset),
 		Q => GyroClockPin);
+
+	-- Instantiate the magic number value.
+	MagicNumber : entity work.ReadableRegister(RTL)
+	generic map(
+		Command => COMMAND_GET_MAGIC,
+		Length => 4)
+	port map(
+		Reset => Reset,
+		HostClock => Clock80MHz,
+		ICBIn => ICBInput,
+		ICBOut => ICBOutput(10),
+		Value => (X"55", X"AA", X"CC", X"11"),
+		AtomicReadClearStrobe => open);
 end architecture Main;

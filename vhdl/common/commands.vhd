@@ -21,4 +21,5 @@ package commands is
 	constant COMMAND_MOTORS_GET_CLEAR_STUCK_HALLS : natural := 16#B2#;
 	constant COMMAND_SENSORS_GET_ACCEL : natural := 16#C0#;
 	constant COMMAND_SENSORS_GET_GYRO : natural := 16#C1#;
+	constant COMMAND_GET_MAGIC : natural := 16#D0#;
 end package commands;
