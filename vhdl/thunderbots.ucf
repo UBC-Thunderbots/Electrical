@@ -18,7 +18,7 @@ net "ICBCSPin" iostandard=LVCMOS33 | float | loc=P38;
 # Our ICB is 42 MHz, so this scales down to 122.5 ps.
 # This gives a total final jitter of 123.765 ps.
 timespec "TSICBClock" = PERIOD "ICBClock" 23.809 ns INPUT_JITTER 123.765 ps;
-net "ICBClockPin" iostandard=LVCMOS33 | float | tnm_net="ICBClock" | loc=P50;
+net "ICBClockPin" iostandard=LVCMOS33 | pulldown | tnm_net="ICBClock" | loc=P50;
 
 # STM32 datasheet specifies:
 # tH(MO) = Data output hold time = min 0 nanoseconds (how long after shifting edge of clock before MOSI no longer exhibits old level)
