@@ -177,6 +177,7 @@ controls/robot_model/robot.cpp -text
 controls/robot_model/robot.h -text
 controls/robot_model/util.cpp -text
 controls/robot_model/util.h -text
+controls/tutorial_test.c -text
 controls/useful_numbers -text
 controls/wheelspeed.mdl -text
 datasheets/ECS-3951M-3953M[!!-~](Oscillator).pdf -text
