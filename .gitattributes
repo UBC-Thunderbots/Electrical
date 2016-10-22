@@ -277,12 +277,6 @@ datasheets/regulators/MCP1726.pdf -text
 datasheets/regulators/OKI-78SR.pdf -text
 datasheets/sdcard.pdf -text svneol=unset#application/pdf
 datasheets/specs/USB[!!-~]2.0.pdf -text svneol=unset#application/octet-stream
-electronics/Prototype/SingleMotorDriver.brd -text
-electronics/Prototype/SingleMotorDriver.cmp -text
-electronics/Prototype/SingleMotorDriver.lib -text
-electronics/Prototype/SingleMotorDriver.mod -text
-electronics/Prototype/SingleMotorDriver.pro -text
-electronics/Prototype/SingleMotorDriver.sch -text
 electronics/digibom/digibom.py -text
 electronics/digibom/digibom/__init__.py -text
 electronics/digibom/digibom/bom.py -text
