@@ -2,7 +2,7 @@ update=2015-03-12 7:57:09 PM
 last_client=eeschema
 [eeschema]
 version=1
-LibDir=../../oven_controller
+LibDir=../../electronics
 NetFmtName=
 RptD_X=0
 RptD_Y=100
@@ -39,4 +39,4 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=C:/Users/Andy/Desktop/ThunderBots/Repository/trunk/electronics/thunderbots-symbols
+LibName31=thunderbots-symbols
