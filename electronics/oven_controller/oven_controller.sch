@@ -30,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:oven_controller2-cache
+LIBS:oven_controller-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
