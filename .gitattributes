@@ -306,9 +306,6 @@ electronics/models/mainboard_thermal/copper.SLDPRT -text
 electronics/models/mainboard_thermal/heat_source.SLDPRT -text
 electronics/models/solenoid/Makefile -text
 electronics/models/solenoid/main.cpp -text
-electronics/oven_controller/Kicad/ControllerPaint.png -text
-electronics/oven_controller/Kicad/Reflow[!!-~]Oven[!!-~]Checklist.docx -text
-electronics/oven_controller/Kicad/_autosave-oven_controller.kicad_pcb -text
 electronics/robot/chicker/Chicker_parts.xlsx -text
 electronics/robot/chicker/Gerber[!!-~]files.zip -text
 electronics/robot/chicker/chicker-cache.lib -text
