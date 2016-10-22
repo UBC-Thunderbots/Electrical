@@ -310,8 +310,6 @@ electronics/oven_controller/Kicad/ControllerPaint.png -text
 electronics/oven_controller/Kicad/Reflow[!!-~]Oven[!!-~]Checklist.docx -text
 electronics/oven_controller/Kicad/_autosave-oven_controller.kicad_pcb -text
 electronics/oven_controller/PowerSchematics.png -text
-electronics/oven_controller/altium/Integrated_Library1.LibPkg -text
-electronics/oven_controller/altium/STM32F405.SchLib -text
 electronics/robot/chicker/Chicker_parts.xlsx -text
 electronics/robot/chicker/Gerber[!!-~]files.zip -text
 electronics/robot/chicker/chicker-cache.lib -text
