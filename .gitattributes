@@ -150,6 +150,7 @@ controls/kalman/matrix.cpp -text
 controls/kalman/matrix.h -text
 controls/kalman/sample_ouput -text
 controls/kinematics/MRL_kinematics.pdf -text
+controls/kinematics/Oliveira_ICINCO_2008.pdf -text
 controls/lps/characterization/open_file.m -text
 controls/lps/check_lps_logic.m -text
 controls/lps/invert/data.txt -text
