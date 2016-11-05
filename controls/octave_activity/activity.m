@@ -1,15 +1,19 @@
 % Load the data from data.txt
 % load('filename, 'v1', 'v2', ...);
 
+load('data.txt', 'x', 'y');
+subplot(2, 1, 1);
+plot(x, y);
 
 % FFT part, uncomment this once data is loaded.
 % (if you really know your stuff, you can try this yourself).
-
-%fft_sig = fft(y, n);
-%fft_mag = abs(fft_sig);
-%fft_mag = fftshift(fft_mag);
-%subplot(2, 1, 2);
-%plot(x, fft_mag);
+n = length(y);
+fft_sig = fft(y, n);
+fft_mag = abs(fft_sig);
+fft_mag = fftshift(fft_mag);
+subplot(2, 1, 2);
+plot(x, fft_mag);
+pause();
 
 % Load the filter, and apply it to the the signal.
 % Make sure to use fftshift(signal)!!!
