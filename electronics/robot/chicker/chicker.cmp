@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Sat 26 Mar 2016 01:27:40 PM PDT
+Cmp-Mod V01 Created by PcbNew date = Sat 07 Jan 2017 03:25:06 PM PST
 
 BeginCmp
 TimeStamp = /4CEDE3E6;
@@ -67,7 +67,7 @@ BeginCmp
 TimeStamp = /4D018AF7;
 Reference = D3;
 ValeurCmp = RURG3060CC;
-IdModule  = TO-3PN_H;
+IdModule  = TO247GCE;
 EndCmp
 
 BeginCmp
