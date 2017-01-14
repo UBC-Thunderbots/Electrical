@@ -311,16 +311,10 @@ electronics/robot/chicker/chicker.kicad_pcb-bak -text
 electronics/robot/chicker/chicker.lst -text
 electronics/robot/chicker/chicker.net -text
 electronics/robot/main/STM32[!!-~]Pins.xls -text svneol=unset#application/vnd.ms-office
-electronics/robot/main/imu.sch -text
-electronics/robot/main/microcontroller.sch -text
 electronics/workshop_board/tbots.emp -text
 electronics/workshop_board/tbots_stacked.emp -text
-electronics/workshop_board/workshop_board.brd -text
-electronics/workshop_board/workshop_board.cmp -text
 electronics/workshop_board/workshop_board.lib -text
 electronics/workshop_board/workshop_board.mod -text
-electronics/workshop_board/workshop_board.pro -text
-electronics/workshop_board/workshop_board.sch -text
 electronics/workshop_board/zaber.emp -text
 vhdl/Doxyfile -text
 vhdl/Makefile -text
