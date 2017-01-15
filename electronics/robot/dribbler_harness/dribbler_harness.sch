@@ -1,37 +1,11 @@
-EESchema Schematic File Version 2  date 2013-03-01T20:33:31 PST
-LIBS:power
+EESchema Schematic File Version 2
+LIBS:conn
 LIBS:device
 LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-EELAYER 25  0
+LIBS:dribbler_harness-cache
+EELAYER 25 0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "noname.sch"
@@ -90,35 +64,41 @@ Wire Wire Line
 Wire Wire Line
 	7350 4300 5400 4300
 $Comp
-L CONN_7 P2
+L CONN_01X07 P2
 U 1 1 51318112
-P 6500 3900
-F 0 "P2" V 6470 3900 60  0000 C CNN
-F 1 "CONN_7" V 6570 3900 60  0000 C CNN
-F 4 "dribbler-harness-to-lps" V 6500 3900 60  0001 C CNN "Digi-Key Part"
-	1    6500 3900
+P 6350 3900
+F 0 "P2" V 6320 3900 60  0000 C CNN
+F 1 "CONN_01X07" V 6420 3900 60  0000 C CNN
+F 2 "" H 6350 3900 60  0001 C CNN
+F 3 "" H 6350 3900 60  0001 C CNN
+F 4 "dribbler-harness-to-lps" V 6350 3900 60  0001 C CNN "Digi-Key Part"
+	1    6350 3900
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_11 P1
+L CONN_01X11 P1
 U 1 1 00000000
-P 5050 4100
-F 0 "P1" V 5000 4100 60  0000 C CNN
-F 1 "CONN_11" V 5100 4100 60  0000 C CNN
-F 4 "dribbler-harness-to-breakout-board" V 5050 4100 60  0001 C CNN "Digi-Key Part"
-	1    5050 4100
+P 5200 4100
+F 0 "P1" V 5150 4100 60  0000 C CNN
+F 1 "CONN_01X11" V 5250 4100 60  0000 C CNN
+F 2 "" H 5200 4100 60  0001 C CNN
+F 3 "" H 5200 4100 60  0001 C CNN
+F 4 "dribbler-harness-to-breakout-board" V 5200 4100 60  0001 C CNN "Digi-Key Part"
+	1    5200 4100
 	-1   0    0    1   
 $EndComp
-Text Notes 6700 3950 0    60   ~ 0
+Text Notes 6500 3950 0    60   ~ 0
 To Lateral Position Sensor
-Text Notes 4900 4150 2    60   ~ 0
+Text Notes 5050 4150 2    60   ~ 0
 To Mainboard
 $Comp
-L NPN Q1
+L Q_NPN_ECB Q1
 U 1 1 4E03DD91
 P 6650 4800
 F 0 "Q1" H 6650 4650 50  0000 R CNN
 F 1 "PHOTOTRANSISTOR" H 6650 4950 50  0000 R CNN
+F 2 "" H 6650 4800 60  0001 C CNN
+F 3 "" H 6650 4800 60  0001 C CNN
 F 4 "475-1419-ND" H 6650 4800 60  0001 C CNN "Digi-Key Part"
 	1    6650 4800
 	1    0    0    -1  
@@ -129,8 +109,11 @@ U 1 1 4E03DCF1
 P 7150 4450
 F 0 "D1" H 7150 4550 50  0000 C CNN
 F 1 "LED" H 7150 4350 50  0000 C CNN
+F 2 "" H 7150 4450 60  0001 C CNN
+F 3 "" H 7150 4450 60  0001 C CNN
 F 4 "365-1145-ND" H 7150 4450 60  0001 C CNN "Digi-Key Part"
 	1    7150 4450
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
+NoConn ~ 6450 4800
 $EndSCHEMATC

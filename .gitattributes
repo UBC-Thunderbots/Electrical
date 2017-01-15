@@ -303,13 +303,7 @@ electronics/models/solenoid/Makefile -text
 electronics/models/solenoid/main.cpp -text
 electronics/robot/chicker/Chicker_parts.xlsx -text
 electronics/robot/chicker/Gerber[!!-~]files.zip -text
-electronics/robot/chicker/chicker-cache.lib -text
-electronics/robot/chicker/chicker.bak -text
-electronics/robot/chicker/chicker.brd-bak -text
 electronics/robot/chicker/chicker.csv -text
-electronics/robot/chicker/chicker.kicad_pcb-bak -text
-electronics/robot/chicker/chicker.lst -text
-electronics/robot/chicker/chicker.net -text
 electronics/robot/main/STM32[!!-~]Pins.xls -text svneol=unset#application/vnd.ms-office
 electronics/workshop_board/tbots.emp -text
 electronics/workshop_board/tbots_stacked.emp -text

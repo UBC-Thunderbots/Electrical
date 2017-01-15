@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Thunderbots)(type KiCad)(uri ${KIPRJMOD}/../thunderbots-modules.pretty)(options "")(descr ""))
+)
