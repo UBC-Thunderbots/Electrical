@@ -1062,4 +1062,8 @@ Wire Wire Line
 	10050 6500 10050 6450
 Wire Wire Line
 	8250 2450 8650 2450
+Text Label 6450 5350 0    60   ~ 0
+Kick-
+Text Label 6450 4550 0    60   ~ 0
+Chip-
 $EndSCHEMATC
