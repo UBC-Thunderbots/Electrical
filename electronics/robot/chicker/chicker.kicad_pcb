@@ -8,7 +8,7 @@
     (drawings 82)
     (tracks 375)
     (zones 0)
-    (modules 36)
+    (modules 35)
     (nets 28)
   )
 
@@ -180,18 +180,6 @@
     (via_drill 0.8001)
     (uvia_dia 0.508)
     (uvia_drill 0.127)
-  )
-
-  (module thunderbots-modules:M3_MOUNT (layer Front) (tedit 50EF6CA5) (tstamp 587AB542)
-    (at 105.00106 142.191761)
-    (path /00000000)
-    (fp_text reference M1 (at 0 -2.54) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text value 16mm (at 0 2.54) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (pad "" thru_hole circle (at 0 0) (size 3.175 3.175) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
 
   (module TO_SOT_Packages_THT:TO-247_Horizontal_Neutral123 (layer Front) (tedit 0) (tstamp 507CF367)
@@ -693,10 +681,10 @@
       (net 4 /CHARGE_MOSFET_DRAIN))
   )
 
-  (module thunderbots-modules:M3_MOUNT (layer Front) (tedit 50EF6CA5) (tstamp 587AB9B7)
+  (module thunderbots-modules:M3_MOUNT (layer Front) (tedit 5883DF03) (tstamp 587AB9B7)
     (at 91.39936 114.3)
-    (path /50EFD28A)
-    (fp_text reference M2 (at 0 -2.54) (layer F.SilkS) hide
+    (path /00000000)
+    (fp_text reference M1 (at 0 -2.54) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value 16mm (at 0 2.54) (layer F.SilkS) hide
@@ -705,10 +693,10 @@
     (pad "" thru_hole circle (at 0 0) (size 3.175 3.175) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
 
-  (module thunderbots-modules:M3_MOUNT (layer Front) (tedit 50EF6CA5) (tstamp 587AB9BB)
+  (module thunderbots-modules:M3_MOUNT (layer Front) (tedit 5883DF0C) (tstamp 587AB9BB)
     (at 152.00122 104.0003)
-    (path /50EFD28C)
-    (fp_text reference M3 (at 0 -2.54) (layer F.SilkS) hide
+    (path /50EFD28A)
+    (fp_text reference M2 (at 0 -2.54) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
     )
     (fp_text value 16mm (at 0 2.54) (layer F.SilkS) hide

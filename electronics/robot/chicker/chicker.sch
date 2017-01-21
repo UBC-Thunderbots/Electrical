@@ -44,18 +44,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L M3_MOUNT M3
-U 1 1 50EFD28C
-P 3000 850
-F 0 "M3" H 3000 850 60  0000 C CNN
-F 1 "16mm" H 3000 950 60  0000 C CNN
-F 2 "thunderbots-modules:M3_MOUNT" H 3000 850 60  0001 C CNN
-F 3 "" H 3000 850 60  0001 C CNN
-F 4 "none" H 3000 850 60  0001 C CNN "Digi-Key Part"
-	1    3000 850 
-	1    0    0    -1  
-$EndComp
-$Comp
 L M3_MOUNT M2
 U 1 1 50EFD28A
 P 2450 850
