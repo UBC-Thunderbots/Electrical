@@ -29,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
-LIBS:main-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -987,4 +986,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 6350 8650 6300
 Connection ~ 8650 6300
+Text Notes 1350 5700 0    60   ~ 0
+Off:\nQ28 open: gate pulled to battery\n	positive via SW1 pin 2, 3, 5, 6.\nQ27 open: gate pulled to battery\n	positive via D24 and SW1 pin 2, 3, 5, 6.\n\nOn:\nQ28 gate under firmware control via\n	SW1 pins 2, 3, 5, 4, R51 pull-up, Q14 to ground.\nQ27 gate under firmware control via\n	R53 pull-up, R52+Q15 to ground, D24 reverse biased.\n	(Note, only works when Q28 gate grounded)\n\nStart:\nQ28 closed: gate grounded via\n	SW1 pins 2, 1 and R8.\nQ27 gate under firmware control via\n	R53 pull-up, R52+Q15 to ground, D24 reverse biased.\n	Pre-boot, Q15 turned off via R58.
 $EndSCHEMATC
