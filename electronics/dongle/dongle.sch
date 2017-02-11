@@ -1254,4 +1254,6 @@ F 3 "" H 9350 3950 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	9350 3950 9350 3900
+Text Notes 7900 6400 0    60   ~ 0
+EStop Unplugged: PB1 floats to ground.\n\nStop position (switch open):\n100+2.2k=2300R to +3.3\n2.2k || (100+2.2k) = 1124R to ground\n= 1.083 volts\n\nRun position (switch closed):\n100+(2.2k||560)=546R to +3.3\n2.2k || (100+2.2k) = 1124R to ground\n= 2.221 volts\n\nSee estop schematic for the other half of this circuit.
 $EndSCHEMATC

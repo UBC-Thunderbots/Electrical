@@ -131,4 +131,6 @@ Wire Wire Line
 	4950 4000 4950 5500
 Wire Wire Line
 	5650 5850 5650 4200
+Text Notes 5800 4900 0    60   ~ 0
+See dongle schematic for calculations
 $EndSCHEMATC
