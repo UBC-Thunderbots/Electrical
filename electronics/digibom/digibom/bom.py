@@ -40,7 +40,7 @@ class BOM(object):
 
     def add_list(self, filename, quantity):
         # Convert the Kicad4 .csv file to the Kicad3 format.
-        kicad_to_list(filename)
+        self.kicad_to_list(filename)
 
         # Open the list file.
         with open(filename, encoding="UTF-8") as fp:
