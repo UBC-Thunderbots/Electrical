@@ -10,7 +10,14 @@ class BOM(object):
         self._parts = dict()
         self._part_info = None
 
+    def kicad_to_list(self, filename):
+        # Store the Kicad4 format into Kicad3
+          
+
     def add_list(self, filename, quantity):
+        # Convert the Kicad4 .csv file to the Kicad3 format.
+        kicad_to_list(filename)
+
         # Open the list file.
         with open(filename, encoding="UTF-8") as fp:
             # Check for the standard header.
