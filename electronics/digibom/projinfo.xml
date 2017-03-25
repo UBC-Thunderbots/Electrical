@@ -125,6 +125,7 @@
 		<default value="4.7uF" part="587-1782-1-ND" />
 		<default value="10uF" part="1276-1075-1-ND" />
 		<default value="100uF" part="P5182-ND" />
+    <default value="1mF" part="565-2754-ND" />
 		<default value="7805" part="811-2196-5-ND" />
 		<default value="AO4616" part="785-1043-1-ND" />
 		<default value="AO4882" part="785-1317-1-ND" />
@@ -141,21 +142,6 @@
 		<default value="RURG3060CC" part="RURG3060CC-ND" />
 		<default value="SD1209T3-A1" part="445-2530-ND" />
 		<default value="STM32F405RXT" part="497" />
-		<default value="AO4616" part="785-1043-1-ND" />
-		<default value="AO4882" part="785-1317-1-ND" />
-		<default value="E4P" part="E4P" />
-		<default value="FT232" part="768-1007-1-ND" />
-		<default value="LD1117V33C" part="497-1492-5-ND" />
-		<default value="LM5107" part="LM5107MAX/NOPBCT-ND" />
-		<default value="LP2951" part="LP2951CMXFSCT-ND" />
-		<default value="MIC7300" part="576-1319-1-ND" />
-		<default value="MRF24J40MD" part="MRF24J40MD-I/RM-ND" />
-		<default value="MRF24J40MC" part="MRF24J40MC" />
-		<default value="OPB733TR" part="365-1510-1-ND" />
-		<default value="PNA2602M-ND" part="PNA2602M-ND" />
-		<default value="RURG3060CC" part="RURG3060CC-ND" />
-		<default value="SD1209T3-A1" part="445-2530-ND" />
-		<default value="STM32F405RXT" part="497-11907-ND" />
 		<default value="TEMT1000" part="751-1052-1-ND" />
 		<default value="VSMY2850RG" part="VSMY2850RGCT-ND" />
 		<default value="DIP6" part="CT1936MS-ND" />
@@ -183,5 +169,13 @@
 		<default value="MCP1726" part="MCP1726-1202E/SN-ND" />
 		<default value="ECS-3953M" part="XC287CT-ND" />
 		<default value="74HC4050" part="568-8150-1-ND" />
+    <default value="D_Schottky" part="NSR0240HT1GOSCT-ND" />
+    <default value="MIC5020" part="576-1818-5-ND" />
+    <default value="RELAY_2RT" part="PB1163-ND" />
+    <default value="CONN_02X06" part="S7074-ND" />
+    <default value="D" part="497-7575-1-ND" />
+    <default value="CONN_01X02" part="WM4300-ND" />
+    <default value="Q_NIGBT_GCE" part="FGA18-N33ATDTU-ND" />
+
 	</defaults>
 </project-info>
