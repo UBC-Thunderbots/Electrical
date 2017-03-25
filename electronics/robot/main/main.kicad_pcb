@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.1-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.2+dfsg1-2~bpo8+1-stable)
 
   (general
     (links 675)
@@ -18,14 +18,14 @@
   )
 
   (layers
-    (0 Front signal)
-    (1 Ground power)
-    (2 VSupply power)
-    (31 Back signal)
-    (32 B.Adhes user)
-    (33 F.Adhes user)
-    (34 B.Paste user)
-    (35 F.Paste user)
+    (0 Front signal hide)
+    (1 Ground power hide)
+    (2 VSupply power hide)
+    (31 Back signal hide)
+    (32 B.Adhes user hide)
+    (33 F.Adhes user hide)
+    (34 B.Paste user hide)
+    (35 F.Paste user hide)
     (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user)
@@ -6329,14 +6329,14 @@
     )
   )
 
-  (module SM0805 (layer Front) (tedit 535AF18B) (tstamp 535AF095)
+  (module SM0805 (layer Front) (tedit 58D6F688) (tstamp 535AF095)
     (at 146.14906 87.48014)
     (path /4B4D69E7/535AEFB6)
     (attr smd)
     (fp_text reference R4 (at 2.47142 -0.48006) (layer F.SilkS)
       (effects (font (size 0.635 0.635) (thickness 0.127)))
     )
-    (fp_text value 100K (at 1.72974 -1.67894) (layer F.SilkS) hide
+    (fp_text value 100kR (at 1.72974 -1.67894) (layer F.SilkS) hide
       (effects (font (size 0.635 0.635) (thickness 0.127)))
     )
     (fp_circle (center -1.651 0.762) (end -1.651 0.635) (layer F.SilkS) (width 0.127))
