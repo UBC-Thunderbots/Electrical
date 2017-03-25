@@ -11,24 +11,32 @@ class BOM(object):
         self._part_info = None
 
     def kicad_to_list(self, filename):
+        lf = []
+        lf.append("ref\tvalue\tField1\tField2\tField3\tField4\tField5\tField6\tField7\tField8\r\n")
         with open(filename, encoding="UTF-8") as fp:
-        # Check for the standard header.
-        header = fp.readline()
-        if not header.startswith("ref,value"):
-            raise Exception("Malformed KiCad4 csv file (missing header)") 
+            # Check for the standard header.
+            header = fp.readline()
+            if not header.startswith("\"Id\";\"Designator\""):
+                raise Exception("Malformed KiCad4 csv file (missing header)") 
 
-        # Store the Kicad4 format into Kicad3
-        for line in fp:
-            fields = line.strip().split(";")
-                if len(fields) < 2:
-                    raise Exception("Malformed KiCad list file (fewer than two fields in a line)")
-                ref_id = fields[0]
-                value = fields[1]
-                if len(fields) >= 3:
-                    part = fields[2]
-                else:
-                    part = None
-                
+            # Store the Kicad4 format into Kicad3
+            for line in fp:
+                fields = line.strip().split(";")
+                if len(fields) < 6:
+                    raise Exception("Malformed KiCad list file (fewer than six fields in a line)")
+                designators = fields[1]
+                value = fields[4]
+                for designator in designators.strip().split(","):
+                    lf.append("{}\t{}\r\n".format(designator, value))
+
+        fp.close()
+
+        # overwrite the file with the reformatted data
+        with open(filename, 'w') as fp:
+            for entry in lf:
+                fp.write(entry)
+        fp.close()
+        #exit()
 
     def add_list(self, filename, quantity):
         # Convert the Kicad4 .csv file to the Kicad3 format.
