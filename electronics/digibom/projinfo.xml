@@ -179,6 +179,7 @@
     <default value="22uH" part="NOT PURCHASED FROM DIGIKEY" /> 
     <default value="Q_NMOS_GSD" part="497-12940-1-ND" />
     <default value="CONN_2" part="none" />
+    <default value="CONN_6" part="609-3263-ND" />
 
 	</defaults>
 </project-info>
