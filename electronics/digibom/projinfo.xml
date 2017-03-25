@@ -178,6 +178,7 @@
     <default value="Q_NIGBT_GCE" part="FGA18-N33ATDTU-ND" />
     <default value="22uH" part="NOT PURCHASED FROM DIGIKEY" /> 
     <default value="Q_NMOS_GSD" part="497-12940-1-ND" />
+    <default value="CONN_2" part="none" />
 
 	</defaults>
 </project-info>
