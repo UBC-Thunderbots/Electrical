@@ -11,8 +11,24 @@ class BOM(object):
         self._part_info = None
 
     def kicad_to_list(self, filename):
+        with open(filename, encoding="UTF-8") as fp:
+        # Check for the standard header.
+        header = fp.readline()
+        if not header.startswith("ref,value"):
+            raise Exception("Malformed KiCad4 csv file (missing header)") 
+
         # Store the Kicad4 format into Kicad3
-          
+        for line in fp:
+            fields = line.strip().split(";")
+                if len(fields) < 2:
+                    raise Exception("Malformed KiCad list file (fewer than two fields in a line)")
+                ref_id = fields[0]
+                value = fields[1]
+                if len(fields) >= 3:
+                    part = fields[2]
+                else:
+                    part = None
+                
 
     def add_list(self, filename, quantity):
         # Convert the Kicad4 .csv file to the Kicad3 format.
