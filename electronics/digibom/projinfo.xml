@@ -147,7 +147,7 @@
 		<default value="DIP6" part="CT1936MS-ND" />
 		<default value="BMG160" part="828-1042-1-ND" />
 		<default value="LIS3DH" part="497-10613-1-ND" />
-		<defualt value="TVS" part="SMAJ24CABCT-ND" />
+		<default value="TVS" part="SMAJ24CABCT-ND" />
 		<default value="RED" part="160-1167-1-ND" />
 		<default value="GRN" part="160-1169-1-ND" />
 		<default value="YEL" part="160-1170-1-ND" />
