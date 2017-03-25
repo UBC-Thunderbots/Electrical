@@ -25,9 +25,9 @@ class BOM(object):
                 if len(fields) < 6:
                     raise Exception("Malformed KiCad list file (fewer than six fields in a line)")
                 designators = fields[1]
-                value = fields[4]
+                value = fields[4].strip('\"')
                 for designator in designators.strip().split(","):
-                    lf.append("{}\t{}\r\n".format(designator, value))
+                    lf.append("{}\t{}\r\n".format(designator.strip('\"'), value))
 
         fp.close()
 
