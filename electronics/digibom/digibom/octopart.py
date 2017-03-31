@@ -36,7 +36,7 @@ def lookup(parts):
         }
         url = "http://octopart.com/api/v3/parts/match?" + urllib.parse.urlencode(params, doseq=True)
         with urllib.request.urlopen(url) as resp:
-            response = json.loads(resp.readall().decode("UTF-8"))
+            response = json.loads(resp.read().decode("UTF-8"))
         for result in response["results"]:
             for item in result["items"]:
                 for offer in item["offers"]:
