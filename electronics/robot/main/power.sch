@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -490,7 +491,7 @@ F 0 "Q15" H 5160 4620 60  0000 R CNN
 F 1 "Q_NMOS_GSD" H 5160 4300 60  0000 R CNN
 F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 5150 4450 60  0001 C CNN
 F 3 "" H 5150 4450 60  0001 C CNN
-F 4 "568-5818-1-ND" H 5150 4450 60  0001 C CNN "Field1"
+F 4 "1727-4692-1-ND" H 5150 4450 60  0001 C CNN "Field1"
 	1    5150 4450
 	1    0    0    -1  
 $EndComp

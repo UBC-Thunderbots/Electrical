@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:main-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -260,7 +261,7 @@ F 0 "U47" H 5350 4800 60  0000 C CNN
 F 1 "74HC4050" H 5350 4900 60  0000 C CNN
 F 2 "Thunderbots:SOIC-16_3.9x9.9mm_Pitch1.27mm_HandSoldering" H 5250 4700 60  0001 C CNN
 F 3 "" H 5350 4850 60  0001 C CNN
-F 4 "568-8150-1-ND" H 5350 4850 60  0001 C CNN "Field1"
+F 4 "1727-6331-1-ND" H 5350 4850 60  0001 C CNN "Field1"
 	1    5350 4850
 	-1   0    0    -1  
 $EndComp
