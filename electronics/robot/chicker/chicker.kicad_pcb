@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.4-stable)
+(kicad_pcb (version 4) (host pcbnew 4.0.2+dfsg1-stable)
 
   (general
     (links 77)
     (no_connects 0)
-    (area 54.810659 33.808579 155.191461 132.191761)
+    (area 9.421223 13.12164 197.106578 186.575701)
     (thickness 1.6002)
     (drawings 82)
     (tracks 376)
@@ -36,7 +36,7 @@
   )
 
   (setup
-    (last_trace_width 1.905)
+    (last_trace_width 0.1524)
     (user_trace_width 0.254)
     (user_trace_width 0.508)
     (user_trace_width 0.762)
@@ -326,7 +326,7 @@
       (net 7 GND))
   )
 
-  (module LEDs:LED_1206 (layer Front) (tedit 55BDE2E8) (tstamp 56EDB859)
+  (module LEDs:LED_1206 (layer Front) (tedit 58E005AB) (tstamp 56EDB859)
     (at 151.765 109.22)
     (descr "LED 1206 smd package")
     (tags "LED1206 SMD")
@@ -335,7 +335,7 @@
     (fp_text reference D5 (at 0 -2) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value LED (at 0 2) (layer F.Fab)
+    (fp_text value RED (at 0 2) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.15 1.05) (end 1.45 1.05) (layer F.SilkS) (width 0.15))
@@ -1570,7 +1570,7 @@
   (segment (start 81.93786 120.79986) (end 80.645 119.507) (width 0.508) (layer Front) (net 1) (tstamp 587A8E29))
   (segment (start 80.645 119.507) (end 80.645 117.221) (width 0.508) (layer Front) (net 1) (tstamp 587A8E2D))
   (segment (start 86.19998 120.79986) (end 81.93786 120.79986) (width 0.508) (layer Front) (net 1))
-  (segment (start 136.50468 84.63026) (end 136.50468 90.62974) (width 1.905) (layer Front) (net 2) (status C00000))
+  (segment (start 136.50468 84.63026) (end 136.50468 90.62974) (width 1.905) (layer Front) (net 2))
   (segment (start 136.50468 84.63026) (end 136.50468 81.13268) (width 1.905) (layer Front) (net 2))
   (segment (start 63.6524 55.1815) (end 65.8495 57.3786) (width 2.54) (layer Front) (net 2))
   (segment (start 65.8495 65.183407) (end 73.37552 72.709427) (width 2.54) (layer Front) (net 2) (tstamp 5883D9B9))
