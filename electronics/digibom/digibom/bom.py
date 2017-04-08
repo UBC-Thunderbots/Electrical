@@ -36,7 +36,6 @@ class BOM(object):
             for entry in lf:
                 fp.write(entry)
         fp.close()
-        #exit()
 
     def add_list(self, filename, quantity):
         # Convert the Kicad4 .csv file to the Kicad3 format.
@@ -108,17 +107,21 @@ class BOM(object):
     def check_quantity(self):
         first = True
         for part_id, quantity in self._parts.items():
-            part_info = self._part_info[part_id]
-            if part_info.quantity_available < quantity:
-                if first:
-                    print()
-                    print("=== QUANTITY CHECK REPORT ===")
-                    first = False
-                print("The order requires {} units of part {}, but only {} are available.".format(quantity, part_id, part_info.quantity_available))
+            if (part_id in self._part_info.keys()):
+                part_info = self._part_info[part_id]
+                if part_info.quantity_available < quantity:
+                    if first:
+                        print()
+                        print("=== QUANTITY CHECK REPORT ===")
+                        first = False
+                    print("The order requires {} units of part {}, but only {} are available.".format(quantity, part_id, part_info.quantity_available))
 
     def write(self, outfile):
         with open(outfile, mode="w", encoding="UTF-8") as fp:
             for part_id, quantity in self._parts.items():
-                part_info = self._part_info[part_id]
-                price, quantity = part_info.get_effective_price_and_quantity(quantity)
-                fp.write("{}\t{}\t{}\t{}\t{}\n".format(part_info.id, part_info.description, digibom.octopart.url_for_part(part_info.id), quantity, price))
+                if (part_id in self._part_info.keys()):
+                    part_info = self._part_info[part_id]
+                    price, quantity = part_info.get_effective_price_and_quantity(quantity)
+                    fp.write("{}\t{}\t{}\t{}\t{}\n".format(part_info.id, part_info.description, digibom.octopart.url_for_part(part_info.id), quantity, price))
+                else:
+                    fp.write("{}\t{}\n".format(part_id, part_id))
