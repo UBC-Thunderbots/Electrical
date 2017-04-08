@@ -108,8 +108,10 @@
 		<default value="16.5R" part="541-16.5CCT-ND" />
 		<default value="88R" part="311-88.7CRCT-ND" />
 		<default value="100R" part="311-100CRCT-ND" />
+		<default value="160R" part="311-160CRCT-ND" />
 		<default value="1kR" part="1276-5272-1-ND" />
-		<default value="2.2kR" part="RMCF0805FT2K20CT-ND" />
+		<default value="2kR" part="RURG3060CC-ND" />
+		<default value="2.2kR" part="311-2.20KCRCT-ND" />
 		<default value="6kR" part="RMCF0805FT6K04CT-ND" />
 		<default value="10kR" part="311-10.0KCRCT-ND" />
 		<default value="100kR" part="311-100KCRCT-ND" />
@@ -171,12 +173,12 @@
 		<default value="74HC4050" part="1727-6331-1-ND" />
 		<default value="D_Schottky" part="NSR0240HT1GOSCT-ND" />
 		<default value="MIC5020" part="576-1818-5-ND" />
-		<default value="RELAY_2RT" part="PB1163-ND" />
+		<default value="RELAY_2RT" part="none" />
 		<default value="CONN_02X06" part="S7074-ND" />
 		<default value="D" part="497-7575-1-ND" />
 		<default value="CONN_01X02" part="WM4300-ND" />
-		<default value="Q_NIGBT_GCE" part="FGA18-N33ATDTU-ND" />
-		<default value="22uH" part="NOT PURCHASED FROM DIGIKEY" /> 
+		<default value="Q_NIGBT_GCE" part="none" />
+		<default value="22uH" part="none" /> 
 		<default value="Q_NMOS_GSD" part="497-12940-1-ND" />
 		<default value="CONN_2" part="none" />
 		<default value="CONN_6" part="Header1x6" />
