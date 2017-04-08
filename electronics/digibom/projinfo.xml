@@ -173,14 +173,14 @@
 		<default value="74HC4050" part="1727-6331-1-ND" />
 		<default value="D_Schottky" part="NSR0240HT1GOSCT-ND" />
 		<default value="MIC5020" part="576-1818-5-ND" />
-		<default value="RELAY_2RT" part="none" />
+		<default value="RELAY_2RT" part="RELAY_DEPRECIATED" />
 		<default value="CONN_02X06" part="S7074-ND" />
 		<default value="D" part="497-7575-1-ND" />
 		<default value="CONN_01X02" part="WM4300-ND" />
-		<default value="Q_NIGBT_GCE" part="none" />
-		<default value="22uH" part="none" /> 
+		<default value="Q_NIGBT_GCE" part="FGA180N33" />
+		<default value="22uH" part="22uH" /> 
 		<default value="Q_NMOS_GSD" part="497-12940-1-ND" />
-		<default value="CONN_2" part="none" />
+		<default value="CONN_2" part="CONN_2" />
 		<default value="CONN_6" part="Header1x6" />
 		<default value="MRF24J40MB" part="MRF24J40MD-I/RM-ND" />
 	</defaults>
