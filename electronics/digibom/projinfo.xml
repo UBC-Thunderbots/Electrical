@@ -178,7 +178,7 @@
 		<default value="D" part="497-7575-1-ND" />
 		<default value="CONN_01X02" part="WM4300-ND" />
 		<default value="Q_NIGBT_GCE" part="FGA180N33" />
-		<default value="22uH" part="22uH" /> 
+		<default value="22uH" part="SRP1770TA-220MCT-ND" /> 
 		<default value="Q_NMOS_GSD" part="497-12940-1-ND" />
 		<default value="CONN_2" part="CONN_2" />
 		<default value="CONN_6" part="Header1x6" />
