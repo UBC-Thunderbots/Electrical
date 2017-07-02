@@ -155,7 +155,6 @@
 		<default value="YEL" part="160-1170-1-ND" />
 		<default value="DIODESCH" part="NSR0240HT1GOSCT-ND" />
 		<default value="15A" part="486-1688-1-ND" />
-		<default value="5A" part="F1460CT-ND" />
 		<default value="5mm" part="952-1496-ND" />
 		<default value="16mm" part="952-1507-ND" />
 		<default value="CONN_10" part="114-00841-68-1-ND" />
