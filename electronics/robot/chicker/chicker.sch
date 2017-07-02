@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:thunderbots-symbols
+LIBS:chicker-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -352,7 +353,7 @@ F 0 "F1" H 8300 1050 40  0000 C CNN
 F 1 "5A" H 8100 950 40  0000 C CNN
 F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 8200 1000 60  0001 C CNN
 F 3 "" H 8200 1000 60  0001 C CNN
-F 4 "F1460CT-ND" H 8200 1000 60  0001 C CNN "Digi-Key Part"
+F 4 "F3539CT-ND" H 8200 1000 60  0001 C CNN "Digi-Key Part"
 	1    8200 1000
 	1    0    0    -1  
 $EndComp
