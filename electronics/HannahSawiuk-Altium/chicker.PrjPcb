@@ -56,23 +56,6 @@ GenerateClassCluster=0
 DocumentUniqueId=RGFOKBST
 
 [Document2]
-DocumentPath=Component libraries\Imported TIP147\Imported TIP147.lia\TIP147.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=KJNDYCHQ
-
-[Document3]
 DocumentPath=Component libraries\Imported FDA69N25\Imported FDA69N25.lia\FDA69N25.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -89,7 +72,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HXGYBTYN
 
-[Document4]
+[Document3]
 DocumentPath=Component libraries\Imported F1206B3R00FWTR\Imported F1206B3R00FWTR.lia\F1206B3R00FWTR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -106,7 +89,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XFUBYGRT
 
-[Document5]
+[Document4]
 DocumentPath=Component libraries\Imported R0805.lia\Imported ERA-6AEB102V.lia\ERA-6AEB102V.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -123,7 +106,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HNBDGHIW
 
-[Document6]
+[Document5]
 DocumentPath=Component libraries\Imported IM03DGR.lia\IM03DGR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -140,7 +123,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HEEMRRDJ
 
-[Document7]
+[Document6]
 DocumentPath=Component libraries\Imported IRFP240\Imported IRFP240.lia\IRFP240.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -157,7 +140,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SLDPBMWN
 
-[Document8]
+[Document7]
 DocumentPath=Component libraries\LIB_STB45N65M5\STB45N65M5\Altium\Imported PADS Libraries.PrjPcb\STB45N65M5.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +157,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NEHXMRTK
 
-[Document9]
+[Document8]
 DocumentPath=Component libraries\Imported CL31A226KOCLFNC\Imported CL31A226KOCLFNC.lia\CL31A226KOCLFNC.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -191,7 +174,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JTOMSWBH
 
-[Document10]
+[Document9]
 DocumentPath=Component libraries\Imported ECA-1HM101\Imported ECA-1HM101.lia\ECA-1HM101.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -208,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AWAEAPXF
 
-[Document11]
+[Document10]
 DocumentPath=Component libraries\Imported WL-SMRW\Imported WL-SMRW.lia\WL-SMRW.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -225,7 +208,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JXSQSOEM
 
-[Document12]
+[Document11]
 DocumentPath=Component libraries\RC0805FR-072K2L\Imported RC0805FR-072K2L.lia\RC0805FR-072K2L.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -242,7 +225,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BDXLEOXA
 
-[Document13]
+[Document12]
 DocumentPath=Component libraries\LIB_NSR0240HT1G\NSR0240HT1G\Altium\Imported (1) PADS Libraries.PrjPcb\NSR0240HT1G.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -259,7 +242,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SCJRUGOS
 
-[Document14]
+[Document13]
 DocumentPath=Component libraries\Imported TN2540-600G-TR\Imported TN2540-600G-TR.lia\TN2540-600G-TR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -276,7 +259,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HFUDDMYA
 
-[Document15]
+[Document14]
 DocumentPath=Component libraries\Imported TIP147\Imported TIP147.lia\TIP147.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -293,7 +276,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SUWGVCSB
 
-[Document16]
+[Document15]
 DocumentPath=Component libraries\Imported F1206B3R00FWTR\Imported F1206B3R00FWTR.lia\F1206B3R00FWTR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -310,7 +293,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DUGHCWUQ
 
-[Document17]
+[Document16]
 DocumentPath=Component libraries\Imported R0805.lia\Imported ERA-6AEB102V.lia\ERA-6AEB102V.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -327,7 +310,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YORNHVYU
 
-[Document18]
+[Document17]
 DocumentPath=Component libraries\Imported TO254P1515X470-3N.lia\TO254P1515X470-3N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -344,7 +327,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XTIUFNIK
 
-[Document19]
+[Document18]
 DocumentPath=Component libraries\Imported IM03DGR.lia\IM03DGR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -361,7 +344,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QOCDLTXM
 
-[Document20]
+[Document19]
 DocumentPath=Component libraries\Imported 1206-C.lia\1206-C.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -378,7 +361,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ATHJDVRU
 
-[Document21]
+[Document20]
 DocumentPath=Component libraries\Imported 1206.lia\1206.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -395,7 +378,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EWNEQNOG
 
-[Document22]
+[Document21]
 DocumentPath=Component libraries\Imported TO254P1515X470-3N.lia\Imported TO254P1515X470-3N.lia\TO254P1515X470-3N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -412,7 +395,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CTBEEQWB
 
-[Document23]
+[Document22]
 DocumentPath=Component libraries\LIB_STB45N65M5\STB45N65M5\Altium\Imported PADS Libraries.PrjPcb\TO254P1542X460-3N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -429,7 +412,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BDJWWGKW
 
-[Document24]
+[Document23]
 DocumentPath=Component libraries\Imported CL31A226KOCLFNC\Imported CL31A226KOCLFNC.lia\CL31A226KOCLFNC.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -446,7 +429,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LEKRRAER
 
-[Document25]
+[Document24]
 DocumentPath=Component libraries\Imported ECA-1HM101\Imported ECA-1HM101.lia\ECA-1HM101.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -463,7 +446,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TOVDSLNF
 
-[Document26]
+[Document25]
 DocumentPath=Component libraries\Imported IRFP240\Imported IRFP240.lia\IRFP240.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -480,7 +463,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WMOCQANG
 
-[Document27]
+[Document26]
 DocumentPath=Component libraries\Imported WL-SMRW\Imported WL-SMRW.lia\WL-SMRW.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -497,7 +480,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UBIQMYQV
 
-[Document28]
+[Document27]
 DocumentPath=Component libraries\LIB_NSR0240HT1G\NSR0240HT1G\Altium\Imported (1) PADS Libraries.PrjPcb\SOD2512X110N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -514,7 +497,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ECUEKQQF
 
-[Document29]
+[Document28]
 DocumentPath=Component libraries\LIB_MIC5020YM\Altium\Imported (1) PADS Libraries.PrjPcb\MIC5020YM.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -531,7 +514,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HFWTMFHX
 
-[Document30]
+[Document29]
 DocumentPath=Component libraries\RC0805FR-072K2L\Imported RC0805FR-072K2L.lia\RC0805FR-072K2L.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -548,7 +531,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AGTVSUSB
 
-[Document31]
+[Document30]
 DocumentPath=Component libraries\Imported FDA69N25\Imported FDA69N25.lia\FDA69N25.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -565,7 +548,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SWMOAEFU
 
-[Document32]
+[Document31]
 DocumentPath=Component libraries\LIB_MIC5020YM\Altium\Imported (1) PADS Libraries.PrjPcb\SOIC127P600X188-8N.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -582,7 +565,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BRDYNYJW
 
-[Document33]
+[Document32]
 DocumentPath=Component libraries\Imported TO-247.lia\TO-247.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -599,7 +582,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IXSFUAWH
 
-[Document34]
+[Document33]
 DocumentPath=Component libraries\Imported PF2203-2KF1\MUR840.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -616,7 +599,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DGAFJYCA
 
-[Document35]
+[Document34]
 DocumentPath=Schematic and PCB libraries\chicker.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1005,6 +988,8 @@ OutputDocumentPath1=
 OutputVariantName1=[No Variations]
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+Configuration1_Name1=ColumnNameFormat
+Configuration1_Item1=CaptionAsName
 OutputType2=ComponentCrossReference
 OutputName2=Component Cross Reference Report
 OutputDocumentPath2=
