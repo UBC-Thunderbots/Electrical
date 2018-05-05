@@ -1,0 +1,28 @@
+PCAD Importer Log
+Project : TN2540-600G-TR.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported TN2540-600G-TR\TN2540-600G-TR.lia
+    Section : PCB Library - TN2540-600G-TR.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token TN2540-600G-TR On Line 134
+            Warning - 1 : Skipping Token attachedSymbol On Line 196
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - TN2540-600G-TR.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token multiLayer On Line 96
+            Warning - 1 : Skipping Token layerContents On Line 101
+            Warning - 1 : Skipping Token layerContents On Line 118
+            Warning - 1 : Skipping Token layerContents On Line 124
+        EndSection
+
+        Section : Generating SCH Library - TN2540-600G-TR.SchLib
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,26 @@
+PCAD Importer Log
+Project : RC0805FR-072K2L.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\RC0805FR-072K2L\RC0805FR-072K2L.lia
+    Section : PCB Library - RC0805FR-072K2L.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token RESH On Line 108
+            Warning - 1 : Skipping Token attachedSymbol On Line 158
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - RC0805FR-072K2L.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+            Warning - 1 : Skipping Token layerContents On Line 92
+        EndSection
+
+        Section : Generating SCH Library - RC0805FR-072K2L.SchLib
+        EndSection
+    EndSection
+EndSection

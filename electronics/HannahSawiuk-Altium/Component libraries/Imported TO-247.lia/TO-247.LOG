@@ -1,0 +1,16 @@
+PCAD Importer Log
+Project : TO-247.LibPkg
+
+Section : C:\Users\kurti\Desktop\TO-247.lia
+    Section : PCB Library - TO-247.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 90
+            Warning - 1 : Skipping Token isVisible On Line 91
+            Warning - 1 : Skipping Token isVisible On Line 92
+            Warning - 1 : Skipping Token isVisible On Line 93
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+EndSection

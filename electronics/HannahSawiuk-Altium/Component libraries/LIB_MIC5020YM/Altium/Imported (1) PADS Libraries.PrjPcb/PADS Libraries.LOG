@@ -1,0 +1,26 @@
+Importer Log Report
+Project : PADS Libraries.PrjPcb
+
+Section : Library - C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\LIB_MIC5020YM\Altium\SOIC127P600X188-8N.d
+    Section : Load Messages
+    EndSection
+
+    Section : Import Messages
+        Warning : WARNING: PADS Layer [L1-Top Layer] mapped to Protel layer: L0 (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L27-Assembly Drawing Top] mapped to Protel layer: L15 (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L30-Assembly Drawing Bottom] mapped to Protel layer: L16 (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L121-Solder Mask Top] mapped to Protel layer: L21-Solder Mask Top (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L122-Paste Mask Bottom] mapped to Protel layer: L22-Paste Mask Bottom (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L123-Paste Mask Top] mapped to Protel layer: L23-Paste Mask Top (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L124-Drill Drawing] mapped to Protel layer: L24-Drill Drawing (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L125] mapped to Protel layer: L25 (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L126-Silk Screen Top] mapped to Protel layer: L26-Silk Screen Top (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L127-Assembly Drawing Top] mapped to Protel layer: L15 (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L128-Solder Mask Bottom] mapped to Protel layer: L28-Solder Mask Bottom (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L129-Silk Bottom] mapped to Protel layer: L29-Silk Bottom (Multiple PADS layers...)
+        Warning : WARNING: PADS Layer [L130-Assembly Drawing Bottom] mapped to Protel layer: L16 (Multiple PADS layers...)
+    EndSection
+EndSection
+
+Section : Library - C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\LIB_MIC5020YM\Altium\MIC5020YM.p
+EndSection

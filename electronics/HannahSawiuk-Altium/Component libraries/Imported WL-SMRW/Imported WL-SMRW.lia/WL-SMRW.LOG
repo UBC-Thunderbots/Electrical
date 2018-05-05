@@ -1,0 +1,49 @@
+PCAD Importer Log
+Project : WL-SMRW.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported WL-SMRW\WL-SMRW.lia
+    Section : PCB Library - WL-SMRW.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 217
+            Warning - 1 : Skipping Token isVisible On Line 280
+            Warning - 1 : Skipping Token LED On Line 317
+            Warning - 1 : Skipping Token attachedSymbol On Line 376
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - WL-SMRW.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token padStyleDef On Line 33
+            Warning - 1 : Skipping Token padStyleDef On Line 44
+            Warning - 1 : Skipping Token padStyleDef On Line 56
+            Warning - 1 : Skipping Token padStyleDef On Line 68
+            Warning - 1 : Skipping Token padStyleDef On Line 79
+            Warning - 1 : Skipping Token padStyleDef On Line 91
+            Warning - 1 : Skipping Token multiLayer On Line 165
+            Warning - 1 : Skipping Token layerContents On Line 169
+            Warning - 1 : Skipping Token layerContents On Line 183
+            Warning - 1 : Skipping Token multiLayer On Line 197
+            Warning - 1 : Skipping Token layerContents On Line 202
+            Warning - 1 : Skipping Token layerContents On Line 216
+            Warning - 1 : Skipping Token multiLayer On Line 228
+            Warning - 1 : Skipping Token layerContents On Line 232
+            Warning - 1 : Skipping Token layerContents On Line 246
+            Warning - 1 : Skipping Token multiLayer On Line 260
+            Warning - 1 : Skipping Token layerContents On Line 265
+            Warning - 1 : Skipping Token layerContents On Line 279
+            Warning - 1 : Skipping Token multiLayer On Line 291
+            Warning - 1 : Skipping Token layerContents On Line 296
+            Warning - 1 : Skipping Token layerContents On Line 308
+            Warning - 1 : Skipping Token isVisible On Line 353
+            Warning - 1 : Skipping Token isVisible On Line 354
+        EndSection
+
+        Section : Generating SCH Library - WL-SMRW.SchLib
+        EndSection
+    EndSection
+EndSection

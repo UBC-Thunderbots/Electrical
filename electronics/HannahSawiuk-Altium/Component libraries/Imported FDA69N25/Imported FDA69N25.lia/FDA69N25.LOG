@@ -1,0 +1,34 @@
+PCAD Importer Log
+Project : FDA69N25.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported FDA69N25\FDA69N25.lia
+    Section : PCB Library - FDA69N25.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 90
+            Warning - 1 : Skipping Token isVisible On Line 91
+            Warning - 1 : Skipping Token isVisible On Line 92
+            Warning - 1 : Skipping Token EMOS-ND On Line 110
+            Warning - 1 : Skipping Token attachedSymbol On Line 212
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [TO-3PN_V][Primary] associated with PCAD Component [FDA69N25] has been renamed to PCB FootPrint [TO-3PN_V_FDA69N25(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - FDA69N25.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 89
+            Warning - 1 : Skipping Token layerContents On Line 96
+            Warning - 1 : Skipping Token isVisible On Line 153
+            Warning - 1 : Skipping Token isVisible On Line 154
+            Warning - 1 : Skipping Token isVisible On Line 155
+        EndSection
+
+        Section : Generating SCH Library - FDA69N25.SchLib
+            Warning - 0 : PCAD Pattern Graphics [TO-3PN_V][Primary] associated with PCAD Component [FDA69N25] has been renamed to PCB FootPrint [TO-3PN_V_FDA69N25(Primary)].
+        EndSection
+    EndSection
+EndSection

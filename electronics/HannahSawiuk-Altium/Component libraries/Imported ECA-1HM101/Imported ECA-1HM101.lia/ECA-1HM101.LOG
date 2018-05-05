@@ -1,0 +1,30 @@
+PCAD Importer Log
+Project : ECA-1HM101.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported ECA-1HM101\ECA-1HM101.lia
+    Section : PCB Library - ECA-1HM101.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token ECA-1HM101 On Line 164
+            Warning - 1 : Skipping Token attachedSymbol On Line 212
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [CAPPRD350W60D800H1150B][Primary] associated with PCAD Component [ECA-1HM101] has been renamed to PCB FootPrint [CAPPRD350W60D800H1150B_ECA-1HM101(Primary)].
+            Warning : Default polygonal pad shape for signal layers has been made multilayer
+        EndSection
+    EndSection
+
+    Section : SCH Library - ECA-1HM101.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 71
+            Warning - 1 : Skipping Token multiLayer On Line 146
+            Warning - 1 : Skipping Token layerContents On Line 150
+            Warning - 1 : Skipping Token layerContents On Line 158
+        EndSection
+
+        Section : Generating SCH Library - ECA-1HM101.SchLib
+            Warning - 0 : PCAD Pattern Graphics [CAPPRD350W60D800H1150B][Primary] associated with PCAD Component [ECA-1HM101] has been renamed to PCB FootPrint [CAPPRD350W60D800H1150B_ECA-1HM101(Primary)].
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,108 @@
+Added Component: Designator=?(GULLWINGS)
+Added Component: Designator=C1(C1206)
+Added Component: Designator=C5(C1206)
+Added Component: Designator=C6(C0805)
+Added Component: Designator=C7(C1206)
+Added Component: Designator=C8(C0805)
+Added Component: Designator=C9(C0805)
+Added Component: Designator=C11(C0805)
+Added Component: Designator=D3(TO-247)
+Added Component: Designator=P1(HDR2X6_CEN)
+Added Component: Designator=P2(HDR1X2H)
+Added Component: Designator=P3(HDR1X2H)
+Added Component: Designator=Q1(TO-247)
+Added Component: Designator=Q2(TO-247)
+Added Component: Designator=R1(J1-0603)
+Added Component: Designator=R2(J1-0603)
+Added Component: Designator=R3(J1-0603)
+Added Component: Designator=R4(J1-0603)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R7(J1-0603)
+Added Component: Designator=R10(J1-0603)
+Added Component: Designator=R11(J1-0603)
+Added Component: Designator=R12(J1-0603)
+Added Component: Designator=R13(J1-0603)
+Added Pin To Net: NetName=+BATT Pin=C1-2
+Added Pin To Net: NetName=+BATT Pin=C5-1
+Added Pin To Net: NetName=+BATT Pin=C7-1
+Added Pin To Net: NetName=+BATT Pin=R3-2
+Added Net: Name=+BATT
+Added Pin To Net: NetName=BATT+ Pin=C6-1
+Added Net: Name=BATT+
+Added Pin To Net: NetName=GND Pin=?-3
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Pin To Net: NetName=GND Pin=P1-8
+Added Pin To Net: NetName=GND Pin=P1-11
+Added Pin To Net: NetName=GND Pin=Q1-3
+Added Pin To Net: NetName=GND Pin=Q2-3
+Added Pin To Net: NetName=GND Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R13-1
+Added Net: Name=GND
+Added Pin To Net: NetName=Net1_11 Pin=?-4
+Added Pin To Net: NetName=Net1_11 Pin=P1-12
+Added Net: Name=Net1_11
+Added Pin To Net: NetName=Net?_1 Pin=?-1
+Added Pin To Net: NetName=Net?_1 Pin=?-2
+Added Net: Name=Net?_1
+Added Pin To Net: NetName=Net?_5 Pin=?-5
+Added Pin To Net: NetName=Net?_5 Pin=?-7
+Added Pin To Net: NetName=Net?_5 Pin=R1-1
+Added Net: Name=Net?_5
+Added Pin To Net: NetName=Net?_6 Pin=?-6
+Added Pin To Net: NetName=Net?_6 Pin=?-8
+Added Pin To Net: NetName=Net?_6 Pin=R10-1
+Added Pin To Net: NetName=Net?_6 Pin=R11-2
+Added Net: Name=Net?_6
+Added Net: Name=NetB1_8
+Added Net: Name=NetB2_4
+Added Pin To Net: NetName=NetB3_2 Pin=R5-2
+Added Net: Name=NetB3_2
+Added Net: Name=NetB3_8
+Added Pin To Net: NetName=NetB?_2 Pin=R4-2
+Added Net: Name=NetB?_2
+Added Net: Name=NetB?_8
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Pin To Net: NetName=NetC8_1 Pin=C9-1
+Added Pin To Net: NetName=NetC8_1 Pin=C11-1
+Added Net: Name=NetC8_1
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=P2-2
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_2 Pin=P2-1
+Added Net: Name=NetD3_2
+Added Pin To Net: NetName=NetD3_3 Pin=D3-3
+Added Pin To Net: NetName=NetD3_3 Pin=P3-2
+Added Net: Name=NetD3_3
+Added Pin To Net: NetName=NetD5_13 Pin=R10-2
+Added Net: Name=NetD5_13
+Added Pin To Net: NetName=NetD5_14 Pin=R11-1
+Added Pin To Net: NetName=NetD5_14 Pin=R12-2
+Added Net: Name=NetD5_14
+Added Pin To Net: NetName=NetF1_9 Pin=P1-1
+Added Pin To Net: NetName=NetF1_9 Pin=P1-7
+Added Net: Name=NetF1_9
+Added Pin To Net: NetName=NetP1_6 Pin=P1-6
+Added Pin To Net: NetName=NetP1_6 Pin=R2-1
+Added Pin To Net: NetName=NetP1_6 Pin=R7-2
+Added Net: Name=NetP1_6
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=R7-1
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR12_1 Pin=R12-1
+Added Pin To Net: NetName=NetR12_1 Pin=R13-2
+Added Net: Name=NetR12_1
+Added Class: Name=new_chicker
+Added Room: Name=new_chicker

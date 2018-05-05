@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : F1206B3R00FWTR.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported F1206B3R00FWTR\F1206B3R00FWTR.lia
+    Section : PCB Library - F1206B3R00FWTR.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token F1206B3R00FWTR On Line 105
+            Warning - 1 : Skipping Token attachedSymbol On Line 150
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - F1206B3R00FWTR.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - F1206B3R00FWTR.SchLib
+        EndSection
+    EndSection
+EndSection

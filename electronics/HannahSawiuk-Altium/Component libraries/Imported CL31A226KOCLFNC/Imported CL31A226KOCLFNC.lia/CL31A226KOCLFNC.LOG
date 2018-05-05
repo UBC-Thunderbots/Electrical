@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : CL31A226KOCLFNC.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported CL31A226KOCLFNC\CL31A226KOCLFNC.lia
+    Section : PCB Library - CL31A226KOCLFNC.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token CL31A226KOCLFNC On Line 114
+            Warning - 1 : Skipping Token attachedSymbol On Line 169
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - CL31A226KOCLFNC.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - CL31A226KOCLFNC.SchLib
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : IM03DGR.LibPkg
+
+Section : C:\Users\kurti\Desktop\IM03DGR.lia
+    Section : PCB Library - IM03DGR.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token IMRELAY On Line 100
+            Warning - 1 : Skipping Token attachedSymbol On Line 206
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - IM03DGR.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 94
+        EndSection
+
+        Section : Generating SCH Library - IM03DGR.SchLib
+        EndSection
+    EndSection
+EndSection

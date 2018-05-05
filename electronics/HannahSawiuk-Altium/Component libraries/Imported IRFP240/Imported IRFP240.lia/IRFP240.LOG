@@ -1,0 +1,27 @@
+PCAD Importer Log
+Project : IRFP240.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported IRFP240\IRFP240.lia
+    Section : PCB Library - IRFP240.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token IRFP240 On Line 122
+            Warning - 1 : Skipping Token attachedSymbol On Line 218
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - IRFP240.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token multiLayer On Line 96
+            Warning - 1 : Skipping Token layerContents On Line 101
+            Warning - 1 : Skipping Token layerContents On Line 108
+        EndSection
+
+        Section : Generating SCH Library - IRFP240.SchLib
+        EndSection
+    EndSection
+EndSection

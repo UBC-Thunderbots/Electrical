@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : ERA-6AEB102V.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported R0805.lia\ERA-6AEB102V.lia
+    Section : PCB Library - ERA-6AEB102V.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token RESH On Line 106
+            Warning - 1 : Skipping Token attachedSymbol On Line 156
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - ERA-6AEB102V.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - ERA-6AEB102V.SchLib
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,30 @@
+PCAD Importer Log
+Project : TIP147.LibPkg
+
+Section : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\Component libraries\Imported TIP147\TIP147.lia
+    Section : PCB Library - TIP147.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 123
+            Warning - 1 : Skipping Token P-DAR On Line 191
+            Warning - 1 : Skipping Token attachedSymbol On Line 264
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [SOT93][Primary] associated with PCAD Component [TIP147] has been renamed to PCB FootPrint [SOT93_TIP147(Primary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - TIP147.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token padStyleDef On Line 21
+            Warning - 1 : Skipping Token multiLayer On Line 95
+            Warning - 1 : Skipping Token layerContents On Line 101
+            Warning - 1 : Skipping Token layerContents On Line 161
+        EndSection
+
+        Section : Generating SCH Library - TIP147.SchLib
+            Warning - 0 : PCAD Pattern Graphics [SOT93][Primary] associated with PCAD Component [TIP147] has been renamed to PCB FootPrint [SOT93_TIP147(Primary)].
+        EndSection
+    EndSection
+EndSection

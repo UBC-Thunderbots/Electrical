@@ -1,0 +1,26 @@
+PCAD Importer Log
+Project : 74HC4050D_653.LibPkg
+
+Section : C:\Users\kurti\Desktop\74HC4050D_653.lia
+    Section : PCB Library - 74HC4050D_653.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token 74HC4050D,653 On Line 186
+            Warning - 1 : Skipping Token attachedSymbol On Line 372
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 74HC4050D_653.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 102
+            Warning - 1 : Skipping Token layerContents On Line 109
+        EndSection
+
+        Section : Generating SCH Library - 74HC4050D_653.SchLib
+        EndSection
+    EndSection
+EndSection
