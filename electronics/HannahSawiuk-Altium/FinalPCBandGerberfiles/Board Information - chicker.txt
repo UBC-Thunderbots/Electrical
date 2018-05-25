@@ -1,0 +1,20 @@
+Board Information Report
+Filename     : C:\Users\Hannah\Desktop\Electrical\electronics\HannahSawiuk-Altium\FinalPCBandGerberfiles\chicker.PcbDoc
+Date         : 2018-05-23
+Time         : 10:28:25 PM
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 88.57%
+    Connections, 70
+    Connections routed, 62
+    Connections remaining, 8
+count : 4
+
+Net Track Width, Count
+    0.254mm, 18
+count : 1
+
+Net Via Size, Count
+    1.27mm, 18
+count : 1
