@@ -1,0 +1,4 @@
+Added Component: Designator=R8(CAPC2012X140N)
+Added Pin To Net: NetName=Net?_1 Pin=R8-1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Member To Class: ClassName=Dongle Member=Component R8 1k

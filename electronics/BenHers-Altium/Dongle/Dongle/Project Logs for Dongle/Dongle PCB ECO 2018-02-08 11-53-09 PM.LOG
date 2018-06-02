@@ -1,0 +1,4 @@
+Added Component: Designator=SW1(PCBComponent_1)
+Added Pin To Net: NetName=Net1k_2 Pin=SW1-1
+Added Pin To Net: NetName=3.3V Pin=SW1-3
+Added Member To Class: ClassName=Dongle Member=Component SW1 YELSW

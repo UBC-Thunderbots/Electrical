@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Dongle.PrjPcb]
+   Generated File[DongleCopy.TXT]
+   Generated File[DongleCopy.LDP]
+   Generated File[DongleCopy.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 12:20:34 PM On 2018-04-23

@@ -1,0 +1,44 @@
+Added Component: Designator=STM32Dongle(QFP50P1200X1200X160-64N)
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-1
+Added Pin To Net: NetName=Net8Mhz_1 Pin=STM32Dongle-5
+Added Pin To Net: NetName=Net8Mhz_2 Pin=STM32Dongle-6
+Added Pin To Net: NetName=NRST Pin=STM32Dongle-7
+Added Pin To Net: NetName=GND Pin=STM32Dongle-12
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-13
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-14
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-15
+Added Pin To Net: NetName=NetR8_2 Pin=STM32Dongle-16
+Added Pin To Net: NetName=GND Pin=STM32Dongle-17
+Added Pin To Net: NetName=GND Pin=STM32Dongle-18
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-19
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-20
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-21
+Added Pin To Net: NetName=NetR6_1 Pin=STM32Dongle-25
+Added Pin To Net: NetName=NetR5_1 Pin=STM32Dongle-26
+Added Pin To Net: NetName=NetConn_01X03_S1 Pin=STM32Dongle-27
+Added Pin To Net: NetName=GND Pin=STM32Dongle-28
+Added Pin To Net: NetName=NetC16_1 Pin=STM32Dongle-31
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-32
+Added Pin To Net: NetName=NetR3_1 Pin=STM32Dongle-33
+Added Pin To Net: NetName=NetR4_1 Pin=STM32Dongle-34
+Added Pin To Net: NetName=NetR2_1 Pin=STM32Dongle-35
+Added Pin To Net: NetName=NetP1_2 Pin=STM32Dongle-44
+Added Pin To Net: NetName=NetP1_3 Pin=STM32Dongle-45
+Added Pin To Net: NetName=SWDIO Pin=STM32Dongle-46
+Added Pin To Net: NetName=NetC23_1 Pin=STM32Dongle-47
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-48
+Added Pin To Net: NetName=SWCLK Pin=STM32Dongle-49
+Added Pin To Net: NetName=NetSTM32Dongle_50 Pin=STM32Dongle-50
+Added Pin To Net: NetName=NetSTM32Dongle_53 Pin=STM32Dongle-53
+Added Pin To Net: NetName=NetSTM32Dongle_55 Pin=STM32Dongle-55
+Added Pin To Net: NetName=NetSTM32Dongle_56 Pin=STM32Dongle-56
+Added Pin To Net: NetName=NetSTM32Dongle_57 Pin=STM32Dongle-57
+Added Pin To Net: NetName=NetSTM32Dongle_58 Pin=STM32Dongle-58
+Added Pin To Net: NetName=NetSTM32Dongle_59 Pin=STM32Dongle-59
+Added Pin To Net: NetName=NetR9_2 Pin=STM32Dongle-60
+Added Pin To Net: NetName=GND Pin=STM32Dongle-61
+Added Pin To Net: NetName=GND Pin=STM32Dongle-62
+Added Pin To Net: NetName=GND Pin=STM32Dongle-63
+Added Pin To Net: NetName=3.3V Pin=STM32Dongle-64
+Added Member To Class: ClassName=Dongle Member=Component STM32Dongle U?
+Added Room: Name=Dongle

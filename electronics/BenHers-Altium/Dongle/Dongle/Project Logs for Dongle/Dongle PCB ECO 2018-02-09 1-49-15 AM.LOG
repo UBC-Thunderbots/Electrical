@@ -1,0 +1,10 @@
+Added Component: Designator=Q1(SOT23-3)
+Added Pin To Net: NetName=GND Pin=Q1-2
+Added Pin To Net: NetName=NetDSchottky_3 Pin=DSchottky-3
+Added Pin To Net: NetName=NetDSchottky_3 Pin=Q1-3
+Added Pin To Net: NetName=NetDSchottky_3 Pin=Speaker-2
+Added Net: Name=NetDSchottky_3
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=R8-1
+Added Net: Name=NetQ1_1
+Added Member To Class: ClassName=Dongle Member=Component Q1 BC846A-7-F

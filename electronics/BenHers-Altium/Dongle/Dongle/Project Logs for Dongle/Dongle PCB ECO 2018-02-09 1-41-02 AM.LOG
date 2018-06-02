@@ -1,0 +1,4 @@
+Added Component: Designator=DSchottky(SOT65P210X110-3N)
+Added Pin To Net: NetName=3.3V Pin=DSchottky-1
+Added Pin To Net: NetName=Net?_3 Pin=DSchottky-3
+Added Member To Class: ClassName=Dongle Member=Component DSchottky D4

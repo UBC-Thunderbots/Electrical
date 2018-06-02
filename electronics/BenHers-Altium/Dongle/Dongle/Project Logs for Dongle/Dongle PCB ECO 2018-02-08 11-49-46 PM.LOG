@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetConn_01X03_R3 Pin=Conn_01X03-R3
+Removed Pin From Net: NetName=NetConn_01X03_S1 Pin=Conn_01X03-S1
+Removed Pin From Net: NetName=NetConn_01X03_T2 Pin=Conn_01X03-T2
+Added Component: Designator=Conn_01X03(PCBComponent_1)
+Added Pin To Net: NetName=NetConn_01X03_R3 Pin=Conn_01X03-R3
+Added Pin To Net: NetName=NetConn_01X03_S1 Pin=Conn_01X03-S1
+Added Pin To Net: NetName=NetConn_01X03_T2 Pin=Conn_01X03-T2

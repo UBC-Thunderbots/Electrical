@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: DongleCopy.PcbDoc   2018-04-23  12:20:34 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : DongleCopy.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      28mil (0.711mm)                                           Round             43        PTH        9.26inch (235.28mm)
+T2      30mil (0.762mm)                                           Round             10        PTH        2.47inch (62.80mm)
+T3      35mil (0.9mm)                                             Round             6         PTH        0.50inch (12.70mm)
+T4      36mil (0.92mm)                                            Round             4         PTH        0.26inch (6.50mm)
+T5      39mil (1mm)                                               Round             1         PTH        0.00inch (0.00mm)
+T6      48mil (1.22mm)                                            Round             3         PTH        0.57inch (14.36mm)
+T7      91mil (2.3mm)                                             Round             2         PTH        0.47inch (12.06mm)
+T8      125mil (3.175mm)                                          Round             1         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              70
+
+Total Processing Time (hh:mm:ss) : 00:00:00

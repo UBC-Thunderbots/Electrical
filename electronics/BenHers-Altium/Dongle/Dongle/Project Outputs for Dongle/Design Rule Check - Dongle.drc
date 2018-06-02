@@ -1,0 +1,361 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Ben\Documents\Thundebots\Dongle\Dongle\Dongle.PcbDoc
+Date     : 2018-02-12
+Time     : 12:16:58 AM
+
+Processing Rule : Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle'))
+   Violation between Room Definition: Between Component P1-USB_B (43.18mm,30.226mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component 8Mhz-X1 (55.118mm,61.976mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C3-100nF (78.74mm,35.433mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C7-15pF (59.817mm,57.785mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C8-Cap Pol3 (48.78mm,57.658mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C12-1uF (32.512mm,52.705mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C13-1uF (44.069mm,61.595mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C14-10nF (44.069mm,59.182mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C15-100nf (53.34mm,57.658mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C16-Cap Pol3 (34.544mm,47.752mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C17-100nF (34.544mm,45.847mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C18-4.7uF (34.533mm,44.069mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C19-4.7uF (64.135mm,61.849mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C20-100nF (66.167mm,61.773mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C21-100nF (36.068mm,51.435mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C22-100nF (56.337mm,43.688mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C23-Cap Pol3 (54.114mm,41.656mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between Component Conn_01X03-K1 (26.289mm,25.527mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component D1-LED2 (41.148mm,29.21mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component D2-LED2 (43.942mm,29.182mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component D3-LED2 (46.863mm,29.111mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SIP Component P2-Header 6 (78.105mm,31.877mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R2-100R (46.863mm,36.576mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R3-100R (41.021mm,36.703mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R4-100R (43.942mm,36.703mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R5-100ohm (30.353mm,42.037mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R6-100ohm (27.305mm,44.196mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R7-2.2kr (34.493mm,41.275mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R8-1k (38.862mm,54.102mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between Component SW1-YELSW (43.688mm,44.196mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SOIC Component U4-LD1117D33TR (71.628mm,31.115mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SOIC Component U5-MRF24J40MDT-I/RM (75.565mm,51.562mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between Small Component Speaker-Speaker (36.703mm,59.69mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component DSchottky-D4 (27.178mm,52.197mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component Q1-BC846A-7-F (29.511mm,47.971mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component R9-1k (64.77mm,57.531mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C11-1uF (79.407mm,28.194mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+   Violation between Room Definition: Between SMT Small Component C1-Cap Pol3 (67.437mm,31.242mm) on Top Layer And Room Dongle (Bounding Region = (181.134mm, 28.027mm, 377.857mm, 64.73mm) (InComponentClass('Dongle')) 
+Rule Violations :38
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+   Violation between Net Antennae: Track (52.857mm,47.65mm)(56.286mm,47.65mm) on Top Layer 
+   Violation between Net Antennae: Track (56.388mm,47.752mm)(58.253mm,47.752mm) on Bottom Layer 
+Rule Violations :2
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "Q1" (27.657mm,50.892mm) on Top Overlay And Arc (28.253mm,50.722mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C8" (47.573mm,59.271mm) on Top Overlay And Track (49.418mm,59.626mm)(49.418mm,60.576mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C15" (52.222mm,59.233mm) on Top Overlay And Track (49.418mm,59.626mm)(60.818mm,59.626mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C7" (58.611mm,59.398mm) on Top Overlay And Track (49.418mm,59.626mm)(60.818mm,59.626mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C8" (47.573mm,59.271mm) on Top Overlay And Track (49.418mm,59.626mm)(60.818mm,59.626mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C7" (58.611mm,59.398mm) on Top Overlay And Track (60.818mm,59.626mm)(60.818mm,60.576mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C11" (76.016mm,29.832mm) on Top Overlay And Track (76.835mm,30.607mm)(92.075mm,30.607mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C11" (76.016mm,29.832mm) on Top Overlay And Track (76.835mm,30.607mm)(76.835mm,33.147mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "Q1" (27.657mm,50.892mm) on Top Overlay And Track (26.503mm,51.097mm)(27.503mm,51.097mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (0.193mm < 0.254mm) Between Text "R5" (29.591mm,44.653mm) on Top Overlay And Track (30.361mm,46.571mm)(30.361mm,46.771mm) on Top Overlay Silk Text to Silk Clearance [0.193mm]
+   Violation between Silk To Silk Clearance Constraint: (0.03mm < 0.254mm) Between Text "R6" (26.543mm,46.802mm) on Top Overlay And Track (28.761mm,46.571mm)(30.361mm,46.571mm) on Top Overlay Silk Text to Silk Clearance [0.03mm]
+   Violation between Silk To Silk Clearance Constraint: (0.193mm < 0.254mm) Between Text "R5" (29.591mm,44.653mm) on Top Overlay And Track (28.761mm,46.571mm)(30.361mm,46.571mm) on Top Overlay Silk Text to Silk Clearance [0.193mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "R6" (26.543mm,46.802mm) on Top Overlay And Track (28.761mm,46.571mm)(28.761mm,47.721mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (0.181mm < 0.254mm) Between Text "C15" (52.222mm,59.233mm) on Top Overlay And Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay Silk Text to Silk Clearance [0.181mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "R8" (38.278mm,56.439mm) on Top Overlay And Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (0.148mm < 0.254mm) Between Text "C8" (47.573mm,59.271mm) on Top Overlay And Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay Silk Text to Silk Clearance [0.148mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "SW1" (55.893mm,56.502mm) on Top Overlay And Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "DSchottky" (25.679mm,54.839mm) on Top Overlay And Text "C12" (29.121mm,54.343mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (0.132mm < 0.254mm) Between Text "C17" (33.426mm,47.422mm) on Top Overlay And Text "C16" (33.35mm,49.352mm) on Top Overlay Silk Text to Silk Clearance [0.132mm]
+   Violation between Silk To Silk Clearance Constraint: (0.03mm < 0.254mm) Between Text "C18" (33.238mm,45.593mm) on Top Overlay And Text "C17" (33.426mm,47.422mm) on Top Overlay Silk Text to Silk Clearance [0.03mm]
+   Violation between Silk To Silk Clearance Constraint: (0.095mm < 0.254mm) Between Text "U5" (67.793mm,65.1mm) on Top Overlay And Text "C19" (63.614mm,64.148mm) on Top Overlay Silk Text to Silk Clearance [0.095mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "C20" (65.596mm,63.919mm) on Top Overlay And Text "C19" (63.614mm,64.148mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "U5" (67.793mm,65.1mm) on Top Overlay And Text "C20" (65.596mm,63.919mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "DSchottky" (25.679mm,54.839mm) on Top Overlay And Text "C21" (35.509mm,53.569mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (0.21mm < 0.254mm) Between Text "C23" (52.907mm,43.256mm) on Top Overlay And Text "C22" (55.22mm,45.263mm) on Top Overlay Silk Text to Silk Clearance [0.21mm]
+   Violation between Silk To Silk Clearance Constraint: (Collision < 0.254mm) Between Text "R3" (40.259mm,39.319mm) on Top Overlay And Text "Conn_01X03" (26.416mm,40.513mm) on Top Overlay Silk Text to Silk Clearance [0mm]
+   Violation between Silk To Silk Clearance Constraint: (0.107mm < 0.254mm) Between Text "D3" (45.872mm,32.87mm) on Top Overlay And Text "D2" (42.951mm,32.944mm) on Top Overlay Silk Text to Silk Clearance [0.107mm]
+   Violation between Silk To Silk Clearance Constraint: (0.107mm < 0.254mm) Between Text "R4" (43.18mm,39.319mm) on Top Overlay And Text "R2" (46.101mm,39.192mm) on Top Overlay Silk Text to Silk Clearance [0.107mm]
+   Violation between Silk To Silk Clearance Constraint: (0.107mm < 0.254mm) Between Text "R4" (43.18mm,39.319mm) on Top Overlay And Text "R3" (40.259mm,39.319mm) on Top Overlay Silk Text to Silk Clearance [0.107mm]
+Rule Violations :29
+
+Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.248mm,53.619mm)(52.248mm,54.407mm) on Top Overlay And Pad STM32Dongle-64(52.857mm,53.162mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.248mm,44.399mm)(52.248mm,45.187mm) on Top Overlay And Pad STM32Dongle-49(52.857mm,45.644mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.46mm,44.399mm)(52.248mm,44.399mm) on Top Overlay And Pad STM32Dongle-48(51.003mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.14mm < 0.254mm) Between Text "P1" (49.035mm,41.262mm) on Top Overlay And Pad STM32Dongle-48(51.003mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.14mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.188mm < 0.254mm) Between Text "P1" (49.035mm,41.262mm) on Top Overlay And Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.188mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.139mm < 0.254mm) Between Text "P1" (49.035mm,41.262mm) on Top Overlay And Pad STM32Dongle-46(49.987mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.139mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.13mm < 0.254mm) Between Text "P1" (49.035mm,41.262mm) on Top Overlay And Pad STM32Dongle-45(49.505mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.13mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.13mm < 0.254mm) Between Text "P1" (49.035mm,41.262mm) on Top Overlay And Pad STM32Dongle-44(48.997mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.13mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (42.24mm,44.399mm)(43.028mm,44.399mm) on Top Overlay And Pad STM32Dongle-33(43.485mm,43.79mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (42.24mm,44.399mm)(42.24mm,45.187mm) on Top Overlay And Pad STM32Dongle-32(41.631mm,45.644mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (42.24mm,53.619mm)(42.24mm,54.407mm) on Top Overlay And Pad STM32Dongle-17(41.631mm,53.162mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (42.24mm,54.407mm)(43.028mm,54.407mm) on Top Overlay And Pad STM32Dongle-16(43.485mm,55.016mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.46mm,54.407mm)(52.248mm,54.407mm) on Top Overlay And Pad STM32Dongle-1(51.003mm,55.016mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.241mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Conn_01X03" (26.416mm,40.513mm) on Top Overlay And Pad R7-1(33.553mm,41.275mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Conn_01X03" (26.416mm,40.513mm) on Top Overlay And Pad R7-2(35.433mm,41.275mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Conn_01X03" (26.416mm,40.513mm) on Top Overlay And Pad R5-2(30.353mm,41.087mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C16" (33.35mm,49.352mm) on Top Overlay And Pad C21-2(36.068mm,50.622mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "R7" (33.185mm,42.837mm) on Top Overlay And Pad C18-P2(35.433mm,44.069mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "R7" (33.185mm,42.837mm) on Top Overlay And Pad C18-P1(33.633mm,44.069mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C18" (33.238mm,45.593mm) on Top Overlay And Pad C16-1(33.794mm,47.752mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C17" (33.426mm,47.422mm) on Top Overlay And Pad C16-1(33.794mm,47.752mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C18" (33.238mm,45.593mm) on Top Overlay And Pad C16-2(35.294mm,47.752mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C17" (33.426mm,47.422mm) on Top Overlay And Pad C16-2(35.294mm,47.752mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C21" (35.509mm,53.569mm) on Top Overlay And Pad R8-1(38.862mm,53.188mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C21" (35.509mm,53.569mm) on Top Overlay And Pad R8-2(38.862mm,55.016mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "DSchottky" (25.679mm,54.839mm) on Top Overlay And Pad R8-2(38.862mm,55.016mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C18" (33.238mm,45.593mm) on Top Overlay And Pad C17-2(35.357mm,45.847mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C18" (33.238mm,45.593mm) on Top Overlay And Pad C17-1(33.731mm,45.847mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay And Pad C14-2(45.019mm,59.182mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay And Pad C14-1(43.119mm,59.182mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C14" (42.431mm,60.947mm) on Top Overlay And Pad C13-2(45.244mm,61.595mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C14" (42.431mm,60.947mm) on Top Overlay And Pad C13-1(42.894mm,61.595mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay And Pad C8-1(48.03mm,57.658mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay And Pad C8-2(49.53mm,57.658mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.032mm < 0.254mm) Between Text "C15" (52.222mm,59.233mm) on Top Overlay And Pad 8Mhz-2(50.368mm,61.976mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.032mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C8" (47.573mm,59.271mm) on Top Overlay And Pad 8Mhz-2(50.368mm,61.976mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C7" (58.611mm,59.398mm) on Top Overlay And Pad 8Mhz-1(59.868mm,61.976mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C23" (52.907mm,43.256mm) on Top Overlay And Pad C22-2(55.524mm,43.688mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C23" (52.907mm,43.256mm) on Top Overlay And Pad C22-1(57.15mm,43.688mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "SW1" (55.893mm,56.502mm) on Top Overlay And Pad C7-1(59.067mm,57.785mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay And Pad C15-2(54.153mm,57.658mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "STM32Dongle" (40.818mm,57.353mm) on Top Overlay And Pad C15-1(52.527mm,57.658mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "R9" (63.449mm,59.131mm) on Top Overlay And Pad C20-1(66.167mm,60.96mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "P2" (76.987mm,34.011mm) on Top Overlay And Pad C3-2(79.553mm,35.433mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "P2" (76.987mm,34.011mm) on Top Overlay And Pad C3-1(77.927mm,35.433mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "R9" (63.449mm,59.131mm) on Top Overlay And Pad C19-P1(64.135mm,60.949mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.245mm < 0.254mm) Between Track (69.139mm,30.81mm)(69.139mm,32.283mm) on Top Overlay And Pad U4-8(69.723mm,33.477mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.245mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.245mm < 0.254mm) Between Track (74.117mm,29.947mm)(74.117mm,32.283mm) on Top Overlay And Pad U4-5(73.533mm,33.477mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.245mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.245mm < 0.254mm) Between Track (74.117mm,29.947mm)(74.117mm,32.283mm) on Top Overlay And Pad U4-4(73.533mm,28.753mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.245mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.245mm < 0.254mm) Between Track (69.139mm,29.947mm)(69.139mm,30.81mm) on Top Overlay And Pad U4-1(69.723mm,28.753mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.245mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.191mm < 0.254mm) Between Track (67.945mm,40.132mm)(67.945mm,62.992mm) on Top Overlay And Pad U5-7(69.215mm,40.132mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.191mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.191mm < 0.254mm) Between Track (83.185mm,40.132mm)(100.965mm,40.132mm) on Top Overlay And Pad U5-12(81.915mm,40.132mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.191mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.191mm < 0.254mm) Between Track (67.945mm,40.132mm)(67.945mm,62.992mm) on Top Overlay And Pad U5-6(69.215mm,62.992mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.191mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C20" (65.596mm,63.919mm) on Top Overlay And Pad U5-6(69.215mm,62.992mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.191mm < 0.254mm) Between Track (83.185mm,62.992mm)(100.965mm,62.992mm) on Top Overlay And Pad U5-1(81.915mm,62.992mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.191mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.019mm < 0.254mm) Between Text "Q1" (27.657mm,50.892mm) on Top Overlay And Pad DSchottky-2(28.253mm,52.847mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.019mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Q1" (27.657mm,50.892mm) on Top Overlay And Pad DSchottky-1(28.253mm,51.547mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.136mm < 0.254mm) Between Track (28.761mm,48.921mm)(28.761mm,50.071mm) on Top Overlay And Pad Q1-3(28.261mm,48.321mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.136mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.136mm < 0.254mm) Between Track (28.761mm,46.571mm)(28.761mm,47.721mm) on Top Overlay And Pad Q1-3(28.261mm,48.321mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.136mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "R6" (26.543mm,46.802mm) on Top Overlay And Pad Q1-3(28.261mm,48.321mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.136mm < 0.254mm) Between Track (30.361mm,49.871mm)(30.361mm,50.071mm) on Top Overlay And Pad Q1-2(30.861mm,49.271mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.136mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.136mm < 0.254mm) Between Track (30.361mm,46.571mm)(30.361mm,46.771mm) on Top Overlay And Pad Q1-1(30.861mm,47.371mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.136mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C11" (76.016mm,29.832mm) on Top Overlay And Pad P2-1(78.105mm,31.877mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "C22" (55.22mm,45.263mm) on Top Overlay And Pad SW1-7(57.658mm,46.609mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]
+Rule Violations :64
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-63(52.857mm,52.654mm) on Top Layer And Pad STM32Dongle-64(52.857mm,53.162mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-62(52.857mm,52.146mm) on Top Layer And Pad STM32Dongle-63(52.857mm,52.654mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-60(52.857mm,51.156mm) on Top Layer And Pad STM32Dongle-61(52.857mm,51.664mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-59(52.857mm,50.648mm) on Top Layer And Pad STM32Dongle-60(52.857mm,51.156mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-57(52.857mm,49.657mm) on Top Layer And Pad STM32Dongle-58(52.857mm,50.165mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-56(52.857mm,49.149mm) on Top Layer And Pad STM32Dongle-57(52.857mm,49.657mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-55(52.857mm,48.641mm) on Top Layer And Pad STM32Dongle-56(52.857mm,49.149mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-53(52.857mm,47.65mm) on Top Layer And Pad STM32Dongle-54(52.857mm,48.158mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-52(52.857mm,47.142mm) on Top Layer And Pad STM32Dongle-53(52.857mm,47.65mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-50(52.857mm,46.152mm) on Top Layer And Pad STM32Dongle-51(52.857mm,46.66mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-49(52.857mm,45.644mm) on Top Layer And Pad STM32Dongle-50(52.857mm,46.152mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer And Pad STM32Dongle-48(51.003mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.216mm < 0.254mm) Between Via (52.197mm,43.307mm) from Top Layer to Bottom Layer And Pad STM32Dongle-48(51.003mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.216mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-46(49.987mm,43.79mm) on Top Layer And Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-44(48.997mm,43.79mm) on Top Layer And Pad STM32Dongle-45(49.505mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-43(48.489mm,43.79mm) on Top Layer And Pad STM32Dongle-44(48.997mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.136mm < 0.254mm) Between Via (48.006mm,45.466mm) from Top Layer to Bottom Layer And Pad STM32Dongle-43(48.489mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.136mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-41(47.498mm,43.79mm) on Top Layer And Pad STM32Dongle-42(48.006mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.102mm < 0.254mm) Between Via (48.006mm,45.466mm) from Top Layer to Bottom Layer And Pad STM32Dongle-42(48.006mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.102mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-40(46.99mm,43.79mm) on Top Layer And Pad STM32Dongle-41(47.498mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.143mm < 0.254mm) Between Via (48.006mm,45.466mm) from Top Layer to Bottom Layer And Pad STM32Dongle-41(47.498mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.143mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-39(46.482mm,43.79mm) on Top Layer And Pad STM32Dongle-40(46.99mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-37(45.491mm,43.79mm) on Top Layer And Pad STM32Dongle-38(45.999mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-36(44.983mm,43.79mm) on Top Layer And Pad STM32Dongle-37(45.491mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-34(43.993mm,43.79mm) on Top Layer And Pad STM32Dongle-35(44.501mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-33(43.485mm,43.79mm) on Top Layer And Pad STM32Dongle-34(43.993mm,43.79mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-31(41.631mm,46.152mm) on Top Layer And Pad STM32Dongle-32(41.631mm,45.644mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.216mm < 0.254mm) Between Via (41.021mm,44.45mm) from Top Layer to Bottom Layer And Pad STM32Dongle-32(41.631mm,45.644mm) on Top Layer [Top Solder] Mask Sliver [0.216mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-30(41.631mm,46.66mm) on Top Layer And Pad STM32Dongle-31(41.631mm,46.152mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-28(41.631mm,47.65mm) on Top Layer And Pad STM32Dongle-29(41.631mm,47.142mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.229mm < 0.254mm) Between Via (43.434mm,47.244mm) from Top Layer to Bottom Layer And Pad STM32Dongle-29(41.631mm,47.142mm) on Top Layer [Top Solder] Mask Sliver [0.229mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-27(41.631mm,48.158mm) on Top Layer And Pad STM32Dongle-28(41.631mm,47.65mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.243mm < 0.254mm) Between Via (43.434mm,47.244mm) from Top Layer to Bottom Layer And Pad STM32Dongle-28(41.631mm,47.65mm) on Top Layer [Top Solder] Mask Sliver [0.243mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-25(41.631mm,49.149mm) on Top Layer And Pad STM32Dongle-26(41.631mm,48.641mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-24(41.631mm,49.657mm) on Top Layer And Pad STM32Dongle-25(41.631mm,49.149mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-23(41.631mm,50.165mm) on Top Layer And Pad STM32Dongle-24(41.631mm,49.657mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-21(41.631mm,51.156mm) on Top Layer And Pad STM32Dongle-22(41.631mm,50.648mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-20(41.631mm,51.664mm) on Top Layer And Pad STM32Dongle-21(41.631mm,51.156mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-18(41.631mm,52.654mm) on Top Layer And Pad STM32Dongle-19(41.631mm,52.146mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-17(41.631mm,53.162mm) on Top Layer And Pad STM32Dongle-18(41.631mm,52.654mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-15(43.993mm,55.016mm) on Top Layer And Pad STM32Dongle-16(43.485mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-14(44.501mm,55.016mm) on Top Layer And Pad STM32Dongle-15(43.993mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-12(45.491mm,55.016mm) on Top Layer And Pad STM32Dongle-13(44.983mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-11(45.999mm,55.016mm) on Top Layer And Pad STM32Dongle-12(45.491mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-9(46.99mm,55.016mm) on Top Layer And Pad STM32Dongle-10(46.482mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-8(47.498mm,55.016mm) on Top Layer And Pad STM32Dongle-9(46.99mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-7(48.006mm,55.016mm) on Top Layer And Pad STM32Dongle-8(47.498mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-5(48.997mm,55.016mm) on Top Layer And Pad STM32Dongle-6(48.489mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-4(49.505mm,55.016mm) on Top Layer And Pad STM32Dongle-5(48.997mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.243mm < 0.254mm) Between Via (49.403mm,53.213mm) from Top Layer to Bottom Layer And Pad STM32Dongle-5(48.997mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.243mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.229mm < 0.254mm) Between Via (49.403mm,53.213mm) from Top Layer to Bottom Layer And Pad STM32Dongle-4(49.505mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.229mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-2(50.495mm,55.016mm) on Top Layer And Pad STM32Dongle-3(49.987mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.025mm < 0.254mm) Between Pad STM32Dongle-1(51.003mm,55.016mm) on Top Layer And Pad STM32Dongle-2(50.495mm,55.016mm) on Top Layer [Top Solder] Mask Sliver [0.025mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.246mm < 0.254mm) Between Via (34.417mm,49.53mm) from Top Layer to Bottom Layer And Pad C21-2(36.068mm,50.622mm) on Top Layer [Top Solder] Mask Sliver [0.246mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.251mm < 0.254mm) Between Pad C17-2(35.357mm,45.847mm) on Top Layer And Pad C18-P2(35.433mm,44.069mm) on Top Layer [Top Solder] Mask Sliver [0.251mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.251mm < 0.254mm) Between Pad C17-1(33.731mm,45.847mm) on Top Layer And Pad C18-P1(33.633mm,44.069mm) on Top Layer [Top Solder] Mask Sliver [0.251mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.197mm < 0.254mm) Between Pad C16-2(35.294mm,47.752mm) on Top Layer And Pad C16-1(33.794mm,47.752mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.24mm < 0.254mm) Between Via (34.417mm,49.53mm) from Top Layer to Bottom Layer And Pad C16-1(33.794mm,47.752mm) on Top Layer [Top Solder] Mask Sliver [0.24mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.122mm < 0.254mm) Between Via (46.304mm,57.658mm) from Top Layer to Bottom Layer And Pad C14-2(45.019mm,59.182mm) on Top Layer [Top Solder] Mask Sliver [0.122mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.197mm < 0.254mm) Between Pad C8-2(49.53mm,57.658mm) on Top Layer And Pad C8-1(48.03mm,57.658mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.162mm < 0.254mm) Between Via (51.054mm,58.674mm) from Top Layer to Bottom Layer And Pad C8-2(49.53mm,57.658mm) on Top Layer [Top Solder] Mask Sliver [0.162mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.22mm < 0.254mm) Between Via (49.784mm,64.084mm) from Top Layer to Bottom Layer And Pad 8Mhz-2(50.368mm,61.976mm) on Top Layer [Top Solder] Mask Sliver [0.22mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.197mm < 0.254mm) Between Pad C23-2(54.864mm,41.656mm) on Top Layer And Pad C23-1(53.364mm,41.656mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.197mm < 0.254mm) Between Pad C7-2(60.567mm,57.785mm) on Top Layer And Pad C7-1(59.067mm,57.785mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.197mm < 0.254mm) Between Via (51.054mm,58.674mm) from Top Layer to Bottom Layer And Pad C15-1(52.527mm,57.658mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.099mm < 0.254mm) Between Via (27.305mm,46.99mm) from Top Layer to Bottom Layer And Pad Q1-3(28.261mm,48.321mm) on Top Layer [Top Solder] Mask Sliver [0.099mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.197mm < 0.254mm) Between Pad C1-2(67.437mm,30.492mm) on Top Layer And Pad C1-1(67.437mm,31.992mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.21mm < 0.254mm) Between Via (58.293mm,52.324mm) from Top Layer to Bottom Layer And Pad SW1-1(57.658mm,54.019mm) on Multi-Layer [Top Solder] Mask Sliver [0.21mm] / [Bottom Solder] Mask Sliver [0.21mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.077mm < 0.254mm) Between Via (37.973mm,48.514mm) from Top Layer to Bottom Layer And Via (38.862mm,47.244mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.077mm] / [Bottom Solder] Mask Sliver [0.077mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.178mm < 0.254mm) Between Via (49.403mm,53.213mm) from Top Layer to Bottom Layer And Via (49.403mm,51.562mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.178mm] / [Bottom Solder] Mask Sliver [0.178mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.178mm < 0.254mm) Between Via (49.784mm,47.879mm) from Top Layer to Bottom Layer And Via (49.784mm,46.228mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.178mm] / [Bottom Solder] Mask Sliver [0.178mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.243mm < 0.254mm) Between Via (58.761mm,50.673mm) from Top Layer to Bottom Layer And Via (58.293mm,52.324mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.243mm] / [Bottom Solder] Mask Sliver [0.243mm]
+Rule Violations :72
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+   Violation between Hole Size Constraint: (3.175mm > 2.54mm) Pad Free-2(90.932mm,27.94mm) on Multi-Layer Actual Hole Size = 3.175mm
+Rule Violations :1
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,52.146mm)(52.857mm,52.654mm) on Top Layer And Pad STM32Dongle-64(52.857mm,53.162mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-63(52.857mm,52.654mm) on Top Layer And Pad STM32Dongle-64(52.857mm,53.162mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.003mm,55.016mm)(52.857mm,53.162mm) on Top Layer And Pad STM32Dongle-63(52.857mm,52.654mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-60(52.857mm,51.156mm) on Top Layer And Pad STM32Dongle-61(52.857mm,51.664mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,51.156mm)(53.765mm,51.156mm) on Top Layer And Pad STM32Dongle-61(52.857mm,51.664mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,50.648mm)(54.084mm,50.648mm) on Top Layer And Pad STM32Dongle-60(52.857mm,51.156mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,51.664mm)(52.857mm,52.146mm) on Top Layer And Pad STM32Dongle-60(52.857mm,51.156mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-59(52.857mm,50.648mm) on Top Layer And Pad STM32Dongle-60(52.857mm,51.156mm) on Top Layer 
+   Violation between Clearance Constraint: (0.203mm < 0.254mm) Between Pad STM32Dongle-58(52.857mm,50.165mm) on Top Layer And Pad STM32Dongle-59(52.857mm,50.648mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (52.857mm,50.165mm)(56.769mm,50.165mm) on Top Layer And Pad STM32Dongle-59(52.857mm,50.648mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,51.156mm)(53.765mm,51.156mm) on Top Layer And Pad STM32Dongle-59(52.857mm,50.648mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-57(52.857mm,49.657mm) on Top Layer And Pad STM32Dongle-58(52.857mm,50.165mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (52.857mm,50.648mm)(54.084mm,50.648mm) on Top Layer And Pad STM32Dongle-58(52.857mm,50.165mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,49.657mm)(59.69mm,49.657mm) on Top Layer And Pad STM32Dongle-58(52.857mm,50.165mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-56(52.857mm,49.149mm) on Top Layer And Pad STM32Dongle-57(52.857mm,49.657mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.054mm,49.149mm)(52.857mm,49.149mm) on Top Layer And Pad STM32Dongle-57(52.857mm,49.657mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,50.165mm)(56.769mm,50.165mm) on Top Layer And Pad STM32Dongle-57(52.857mm,49.657mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-55(52.857mm,48.641mm) on Top Layer And Pad STM32Dongle-56(52.857mm,49.149mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,49.657mm)(59.69mm,49.657mm) on Top Layer And Pad STM32Dongle-56(52.857mm,49.149mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,48.641mm)(58.801mm,48.641mm) on Top Layer And Pad STM32Dongle-56(52.857mm,49.149mm) on Top Layer 
+   Violation between Clearance Constraint: (0.203mm < 0.254mm) Between Pad STM32Dongle-54(52.857mm,48.158mm) on Top Layer And Pad STM32Dongle-55(52.857mm,48.641mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.054mm,49.149mm)(52.857mm,49.149mm) on Top Layer And Pad STM32Dongle-55(52.857mm,48.641mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-53(52.857mm,47.65mm) on Top Layer And Pad STM32Dongle-54(52.857mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,47.65mm)(56.286mm,47.65mm) on Top Layer And Pad STM32Dongle-54(52.857mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (52.857mm,48.641mm)(58.801mm,48.641mm) on Top Layer And Pad STM32Dongle-54(52.857mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-52(52.857mm,47.142mm) on Top Layer And Pad STM32Dongle-53(52.857mm,47.65mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (52.857mm,47.65mm)(56.286mm,47.65mm) on Top Layer And Pad STM32Dongle-52(52.857mm,47.142mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-50(52.857mm,46.152mm) on Top Layer And Pad STM32Dongle-51(52.857mm,46.66mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.95mm,46.152mm)(52.857mm,46.152mm) on Top Layer And Pad STM32Dongle-51(52.857mm,46.66mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-49(52.857mm,45.644mm) on Top Layer And Pad STM32Dongle-50(52.857mm,46.152mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.95mm,46.152mm)(52.857mm,46.152mm) on Top Layer And Pad STM32Dongle-49(52.857mm,45.644mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer And Pad STM32Dongle-48(51.003mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (50.495mm,42.596mm)(50.495mm,43.79mm) on Top Layer And Pad STM32Dongle-48(51.003mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-46(49.987mm,43.79mm) on Top Layer And Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.003mm,43.79mm)(51.333mm,43.79mm) on Top Layer And Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (49.987mm,40.564mm)(49.987mm,43.79mm) on Top Layer And Pad STM32Dongle-47(50.495mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.203mm < 0.254mm) Between Pad STM32Dongle-45(49.505mm,43.79mm) on Top Layer And Pad STM32Dongle-46(49.987mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (50.495mm,42.596mm)(50.495mm,43.79mm) on Top Layer And Pad STM32Dongle-46(49.987mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (49.505mm,41.554mm)(49.505mm,43.79mm) on Top Layer And Pad STM32Dongle-46(49.987mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (48.997mm,42.012mm)(48.997mm,43.79mm) on Top Layer And Pad STM32Dongle-45(49.505mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (49.987mm,40.564mm)(49.987mm,43.79mm) on Top Layer And Pad STM32Dongle-45(49.505mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-44(48.997mm,43.79mm) on Top Layer And Pad STM32Dongle-45(49.505mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-43(48.489mm,43.79mm) on Top Layer And Pad STM32Dongle-44(48.997mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (49.505mm,41.554mm)(49.505mm,43.79mm) on Top Layer And Pad STM32Dongle-44(48.997mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (48.997mm,42.012mm)(48.997mm,43.79mm) on Top Layer And Pad STM32Dongle-43(48.489mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (44.501mm,40.97mm)(44.501mm,43.79mm) on Top Layer And Pad STM32Dongle-36(44.983mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.203mm < 0.254mm) Between Pad STM32Dongle-35(44.501mm,43.79mm) on Top Layer And Pad STM32Dongle-36(44.983mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-34(43.993mm,43.79mm) on Top Layer And Pad STM32Dongle-35(44.501mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (43.993mm,37.704mm)(43.993mm,43.79mm) on Top Layer And Pad STM32Dongle-35(44.501mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-33(43.485mm,43.79mm) on Top Layer And Pad STM32Dongle-34(43.993mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (44.501mm,40.97mm)(44.501mm,43.79mm) on Top Layer And Pad STM32Dongle-34(43.993mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (43.993mm,37.704mm)(43.993mm,43.79mm) on Top Layer And Pad STM32Dongle-33(43.485mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-31(41.631mm,46.152mm) on Top Layer And Pad STM32Dongle-32(41.631mm,45.644mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (40.31mm,46.152mm)(41.631mm,46.152mm) on Top Layer And Pad STM32Dongle-32(41.631mm,45.644mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (41.631mm,45.06mm)(41.631mm,45.644mm) on Top Layer And Pad STM32Dongle-31(41.631mm,46.152mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-30(41.631mm,46.66mm) on Top Layer And Pad STM32Dongle-31(41.631mm,46.152mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (40.31mm,46.152mm)(41.631mm,46.152mm) on Top Layer And Pad STM32Dongle-30(41.631mm,46.66mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-28(41.631mm,47.65mm) on Top Layer And Pad STM32Dongle-29(41.631mm,47.142mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (41.631mm,47.65mm)(43.028mm,47.65mm) on Top Layer And Pad STM32Dongle-29(41.631mm,47.142mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-27(41.631mm,48.158mm) on Top Layer And Pad STM32Dongle-28(41.631mm,47.65mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (40.411mm,48.158mm)(41.631mm,48.158mm) on Top Layer And Pad STM32Dongle-28(41.631mm,47.65mm) on Top Layer 
+   Violation between Clearance Constraint: (0.203mm < 0.254mm) Between Pad STM32Dongle-26(41.631mm,48.641mm) on Top Layer And Pad STM32Dongle-27(41.631mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (41.631mm,47.65mm)(43.028mm,47.65mm) on Top Layer And Pad STM32Dongle-27(41.631mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (38.1mm,48.641mm)(41.631mm,48.641mm) on Top Layer And Pad STM32Dongle-27(41.631mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-25(41.631mm,49.149mm) on Top Layer And Pad STM32Dongle-26(41.631mm,48.641mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (40.411mm,48.158mm)(41.631mm,48.158mm) on Top Layer And Pad STM32Dongle-26(41.631mm,48.641mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (40.259mm,49.149mm)(41.631mm,49.149mm) on Top Layer And Pad STM32Dongle-26(41.631mm,48.641mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-24(41.631mm,49.657mm) on Top Layer And Pad STM32Dongle-25(41.631mm,49.149mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (38.1mm,48.641mm)(41.631mm,48.641mm) on Top Layer And Pad STM32Dongle-25(41.631mm,49.149mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (40.259mm,49.149mm)(41.631mm,49.149mm) on Top Layer And Pad STM32Dongle-24(41.631mm,49.657mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-21(41.631mm,51.156mm) on Top Layer And Pad STM32Dongle-22(41.631mm,50.648mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (41.631mm,51.156mm)(41.631mm,51.664mm) on Top Layer And Pad STM32Dongle-22(41.631mm,50.648mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-18(41.631mm,52.654mm) on Top Layer And Pad STM32Dongle-19(41.631mm,52.146mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (41.631mm,52.654mm)(41.631mm,53.162mm) on Top Layer And Pad STM32Dongle-19(41.631mm,52.146mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (41.631mm,51.664mm)(41.631mm,52.146mm) on Top Layer And Pad STM32Dongle-18(41.631mm,52.654mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (43.993mm,55.016mm)(44.005mm,55.016mm) on Top Layer And Pad STM32Dongle-16(43.485mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-15(43.993mm,55.016mm) on Top Layer And Pad STM32Dongle-16(43.485mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (45.491mm,55.016mm)(45.491mm,56.744mm) on Top Layer And Pad STM32Dongle-13(44.983mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-12(45.491mm,55.016mm) on Top Layer And Pad STM32Dongle-13(44.983mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-11(45.999mm,55.016mm) on Top Layer And Pad STM32Dongle-12(45.491mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (44.983mm,53.492mm)(44.983mm,55.016mm) on Top Layer And Pad STM32Dongle-12(45.491mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (44.501mm,55.016mm)(44.983mm,55.016mm) on Top Layer And Pad STM32Dongle-12(45.491mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (45.491mm,55.016mm)(45.491mm,56.744mm) on Top Layer And Pad STM32Dongle-11(45.999mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-7(48.006mm,55.016mm) on Top Layer And Pad STM32Dongle-8(47.498mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (48.006mm,52.451mm)(48.006mm,55.016mm) on Top Layer And Pad STM32Dongle-8(47.498mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (48.489mm,55.016mm)(48.489mm,56.032mm) on Top Layer And Pad STM32Dongle-7(48.006mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.203mm < 0.254mm) Between Pad STM32Dongle-6(48.489mm,55.016mm) on Top Layer And Pad STM32Dongle-7(48.006mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.216mm < 0.254mm) Between Track (48.006mm,52.451mm)(48.006mm,55.016mm) on Top Layer And Pad STM32Dongle-6(48.489mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (48.997mm,53.619mm)(48.997mm,55.016mm) on Top Layer And Pad STM32Dongle-6(48.489mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-5(48.997mm,55.016mm) on Top Layer And Pad STM32Dongle-6(48.489mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (48.489mm,55.016mm)(48.489mm,56.032mm) on Top Layer And Pad STM32Dongle-5(48.997mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-4(49.505mm,55.016mm) on Top Layer And Pad STM32Dongle-5(48.997mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (48.997mm,53.619mm)(48.997mm,55.016mm) on Top Layer And Pad STM32Dongle-4(49.505mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.003mm,55.016mm)(51.003mm,56.134mm) on Top Layer And Pad STM32Dongle-2(50.495mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Pad STM32Dongle-1(51.003mm,55.016mm) on Top Layer And Pad STM32Dongle-2(50.495mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.241mm < 0.254mm) Between Track (51.003mm,55.016mm)(52.857mm,53.162mm) on Top Layer And Pad STM32Dongle-2(50.495mm,55.016mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (38.1mm,48.641mm)(41.631mm,48.641mm) on Top Layer And Track (40.411mm,48.158mm)(41.631mm,48.158mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (49.987mm,40.564mm)(49.987mm,43.79mm) on Top Layer And Track (49.479mm,41.529mm)(49.505mm,41.554mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (49.987mm,40.564mm)(49.987mm,43.79mm) on Top Layer And Track (49.505mm,41.554mm)(49.505mm,43.79mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (48.006mm,52.451mm)(48.006mm,55.016mm) on Top Layer And Track (48.489mm,55.016mm)(48.489mm,56.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (52.857mm,50.165mm)(56.769mm,50.165mm) on Top Layer And Track (54.084mm,50.648mm)(54.744mm,51.308mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (52.857mm,50.165mm)(56.769mm,50.165mm) on Top Layer And Track (52.857mm,50.648mm)(54.084mm,50.648mm) on Top Layer 
+   Violation between Clearance Constraint: (0.229mm < 0.254mm) Between Track (38.1mm,48.641mm)(41.631mm,48.641mm) on Top Layer And Track (40.386mm,48.133mm)(40.411mm,48.158mm) on Top Layer 
+Rule Violations :103
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net NetSTM32Dongle_53 Between Track (56.388mm,47.752mm)(58.253mm,47.752mm) on Bottom Layer And Track (56.286mm,47.65mm)(56.388mm,47.752mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetR8_2 Between Pad R8-2(38.862mm,55.016mm) on Top Layer And Pad STM32Dongle-16(43.485mm,55.016mm) on Top Layer 
+Rule Violations :2
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 311
+Time Elapsed        : 00:00:01

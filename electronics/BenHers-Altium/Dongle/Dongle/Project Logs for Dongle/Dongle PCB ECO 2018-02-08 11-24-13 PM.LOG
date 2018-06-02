@@ -1,0 +1,4 @@
+Added Component: Designator=Speaker1(Speaker)
+Added Pin To Net: NetName=3.3V Pin=Speaker1-1
+Added Pin To Net: NetName=Net?_3 Pin=Speaker1-2
+Added Member To Class: ClassName=Dongle Member=Component Speaker1 Speaker
