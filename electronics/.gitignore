@@ -1,0 +1,11 @@
+BenHers-Altium/History/*
+HannahSawiuk-Altium/__Previews/*
+
+*.bak
+*-rescue.lib
+*.PcbDoc.Zip
+*.SchDoc.Zip
+*.PcbDocPreview
+*.SchDocPreview
+*.PrjPcb.Zip
+

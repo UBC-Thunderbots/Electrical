@@ -1,0 +1,25242 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1015
+  9
+$ACADMAINTVER
+ 70
+     6
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+297.0
+ 20
+210.0
+ 30
+0.0
+  9
+$LIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$LIMMAX
+ 10
+297.0
+ 20
+210.0
+  9
+$ORTHOMODE
+ 70
+     0
+  9
+$REGENMODE
+ 70
+     1
+  9
+$FILLMODE
+ 70
+     1
+  9
+$QTEXTMODE
+ 70
+     0
+  9
+$MIRRTEXT
+ 70
+     1
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+     1
+  9
+$TEXTSIZE
+ 40
+3.5
+  9
+$TRACEWID
+ 40
+1.0
+  9
+$TEXTSTYLE
+  7
+Standard
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+   256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DISPSILH
+ 70
+     0
+  9
+$DIMSCALE
+ 40
+1.0
+  9
+$DIMASZ
+ 40
+3.302
+  9
+$DIMEXO
+ 40
+1.0
+  9
+$DIMDLI
+ 40
+3.75
+  9
+$DIMRND
+ 40
+0.0
+  9
+$DIMDLE
+ 40
+0.0
+  9
+$DIMEXE
+ 40
+1.0
+  9
+$DIMTP
+ 40
+0.0
+  9
+$DIMTM
+ 40
+0.0
+  9
+$DIMTXT
+ 40
+3.5
+  9
+$DIMCEN
+ 40
+2.5
+  9
+$DIMTSZ
+ 40
+0.0
+  9
+$DIMTOL
+ 70
+     0
+  9
+$DIMLIM
+ 70
+     0
+  9
+$DIMTIH
+ 70
+     1
+  9
+$DIMTOH
+ 70
+     1
+  9
+$DIMSE1
+ 70
+     0
+  9
+$DIMSE2
+ 70
+     0
+  9
+$DIMTAD
+ 70
+     1
+  9
+$DIMZIN
+ 70
+     1
+  9
+$DIMBLK
+  1
+
+  9
+$DIMASO
+ 70
+     1
+  9
+$DIMSHO
+ 70
+     1
+  9
+$DIMPOST
+  1
+
+  9
+$DIMAPOST
+  1
+
+  9
+$DIMALT
+ 70
+     0
+  9
+$DIMALTD
+ 70
+     3
+  9
+$DIMALTF
+ 40
+0.0393700787
+  9
+$DIMLFAC
+ 40
+1.0
+  9
+$DIMTOFL
+ 70
+     1
+  9
+$DIMTVP
+ 40
+0.0
+  9
+$DIMTIX
+ 70
+     0
+  9
+$DIMSOXD
+ 70
+     0
+  9
+$DIMSAH
+ 70
+     0
+  9
+$DIMBLK1
+  1
+
+  9
+$DIMBLK2
+  1
+
+  9
+$DIMSTYLE
+  2
+ISO-25
+  9
+$DIMCLRD
+ 70
+     0
+  9
+$DIMCLRE
+ 70
+     0
+  9
+$DIMCLRT
+ 70
+     0
+  9
+$DIMTFAC
+ 40
+1.0
+  9
+$DIMGAP
+ 40
+1.524
+  9
+$DIMJUST
+ 70
+     0
+  9
+$DIMSD1
+ 70
+     0
+  9
+$DIMSD2
+ 70
+     0
+  9
+$DIMTOLJ
+ 70
+     0
+  9
+$DIMTZIN
+ 70
+     1
+  9
+$DIMALTZ
+ 70
+     0
+  9
+$DIMALTTZ
+ 70
+     0
+  9
+$DIMUPT
+ 70
+     0
+  9
+$DIMDEC
+ 70
+     2
+  9
+$DIMTDEC
+ 70
+     2
+  9
+$DIMALTU
+ 70
+     2
+  9
+$DIMALTTD
+ 70
+     3
+  9
+$DIMTXSTY
+  7
+Standard
+  9
+$DIMAUNIT
+ 70
+     0
+  9
+$DIMADEC
+ 70
+     0
+  9
+$DIMALTRND
+ 40
+0.0
+  9
+$DIMAZIN
+ 70
+     0
+  9
+$DIMDSEP
+ 70
+    44
+  9
+$DIMATFIT
+ 70
+     3
+  9
+$DIMFRAC
+ 70
+     0
+  9
+$DIMLDRBLK
+  1
+
+  9
+$DIMLUNIT
+ 70
+     2
+  9
+$DIMLWD
+ 70
+    -2
+  9
+$DIMLWE
+ 70
+    -2
+  9
+$DIMTMOVE
+ 70
+     0
+  9
+$LUNITS
+ 70
+     2
+  9
+$LUPREC
+ 70
+     4
+  9
+$SKETCHINC
+ 40
+1.0
+  9
+$FILLETRAD
+ 40
+10.0
+  9
+$AUNITS
+ 70
+     0
+  9
+$AUPREC
+ 70
+     0
+  9
+$MENU
+  1
+.
+  9
+$ELEVATION
+ 40
+0.0
+  9
+$PELEVATION
+ 40
+0.0
+  9
+$THICKNESS
+ 40
+0.0
+  9
+$LIMCHECK
+ 70
+     0
+  9
+$CHAMFERA
+ 40
+0.0
+  9
+$CHAMFERB
+ 40
+0.0
+  9
+$CHAMFERC
+ 40
+0.0
+  9
+$CHAMFERD
+ 40
+0.0
+  9
+$SKPOLY
+ 70
+     0
+  9
+$TDCREATE
+ 40
+2458275.543233437
+  9
+$TDUCREATE
+ 40
+2458275.834900104
+  9
+$TDUPDATE
+ 40
+2458275.543236644
+  9
+$TDUUPDATE
+ 40
+2458275.83490331
+  9
+$TDINDWG
+ 40
+0.0000000116
+  9
+$TDUSRTIMER
+ 40
+0.0000000116
+  9
+$USRTIMER
+ 70
+     1
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+     0
+  9
+$PDMODE
+ 70
+     0
+  9
+$PDSIZE
+ 40
+-1.0
+  9
+$PLINEWID
+ 40
+0.0
+  9
+$SPLFRAME
+ 70
+     0
+  9
+$SPLINETYPE
+ 70
+     6
+  9
+$SPLINESEGS
+ 70
+     8
+  9
+$HANDSEED
+  5
+285
+  9
+$SURFTAB1
+ 70
+     6
+  9
+$SURFTAB2
+ 70
+     6
+  9
+$SURFTYPE
+ 70
+     6
+  9
+$SURFU
+ 70
+     6
+  9
+$SURFV
+ 70
+     6
+  9
+$UCSBASE
+  2
+
+  9
+$UCSNAME
+  2
+
+  9
+$UCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$UCSORTHOREF
+  2
+
+  9
+$UCSORTHOVIEW
+ 70
+     0
+  9
+$UCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSBASE
+  2
+
+  9
+$PUCSNAME
+  2
+
+  9
+$PUCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$PUCSORTHOREF
+  2
+
+  9
+$PUCSORTHOVIEW
+ 70
+     0
+  9
+$PUCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$USERI1
+ 70
+     0
+  9
+$USERI2
+ 70
+     0
+  9
+$USERI3
+ 70
+     0
+  9
+$USERI4
+ 70
+     0
+  9
+$USERI5
+ 70
+     0
+  9
+$USERR1
+ 40
+0.0
+  9
+$USERR2
+ 40
+0.0
+  9
+$USERR3
+ 40
+0.0
+  9
+$USERR4
+ 40
+0.0
+  9
+$USERR5
+ 40
+0.0
+  9
+$WORLDVIEW
+ 70
+     1
+  9
+$SHADEDGE
+ 70
+     3
+  9
+$SHADEDIF
+ 70
+    70
+  9
+$TILEMODE
+ 70
+     1
+  9
+$MAXACTVP
+ 70
+    64
+  9
+$PINSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PLIMCHECK
+ 70
+     0
+  9
+$PEXTMIN
+ 10
+1.0000000000E+20
+ 20
+1.0000000000E+20
+ 30
+1.0000000000E+20
+  9
+$PEXTMAX
+ 10
+-1.0000000000E+20
+ 20
+-1.0000000000E+20
+ 30
+-1.0000000000E+20
+  9
+$PLIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$PLIMMAX
+ 10
+420.0
+ 20
+297.0
+  9
+$UNITMODE
+ 70
+     0
+  9
+$VISRETAIN
+ 70
+     1
+  9
+$PLINEGEN
+ 70
+     0
+  9
+$PSLTSCALE
+ 70
+     1
+  9
+$TREEDEPTH
+ 70
+  3020
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+     0
+  9
+$CMLSCALE
+ 40
+20.0
+  9
+$PROXYGRAPHICS
+ 70
+     1
+  9
+$MEASUREMENT
+ 70
+     1
+  9
+$CELWEIGHT
+370
+    -1
+  9
+$ENDCAPS
+280
+     0
+  9
+$JOINSTYLE
+280
+     0
+  9
+$LWDISPLAY
+290
+     1
+  9
+$INSUNITS
+ 70
+     4
+  9
+$HYPERLINKBASE
+  1
+
+  9
+$STYLESHEET
+  1
+
+  9
+$XEDIT
+290
+     1
+  9
+$CEPSNTYPE
+380
+     0
+  9
+$PSTYLEMODE
+290
+     1
+  9
+$FINGERPRINTGUID
+  2
+{1F156EC9-672D-495A-BE24-4D681A0A0B8B}
+  9
+$VERSIONGUID
+  2
+{FAEB1C32-E019-11D5-929B-00C0DF256EC4}
+  9
+$EXTNAMES
+290
+     1
+  9
+$PSVPSCALE
+ 40
+0.0
+  9
+$OLESTARTUP
+290
+     0
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+VISUALSTYLE
+  2
+AcDbVisualStyle
+  3
+ObjectDBX Classes
+ 90
+     4095
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+MATERIAL
+  2
+AcDbMaterial
+  3
+ObjectDBX Classes
+ 90
+     1153
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SCALE
+  2
+AcDbScale
+  3
+ObjectDBX Classes
+ 90
+     1153
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+TABLESTYLE
+  2
+AcDbTableStyle
+  3
+ObjectDBX Classes
+ 90
+     4095
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+MLEADERSTYLE
+  2
+AcDbMLeaderStyle
+  3
+ACDB_MLEADERSTYLE_CLASS
+ 90
+     4095
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SUN
+  2
+AcDbSun
+  3
+SCENEOE
+ 90
+     1153
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+ACDBPLACEHOLDER
+  2
+AcDbPlaceHolder
+  3
+ObjectDBX Classes
+ 90
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+LAYOUT
+  2
+AcDbLayout
+  3
+ObjectDBX Classes
+ 90
+        0
+280
+     0
+281
+     0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+8
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+VPORT
+  5
+29
+330
+8
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*Active
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+148.5
+ 22
+105.0
+ 13
+0.0
+ 23
+0.0
+ 14
+10.0
+ 24
+10.0
+ 15
+10.0
+ 25
+10.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+210.0
+ 41
+1.4142857143
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+     0
+ 72
+  2000
+ 73
+     1
+ 74
+     3
+ 75
+     0
+ 76
+     0
+ 77
+     0
+ 78
+     0
+281
+     0
+ 65
+     1
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+ 79
+     0
+146
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+5
+330
+0
+100
+AcDbSymbolTable
+ 70
+     6
+  0
+LTYPE
+  5
+14
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+15
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+16
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+     0
+  3
+Solid line
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+6E
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+HIDDEN
+ 70
+     0
+  3
+Hidden __ __ __ __ __ __ __ __ __ __ __ __ __ __
+ 72
+    65
+ 73
+     2
+ 40
+1.905
+ 49
+1.27
+ 74
+     0
+ 49
+-0.635
+ 74
+     0
+  0
+LTYPE
+  5
+6F
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+PHANTOM
+ 70
+     0
+  3
+Phantom ______  __  __  ______  __  __  ______
+ 72
+    65
+ 73
+     6
+ 40
+12.7
+ 49
+6.35
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+  0
+LTYPE
+  5
+70
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTER
+ 70
+     0
+  3
+Center ____ _ ____ _ ____ _ ____ _ ____ _ ____
+ 72
+    65
+ 73
+     4
+ 40
+10.16
+ 49
+6.35
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+  0
+LTYPE
+  5
+71
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+CENTERX2
+ 70
+     0
+  3
+Center (2x) ________  __  ________  __  _____
+ 72
+    65
+ 73
+     4
+ 40
+20.32
+ 49
+12.7
+ 74
+     0
+ 49
+-2.54
+ 74
+     0
+ 49
+2.54
+ 74
+     0
+ 49
+-2.54
+ 74
+     0
+  0
+LTYPE
+  5
+72
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+DOT2
+ 70
+     0
+  3
+Dot (.5x) ........................................
+ 72
+    65
+ 73
+     2
+ 40
+0.635
+ 49
+0.0
+ 74
+     0
+ 49
+-0.635
+ 74
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+2
+330
+0
+100
+AcDbSymbolTable
+ 70
+     2
+  0
+LAYER
+  5
+10
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+73
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+TOPSOLDER
+ 70
+     0
+ 62
+   216
+  6
+Continuous
+370
+    -3
+390
+F
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+3
+330
+0
+100
+AcDbSymbolTable
+ 70
+     2
+  0
+STYLE
+  5
+11
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+Standard
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+3.5
+  3
+txt
+  4
+
+  0
+STYLE
+  5
+282
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+SLDTEXTSTYLE0
+ 70
+     0
+ 40
+0.0
+ 41
+0.7
+ 50
+0.0
+ 71
+     0
+ 42
+3.5
+  3
+TXT
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+6
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+7
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+9
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+APPID
+  5
+12
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+A
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+100
+AcDbDimStyleTable
+  0
+DIMSTYLE
+105
+27
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+ISO-25
+ 70
+     0
+ 41
+2.5
+ 42
+0.625
+ 43
+3.75
+ 44
+1.25
+ 73
+     0
+ 74
+     0
+ 77
+     1
+ 78
+     8
+140
+2.5
+141
+2.5
+143
+0.0393700787
+147
+0.625
+171
+     3
+172
+     1
+178
+     0
+271
+     2
+272
+     2
+274
+     3
+278
+    44
+283
+     0
+284
+     8
+340
+11
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+1
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+BLOCK_RECORD
+  5
+1F
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+340
+22
+  0
+BLOCK_RECORD
+  5
+1B
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+340
+1E
+  0
+BLOCK_RECORD
+  5
+23
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space0
+340
+26
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+20
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+21
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1C
+330
+1B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+1D
+330
+1B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+24
+330
+23
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space0
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space0
+  1
+
+  0
+ENDBLK
+  5
+25
+330
+23
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LINE
+  5
+74
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+206.595
+ 20
+145.024
+ 30
+0.0
+ 11
+219.295
+ 21
+145.024
+ 31
+0.0
+  0
+LINE
+  5
+75
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.295
+ 20
+145.024
+ 30
+0.0
+ 11
+219.295
+ 21
+148.453
+ 31
+0.0
+  0
+LINE
+  5
+76
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.295
+ 20
+148.453
+ 30
+0.0
+ 11
+206.595
+ 21
+148.453
+ 31
+0.0
+  0
+LINE
+  5
+77
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+206.595
+ 20
+148.453
+ 30
+0.0
+ 11
+206.595
+ 21
+145.024
+ 31
+0.0
+  0
+LINE
+  5
+78
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+206.722
+ 20
+159.883
+ 30
+0.0
+ 11
+219.295
+ 21
+159.883
+ 31
+0.0
+  0
+LINE
+  5
+79
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.295
+ 20
+159.883
+ 30
+0.0
+ 11
+219.295
+ 21
+163.439
+ 31
+0.0
+  0
+LINE
+  5
+7A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.295
+ 20
+163.439
+ 30
+0.0
+ 11
+206.722
+ 21
+163.439
+ 31
+0.0
+  0
+LINE
+  5
+7B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+206.722
+ 20
+163.439
+ 30
+0.0
+ 11
+206.722
+ 21
+159.883
+ 31
+0.0
+  0
+LINE
+  5
+7C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.695
+ 20
+119.878
+ 30
+0.0
+ 11
+251.68
+ 21
+119.878
+ 31
+0.0
+  0
+LINE
+  5
+7D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+251.68
+ 20
+119.878
+ 30
+0.0
+ 11
+251.68
+ 21
+124.831
+ 31
+0.0
+  0
+LINE
+  5
+7E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+251.68
+ 20
+124.831
+ 30
+0.0
+ 11
+244.695
+ 21
+124.831
+ 31
+0.0
+  0
+LINE
+  5
+7F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.695
+ 20
+124.831
+ 30
+0.0
+ 11
+244.695
+ 21
+119.878
+ 31
+0.0
+  0
+LINE
+  5
+80
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.695
+ 20
+146.675
+ 30
+0.0
+ 11
+251.68
+ 21
+146.675
+ 31
+0.0
+  0
+LINE
+  5
+81
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+251.68
+ 20
+146.675
+ 30
+0.0
+ 11
+251.68
+ 21
+151.628
+ 31
+0.0
+  0
+LINE
+  5
+82
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+251.68
+ 20
+151.628
+ 30
+0.0
+ 11
+244.695
+ 21
+151.628
+ 31
+0.0
+  0
+LINE
+  5
+83
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.695
+ 20
+151.628
+ 30
+0.0
+ 11
+244.695
+ 21
+146.675
+ 31
+0.0
+  0
+LINE
+  5
+84
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.695
+ 20
+173.853
+ 30
+0.0
+ 11
+251.68
+ 21
+173.853
+ 31
+0.0
+  0
+LINE
+  5
+85
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+251.68
+ 20
+173.853
+ 30
+0.0
+ 11
+251.68
+ 21
+178.806
+ 31
+0.0
+  0
+LINE
+  5
+86
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+251.68
+ 20
+178.806
+ 30
+0.0
+ 11
+244.695
+ 21
+178.806
+ 31
+0.0
+  0
+LINE
+  5
+87
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.695
+ 20
+178.806
+ 30
+0.0
+ 11
+244.695
+ 21
+173.853
+ 31
+0.0
+  0
+LINE
+  5
+88
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+134.00859912
+ 30
+0.0
+ 11
+238.43440038
+ 21
+133.10540052
+ 31
+0.0
+  0
+LINE
+  5
+89
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+133.10540052
+ 30
+0.0
+ 11
+240.63760146
+ 21
+133.10540052
+ 31
+0.0
+  0
+LINE
+  5
+8A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+133.10540052
+ 30
+0.0
+ 11
+240.63760146
+ 21
+134.00859912
+ 31
+0.0
+  0
+LINE
+  5
+8B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+134.00859912
+ 30
+0.0
+ 11
+238.43440038
+ 21
+134.00859912
+ 31
+0.0
+  0
+LINE
+  5
+8C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+134.00859912
+ 30
+0.0
+ 11
+244.43439854
+ 21
+133.10540052
+ 31
+0.0
+  0
+LINE
+  5
+8D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+133.10540052
+ 30
+0.0
+ 11
+246.63759962
+ 21
+133.10540052
+ 31
+0.0
+  0
+LINE
+  5
+8E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+133.10540052
+ 30
+0.0
+ 11
+246.63759962
+ 21
+134.00859912
+ 31
+0.0
+  0
+LINE
+  5
+8F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+134.00859912
+ 30
+0.0
+ 11
+244.43439854
+ 21
+134.00859912
+ 31
+0.0
+  0
+LINE
+  5
+90
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+130.80860044
+ 30
+0.0
+ 11
+238.43440038
+ 21
+129.90540184
+ 31
+0.0
+  0
+LINE
+  5
+91
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+129.90540184
+ 30
+0.0
+ 11
+240.63760146
+ 21
+129.90540184
+ 31
+0.0
+  0
+LINE
+  5
+92
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+129.90540184
+ 30
+0.0
+ 11
+240.63760146
+ 21
+130.80860044
+ 31
+0.0
+  0
+LINE
+  5
+93
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+130.80860044
+ 30
+0.0
+ 11
+238.43440038
+ 21
+130.80860044
+ 31
+0.0
+  0
+LINE
+  5
+94
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+130.80860044
+ 30
+0.0
+ 11
+244.43439854
+ 21
+129.90540184
+ 31
+0.0
+  0
+LINE
+  5
+95
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+129.90540184
+ 30
+0.0
+ 11
+246.63759962
+ 21
+129.90540184
+ 31
+0.0
+  0
+LINE
+  5
+96
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+129.90540184
+ 30
+0.0
+ 11
+246.63759962
+ 21
+130.80860044
+ 31
+0.0
+  0
+LINE
+  5
+97
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+130.80860044
+ 30
+0.0
+ 11
+244.43439854
+ 21
+130.80860044
+ 31
+0.0
+  0
+LINE
+  5
+98
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+126.40859908
+ 30
+0.0
+ 11
+238.43440038
+ 21
+125.50540048
+ 31
+0.0
+  0
+LINE
+  5
+99
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+125.50540048
+ 30
+0.0
+ 11
+240.63760146
+ 21
+125.50540048
+ 31
+0.0
+  0
+LINE
+  5
+9A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+125.50540048
+ 30
+0.0
+ 11
+240.63760146
+ 21
+126.40859908
+ 31
+0.0
+  0
+LINE
+  5
+9B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+126.40859908
+ 30
+0.0
+ 11
+238.43440038
+ 21
+126.40859908
+ 31
+0.0
+  0
+LINE
+  5
+9C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+128.60859976
+ 30
+0.0
+ 11
+238.43440038
+ 21
+127.70540116
+ 31
+0.0
+  0
+LINE
+  5
+9D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.43440038
+ 20
+127.70540116
+ 30
+0.0
+ 11
+240.63760146
+ 21
+127.70540116
+ 31
+0.0
+  0
+LINE
+  5
+9E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+127.70540116
+ 30
+0.0
+ 11
+240.63760146
+ 21
+128.60859976
+ 31
+0.0
+  0
+LINE
+  5
+9F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.63760146
+ 20
+128.60859976
+ 30
+0.0
+ 11
+238.43440038
+ 21
+128.60859976
+ 31
+0.0
+  0
+LINE
+  5
+A0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+126.40859908
+ 30
+0.0
+ 11
+244.43439854
+ 21
+125.50540048
+ 31
+0.0
+  0
+LINE
+  5
+A1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+125.50540048
+ 30
+0.0
+ 11
+246.63759962
+ 21
+125.50540048
+ 31
+0.0
+  0
+LINE
+  5
+A2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+125.50540048
+ 30
+0.0
+ 11
+246.63759962
+ 21
+126.40859908
+ 31
+0.0
+  0
+LINE
+  5
+A3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+126.40859908
+ 30
+0.0
+ 11
+244.43439854
+ 21
+126.40859908
+ 31
+0.0
+  0
+LINE
+  5
+A4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+128.60859976
+ 30
+0.0
+ 11
+244.43439854
+ 21
+127.70540116
+ 31
+0.0
+  0
+LINE
+  5
+A5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.43439854
+ 20
+127.70540116
+ 30
+0.0
+ 11
+246.63759962
+ 21
+127.70540116
+ 31
+0.0
+  0
+LINE
+  5
+A6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+127.70540116
+ 30
+0.0
+ 11
+246.63759962
+ 21
+128.60859976
+ 31
+0.0
+  0
+LINE
+  5
+A7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+246.63759962
+ 20
+128.60859976
+ 30
+0.0
+ 11
+244.43439854
+ 21
+128.60859976
+ 31
+0.0
+  0
+LINE
+  5
+A8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+200.0799
+ 20
+181.1428
+ 30
+0.0
+ 11
+200.0799
+ 21
+179.9236
+ 31
+0.0
+  0
+LINE
+  5
+A9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+200.0799
+ 20
+179.9236
+ 30
+0.0
+ 11
+201.6801
+ 21
+179.9236
+ 31
+0.0
+  0
+LINE
+  5
+AA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+201.6801
+ 20
+179.9236
+ 30
+0.0
+ 11
+201.6801
+ 21
+181.1428
+ 31
+0.0
+  0
+LINE
+  5
+AB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+201.6801
+ 20
+181.1428
+ 30
+0.0
+ 11
+200.0799
+ 21
+181.1428
+ 31
+0.0
+  0
+LINE
+  5
+AC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+200.0799
+ 20
+183.0224
+ 30
+0.0
+ 11
+200.0799
+ 21
+181.8032
+ 31
+0.0
+  0
+LINE
+  5
+AD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+200.0799
+ 20
+181.8032
+ 30
+0.0
+ 11
+201.6801
+ 21
+181.8032
+ 31
+0.0
+  0
+LINE
+  5
+AE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+201.6801
+ 20
+181.8032
+ 30
+0.0
+ 11
+201.6801
+ 21
+183.0224
+ 31
+0.0
+  0
+LINE
+  5
+AF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+201.6801
+ 20
+183.0224
+ 30
+0.0
+ 11
+200.0799
+ 21
+183.0224
+ 31
+0.0
+  0
+LINE
+  5
+B0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.7522
+ 20
+176.6089
+ 30
+0.0
+ 11
+220.9714
+ 21
+176.6089
+ 31
+0.0
+  0
+LINE
+  5
+B1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.9714
+ 20
+176.6089
+ 30
+0.0
+ 11
+220.9714
+ 21
+178.2091
+ 31
+0.0
+  0
+LINE
+  5
+B2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.9714
+ 20
+178.2091
+ 30
+0.0
+ 11
+219.7522
+ 21
+178.2091
+ 31
+0.0
+  0
+LINE
+  5
+B3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.7522
+ 20
+178.2091
+ 30
+0.0
+ 11
+219.7522
+ 21
+176.6089
+ 31
+0.0
+  0
+LINE
+  5
+B4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.8726
+ 20
+176.6089
+ 30
+0.0
+ 11
+219.0918
+ 21
+176.6089
+ 31
+0.0
+  0
+LINE
+  5
+B5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.0918
+ 20
+176.6089
+ 30
+0.0
+ 11
+219.0918
+ 21
+178.2091
+ 31
+0.0
+  0
+LINE
+  5
+B6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+219.0918
+ 20
+178.2091
+ 30
+0.0
+ 11
+217.8726
+ 21
+178.2091
+ 31
+0.0
+  0
+LINE
+  5
+B7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.8726
+ 20
+178.2091
+ 30
+0.0
+ 11
+217.8726
+ 21
+176.6089
+ 31
+0.0
+  0
+LINE
+  5
+B8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+226.3689
+ 20
+145.9638
+ 30
+0.0
+ 11
+226.3689
+ 21
+144.7446
+ 31
+0.0
+  0
+LINE
+  5
+B9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+226.3689
+ 20
+144.7446
+ 30
+0.0
+ 11
+227.9691
+ 21
+144.7446
+ 31
+0.0
+  0
+LINE
+  5
+BA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+227.9691
+ 20
+144.7446
+ 30
+0.0
+ 11
+227.9691
+ 21
+145.9638
+ 31
+0.0
+  0
+LINE
+  5
+BB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+227.9691
+ 20
+145.9638
+ 30
+0.0
+ 11
+226.3689
+ 21
+145.9638
+ 31
+0.0
+  0
+LINE
+  5
+BC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+226.3689
+ 20
+147.8434
+ 30
+0.0
+ 11
+226.3689
+ 21
+146.6242
+ 31
+0.0
+  0
+LINE
+  5
+BD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+226.3689
+ 20
+146.6242
+ 30
+0.0
+ 11
+227.9691
+ 21
+146.6242
+ 31
+0.0
+  0
+LINE
+  5
+BE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+227.9691
+ 20
+146.6242
+ 30
+0.0
+ 11
+227.9691
+ 21
+147.8434
+ 31
+0.0
+  0
+LINE
+  5
+BF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+227.9691
+ 20
+147.8434
+ 30
+0.0
+ 11
+226.3689
+ 21
+147.8434
+ 31
+0.0
+  0
+LINE
+  5
+C0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.5172
+ 20
+138.1279
+ 30
+0.0
+ 11
+245.7364
+ 21
+138.1279
+ 31
+0.0
+  0
+LINE
+  5
+C1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.7364
+ 20
+138.1279
+ 30
+0.0
+ 11
+245.7364
+ 21
+139.7281
+ 31
+0.0
+  0
+LINE
+  5
+C2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.7364
+ 20
+139.7281
+ 30
+0.0
+ 11
+244.5172
+ 21
+139.7281
+ 31
+0.0
+  0
+LINE
+  5
+C3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.5172
+ 20
+139.7281
+ 30
+0.0
+ 11
+244.5172
+ 21
+138.1279
+ 31
+0.0
+  0
+LINE
+  5
+C4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+242.6376
+ 20
+138.1279
+ 30
+0.0
+ 11
+243.8568
+ 21
+138.1279
+ 31
+0.0
+  0
+LINE
+  5
+C5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.8568
+ 20
+138.1279
+ 30
+0.0
+ 11
+243.8568
+ 21
+139.7281
+ 31
+0.0
+  0
+LINE
+  5
+C6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.8568
+ 20
+139.7281
+ 30
+0.0
+ 11
+242.6376
+ 21
+139.7281
+ 31
+0.0
+  0
+LINE
+  5
+C7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+242.6376
+ 20
+139.7281
+ 30
+0.0
+ 11
+242.6376
+ 21
+138.1279
+ 31
+0.0
+  0
+LINE
+  5
+C8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.8568
+ 20
+142.1411
+ 30
+0.0
+ 11
+242.6376
+ 21
+142.1411
+ 31
+0.0
+  0
+LINE
+  5
+C9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+242.6376
+ 20
+142.1411
+ 30
+0.0
+ 11
+242.6376
+ 21
+140.5409
+ 31
+0.0
+  0
+LINE
+  5
+CA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+242.6376
+ 20
+140.5409
+ 30
+0.0
+ 11
+243.8568
+ 21
+140.5409
+ 31
+0.0
+  0
+LINE
+  5
+CB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.8568
+ 20
+140.5409
+ 30
+0.0
+ 11
+243.8568
+ 21
+142.1411
+ 31
+0.0
+  0
+LINE
+  5
+CC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.7364
+ 20
+142.1411
+ 30
+0.0
+ 11
+244.5172
+ 21
+142.1411
+ 31
+0.0
+  0
+LINE
+  5
+CD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.5172
+ 20
+142.1411
+ 30
+0.0
+ 11
+244.5172
+ 21
+140.5409
+ 31
+0.0
+  0
+LINE
+  5
+CE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+244.5172
+ 20
+140.5409
+ 30
+0.0
+ 11
+245.7364
+ 21
+140.5409
+ 31
+0.0
+  0
+LINE
+  5
+CF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.7364
+ 20
+140.5409
+ 30
+0.0
+ 11
+245.7364
+ 21
+142.1411
+ 31
+0.0
+  0
+LINE
+  5
+D0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+239.1959
+ 20
+113.8328
+ 30
+0.0
+ 11
+239.1959
+ 21
+112.6136
+ 31
+0.0
+  0
+LINE
+  5
+D1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+239.1959
+ 20
+112.6136
+ 30
+0.0
+ 11
+240.7961
+ 21
+112.6136
+ 31
+0.0
+  0
+LINE
+  5
+D2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.7961
+ 20
+112.6136
+ 30
+0.0
+ 11
+240.7961
+ 21
+113.8328
+ 31
+0.0
+  0
+LINE
+  5
+D3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.7961
+ 20
+113.8328
+ 30
+0.0
+ 11
+239.1959
+ 21
+113.8328
+ 31
+0.0
+  0
+LINE
+  5
+D4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+239.1959
+ 20
+115.7124
+ 30
+0.0
+ 11
+239.1959
+ 21
+114.4932
+ 31
+0.0
+  0
+LINE
+  5
+D5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+239.1959
+ 20
+114.4932
+ 30
+0.0
+ 11
+240.7961
+ 21
+114.4932
+ 31
+0.0
+  0
+LINE
+  5
+D6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.7961
+ 20
+114.4932
+ 30
+0.0
+ 11
+240.7961
+ 21
+115.7124
+ 31
+0.0
+  0
+LINE
+  5
+D7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+240.7961
+ 20
+115.7124
+ 30
+0.0
+ 11
+239.1959
+ 21
+115.7124
+ 31
+0.0
+  0
+LINE
+  5
+D8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.2091
+ 20
+114.4932
+ 30
+0.0
+ 11
+243.2091
+ 21
+115.7124
+ 31
+0.0
+  0
+LINE
+  5
+D9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.2091
+ 20
+115.7124
+ 30
+0.0
+ 11
+241.6089
+ 21
+115.7124
+ 31
+0.0
+  0
+LINE
+  5
+DA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+241.6089
+ 20
+115.7124
+ 30
+0.0
+ 11
+241.6089
+ 21
+114.4932
+ 31
+0.0
+  0
+LINE
+  5
+DB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+241.6089
+ 20
+114.4932
+ 30
+0.0
+ 11
+243.2091
+ 21
+114.4932
+ 31
+0.0
+  0
+LINE
+  5
+DC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.2091
+ 20
+112.6136
+ 30
+0.0
+ 11
+243.2091
+ 21
+113.8328
+ 31
+0.0
+  0
+LINE
+  5
+DD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.2091
+ 20
+113.8328
+ 30
+0.0
+ 11
+241.6089
+ 21
+113.8328
+ 31
+0.0
+  0
+LINE
+  5
+DE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+241.6089
+ 20
+113.8328
+ 30
+0.0
+ 11
+241.6089
+ 21
+112.6136
+ 31
+0.0
+  0
+LINE
+  5
+DF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+241.6089
+ 20
+112.6136
+ 30
+0.0
+ 11
+243.2091
+ 21
+112.6136
+ 31
+0.0
+  0
+LINE
+  5
+E0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.3681
+ 20
+114.4932
+ 30
+0.0
+ 11
+245.3681
+ 21
+115.7124
+ 31
+0.0
+  0
+LINE
+  5
+E1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.3681
+ 20
+115.7124
+ 30
+0.0
+ 11
+243.7679
+ 21
+115.7124
+ 31
+0.0
+  0
+LINE
+  5
+E2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.7679
+ 20
+115.7124
+ 30
+0.0
+ 11
+243.7679
+ 21
+114.4932
+ 31
+0.0
+  0
+LINE
+  5
+E3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.7679
+ 20
+114.4932
+ 30
+0.0
+ 11
+245.3681
+ 21
+114.4932
+ 31
+0.0
+  0
+LINE
+  5
+E4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.3681
+ 20
+112.6136
+ 30
+0.0
+ 11
+245.3681
+ 21
+113.8328
+ 31
+0.0
+  0
+LINE
+  5
+E5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.3681
+ 20
+113.8328
+ 30
+0.0
+ 11
+243.7679
+ 21
+113.8328
+ 31
+0.0
+  0
+LINE
+  5
+E6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.7679
+ 20
+113.8328
+ 30
+0.0
+ 11
+243.7679
+ 21
+112.6136
+ 31
+0.0
+  0
+LINE
+  5
+E7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.7679
+ 20
+112.6136
+ 30
+0.0
+ 11
+245.3681
+ 21
+112.6136
+ 31
+0.0
+  0
+LINE
+  5
+E8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+262.20999926
+ 20
+205.4633
+ 30
+0.0
+ 11
+262.20999926
+ 21
+202.9487
+ 31
+0.0
+  0
+LINE
+  5
+E9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+251.31000074
+ 20
+205.4633
+ 30
+0.0
+ 11
+251.31000074
+ 21
+202.9487
+ 31
+0.0
+  0
+LINE
+  5
+EA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+256.76
+ 20
+205.4633
+ 30
+0.0
+ 11
+256.76
+ 21
+202.9487
+ 31
+0.0
+  0
+LINE
+  5
+EB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+280.53100148
+ 20
+192.4077
+ 30
+0.0
+ 11
+280.53100148
+ 21
+194.9223
+ 31
+0.0
+  0
+LINE
+  5
+EC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+291.431
+ 20
+192.4077
+ 30
+0.0
+ 11
+291.431
+ 21
+194.9223
+ 31
+0.0
+  0
+LINE
+  5
+ED
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+285.98100074
+ 20
+192.4077
+ 30
+0.0
+ 11
+285.98100074
+ 21
+194.9223
+ 31
+0.0
+  0
+LINE
+  5
+EE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+224.23960022
+ 20
+153.03040004
+ 30
+0.0
+ 11
+224.23960022
+ 21
+156.98360016
+ 31
+0.0
+  0
+LINE
+  5
+EF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+224.23960022
+ 20
+156.98360016
+ 30
+0.0
+ 11
+222.98639978
+ 21
+156.98360016
+ 31
+0.0
+  0
+LINE
+  5
+F0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.98639978
+ 20
+156.98360016
+ 30
+0.0
+ 11
+222.98639978
+ 21
+153.03040004
+ 31
+0.0
+  0
+LINE
+  5
+F1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.98639978
+ 20
+153.03040004
+ 30
+0.0
+ 11
+224.23960022
+ 21
+153.03040004
+ 31
+0.0
+  0
+LINE
+  5
+F2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+229.31960022
+ 20
+153.03040004
+ 30
+0.0
+ 11
+229.31960022
+ 21
+156.98360016
+ 31
+0.0
+  0
+LINE
+  5
+F3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+229.31960022
+ 20
+156.98360016
+ 30
+0.0
+ 11
+228.06639978
+ 21
+156.98360016
+ 31
+0.0
+  0
+LINE
+  5
+F4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.06639978
+ 20
+156.98360016
+ 30
+0.0
+ 11
+228.06639978
+ 21
+153.03040004
+ 31
+0.0
+  0
+LINE
+  5
+F5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.06639978
+ 20
+153.03040004
+ 30
+0.0
+ 11
+229.31960022
+ 21
+153.03040004
+ 31
+0.0
+  0
+LINE
+  5
+F6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+231.50459966
+ 20
+169.75859874
+ 30
+0.0
+ 11
+220.80140034
+ 21
+169.75859874
+ 31
+0.0
+  0
+LINE
+  5
+F7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.80140034
+ 20
+169.75859874
+ 30
+0.0
+ 11
+220.80140034
+ 21
+161.2554001
+ 31
+0.0
+  0
+LINE
+  5
+F8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.80140034
+ 20
+161.2554001
+ 30
+0.0
+ 11
+231.50459966
+ 21
+161.2554001
+ 31
+0.0
+  0
+LINE
+  5
+F9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+231.50459966
+ 20
+161.2554001
+ 30
+0.0
+ 11
+231.50459966
+ 21
+169.75859874
+ 31
+0.0
+  0
+LINE
+  5
+FA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+285.4245985
+ 20
+206.0735985
+ 30
+0.0
+ 11
+283.7214015
+ 21
+206.0735985
+ 31
+0.0
+  0
+LINE
+  5
+FB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+283.7214015
+ 20
+206.0735985
+ 30
+0.0
+ 11
+283.7214015
+ 21
+204.3704015
+ 31
+0.0
+  0
+LINE
+  5
+FC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+283.7214015
+ 20
+204.3704015
+ 30
+0.0
+ 11
+285.4245985
+ 21
+204.3704015
+ 31
+0.0
+  0
+LINE
+  5
+FD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+285.4245985
+ 20
+204.3704015
+ 30
+0.0
+ 11
+285.4245985
+ 21
+206.0735985
+ 31
+0.0
+  0
+LINE
+  5
+FE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+292.4095985
+ 20
+205.9465985
+ 30
+0.0
+ 11
+290.7064015
+ 21
+205.9465985
+ 31
+0.0
+  0
+LINE
+  5
+FF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+290.7064015
+ 20
+205.9465985
+ 30
+0.0
+ 11
+290.7064015
+ 21
+204.2434015
+ 31
+0.0
+  0
+LINE
+  5
+100
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+290.7064015
+ 20
+204.2434015
+ 30
+0.0
+ 11
+292.4095985
+ 21
+204.2434015
+ 31
+0.0
+  0
+LINE
+  5
+101
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+292.4095985
+ 20
+204.2434015
+ 30
+0.0
+ 11
+292.4095985
+ 21
+205.9465985
+ 31
+0.0
+  0
+LINE
+  5
+102
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+227.2064015
+ 20
+118.8994015
+ 30
+0.0
+ 11
+228.9095985
+ 21
+118.8994015
+ 31
+0.0
+  0
+LINE
+  5
+103
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.9095985
+ 20
+118.8994015
+ 30
+0.0
+ 11
+228.9095985
+ 21
+120.6025985
+ 31
+0.0
+  0
+LINE
+  5
+104
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.9095985
+ 20
+120.6025985
+ 30
+0.0
+ 11
+227.2064015
+ 21
+120.6025985
+ 31
+0.0
+  0
+LINE
+  5
+105
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+227.2064015
+ 20
+120.6025985
+ 30
+0.0
+ 11
+227.2064015
+ 21
+118.8994015
+ 31
+0.0
+  0
+LINE
+  5
+106
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.9907
+ 20
+120.1828
+ 30
+0.0
+ 11
+222.9907
+ 21
+118.862
+ 31
+0.0
+  0
+LINE
+  5
+107
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.9907
+ 20
+118.862
+ 30
+0.0
+ 11
+224.9973
+ 21
+118.862
+ 31
+0.0
+  0
+LINE
+  5
+108
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+224.9973
+ 20
+118.862
+ 30
+0.0
+ 11
+224.9973
+ 21
+120.1828
+ 31
+0.0
+  0
+LINE
+  5
+109
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+224.9973
+ 20
+120.1828
+ 30
+0.0
+ 11
+222.9907
+ 21
+120.1828
+ 31
+0.0
+  0
+LINE
+  5
+10A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.9907
+ 20
+123.18
+ 30
+0.0
+ 11
+222.9907
+ 21
+121.8592
+ 31
+0.0
+  0
+LINE
+  5
+10B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.9907
+ 20
+121.8592
+ 30
+0.0
+ 11
+224.9973
+ 21
+121.8592
+ 31
+0.0
+  0
+LINE
+  5
+10C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+224.9973
+ 20
+121.8592
+ 30
+0.0
+ 11
+224.9973
+ 21
+123.18
+ 31
+0.0
+  0
+LINE
+  5
+10D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+224.9973
+ 20
+123.18
+ 30
+0.0
+ 11
+222.9907
+ 21
+123.18
+ 31
+0.0
+  0
+LINE
+  5
+10E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+224.97825
+ 20
+205.984
+ 30
+0.0
+ 11
+227.07375
+ 21
+205.984
+ 31
+0.0
+  0
+LINE
+  5
+10F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+224.97825
+ 20
+200.523
+ 30
+0.0
+ 11
+227.07375
+ 21
+200.523
+ 31
+0.0
+  0
+LINE
+  5
+110
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbLine
+ 10
+224.97825
+ 20
+195.062
+ 30
+0.0
+ 11
+227.07375
+ 21
+195.062
+ 31
+0.0
+  0
+LINE
+  5
+111
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.1035984
+ 20
+170.10059958
+ 30
+0.0
+ 11
+236.3004016
+ 21
+170.10059958
+ 31
+0.0
+  0
+LINE
+  5
+112
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+236.3004016
+ 20
+170.10059958
+ 30
+0.0
+ 11
+236.3004016
+ 21
+166.3974015
+ 31
+0.0
+  0
+LINE
+  5
+113
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+236.3004016
+ 20
+166.3974015
+ 30
+0.0
+ 11
+238.1035984
+ 21
+166.3974015
+ 31
+0.0
+  0
+LINE
+  5
+114
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+238.1035984
+ 20
+166.3974015
+ 30
+0.0
+ 11
+238.1035984
+ 21
+170.10059958
+ 31
+0.0
+  0
+LINE
+  5
+115
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.1835984
+ 20
+170.10059958
+ 30
+0.0
+ 11
+241.3804016
+ 21
+170.10059958
+ 31
+0.0
+  0
+LINE
+  5
+116
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+241.3804016
+ 20
+170.10059958
+ 30
+0.0
+ 11
+241.3804016
+ 21
+166.3974015
+ 31
+0.0
+  0
+LINE
+  5
+117
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+241.3804016
+ 20
+166.3974015
+ 30
+0.0
+ 11
+243.1835984
+ 21
+166.3974015
+ 31
+0.0
+  0
+LINE
+  5
+118
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+243.1835984
+ 20
+166.3974015
+ 30
+0.0
+ 11
+243.1835984
+ 21
+170.10059958
+ 31
+0.0
+  0
+LINE
+  5
+119
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+233.5403995
+ 20
+162.64059926
+ 30
+0.0
+ 11
+233.5403995
+ 21
+152.68740098
+ 31
+0.0
+  0
+LINE
+  5
+11A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+233.5403995
+ 20
+152.68740098
+ 30
+0.0
+ 11
+245.9436005
+ 21
+152.68740098
+ 31
+0.0
+  0
+LINE
+  5
+11B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.9436005
+ 20
+152.68740098
+ 30
+0.0
+ 11
+245.9436005
+ 21
+162.64059926
+ 31
+0.0
+  0
+LINE
+  5
+11C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+245.9436005
+ 20
+162.64059926
+ 30
+0.0
+ 11
+233.5403995
+ 21
+162.64059926
+ 31
+0.0
+  0
+LINE
+  5
+11D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+236.5964005
+ 20
+132.72859914
+ 30
+0.0
+ 11
+236.5964005
+ 21
+131.52540114
+ 31
+0.0
+  0
+LINE
+  5
+11E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+236.5964005
+ 20
+131.52540114
+ 30
+0.0
+ 11
+237.2995995
+ 21
+131.52540114
+ 31
+0.0
+  0
+LINE
+  5
+11F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+237.2995995
+ 20
+131.52540114
+ 30
+0.0
+ 11
+237.2995995
+ 21
+132.72859914
+ 31
+0.0
+  0
+LINE
+  5
+120
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+237.2995995
+ 20
+132.72859914
+ 30
+0.0
+ 11
+236.5964005
+ 21
+132.72859914
+ 31
+0.0
+  0
+LINE
+  5
+121
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+236.5964005
+ 20
+130.32859886
+ 30
+0.0
+ 11
+236.5964005
+ 21
+129.12540086
+ 31
+0.0
+  0
+LINE
+  5
+122
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+236.5964005
+ 20
+129.12540086
+ 30
+0.0
+ 11
+237.2995995
+ 21
+129.12540086
+ 31
+0.0
+  0
+LINE
+  5
+123
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+237.2995995
+ 20
+129.12540086
+ 30
+0.0
+ 11
+237.2995995
+ 21
+130.32859886
+ 31
+0.0
+  0
+LINE
+  5
+124
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+237.2995995
+ 20
+130.32859886
+ 30
+0.0
+ 11
+236.5964005
+ 21
+130.32859886
+ 31
+0.0
+  0
+LINE
+  5
+125
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.4825984
+ 20
+110.67240246
+ 30
+0.0
+ 11
+222.4825984
+ 21
+112.37559946
+ 31
+0.0
+  0
+LINE
+  5
+126
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.4825984
+ 20
+112.37559946
+ 30
+0.0
+ 11
+220.6794016
+ 21
+112.37559946
+ 31
+0.0
+  0
+LINE
+  5
+127
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.6794016
+ 20
+112.37559946
+ 30
+0.0
+ 11
+220.6794016
+ 21
+110.67240246
+ 31
+0.0
+  0
+LINE
+  5
+128
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.6794016
+ 20
+110.67240246
+ 30
+0.0
+ 11
+222.4825984
+ 21
+110.67240246
+ 31
+0.0
+  0
+LINE
+  5
+129
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.4825984
+ 20
+114.17240054
+ 30
+0.0
+ 11
+222.4825984
+ 21
+115.87559754
+ 31
+0.0
+  0
+LINE
+  5
+12A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.4825984
+ 20
+115.87559754
+ 30
+0.0
+ 11
+220.6794016
+ 21
+115.87559754
+ 31
+0.0
+  0
+LINE
+  5
+12B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.6794016
+ 20
+115.87559754
+ 30
+0.0
+ 11
+220.6794016
+ 21
+114.17240054
+ 31
+0.0
+  0
+LINE
+  5
+12C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.6794016
+ 20
+114.17240054
+ 30
+0.0
+ 11
+222.4825984
+ 21
+114.17240054
+ 31
+0.0
+  0
+LINE
+  5
+12D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.1675982
+ 20
+190.44940064
+ 30
+0.0
+ 11
+204.1675982
+ 21
+191.75259844
+ 31
+0.0
+  0
+LINE
+  5
+12E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.1675982
+ 20
+191.75259844
+ 30
+0.0
+ 11
+202.1644018
+ 21
+191.75259844
+ 31
+0.0
+  0
+LINE
+  5
+12F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.1644018
+ 20
+191.75259844
+ 30
+0.0
+ 11
+202.1644018
+ 21
+190.44940064
+ 31
+0.0
+  0
+LINE
+  5
+130
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.1644018
+ 20
+190.44940064
+ 30
+0.0
+ 11
+204.1675982
+ 21
+190.44940064
+ 31
+0.0
+  0
+LINE
+  5
+131
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.1675982
+ 20
+187.44940156
+ 30
+0.0
+ 11
+204.1675982
+ 21
+188.75259936
+ 31
+0.0
+  0
+LINE
+  5
+132
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.1675982
+ 20
+188.75259936
+ 30
+0.0
+ 11
+202.1644018
+ 21
+188.75259936
+ 31
+0.0
+  0
+LINE
+  5
+133
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.1644018
+ 20
+188.75259936
+ 30
+0.0
+ 11
+202.1644018
+ 21
+187.44940156
+ 31
+0.0
+  0
+LINE
+  5
+134
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.1644018
+ 20
+187.44940156
+ 30
+0.0
+ 11
+204.1675982
+ 21
+187.44940156
+ 31
+0.0
+  0
+LINE
+  5
+135
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.01640064
+ 20
+187.4564018
+ 30
+0.0
+ 11
+221.31959844
+ 21
+187.4564018
+ 31
+0.0
+  0
+LINE
+  5
+136
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.31959844
+ 20
+187.4564018
+ 30
+0.0
+ 11
+221.31959844
+ 21
+189.4595982
+ 31
+0.0
+  0
+LINE
+  5
+137
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.31959844
+ 20
+189.4595982
+ 30
+0.0
+ 11
+220.01640064
+ 21
+189.4595982
+ 31
+0.0
+  0
+LINE
+  5
+138
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.01640064
+ 20
+189.4595982
+ 30
+0.0
+ 11
+220.01640064
+ 21
+187.4564018
+ 31
+0.0
+  0
+LINE
+  5
+139
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.01640156
+ 20
+187.4564018
+ 30
+0.0
+ 11
+218.31959936
+ 21
+187.4564018
+ 31
+0.0
+  0
+LINE
+  5
+13A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+218.31959936
+ 20
+187.4564018
+ 30
+0.0
+ 11
+218.31959936
+ 21
+189.4595982
+ 31
+0.0
+  0
+LINE
+  5
+13B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+218.31959936
+ 20
+189.4595982
+ 30
+0.0
+ 11
+217.01640156
+ 21
+189.4595982
+ 31
+0.0
+  0
+LINE
+  5
+13C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.01640156
+ 20
+189.4595982
+ 30
+0.0
+ 11
+217.01640156
+ 21
+187.4564018
+ 31
+0.0
+  0
+LINE
+  5
+13D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.28059982
+ 20
+151.1055982
+ 30
+0.0
+ 11
+220.97740202
+ 21
+151.1055982
+ 31
+0.0
+  0
+LINE
+  5
+13E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.97740202
+ 20
+151.1055982
+ 30
+0.0
+ 11
+220.97740202
+ 21
+149.1024018
+ 31
+0.0
+  0
+LINE
+  5
+13F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+220.97740202
+ 20
+149.1024018
+ 30
+0.0
+ 11
+222.28059982
+ 21
+149.1024018
+ 31
+0.0
+  0
+LINE
+  5
+140
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.28059982
+ 20
+149.1024018
+ 30
+0.0
+ 11
+222.28059982
+ 21
+151.1055982
+ 31
+0.0
+  0
+LINE
+  5
+141
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+225.2805989
+ 20
+151.1055982
+ 30
+0.0
+ 11
+223.9774011
+ 21
+151.1055982
+ 31
+0.0
+  0
+LINE
+  5
+142
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+223.9774011
+ 20
+151.1055982
+ 30
+0.0
+ 11
+223.9774011
+ 21
+149.1024018
+ 31
+0.0
+  0
+LINE
+  5
+143
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+223.9774011
+ 20
+149.1024018
+ 30
+0.0
+ 11
+225.2805989
+ 21
+149.1024018
+ 31
+0.0
+  0
+LINE
+  5
+144
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+225.2805989
+ 20
+149.1024018
+ 30
+0.0
+ 11
+225.2805989
+ 21
+151.1055982
+ 31
+0.0
+  0
+LINE
+  5
+145
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+231.18439964
+ 20
+128.6204006
+ 30
+0.0
+ 11
+232.49559844
+ 21
+128.6204006
+ 31
+0.0
+  0
+LINE
+  5
+146
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+232.49559844
+ 20
+128.6204006
+ 30
+0.0
+ 11
+232.49559844
+ 21
+129.9315994
+ 31
+0.0
+  0
+LINE
+  5
+147
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+232.49559844
+ 20
+129.9315994
+ 30
+0.0
+ 11
+231.18439964
+ 21
+129.9315994
+ 31
+0.0
+  0
+LINE
+  5
+148
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+231.18439964
+ 20
+129.9315994
+ 30
+0.0
+ 11
+231.18439964
+ 21
+128.6204006
+ 31
+0.0
+  0
+LINE
+  5
+149
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+183.8154007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+183.8154007
+ 31
+0.0
+  0
+LINE
+  5
+14A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+183.8154007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+184.7185993
+ 31
+0.0
+  0
+LINE
+  5
+14B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+184.7185993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+184.7185993
+ 31
+0.0
+  0
+LINE
+  5
+14C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+184.7185993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+183.8154007
+ 31
+0.0
+  0
+LINE
+  5
+14D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+182.5454007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+182.5454007
+ 31
+0.0
+  0
+LINE
+  5
+14E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+182.5454007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+183.4485993
+ 31
+0.0
+  0
+LINE
+  5
+14F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+183.4485993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+183.4485993
+ 31
+0.0
+  0
+LINE
+  5
+150
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+183.4485993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+182.5454007
+ 31
+0.0
+  0
+LINE
+  5
+151
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+181.2754007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+181.2754007
+ 31
+0.0
+  0
+LINE
+  5
+152
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+181.2754007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+182.1785993
+ 31
+0.0
+  0
+LINE
+  5
+153
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+182.1785993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+182.1785993
+ 31
+0.0
+  0
+LINE
+  5
+154
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+182.1785993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+181.2754007
+ 31
+0.0
+  0
+LINE
+  5
+155
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+180.0054007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+180.0054007
+ 31
+0.0
+  0
+LINE
+  5
+156
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+180.0054007
+ 30
+0.0
+ 11
+204.4930992
+ 21
+180.9085993
+ 31
+0.0
+  0
+LINE
+  5
+157
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+204.4930992
+ 20
+180.9085993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+180.9085993
+ 31
+0.0
+  0
+LINE
+  5
+158
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+202.76489844
+ 20
+180.9085993
+ 30
+0.0
+ 11
+202.76489844
+ 21
+180.0054007
+ 31
+0.0
+  0
+LINE
+  5
+159
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+180.0054007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+180.0054007
+ 31
+0.0
+  0
+LINE
+  5
+15A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+180.0054007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+180.9085993
+ 31
+0.0
+  0
+LINE
+  5
+15B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+180.9085993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+180.9085993
+ 31
+0.0
+  0
+LINE
+  5
+15C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+180.9085993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+180.0054007
+ 31
+0.0
+  0
+LINE
+  5
+15D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+181.2754007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+181.2754007
+ 31
+0.0
+  0
+LINE
+  5
+15E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+181.2754007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+182.1785993
+ 31
+0.0
+  0
+LINE
+  5
+15F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+182.1785993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+182.1785993
+ 31
+0.0
+  0
+LINE
+  5
+160
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+182.1785993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+181.2754007
+ 31
+0.0
+  0
+LINE
+  5
+161
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+182.5454007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+182.5454007
+ 31
+0.0
+  0
+LINE
+  5
+162
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+182.5454007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+183.4485993
+ 31
+0.0
+  0
+LINE
+  5
+163
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+183.4485993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+183.4485993
+ 31
+0.0
+  0
+LINE
+  5
+164
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+183.4485993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+182.5454007
+ 31
+0.0
+  0
+LINE
+  5
+165
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+183.8154007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+183.8154007
+ 31
+0.0
+  0
+LINE
+  5
+166
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+183.8154007
+ 30
+0.0
+ 11
+209.91710156
+ 21
+184.7185993
+ 31
+0.0
+  0
+LINE
+  5
+167
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+209.91710156
+ 20
+184.7185993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+184.7185993
+ 31
+0.0
+  0
+LINE
+  5
+168
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+208.1889008
+ 20
+184.7185993
+ 30
+0.0
+ 11
+208.1889008
+ 21
+183.8154007
+ 31
+0.0
+  0
+LINE
+  5
+169
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+183.5614007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+183.5614007
+ 31
+0.0
+  0
+LINE
+  5
+16A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+183.5614007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+184.4645993
+ 31
+0.0
+  0
+LINE
+  5
+16B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+184.4645993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+184.4645993
+ 31
+0.0
+  0
+LINE
+  5
+16C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+184.4645993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+183.5614007
+ 31
+0.0
+  0
+LINE
+  5
+16D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+182.2914007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+182.2914007
+ 31
+0.0
+  0
+LINE
+  5
+16E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+182.2914007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+183.1945993
+ 31
+0.0
+  0
+LINE
+  5
+16F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+183.1945993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+183.1945993
+ 31
+0.0
+  0
+LINE
+  5
+170
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+183.1945993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+182.2914007
+ 31
+0.0
+  0
+LINE
+  5
+171
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+181.0214007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+181.0214007
+ 31
+0.0
+  0
+LINE
+  5
+172
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+181.0214007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+181.9245993
+ 31
+0.0
+  0
+LINE
+  5
+173
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+181.9245993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+181.9245993
+ 31
+0.0
+  0
+LINE
+  5
+174
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+181.9245993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+181.0214007
+ 31
+0.0
+  0
+LINE
+  5
+175
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+179.7514007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+179.7514007
+ 31
+0.0
+  0
+LINE
+  5
+176
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+179.7514007
+ 30
+0.0
+ 11
+217.3200992
+ 21
+180.6545993
+ 31
+0.0
+  0
+LINE
+  5
+177
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+217.3200992
+ 20
+180.6545993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+180.6545993
+ 31
+0.0
+  0
+LINE
+  5
+178
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+215.59189844
+ 20
+180.6545993
+ 30
+0.0
+ 11
+215.59189844
+ 21
+179.7514007
+ 31
+0.0
+  0
+LINE
+  5
+179
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+179.7514007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+179.7514007
+ 31
+0.0
+  0
+LINE
+  5
+17A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+179.7514007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+180.6545993
+ 31
+0.0
+  0
+LINE
+  5
+17B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+180.6545993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+180.6545993
+ 31
+0.0
+  0
+LINE
+  5
+17C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+180.6545993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+179.7514007
+ 31
+0.0
+  0
+LINE
+  5
+17D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+181.0214007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+181.0214007
+ 31
+0.0
+  0
+LINE
+  5
+17E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+181.0214007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+181.9245993
+ 31
+0.0
+  0
+LINE
+  5
+17F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+181.9245993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+181.9245993
+ 31
+0.0
+  0
+LINE
+  5
+180
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+181.9245993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+181.0214007
+ 31
+0.0
+  0
+LINE
+  5
+181
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+182.2914007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+182.2914007
+ 31
+0.0
+  0
+LINE
+  5
+182
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+182.2914007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+183.1945993
+ 31
+0.0
+  0
+LINE
+  5
+183
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+183.1945993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+183.1945993
+ 31
+0.0
+  0
+LINE
+  5
+184
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+183.1945993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+182.2914007
+ 31
+0.0
+  0
+LINE
+  5
+185
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+183.5614007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+183.5614007
+ 31
+0.0
+  0
+LINE
+  5
+186
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+183.5614007
+ 30
+0.0
+ 11
+222.74410156
+ 21
+184.4645993
+ 31
+0.0
+  0
+LINE
+  5
+187
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+222.74410156
+ 20
+184.4645993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+184.4645993
+ 31
+0.0
+  0
+LINE
+  5
+188
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+221.0159008
+ 20
+184.4645993
+ 30
+0.0
+ 11
+221.0159008
+ 21
+183.5614007
+ 31
+0.0
+  0
+LINE
+  5
+189
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+148.7634007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+148.7634007
+ 31
+0.0
+  0
+LINE
+  5
+18A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+148.7634007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+149.6665993
+ 31
+0.0
+  0
+LINE
+  5
+18B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+149.6665993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+149.6665993
+ 31
+0.0
+  0
+LINE
+  5
+18C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+149.6665993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+148.7634007
+ 31
+0.0
+  0
+LINE
+  5
+18D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+147.4934007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+147.4934007
+ 31
+0.0
+  0
+LINE
+  5
+18E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+147.4934007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+148.3965993
+ 31
+0.0
+  0
+LINE
+  5
+18F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+148.3965993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+148.3965993
+ 31
+0.0
+  0
+LINE
+  5
+190
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+148.3965993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+147.4934007
+ 31
+0.0
+  0
+LINE
+  5
+191
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+146.2234007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+146.2234007
+ 31
+0.0
+  0
+LINE
+  5
+192
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+146.2234007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+147.1265993
+ 31
+0.0
+  0
+LINE
+  5
+193
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+147.1265993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+147.1265993
+ 31
+0.0
+  0
+LINE
+  5
+194
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+147.1265993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+146.2234007
+ 31
+0.0
+  0
+LINE
+  5
+195
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+144.9534007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+144.9534007
+ 31
+0.0
+  0
+LINE
+  5
+196
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+144.9534007
+ 30
+0.0
+ 11
+230.4010992
+ 21
+145.8565993
+ 31
+0.0
+  0
+LINE
+  5
+197
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+230.4010992
+ 20
+145.8565993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+145.8565993
+ 31
+0.0
+  0
+LINE
+  5
+198
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+228.67289844
+ 20
+145.8565993
+ 30
+0.0
+ 11
+228.67289844
+ 21
+144.9534007
+ 31
+0.0
+  0
+LINE
+  5
+199
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+144.9534007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+144.9534007
+ 31
+0.0
+  0
+LINE
+  5
+19A
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+144.9534007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+145.8565993
+ 31
+0.0
+  0
+LINE
+  5
+19B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+145.8565993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+145.8565993
+ 31
+0.0
+  0
+LINE
+  5
+19C
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+145.8565993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+144.9534007
+ 31
+0.0
+  0
+LINE
+  5
+19D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+146.2234007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+146.2234007
+ 31
+0.0
+  0
+LINE
+  5
+19E
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+146.2234007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+147.1265993
+ 31
+0.0
+  0
+LINE
+  5
+19F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+147.1265993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+147.1265993
+ 31
+0.0
+  0
+LINE
+  5
+1A0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+147.1265993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+146.2234007
+ 31
+0.0
+  0
+LINE
+  5
+1A1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+147.4934007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+147.4934007
+ 31
+0.0
+  0
+LINE
+  5
+1A2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+147.4934007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+148.3965993
+ 31
+0.0
+  0
+LINE
+  5
+1A3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+148.3965993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+148.3965993
+ 31
+0.0
+  0
+LINE
+  5
+1A4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+148.3965993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+147.4934007
+ 31
+0.0
+  0
+LINE
+  5
+1A5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+148.7634007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+148.7634007
+ 31
+0.0
+  0
+LINE
+  5
+1A6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+148.7634007
+ 30
+0.0
+ 11
+235.82510156
+ 21
+149.6665993
+ 31
+0.0
+  0
+LINE
+  5
+1A7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+235.82510156
+ 20
+149.6665993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+149.6665993
+ 31
+0.0
+  0
+LINE
+  5
+1A8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbLine
+ 10
+234.0969008
+ 20
+149.6665993
+ 30
+0.0
+ 11
+234.0969008
+ 21
+148.7634007
+ 31
+0.0
+  0
+CIRCLE
+  5
+1A9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+221.581
+ 20
+133.975
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1AA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+239.869
+ 20
+116.83
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1AB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+239.488
+ 20
+124.577
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1AC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+240.758
+ 20
+131.816
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1AD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+242.536
+ 20
+137.277
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1AE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+224.248
+ 20
+114.671
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1AF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+235.551
+ 20
+139.817
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1B0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+226.788
+ 20
+132.578
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1B1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+228.185
+ 20
+141.341
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1B2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+207.738
+ 20
+176.52
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1B3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+229.328
+ 20
+140.071
+ 30
+0.0
+ 40
+0.3682999999999481
+  0
+CIRCLE
+  5
+1B4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+209.389
+ 20
+176.52
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1B5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+216.247
+ 20
+152.644
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1B6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+212.437
+ 20
+185.918
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1B7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+210.913
+ 20
+184.267
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1B8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+245.203
+ 20
+189.474
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1B9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+247.108
+ 20
+198.872
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1BA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+234.281
+ 20
+186.299
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1BB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+228.312
+ 20
+187.823
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1BC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+234.408
+ 20
+111.115
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1BD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+244.06
+ 20
+111.496
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1BE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+245.584
+ 20
+134.991
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1BF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+233.138
+ 20
+132.324
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1C0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+243.171
+ 20
+146.04
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1C1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+245.711
+ 20
+181.981
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1C2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+206.976
+ 20
+183.759
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1C3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+207.23
+ 20
+190.617
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1C4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+211.167
+ 20
+177.536
+ 30
+0.0
+ 40
+0.368300000000005
+  0
+CIRCLE
+  5
+1C5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+208.627
+ 20
+178.679
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1C6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+219.295
+ 20
+205.476
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1C7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+233.011
+ 20
+192.649
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1C8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+229.836
+ 20
+190.236
+ 30
+0.0
+ 40
+0.3682999999999765
+  0
+CIRCLE
+  5
+1C9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+225.899
+ 20
+180.838
+ 30
+0.0
+ 40
+0.3683000000000334
+  0
+CIRCLE
+  5
+1CA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+226.915
+ 20
+112.512
+ 30
+0.0
+ 40
+0.4317999999999529
+  0
+CIRCLE
+  5
+1CB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+215.993
+ 20
+172.71
+ 30
+0.0
+ 40
+0.4318000000000097
+  0
+CIRCLE
+  5
+1CC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbCircle
+ 10
+242.409
+ 20
+198.66500016
+ 30
+0.0
+ 40
+0.8007984999999849
+  0
+CIRCLE
+  5
+1CD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbCircle
+ 10
+242.409
+ 20
+193.665
+ 30
+0.0
+ 40
+0.8007984999999849
+  0
+CIRCLE
+  5
+1CE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbCircle
+ 10
+239.361
+ 20
+142.23
+ 30
+0.0
+ 40
+0.8007984999999849
+  0
+CIRCLE
+  5
+1CF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbCircle
+ 10
+239.361
+ 20
+137.22999984
+ 30
+0.0
+ 40
+0.8007984999999849
+  0
+CIRCLE
+  5
+1D0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+262.20999926
+ 20
+205.4633
+ 30
+0.0
+ 40
+0.679450000000088
+  0
+CIRCLE
+  5
+1D1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+262.20999926
+ 20
+202.9487
+ 30
+0.0
+ 40
+0.679450000000088
+  0
+CIRCLE
+  5
+1D2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+251.31000074
+ 20
+205.4633
+ 30
+0.0
+ 40
+0.6794500000000312
+  0
+CIRCLE
+  5
+1D3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+251.31000074
+ 20
+202.9487
+ 30
+0.0
+ 40
+0.6794500000000312
+  0
+CIRCLE
+  5
+1D4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+256.76
+ 20
+205.4633
+ 30
+0.0
+ 40
+0.6794499999999744
+  0
+CIRCLE
+  5
+1D5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+256.76
+ 20
+202.9487
+ 30
+0.0
+ 40
+0.6794499999999744
+  0
+CIRCLE
+  5
+1D6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+280.53100148
+ 20
+192.4077
+ 30
+0.0
+ 40
+0.6794499999999744
+  0
+CIRCLE
+  5
+1D7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+280.53100148
+ 20
+194.9223
+ 30
+0.0
+ 40
+0.6794499999999744
+  0
+CIRCLE
+  5
+1D8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+291.431
+ 20
+192.4077
+ 30
+0.0
+ 40
+0.6794500000000312
+  0
+CIRCLE
+  5
+1D9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+291.431
+ 20
+194.9223
+ 30
+0.0
+ 40
+0.6794500000000312
+  0
+CIRCLE
+  5
+1DA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+285.98100074
+ 20
+192.4077
+ 30
+0.0
+ 40
+0.6794500000000312
+  0
+CIRCLE
+  5
+1DB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+285.98100074
+ 20
+194.9223
+ 30
+0.0
+ 40
+0.6794500000000312
+  0
+CIRCLE
+  5
+1DC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+282.033
+ 20
+205.222
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1DD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+289.018
+ 20
+205.095
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1DE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+240.758
+ 20
+122.291
+ 30
+0.0
+ 40
+0.4258005200000241
+  0
+CIRCLE
+  5
+1DF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+238.218
+ 20
+122.291
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+235.678
+ 20
+122.291
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+233.138
+ 20
+122.291
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+230.598
+ 20
+122.291
+ 30
+0.0
+ 40
+0.4258005199999673
+  0
+CIRCLE
+  5
+1E3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+228.058
+ 20
+122.291
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+240.758
+ 20
+119.751
+ 30
+0.0
+ 40
+0.4258005200000241
+  0
+CIRCLE
+  5
+1E5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+238.218
+ 20
+119.751
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E6
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+235.678
+ 20
+119.751
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+233.138
+ 20
+119.751
+ 30
+0.0
+ 40
+0.4258005199999957
+  0
+CIRCLE
+  5
+1E8
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   100
+100
+AcDbCircle
+ 10
+230.598
+ 20
+119.751
+ 30
+0.0
+ 40
+0.4258005199999673
+  0
+CIRCLE
+  5
+1E9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   200
+100
+AcDbCircle
+ 10
+205.706
+ 20
+200.523
+ 30
+0.0
+ 40
+1.079499999999996
+  0
+CIRCLE
+  5
+1EA
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+224.97825
+ 20
+205.984
+ 30
+0.0
+ 40
+0.5746750000000418
+  0
+CIRCLE
+  5
+1EB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+227.07375
+ 20
+205.984
+ 30
+0.0
+ 40
+0.5746749999999565
+  0
+CIRCLE
+  5
+1EC
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+224.97825
+ 20
+200.523
+ 30
+0.0
+ 40
+0.5746750000000418
+  0
+CIRCLE
+  5
+1ED
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+227.07375
+ 20
+200.523
+ 30
+0.0
+ 40
+0.5746749999999565
+  0
+CIRCLE
+  5
+1EE
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+224.97825
+ 20
+195.062
+ 30
+0.0
+ 40
+0.5746750000000418
+  0
+CIRCLE
+  5
+1EF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+   140
+100
+AcDbCircle
+ 10
+227.07375
+ 20
+195.062
+ 30
+0.0
+ 40
+0.5746749999999565
+  0
+CIRCLE
+  5
+1F0
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+370
+    50
+100
+AcDbCircle
+ 10
+228.34000096
+ 20
+129.276
+ 30
+0.0
+ 40
+0.2007996999999762
+  0
+HATCH
+  5
+1F1
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+206.595
+ 20
+148.453
+ 11
+206.595
+ 21
+145.024
+ 72
+     1
+ 10
+206.595
+ 20
+145.024
+ 11
+219.295
+ 21
+145.024
+ 72
+     1
+ 10
+219.295
+ 20
+145.024
+ 11
+219.295
+ 21
+148.453
+ 72
+     1
+ 10
+219.295
+ 20
+148.453
+ 11
+206.595
+ 21
+148.453
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F2
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+206.722
+ 20
+163.439
+ 11
+206.722
+ 21
+159.883
+ 72
+     1
+ 10
+206.722
+ 20
+159.883
+ 11
+219.295
+ 21
+159.883
+ 72
+     1
+ 10
+219.295
+ 20
+159.883
+ 11
+219.295
+ 21
+163.439
+ 72
+     1
+ 10
+219.295
+ 20
+163.439
+ 11
+206.722
+ 21
+163.439
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F3
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+244.695
+ 20
+124.831
+ 11
+244.695
+ 21
+119.878
+ 72
+     1
+ 10
+244.695
+ 20
+119.878
+ 11
+251.68
+ 21
+119.878
+ 72
+     1
+ 10
+251.68
+ 20
+119.878
+ 11
+251.68
+ 21
+124.831
+ 72
+     1
+ 10
+251.68
+ 20
+124.831
+ 11
+244.695
+ 21
+124.831
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F4
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+244.695
+ 20
+151.628
+ 11
+244.695
+ 21
+146.675
+ 72
+     1
+ 10
+244.695
+ 20
+146.675
+ 11
+251.68
+ 21
+146.675
+ 72
+     1
+ 10
+251.68
+ 20
+146.675
+ 11
+251.68
+ 21
+151.628
+ 72
+     1
+ 10
+251.68
+ 20
+151.628
+ 11
+244.695
+ 21
+151.628
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F5
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+244.695
+ 20
+178.806
+ 11
+244.695
+ 21
+173.853
+ 72
+     1
+ 10
+244.695
+ 20
+173.853
+ 11
+251.68
+ 21
+173.853
+ 72
+     1
+ 10
+251.68
+ 20
+173.853
+ 11
+251.68
+ 21
+178.806
+ 72
+     1
+ 10
+251.68
+ 20
+178.806
+ 11
+244.695
+ 21
+178.806
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F6
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.53600146
+ 20
+133.90699912
+ 11
+238.53600038
+ 21
+133.90699912
+ 72
+     1
+ 10
+238.53600038
+ 20
+133.90699912
+ 11
+238.53600038
+ 21
+133.20700052
+ 72
+     1
+ 10
+238.53600038
+ 20
+133.20700052
+ 11
+240.53600146
+ 21
+133.20700052
+ 72
+     1
+ 10
+240.53600146
+ 20
+133.20700052
+ 11
+240.53600146
+ 21
+133.90699912
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F7
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.63760146
+ 20
+134.00859912
+ 11
+238.43440038
+ 21
+134.00859912
+ 72
+     1
+ 10
+238.43440038
+ 20
+134.00859912
+ 11
+238.43440038
+ 21
+133.10540052
+ 72
+     1
+ 10
+238.43440038
+ 20
+133.10540052
+ 11
+240.63760146
+ 21
+133.10540052
+ 72
+     1
+ 10
+240.63760146
+ 20
+133.10540052
+ 11
+240.63760146
+ 21
+134.00859912
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F8
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.53599962
+ 20
+133.90699912
+ 11
+244.53599854
+ 21
+133.90699912
+ 72
+     1
+ 10
+244.53599854
+ 20
+133.90699912
+ 11
+244.53599854
+ 21
+133.20700052
+ 72
+     1
+ 10
+244.53599854
+ 20
+133.20700052
+ 11
+246.53599962
+ 21
+133.20700052
+ 72
+     1
+ 10
+246.53599962
+ 20
+133.20700052
+ 11
+246.53599962
+ 21
+133.90699912
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1F9
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.63759962
+ 20
+134.00859912
+ 11
+244.43439854
+ 21
+134.00859912
+ 72
+     1
+ 10
+244.43439854
+ 20
+134.00859912
+ 11
+244.43439854
+ 21
+133.10540052
+ 72
+     1
+ 10
+244.43439854
+ 20
+133.10540052
+ 11
+246.63759962
+ 21
+133.10540052
+ 72
+     1
+ 10
+246.63759962
+ 20
+133.10540052
+ 11
+246.63759962
+ 21
+134.00859912
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1FA
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.53600146
+ 20
+130.70700044
+ 11
+238.53600038
+ 21
+130.70700044
+ 72
+     1
+ 10
+238.53600038
+ 20
+130.70700044
+ 11
+238.53600038
+ 21
+130.00700184
+ 72
+     1
+ 10
+238.53600038
+ 20
+130.00700184
+ 11
+240.53600146
+ 21
+130.00700184
+ 72
+     1
+ 10
+240.53600146
+ 20
+130.00700184
+ 11
+240.53600146
+ 21
+130.70700044
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1FB
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.63760146
+ 20
+130.80860044
+ 11
+238.43440038
+ 21
+130.80860044
+ 72
+     1
+ 10
+238.43440038
+ 20
+130.80860044
+ 11
+238.43440038
+ 21
+129.90540184
+ 72
+     1
+ 10
+238.43440038
+ 20
+129.90540184
+ 11
+240.63760146
+ 21
+129.90540184
+ 72
+     1
+ 10
+240.63760146
+ 20
+129.90540184
+ 11
+240.63760146
+ 21
+130.80860044
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1FC
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.53599962
+ 20
+130.70700044
+ 11
+244.53599854
+ 21
+130.70700044
+ 72
+     1
+ 10
+244.53599854
+ 20
+130.70700044
+ 11
+244.53599854
+ 21
+130.00700184
+ 72
+     1
+ 10
+244.53599854
+ 20
+130.00700184
+ 11
+246.53599962
+ 21
+130.00700184
+ 72
+     1
+ 10
+246.53599962
+ 20
+130.00700184
+ 11
+246.53599962
+ 21
+130.70700044
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1FD
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.63759962
+ 20
+130.80860044
+ 11
+244.43439854
+ 21
+130.80860044
+ 72
+     1
+ 10
+244.43439854
+ 20
+130.80860044
+ 11
+244.43439854
+ 21
+129.90540184
+ 72
+     1
+ 10
+244.43439854
+ 20
+129.90540184
+ 11
+246.63759962
+ 21
+129.90540184
+ 72
+     1
+ 10
+246.63759962
+ 20
+129.90540184
+ 11
+246.63759962
+ 21
+130.80860044
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1FE
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.53600146
+ 20
+126.30699908
+ 11
+238.53600038
+ 21
+126.30699908
+ 72
+     1
+ 10
+238.53600038
+ 20
+126.30699908
+ 11
+238.53600038
+ 21
+125.60700048
+ 72
+     1
+ 10
+238.53600038
+ 20
+125.60700048
+ 11
+240.53600146
+ 21
+125.60700048
+ 72
+     1
+ 10
+240.53600146
+ 20
+125.60700048
+ 11
+240.53600146
+ 21
+126.30699908
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+1FF
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.63760146
+ 20
+126.40859908
+ 11
+238.43440038
+ 21
+126.40859908
+ 72
+     1
+ 10
+238.43440038
+ 20
+126.40859908
+ 11
+238.43440038
+ 21
+125.50540048
+ 72
+     1
+ 10
+238.43440038
+ 20
+125.50540048
+ 11
+240.63760146
+ 21
+125.50540048
+ 72
+     1
+ 10
+240.63760146
+ 20
+125.50540048
+ 11
+240.63760146
+ 21
+126.40859908
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+200
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.53600146
+ 20
+128.50699976
+ 11
+238.53600038
+ 21
+128.50699976
+ 72
+     1
+ 10
+238.53600038
+ 20
+128.50699976
+ 11
+238.53600038
+ 21
+127.80700116
+ 72
+     1
+ 10
+238.53600038
+ 20
+127.80700116
+ 11
+240.53600146
+ 21
+127.80700116
+ 72
+     1
+ 10
+240.53600146
+ 20
+127.80700116
+ 11
+240.53600146
+ 21
+128.50699976
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+201
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.63760146
+ 20
+128.60859976
+ 11
+238.43440038
+ 21
+128.60859976
+ 72
+     1
+ 10
+238.43440038
+ 20
+128.60859976
+ 11
+238.43440038
+ 21
+127.70540116
+ 72
+     1
+ 10
+238.43440038
+ 20
+127.70540116
+ 11
+240.63760146
+ 21
+127.70540116
+ 72
+     1
+ 10
+240.63760146
+ 20
+127.70540116
+ 11
+240.63760146
+ 21
+128.60859976
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+202
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.53599962
+ 20
+126.30699908
+ 11
+244.53599854
+ 21
+126.30699908
+ 72
+     1
+ 10
+244.53599854
+ 20
+126.30699908
+ 11
+244.53599854
+ 21
+125.60700048
+ 72
+     1
+ 10
+244.53599854
+ 20
+125.60700048
+ 11
+246.53599962
+ 21
+125.60700048
+ 72
+     1
+ 10
+246.53599962
+ 20
+125.60700048
+ 11
+246.53599962
+ 21
+126.30699908
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+203
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.63759962
+ 20
+126.40859908
+ 11
+244.43439854
+ 21
+126.40859908
+ 72
+     1
+ 10
+244.43439854
+ 20
+126.40859908
+ 11
+244.43439854
+ 21
+125.50540048
+ 72
+     1
+ 10
+244.43439854
+ 20
+125.50540048
+ 11
+246.63759962
+ 21
+125.50540048
+ 72
+     1
+ 10
+246.63759962
+ 20
+125.50540048
+ 11
+246.63759962
+ 21
+126.40859908
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+204
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.53599962
+ 20
+128.50699976
+ 11
+244.53599854
+ 21
+128.50699976
+ 72
+     1
+ 10
+244.53599854
+ 20
+128.50699976
+ 11
+244.53599854
+ 21
+127.80700116
+ 72
+     1
+ 10
+244.53599854
+ 20
+127.80700116
+ 11
+246.53599962
+ 21
+127.80700116
+ 72
+     1
+ 10
+246.53599962
+ 20
+127.80700116
+ 11
+246.53599962
+ 21
+128.50699976
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+205
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+246.63759962
+ 20
+128.60859976
+ 11
+244.43439854
+ 21
+128.60859976
+ 72
+     1
+ 10
+244.43439854
+ 20
+128.60859976
+ 11
+244.43439854
+ 21
+127.70540116
+ 72
+     1
+ 10
+244.43439854
+ 20
+127.70540116
+ 11
+246.63759962
+ 21
+127.70540116
+ 72
+     1
+ 10
+246.63759962
+ 20
+127.70540116
+ 11
+246.63759962
+ 21
+128.60859976
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+206
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+201.5785
+ 20
+181.0412
+ 11
+200.1815
+ 21
+181.0412
+ 72
+     1
+ 10
+200.1815
+ 20
+181.0412
+ 11
+200.1815
+ 21
+180.0252
+ 72
+     1
+ 10
+200.1815
+ 20
+180.0252
+ 11
+201.5785
+ 21
+180.0252
+ 72
+     1
+ 10
+201.5785
+ 20
+180.0252
+ 11
+201.5785
+ 21
+181.0412
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+207
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+201.6801
+ 20
+181.1428
+ 11
+200.0799
+ 21
+181.1428
+ 72
+     1
+ 10
+200.0799
+ 20
+181.1428
+ 11
+200.0799
+ 21
+179.9236
+ 72
+     1
+ 10
+200.0799
+ 20
+179.9236
+ 11
+201.6801
+ 21
+179.9236
+ 72
+     1
+ 10
+201.6801
+ 20
+179.9236
+ 11
+201.6801
+ 21
+181.1428
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+208
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+201.5785
+ 20
+182.9208
+ 11
+200.1815
+ 21
+182.9208
+ 72
+     1
+ 10
+200.1815
+ 20
+182.9208
+ 11
+200.1815
+ 21
+181.9048
+ 72
+     1
+ 10
+200.1815
+ 20
+181.9048
+ 11
+201.5785
+ 21
+181.9048
+ 72
+     1
+ 10
+201.5785
+ 20
+181.9048
+ 11
+201.5785
+ 21
+182.9208
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+209
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+201.6801
+ 20
+183.0224
+ 11
+200.0799
+ 21
+183.0224
+ 72
+     1
+ 10
+200.0799
+ 20
+183.0224
+ 11
+200.0799
+ 21
+181.8032
+ 72
+     1
+ 10
+200.0799
+ 20
+181.8032
+ 11
+201.6801
+ 21
+181.8032
+ 72
+     1
+ 10
+201.6801
+ 20
+181.8032
+ 11
+201.6801
+ 21
+183.0224
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+20A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+219.8538
+ 20
+178.1075
+ 11
+219.8538
+ 21
+176.7105
+ 72
+     1
+ 10
+219.8538
+ 20
+176.7105
+ 11
+220.8698
+ 21
+176.7105
+ 72
+     1
+ 10
+220.8698
+ 20
+176.7105
+ 11
+220.8698
+ 21
+178.1075
+ 72
+     1
+ 10
+220.8698
+ 20
+178.1075
+ 11
+219.8538
+ 21
+178.1075
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+20B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+219.7522
+ 20
+178.2091
+ 11
+219.7522
+ 21
+176.6089
+ 72
+     1
+ 10
+219.7522
+ 20
+176.6089
+ 11
+220.9714
+ 21
+176.6089
+ 72
+     1
+ 10
+220.9714
+ 20
+176.6089
+ 11
+220.9714
+ 21
+178.2091
+ 72
+     1
+ 10
+220.9714
+ 20
+178.2091
+ 11
+219.7522
+ 21
+178.2091
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+20C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+217.9742
+ 20
+178.1075
+ 11
+217.9742
+ 21
+176.7105
+ 72
+     1
+ 10
+217.9742
+ 20
+176.7105
+ 11
+218.9902
+ 21
+176.7105
+ 72
+     1
+ 10
+218.9902
+ 20
+176.7105
+ 11
+218.9902
+ 21
+178.1075
+ 72
+     1
+ 10
+218.9902
+ 20
+178.1075
+ 11
+217.9742
+ 21
+178.1075
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+20D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+217.8726
+ 20
+178.2091
+ 11
+217.8726
+ 21
+176.6089
+ 72
+     1
+ 10
+217.8726
+ 20
+176.6089
+ 11
+219.0918
+ 21
+176.6089
+ 72
+     1
+ 10
+219.0918
+ 20
+176.6089
+ 11
+219.0918
+ 21
+178.2091
+ 72
+     1
+ 10
+219.0918
+ 20
+178.2091
+ 11
+217.8726
+ 21
+178.2091
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+20E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+227.8675
+ 20
+145.8622
+ 11
+226.4705
+ 21
+145.8622
+ 72
+     1
+ 10
+226.4705
+ 20
+145.8622
+ 11
+226.4705
+ 21
+144.8462
+ 72
+     1
+ 10
+226.4705
+ 20
+144.8462
+ 11
+227.8675
+ 21
+144.8462
+ 72
+     1
+ 10
+227.8675
+ 20
+144.8462
+ 11
+227.8675
+ 21
+145.8622
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+20F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+227.9691
+ 20
+145.9638
+ 11
+226.3689
+ 21
+145.9638
+ 72
+     1
+ 10
+226.3689
+ 20
+145.9638
+ 11
+226.3689
+ 21
+144.7446
+ 72
+     1
+ 10
+226.3689
+ 20
+144.7446
+ 11
+227.9691
+ 21
+144.7446
+ 72
+     1
+ 10
+227.9691
+ 20
+144.7446
+ 11
+227.9691
+ 21
+145.9638
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+210
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+227.8675
+ 20
+147.7418
+ 11
+226.4705
+ 21
+147.7418
+ 72
+     1
+ 10
+226.4705
+ 20
+147.7418
+ 11
+226.4705
+ 21
+146.7258
+ 72
+     1
+ 10
+226.4705
+ 20
+146.7258
+ 11
+227.8675
+ 21
+146.7258
+ 72
+     1
+ 10
+227.8675
+ 20
+146.7258
+ 11
+227.8675
+ 21
+147.7418
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+211
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+227.9691
+ 20
+147.8434
+ 11
+226.3689
+ 21
+147.8434
+ 72
+     1
+ 10
+226.3689
+ 20
+147.8434
+ 11
+226.3689
+ 21
+146.6242
+ 72
+     1
+ 10
+226.3689
+ 20
+146.6242
+ 11
+227.9691
+ 21
+146.6242
+ 72
+     1
+ 10
+227.9691
+ 20
+146.6242
+ 11
+227.9691
+ 21
+147.8434
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+212
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+244.6188
+ 20
+139.6265
+ 11
+244.6188
+ 21
+138.2295
+ 72
+     1
+ 10
+244.6188
+ 20
+138.2295
+ 11
+245.6348
+ 21
+138.2295
+ 72
+     1
+ 10
+245.6348
+ 20
+138.2295
+ 11
+245.6348
+ 21
+139.6265
+ 72
+     1
+ 10
+245.6348
+ 20
+139.6265
+ 11
+244.6188
+ 21
+139.6265
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+213
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+244.5172
+ 20
+139.7281
+ 11
+244.5172
+ 21
+138.1279
+ 72
+     1
+ 10
+244.5172
+ 20
+138.1279
+ 11
+245.7364
+ 21
+138.1279
+ 72
+     1
+ 10
+245.7364
+ 20
+138.1279
+ 11
+245.7364
+ 21
+139.7281
+ 72
+     1
+ 10
+245.7364
+ 20
+139.7281
+ 11
+244.5172
+ 21
+139.7281
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+214
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+242.7392
+ 20
+139.6265
+ 11
+242.7392
+ 21
+138.2295
+ 72
+     1
+ 10
+242.7392
+ 20
+138.2295
+ 11
+243.7552
+ 21
+138.2295
+ 72
+     1
+ 10
+243.7552
+ 20
+138.2295
+ 11
+243.7552
+ 21
+139.6265
+ 72
+     1
+ 10
+243.7552
+ 20
+139.6265
+ 11
+242.7392
+ 21
+139.6265
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+215
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+242.6376
+ 20
+139.7281
+ 11
+242.6376
+ 21
+138.1279
+ 72
+     1
+ 10
+242.6376
+ 20
+138.1279
+ 11
+243.8568
+ 21
+138.1279
+ 72
+     1
+ 10
+243.8568
+ 20
+138.1279
+ 11
+243.8568
+ 21
+139.7281
+ 72
+     1
+ 10
+243.8568
+ 20
+139.7281
+ 11
+242.6376
+ 21
+139.7281
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+216
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.7552
+ 20
+140.6425
+ 11
+243.7552
+ 21
+142.0395
+ 72
+     1
+ 10
+243.7552
+ 20
+142.0395
+ 11
+242.7392
+ 21
+142.0395
+ 72
+     1
+ 10
+242.7392
+ 20
+142.0395
+ 11
+242.7392
+ 21
+140.6425
+ 72
+     1
+ 10
+242.7392
+ 20
+140.6425
+ 11
+243.7552
+ 21
+140.6425
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+217
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.8568
+ 20
+140.5409
+ 11
+243.8568
+ 21
+142.1411
+ 72
+     1
+ 10
+243.8568
+ 20
+142.1411
+ 11
+242.6376
+ 21
+142.1411
+ 72
+     1
+ 10
+242.6376
+ 20
+142.1411
+ 11
+242.6376
+ 21
+140.5409
+ 72
+     1
+ 10
+242.6376
+ 20
+140.5409
+ 11
+243.8568
+ 21
+140.5409
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+218
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+245.6348
+ 20
+140.6425
+ 11
+245.6348
+ 21
+142.0395
+ 72
+     1
+ 10
+245.6348
+ 20
+142.0395
+ 11
+244.6188
+ 21
+142.0395
+ 72
+     1
+ 10
+244.6188
+ 20
+142.0395
+ 11
+244.6188
+ 21
+140.6425
+ 72
+     1
+ 10
+244.6188
+ 20
+140.6425
+ 11
+245.6348
+ 21
+140.6425
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+219
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+245.7364
+ 20
+140.5409
+ 11
+245.7364
+ 21
+142.1411
+ 72
+     1
+ 10
+245.7364
+ 20
+142.1411
+ 11
+244.5172
+ 21
+142.1411
+ 72
+     1
+ 10
+244.5172
+ 20
+142.1411
+ 11
+244.5172
+ 21
+140.5409
+ 72
+     1
+ 10
+244.5172
+ 20
+140.5409
+ 11
+245.7364
+ 21
+140.5409
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+21A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.6945
+ 20
+113.7312
+ 11
+239.2975
+ 21
+113.7312
+ 72
+     1
+ 10
+239.2975
+ 20
+113.7312
+ 11
+239.2975
+ 21
+112.7152
+ 72
+     1
+ 10
+239.2975
+ 20
+112.7152
+ 11
+240.6945
+ 21
+112.7152
+ 72
+     1
+ 10
+240.6945
+ 20
+112.7152
+ 11
+240.6945
+ 21
+113.7312
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+21B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.7961
+ 20
+113.8328
+ 11
+239.1959
+ 21
+113.8328
+ 72
+     1
+ 10
+239.1959
+ 20
+113.8328
+ 11
+239.1959
+ 21
+112.6136
+ 72
+     1
+ 10
+239.1959
+ 20
+112.6136
+ 11
+240.7961
+ 21
+112.6136
+ 72
+     1
+ 10
+240.7961
+ 20
+112.6136
+ 11
+240.7961
+ 21
+113.8328
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+21C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.6945
+ 20
+115.6108
+ 11
+239.2975
+ 21
+115.6108
+ 72
+     1
+ 10
+239.2975
+ 20
+115.6108
+ 11
+239.2975
+ 21
+114.5948
+ 72
+     1
+ 10
+239.2975
+ 20
+114.5948
+ 11
+240.6945
+ 21
+114.5948
+ 72
+     1
+ 10
+240.6945
+ 20
+114.5948
+ 11
+240.6945
+ 21
+115.6108
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+21D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+240.7961
+ 20
+115.7124
+ 11
+239.1959
+ 21
+115.7124
+ 72
+     1
+ 10
+239.1959
+ 20
+115.7124
+ 11
+239.1959
+ 21
+114.4932
+ 72
+     1
+ 10
+239.1959
+ 20
+114.4932
+ 11
+240.7961
+ 21
+114.4932
+ 72
+     1
+ 10
+240.7961
+ 20
+114.4932
+ 11
+240.7961
+ 21
+115.7124
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+21E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+241.7105
+ 20
+114.5948
+ 11
+243.1075
+ 21
+114.5948
+ 72
+     1
+ 10
+243.1075
+ 20
+114.5948
+ 11
+243.1075
+ 21
+115.6108
+ 72
+     1
+ 10
+243.1075
+ 20
+115.6108
+ 11
+241.7105
+ 21
+115.6108
+ 72
+     1
+ 10
+241.7105
+ 20
+115.6108
+ 11
+241.7105
+ 21
+114.5948
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+21F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+241.6089
+ 20
+114.4932
+ 11
+243.2091
+ 21
+114.4932
+ 72
+     1
+ 10
+243.2091
+ 20
+114.4932
+ 11
+243.2091
+ 21
+115.7124
+ 72
+     1
+ 10
+243.2091
+ 20
+115.7124
+ 11
+241.6089
+ 21
+115.7124
+ 72
+     1
+ 10
+241.6089
+ 20
+115.7124
+ 11
+241.6089
+ 21
+114.4932
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+220
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+241.7105
+ 20
+112.7152
+ 11
+243.1075
+ 21
+112.7152
+ 72
+     1
+ 10
+243.1075
+ 20
+112.7152
+ 11
+243.1075
+ 21
+113.7312
+ 72
+     1
+ 10
+243.1075
+ 20
+113.7312
+ 11
+241.7105
+ 21
+113.7312
+ 72
+     1
+ 10
+241.7105
+ 20
+113.7312
+ 11
+241.7105
+ 21
+112.7152
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+221
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+241.6089
+ 20
+112.6136
+ 11
+243.2091
+ 21
+112.6136
+ 72
+     1
+ 10
+243.2091
+ 20
+112.6136
+ 11
+243.2091
+ 21
+113.8328
+ 72
+     1
+ 10
+243.2091
+ 20
+113.8328
+ 11
+241.6089
+ 21
+113.8328
+ 72
+     1
+ 10
+241.6089
+ 20
+113.8328
+ 11
+241.6089
+ 21
+112.6136
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+222
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.8695
+ 20
+114.5948
+ 11
+245.2665
+ 21
+114.5948
+ 72
+     1
+ 10
+245.2665
+ 20
+114.5948
+ 11
+245.2665
+ 21
+115.6108
+ 72
+     1
+ 10
+245.2665
+ 20
+115.6108
+ 11
+243.8695
+ 21
+115.6108
+ 72
+     1
+ 10
+243.8695
+ 20
+115.6108
+ 11
+243.8695
+ 21
+114.5948
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+223
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.7679
+ 20
+114.4932
+ 11
+245.3681
+ 21
+114.4932
+ 72
+     1
+ 10
+245.3681
+ 20
+114.4932
+ 11
+245.3681
+ 21
+115.7124
+ 72
+     1
+ 10
+245.3681
+ 20
+115.7124
+ 11
+243.7679
+ 21
+115.7124
+ 72
+     1
+ 10
+243.7679
+ 20
+115.7124
+ 11
+243.7679
+ 21
+114.4932
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+224
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.8695
+ 20
+112.7152
+ 11
+245.2665
+ 21
+112.7152
+ 72
+     1
+ 10
+245.2665
+ 20
+112.7152
+ 11
+245.2665
+ 21
+113.7312
+ 72
+     1
+ 10
+245.2665
+ 20
+113.7312
+ 11
+243.8695
+ 21
+113.7312
+ 72
+     1
+ 10
+243.8695
+ 20
+113.7312
+ 11
+243.8695
+ 21
+112.7152
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+225
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.7679
+ 20
+112.6136
+ 11
+245.3681
+ 21
+112.6136
+ 72
+     1
+ 10
+245.3681
+ 20
+112.6136
+ 11
+245.3681
+ 21
+113.8328
+ 72
+     1
+ 10
+245.3681
+ 20
+113.8328
+ 11
+243.7679
+ 21
+113.8328
+ 72
+     1
+ 10
+243.7679
+ 20
+113.8328
+ 11
+243.7679
+ 21
+112.6136
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+226
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+223.08799978
+ 20
+153.13200004
+ 11
+224.13800022
+ 21
+153.13200004
+ 72
+     1
+ 10
+224.13800022
+ 20
+153.13200004
+ 11
+224.13800022
+ 21
+156.88200016
+ 72
+     1
+ 10
+224.13800022
+ 20
+156.88200016
+ 11
+223.08799978
+ 21
+156.88200016
+ 72
+     1
+ 10
+223.08799978
+ 20
+156.88200016
+ 11
+223.08799978
+ 21
+153.13200004
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+227
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+222.98639978
+ 20
+153.03040004
+ 11
+224.23960022
+ 21
+153.03040004
+ 72
+     1
+ 10
+224.23960022
+ 20
+153.03040004
+ 11
+224.23960022
+ 21
+156.98360016
+ 72
+     1
+ 10
+224.23960022
+ 20
+156.98360016
+ 11
+222.98639978
+ 21
+156.98360016
+ 72
+     1
+ 10
+222.98639978
+ 20
+156.98360016
+ 11
+222.98639978
+ 21
+153.03040004
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+228
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.16799978
+ 20
+153.13200004
+ 11
+229.21800022
+ 21
+153.13200004
+ 72
+     1
+ 10
+229.21800022
+ 20
+153.13200004
+ 11
+229.21800022
+ 21
+156.88200016
+ 72
+     1
+ 10
+229.21800022
+ 20
+156.88200016
+ 11
+228.16799978
+ 21
+156.88200016
+ 72
+     1
+ 10
+228.16799978
+ 20
+156.88200016
+ 11
+228.16799978
+ 21
+153.13200004
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+229
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.06639978
+ 20
+153.03040004
+ 11
+229.31960022
+ 21
+153.03040004
+ 72
+     1
+ 10
+229.31960022
+ 20
+153.03040004
+ 11
+229.31960022
+ 21
+156.98360016
+ 72
+     1
+ 10
+229.31960022
+ 20
+156.98360016
+ 11
+228.06639978
+ 21
+156.98360016
+ 72
+     1
+ 10
+228.06639978
+ 20
+156.98360016
+ 11
+228.06639978
+ 21
+153.03040004
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+22A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+231.40299966
+ 20
+161.3570001
+ 11
+231.40299966
+ 21
+169.65699874
+ 72
+     1
+ 10
+231.40299966
+ 20
+169.65699874
+ 11
+220.90300034
+ 21
+169.65699874
+ 72
+     1
+ 10
+220.90300034
+ 20
+169.65699874
+ 11
+220.90300034
+ 21
+161.3570001
+ 72
+     1
+ 10
+220.90300034
+ 20
+161.3570001
+ 11
+231.40299966
+ 21
+161.3570001
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+22B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+231.50459966
+ 20
+161.2554001
+ 11
+231.50459966
+ 21
+169.75859874
+ 72
+     1
+ 10
+231.50459966
+ 20
+169.75859874
+ 11
+220.80140034
+ 21
+169.75859874
+ 72
+     1
+ 10
+220.80140034
+ 20
+169.75859874
+ 11
+220.80140034
+ 21
+161.2554001
+ 72
+     1
+ 10
+220.80140034
+ 20
+161.2554001
+ 11
+231.50459966
+ 21
+161.2554001
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+22C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+285.3229985
+ 20
+204.4720015
+ 11
+285.3229985
+ 21
+205.9719985
+ 72
+     1
+ 10
+285.3229985
+ 20
+205.9719985
+ 11
+283.8230015
+ 21
+205.9719985
+ 72
+     1
+ 10
+283.8230015
+ 20
+205.9719985
+ 11
+283.8230015
+ 21
+204.4720015
+ 72
+     1
+ 10
+283.8230015
+ 20
+204.4720015
+ 11
+285.3229985
+ 21
+204.4720015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+22D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+285.4245985
+ 20
+204.3704015
+ 11
+285.4245985
+ 21
+206.0735985
+ 72
+     1
+ 10
+285.4245985
+ 20
+206.0735985
+ 11
+283.7214015
+ 21
+206.0735985
+ 72
+     1
+ 10
+283.7214015
+ 20
+206.0735985
+ 11
+283.7214015
+ 21
+204.3704015
+ 72
+     1
+ 10
+283.7214015
+ 20
+204.3704015
+ 11
+285.4245985
+ 21
+204.3704015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+22E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+292.3079985
+ 20
+204.3450015
+ 11
+292.3079985
+ 21
+205.8449985
+ 72
+     1
+ 10
+292.3079985
+ 20
+205.8449985
+ 11
+290.8080015
+ 21
+205.8449985
+ 72
+     1
+ 10
+290.8080015
+ 20
+205.8449985
+ 11
+290.8080015
+ 21
+204.3450015
+ 72
+     1
+ 10
+290.8080015
+ 20
+204.3450015
+ 11
+292.3079985
+ 21
+204.3450015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+22F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+292.4095985
+ 20
+204.2434015
+ 11
+292.4095985
+ 21
+205.9465985
+ 72
+     1
+ 10
+292.4095985
+ 20
+205.9465985
+ 11
+290.7064015
+ 21
+205.9465985
+ 72
+     1
+ 10
+290.7064015
+ 20
+205.9465985
+ 11
+290.7064015
+ 21
+204.2434015
+ 72
+     1
+ 10
+290.7064015
+ 20
+204.2434015
+ 11
+292.4095985
+ 21
+204.2434015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+230
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+227.3080015
+ 20
+120.5009985
+ 11
+227.3080015
+ 21
+119.0010015
+ 72
+     1
+ 10
+227.3080015
+ 20
+119.0010015
+ 11
+228.8079985
+ 21
+119.0010015
+ 72
+     1
+ 10
+228.8079985
+ 20
+119.0010015
+ 11
+228.8079985
+ 21
+120.5009985
+ 72
+     1
+ 10
+228.8079985
+ 20
+120.5009985
+ 11
+227.3080015
+ 21
+120.5009985
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+231
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+227.2064015
+ 20
+120.6025985
+ 11
+227.2064015
+ 21
+118.8994015
+ 72
+     1
+ 10
+227.2064015
+ 20
+118.8994015
+ 11
+228.9095985
+ 21
+118.8994015
+ 72
+     1
+ 10
+228.9095985
+ 20
+118.8994015
+ 11
+228.9095985
+ 21
+120.6025985
+ 72
+     1
+ 10
+228.9095985
+ 20
+120.6025985
+ 11
+227.2064015
+ 21
+120.6025985
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+232
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+224.8957
+ 20
+120.0812
+ 11
+223.0923
+ 21
+120.0812
+ 72
+     1
+ 10
+223.0923
+ 20
+120.0812
+ 11
+223.0923
+ 21
+118.9636
+ 72
+     1
+ 10
+223.0923
+ 20
+118.9636
+ 11
+224.8957
+ 21
+118.9636
+ 72
+     1
+ 10
+224.8957
+ 20
+118.9636
+ 11
+224.8957
+ 21
+120.0812
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+233
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+224.9973
+ 20
+120.1828
+ 11
+222.9907
+ 21
+120.1828
+ 72
+     1
+ 10
+222.9907
+ 20
+120.1828
+ 11
+222.9907
+ 21
+118.862
+ 72
+     1
+ 10
+222.9907
+ 20
+118.862
+ 11
+224.9973
+ 21
+118.862
+ 72
+     1
+ 10
+224.9973
+ 20
+118.862
+ 11
+224.9973
+ 21
+120.1828
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+234
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+224.8957
+ 20
+123.0784
+ 11
+223.0923
+ 21
+123.0784
+ 72
+     1
+ 10
+223.0923
+ 20
+123.0784
+ 11
+223.0923
+ 21
+121.9608
+ 72
+     1
+ 10
+223.0923
+ 20
+121.9608
+ 11
+224.8957
+ 21
+121.9608
+ 72
+     1
+ 10
+224.8957
+ 20
+121.9608
+ 11
+224.8957
+ 21
+123.0784
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+235
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+224.9973
+ 20
+123.18
+ 11
+222.9907
+ 21
+123.18
+ 72
+     1
+ 10
+222.9907
+ 20
+123.18
+ 11
+222.9907
+ 21
+121.8592
+ 72
+     1
+ 10
+222.9907
+ 20
+121.8592
+ 11
+224.9973
+ 21
+121.8592
+ 72
+     1
+ 10
+224.9973
+ 20
+121.8592
+ 11
+224.9973
+ 21
+123.18
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+236
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+238.0019984
+ 20
+166.4990015
+ 11
+238.0019984
+ 21
+169.99899958
+ 72
+     1
+ 10
+238.0019984
+ 20
+169.99899958
+ 11
+236.4020016
+ 21
+169.99899958
+ 72
+     1
+ 10
+236.4020016
+ 20
+169.99899958
+ 11
+236.4020016
+ 21
+166.4990015
+ 72
+     1
+ 10
+236.4020016
+ 20
+166.4990015
+ 11
+238.0019984
+ 21
+166.4990015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+237
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+238.1035984
+ 20
+166.3974015
+ 11
+238.1035984
+ 21
+170.10059958
+ 72
+     1
+ 10
+238.1035984
+ 20
+170.10059958
+ 11
+236.3004016
+ 21
+170.10059958
+ 72
+     1
+ 10
+236.3004016
+ 20
+170.10059958
+ 11
+236.3004016
+ 21
+166.3974015
+ 72
+     1
+ 10
+236.3004016
+ 20
+166.3974015
+ 11
+238.1035984
+ 21
+166.3974015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+238
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.0819984
+ 20
+166.4990015
+ 11
+243.0819984
+ 21
+169.99899958
+ 72
+     1
+ 10
+243.0819984
+ 20
+169.99899958
+ 11
+241.4820016
+ 21
+169.99899958
+ 72
+     1
+ 10
+241.4820016
+ 20
+169.99899958
+ 11
+241.4820016
+ 21
+166.4990015
+ 72
+     1
+ 10
+241.4820016
+ 20
+166.4990015
+ 11
+243.0819984
+ 21
+166.4990015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+239
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+243.1835984
+ 20
+166.3974015
+ 11
+243.1835984
+ 21
+170.10059958
+ 72
+     1
+ 10
+243.1835984
+ 20
+170.10059958
+ 11
+241.3804016
+ 21
+170.10059958
+ 72
+     1
+ 10
+241.3804016
+ 20
+170.10059958
+ 11
+241.3804016
+ 21
+166.3974015
+ 72
+     1
+ 10
+241.3804016
+ 20
+166.3974015
+ 11
+243.1835984
+ 21
+166.3974015
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+23A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+245.8420005
+ 20
+162.53899926
+ 11
+233.6419995
+ 21
+162.53899926
+ 72
+     1
+ 10
+233.6419995
+ 20
+162.53899926
+ 11
+233.6419995
+ 21
+152.78900098
+ 72
+     1
+ 10
+233.6419995
+ 20
+152.78900098
+ 11
+245.8420005
+ 21
+152.78900098
+ 72
+     1
+ 10
+245.8420005
+ 20
+152.78900098
+ 11
+245.8420005
+ 21
+162.53899926
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+23B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+245.9436005
+ 20
+162.64059926
+ 11
+233.5403995
+ 21
+162.64059926
+ 72
+     1
+ 10
+233.5403995
+ 20
+162.64059926
+ 11
+233.5403995
+ 21
+152.68740098
+ 72
+     1
+ 10
+233.5403995
+ 20
+152.68740098
+ 11
+245.9436005
+ 21
+152.68740098
+ 72
+     1
+ 10
+245.9436005
+ 20
+152.68740098
+ 11
+245.9436005
+ 21
+162.64059926
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+23C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+237.1979995
+ 20
+132.62699914
+ 11
+236.6980005
+ 21
+132.62699914
+ 72
+     1
+ 10
+236.6980005
+ 20
+132.62699914
+ 11
+236.6980005
+ 21
+131.62700114
+ 72
+     1
+ 10
+236.6980005
+ 20
+131.62700114
+ 11
+237.1979995
+ 21
+131.62700114
+ 72
+     1
+ 10
+237.1979995
+ 20
+131.62700114
+ 11
+237.1979995
+ 21
+132.62699914
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+23D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+237.2995995
+ 20
+132.72859914
+ 11
+236.5964005
+ 21
+132.72859914
+ 72
+     1
+ 10
+236.5964005
+ 20
+132.72859914
+ 11
+236.5964005
+ 21
+131.52540114
+ 72
+     1
+ 10
+236.5964005
+ 20
+131.52540114
+ 11
+237.2995995
+ 21
+131.52540114
+ 72
+     1
+ 10
+237.2995995
+ 20
+131.52540114
+ 11
+237.2995995
+ 21
+132.72859914
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+23E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+237.1979995
+ 20
+130.22699886
+ 11
+236.6980005
+ 21
+130.22699886
+ 72
+     1
+ 10
+236.6980005
+ 20
+130.22699886
+ 11
+236.6980005
+ 21
+129.22700086
+ 72
+     1
+ 10
+236.6980005
+ 20
+129.22700086
+ 11
+237.1979995
+ 21
+129.22700086
+ 72
+     1
+ 10
+237.1979995
+ 20
+129.22700086
+ 11
+237.1979995
+ 21
+130.22699886
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+23F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+237.2995995
+ 20
+130.32859886
+ 11
+236.5964005
+ 21
+130.32859886
+ 72
+     1
+ 10
+236.5964005
+ 20
+130.32859886
+ 11
+236.5964005
+ 21
+129.12540086
+ 72
+     1
+ 10
+236.5964005
+ 20
+129.12540086
+ 11
+237.2995995
+ 21
+129.12540086
+ 72
+     1
+ 10
+237.2995995
+ 20
+129.12540086
+ 11
+237.2995995
+ 21
+130.32859886
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+240
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+220.7810016
+ 20
+110.77400246
+ 11
+222.3809984
+ 21
+110.77400246
+ 72
+     1
+ 10
+222.3809984
+ 20
+110.77400246
+ 11
+222.3809984
+ 21
+112.27399946
+ 72
+     1
+ 10
+222.3809984
+ 20
+112.27399946
+ 11
+220.7810016
+ 21
+112.27399946
+ 72
+     1
+ 10
+220.7810016
+ 20
+112.27399946
+ 11
+220.7810016
+ 21
+110.77400246
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+241
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+220.6794016
+ 20
+110.67240246
+ 11
+222.4825984
+ 21
+110.67240246
+ 72
+     1
+ 10
+222.4825984
+ 20
+110.67240246
+ 11
+222.4825984
+ 21
+112.37559946
+ 72
+     1
+ 10
+222.4825984
+ 20
+112.37559946
+ 11
+220.6794016
+ 21
+112.37559946
+ 72
+     1
+ 10
+220.6794016
+ 20
+112.37559946
+ 11
+220.6794016
+ 21
+110.67240246
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+242
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+220.7810016
+ 20
+114.27400054
+ 11
+222.3809984
+ 21
+114.27400054
+ 72
+     1
+ 10
+222.3809984
+ 20
+114.27400054
+ 11
+222.3809984
+ 21
+115.77399754
+ 72
+     1
+ 10
+222.3809984
+ 20
+115.77399754
+ 11
+220.7810016
+ 21
+115.77399754
+ 72
+     1
+ 10
+220.7810016
+ 20
+115.77399754
+ 11
+220.7810016
+ 21
+114.27400054
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+243
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+220.6794016
+ 20
+114.17240054
+ 11
+222.4825984
+ 21
+114.17240054
+ 72
+     1
+ 10
+222.4825984
+ 20
+114.17240054
+ 11
+222.4825984
+ 21
+115.87559754
+ 72
+     1
+ 10
+222.4825984
+ 20
+115.87559754
+ 11
+220.6794016
+ 21
+115.87559754
+ 72
+     1
+ 10
+220.6794016
+ 20
+115.87559754
+ 11
+220.6794016
+ 21
+114.17240054
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+244
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.2660018
+ 20
+190.55100064
+ 11
+204.0659982
+ 21
+190.55100064
+ 72
+     1
+ 10
+204.0659982
+ 20
+190.55100064
+ 11
+204.0659982
+ 21
+191.65099844
+ 72
+     1
+ 10
+204.0659982
+ 20
+191.65099844
+ 11
+202.2660018
+ 21
+191.65099844
+ 72
+     1
+ 10
+202.2660018
+ 20
+191.65099844
+ 11
+202.2660018
+ 21
+190.55100064
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+245
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.1644018
+ 20
+190.44940064
+ 11
+204.1675982
+ 21
+190.44940064
+ 72
+     1
+ 10
+204.1675982
+ 20
+190.44940064
+ 11
+204.1675982
+ 21
+191.75259844
+ 72
+     1
+ 10
+204.1675982
+ 20
+191.75259844
+ 11
+202.1644018
+ 21
+191.75259844
+ 72
+     1
+ 10
+202.1644018
+ 20
+191.75259844
+ 11
+202.1644018
+ 21
+190.44940064
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+246
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.2660018
+ 20
+187.55100156
+ 11
+204.0659982
+ 21
+187.55100156
+ 72
+     1
+ 10
+204.0659982
+ 20
+187.55100156
+ 11
+204.0659982
+ 21
+188.65099936
+ 72
+     1
+ 10
+204.0659982
+ 20
+188.65099936
+ 11
+202.2660018
+ 21
+188.65099936
+ 72
+     1
+ 10
+202.2660018
+ 20
+188.65099936
+ 11
+202.2660018
+ 21
+187.55100156
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+247
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.1644018
+ 20
+187.44940156
+ 11
+204.1675982
+ 21
+187.44940156
+ 72
+     1
+ 10
+204.1675982
+ 20
+187.44940156
+ 11
+204.1675982
+ 21
+188.75259936
+ 72
+     1
+ 10
+204.1675982
+ 20
+188.75259936
+ 11
+202.1644018
+ 21
+188.75259936
+ 72
+     1
+ 10
+202.1644018
+ 20
+188.75259936
+ 11
+202.1644018
+ 21
+187.44940156
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+248
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+220.11800064
+ 20
+189.3579982
+ 11
+220.11800064
+ 21
+187.5580018
+ 72
+     1
+ 10
+220.11800064
+ 20
+187.5580018
+ 11
+221.21799844
+ 21
+187.5580018
+ 72
+     1
+ 10
+221.21799844
+ 20
+187.5580018
+ 11
+221.21799844
+ 21
+189.3579982
+ 72
+     1
+ 10
+221.21799844
+ 20
+189.3579982
+ 11
+220.11800064
+ 21
+189.3579982
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+249
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+220.01640064
+ 20
+189.4595982
+ 11
+220.01640064
+ 21
+187.4564018
+ 72
+     1
+ 10
+220.01640064
+ 20
+187.4564018
+ 11
+221.31959844
+ 21
+187.4564018
+ 72
+     1
+ 10
+221.31959844
+ 20
+187.4564018
+ 11
+221.31959844
+ 21
+189.4595982
+ 72
+     1
+ 10
+221.31959844
+ 20
+189.4595982
+ 11
+220.01640064
+ 21
+189.4595982
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+24A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+217.11800156
+ 20
+189.3579982
+ 11
+217.11800156
+ 21
+187.5580018
+ 72
+     1
+ 10
+217.11800156
+ 20
+187.5580018
+ 11
+218.21799936
+ 21
+187.5580018
+ 72
+     1
+ 10
+218.21799936
+ 20
+187.5580018
+ 11
+218.21799936
+ 21
+189.3579982
+ 72
+     1
+ 10
+218.21799936
+ 20
+189.3579982
+ 11
+217.11800156
+ 21
+189.3579982
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+24B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+217.01640156
+ 20
+189.4595982
+ 11
+217.01640156
+ 21
+187.4564018
+ 72
+     1
+ 10
+217.01640156
+ 20
+187.4564018
+ 11
+218.31959936
+ 21
+187.4564018
+ 72
+     1
+ 10
+218.31959936
+ 20
+187.4564018
+ 11
+218.31959936
+ 21
+189.4595982
+ 72
+     1
+ 10
+218.31959936
+ 20
+189.4595982
+ 11
+217.01640156
+ 21
+189.4595982
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+24C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+222.17899982
+ 20
+149.2040018
+ 11
+222.17899982
+ 21
+151.0039982
+ 72
+     1
+ 10
+222.17899982
+ 20
+151.0039982
+ 11
+221.07900202
+ 21
+151.0039982
+ 72
+     1
+ 10
+221.07900202
+ 20
+151.0039982
+ 11
+221.07900202
+ 21
+149.2040018
+ 72
+     1
+ 10
+221.07900202
+ 20
+149.2040018
+ 11
+222.17899982
+ 21
+149.2040018
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+24D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+222.28059982
+ 20
+149.1024018
+ 11
+222.28059982
+ 21
+151.1055982
+ 72
+     1
+ 10
+222.28059982
+ 20
+151.1055982
+ 11
+220.97740202
+ 21
+151.1055982
+ 72
+     1
+ 10
+220.97740202
+ 20
+151.1055982
+ 11
+220.97740202
+ 21
+149.1024018
+ 72
+     1
+ 10
+220.97740202
+ 20
+149.1024018
+ 11
+222.28059982
+ 21
+149.1024018
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+24E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+225.1789989
+ 20
+149.2040018
+ 11
+225.1789989
+ 21
+151.0039982
+ 72
+     1
+ 10
+225.1789989
+ 20
+151.0039982
+ 11
+224.0790011
+ 21
+151.0039982
+ 72
+     1
+ 10
+224.0790011
+ 20
+151.0039982
+ 11
+224.0790011
+ 21
+149.2040018
+ 72
+     1
+ 10
+224.0790011
+ 20
+149.2040018
+ 11
+225.1789989
+ 21
+149.2040018
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+24F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+225.2805989
+ 20
+149.1024018
+ 11
+225.2805989
+ 21
+151.1055982
+ 72
+     1
+ 10
+225.2805989
+ 20
+151.1055982
+ 11
+223.9774011
+ 21
+151.1055982
+ 72
+     1
+ 10
+223.9774011
+ 20
+151.1055982
+ 11
+223.9774011
+ 21
+149.1024018
+ 72
+     1
+ 10
+223.9774011
+ 20
+149.1024018
+ 11
+225.2805989
+ 21
+149.1024018
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+250
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+231.28599964
+ 20
+129.8299994
+ 11
+231.28599964
+ 21
+128.7220006
+ 72
+     1
+ 10
+231.28599964
+ 20
+128.7220006
+ 11
+232.39399844
+ 21
+128.7220006
+ 72
+     1
+ 10
+232.39399844
+ 20
+128.7220006
+ 11
+232.39399844
+ 21
+129.8299994
+ 72
+     1
+ 10
+232.39399844
+ 20
+129.8299994
+ 11
+231.28599964
+ 21
+129.8299994
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+251
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+231.18439964
+ 20
+129.9315994
+ 11
+231.18439964
+ 21
+128.6204006
+ 72
+     1
+ 10
+231.18439964
+ 20
+128.6204006
+ 11
+232.49559844
+ 21
+128.6204006
+ 72
+     1
+ 10
+232.49559844
+ 20
+128.6204006
+ 11
+232.49559844
+ 21
+129.9315994
+ 72
+     1
+ 10
+232.49559844
+ 20
+129.9315994
+ 11
+231.18439964
+ 21
+129.9315994
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+252
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.86649844
+ 20
+184.6169993
+ 11
+202.86649844
+ 21
+183.9170007
+ 72
+     1
+ 10
+202.86649844
+ 20
+183.9170007
+ 11
+204.3914992
+ 21
+183.9170007
+ 72
+     1
+ 10
+204.3914992
+ 20
+183.9170007
+ 11
+204.3914992
+ 21
+184.6169993
+ 72
+     1
+ 10
+204.3914992
+ 20
+184.6169993
+ 11
+202.86649844
+ 21
+184.6169993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+253
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.76489844
+ 20
+184.7185993
+ 11
+202.76489844
+ 21
+183.8154007
+ 72
+     1
+ 10
+202.76489844
+ 20
+183.8154007
+ 11
+204.4930992
+ 21
+183.8154007
+ 72
+     1
+ 10
+204.4930992
+ 20
+183.8154007
+ 11
+204.4930992
+ 21
+184.7185993
+ 72
+     1
+ 10
+204.4930992
+ 20
+184.7185993
+ 11
+202.76489844
+ 21
+184.7185993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+254
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.86649844
+ 20
+183.3469993
+ 11
+202.86649844
+ 21
+182.6470007
+ 72
+     1
+ 10
+202.86649844
+ 20
+182.6470007
+ 11
+204.3914992
+ 21
+182.6470007
+ 72
+     1
+ 10
+204.3914992
+ 20
+182.6470007
+ 11
+204.3914992
+ 21
+183.3469993
+ 72
+     1
+ 10
+204.3914992
+ 20
+183.3469993
+ 11
+202.86649844
+ 21
+183.3469993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+255
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.76489844
+ 20
+183.4485993
+ 11
+202.76489844
+ 21
+182.5454007
+ 72
+     1
+ 10
+202.76489844
+ 20
+182.5454007
+ 11
+204.4930992
+ 21
+182.5454007
+ 72
+     1
+ 10
+204.4930992
+ 20
+182.5454007
+ 11
+204.4930992
+ 21
+183.4485993
+ 72
+     1
+ 10
+204.4930992
+ 20
+183.4485993
+ 11
+202.76489844
+ 21
+183.4485993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+256
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.86649844
+ 20
+182.0769993
+ 11
+202.86649844
+ 21
+181.3770007
+ 72
+     1
+ 10
+202.86649844
+ 20
+181.3770007
+ 11
+204.3914992
+ 21
+181.3770007
+ 72
+     1
+ 10
+204.3914992
+ 20
+181.3770007
+ 11
+204.3914992
+ 21
+182.0769993
+ 72
+     1
+ 10
+204.3914992
+ 20
+182.0769993
+ 11
+202.86649844
+ 21
+182.0769993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+257
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.76489844
+ 20
+182.1785993
+ 11
+202.76489844
+ 21
+181.2754007
+ 72
+     1
+ 10
+202.76489844
+ 20
+181.2754007
+ 11
+204.4930992
+ 21
+181.2754007
+ 72
+     1
+ 10
+204.4930992
+ 20
+181.2754007
+ 11
+204.4930992
+ 21
+182.1785993
+ 72
+     1
+ 10
+204.4930992
+ 20
+182.1785993
+ 11
+202.76489844
+ 21
+182.1785993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+258
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.86649844
+ 20
+180.8069993
+ 11
+202.86649844
+ 21
+180.1070007
+ 72
+     1
+ 10
+202.86649844
+ 20
+180.1070007
+ 11
+204.3914992
+ 21
+180.1070007
+ 72
+     1
+ 10
+204.3914992
+ 20
+180.1070007
+ 11
+204.3914992
+ 21
+180.8069993
+ 72
+     1
+ 10
+204.3914992
+ 20
+180.8069993
+ 11
+202.86649844
+ 21
+180.8069993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+259
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+202.76489844
+ 20
+180.9085993
+ 11
+202.76489844
+ 21
+180.0054007
+ 72
+     1
+ 10
+202.76489844
+ 20
+180.0054007
+ 11
+204.4930992
+ 21
+180.0054007
+ 72
+     1
+ 10
+204.4930992
+ 20
+180.0054007
+ 11
+204.4930992
+ 21
+180.9085993
+ 72
+     1
+ 10
+204.4930992
+ 20
+180.9085993
+ 11
+202.76489844
+ 21
+180.9085993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+25A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.2905008
+ 20
+180.8069993
+ 11
+208.2905008
+ 21
+180.1070007
+ 72
+     1
+ 10
+208.2905008
+ 20
+180.1070007
+ 11
+209.81550156
+ 21
+180.1070007
+ 72
+     1
+ 10
+209.81550156
+ 20
+180.1070007
+ 11
+209.81550156
+ 21
+180.8069993
+ 72
+     1
+ 10
+209.81550156
+ 20
+180.8069993
+ 11
+208.2905008
+ 21
+180.8069993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+25B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.1889008
+ 20
+180.9085993
+ 11
+208.1889008
+ 21
+180.0054007
+ 72
+     1
+ 10
+208.1889008
+ 20
+180.0054007
+ 11
+209.91710156
+ 21
+180.0054007
+ 72
+     1
+ 10
+209.91710156
+ 20
+180.0054007
+ 11
+209.91710156
+ 21
+180.9085993
+ 72
+     1
+ 10
+209.91710156
+ 20
+180.9085993
+ 11
+208.1889008
+ 21
+180.9085993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+25C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.2905008
+ 20
+182.0769993
+ 11
+208.2905008
+ 21
+181.3770007
+ 72
+     1
+ 10
+208.2905008
+ 20
+181.3770007
+ 11
+209.81550156
+ 21
+181.3770007
+ 72
+     1
+ 10
+209.81550156
+ 20
+181.3770007
+ 11
+209.81550156
+ 21
+182.0769993
+ 72
+     1
+ 10
+209.81550156
+ 20
+182.0769993
+ 11
+208.2905008
+ 21
+182.0769993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+25D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.1889008
+ 20
+182.1785993
+ 11
+208.1889008
+ 21
+181.2754007
+ 72
+     1
+ 10
+208.1889008
+ 20
+181.2754007
+ 11
+209.91710156
+ 21
+181.2754007
+ 72
+     1
+ 10
+209.91710156
+ 20
+181.2754007
+ 11
+209.91710156
+ 21
+182.1785993
+ 72
+     1
+ 10
+209.91710156
+ 20
+182.1785993
+ 11
+208.1889008
+ 21
+182.1785993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+25E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.2905008
+ 20
+183.3469993
+ 11
+208.2905008
+ 21
+182.6470007
+ 72
+     1
+ 10
+208.2905008
+ 20
+182.6470007
+ 11
+209.81550156
+ 21
+182.6470007
+ 72
+     1
+ 10
+209.81550156
+ 20
+182.6470007
+ 11
+209.81550156
+ 21
+183.3469993
+ 72
+     1
+ 10
+209.81550156
+ 20
+183.3469993
+ 11
+208.2905008
+ 21
+183.3469993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+25F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.1889008
+ 20
+183.4485993
+ 11
+208.1889008
+ 21
+182.5454007
+ 72
+     1
+ 10
+208.1889008
+ 20
+182.5454007
+ 11
+209.91710156
+ 21
+182.5454007
+ 72
+     1
+ 10
+209.91710156
+ 20
+182.5454007
+ 11
+209.91710156
+ 21
+183.4485993
+ 72
+     1
+ 10
+209.91710156
+ 20
+183.4485993
+ 11
+208.1889008
+ 21
+183.4485993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+260
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.2905008
+ 20
+184.6169993
+ 11
+208.2905008
+ 21
+183.9170007
+ 72
+     1
+ 10
+208.2905008
+ 20
+183.9170007
+ 11
+209.81550156
+ 21
+183.9170007
+ 72
+     1
+ 10
+209.81550156
+ 20
+183.9170007
+ 11
+209.81550156
+ 21
+184.6169993
+ 72
+     1
+ 10
+209.81550156
+ 20
+184.6169993
+ 11
+208.2905008
+ 21
+184.6169993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+261
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+208.1889008
+ 20
+184.7185993
+ 11
+208.1889008
+ 21
+183.8154007
+ 72
+     1
+ 10
+208.1889008
+ 20
+183.8154007
+ 11
+209.91710156
+ 21
+183.8154007
+ 72
+     1
+ 10
+209.91710156
+ 20
+183.8154007
+ 11
+209.91710156
+ 21
+184.7185993
+ 72
+     1
+ 10
+209.91710156
+ 20
+184.7185993
+ 11
+208.1889008
+ 21
+184.7185993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+262
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.69349844
+ 20
+184.3629993
+ 11
+215.69349844
+ 21
+183.6630007
+ 72
+     1
+ 10
+215.69349844
+ 20
+183.6630007
+ 11
+217.2184992
+ 21
+183.6630007
+ 72
+     1
+ 10
+217.2184992
+ 20
+183.6630007
+ 11
+217.2184992
+ 21
+184.3629993
+ 72
+     1
+ 10
+217.2184992
+ 20
+184.3629993
+ 11
+215.69349844
+ 21
+184.3629993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+263
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.59189844
+ 20
+184.4645993
+ 11
+215.59189844
+ 21
+183.5614007
+ 72
+     1
+ 10
+215.59189844
+ 20
+183.5614007
+ 11
+217.3200992
+ 21
+183.5614007
+ 72
+     1
+ 10
+217.3200992
+ 20
+183.5614007
+ 11
+217.3200992
+ 21
+184.4645993
+ 72
+     1
+ 10
+217.3200992
+ 20
+184.4645993
+ 11
+215.59189844
+ 21
+184.4645993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+264
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.69349844
+ 20
+183.0929993
+ 11
+215.69349844
+ 21
+182.3930007
+ 72
+     1
+ 10
+215.69349844
+ 20
+182.3930007
+ 11
+217.2184992
+ 21
+182.3930007
+ 72
+     1
+ 10
+217.2184992
+ 20
+182.3930007
+ 11
+217.2184992
+ 21
+183.0929993
+ 72
+     1
+ 10
+217.2184992
+ 20
+183.0929993
+ 11
+215.69349844
+ 21
+183.0929993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+265
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.59189844
+ 20
+183.1945993
+ 11
+215.59189844
+ 21
+182.2914007
+ 72
+     1
+ 10
+215.59189844
+ 20
+182.2914007
+ 11
+217.3200992
+ 21
+182.2914007
+ 72
+     1
+ 10
+217.3200992
+ 20
+182.2914007
+ 11
+217.3200992
+ 21
+183.1945993
+ 72
+     1
+ 10
+217.3200992
+ 20
+183.1945993
+ 11
+215.59189844
+ 21
+183.1945993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+266
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.69349844
+ 20
+181.8229993
+ 11
+215.69349844
+ 21
+181.1230007
+ 72
+     1
+ 10
+215.69349844
+ 20
+181.1230007
+ 11
+217.2184992
+ 21
+181.1230007
+ 72
+     1
+ 10
+217.2184992
+ 20
+181.1230007
+ 11
+217.2184992
+ 21
+181.8229993
+ 72
+     1
+ 10
+217.2184992
+ 20
+181.8229993
+ 11
+215.69349844
+ 21
+181.8229993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+267
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.59189844
+ 20
+181.9245993
+ 11
+215.59189844
+ 21
+181.0214007
+ 72
+     1
+ 10
+215.59189844
+ 20
+181.0214007
+ 11
+217.3200992
+ 21
+181.0214007
+ 72
+     1
+ 10
+217.3200992
+ 20
+181.0214007
+ 11
+217.3200992
+ 21
+181.9245993
+ 72
+     1
+ 10
+217.3200992
+ 20
+181.9245993
+ 11
+215.59189844
+ 21
+181.9245993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+268
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.69349844
+ 20
+180.5529993
+ 11
+215.69349844
+ 21
+179.8530007
+ 72
+     1
+ 10
+215.69349844
+ 20
+179.8530007
+ 11
+217.2184992
+ 21
+179.8530007
+ 72
+     1
+ 10
+217.2184992
+ 20
+179.8530007
+ 11
+217.2184992
+ 21
+180.5529993
+ 72
+     1
+ 10
+217.2184992
+ 20
+180.5529993
+ 11
+215.69349844
+ 21
+180.5529993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+269
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+215.59189844
+ 20
+180.6545993
+ 11
+215.59189844
+ 21
+179.7514007
+ 72
+     1
+ 10
+215.59189844
+ 20
+179.7514007
+ 11
+217.3200992
+ 21
+179.7514007
+ 72
+     1
+ 10
+217.3200992
+ 20
+179.7514007
+ 11
+217.3200992
+ 21
+180.6545993
+ 72
+     1
+ 10
+217.3200992
+ 20
+180.6545993
+ 11
+215.59189844
+ 21
+180.6545993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+26A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.1175008
+ 20
+180.5529993
+ 11
+221.1175008
+ 21
+179.8530007
+ 72
+     1
+ 10
+221.1175008
+ 20
+179.8530007
+ 11
+222.64250156
+ 21
+179.8530007
+ 72
+     1
+ 10
+222.64250156
+ 20
+179.8530007
+ 11
+222.64250156
+ 21
+180.5529993
+ 72
+     1
+ 10
+222.64250156
+ 20
+180.5529993
+ 11
+221.1175008
+ 21
+180.5529993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+26B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.0159008
+ 20
+180.6545993
+ 11
+221.0159008
+ 21
+179.7514007
+ 72
+     1
+ 10
+221.0159008
+ 20
+179.7514007
+ 11
+222.74410156
+ 21
+179.7514007
+ 72
+     1
+ 10
+222.74410156
+ 20
+179.7514007
+ 11
+222.74410156
+ 21
+180.6545993
+ 72
+     1
+ 10
+222.74410156
+ 20
+180.6545993
+ 11
+221.0159008
+ 21
+180.6545993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+26C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.1175008
+ 20
+181.8229993
+ 11
+221.1175008
+ 21
+181.1230007
+ 72
+     1
+ 10
+221.1175008
+ 20
+181.1230007
+ 11
+222.64250156
+ 21
+181.1230007
+ 72
+     1
+ 10
+222.64250156
+ 20
+181.1230007
+ 11
+222.64250156
+ 21
+181.8229993
+ 72
+     1
+ 10
+222.64250156
+ 20
+181.8229993
+ 11
+221.1175008
+ 21
+181.8229993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+26D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.0159008
+ 20
+181.9245993
+ 11
+221.0159008
+ 21
+181.0214007
+ 72
+     1
+ 10
+221.0159008
+ 20
+181.0214007
+ 11
+222.74410156
+ 21
+181.0214007
+ 72
+     1
+ 10
+222.74410156
+ 20
+181.0214007
+ 11
+222.74410156
+ 21
+181.9245993
+ 72
+     1
+ 10
+222.74410156
+ 20
+181.9245993
+ 11
+221.0159008
+ 21
+181.9245993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+26E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.1175008
+ 20
+183.0929993
+ 11
+221.1175008
+ 21
+182.3930007
+ 72
+     1
+ 10
+221.1175008
+ 20
+182.3930007
+ 11
+222.64250156
+ 21
+182.3930007
+ 72
+     1
+ 10
+222.64250156
+ 20
+182.3930007
+ 11
+222.64250156
+ 21
+183.0929993
+ 72
+     1
+ 10
+222.64250156
+ 20
+183.0929993
+ 11
+221.1175008
+ 21
+183.0929993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+26F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.0159008
+ 20
+183.1945993
+ 11
+221.0159008
+ 21
+182.2914007
+ 72
+     1
+ 10
+221.0159008
+ 20
+182.2914007
+ 11
+222.74410156
+ 21
+182.2914007
+ 72
+     1
+ 10
+222.74410156
+ 20
+182.2914007
+ 11
+222.74410156
+ 21
+183.1945993
+ 72
+     1
+ 10
+222.74410156
+ 20
+183.1945993
+ 11
+221.0159008
+ 21
+183.1945993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+270
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.1175008
+ 20
+184.3629993
+ 11
+221.1175008
+ 21
+183.6630007
+ 72
+     1
+ 10
+221.1175008
+ 20
+183.6630007
+ 11
+222.64250156
+ 21
+183.6630007
+ 72
+     1
+ 10
+222.64250156
+ 20
+183.6630007
+ 11
+222.64250156
+ 21
+184.3629993
+ 72
+     1
+ 10
+222.64250156
+ 20
+184.3629993
+ 11
+221.1175008
+ 21
+184.3629993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+271
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+221.0159008
+ 20
+184.4645993
+ 11
+221.0159008
+ 21
+183.5614007
+ 72
+     1
+ 10
+221.0159008
+ 20
+183.5614007
+ 11
+222.74410156
+ 21
+183.5614007
+ 72
+     1
+ 10
+222.74410156
+ 20
+183.5614007
+ 11
+222.74410156
+ 21
+184.4645993
+ 72
+     1
+ 10
+222.74410156
+ 20
+184.4645993
+ 11
+221.0159008
+ 21
+184.4645993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+272
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.77449844
+ 20
+149.5649993
+ 11
+228.77449844
+ 21
+148.8650007
+ 72
+     1
+ 10
+228.77449844
+ 20
+148.8650007
+ 11
+230.2994992
+ 21
+148.8650007
+ 72
+     1
+ 10
+230.2994992
+ 20
+148.8650007
+ 11
+230.2994992
+ 21
+149.5649993
+ 72
+     1
+ 10
+230.2994992
+ 20
+149.5649993
+ 11
+228.77449844
+ 21
+149.5649993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+273
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.67289844
+ 20
+149.6665993
+ 11
+228.67289844
+ 21
+148.7634007
+ 72
+     1
+ 10
+228.67289844
+ 20
+148.7634007
+ 11
+230.4010992
+ 21
+148.7634007
+ 72
+     1
+ 10
+230.4010992
+ 20
+148.7634007
+ 11
+230.4010992
+ 21
+149.6665993
+ 72
+     1
+ 10
+230.4010992
+ 20
+149.6665993
+ 11
+228.67289844
+ 21
+149.6665993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+274
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.77449844
+ 20
+148.2949993
+ 11
+228.77449844
+ 21
+147.5950007
+ 72
+     1
+ 10
+228.77449844
+ 20
+147.5950007
+ 11
+230.2994992
+ 21
+147.5950007
+ 72
+     1
+ 10
+230.2994992
+ 20
+147.5950007
+ 11
+230.2994992
+ 21
+148.2949993
+ 72
+     1
+ 10
+230.2994992
+ 20
+148.2949993
+ 11
+228.77449844
+ 21
+148.2949993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+275
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.67289844
+ 20
+148.3965993
+ 11
+228.67289844
+ 21
+147.4934007
+ 72
+     1
+ 10
+228.67289844
+ 20
+147.4934007
+ 11
+230.4010992
+ 21
+147.4934007
+ 72
+     1
+ 10
+230.4010992
+ 20
+147.4934007
+ 11
+230.4010992
+ 21
+148.3965993
+ 72
+     1
+ 10
+230.4010992
+ 20
+148.3965993
+ 11
+228.67289844
+ 21
+148.3965993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+276
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.77449844
+ 20
+147.0249993
+ 11
+228.77449844
+ 21
+146.3250007
+ 72
+     1
+ 10
+228.77449844
+ 20
+146.3250007
+ 11
+230.2994992
+ 21
+146.3250007
+ 72
+     1
+ 10
+230.2994992
+ 20
+146.3250007
+ 11
+230.2994992
+ 21
+147.0249993
+ 72
+     1
+ 10
+230.2994992
+ 20
+147.0249993
+ 11
+228.77449844
+ 21
+147.0249993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+277
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.67289844
+ 20
+147.1265993
+ 11
+228.67289844
+ 21
+146.2234007
+ 72
+     1
+ 10
+228.67289844
+ 20
+146.2234007
+ 11
+230.4010992
+ 21
+146.2234007
+ 72
+     1
+ 10
+230.4010992
+ 20
+146.2234007
+ 11
+230.4010992
+ 21
+147.1265993
+ 72
+     1
+ 10
+230.4010992
+ 20
+147.1265993
+ 11
+228.67289844
+ 21
+147.1265993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+278
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.77449844
+ 20
+145.7549993
+ 11
+228.77449844
+ 21
+145.0550007
+ 72
+     1
+ 10
+228.77449844
+ 20
+145.0550007
+ 11
+230.2994992
+ 21
+145.0550007
+ 72
+     1
+ 10
+230.2994992
+ 20
+145.0550007
+ 11
+230.2994992
+ 21
+145.7549993
+ 72
+     1
+ 10
+230.2994992
+ 20
+145.7549993
+ 11
+228.77449844
+ 21
+145.7549993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+279
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+228.67289844
+ 20
+145.8565993
+ 11
+228.67289844
+ 21
+144.9534007
+ 72
+     1
+ 10
+228.67289844
+ 20
+144.9534007
+ 11
+230.4010992
+ 21
+144.9534007
+ 72
+     1
+ 10
+230.4010992
+ 20
+144.9534007
+ 11
+230.4010992
+ 21
+145.8565993
+ 72
+     1
+ 10
+230.4010992
+ 20
+145.8565993
+ 11
+228.67289844
+ 21
+145.8565993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+27A
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.1985008
+ 20
+145.7549993
+ 11
+234.1985008
+ 21
+145.0550007
+ 72
+     1
+ 10
+234.1985008
+ 20
+145.0550007
+ 11
+235.72350156
+ 21
+145.0550007
+ 72
+     1
+ 10
+235.72350156
+ 20
+145.0550007
+ 11
+235.72350156
+ 21
+145.7549993
+ 72
+     1
+ 10
+235.72350156
+ 20
+145.7549993
+ 11
+234.1985008
+ 21
+145.7549993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+27B
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.0969008
+ 20
+145.8565993
+ 11
+234.0969008
+ 21
+144.9534007
+ 72
+     1
+ 10
+234.0969008
+ 20
+144.9534007
+ 11
+235.82510156
+ 21
+144.9534007
+ 72
+     1
+ 10
+235.82510156
+ 20
+144.9534007
+ 11
+235.82510156
+ 21
+145.8565993
+ 72
+     1
+ 10
+235.82510156
+ 20
+145.8565993
+ 11
+234.0969008
+ 21
+145.8565993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+27C
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.1985008
+ 20
+147.0249993
+ 11
+234.1985008
+ 21
+146.3250007
+ 72
+     1
+ 10
+234.1985008
+ 20
+146.3250007
+ 11
+235.72350156
+ 21
+146.3250007
+ 72
+     1
+ 10
+235.72350156
+ 20
+146.3250007
+ 11
+235.72350156
+ 21
+147.0249993
+ 72
+     1
+ 10
+235.72350156
+ 20
+147.0249993
+ 11
+234.1985008
+ 21
+147.0249993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+27D
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.0969008
+ 20
+147.1265993
+ 11
+234.0969008
+ 21
+146.2234007
+ 72
+     1
+ 10
+234.0969008
+ 20
+146.2234007
+ 11
+235.82510156
+ 21
+146.2234007
+ 72
+     1
+ 10
+235.82510156
+ 20
+146.2234007
+ 11
+235.82510156
+ 21
+147.1265993
+ 72
+     1
+ 10
+235.82510156
+ 20
+147.1265993
+ 11
+234.0969008
+ 21
+147.1265993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+27E
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.1985008
+ 20
+148.2949993
+ 11
+234.1985008
+ 21
+147.5950007
+ 72
+     1
+ 10
+234.1985008
+ 20
+147.5950007
+ 11
+235.72350156
+ 21
+147.5950007
+ 72
+     1
+ 10
+235.72350156
+ 20
+147.5950007
+ 11
+235.72350156
+ 21
+148.2949993
+ 72
+     1
+ 10
+235.72350156
+ 20
+148.2949993
+ 11
+234.1985008
+ 21
+148.2949993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+27F
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.0969008
+ 20
+148.3965993
+ 11
+234.0969008
+ 21
+147.4934007
+ 72
+     1
+ 10
+234.0969008
+ 20
+147.4934007
+ 11
+235.82510156
+ 21
+147.4934007
+ 72
+     1
+ 10
+235.82510156
+ 20
+147.4934007
+ 11
+235.82510156
+ 21
+148.3965993
+ 72
+     1
+ 10
+235.82510156
+ 20
+148.3965993
+ 11
+234.0969008
+ 21
+148.3965993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+280
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.1985008
+ 20
+149.5649993
+ 11
+234.1985008
+ 21
+148.8650007
+ 72
+     1
+ 10
+234.1985008
+ 20
+148.8650007
+ 11
+235.72350156
+ 21
+148.8650007
+ 72
+     1
+ 10
+235.72350156
+ 20
+148.8650007
+ 11
+235.72350156
+ 21
+149.5649993
+ 72
+     1
+ 10
+235.72350156
+ 20
+149.5649993
+ 11
+234.1985008
+ 21
+149.5649993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+HATCH
+  5
+281
+330
+1F
+100
+AcDbEntity
+  8
+TOPSOLDER
+100
+AcDbHatch
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+210
+0.0
+220
+0.0
+230
+1.0
+  2
+SOLID
+ 70
+     1
+ 71
+     0
+ 91
+        1
+ 92
+        0
+ 93
+        4
+ 72
+     1
+ 10
+234.0969008
+ 20
+149.6665993
+ 11
+234.0969008
+ 21
+148.7634007
+ 72
+     1
+ 10
+234.0969008
+ 20
+148.7634007
+ 11
+235.82510156
+ 21
+148.7634007
+ 72
+     1
+ 10
+235.82510156
+ 20
+148.7634007
+ 11
+235.82510156
+ 21
+149.6665993
+ 72
+     1
+ 10
+235.82510156
+ 20
+149.6665993
+ 11
+234.0969008
+ 21
+149.6665993
+ 97
+        0
+ 75
+     0
+ 76
+     1
+ 98
+        1
+ 10
+0.0
+ 20
+0.0
+  0
+MTEXT
+  5
+283
+330
+1F
+100
+AcDbEntity
+  8
+0
+  6
+Continuous
+ 62
+     7
+100
+AcDbMText
+ 10
+0.0
+ 20
+10.1326830986
+ 30
+0.0
+ 40
+3.633
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+SOLIDWORKS Educational Product.
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+284
+330
+1F
+100
+AcDbEntity
+  8
+0
+  6
+Continuous
+ 62
+     7
+100
+AcDbMText
+ 10
+0.0
+ 20
+4.6831830986
+ 30
+0.0
+ 40
+3.633
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+For Instructional Use Only.
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+C
+330
+0
+100
+AcDbDictionary
+281
+     1
+  3
+ACAD_GROUP
+350
+D
+  3
+ACAD_LAYOUT
+350
+1A
+  3
+ACAD_MLINESTYLE
+350
+17
+  3
+ACAD_PLOTSETTINGS
+350
+19
+  3
+ACAD_PLOTSTYLENAME
+350
+E
+  3
+ACAD_SCALELIST
+350
+47
+  0
+DICTIONARY
+  5
+D
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  0
+DICTIONARY
+  5
+1A
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+Layout1
+350
+1E
+  3
+Layout2
+350
+26
+  3
+Model
+350
+22
+  0
+DICTIONARY
+  5
+17
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+Standard
+350
+18
+  0
+DICTIONARY
+  5
+19
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  0
+ACDBDICTIONARYWDFLT
+  5
+E
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+Normal
+350
+F
+100
+AcDbDictionaryWithDefault
+340
+F
+  0
+DICTIONARY
+  5
+47
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+A0
+350
+48
+  3
+A1
+350
+49
+  3
+A2
+350
+4A
+  3
+A3
+350
+4B
+  3
+A4
+350
+4C
+  3
+A5
+350
+4D
+  3
+A6
+350
+4E
+  3
+A7
+350
+4F
+  3
+A8
+350
+50
+  3
+A9
+350
+51
+  3
+B0
+350
+52
+  3
+B1
+350
+53
+  3
+B2
+350
+54
+  3
+B3
+350
+55
+  3
+B4
+350
+56
+  3
+B5
+350
+57
+  3
+B6
+350
+58
+  3
+B7
+350
+59
+  3
+B8
+350
+5A
+  3
+B9
+350
+5B
+  3
+C0
+350
+5C
+  3
+C1
+350
+5D
+  3
+C2
+350
+5E
+  3
+C3
+350
+5F
+  3
+C4
+350
+60
+  3
+C5
+350
+61
+  3
+C6
+350
+62
+  3
+C7
+350
+63
+  3
+C8
+350
+64
+  3
+C9
+350
+65
+  3
+D0
+350
+66
+  3
+D1
+350
+67
+  3
+D2
+350
+68
+  0
+LAYOUT
+  5
+1E
+102
+{ACAD_REACTORS
+330
+1A
+102
+}
+330
+1A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+
+  6
+
+ 40
+0.0
+ 41
+0.0
+ 42
+0.0
+ 43
+0.0
+ 44
+0.0
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+   688
+ 72
+     1
+ 73
+     0
+ 74
+     5
+  7
+
+ 75
+    16
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+     1
+ 71
+     1
+ 10
+0.0
+ 20
+0.0
+ 11
+420.0
+ 21
+297.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+1.0000000000E+20
+ 24
+1.0000000000E+20
+ 34
+1.0000000000E+20
+ 15
+-1.0000000000E+20
+ 25
+-1.0000000000E+20
+ 35
+-1.0000000000E+20
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+1B
+  0
+LAYOUT
+  5
+26
+102
+{ACAD_REACTORS
+330
+1A
+102
+}
+330
+1A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+
+  6
+
+ 40
+0.0
+ 41
+0.0
+ 42
+0.0
+ 43
+0.0
+ 44
+0.0
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+   688
+ 72
+     1
+ 73
+     0
+ 74
+     5
+  7
+
+ 75
+    16
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout2
+ 70
+     1
+ 71
+     2
+ 10
+0.0
+ 20
+0.0
+ 11
+0.0
+ 21
+0.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+0.0
+ 25
+0.0
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+23
+  0
+LAYOUT
+  5
+22
+102
+{ACAD_REACTORS
+330
+1A
+102
+}
+330
+1A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+Letter_(8.50_x_11.00_Inches)
+  6
+
+ 40
+6.35
+ 41
+6.35
+ 42
+6.35000508
+ 43
+6.35000508
+ 44
+215.9
+ 45
+279.4
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+  1712
+ 72
+     1
+ 73
+     0
+ 74
+     0
+  7
+
+ 75
+     0
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+     1
+ 71
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+297.0
+ 21
+210.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+297.0
+ 25
+210.0
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+1F
+331
+29
+  0
+MLINESTYLE
+  5
+18
+102
+{ACAD_REACTORS
+330
+17
+102
+}
+330
+17
+100
+AcDbMlineStyle
+  2
+Standard
+ 70
+     0
+  3
+
+ 62
+   256
+ 51
+90.0
+ 52
+90.0
+ 71
+     2
+ 49
+0.5
+ 62
+   256
+  6
+BYLAYER
+ 49
+-0.5
+ 62
+   256
+  6
+BYLAYER
+  0
+ACDBPLACEHOLDER
+  5
+F
+102
+{ACAD_REACTORS
+330
+E
+102
+}
+330
+E
+  0
+SCALE
+  5
+48
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:1
+140
+1.0
+141
+1.0
+290
+     1
+  0
+SCALE
+  5
+49
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:2
+140
+1.0
+141
+2.0
+290
+     0
+  0
+SCALE
+  5
+4A
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:4
+140
+1.0
+141
+4.0
+290
+     0
+  0
+SCALE
+  5
+4B
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:5
+140
+1.0
+141
+5.0
+290
+     0
+  0
+SCALE
+  5
+4C
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:8
+140
+1.0
+141
+8.0
+290
+     0
+  0
+SCALE
+  5
+4D
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:10
+140
+1.0
+141
+10.0
+290
+     0
+  0
+SCALE
+  5
+4E
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:16
+140
+1.0
+141
+16.0
+290
+     0
+  0
+SCALE
+  5
+4F
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:20
+140
+1.0
+141
+20.0
+290
+     0
+  0
+SCALE
+  5
+50
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:30
+140
+1.0
+141
+30.0
+290
+     0
+  0
+SCALE
+  5
+51
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:40
+140
+1.0
+141
+40.0
+290
+     0
+  0
+SCALE
+  5
+52
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:50
+140
+1.0
+141
+50.0
+290
+     0
+  0
+SCALE
+  5
+53
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:100
+140
+1.0
+141
+100.0
+290
+     0
+  0
+SCALE
+  5
+54
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+2:1
+140
+2.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+55
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+4:1
+140
+4.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+56
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+8:1
+140
+8.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+57
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+10:1
+140
+10.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+58
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+100:1
+140
+100.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+59
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/128" = 1'-0"
+140
+0.0078125
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+5A
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/64" = 1'-0"
+140
+0.015625
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+5B
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/32" = 1'-0"
+140
+0.03125
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+5C
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/16" = 1'-0"
+140
+0.0625
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+5D
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+3/32" = 1'-0"
+140
+0.09375
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+5E
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/8" = 1'-0"
+140
+0.125
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+5F
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+3/16" = 1'-0"
+140
+0.1875
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+60
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/4" = 1'-0"
+140
+0.25
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+61
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+3/8" = 1'-0"
+140
+0.375
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+62
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1/2" = 1'-0"
+140
+0.5
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+63
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+3/4" = 1'-0"
+140
+0.75
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+64
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1" = 1'-0"
+140
+1.0
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+65
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1-1/2" = 1'-0"
+140
+1.5
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+66
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+3" = 1'-0"
+140
+3.0
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+67
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+6" = 1'-0"
+140
+6.0
+141
+12.0
+290
+     0
+  0
+SCALE
+  5
+68
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1'-0" = 1'-0"
+140
+12.0
+141
+12.0
+290
+     0
+  0
+ENDSEC
+  0
+EOF
