@@ -1,0 +1,28 @@
+PCAD Importer Log
+Project : LM5107MAX_NOPB.LibPkg
+
+Section : C:\Users\Ben\Documents\Thundebots\AltiumLibraries\LM5107MAX_NOPB.lia
+    Section : PCB Library - LM5107MAX_NOPB.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 133
+            Warning - 1 : Skipping Token isVisible On Line 142
+            Warning - 1 : Skipping Token LM5107MAX/NOPB On Line 146
+            Warning - 1 : Skipping Token attachedSymbol On Line 252
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - LM5107MAX_NOPB.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 94
+            Warning - 1 : Skipping Token layerContents On Line 137
+        EndSection
+
+        Section : Generating SCH Library - LM5107MAX_NOPB.SchLib
+        EndSection
+    EndSection
+EndSection

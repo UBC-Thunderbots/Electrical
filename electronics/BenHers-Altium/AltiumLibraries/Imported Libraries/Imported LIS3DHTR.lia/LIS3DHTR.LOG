@@ -1,0 +1,28 @@
+PCAD Importer Log
+Project : LIS3DHTR.LibPkg
+
+Section : C:\Users\Ben\Documents\Thundebots\AltiumLibraries\LIS3DHTR.lia
+    Section : PCB Library - LIS3DHTR.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token LIS3DHTR On Line 225
+            Warning - 1 : Skipping Token attachedSymbol On Line 391
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - LIS3DHTR.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 102
+            Warning - 1 : Skipping Token layerContents On Line 200
+            Warning - 1 : Skipping Token layerContents On Line 212
+            Warning - 1 : Skipping Token Default On Line 363
+        EndSection
+
+        Section : Generating SCH Library - LIS3DHTR.SchLib
+        EndSection
+    EndSection
+EndSection

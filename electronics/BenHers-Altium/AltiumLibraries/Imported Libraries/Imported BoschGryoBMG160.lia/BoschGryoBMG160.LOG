@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : BoschGryoBMG160.LibPkg
+
+Section : C:\Users\Ben\Documents\Thundebots\AltiumLibraries\BoschGryoBMG160.lia
+    Section : PCB Library - BoschGryoBMG160.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token BMG160 On Line 114
+            Warning - 1 : Skipping Token attachedSymbol On Line 250
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - BoschGryoBMG160.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 98
+        EndSection
+
+        Section : Generating SCH Library - BoschGryoBMG160.SchLib
+        EndSection
+    EndSection
+EndSection

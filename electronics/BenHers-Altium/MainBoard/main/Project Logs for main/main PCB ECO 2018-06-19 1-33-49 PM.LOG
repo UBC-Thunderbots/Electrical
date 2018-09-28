@@ -1,0 +1,909 @@
+Added Component: Designator=1k(CAPC2012X140N)
+Added Component: Designator=1k(CAPC2012X140N)
+Added Component: Designator=C1(CAPC2013X110N)
+Added Component: Designator=C3(CAPC3216X100N)
+Added Component: Designator=C5(INDC2012X87N)
+Added Component: Designator=C11_U_motordriver0(CAPC2013X110N)
+Added Component: Designator=C11_U_motordriver1(CAPC2013X110N)
+Added Component: Designator=C11_U_motordriver2(CAPC2013X110N)
+Added Component: Designator=C11_U_motordriver3(CAPC2013X110N)
+Added Component: Designator=C11_U_motordriver4(CAPC2013X110N)
+Added Component: Designator=C12_U_motordriver0(CAPC2013X110N)
+Added Component: Designator=C12_U_motordriver1(CAPC2013X110N)
+Added Component: Designator=C12_U_motordriver2(CAPC2013X110N)
+Added Component: Designator=C12_U_motordriver3(CAPC2013X110N)
+Added Component: Designator=C12_U_motordriver4(CAPC2013X110N)
+Added Component: Designator=C13_U_motordriver0(CAPC2013X110N)
+Added Component: Designator=C13_U_motordriver1(CAPC2013X110N)
+Added Component: Designator=C13_U_motordriver2(CAPC2013X110N)
+Added Component: Designator=C13_U_motordriver3(CAPC2013X110N)
+Added Component: Designator=C13_U_motordriver4(CAPC2013X110N)
+Added Component: Designator=C15_U_motordriver0(CAPC2013X110N)
+Added Component: Designator=C15_U_motordriver1(CAPC2013X110N)
+Added Component: Designator=C15_U_motordriver2(CAPC2013X110N)
+Added Component: Designator=C15_U_motordriver3(CAPC2013X110N)
+Added Component: Designator=C15_U_motordriver4(CAPC2013X110N)
+Added Component: Designator=C16_U_motordriver0(CAPC2013X110N)
+Added Component: Designator=C16_U_motordriver1(CAPC2013X110N)
+Added Component: Designator=C16_U_motordriver2(CAPC2013X110N)
+Added Component: Designator=C16_U_motordriver3(CAPC2013X110N)
+Added Component: Designator=C16_U_motordriver4(CAPC2013X110N)
+Added Component: Designator=C17_U_motordriver0(CAPC2013X110N)
+Added Component: Designator=C17_U_motordriver1(CAPC2013X110N)
+Added Component: Designator=C17_U_motordriver2(CAPC2013X110N)
+Added Component: Designator=C17_U_motordriver3(CAPC2013X110N)
+Added Component: Designator=C17_U_motordriver4(CAPC2013X110N)
+Added Component: Designator=C18_U_motordriver0(CAPC3216X100N)
+Added Component: Designator=C18_U_motordriver1(CAPC3216X100N)
+Added Component: Designator=C18_U_motordriver2(CAPC3216X100N)
+Added Component: Designator=C18_U_motordriver3(CAPC3216X100N)
+Added Component: Designator=C18_U_motordriver4(CAPC3216X100N)
+Added Component: Designator=C21(CAPC3216X100N)
+Added Component: Designator=C22(INDC2012X87N)
+Added Component: Designator=C24(0805)
+Added Component: Designator=C25(0805)
+Added Component: Designator=C26(0805)
+Added Component: Designator=C27(0805)
+Added Component: Designator=C28(0805)
+Added Component: Designator=C29(0805)
+Added Component: Designator=C30(0805)
+Added Component: Designator=C31(0805)
+Added Component: Designator=C32(0805)
+Added Component: Designator=C33(0805)
+Added Component: Designator=C34(0805)
+Added Component: Designator=C35(0805)
+Added Component: Designator=C36(CAPC2012X70)
+Added Component: Designator=C37(0805)
+Added Component: Designator=C38(CAPC2012X70)
+Added Component: Designator=C39(0805)
+Added Component: Designator=C40(CAPC2012X70)
+Added Component: Designator=C41(0805)
+Added Component: Designator=C42(CAPC2012X70)
+Added Component: Designator=C43(CAPC2012X70)
+Added Component: Designator=C44(CAPC2012X70)
+Added Component: Designator=C45(CAPC2012X70)
+Added Component: Designator=C46(CAPC2012X70)
+Added Component: Designator=C47(CAPC2012X70)
+Added Component: Designator=C48(INDC2012X87N)
+Added Component: Designator=C49(CAPC2013X110N)
+Added Component: Designator=C50(CAPC2013X110N)
+Added Component: Designator=C57(CAPC3216X100N)
+Added Component: Designator=C60(CAPC2013X110N)
+Added Component: Designator=C73(INDC2012X87N)
+Added Component: Designator=C74(INDC2012X87N)
+Added Component: Designator=C75(INDC2012X87N)
+Added Component: Designator=C76(CAPC2013X110N)
+Added Component: Designator=C77(CAPC2013X110N)
+Added Component: Designator=C78(0805)
+Added Component: Designator=C79(CAPC2013X110N)
+Added Component: Designator=C80(C0805)
+Added Component: Designator=C81(CAPC2013X110N)
+Added Component: Designator=C82(0805)
+Added Component: Designator=C83(CAPC2013X110N)
+Added Component: Designator=C84(C0805)
+Added Component: Designator=C85(CAPC2013X110N)
+Added Component: Designator=C86(CAPC2013X110N)
+Added Component: Designator=C87(CAPC2013X110N)
+Added Component: Designator=C88(CAPC3216X100N)
+Added Component: Designator=C89(CAPC2013X110N)
+Added Component: Designator=D16(3.2X1.6X1.1)
+Added Component: Designator=D18(3.2X1.6X1.1)
+Added Component: Designator=D19(3.2X1.6X1.1)
+Added Component: Designator=D20(3.2X1.6X1.1)
+Added Component: Designator=D21(1206)
+Added Component: Designator=D22(1206)
+Added Component: Designator=D23(1206)
+Added Component: Designator=DIP6(SOJ254P980X912-12M)
+Added Component: Designator=DIP6(SOJ254P980X912-12M)
+Added Component: Designator=F1(1206)
+Added Component: Designator=F2_U_motordriver0(1206)
+Added Component: Designator=F2_U_motordriver1(1206)
+Added Component: Designator=F2_U_motordriver2(1206)
+Added Component: Designator=F2_U_motordriver3(1206)
+Added Component: Designator=F2_U_motordriver4(1206)
+Added Component: Designator=P1(HDR1X10)
+Added Component: Designator=P2(HDR2X30)
+Added Component: Designator=P3(HDR1X6)
+Added Component: Designator=P4(PCBComponent_1)
+Added Component: Designator=P7(HDR1X2)
+Added Component: Designator=P14(HDR1X8)
+Added Component: Designator=P18(HDR2X6)
+Added Component: Designator=Q4_U_motordriver0(SOIC127P490X600X175-8N)
+Added Component: Designator=Q4_U_motordriver1(SOIC127P490X600X175-8N)
+Added Component: Designator=Q4_U_motordriver2(SOIC127P490X600X175-8N)
+Added Component: Designator=Q4_U_motordriver3(SOIC127P490X600X175-8N)
+Added Component: Designator=Q4_U_motordriver4(SOIC127P490X600X175-8N)
+Added Component: Designator=Q5_U_motordriver0(SOIC127P490X600X175-8N)
+Added Component: Designator=Q5_U_motordriver1(SOIC127P490X600X175-8N)
+Added Component: Designator=Q5_U_motordriver2(SOIC127P490X600X175-8N)
+Added Component: Designator=Q5_U_motordriver3(SOIC127P490X600X175-8N)
+Added Component: Designator=Q5_U_motordriver4(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6_U_motordriver0(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6_U_motordriver1(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6_U_motordriver2(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6_U_motordriver3(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6_U_motordriver4(SOIC127P490X600X175-8N)
+Added Component: Designator=Q14(SOT95P230X110-3N)
+Added Component: Designator=Q15(SOT95P230X110-3N)
+Added Component: Designator=Q27(SOIC127P600X175-8N)
+Added Component: Designator=Q28(SOIC127P600X175-8N)
+Added Component: Designator=R1(RESC2012X60)
+Added Component: Designator=R3(RESC2012X60)
+Added Component: Designator=R4(RESC2012X60)
+Added Component: Designator=R7(CAPC2012X140N)
+Added Component: Designator=R8(RESC2013X65N)
+Added Component: Designator=R37(RESC2012X60)
+Added Component: Designator=R39(RESC2012X60)
+Added Component: Designator=R40(RESC2012X60)
+Added Component: Designator=R43(RESC2012X60)
+Added Component: Designator=R44(RESC2012X60)
+Added Component: Designator=R45(RESC2012X60)
+Added Component: Designator=R46(RESC2012X60)
+Added Component: Designator=R50(RESC2012X60)
+Added Component: Designator=R51(RESC2012X60)
+Added Component: Designator=R53(RESC2012X60)
+Added Component: Designator=R54(RESC2012X60)
+Added Component: Designator=R55(RESC2012X60)
+Added Component: Designator=R56(RESC2012X60)
+Added Component: Designator=R58(RESC2012X60)
+Added Component: Designator=STM32Dongle(QFP50P1200X1200X160-64N)
+Added Component: Designator=U4_U_motordriver0(SOIC127P620X175-8N)
+Added Component: Designator=U4_U_motordriver1(SOIC127P620X175-8N)
+Added Component: Designator=U4_U_motordriver2(SOIC127P620X175-8N)
+Added Component: Designator=U4_U_motordriver3(SOIC127P620X175-8N)
+Added Component: Designator=U4_U_motordriver4(SOIC127P620X175-8N)
+Added Component: Designator=U5_U_motordriver0(SOIC127P620X175-8N)
+Added Component: Designator=U5_U_motordriver1(SOIC127P620X175-8N)
+Added Component: Designator=U5_U_motordriver2(SOIC127P620X175-8N)
+Added Component: Designator=U5_U_motordriver3(SOIC127P620X175-8N)
+Added Component: Designator=U5_U_motordriver4(SOIC127P620X175-8N)
+Added Component: Designator=U6(OFN50P300X300X100-12N)
+Added Component: Designator=U7(XCVR_MRF24J40MDT-I/RM)
+Added Component: Designator=U11(HDR1X3)
+Added Component: Designator=U13_U_motordriver0(SOIC127P620X175-8N)
+Added Component: Designator=U13_U_motordriver1(SOIC127P620X175-8N)
+Added Component: Designator=U13_U_motordriver2(SOIC127P620X175-8N)
+Added Component: Designator=U13_U_motordriver3(SOIC127P620X175-8N)
+Added Component: Designator=U13_U_motordriver4(SOIC127P620X175-8N)
+Added Component: Designator=U25(LGA16R50P5X3_300X300X100N)
+Added Component: Designator=U47(SOIC127P600X175-16N)
+Added Component: Designator=U?(SOIC127P600X175-8N)
+Added Component: Designator=U?(fpgaTQ144fpgaXC6SLX9-3TQG144CfpgaPrimary))
+Added Pin To Net: NetName=+5V Pin=C57-Out
+Added Pin To Net: NetName=+5V Pin=P2-28
+Added Pin To Net: NetName=+5V Pin=P14-4
+Added Net: Name=+5V
+Added Pin To Net: NetName=+BATT Pin=C73-2
+Added Pin To Net: NetName=+BATT Pin=C75-2
+Added Pin To Net: NetName=+BATT Pin=P18-1
+Added Pin To Net: NetName=+BATT Pin=P18-2
+Added Pin To Net: NetName=+BATT Pin=Q28-5
+Added Pin To Net: NetName=+BATT Pin=Q28-6
+Added Pin To Net: NetName=+BATT Pin=Q28-7
+Added Pin To Net: NetName=+BATT Pin=Q28-8
+Added Pin To Net: NetName=+BATT Pin=R1-2
+Added Pin To Net: NetName=+BATT Pin=U11-1
+Added Net: Name=+BATT
+Added Pin To Net: NetName=5V Pin=C1-2
+Added Pin To Net: NetName=5V Pin=U11-3
+Added Pin To Net: NetName=5V Pin=U?-4
+Added Net: Name=5V
+Added Pin To Net: NetName=9V Pin=C11_U_motordriver0-1
+Added Pin To Net: NetName=9V Pin=C11_U_motordriver1-1
+Added Pin To Net: NetName=9V Pin=C11_U_motordriver2-1
+Added Pin To Net: NetName=9V Pin=C11_U_motordriver3-1
+Added Pin To Net: NetName=9V Pin=C11_U_motordriver4-1
+Added Pin To Net: NetName=9V Pin=C12_U_motordriver0-2
+Added Pin To Net: NetName=9V Pin=C12_U_motordriver1-2
+Added Pin To Net: NetName=9V Pin=C12_U_motordriver2-2
+Added Pin To Net: NetName=9V Pin=C12_U_motordriver3-2
+Added Pin To Net: NetName=9V Pin=C12_U_motordriver4-2
+Added Pin To Net: NetName=9V Pin=C13_U_motordriver0-2
+Added Pin To Net: NetName=9V Pin=C13_U_motordriver1-2
+Added Pin To Net: NetName=9V Pin=C13_U_motordriver2-2
+Added Pin To Net: NetName=9V Pin=C13_U_motordriver3-2
+Added Pin To Net: NetName=9V Pin=C13_U_motordriver4-2
+Added Pin To Net: NetName=9V Pin=C74-2
+Added Pin To Net: NetName=9V Pin=U13_U_motordriver0-1
+Added Pin To Net: NetName=9V Pin=U13_U_motordriver1-1
+Added Pin To Net: NetName=9V Pin=U13_U_motordriver2-1
+Added Pin To Net: NetName=9V Pin=U13_U_motordriver3-1
+Added Pin To Net: NetName=9V Pin=U13_U_motordriver4-1
+Added Net: Name=9V
+Added Pin To Net: NetName=ACCEL_MISO Pin=U25-7
+Added Net: Name=ACCEL_MISO
+Added Pin To Net: NetName=BB_SENSOR Pin=P2-1
+Added Pin To Net: NetName=BB_SENSOR Pin=STM32Dongle-24
+Added Net: Name=BB_SENSOR
+Added Pin To Net: NetName=GYRO_CLK Pin=U6-7
+Added Net: Name=GYRO_CLK
+Added Pin To Net: NetName=GYRO_CS Pin=U6-5
+Added Net: Name=GYRO_CS
+Added Pin To Net: NetName=HB0_U_motordriver0 Pin=U4_U_motordriver0-8
+Added Net: Name=HB0_U_motordriver0
+Added Pin To Net: NetName=HB0_U_motordriver1 Pin=U4_U_motordriver1-8
+Added Net: Name=HB0_U_motordriver1
+Added Pin To Net: NetName=HB0_U_motordriver2 Pin=U4_U_motordriver2-8
+Added Net: Name=HB0_U_motordriver2
+Added Pin To Net: NetName=HB0_U_motordriver3 Pin=U4_U_motordriver3-8
+Added Net: Name=HB0_U_motordriver3
+Added Pin To Net: NetName=HB0_U_motordriver4 Pin=U4_U_motordriver4-8
+Added Net: Name=HB0_U_motordriver4
+Added Pin To Net: NetName=HB1_U_motordriver0 Pin=U5_U_motordriver0-8
+Added Net: Name=HB1_U_motordriver0
+Added Pin To Net: NetName=HB1_U_motordriver1 Pin=U5_U_motordriver1-8
+Added Net: Name=HB1_U_motordriver1
+Added Pin To Net: NetName=HB1_U_motordriver2 Pin=U5_U_motordriver2-8
+Added Net: Name=HB1_U_motordriver2
+Added Pin To Net: NetName=HB1_U_motordriver3 Pin=U5_U_motordriver3-8
+Added Net: Name=HB1_U_motordriver3
+Added Pin To Net: NetName=HB1_U_motordriver4 Pin=U5_U_motordriver4-8
+Added Net: Name=HB1_U_motordriver4
+Added Pin To Net: NetName=HB2_U_motordriver0 Pin=U13_U_motordriver0-8
+Added Net: Name=HB2_U_motordriver0
+Added Pin To Net: NetName=HB2_U_motordriver1 Pin=U13_U_motordriver1-8
+Added Net: Name=HB2_U_motordriver1
+Added Pin To Net: NetName=HB2_U_motordriver2 Pin=U13_U_motordriver2-8
+Added Net: Name=HB2_U_motordriver2
+Added Pin To Net: NetName=HB2_U_motordriver3 Pin=U13_U_motordriver3-8
+Added Net: Name=HB2_U_motordriver3
+Added Pin To Net: NetName=HB2_U_motordriver4 Pin=U13_U_motordriver4-8
+Added Net: Name=HB2_U_motordriver4
+Added Pin To Net: NetName=HG0_U_motordriver0 Pin=U4_U_motordriver0-7
+Added Net: Name=HG0_U_motordriver0
+Added Pin To Net: NetName=HG0_U_motordriver1 Pin=U4_U_motordriver1-7
+Added Net: Name=HG0_U_motordriver1
+Added Pin To Net: NetName=HG0_U_motordriver2 Pin=U4_U_motordriver2-7
+Added Net: Name=HG0_U_motordriver2
+Added Pin To Net: NetName=HG0_U_motordriver3 Pin=U4_U_motordriver3-7
+Added Net: Name=HG0_U_motordriver3
+Added Pin To Net: NetName=HG0_U_motordriver4 Pin=U4_U_motordriver4-7
+Added Net: Name=HG0_U_motordriver4
+Added Pin To Net: NetName=HG1_U_motordriver0 Pin=U5_U_motordriver0-7
+Added Net: Name=HG1_U_motordriver0
+Added Pin To Net: NetName=HG1_U_motordriver1 Pin=U5_U_motordriver1-7
+Added Net: Name=HG1_U_motordriver1
+Added Pin To Net: NetName=HG1_U_motordriver2 Pin=U5_U_motordriver2-7
+Added Net: Name=HG1_U_motordriver2
+Added Pin To Net: NetName=HG1_U_motordriver3 Pin=U5_U_motordriver3-7
+Added Net: Name=HG1_U_motordriver3
+Added Pin To Net: NetName=HG1_U_motordriver4 Pin=U5_U_motordriver4-7
+Added Net: Name=HG1_U_motordriver4
+Added Pin To Net: NetName=HIGH0_U_motordriver0 Pin=U4_U_motordriver0-2
+Added Net: Name=HIGH0_U_motordriver0
+Added Pin To Net: NetName=HIGH0_U_motordriver1 Pin=U4_U_motordriver1-2
+Added Net: Name=HIGH0_U_motordriver1
+Added Pin To Net: NetName=HIGH0_U_motordriver2 Pin=U4_U_motordriver2-2
+Added Net: Name=HIGH0_U_motordriver2
+Added Pin To Net: NetName=HIGH0_U_motordriver3 Pin=U4_U_motordriver3-2
+Added Net: Name=HIGH0_U_motordriver3
+Added Pin To Net: NetName=HIGH0_U_motordriver4 Pin=U4_U_motordriver4-2
+Added Net: Name=HIGH0_U_motordriver4
+Added Pin To Net: NetName=HIGH1_U_motordriver0 Pin=U5_U_motordriver0-2
+Added Net: Name=HIGH1_U_motordriver0
+Added Pin To Net: NetName=HIGH1_U_motordriver1 Pin=U5_U_motordriver1-2
+Added Net: Name=HIGH1_U_motordriver1
+Added Pin To Net: NetName=HIGH1_U_motordriver2 Pin=U5_U_motordriver2-2
+Added Net: Name=HIGH1_U_motordriver2
+Added Pin To Net: NetName=HIGH1_U_motordriver3 Pin=U5_U_motordriver3-2
+Added Net: Name=HIGH1_U_motordriver3
+Added Pin To Net: NetName=HIGH1_U_motordriver4 Pin=U5_U_motordriver4-2
+Added Net: Name=HIGH1_U_motordriver4
+Added Pin To Net: NetName=HIGH2_U_motordriver0 Pin=U13_U_motordriver0-2
+Added Net: Name=HIGH2_U_motordriver0
+Added Pin To Net: NetName=HIGH2_U_motordriver1 Pin=U13_U_motordriver1-2
+Added Net: Name=HIGH2_U_motordriver1
+Added Pin To Net: NetName=HIGH2_U_motordriver2 Pin=U13_U_motordriver2-2
+Added Net: Name=HIGH2_U_motordriver2
+Added Pin To Net: NetName=HIGH2_U_motordriver3 Pin=U13_U_motordriver3-2
+Added Net: Name=HIGH2_U_motordriver3
+Added Pin To Net: NetName=HIGH2_U_motordriver4 Pin=U13_U_motordriver4-2
+Added Net: Name=HIGH2_U_motordriver4
+Added Pin To Net: NetName=HV_BATT_F_U_motordriver0 Pin=F2_U_motordriver0-Fusein
+Added Net: Name=HV_BATT_F_U_motordriver0
+Added Pin To Net: NetName=HV_BATT_F_U_motordriver1 Pin=F2_U_motordriver1-Fusein
+Added Net: Name=HV_BATT_F_U_motordriver1
+Added Pin To Net: NetName=HV_BATT_F_U_motordriver2 Pin=F2_U_motordriver2-Fusein
+Added Net: Name=HV_BATT_F_U_motordriver2
+Added Pin To Net: NetName=HV_BATT_F_U_motordriver3 Pin=F2_U_motordriver3-Fusein
+Added Net: Name=HV_BATT_F_U_motordriver3
+Added Pin To Net: NetName=HV_BATT_F_U_motordriver4 Pin=F2_U_motordriver4-Fusein
+Added Net: Name=HV_BATT_F_U_motordriver4
+Added Pin To Net: NetName=HVBATT Pin=F2_U_motordriver0-Fuseout
+Added Pin To Net: NetName=HVBATT Pin=F2_U_motordriver1-Fuseout
+Added Pin To Net: NetName=HVBATT Pin=F2_U_motordriver2-Fuseout
+Added Pin To Net: NetName=HVBATT Pin=F2_U_motordriver3-Fuseout
+Added Pin To Net: NetName=HVBATT Pin=F2_U_motordriver4-Fuseout
+Added Net: Name=HVBATT
+Added Pin To Net: NetName=LG0_U_motordriver0 Pin=U4_U_motordriver0-5
+Added Net: Name=LG0_U_motordriver0
+Added Pin To Net: NetName=LG0_U_motordriver1 Pin=U4_U_motordriver1-5
+Added Net: Name=LG0_U_motordriver1
+Added Pin To Net: NetName=LG0_U_motordriver2 Pin=U4_U_motordriver2-5
+Added Net: Name=LG0_U_motordriver2
+Added Pin To Net: NetName=LG0_U_motordriver3 Pin=U4_U_motordriver3-5
+Added Net: Name=LG0_U_motordriver3
+Added Pin To Net: NetName=LG0_U_motordriver4 Pin=U4_U_motordriver4-5
+Added Net: Name=LG0_U_motordriver4
+Added Pin To Net: NetName=LG2_U_motordriver0 Pin=U13_U_motordriver0-5
+Added Net: Name=LG2_U_motordriver0
+Added Pin To Net: NetName=LG2_U_motordriver1 Pin=U13_U_motordriver1-5
+Added Net: Name=LG2_U_motordriver1
+Added Pin To Net: NetName=LG2_U_motordriver2 Pin=U13_U_motordriver2-5
+Added Net: Name=LG2_U_motordriver2
+Added Pin To Net: NetName=LG2_U_motordriver3 Pin=U13_U_motordriver3-5
+Added Net: Name=LG2_U_motordriver3
+Added Pin To Net: NetName=LG2_U_motordriver4 Pin=U13_U_motordriver4-5
+Added Net: Name=LG2_U_motordriver4
+Added Pin To Net: NetName=LOW0_U_motordriver0 Pin=U4_U_motordriver0-3
+Added Net: Name=LOW0_U_motordriver0
+Added Pin To Net: NetName=LOW0_U_motordriver1 Pin=U4_U_motordriver1-3
+Added Net: Name=LOW0_U_motordriver1
+Added Pin To Net: NetName=LOW0_U_motordriver2 Pin=U4_U_motordriver2-3
+Added Net: Name=LOW0_U_motordriver2
+Added Pin To Net: NetName=LOW0_U_motordriver3 Pin=U4_U_motordriver3-3
+Added Net: Name=LOW0_U_motordriver3
+Added Pin To Net: NetName=LOW0_U_motordriver4 Pin=U4_U_motordriver4-3
+Added Net: Name=LOW0_U_motordriver4
+Added Pin To Net: NetName=LOW1_U_motordriver0 Pin=U5_U_motordriver0-3
+Added Net: Name=LOW1_U_motordriver0
+Added Pin To Net: NetName=LOW1_U_motordriver1 Pin=U5_U_motordriver1-3
+Added Net: Name=LOW1_U_motordriver1
+Added Pin To Net: NetName=LOW1_U_motordriver2 Pin=U5_U_motordriver2-3
+Added Net: Name=LOW1_U_motordriver2
+Added Pin To Net: NetName=LOW1_U_motordriver3 Pin=U5_U_motordriver3-3
+Added Net: Name=LOW1_U_motordriver3
+Added Pin To Net: NetName=LOW1_U_motordriver4 Pin=U5_U_motordriver4-3
+Added Net: Name=LOW1_U_motordriver4
+Added Pin To Net: NetName=LOW2_U_motordriver0 Pin=U13_U_motordriver0-3
+Added Net: Name=LOW2_U_motordriver0
+Added Pin To Net: NetName=LOW2_U_motordriver1 Pin=U13_U_motordriver1-3
+Added Net: Name=LOW2_U_motordriver1
+Added Pin To Net: NetName=LOW2_U_motordriver2 Pin=U13_U_motordriver2-3
+Added Net: Name=LOW2_U_motordriver2
+Added Pin To Net: NetName=LOW2_U_motordriver3 Pin=U13_U_motordriver3-3
+Added Net: Name=LOW2_U_motordriver3
+Added Pin To Net: NetName=LOW2_U_motordriver4 Pin=U13_U_motordriver4-3
+Added Net: Name=LOW2_U_motordriver4
+Added Pin To Net: NetName=LPS_DRIVE0 Pin=P2-45
+Added Net: Name=LPS_DRIVE0
+Added Pin To Net: NetName=LPS_DRIVE1 Pin=P2-47
+Added Net: Name=LPS_DRIVE1
+Added Pin To Net: NetName=LPS_DRIVE2 Pin=P2-49
+Added Net: Name=LPS_DRIVE2
+Added Pin To Net: NetName=LPS_DRIVE3 Pin=P2-51
+Added Net: Name=LPS_DRIVE3
+Added Pin To Net: NetName=LPS_SENSOR Pin=P2-3
+Added Pin To Net: NetName=LPS_SENSOR Pin=STM32Dongle-25
+Added Net: Name=LPS_SENSOR
+Added Pin To Net: NetName=M0_ENCODER0 Pin=P2-43
+Added Net: Name=M0_ENCODER0
+Added Pin To Net: NetName=M0_ENCODER1 Pin=P2-41
+Added Net: Name=M0_ENCODER1
+Added Pin To Net: NetName=M0_HALL0 Pin=P2-37
+Added Net: Name=M0_HALL0
+Added Pin To Net: NetName=M0_HALL1 Pin=P2-35
+Added Net: Name=M0_HALL1
+Added Pin To Net: NetName=M0_HALL2 Pin=P2-39
+Added Net: Name=M0_HALL2
+Added Pin To Net: NetName=M0_PHASE0 Pin=P2-46
+Added Pin To Net: NetName=M0_PHASE0 Pin=P2-48
+Added Net: Name=M0_PHASE0
+Added Pin To Net: NetName=M0_PHASE1 Pin=P2-42
+Added Pin To Net: NetName=M0_PHASE1 Pin=P2-44
+Added Net: Name=M0_PHASE1
+Added Pin To Net: NetName=M0_PHASE2 Pin=P2-38
+Added Pin To Net: NetName=M0_PHASE2 Pin=P2-40
+Added Net: Name=M0_PHASE2
+Added Pin To Net: NetName=M1_ENCODER0 Pin=P2-33
+Added Net: Name=M1_ENCODER0
+Added Pin To Net: NetName=M1_ENCODER1 Pin=P2-31
+Added Net: Name=M1_ENCODER1
+Added Pin To Net: NetName=M1_HALL0 Pin=P2-27
+Added Net: Name=M1_HALL0
+Added Pin To Net: NetName=M1_HALL1 Pin=P2-25
+Added Net: Name=M1_HALL1
+Added Pin To Net: NetName=M1_HALL2 Pin=P2-29
+Added Net: Name=M1_HALL2
+Added Pin To Net: NetName=M1_PHASE0 Pin=P2-58
+Added Pin To Net: NetName=M1_PHASE0 Pin=P2-60
+Added Net: Name=M1_PHASE0
+Added Pin To Net: NetName=M1_PHASE1 Pin=P2-54
+Added Pin To Net: NetName=M1_PHASE1 Pin=P2-56
+Added Net: Name=M1_PHASE1
+Added Pin To Net: NetName=M1_PHASE2 Pin=P2-50
+Added Pin To Net: NetName=M1_PHASE2 Pin=P2-52
+Added Net: Name=M1_PHASE2
+Added Pin To Net: NetName=M2_ENCODER0 Pin=P2-23
+Added Net: Name=M2_ENCODER0
+Added Pin To Net: NetName=M2_ENCODER1 Pin=P2-21
+Added Net: Name=M2_ENCODER1
+Added Pin To Net: NetName=M2_HALL0 Pin=P2-17
+Added Net: Name=M2_HALL0
+Added Pin To Net: NetName=M2_HALL1 Pin=P2-15
+Added Net: Name=M2_HALL1
+Added Pin To Net: NetName=M2_HALL2 Pin=P2-19
+Added Net: Name=M2_HALL2
+Added Pin To Net: NetName=M2_PHASE0 Pin=P2-12
+Added Pin To Net: NetName=M2_PHASE0 Pin=P2-14
+Added Net: Name=M2_PHASE0
+Added Pin To Net: NetName=M2_PHASE1 Pin=P2-8
+Added Pin To Net: NetName=M2_PHASE1 Pin=P2-10
+Added Net: Name=M2_PHASE1
+Added Pin To Net: NetName=M2_PHASE2 Pin=P2-2
+Added Pin To Net: NetName=M2_PHASE2 Pin=P2-4
+Added Pin To Net: NetName=M2_PHASE2 Pin=P2-6
+Added Net: Name=M2_PHASE2
+Added Pin To Net: NetName=M3_ENCODER0 Pin=P2-13
+Added Net: Name=M3_ENCODER0
+Added Pin To Net: NetName=M3_ENCODER1 Pin=P2-11
+Added Net: Name=M3_ENCODER1
+Added Pin To Net: NetName=M3_HALL0 Pin=P2-7
+Added Net: Name=M3_HALL0
+Added Pin To Net: NetName=M3_HALL1 Pin=P2-5
+Added Net: Name=M3_HALL1
+Added Pin To Net: NetName=M3_HALL2 Pin=P2-9
+Added Net: Name=M3_HALL2
+Added Pin To Net: NetName=M3_PHASE0 Pin=P2-24
+Added Pin To Net: NetName=M3_PHASE0 Pin=P2-26
+Added Net: Name=M3_PHASE0
+Added Pin To Net: NetName=M3_PHASE1 Pin=P2-20
+Added Pin To Net: NetName=M3_PHASE1 Pin=P2-22
+Added Net: Name=M3_PHASE1
+Added Pin To Net: NetName=M3_PHASE2 Pin=P2-16
+Added Pin To Net: NetName=M3_PHASE2 Pin=P2-18
+Added Net: Name=M3_PHASE2
+Added Pin To Net: NetName=MO_ENCODER1 Pin=STM32Dongle-55
+Added Net: Name=MO_ENCODER1
+Added Pin To Net: NetName=Net1k_1 Pin=1k-1
+Added Pin To Net: NetName=Net1k_1 Pin=Q15-3
+Added Net: Name=Net1k_1
+Added Pin To Net: NetName=Net1k_2 Pin=1k-2
+Added Pin To Net: NetName=Net1k_2 Pin=Q27-4
+Added Pin To Net: NetName=Net1k_2 Pin=R53-1
+Added Net: Name=Net1k_2
+Added Pin To Net: NetName=NetC75_1 Pin=C75-1
+Added Pin To Net: NetName=NetC75_1 Pin=Q28-4
+Added Net: Name=NetC75_1
+Added Pin To Net: NetName=NetC84_1 Pin=C84-1
+Added Pin To Net: NetName=NetC84_1 Pin=STM32Dongle-47
+Added Net: Name=NetC84_1
+Added Pin To Net: NetName=NetD3_1 Pin=Q27-5
+Added Pin To Net: NetName=NetD3_1 Pin=Q27-6
+Added Pin To Net: NetName=NetD3_1 Pin=Q27-7
+Added Pin To Net: NetName=NetD3_1 Pin=Q27-8
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetD16_1 Pin=D16-1
+Added Pin To Net: NetName=NetD16_1 Pin=R37-2
+Added Net: Name=NetD16_1
+Added Pin To Net: NetName=NetD18_1 Pin=D18-1
+Added Pin To Net: NetName=NetD18_1 Pin=R39-2
+Added Net: Name=NetD18_1
+Added Pin To Net: NetName=NetD19_1 Pin=D19-1
+Added Pin To Net: NetName=NetD19_1 Pin=R40-2
+Added Net: Name=NetD19_1
+Added Pin To Net: NetName=NetD20_1 Pin=D20-1
+Added Pin To Net: NetName=NetD20_1 Pin=R46-2
+Added Net: Name=NetD20_1
+Added Pin To Net: NetName=NetF1_1 Pin=F1-1
+Added Pin To Net: NetName=NetF1_1 Pin=P7-2
+Added Net: Name=NetF1_1
+Added Pin To Net: NetName=NetF1_2 Pin=F1-2
+Added Pin To Net: NetName=NetF1_2 Pin=Q27-1
+Added Pin To Net: NetName=NetF1_2 Pin=Q27-2
+Added Pin To Net: NetName=NetF1_2 Pin=Q27-3
+Added Pin To Net: NetName=NetF1_2 Pin=Q28-1
+Added Pin To Net: NetName=NetF1_2 Pin=Q28-2
+Added Pin To Net: NetName=NetF1_2 Pin=Q28-3
+Added Pin To Net: NetName=NetF1_2 Pin=R51-1
+Added Pin To Net: NetName=NetF1_2 Pin=R53-2
+Added Net: Name=NetF1_2
+Added Pin To Net: NetName=NetP2_30 Pin=P2-30
+Added Pin To Net: NetName=NetP2_30 Pin=STM32Dongle-43
+Added Net: Name=NetP2_30
+Added Pin To Net: NetName=NetP4_1 Pin=P4-1
+Added Pin To Net: NetName=NetP4_1 Pin=STM32Dongle-42
+Added Net: Name=NetP4_1
+Added Pin To Net: NetName=NetP4_2 Pin=P4-2
+Added Pin To Net: NetName=NetP4_2 Pin=STM32Dongle-44
+Added Net: Name=NetP4_2
+Added Pin To Net: NetName=NetP14_6 Pin=P14-6
+Added Pin To Net: NetName=NetP14_6 Pin=R54-1
+Added Pin To Net: NetName=NetP14_6 Pin=U47-7
+Added Net: Name=NetP14_6
+Added Pin To Net: NetName=NetP14_7 Pin=P14-7
+Added Pin To Net: NetName=NetP14_7 Pin=R55-1
+Added Pin To Net: NetName=NetP14_7 Pin=U47-5
+Added Net: Name=NetP14_7
+Added Pin To Net: NetName=NetP14_8 Pin=P14-8
+Added Pin To Net: NetName=NetP14_8 Pin=R56-1
+Added Pin To Net: NetName=NetP14_8 Pin=U47-3
+Added Net: Name=NetP14_8
+Added Pin To Net: NetName=NetP18_5 Pin=P18-5
+Added Pin To Net: NetName=NetP18_5 Pin=STM32Dongle-61
+Added Net: Name=NetP18_5
+Added Pin To Net: NetName=NetP18_6 Pin=P18-6
+Added Pin To Net: NetName=NetP18_6 Pin=STM32Dongle-16
+Added Net: Name=NetP18_6
+Added Pin To Net: NetName=NetP18_8 Pin=P18-8
+Added Pin To Net: NetName=NetP18_8 Pin=STM32Dongle-62
+Added Net: Name=NetP18_8
+Added Pin To Net: NetName=NetP18_11 Pin=P18-11
+Added Pin To Net: NetName=NetP18_11 Pin=R4-2
+Added Pin To Net: NetName=NetP18_11 Pin=STM32Dongle-11
+Added Net: Name=NetP18_11
+Added Pin To Net: NetName=NetQ14_1 Pin=Q14-1
+Added Pin To Net: NetName=NetQ14_1 Pin=R50-1
+Added Pin To Net: NetName=NetQ14_1 Pin=STM32Dongle-3
+Added Net: Name=NetQ14_1
+Added Pin To Net: NetName=NetQ14_3 Pin=Q14-3
+Added Pin To Net: NetName=NetQ14_3 Pin=R51-2
+Added Net: Name=NetQ14_3
+Added Pin To Net: NetName=NetQ15_1 Pin=Q15-1
+Added Pin To Net: NetName=NetQ15_1 Pin=R58-1
+Added Pin To Net: NetName=NetQ15_1 Pin=STM32Dongle-2
+Added Net: Name=NetQ15_1
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=R44-2
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=R43-1
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR6_1 Pin=R7-2
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Net: Name=NetR8_2
+Added Pin To Net: NetName=NetR37_1 Pin=R37-1
+Added Pin To Net: NetName=NetR37_1 Pin=STM32Dongle-36
+Added Net: Name=NetR37_1
+Added Pin To Net: NetName=NetR40_1 Pin=R40-1
+Added Pin To Net: NetName=NetR40_1 Pin=STM32Dongle-34
+Added Net: Name=NetR40_1
+Added Pin To Net: NetName=NetR44_1 Pin=R44-1
+Added Pin To Net: NetName=NetR44_1 Pin=R45-1
+Added Pin To Net: NetName=NetR44_1 Pin=STM32Dongle-10
+Added Net: Name=NetR44_1
+Added Pin To Net: NetName=NetR46_1 Pin=R46-1
+Added Pin To Net: NetName=NetR46_1 Pin=STM32Dongle-35
+Added Net: Name=NetR46_1
+Added Pin To Net: NetName=NetSTM32Dongle_5 Pin=STM32Dongle-5
+Added Net: Name=NetSTM32Dongle_5
+Added Pin To Net: NetName=NetSTM32Dongle_17 Pin=STM32Dongle-17
+Added Net: Name=NetSTM32Dongle_17
+Added Pin To Net: NetName=NetSTM32Dongle_21 Pin=STM32Dongle-21
+Added Net: Name=NetSTM32Dongle_21
+Added Pin To Net: NetName=NetSTM32Dongle_22 Pin=STM32Dongle-22
+Added Net: Name=NetSTM32Dongle_22
+Added Pin To Net: NetName=NetSTM32Dongle_23 Pin=STM32Dongle-23
+Added Net: Name=NetSTM32Dongle_23
+Added Pin To Net: NetName=NetSTM32Dongle_26 Pin=STM32Dongle-26
+Added Net: Name=NetSTM32Dongle_26
+Added Pin To Net: NetName=NetSTM32Dongle_27 Pin=STM32Dongle-27
+Added Net: Name=NetSTM32Dongle_27
+Added Pin To Net: NetName=NetSTM32Dongle_29 Pin=STM32Dongle-29
+Added Net: Name=NetSTM32Dongle_29
+Added Pin To Net: NetName=NetSTM32Dongle_30 Pin=STM32Dongle-30
+Added Net: Name=NetSTM32Dongle_30
+Added Net: Name=NetToggle_3
+Added Pin To Net: NetName=NetU6_4 Pin=U6-4
+Added Net: Name=NetU6_4
+Added Pin To Net: NetName=NetU6_8 Pin=U6-8
+Added Net: Name=NetU6_8
+Added Pin To Net: NetName=NetU6_9 Pin=U6-9
+Added Net: Name=NetU6_9
+Added Pin To Net: NetName=NetU7_2 Pin=U7-2
+Added Net: Name=NetU7_2
+Added Pin To Net: NetName=NetU7_3 Pin=U7-3
+Added Net: Name=NetU7_3
+Added Pin To Net: NetName=NetU7_4 Pin=U7-4
+Added Net: Name=NetU7_4
+Added Pin To Net: NetName=NetU7_5 Pin=U7-5
+Added Net: Name=NetU7_5
+Added Pin To Net: NetName=NetU7_6 Pin=U7-6
+Added Net: Name=NetU7_6
+Added Pin To Net: NetName=NetU7_7 Pin=U7-7
+Added Net: Name=NetU7_7
+Added Pin To Net: NetName=NetU7_8 Pin=U7-8
+Added Net: Name=NetU7_8
+Added Pin To Net: NetName=NRST Pin=P3-5
+Added Pin To Net: NetName=NRST Pin=STM32Dongle-7
+Added Net: Name=NRST
+Added Pin To Net: NetName=PHASE0_U_motordriver0 Pin=C15_U_motordriver0-1
+Added Pin To Net: NetName=PHASE0_U_motordriver0 Pin=U4_U_motordriver0-6
+Added Net: Name=PHASE0_U_motordriver0
+Added Pin To Net: NetName=PHASE0_U_motordriver1 Pin=C15_U_motordriver1-1
+Added Pin To Net: NetName=PHASE0_U_motordriver1 Pin=U4_U_motordriver1-6
+Added Net: Name=PHASE0_U_motordriver1
+Added Pin To Net: NetName=PHASE0_U_motordriver2 Pin=C15_U_motordriver2-1
+Added Pin To Net: NetName=PHASE0_U_motordriver2 Pin=U4_U_motordriver2-6
+Added Net: Name=PHASE0_U_motordriver2
+Added Pin To Net: NetName=PHASE0_U_motordriver3 Pin=C15_U_motordriver3-1
+Added Pin To Net: NetName=PHASE0_U_motordriver3 Pin=U4_U_motordriver3-6
+Added Net: Name=PHASE0_U_motordriver3
+Added Pin To Net: NetName=PHASE0_U_motordriver4 Pin=C15_U_motordriver4-1
+Added Pin To Net: NetName=PHASE0_U_motordriver4 Pin=U4_U_motordriver4-6
+Added Net: Name=PHASE0_U_motordriver4
+Added Pin To Net: NetName=PHASE1_U_motordriver0 Pin=C16_U_motordriver0-2
+Added Pin To Net: NetName=PHASE1_U_motordriver0 Pin=U5_U_motordriver0-6
+Added Net: Name=PHASE1_U_motordriver0
+Added Pin To Net: NetName=PHASE1_U_motordriver1 Pin=C16_U_motordriver1-2
+Added Pin To Net: NetName=PHASE1_U_motordriver1 Pin=U5_U_motordriver1-6
+Added Net: Name=PHASE1_U_motordriver1
+Added Pin To Net: NetName=PHASE1_U_motordriver2 Pin=C16_U_motordriver2-2
+Added Pin To Net: NetName=PHASE1_U_motordriver2 Pin=U5_U_motordriver2-6
+Added Net: Name=PHASE1_U_motordriver2
+Added Pin To Net: NetName=PHASE1_U_motordriver3 Pin=C16_U_motordriver3-2
+Added Pin To Net: NetName=PHASE1_U_motordriver3 Pin=U5_U_motordriver3-6
+Added Net: Name=PHASE1_U_motordriver3
+Added Pin To Net: NetName=PHASE1_U_motordriver4 Pin=C16_U_motordriver4-2
+Added Pin To Net: NetName=PHASE1_U_motordriver4 Pin=U5_U_motordriver4-6
+Added Net: Name=PHASE1_U_motordriver4
+Added Pin To Net: NetName=PHASE2_U_motordriver0 Pin=C17_U_motordriver0-2
+Added Pin To Net: NetName=PHASE2_U_motordriver0 Pin=U13_U_motordriver0-6
+Added Net: Name=PHASE2_U_motordriver0
+Added Pin To Net: NetName=PHASE2_U_motordriver1 Pin=C17_U_motordriver1-2
+Added Pin To Net: NetName=PHASE2_U_motordriver1 Pin=U13_U_motordriver1-6
+Added Net: Name=PHASE2_U_motordriver1
+Added Pin To Net: NetName=PHASE2_U_motordriver2 Pin=C17_U_motordriver2-2
+Added Pin To Net: NetName=PHASE2_U_motordriver2 Pin=U13_U_motordriver2-6
+Added Net: Name=PHASE2_U_motordriver2
+Added Pin To Net: NetName=PHASE2_U_motordriver3 Pin=C17_U_motordriver3-2
+Added Pin To Net: NetName=PHASE2_U_motordriver3 Pin=U13_U_motordriver3-6
+Added Net: Name=PHASE2_U_motordriver3
+Added Pin To Net: NetName=PHASE2_U_motordriver4 Pin=C17_U_motordriver4-2
+Added Pin To Net: NetName=PHASE2_U_motordriver4 Pin=U13_U_motordriver4-6
+Added Net: Name=PHASE2_U_motordriver4
+Added Pin To Net: NetName=SD_CD Pin=P1-10
+Added Pin To Net: NetName=SD_CD Pin=STM32Dongle-41
+Added Net: Name=SD_CD
+Added Pin To Net: NetName=SD_CK Pin=P1-5
+Added Pin To Net: NetName=SD_CK Pin=STM32Dongle-53
+Added Net: Name=SD_CK
+Added Pin To Net: NetName=SD_CMD Pin=P1-3
+Added Pin To Net: NetName=SD_CMD Pin=STM32Dongle-54
+Added Net: Name=SD_CMD
+Added Pin To Net: NetName=SD_D0 Pin=P1-7
+Added Net: Name=SD_D0
+Added Pin To Net: NetName=SD_D1 Pin=P1-8
+Added Net: Name=SD_D1
+Added Pin To Net: NetName=SD_D2 Pin=P1-1
+Added Net: Name=SD_D2
+Added Pin To Net: NetName=SD_D3 Pin=P1-2
+Added Net: Name=SD_D3
+Added Pin To Net: NetName=SENSOR0 Pin=U47-6
+Added Net: Name=SENSOR0
+Added Pin To Net: NetName=SENSOR1 Pin=U47-4
+Added Net: Name=SENSOR1
+Added Pin To Net: NetName=SENSOR2 Pin=U47-2
+Added Net: Name=SENSOR2
+Added Pin To Net: NetName=SW1 Pin=DIP6-2
+Added Net: Name=SW1
+Added Pin To Net: NetName=SW2C Pin=1k-2
+Added Pin To Net: NetName=SW2C Pin=C1-1
+Added Pin To Net: NetName=SW2C Pin=C5-1
+Added Pin To Net: NetName=SW2C Pin=C12_U_motordriver0-1
+Added Pin To Net: NetName=SW2C Pin=C12_U_motordriver1-1
+Added Pin To Net: NetName=SW2C Pin=C12_U_motordriver2-1
+Added Pin To Net: NetName=SW2C Pin=C12_U_motordriver3-1
+Added Pin To Net: NetName=SW2C Pin=C12_U_motordriver4-1
+Added Pin To Net: NetName=SW2C Pin=C13_U_motordriver0-1
+Added Pin To Net: NetName=SW2C Pin=C13_U_motordriver1-1
+Added Pin To Net: NetName=SW2C Pin=C13_U_motordriver2-1
+Added Pin To Net: NetName=SW2C Pin=C13_U_motordriver3-1
+Added Pin To Net: NetName=SW2C Pin=C13_U_motordriver4-1
+Added Pin To Net: NetName=SW2C Pin=C22-1
+Added Pin To Net: NetName=SW2C Pin=C22-2
+Added Pin To Net: NetName=SW2C Pin=C24-P1
+Added Pin To Net: NetName=SW2C Pin=C24-P2
+Added Pin To Net: NetName=SW2C Pin=C25-P1
+Added Pin To Net: NetName=SW2C Pin=C26-P1
+Added Pin To Net: NetName=SW2C Pin=C26-P2
+Added Pin To Net: NetName=SW2C Pin=C27-P1
+Added Pin To Net: NetName=SW2C Pin=C28-P1
+Added Pin To Net: NetName=SW2C Pin=C28-P2
+Added Pin To Net: NetName=SW2C Pin=C29-P1
+Added Pin To Net: NetName=SW2C Pin=C30-P1
+Added Pin To Net: NetName=SW2C Pin=C30-P2
+Added Pin To Net: NetName=SW2C Pin=C31-P1
+Added Pin To Net: NetName=SW2C Pin=C32-P1
+Added Pin To Net: NetName=SW2C Pin=C32-P2
+Added Pin To Net: NetName=SW2C Pin=C33-P1
+Added Pin To Net: NetName=SW2C Pin=C33-P2
+Added Pin To Net: NetName=SW2C Pin=C34-P1
+Added Pin To Net: NetName=SW2C Pin=C34-P2
+Added Pin To Net: NetName=SW2C Pin=C35-P1
+Added Pin To Net: NetName=SW2C Pin=C35-P2
+Added Pin To Net: NetName=SW2C Pin=C36-1
+Added Pin To Net: NetName=SW2C Pin=C36-2
+Added Pin To Net: NetName=SW2C Pin=C37-P1
+Added Pin To Net: NetName=SW2C Pin=C37-P2
+Added Pin To Net: NetName=SW2C Pin=C38-1
+Added Pin To Net: NetName=SW2C Pin=C38-2
+Added Pin To Net: NetName=SW2C Pin=C39-P1
+Added Pin To Net: NetName=SW2C Pin=C39-P2
+Added Pin To Net: NetName=SW2C Pin=C40-1
+Added Pin To Net: NetName=SW2C Pin=C40-2
+Added Pin To Net: NetName=SW2C Pin=C41-P1
+Added Pin To Net: NetName=SW2C Pin=C41-P2
+Added Pin To Net: NetName=SW2C Pin=C42-1
+Added Pin To Net: NetName=SW2C Pin=C42-2
+Added Pin To Net: NetName=SW2C Pin=C43-1
+Added Pin To Net: NetName=SW2C Pin=C43-2
+Added Pin To Net: NetName=SW2C Pin=C44-1
+Added Pin To Net: NetName=SW2C Pin=C44-2
+Added Pin To Net: NetName=SW2C Pin=C45-1
+Added Pin To Net: NetName=SW2C Pin=C45-2
+Added Pin To Net: NetName=SW2C Pin=C46-1
+Added Pin To Net: NetName=SW2C Pin=C46-2
+Added Pin To Net: NetName=SW2C Pin=C47-1
+Added Pin To Net: NetName=SW2C Pin=C47-2
+Added Pin To Net: NetName=SW2C Pin=C48-1
+Added Pin To Net: NetName=SW2C Pin=C49-2
+Added Pin To Net: NetName=SW2C Pin=C50-1
+Added Pin To Net: NetName=SW2C Pin=C50-2
+Added Pin To Net: NetName=SW2C Pin=C57-In
+Added Pin To Net: NetName=SW2C Pin=C60-1
+Added Pin To Net: NetName=SW2C Pin=C60-2
+Added Pin To Net: NetName=SW2C Pin=C73-1
+Added Pin To Net: NetName=SW2C Pin=C74-1
+Added Pin To Net: NetName=SW2C Pin=C76-1
+Added Pin To Net: NetName=SW2C Pin=C77-1
+Added Pin To Net: NetName=SW2C Pin=C77-2
+Added Pin To Net: NetName=SW2C Pin=C78-P1
+Added Pin To Net: NetName=SW2C Pin=C78-P2
+Added Pin To Net: NetName=SW2C Pin=C79-1
+Added Pin To Net: NetName=SW2C Pin=C79-2
+Added Pin To Net: NetName=SW2C Pin=C80-2
+Added Pin To Net: NetName=SW2C Pin=C81-1
+Added Pin To Net: NetName=SW2C Pin=C81-2
+Added Pin To Net: NetName=SW2C Pin=C82-P1
+Added Pin To Net: NetName=SW2C Pin=C82-P2
+Added Pin To Net: NetName=SW2C Pin=C83-1
+Added Pin To Net: NetName=SW2C Pin=C83-2
+Added Pin To Net: NetName=SW2C Pin=C84-2
+Added Pin To Net: NetName=SW2C Pin=C85-1
+Added Pin To Net: NetName=SW2C Pin=C85-2
+Added Pin To Net: NetName=SW2C Pin=C86-1
+Added Pin To Net: NetName=SW2C Pin=C86-2
+Added Pin To Net: NetName=SW2C Pin=C87-2
+Added Pin To Net: NetName=SW2C Pin=C89-1
+Added Pin To Net: NetName=SW2C Pin=C89-2
+Added Pin To Net: NetName=SW2C Pin=D16-2
+Added Pin To Net: NetName=SW2C Pin=D18-2
+Added Pin To Net: NetName=SW2C Pin=D19-2
+Added Pin To Net: NetName=SW2C Pin=D20-2
+Added Pin To Net: NetName=SW2C Pin=D23-P2
+Added Pin To Net: NetName=SW2C Pin=DIP6-7
+Added Pin To Net: NetName=SW2C Pin=DIP6-8
+Added Pin To Net: NetName=SW2C Pin=DIP6-9
+Added Pin To Net: NetName=SW2C Pin=DIP6-10
+Added Pin To Net: NetName=SW2C Pin=DIP6-11
+Added Pin To Net: NetName=SW2C Pin=DIP6-12
+Added Pin To Net: NetName=SW2C Pin=P1-4
+Added Pin To Net: NetName=SW2C Pin=P1-6
+Added Pin To Net: NetName=SW2C Pin=P1-9
+Added Pin To Net: NetName=SW2C Pin=P2-55
+Added Pin To Net: NetName=SW2C Pin=P2-57
+Added Pin To Net: NetName=SW2C Pin=P2-59
+Added Pin To Net: NetName=SW2C Pin=P3-1
+Added Pin To Net: NetName=SW2C Pin=P3-3
+Added Pin To Net: NetName=SW2C Pin=P4-4
+Added Pin To Net: NetName=SW2C Pin=P4-5
+Added Pin To Net: NetName=SW2C Pin=P4-5
+Added Pin To Net: NetName=SW2C Pin=P7-1
+Added Pin To Net: NetName=SW2C Pin=P14-5
+Added Pin To Net: NetName=SW2C Pin=P18-3
+Added Pin To Net: NetName=SW2C Pin=P18-4
+Added Pin To Net: NetName=SW2C Pin=P18-9
+Added Pin To Net: NetName=SW2C Pin=P18-10
+Added Pin To Net: NetName=SW2C Pin=P18-12
+Added Pin To Net: NetName=SW2C Pin=Q14-2
+Added Pin To Net: NetName=SW2C Pin=Q15-2
+Added Pin To Net: NetName=SW2C Pin=R4-1
+Added Pin To Net: NetName=SW2C Pin=R7-1
+Added Pin To Net: NetName=SW2C Pin=R8-1
+Added Pin To Net: NetName=SW2C Pin=R39-1
+Added Pin To Net: NetName=SW2C Pin=R45-2
+Added Pin To Net: NetName=SW2C Pin=R50-2
+Added Pin To Net: NetName=SW2C Pin=R54-2
+Added Pin To Net: NetName=SW2C Pin=R55-2
+Added Pin To Net: NetName=SW2C Pin=R56-2
+Added Pin To Net: NetName=SW2C Pin=R58-2
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-1
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-12
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-13
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-18
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-19
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-28
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-32
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-48
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-63
+Added Pin To Net: NetName=SW2C Pin=STM32Dongle-64
+Added Pin To Net: NetName=SW2C Pin=U4_U_motordriver0-4
+Added Pin To Net: NetName=SW2C Pin=U4_U_motordriver1-4
+Added Pin To Net: NetName=SW2C Pin=U4_U_motordriver2-4
+Added Pin To Net: NetName=SW2C Pin=U4_U_motordriver3-4
+Added Pin To Net: NetName=SW2C Pin=U4_U_motordriver4-4
+Added Pin To Net: NetName=SW2C Pin=U5_U_motordriver0-4
+Added Pin To Net: NetName=SW2C Pin=U5_U_motordriver1-4
+Added Pin To Net: NetName=SW2C Pin=U5_U_motordriver2-4
+Added Pin To Net: NetName=SW2C Pin=U5_U_motordriver3-4
+Added Pin To Net: NetName=SW2C Pin=U5_U_motordriver4-4
+Added Pin To Net: NetName=SW2C Pin=U6-2
+Added Pin To Net: NetName=SW2C Pin=U6-3
+Added Pin To Net: NetName=SW2C Pin=U6-6
+Added Pin To Net: NetName=SW2C Pin=U6-10
+Added Pin To Net: NetName=SW2C Pin=U6-11
+Added Pin To Net: NetName=SW2C Pin=U7-1
+Added Pin To Net: NetName=SW2C Pin=U7-10
+Added Pin To Net: NetName=SW2C Pin=U7-11
+Added Pin To Net: NetName=SW2C Pin=U7-12
+Added Pin To Net: NetName=SW2C Pin=U11-2
+Added Pin To Net: NetName=SW2C Pin=U13_U_motordriver0-4
+Added Pin To Net: NetName=SW2C Pin=U13_U_motordriver1-4
+Added Pin To Net: NetName=SW2C Pin=U13_U_motordriver2-4
+Added Pin To Net: NetName=SW2C Pin=U13_U_motordriver3-4
+Added Pin To Net: NetName=SW2C Pin=U13_U_motordriver4-4
+Added Pin To Net: NetName=SW2C Pin=U47-9
+Added Pin To Net: NetName=SW2C Pin=U47-11
+Added Pin To Net: NetName=SW2C Pin=U47-14
+Added Pin To Net: NetName=SW2C Pin=U?-2
+Added Pin To Net: NetName=SW2C Pin=U?-3
+Added Pin To Net: NetName=SW2C Pin=U?-6
+Added Pin To Net: NetName=SW2C Pin=U?-7
+Added Net: Name=SW2C
+Added Pin To Net: NetName=SW2 Pin=DIP6-3
+Added Net: Name=SW2
+Added Pin To Net: NetName=SW3 Pin=DIP6-4
+Added Net: Name=SW3
+Added Pin To Net: NetName=SW4 Pin=DIP6-5
+Added Net: Name=SW4
+Added Pin To Net: NetName=SW5 Pin=DIP6-6
+Added Net: Name=SW5
+Added Pin To Net: NetName=SWDCK Pin=P3-2
+Added Pin To Net: NetName=SWDCK Pin=STM32Dongle-49
+Added Net: Name=SWDCK
+Added Pin To Net: NetName=SWDIO Pin=P3-4
+Added Pin To Net: NetName=SWDIO Pin=STM32Dongle-46
+Added Net: Name=SWDIO
+Added Pin To Net: NetName=USB_B_DP Pin=P4-3
+Added Pin To Net: NetName=USB_B_DP Pin=STM32Dongle-45
+Added Net: Name=USB_B_DP
+Added Pin To Net: NetName=VCAP1 Pin=C80-1
+Added Pin To Net: NetName=VCAP1 Pin=STM32Dongle-31
+Added Net: Name=VCAP1
+Added Pin To Net: NetName=VOUT_2 Pin=C5-2
+Added Pin To Net: NetName=VOUT_2 Pin=C25-P2
+Added Pin To Net: NetName=VOUT_2 Pin=C27-P2
+Added Pin To Net: NetName=VOUT_2 Pin=C29-P2
+Added Pin To Net: NetName=VOUT_2 Pin=C31-P2
+Added Net: Name=VOUT_2
+Added Class: Name=main
+Added Class: Name=U_breakoutconn
+Added Class: Name=U_chicker
+Added Class: Name=U_dribblerconn
+Added Class: Name=U_fpga
+Added Class: Name=U_IMU
+Added Class: Name=U_microcontroller
+Added Class: Name=U_motordriver0
+Added Class: Name=U_motordriver1
+Added Class: Name=U_motordriver2
+Added Class: Name=U_motordriver3
+Added Class: Name=U_motordriver4
+Added Class: Name=U_Power
+Added Class: Name=U_sdcard
+Added Class: Name=motordriver
+Added Room: Name=main
+Added Room: Name=U_breakoutconn
+Added Room: Name=U_chicker
+Added Room: Name=U_dribblerconn
+Added Room: Name=U_fpga
+Added Room: Name=U_IMU
+Added Room: Name=U_microcontroller
+Added Room: Name=U_motordriver0
+Added Room: Name=U_motordriver1
+Added Room: Name=U_motordriver2
+Added Room: Name=U_motordriver3
+Added Room: Name=U_motordriver4
+Added Room: Name=U_Power
+Added Room: Name=U_sdcard

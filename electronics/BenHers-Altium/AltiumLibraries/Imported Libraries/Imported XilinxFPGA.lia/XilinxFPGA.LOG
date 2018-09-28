@@ -1,0 +1,28 @@
+PCAD Importer Log
+Project : XilinxFPGA.LibPkg
+
+Section : C:\Users\Ben\Documents\Thundebots\AltiumLibraries\XilinxFPGA.lia
+    Section : PCB Library - XilinxFPGA.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token XC6SLX4 On Line 1119
+            Warning - 1 : Skipping Token attachedSymbol On Line 2579
+        EndSection
+
+        Section : Import Messages
+            Warning - 0 : PCAD Pattern Graphics [TQ144][Primary] associated with PCAD Component [XC6SLX9-3TQG144C] has been renamed to PCB FootPrint [fpgaTQ144fpgaXC6SLX9-3TQG144CfpgaPrimary)].
+        EndSection
+    EndSection
+
+    Section : SCH Library - XilinxFPGA.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 230
+            Warning - 1 : Skipping Token layerContents On Line 241
+        EndSection
+
+        Section : Generating SCH Library - XilinxFPGA.SchLib
+            Warning - 0 : PCAD Pattern Graphics [TQ144][Primary] associated with PCAD Component [XC6SLX9-3TQG144C] has been renamed to PCB FootPrint [fpgaTQ144fpgaXC6SLX9-3TQG144CfpgaPrimary)].
+        EndSection
+    EndSection
+EndSection
