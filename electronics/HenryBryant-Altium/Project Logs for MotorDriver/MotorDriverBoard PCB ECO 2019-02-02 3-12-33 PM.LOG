@@ -1,0 +1,4 @@
+Added Component: Designator=F2(1206)
+Added Pin To Net: NetName=HV_BATT_F Pin=F2-Fusein
+Added Pin To Net: NetName=HVBATT Pin=F2-Fuseout
+Added Member To Class: ClassName=motordriver Member=Component F2 5AFast

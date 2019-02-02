@@ -1,0 +1,27 @@
+PCAD Importer Log
+Project : MRF24J40MDT-I_RM.LibPkg
+
+Section : C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\AltiumLibraries\LiaFiles\MRF24J40MDT-I_RM.lia
+    Section : PCB Library - MRF24J40MDT-I_RM.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token isVisible On Line 130
+            Warning - 1 : Skipping Token MRF24J40MDT-I/RM On Line 141
+            Warning - 1 : Skipping Token attachedSymbol On Line 277
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - MRF24J40MDT-I_RM.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 98
+            Warning - 1 : Skipping Token layerContents On Line 132
+        EndSection
+
+        Section : Generating SCH Library - MRF24J40MDT-I_RM.SchLib
+        EndSection
+    EndSection
+EndSection

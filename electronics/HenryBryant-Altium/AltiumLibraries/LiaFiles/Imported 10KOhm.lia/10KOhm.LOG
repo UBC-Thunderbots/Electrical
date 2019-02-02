@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : 10KOhm.LibPkg
+
+Section : C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\AltiumLibraries\LiaFiles\10KOhm.lia
+    Section : PCB Library - 10KOhm.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token RC0805FR-0710KL On Line 112
+            Warning - 1 : Skipping Token attachedSymbol On Line 162
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 10KOhm.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - 10KOhm.SchLib
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : 100nF-C0805C104K5RACTU.LibPkg
+
+Section : C:\Users\Ben\Documents\Thundebots\AltiumLibraries\100nF-C0805C104K5RACTU.lia
+    Section : PCB Library - 100nF-C0805C104K5RACTU.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token CAPH On Line 104
+            Warning - 1 : Skipping Token attachedSymbol On Line 152
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 100nF-C0805C104K5RACTU.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - 100nF-C0805C104K5RACTU.SchLib
+        EndSection
+    EndSection
+EndSection

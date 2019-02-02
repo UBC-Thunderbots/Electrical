@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : 1uF.LibPkg
+
+Section : C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\AltiumLibraries\LiaFiles\1uF.lia
+    Section : PCB Library - 1uF.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token C2012X5R1E105M085AC On Line 114
+            Warning - 1 : Skipping Token attachedSymbol On Line 168
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 1uF.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - 1uF.SchLib
+        EndSection
+    EndSection
+EndSection

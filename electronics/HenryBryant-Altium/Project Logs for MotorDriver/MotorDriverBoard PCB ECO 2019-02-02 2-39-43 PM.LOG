@@ -1,0 +1,6 @@
+Added Component: Designator=C11(CAPC2013X110N)
+Added Component: Designator=C15(CAPC2013X110N)
+Added Pin To Net: NetName=9V Pin=C11-1
+Added Pin To Net: NetName=PHASE0 Pin=C15-1
+Added Member To Class: ClassName=motordriver Member=Component C11 100nF
+Added Member To Class: ClassName=motordriver Member=Component C15 100nF

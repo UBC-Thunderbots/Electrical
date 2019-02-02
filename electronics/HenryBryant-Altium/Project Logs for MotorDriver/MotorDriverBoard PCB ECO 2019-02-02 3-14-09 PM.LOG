@@ -1,0 +1,6 @@
+Added Component: Designator=Q4(SOIC127P490X600X175-8N)
+Added Component: Designator=Q5(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6(SOIC127P490X600X175-8N)
+Added Member To Class: ClassName=motordriver Member=Component Q4 Ao4882
+Added Member To Class: ClassName=motordriver Member=Component Q5 Ao4882
+Added Member To Class: ClassName=motordriver Member=Component Q6 Ao4882

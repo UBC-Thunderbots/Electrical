@@ -1,0 +1,44 @@
+PCAD Importer Log
+Project : MEMSAccelerometerLIS3DH.LibPkg
+
+Section : C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\AltiumLibraries\LiaFiles\MEMSAccelerometerLIS3DH.lia
+    Section : PCB Library - MEMSAccelerometerLIS3DH.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token LIS3DH On Line 127
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - MEMSAccelerometerLIS3DH.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 102
+            Warning - 1 : Skipping Token layerContents On Line 114
+            Warning - 1 : Skipping Token Default On Line 267
+            Warning - 1 : Skipping Token originalName On Line 268
+            Warning - 1 : Skipping Token compHeader On Line 269
+            Warning - 1 : Skipping Token compPin On Line 278
+            Warning - 1 : Skipping Token compPin On Line 279
+            Warning - 1 : Skipping Token compPin On Line 280
+            Warning - 1 : Skipping Token compPin On Line 281
+            Warning - 1 : Skipping Token compPin On Line 282
+            Warning - 1 : Skipping Token compPin On Line 283
+            Warning - 1 : Skipping Token compPin On Line 284
+            Warning - 1 : Skipping Token compPin On Line 285
+            Warning - 1 : Skipping Token compPin On Line 286
+            Warning - 1 : Skipping Token compPin On Line 287
+            Warning - 1 : Skipping Token compPin On Line 288
+            Warning - 1 : Skipping Token compPin On Line 289
+            Warning - 1 : Skipping Token compPin On Line 290
+            Warning - 1 : Skipping Token compPin On Line 291
+            Warning - 1 : Skipping Token attachedSymbol On Line 292
+            Warning - 1 : Skipping Token attachedPattern On Line 293
+        EndSection
+
+        Section : Generating SCH Library - MEMSAccelerometerLIS3DH.SchLib
+        EndSection
+    EndSection
+EndSection

@@ -1,0 +1,41 @@
+Added Component: Designator=C12(CAPC2013X110N)
+Added Component: Designator=C13(CAPC2013X110N)
+Added Component: Designator=C16(CAPC2013X110N)
+Added Component: Designator=C17(CAPC2013X110N)
+Added Component: Designator=U4(SOIC127P620X175-8N)
+Added Component: Designator=U5(SOIC127P620X175-8N)
+Added Component: Designator=U13(SOIC127P620X175-8N)
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=9V Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=9V Pin=C13-2
+Added Pin To Net: NetName=PHASE1 Pin=C16-2
+Added Pin To Net: NetName=PHASE2 Pin=C17-2
+Added Pin To Net: NetName=HIGH0 Pin=U4-2
+Added Pin To Net: NetName=LOW0 Pin=U4-3
+Added Pin To Net: NetName=GND Pin=U4-4
+Added Pin To Net: NetName=LG0 Pin=U4-5
+Added Pin To Net: NetName=PHASE0 Pin=U4-6
+Added Pin To Net: NetName=HG0 Pin=U4-7
+Added Pin To Net: NetName=HB0 Pin=U4-8
+Added Pin To Net: NetName=HIGH1 Pin=U5-2
+Added Pin To Net: NetName=LOW1 Pin=U5-3
+Added Pin To Net: NetName=GND Pin=U5-4
+Added Pin To Net: NetName=PHASE1 Pin=U5-6
+Added Pin To Net: NetName=HG1 Pin=U5-7
+Added Pin To Net: NetName=HB1 Pin=U5-8
+Added Pin To Net: NetName=9V Pin=U13-1
+Added Pin To Net: NetName=HIGH2 Pin=U13-2
+Added Pin To Net: NetName=LOW2 Pin=U13-3
+Added Pin To Net: NetName=GND Pin=U13-4
+Added Pin To Net: NetName=LG2 Pin=U13-5
+Added Pin To Net: NetName=PHASE2 Pin=U13-6
+Added Pin To Net: NetName=HB2 Pin=U13-8
+Added Member To Class: ClassName=motordriver Member=Component C12 100nF
+Added Member To Class: ClassName=motordriver Member=Component C13 100nF
+Added Member To Class: ClassName=motordriver Member=Component C16 100nF
+Added Member To Class: ClassName=motordriver Member=Component C17 100nF
+Added Member To Class: ClassName=motordriver Member=Component U4 LM5107MAX/NOPB
+Added Member To Class: ClassName=motordriver Member=Component U5 LM5107MAX/NOPB
+Added Member To Class: ClassName=motordriver Member=Component U13 LM5107MAX/NOPB
+Added Room: Name=motordriver

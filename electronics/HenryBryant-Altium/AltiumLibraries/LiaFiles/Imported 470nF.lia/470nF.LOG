@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : 470nF.LibPkg
+
+Section : C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\AltiumLibraries\LiaFiles\470nF.lia
+    Section : PCB Library - 470nF.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token CC0805KKX7R8BB474 On Line 112
+            Warning - 1 : Skipping Token attachedSymbol On Line 166
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 470nF.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - 470nF.SchLib
+        EndSection
+    EndSection
+EndSection

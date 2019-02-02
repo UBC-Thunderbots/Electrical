@@ -1,0 +1,25 @@
+PCAD Importer Log
+Project : 1Mohm.LibPkg
+
+Section : C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\AltiumLibraries\LiaFiles\1Mohm.lia
+    Section : PCB Library - 1Mohm.PcbLib
+        Section : Load Messages
+            Warning - 1 : Skipping Token RESH On Line 104
+            Warning - 1 : Skipping Token attachedSymbol On Line 153
+        EndSection
+
+        Section : Import Messages
+        EndSection
+    EndSection
+
+    Section : SCH Library - 1Mohm.SchLib
+        Section : Parsing Messages
+            Warning - 1 : Skipping Token padStyleDef On Line 9
+            Warning - 1 : Skipping Token multiLayer On Line 84
+            Warning - 1 : Skipping Token layerContents On Line 88
+        EndSection
+
+        Section : Generating SCH Library - 1Mohm.SchLib
+        EndSection
+    EndSection
+EndSection
