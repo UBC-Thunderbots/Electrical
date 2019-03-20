@@ -1,0 +1,65 @@
+Removed Pin From Net: NetName=HG0 Pin=U4-7
+Added Component: Designator=HIGH(HDR1X3H)
+Added Component: Designator=LINKING(HDR1X3H)
+Added Component: Designator=LOW(HDR1X3H)
+Added Component: Designator=PHASE(HDR1X3H)
+Added Component: Designator=Q5(SOIC127P490X600X175-8N)
+Added Component: Designator=Q6(SOIC127P490X600X175-8N)
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=HG0 Pin=C15-1
+Added Pin To Net: NetName=HB0 Pin=C15-2
+Added Pin To Net: NetName=HB1 Pin=C16-1
+Added Pin To Net: NetName=HB2 Pin=C17-1
+Added Pin To Net: NetName=HV_BATT_F Pin=C18-In
+Added Pin To Net: NetName=GND Pin=C18-Out
+Added Pin To Net: NetName=HIGH0 Pin=HIGH-1
+Added Pin To Net: NetName=HIGH1 Pin=HIGH-2
+Added Pin To Net: NetName=HIGH2 Pin=HIGH-3
+Added Pin To Net: NetName=9V Pin=LINKING-2
+Added Pin To Net: NetName=GND Pin=LINKING-3
+Added Pin To Net: NetName=LOW0 Pin=LOW-1
+Added Pin To Net: NetName=LOW1 Pin=LOW-2
+Added Pin To Net: NetName=LOW2 Pin=LOW-3
+Added Pin To Net: NetName=HG0 Pin=PHASE-1
+Added Pin To Net: NetName=PHASE1 Pin=PHASE-2
+Added Pin To Net: NetName=PHASE2 Pin=PHASE-3
+Added Pin To Net: NetName=HV_BATT_F Pin=Q4-D1A
+Added Pin To Net: NetName=HV_BATT_F Pin=Q4-D1
+Added Pin To Net: NetName=HG0 Pin=Q4-D2A
+Added Pin To Net: NetName=HG0 Pin=Q4-D2
+Added Pin To Net: NetName=LG0 Pin=Q4-G2
+Added Pin To Net: NetName=HG0 Pin=Q4-S1
+Added Pin To Net: NetName=GND Pin=Q4-S2
+Added Pin To Net: NetName=HV_BATT_F Pin=Q5-D1A
+Added Pin To Net: NetName=HV_BATT_F Pin=Q5-D1
+Added Pin To Net: NetName=PHASE1 Pin=Q5-D2A
+Added Pin To Net: NetName=PHASE1 Pin=Q5-D2
+Added Pin To Net: NetName=HG1 Pin=Q5-G1
+Added Pin To Net: NetName=PHASE1 Pin=Q5-S1
+Added Pin To Net: NetName=GND Pin=Q5-S2
+Added Pin To Net: NetName=HV_BATT_F Pin=Q6-D1A
+Added Pin To Net: NetName=HV_BATT_F Pin=Q6-D1
+Added Pin To Net: NetName=PHASE2 Pin=Q6-D2A
+Added Pin To Net: NetName=PHASE2 Pin=Q6-D2
+Added Pin To Net: NetName=LG2 Pin=Q6-G2
+Added Pin To Net: NetName=PHASE2 Pin=Q6-S1
+Added Pin To Net: NetName=GND Pin=Q6-S2
+Added Pin To Net: NetName=9V Pin=U4-1
+Added Pin To Net: NetName=HG0 Pin=U4-6
+Added Pin To Net: NetName=9V Pin=U5-1
+Added Pin To Net: NetName=HG2 Pin=Q6-G1
+Added Pin To Net: NetName=HG2 Pin=U13-7
+Added Net: Name=HG2
+Added Pin To Net: NetName=LG1 Pin=Q5-G2
+Added Pin To Net: NetName=LG1 Pin=U5-5
+Added Net: Name=LG1
+Added Pin To Net: NetName=NetF2_Fuseout Pin=F2-Fuseout
+Added Pin To Net: NetName=NetF2_Fuseout Pin=LINKING-1
+Added Net: Name=NetF2_Fuseout
+Added Pin To Net: NetName=NetQ4_G1 Pin=Q4-G1
+Added Pin To Net: NetName=NetQ4_G1 Pin=U4-7
+Added Net: Name=NetQ4_G1
+Added Member To Class: ClassName=motordriver Member=Component HIGH Header 3H
+Added Member To Class: ClassName=motordriver Member=Component LINKING Header 3H
+Added Member To Class: ClassName=motordriver Member=Component LOW Header 3H
+Added Member To Class: ClassName=motordriver Member=Component PHASE Header 3H

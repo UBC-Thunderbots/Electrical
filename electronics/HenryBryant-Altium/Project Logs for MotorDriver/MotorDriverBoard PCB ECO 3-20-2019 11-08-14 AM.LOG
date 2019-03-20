@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=NetF2_Fuseout Pin=LINKING-1
+Removed Pin From Net: NetName=9V Pin=LINKING-2
+Removed Pin From Net: NetName=GND Pin=LINKING-3
+Removed Member From Class: ClassName=motordriver Member=LINKING
+Change Component Footprint: Designator=HIGH Old Footprint=HDR1X3H New Footprint=MHDR1X3
+Change Component Footprint: Designator=LOW Old Footprint=HDR1X3H New Footprint=MHDR1X3
+Change Component Footprint: Designator=PHASE Old Footprint=HDR1X3H New Footprint=MHDR1X3
+Change Component Comment : Designator=HIGH Old Comment=Header 3H New Comment=MHDR1X3
+Change Component Comment : Designator=LOW Old Comment=Header 3H New Comment=MHDR1X3
+Change Component Comment : Designator=PHASE Old Comment=Header 3H New Comment=MHDR1X3
+Added Component: Designator=P4(MHDR1X3)
+Added Pin To Net: NetName=GND Pin=P4-1
+Added Pin To Net: NetName=9V Pin=P4-2
+Added Pin To Net: NetName=NetF2_Fuseout Pin=P4-3
+Added Member To Class: ClassName=motordriver Member=Component P4 MHDR1X3
+Added Member To Class: ClassName=motordriver Member=Component Q5 Ao4882
+Added Member To Class: ClassName=motordriver Member=Component Q6 Ao4882
