@@ -1,0 +1,457 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2019-02-16</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1:15:15 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc" class="file"><acronym title="C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc">C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">39</td></tr>
+</table>
+</td>
+</table><a name="ID5BRZSICOW5W0OXYDI4BLJY034HU3OC0AASEYHHMSM1C0P3XEKPYL"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNL5UHNM1SE3EDHW3EMX0APPVTOZGHOK4KY3WWOW50RE0BAK3KSJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYWJHWMSK3EJVBUATS5HRJLWJMLZ0TB3HCDF30DCY4TVTLKFSTLQP">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3RUCEAUWZNFPHAVNCNMV3R1BQP0GX1CY4JT3JNFTDPZNGIRCRXN">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNGKOI5BPETMMBAW3L30SLLMWJEN4YQYXAAPEYHS4O2XTPS4DWQP">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ5X5ZXAIZUBXI5GVHNKWOWLZYCVPJEQSWTSAMOHJKTK0HAZNZYCJ">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID54ZXRZCRE4D2DYUO13KX1YHKREJVVRB0ZHPB0SNH0S5DFLVSBNQF">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPNCAECBSYYR2G1F2TIORRLFMPG5XP110X30AF3PGLQQPHWZIXUDL">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSNXY1FYLRPHQLHOHVODPYEPJMKFONPPSO2MOL4LZBSXFJ1VZB05G">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAG5LVZYEVLT1L3143PYU2B4N1C4J44W5TR1V0JD5DGQYMDHRGLRP">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFOCV2NKLHKKYL1QH45GLS4JROKMP4IQMDEO4DQNILVJ5WKH0PMSJ">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">26</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHYL1TAHXQQ4EECLBWBJ3FELG4ELGRH0DLUKSWOIJSOY0PEZGRYAF">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKLJ4YLY0HFXVINF2O220RHVCEBUVDFNTOMYFMMNUYVDVRL4ERO1N">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID25DPFP0S4PPZPS0PC3IJR1FJ5NJCHGLMCY3NLAIJG5O3KMFZRVIL">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID30AQBDKBN3EVHEIWD0T5MFYONHEOAG1PP1JEEXOEQC4RS40EEJQC">Room motordriver (Bounding Region = (3625mil, 1970mil, 4680mil, 3250mil) (InComponentClass('motordriver'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">39</td>
+</tr>
+</table><br><a name="IDYWJHWMSK3EJVBUATS5HRJLWJMLZ0TB3HCDF30DCY4TVTLKFSTLQP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3908mil|Location1.Y=2166.692mil|Location2.Y=2250mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3908mil|Location1.Y=2166.692mil|Location2.Y=2250mil|Absolute=True">Un-Routed Net Constraint: Net 9V Between Pad C13-2(3719mil,2188.692mil) on Top Layer And Pad U13-1(3865mil,2235mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3682.5mil|Location2.X=3751.5mil|Location1.Y=2461.692mil|Location2.Y=2780mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3682.5mil|Location2.X=3751.5mil|Location1.Y=2461.692mil|Location2.Y=2780mil|Absolute=True">Un-Routed Net Constraint: Net 9V Between Pad C11-1(3715mil,2758mil) on Top Layer And Pad C12-2(3719mil,2483.692mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3751.5mil|Location1.Y=2166.692mil|Location2.Y=2505.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3751.5mil|Location1.Y=2166.692mil|Location2.Y=2505.692mil|Absolute=True">Un-Routed Net Constraint: Net 9V Between Pad C13-2(3719mil,2188.692mil) on Top Layer And Pad C12-2(3719mil,2483.692mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3895mil|Location1.Y=2376.693mil|Location2.Y=2441.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3895mil|Location1.Y=2376.693mil|Location2.Y=2441.692mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C12-1(3719mil,2419.692mil) on Top Layer And Pad U5-4(3852mil,2391.693mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3908mil|Location1.Y=2070mil|Location2.Y=2146.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3908mil|Location1.Y=2070mil|Location2.Y=2146.692mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C13-1(3719mil,2124.692mil) on Top Layer And Pad U13-4(3865mil,2085mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3809mil|Location2.X=3896mil|Location1.Y=2376.693mil|Location2.Y=2740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3809mil|Location2.X=3896mil|Location1.Y=2376.693mil|Location2.Y=2740mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U5-4(3852mil,2391.693mil) on Top Layer And Pad U4-4(3853mil,2725mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3751.5mil|Location1.Y=2102.692mil|Location2.Y=2441.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3686.5mil|Location2.X=3751.5mil|Location1.Y=2102.692mil|Location2.Y=2441.692mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C13-1(3719mil,2124.692mil) on Top Layer And Pad C12-1(3719mil,2419.692mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4004mil|Location2.X=4601.5mil|Location1.Y=2742.692mil|Location2.Y=2790mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4004mil|Location2.X=4601.5mil|Location1.Y=2742.692mil|Location2.Y=2790mil|Absolute=True">Un-Routed Net Constraint: Net PHASE0 Between Pad U4-6(4047mil,2775mil) on Top Layer And Pad C15-1(4569mil,2764.692mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4003mil|Location2.X=4606.5mil|Location1.Y=2426.693mil|Location2.Y=2525.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4003mil|Location2.X=4606.5mil|Location1.Y=2426.693mil|Location2.Y=2525.692mil|Absolute=True">Un-Routed Net Constraint: Net PHASE1 Between Pad U5-6(4046mil,2441.693mil) on Top Layer And Pad C16-2(4574mil,2503.692mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016mil|Location2.X=4606.5mil|Location1.Y=2120mil|Location2.Y=2215.692mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4016mil|Location2.X=4606.5mil|Location1.Y=2120mil|Location2.Y=2215.692mil|Absolute=True">Un-Routed Net Constraint: Net PHASE2 Between Pad U13-6(4059mil,2135mil) on Top Layer And Pad C17-2(4574mil,2193.692mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDFOCV2NKLHKKYL1QH45GLS4JROKMP4IQMDEO4DQNILVJ5WKH0PMSJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2695.782mil|Location2.Y=2707.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2695.782mil|Location2.Y=2707.032mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2695.236mil)(4405.772mil,2695.236mil) on Top Overlay And Pad Q4-S2(4432.346mil,2716.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2876.352mil|Location2.Y=2887.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2876.352mil|Location2.Y=2887.602mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2888.148mil)(4405.772mil,2888.148mil) on Top Overlay And Pad Q4-G1(4432.346mil,2866.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2876.352mil|Location2.Y=2887.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2876.352mil|Location2.Y=2887.602mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2888.148mil)(4405.772mil,2888.148mil) on Top Overlay And Pad Q4-D1(4225.654mil,2866.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2695.782mil|Location2.Y=2707.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2695.782mil|Location2.Y=2707.032mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2695.236mil)(4405.772mil,2695.236mil) on Top Overlay And Pad Q4-D2(4225.654mil,2716.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.621mil|Location2.X=4406.871mil|Location1.Y=2365.782mil|Location2.Y=2377.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.621mil|Location2.X=4406.871mil|Location1.Y=2365.782mil|Location2.Y=2377.032mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2365.236mil)(4405.772mil,2365.236mil) on Top Overlay And Pad Q5-S2(4432.348mil,2386.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.621mil|Location2.X=4406.871mil|Location1.Y=2546.352mil|Location2.Y=2557.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.621mil|Location2.X=4406.871mil|Location1.Y=2546.352mil|Location2.Y=2557.602mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2558.148mil)(4405.772mil,2558.148mil) on Top Overlay And Pad Q5-G1(4432.348mil,2536.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2546.352mil|Location2.Y=2557.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2546.352mil|Location2.Y=2557.602mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2558.148mil)(4405.772mil,2558.148mil) on Top Overlay And Pad Q5-D1(4225.654mil,2536.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2365.782mil|Location2.Y=2377.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2365.782mil|Location2.Y=2377.032mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2365.236mil)(4405.772mil,2365.236mil) on Top Overlay And Pad Q5-D2(4225.654mil,2386.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2246.352mil|Location2.Y=2257.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2246.352mil|Location2.Y=2257.602mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2258.148mil)(4405.772mil,2258.148mil) on Top Overlay And Pad Q6-S2(4225.654mil,2236.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2065.782mil|Location2.Y=2077.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4246.603mil|Location2.X=4257.853mil|Location1.Y=2065.782mil|Location2.Y=2077.032mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2065.236mil)(4405.772mil,2065.236mil) on Top Overlay And Pad Q6-G1(4225.654mil,2086.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2065.782mil|Location2.Y=2077.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2065.782mil|Location2.Y=2077.032mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2065.236mil)(4405.772mil,2065.236mil) on Top Overlay And Pad Q6-D1(4432.346mil,2086.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2246.352mil|Location2.Y=2257.602mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395.619mil|Location2.X=4406.869mil|Location1.Y=2246.352mil|Location2.Y=2257.602mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.342mil &lt; 10mil) Between Track (4252.228mil,2258.148mil)(4405.772mil,2258.148mil) on Top Overlay And Pad Q6-D2(4432.346mil,2236.692mil) on Top Layer [Top Overlay] to [Top Solder] clearance [7.342mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4012.849mil|Location2.X=4024.099mil|Location1.Y=2244.952mil|Location2.Y=2256.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4012.849mil|Location2.X=4024.099mil|Location1.Y=2244.952mil|Location2.Y=2256.202mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3950mil,2258mil)(4016mil,2258mil) on Top Overlay And Pad U13-8(4059mil,2235mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4012.849mil|Location2.X=4024.099mil|Location1.Y=2063.798mil|Location2.Y=2075.048mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4012.849mil|Location2.X=4024.099mil|Location1.Y=2063.798mil|Location2.Y=2075.048mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3908mil,2062mil)(4016mil,2062mil) on Top Overlay And Pad U13-5(4059mil,2085mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3899.901mil|Location2.X=3911.151mil|Location1.Y=2063.798mil|Location2.Y=2075.048mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3899.901mil|Location2.X=3911.151mil|Location1.Y=2063.798mil|Location2.Y=2075.048mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3908mil,2062mil)(4016mil,2062mil) on Top Overlay And Pad U13-4(3865mil,2085mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3899.901mil|Location2.X=3911.151mil|Location1.Y=2244.952mil|Location2.Y=2256.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3899.901mil|Location2.X=3911.151mil|Location1.Y=2244.952mil|Location2.Y=2256.202mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3908mil,2258mil)(3950mil,2258mil) on Top Overlay And Pad U13-1(3865mil,2235mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3999.849mil|Location2.X=4011.099mil|Location1.Y=2551.645mil|Location2.Y=2562.895mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3999.849mil|Location2.X=4011.099mil|Location1.Y=2551.645mil|Location2.Y=2562.895mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3937mil,2564.693mil)(4003mil,2564.693mil) on Top Overlay And Pad U5-8(4046mil,2541.693mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3999.849mil|Location2.X=4011.099mil|Location1.Y=2370.491mil|Location2.Y=2381.741mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3999.849mil|Location2.X=4011.099mil|Location1.Y=2370.491mil|Location2.Y=2381.741mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3895mil,2368.693mil)(4003mil,2368.693mil) on Top Overlay And Pad U5-5(4046mil,2391.693mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3886.901mil|Location2.X=3898.151mil|Location1.Y=2370.491mil|Location2.Y=2381.741mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3886.901mil|Location2.X=3898.151mil|Location1.Y=2370.491mil|Location2.Y=2381.741mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3895mil,2368.693mil)(4003mil,2368.693mil) on Top Overlay And Pad U5-4(3852mil,2391.693mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3870.219mil|Location2.X=3877.885mil|Location1.Y=2376.86mil|Location2.Y=2384.526mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3870.219mil|Location2.X=3877.885mil|Location1.Y=2376.86mil|Location2.Y=2384.526mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Text "U13" (3832mil,2353.692mil) on Top Overlay And Pad U5-4(3852mil,2391.693mil) on Top Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3886.901mil|Location2.X=3898.151mil|Location1.Y=2551.645mil|Location2.Y=2562.895mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3886.901mil|Location2.X=3898.151mil|Location1.Y=2551.645mil|Location2.Y=2562.895mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3895mil,2564.693mil)(3937mil,2564.693mil) on Top Overlay And Pad U5-1(3852mil,2541.693mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4000.849mil|Location2.X=4012.099mil|Location1.Y=2884.952mil|Location2.Y=2896.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4000.849mil|Location2.X=4012.099mil|Location1.Y=2884.952mil|Location2.Y=2896.202mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3938mil,2898mil)(4004mil,2898mil) on Top Overlay And Pad U4-8(4047mil,2875mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4000.849mil|Location2.X=4012.099mil|Location1.Y=2703.798mil|Location2.Y=2715.048mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4000.849mil|Location2.X=4012.099mil|Location1.Y=2703.798mil|Location2.Y=2715.048mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3896mil,2702mil)(4004mil,2702mil) on Top Overlay And Pad U4-5(4047mil,2725mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3887.901mil|Location2.X=3899.151mil|Location1.Y=2703.798mil|Location2.Y=2715.048mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3887.901mil|Location2.X=3899.151mil|Location1.Y=2703.798mil|Location2.Y=2715.048mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3896mil,2702mil)(4004mil,2702mil) on Top Overlay And Pad U4-4(3853mil,2725mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3849.742mil|Location2.X=3857.408mil|Location1.Y=2716.532mil|Location2.Y=2724.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3849.742mil|Location2.X=3857.408mil|Location1.Y=2716.532mil|Location2.Y=2724.199mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Text "U5" (3819mil,2660.385mil) on Top Overlay And Pad U4-4(3853mil,2725mil) on Top Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3887.901mil|Location2.X=3899.151mil|Location1.Y=2884.952mil|Location2.Y=2896.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3887.901mil|Location2.X=3899.151mil|Location1.Y=2884.952mil|Location2.Y=2896.202mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.649mil &lt; 10mil) Between Track (3896mil,2898mil)(3938mil,2898mil) on Top Overlay And Pad U4-1(3853mil,2875mil) on Top Layer [Top Overlay] to [Top Solder] clearance [9.649mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDHYL1TAHXQQ4EECLBWBJ3FELG4ELGRH0DLUKSWOIJSOY0PEZGRYAF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4263.846mil|Location2.X=4271.512mil|Location1.Y=2359.974mil|Location2.Y=2367.64mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4263.846mil|Location2.X=4271.512mil|Location1.Y=2359.974mil|Location2.Y=2367.64mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 10mil) Between Text "Q6" (4166mil,2298.692mil) on Top Overlay And Track (4252.228mil,2365.236mil)(4405.772mil,2365.236mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3901.055mil|Location2.X=3908.722mil|Location1.Y=2364.86mil|Location2.Y=2372.526mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3901.055mil|Location2.X=3908.722mil|Location1.Y=2364.86mil|Location2.Y=2372.526mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 10mil) Between Text "U13" (3832mil,2353.692mil) on Top Overlay And Track (3895mil,2368.693mil)(4003mil,2368.693mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3892.167mil|Location2.X=3899.833mil|Location1.Y=2698.167mil|Location2.Y=2705.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\henry\Documents\Thunderbots 2018-2019\Electrical\electronics\HenryBryant-Altium\MotorDriverBoard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3892.167mil|Location2.X=3899.833mil|Location1.Y=2698.167mil|Location2.Y=2705.833mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 10mil) Between Text "U5" (3819mil,2660.385mil) on Top Overlay And Track (3896mil,2702mil)(4004mil,2702mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,10 @@
+Output: Mixed Sim
+Type  : AdvSimNetlist
+From  : Project [MotorDriver.PrjPCB]
+   Generated File[MotorDriver.nsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 3:18:55 PM On 2019-02-16
