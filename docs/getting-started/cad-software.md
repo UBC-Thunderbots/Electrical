@@ -1,11 +1,8 @@
----
-description: >-
-  Setup instructions on how install CAD software for schematic capture and PCB
-  layout.
----
-
 # Getting Started - CAD Software
 
+Setup instructions on how install CAD software for schematic capture and PCB layout.
+
+---
 In the past, the team has used KiCAD. However, in the fall of 2017, we began to move all the schematics to Altium. 
 
 ## Altium Setup
@@ -73,4 +70,3 @@ KiCAD is compatible with several operating systems!
 {% endhint %}
 
 To install KiCAD, go [here](http://kicad-pcb.org/download/).
-

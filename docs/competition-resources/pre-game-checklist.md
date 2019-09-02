@@ -1,7 +1,5 @@
 # Pre-game checklist
 
-
-
 This checklist should be followed after any electrical or mechanical work is done on a robot to ensure it is ready for use, after the mechanical team certifies the robot.
 
 First, with no battery installed:

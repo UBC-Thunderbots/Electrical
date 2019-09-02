@@ -1,8 +1,8 @@
----
-description: Description of the purposes of different LED colours and patterns.
----
-
 # LED Patterns
+
+Description of the purposes of different LED colours and patterns.
+
+---
 
 ## Red LEDs
 
@@ -51,4 +51,3 @@ When flashing firmware, do not power down the robot!
 #### OK flashing isophase \(50% duty cycle\), once per second, Link off
 
 * Crash: an error occurred which prevented the core dump from being written.
-

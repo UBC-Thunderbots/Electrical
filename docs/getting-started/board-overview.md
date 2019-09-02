@@ -1,10 +1,10 @@
----
-description: >-
-  Description and explanations of all the current schematics, PCBs, and
-  electromechanical components.
----
 
-# Getting Started - Electrical System Overview \(WIP\)
+# Getting Started - Electrical System Overview
+
+Description and explanations of all the current schematics, PCBs, and
+electromechanical components.
+
+---
 
 ## Components Overview
 
@@ -304,4 +304,3 @@ Note: pull-up resistors on all input signals to the level shifter to maintain si
 ## Dribbler Motor
 
 ## LiPo Batteries
-

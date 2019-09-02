@@ -1,10 +1,10 @@
 # Competition packing list
 
-
-
 This is a list of what we need at competitions. We don't have to bring everything if we agree to share specific resources with another team.
 
-### Robot Supplies
+---
+
+## Robot Supplies
 
 Radio dongles and at least 4 USB cables
 
@@ -17,7 +17,7 @@ Radio dongles and at least 4 USB cables
 * SD Cards
 * SD card adapters
 
-### Soldering Supplies
+## Soldering Supplies
 
 * Soldering iron
 * Flux
@@ -34,7 +34,7 @@ Radio dongles and at least 4 USB cables
 * Electrical tape
 * Heat shrink
 
-### Diagnostic Tools
+## Diagnostic Tools
 
 * Power supply
 * Cables that connect power supply to our robot \(note this is different from the battery charging cable\)
@@ -43,7 +43,7 @@ Radio dongles and at least 4 USB cables
 * Multimeter
 * STM32 discovery board \(2014\)
 
-### Hand Tools
+## Hand Tools
 
 * Wire cutter
 * Wire stripper
@@ -51,11 +51,11 @@ Radio dongles and at least 4 USB cables
 * Crimper
 * Screw driver
 
-### Other
+## Other
 
 * Power bars
 
-### Random Things that was Brought/not Brought to Competition
+## Random Things that was Brought/not Brought to Competition
 
 * In 2013, we brought heat sinks and thermal adhesive to the competition.
 * We always try to pack the solder sucker and the hot air gun, but they never make it.

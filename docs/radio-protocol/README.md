@@ -1,7 +1,5 @@
 # Radio protocol
 
-
-
 These pages describe the protocols used to communicate between the host computer and the robots.
 
 The following versions are under development:
