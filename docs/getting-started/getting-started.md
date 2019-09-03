@@ -2,7 +2,31 @@
 
 Information for new members of the Electrical sub-team on how to navigate the electrical system, and setup CAD software and their firmware development environment.
 
-----
+---
+
+## Version Control
+
+We use Git for version control. Follow the instructions [here](https://git-scm.com/downloads) for your operating system to install Git.
+
+### (Optional) Git Configurations
+
+This is optional, but very useful and timesaving configurations.
+
+#### Aliases
+
+See [Hannah's aliases](docs/getting-started/.gitconfig) for recommended git aliases.
+
+#### Core
+
+Define your editor.
+
+Since different operating systems use different conventions for line-ending and carriage-return characters, a convention must be defined. See information in the `core.autocrlf` section of the [Git configuration page](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration).
+
+```.gitconfig
+[core]
+    editor = code --wait
+    autocrlf = input
+```
 
 ## CAD Software
 
