@@ -14,7 +14,7 @@ This is optional, but very useful and timesaving configurations.
 
 #### Aliases
 
-See [Hannah's aliases](docs/getting-started/.gitconfig) for recommended git aliases.
+See [Hannah's aliases](.gitconfig) for recommended git aliases.
 
 #### Core
 
@@ -30,12 +30,12 @@ Since different operating systems use different conventions for line-ending and 
 
 ## CAD Software
 
-To view or create any schematics and PCBs, you must first install CAD software for schematic capture and PCB layout. Follow the instructions in the [CAD software tutorial](docs/getting-started/cad-software.md) to get set up.
+To view or create any schematics and PCBs, you must first install CAD software for schematic capture and PCB layout. Follow the instructions in the [CAD software tutorial](cad-software.md) to get set up.
 
 ## Electronics
 
-To become acquainted with the electrical system, read through the [board overview document](docs/getting-started/board-overview.md). The document provides a detailed overview of all the PCBs and their functionality.
+To become acquainted with the electrical system, read through the [board overview document](board-overview.md). The document provides a detailed overview of all the PCBs and their functionality.
 
 ## LED Patterns
 
-To learn about the purposes of our different LED colours and patterns, read the [LED patterns document](docs/getting-started/led-patterns.md).
+To learn about the purposes of our different LED colours and patterns, read the [LED patterns document](led-patterns.md).
