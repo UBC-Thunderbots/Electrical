@@ -1,0 +1,1 @@
+# Directory for solenoid Python models
