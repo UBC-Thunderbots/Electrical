@@ -1,0 +1,5 @@
+Added Component: Designator=P1(PCBComponent_1)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=CSN Pin=P1-2
+Added Member To Class: ClassName=3phasedriver Member=Component P1 XT60

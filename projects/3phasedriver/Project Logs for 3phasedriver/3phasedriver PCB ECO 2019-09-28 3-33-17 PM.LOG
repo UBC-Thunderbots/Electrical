@@ -1,0 +1,17 @@
+Added Component: Designator=J1(*MOLEX_0039281083)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0039281083"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0039281083/Molex/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=M1H1 Pin=J1-1
+Added Pin To Net: NetName=M1H2 Pin=J1-2
+Added Pin To Net: NetName=VCC Pin=J1-3
+Added Pin To Net: NetName=M1P3 Pin=J1-4
+Added Pin To Net: NetName=M1H3 Pin=J1-5
+Added Pin To Net: NetName=CSN Pin=J1-6
+Added Pin To Net: NetName=M1P2 Pin=J1-8
+Added Member To Class: ClassName=3phasedriver Member=Component J1 0039281083

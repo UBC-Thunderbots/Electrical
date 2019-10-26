@@ -1,0 +1,23 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [3phasedriver.PrjPCB]
+   Generated File[3phasedriver.GTO]
+   Generated File[3phasedriver.GTP]
+   Generated File[3phasedriver.GTS]
+   Generated File[3phasedriver.GTL]
+   Generated File[3phasedriver.GBL]
+   Generated File[3phasedriver.GBS]
+   Generated File[3phasedriver.GBP]
+   Generated File[3phasedriver.GBO]
+   Generated File[3phasedriver.GM1]
+   Generated File[3phasedriver.GM4]
+   Generated File[3phasedriver.GKO]
+   Generated File[3phasedriver.RUL]
+   Generated File[3phasedriver.EXTREP]
+   Generated File[3phasedriver.REP]
+
+
+Files Generated   : 14
+Documents Printed : 0
+
+Finished Output Generation At 1:02:36 PM On 2019-10-22

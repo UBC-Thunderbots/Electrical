@@ -1,0 +1,46 @@
+Added Component: Designator=U1(CQFP50P900X900X160-48N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=RESET Pin=U1-2
+Added Pin To Net: NetName=V5 Pin=U1-3
+Added Pin To Net: NetName=V5 Pin=U1-4
+Added Pin To Net: NetName=M1FF2 Pin=U1-5
+Added Pin To Net: NetName=M1FF1 Pin=U1-6
+Added Pin To Net: NetName=TACHO Pin=U1-7
+Added Pin To Net: NetName=BRAKE Pin=U1-8
+Added Pin To Net: NetName=DIR Pin=U1-9
+Added Pin To Net: NetName=M1H1 Pin=U1-10
+Added Pin To Net: NetName=M1H2 Pin=U1-11
+Added Pin To Net: NetName=M1H3 Pin=U1-12
+Added Pin To Net: NetName=PWM Pin=U1-14
+Added Pin To Net: NetName=MODE Pin=U1-15
+Added Pin To Net: NetName=RC Pin=U1-16
+Added Pin To Net: NetName=CSN Pin=U1-17
+Added Pin To Net: NetName=RDEAD Pin=U1-18
+Added Pin To Net: NetName=CSOUT Pin=U1-19
+Added Pin To Net: NetName=REF Pin=U1-20
+Added Pin To Net: NetName=CSN Pin=U1-21
+Added Pin To Net: NetName=CSP Pin=U1-22
+Added Pin To Net: NetName=VDSTH Pin=U1-23
+Added Pin To Net: NetName=VCC Pin=U1-24
+Added Pin To Net: NetName=M1P3 Pin=U1-25
+Added Pin To Net: NetName=GHC Pin=U1-26
+Added Pin To Net: NetName=CC Pin=U1-27
+Added Pin To Net: NetName=M1P1 Pin=U1-28
+Added Pin To Net: NetName=GHB Pin=U1-29
+Added Pin To Net: NetName=CB Pin=U1-30
+Added Pin To Net: NetName=M1P2 Pin=U1-31
+Added Pin To Net: NetName=GHA Pin=U1-32
+Added Pin To Net: NetName=CA Pin=U1-33
+Added Pin To Net: NetName=GLC Pin=U1-34
+Added Pin To Net: NetName=GLB Pin=U1-35
+Added Pin To Net: NetName=GLA Pin=U1-36
+Added Pin To Net: NetName=CSP Pin=U1-38
+Added Pin To Net: NetName=ESF Pin=U1-39
+Added Pin To Net: NetName=NetC6_2 Pin=U1-40
+Added Pin To Net: NetName=CSN Pin=U1-41
+Added Pin To Net: NetName=CP1 Pin=U1-42
+Added Pin To Net: NetName=CP2 Pin=U1-43
+Added Pin To Net: NetName=DIRO Pin=U1-44
+Added Pin To Net: NetName=VCC Pin=U1-45
+Added Pin To Net: NetName=COAST Pin=U1-46
+Added Member To Class: ClassName=3phasedriver Member=Component U1 A3931

@@ -1,0 +1,62 @@
+Added Component: Designator=P4(HDR1X4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P5(HDR1X2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R13(RESC2013X65N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RC0805FR-072K2L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.01 USD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RC0805FR-072K2L/Yageo/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R14(RESC2013X65N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RC0805FR-072K2L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.01 USD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RC0805FR-072K2L/Yageo/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U4(Filter)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U5(PCBComponent_1)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=CSN Pin=R13-1
+Added Pin To Net: NetName=CSN Pin=R14-1
+Added Pin To Net: NetName=CSN Pin=U4-GND
+Added Pin To Net: NetName=CSN Pin=U5-GND
+Added Pin To Net: NetName=5VIN Pin=P5-1
+Added Pin To Net: NetName=5VIN Pin=P5-2
+Added Pin To Net: NetName=5VIN Pin=U5-5V
+Added Net: Name=5VIN
+Added Pin To Net: NetName=NetP4_1 Pin=P4-1
+Added Pin To Net: NetName=NetP4_1 Pin=P4-2
+Added Pin To Net: NetName=NetP4_1 Pin=U4-7
+Added Net: Name=NetP4_1
+Added Pin To Net: NetName=NetP4_3 Pin=P4-3
+Added Pin To Net: NetName=NetP4_3 Pin=P4-4
+Added Pin To Net: NetName=NetP4_3 Pin=U4-8
+Added Net: Name=NetP4_3
+Added Pin To Net: NetName=NetR13_2 Pin=R13-2
+Added Pin To Net: NetName=NetR13_2 Pin=U4-1
+Added Pin To Net: NetName=NetR13_2 Pin=U5-VIN2
+Added Net: Name=NetR13_2
+Added Pin To Net: NetName=NetR14_2 Pin=R14-2
+Added Pin To Net: NetName=NetR14_2 Pin=U4-2
+Added Pin To Net: NetName=NetR14_2 Pin=U5-VIN1
+Added Net: Name=NetR14_2
+Added Member To Class: ClassName=3phasedriver Member=Component P4 Header 4
+Added Member To Class: ClassName=3phasedriver Member=Component P5 Header 2
+Added Member To Class: ClassName=3phasedriver Member=Component R13 0805
+Added Member To Class: ClassName=3phasedriver Member=Component R14 0805
+Added Member To Class: ClassName=3phasedriver Member=Component U4 EMI Filter
+Added Member To Class: ClassName=3phasedriver Member=Component U5 Encoder

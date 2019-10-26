@@ -1,0 +1,13 @@
+Added Component: Designator=Q4(SOIC127P600X170-8N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetP12_2 Pin=Q4-G
+Added Pin To Net: NetName=GND Pin=Q4-S
+Added Pin To Net: NetName=GND Pin=Q4-S
+Added Pin To Net: NetName=GND Pin=Q4-S
+Added Pin To Net: NetName=NetQ4_D Pin=Q4-D
+Added Pin To Net: NetName=NetQ4_D Pin=Q4-D
+Added Pin To Net: NetName=NetQ4_D Pin=Q4-D
+Added Pin To Net: NetName=NetQ4_D Pin=Q4-D
+Added Pin To Net: NetName=NetQ4_D Pin=R6-2
+Added Net: Name=NetQ4_D
+Added Member To Class: ClassName=PowerBoard_Rev1 Member=Component Q4 AO4882

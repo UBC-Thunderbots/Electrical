@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=C1 Old Footprint=RAD-0.3 New Footprint=CAPC2013X110N
+Change Component Comment : Designator=C1 Old Comment=Cap New Comment=1uF-0805
+Change component parameters: Designator = "C1"; Footprint = "CAPC2013X110N"; UniqueID = "\FKSSXXLL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Kemet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "C0805C104K5RACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0805 Kemet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "0.86 USD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"

@@ -1,0 +1,23 @@
+Added Component: Designator=U2(TSOP65P640X120-20N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetU2_ALERT Pin=U2-ALERT
+Added Pin To Net: NetName=NetC7_2 Pin=U2-BAT
+Added Pin To Net: NetName=NetU2_SCL Pin=U2-SCL
+Added Pin To Net: NetName=NetU2_SDA Pin=U2-SDA
+Added Pin To Net: NetName=NetC5_1 Pin=U2-SENSEN
+Added Pin To Net: NetName=NetC5_2 Pin=U2-SENSEP
+Added Pin To Net: NetName=NetC6_1 Pin=U2-V3P3
+Added Pin To Net: NetName=NetC13_2 Pin=U2-VC0
+Added Pin To Net: NetName=NetC12_2 Pin=U2-VC1
+Added Pin To Net: NetName=NetC11_2 Pin=U2-VC2
+Added Pin To Net: NetName=NetC10_2 Pin=U2-VC3
+Added Pin To Net: NetName=NetC9_2 Pin=U2-VC4
+Added Pin To Net: NetName=NetC8_2 Pin=U2-VC5
+Added Pin To Net: NetName=NetC7_2 Pin=U2-VC6
+Added Pin To Net: NetName=NetC15_1 Pin=U2-VCOUT
+Added Pin To Net: NetName=NetP7_1 Pin=U2-VCTL
+Added Pin To Net: NetName=NetC16_1 Pin=U2-VIOUT
+Added Pin To Net: NetName=NetC14_1 Pin=U2-VREF
+Added Pin To Net: NetName=GND Pin=U2-VSS
+Added Pin To Net: NetName=VTB Pin=U2-VTB
+Added Member To Class: ClassName=PowerBoard_Rev1 Member=Component U2 TI BMS

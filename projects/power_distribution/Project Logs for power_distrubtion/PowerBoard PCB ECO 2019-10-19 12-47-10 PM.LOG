@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=+5V Pin=P8-2
+Removed Pin From Net: NetName=+5V Pin=P9-2
+Removed Pin From Net: NetName=+5V Pin=P10-2
+Removed Pin From Net: NetName=+5V Pin=P11-2
+Added Pin To Net: NetName=GND Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P9-2
+Added Pin To Net: NetName=GND Pin=P10-2
+Added Pin To Net: NetName=GND Pin=P11-2
+Added Member To Class: ClassName=PowerBoard_Rev1 Member=Component D1 D Zener
+Added Member To Class: ClassName=PowerBoard_Rev1 Member=Component U1 LDO
