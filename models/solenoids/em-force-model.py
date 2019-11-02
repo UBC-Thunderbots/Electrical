@@ -1,4 +1,3 @@
-import math
 
 # Purpose: Calculating the magnetic field strength at a point P, a certain distance away from the centre,
 # along the axis to the direction the force is being exerted.
@@ -12,69 +11,93 @@ import math
 
 # For more information and referenced diagram (page598), https: // www.mdpi.com / 2076 - 3417 / 5 / 3 / 595 / pdf.All
 # variables declarations used in this program are categorized into ...
-# constants, values to be determined by design, values to be changed during play, output/calculated values
+# . values to be determined by design, values to be changed during play, output/calculated values
+from typing import Dict
+import scipy
+from scipy import constants
 
-# Constants
 
-mu = 4 * math.pi * pow(10, -7)  # permeability constant of free space
-e = 2.7182818284590452353602874713526624977572470936999
+# Values determined by design, these being the parameters we can change by
+# changing the design of the solenoid
 
-# Values determined by design, these being the parameters we can change by changing the design of the solenoid
+def em_force_model():
+    
+    #parameterList: Dict[str, Int]
 
-lengthSolenoid = 10  # length of solenoid
-outerDiameter = 14  # outer diameter of solenoid. This includes the width of the wires
-innerDiameter = 8  # inner diameter of solenoid
-shellCasingThickness = 7  # shell casing thickness (the frame we wrap wires around)
-distPToCenter = 18  # distance from point P to center
-numCoils = 100  # number of coils
-crossSectionAreaSolenoid = pow((innerDiameter / 2 + shellCasingThickness), 2) * math.pi
-# area calculation (cross section of solenoid)
+    length_solenoid = 10  # length of solenoid
+    outer_diameter = 14  # outer diameter of solenoid. This includes the width of the wires
+    inner_diameter = 8  # inner diameter of solenoid
+    # shell casing thickness (the frame we wrap wires around)
+    shell_casing_thickness = 7
+    dist_p__to_center = 18  # distance from point P to center
+    num_coils = 100  # number of coils
+    crossSectionArea_solenoid = scipy.power(
+        (inner_diameter / 2 + shell_casing_thickness), 2) * scipy.pi
+    # area calculation (cross section of solenoid)
 
-# External Values, changeable, but dependent on other components
+    # External Values, changeable, but dependent on other components
 
-maxVoltage = 4  # the voltage across the capacitor
-resistance = 1  # resistance of the device
-capacitance = 3  # capacitance of our capacitor
+    max_voltage = 4  # the voltage across the capacitor
+    resistance = 1  # resistance of the device
+    capacitance = 3  # capacitance of our capacitor
 
-# input values, these being values we can change during play, when we have finalized design
+    # input values, these being values we can change during play, when we have
+    # finalized design
 
-timeElapsed = 4  # ### we want to change length of pulse
-directionVector = 1
+    timeElapsed = 4  # ### we want to change length of pulse
+    directionVector = 1
 
-# Preliminary Calculations
+    # Preliminary Calculations
 
-timeConstant = resistance*capacitance
+    timeConstant = resistance * capacitance
 
-maxCurrent = maxVoltage/resistance
+    maxCurrent = max_voltage / resistance
 
-current = maxCurrent * pow(e, -timeElapsed/timeConstant)
+    current = maxCurrent * scipy.power(scipy.e, -timeElapsed / timeConstant)
 
-print (current)
+    print(current)
 
-lineCurrentDensity: float = (current / lengthSolenoid) * numCoils  # this is used in the calculation for remanence
-remanence = mu * lineCurrentDensity # remanent flux density (remanence)
+    # this is used in the calculation for remanence
+    lineCurrentDensity: float = (current / length_solenoid) * num_coils
+    # remanent flux density (remanence)
+    remanence = constants.mu_0 * lineCurrentDensity
 
-# The following are used for debugging purposes. They are arbitrary values and have no meaning in isolation
+    # The following are used for debugging purposes. They are arbitrary values
+    # and have no meaning in isolation
 
-constantMultiplier = (mu * numCoils * current) / (2 * lengthSolenoid * (outerDiameter - innerDiameter))
+    constantMultiplier = (constants.mu_0 * num_coils * current) / \
+        (2 * length_solenoid * (outer_diameter - inner_diameter))
 
-length_addDistanceFromCenter = lengthSolenoid + 2 * distPToCenter
+    length_addDistanceFromCenter = length_solenoid + 2 * dist_p_to_center
 
-length_subtractDistanceFromCenter = lengthSolenoid - 2 * distPToCenter
+    length_subtractDistanceFromCenter = length_solenoid - 2 * dist_p_to_center
 
-ln_termA = math.log((outerDiameter + math.sqrt(pow(outerDiameter, 2) + pow(length_addDistanceFromCenter, 2))) / (
-            innerDiameter + math.sqrt(pow(innerDiameter, 2) + pow(length_addDistanceFromCenter, 2))))
-ln_termB = math.log((outerDiameter + math.sqrt(pow(outerDiameter, 2) + pow(length_subtractDistanceFromCenter, 2))) / (
-            innerDiameter + math.sqrt(pow(innerDiameter, 2) + pow(length_subtractDistanceFromCenter, 2))))
+    ln_termA = scipy.log((outer_diameter +
+                          scipy.sqrt(scipy.power(outer_diameter, 2) +
+                                     scipy.power(length_addDistanceFromCenter, 2))) /
+                         (inner_diameter +
+                          scipy.sqrt(scipy.power(inner_diameter, 2) +
+                                     scipy.power(length_addDistanceFromCenter, 2))))
+    ln_termB = scipy.log((outer_diameter +
+                          scipy.sqrt(scipy.power(outer_diameter, 2) +
+                                     scipy.power(length_subtractDistanceFromCenter, 2))) /
+                         (inner_diameter +
+                          scipy.sqrt(scipy.power(inner_diameter, 2) +
+                                     scipy.power(length_subtractDistanceFromCenter, 2))))
 
-# calculating field strength
+    # calculating field strength
 
-fieldStrengthAtP = constantMultiplier / length_addDistanceFromCenter * math.log(ln_termA) \
-                   + constantMultiplier / length_subtractDistanceFromCenter * math.log(ln_termB)
-print(fieldStrengthAtP)
+    fieldStrengthAtP = constantMultiplier / length_addDistanceFromCenter * scipy.log(ln_termA) \
+        + constantMultiplier / length_subtractDistanceFromCenter * scipy.log(ln_termB)
+    print(fieldStrengthAtP)
 
-# calculating force
+    # calculating force
 
-forceOnPiston = fieldStrengthAtP * remanence * crossSectionAreaSolenoid * directionVector / mu  # r
+    forceOnPiston = fieldStrengthAtP * remanence * \
+        crossSectionArea_solenoid * direction_vector / constants.mu_0  # r
 
-print(forceOnPiston)
+    print(forceOnPiston)
+
+
+if __name__ == "__main__":
+    em_force_model()
