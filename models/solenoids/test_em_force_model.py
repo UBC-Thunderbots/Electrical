@@ -13,16 +13,16 @@ class EmForceModelTestCase(TestCase):
     def tearDown(self):
         pass
 
-    def calculate_remanence_test_case(self):
-        current = 0.1 # Amps
-        length_solenoid = 10 #
-        num_turns = 50 #
+    def test_calculate_remanence_test_case(self):
+        current = 0.1  # Amps
+        length_solenoid = 10  #
+        num_turns = 50  #
         val = calculate_remanence(
             current,
             length_solenoid,
             num_turns
         )
-        self.assert(val == 1, "Expected not equal")
+        self.assertNotEqual(val, 1, "Expected not equal")
 
 
 

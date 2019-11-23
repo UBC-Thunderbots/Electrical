@@ -30,6 +30,11 @@ def input_values():
 
 def em_force_model(parameter_list):
 
+    """
+    :param parameter_list: From parameter list, for detailed information look into parameters list and below***
+    :return:
+    """
+
     length_solenoid = 10  # length of solenoid
     outer_diameter = 14  # outer diameter of solenoid. This includes the width of the wires
     inner_diameter = 8  # inner diameter of solenoid
@@ -103,21 +108,58 @@ def em_force_model(parameter_list):
 
 
 def calculate_remanence(current, length_solenoid, num_coils):
+    """
+
+     Note: reference of physical aspects of parameters can be visualized and view on a diagram in research paper.
+     Since we split a lot of the many terms, the descriptions will need to be referred back to research paper of
+    equations for more clarification.
+
+    :param current:
+        Current that is flowing through the wire
+    :param length_solenoid:
+        Length of the physical solenoid
+    :param num_coils:
+        Number of turns of coil
+    :return:
+    """
 
     # this is used in the calculation for remanence
     line_current_density: float = (current / length_solenoid) * num_coils
     # remanent flux density (remanence)
-    remanence = constants.mu_0 * line_current_density
-    return remanence
+    return constants.mu_0 * line_current_density
 
 
 def calculate_constant_multiplier(num_coils, current, length_solenoid, outer_diameter, inner_diameter):
+    """
+    :param num_coils:
+        Number of turns of coil
+    :param current:
+        Current that is flowing through the wire
+    :param length_solenoid:
+        Length of the physical solenoid
+    :param outer_diameter:
+        Outer diameter of the physical solenoid
+    :param inner_diameter:
+        Inner diameter of the physical solenoid
+    :return:
+    """
+
     constant_multiplier = (constants.mu_0 * num_coils * current) / \
     (2 * length_solenoid * (outer_diameter - inner_diameter))
     return constant_multiplier
 
 
 def calculate_ln_term_a(outer_diameter, length_add_distance_from_center, inner_diameter):
+    """
+    :param outer_diameter:
+        Outer diameter of the physical solenoid
+    :param length_add_distance_from_center:
+        Length_add_distance_from center term in equation in research paper
+    :param inner_diameter:
+        Inner diameter of the physical solenoid
+    :return:
+    """
+
     ln_term_a = scipy.log((outer_diameter +
                            scipy.sqrt(scipy.power(outer_diameter, 2) +
                                       scipy.power(length_add_distance_from_center, 2))) /
@@ -128,6 +170,16 @@ def calculate_ln_term_a(outer_diameter, length_add_distance_from_center, inner_d
 
 
 def calculate_ln_term_b(outer_diameter, length_subtract_distance_from_center, inner_diameter):
+    """
+    :param outer_diameter:
+        Outer diameter of the physical solenoid
+    :param length_subtract_distance_from_center:
+        Length_subtract_distance_from center term in equation in research paper
+    :param inner_diameter:
+        Inner diameter of the physical solenoid
+    :return:
+    """
+
     ln_term_b = scipy.log((outer_diameter +
                           scipy.sqrt(scipy.power(outer_diameter, 2) +
                                      scipy.power(length_subtract_distance_from_center, 2))) /
@@ -140,12 +192,40 @@ def calculate_ln_term_b(outer_diameter, length_subtract_distance_from_center, in
 def calculate_field_strength_at_p(constant_multiplier, length_add_distance_from_center, ln_term_a,
                                   length_subtract_distance_from_center, ln_term_b):
 
+    """
+    :param constant_multiplier:
+        Constant term in the beginning of equation in research paper
+    :param length_add_distance_from_center:
+        Length_add_distance_from center term in equation in research paper
+    :param ln_term_a:
+        Ln term a in equation reference in research paper
+    :param length_subtract_distance_from_center:
+        Length_subtract_distance_from center term in equation in research paper
+    :param ln_term_b:
+        Ln term b in equation reference in research paper
+    :return:
+    """
+
     field_strength_at_p = constant_multiplier / length_add_distance_from_center * scipy.log(ln_term_a) \
         + constant_multiplier / length_subtract_distance_from_center * scipy.log(ln_term_b)
     return field_strength_at_p
 
 
 def calculate_force_on_piston(field_strength_at_p, remanence, cross_section_area_solenoid, direction_vector):
+
+    """
+
+    :param field_strength_at_p:
+        Strength of magnetic field at point P on the medal kicking bar
+    :param remanence:
+        Value of ramanence
+    :param cross_section_area_solenoid:
+        The cross sectional area of the solenoid
+    :param direction_vector:
+        The directional vector in the direction the force is goign
+    :return:
+    """
+
     force_on_piston = field_strength_at_p * remanence * \
         cross_section_area_solenoid * direction_vector / constants.mu_0
     return force_on_piston
