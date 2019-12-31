@@ -6,10 +6,13 @@
 # values to be determined by design, values to be changed during play, output/calculated values
 
 from typing import Dict
+
 import scipy
 from scipy import constants
 import matplotlib.pyplot as plt
 import numpy as np
+
+__all__ = [constants]
 
 
 def input_values():
@@ -38,6 +41,7 @@ def time_constant(resistance, capaciatance):
     tc = resistance * capaciatance
     return tc
 
+
 def max_current(max_voltage, resistance):
     mc = max_voltage / resistance
     return mc
@@ -47,8 +51,16 @@ def max_current(max_voltage, resistance):
     #      i+time_elapsed
 
 
+def num_of_loops(solenoid_length, gauge_thickness):
+    n = solenoid_length / gauge_thickness
+    return n
+
+
+# magnetic field (mf) calculations and area calculations
+
+
 def calc_mf_circular_solenoid(num_loops, current, diameter):
-    magnetic_field = scipy.mu_0 * num_loops * current / diameter
+    magnetic_field = scipy.constants.mu_0 * num_loops * current / diameter
     return magnetic_field
 
 
@@ -58,7 +70,7 @@ def cross_section_area_circle(dia):  # area calculation (cross section of soleno
 
 
 def calc_mf_square_solenoid(num_loops, current, side_length):
-    magnetic_field = np.sqrt(2) * scipy.mu_0 * num_loops * current / (scipy.pi * side_length / 2)
+    magnetic_field = np.sqrt(2) * scipy.constants.mu_0 * num_loops * current / (scipy.pi * side_length / 2)
     return magnetic_field
 
 
@@ -68,7 +80,7 @@ def cross_section_area_square(side_length):  # area calculation (cross section o
 
 
 def calc_mf_rect_solenoid(num_loops, current, length_short, length_long):
-    magnetic_field = (2 * scipy.mu_0 * num_loops * current / scipy.pi) * (
+    magnetic_field = (2 * scipy.constants.mu_0 * num_loops * current / scipy.pi) * (
             length_long / (length_short * np.sqrt(np.pow(length_long, 2) + np.pow(length_short, 2))) + length_short /
             (length_long * np.sqrt(np.pow(length_long, 2) + np.pow(length_short, 2))))
     return magnetic_field
@@ -85,7 +97,7 @@ def calc_mf_oval_solenoid(num_loops, current, length_short, length_long):  # ***
 
 
 def calc_force(area, mf):
-    force = area * scipy.pow(mf, 2) / 2 / scipy.mu_0
+    force = area * scipy.pow(mf, 2) / 2 / scipy.constants.mu_0
     return force
 
 
