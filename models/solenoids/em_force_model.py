@@ -12,7 +12,7 @@ from scipy import constants
 import matplotlib.pyplot as plt
 import numpy as np
 
-__all__ = [constants]
+# __all__ = [constants]
 
 
 def input_values():
