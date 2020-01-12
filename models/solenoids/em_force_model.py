@@ -12,6 +12,7 @@ from scipy import constants
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # __all__ = [constants]
 
 
@@ -81,8 +82,9 @@ def cross_section_area_square(side_length):  # area calculation (cross section o
 
 def calc_mf_rect_solenoid(num_loops, current, length_short, length_long):
     magnetic_field = (2 * scipy.constants.mu_0 * num_loops * current / scipy.pi) * (
-            length_long / (length_short * np.sqrt(np.pow(length_long, 2) + np.pow(length_short, 2))) + length_short /
-            (length_long * np.sqrt(np.pow(length_long, 2) + np.pow(length_short, 2))))
+            length_long / (
+                length_short * np.sqrt(scipy.power(length_long, 2) + scipy.power(length_short, 2))) + length_short /
+            (length_long * np.sqrt(scipy.power(length_long, 2) + scipy.power(length_short, 2))))
     return magnetic_field
 
 
@@ -91,13 +93,18 @@ def cross_section_area_rect(length_long, length_short):  # area calculation (cro
     return area
 
 
-def calc_mf_oval_solenoid(num_loops, current, length_short, length_long):  # ****needs work
+def calc_mf_ellipse_solenoid(num_loops, current, length_short, length_long):  # ****needs work
     magnetic_field = 1
     return magnetic_field
 
 
+def cross_section_area_ellipse(length_long, length_short):  # area calculation (cross section of solenoid)
+    #  area = 1 * 1
+    return area
+
+
 def calc_force(area, mf):
-    force = area * scipy.pow(mf, 2) / 2 / scipy.constants.mu_0
+    force = area * scipy.power(mf, 2) / 2 / scipy.constants.mu_0
     return force
 
 
