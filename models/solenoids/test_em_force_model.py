@@ -1,4 +1,3 @@
-
 from unittest import TestCase
 from .em_force_model import em_force_model, calculate_remanence
 
@@ -27,3 +26,4 @@ class EmForceModelTestCase(TestCase):
 
 
 
+    def test_

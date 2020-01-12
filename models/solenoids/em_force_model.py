@@ -3,10 +3,8 @@
 # For more information refer to 'Solenoid Research' (google docs)
 
 # variables declarations used in this program are categorized into ...
-# values to be determined by design, values to be changed during play, output/calculated values
-
+# . values to be determined by design, values to be changed during play, output/calculated values
 from typing import Dict
-
 import scipy
 from scipy import constants
 import matplotlib.pyplot as plt
