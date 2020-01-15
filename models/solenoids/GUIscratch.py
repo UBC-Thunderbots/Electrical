@@ -12,8 +12,8 @@ class solenoidGUI:
             column=0, row=0)
 
         # Changeable Parameters
-        self.description_label = Label(master, text="Changeable parameters: geometry", font=("Arial Bold", 20)).grid(column=0,
-                                                                                                                     row=1)
+        self.description_label = Label(master, text="Changeable parameters: geometry", font=("Arial Bold", 20)).grid(
+            column=0, row=1)
         frame = Frame(master)
         frame.grid(column=0, row=2)
 
@@ -22,7 +22,9 @@ class solenoidGUI:
         self.length_solenoid.grid(column=1, row=1)
 
         self.description_gauge_thickness = Label(frame, text="Gauge Thickness in mm").grid(column=0, row=2)
-        self.gauge_thickness = Entry(frame, width=10)
+
+        self.gauge_thickness = ttk.Combobox(frame, values=["12", "13", "14", "15"])
+        self.gauge_thickness.current(0)  # set the selected item
         self.gauge_thickness.grid(column=1, row=2)
 
         # if circle, square, show
@@ -66,22 +68,40 @@ class solenoidGUI:
         self.output_label.grid(column=0, row=11)
 
     def calc(self):
-        n = num_of_loops(float(self.length_solenoid.get()), float(self.gauge_thickness.get()))
 
+        # relating the combobox index to text
+        rectangle = 0
+        circle = 1
+        ellipse = 2
+        square = 3
+
+        n = num_of_loops(float(self.length_solenoid.get()), float(self.gauge_thickness.get()))
         i = max_current(float(self.voltage.get()), float(self.resistance.get()))
 
-        # get shape
-        # ​
-        # if circle
-        area = cross_section_area_circle(float(self.diameter.get()))
-        mf = calc_mf_circular_solenoid(n, i, float(self.diameter.get()))
+        if self.input_shape.current() == rectangle:
+            area = cross_section_area_rect(float(self.side_short.get()), float(self.side_long.get()))
+            mf = calc_mf_rect_solenoid(n, i, float(self.side_short.get()), float(self.side_long.get()))
+            printed = calc_force(area, mf)
+            self.output_label.configure(text=printed)
 
-        # if square
+        if self.input_shape.current() == circle:
+            area = cross_section_area_circle(float(self.diameter.get()))
+            mf = calc_mf_circular_solenoid(n, i, float(self.diameter.get()))
+            printed = calc_force(area, mf)
+            self.output_label.configure(text=printed)
 
-        # printed = calc_force(area, mf)
-        printed = (float(self.diameter.get()))
+        '''if self.input_shape.current() == ellipse:
+            area = cross_section_area_ellipse()
+            mf = calc_mf_ellipse_solenoid()
+            printed = calc_force(area, mf)
+            self.output_label.configure(text=printed)'''
 
-        self.output_label.configure(text=printed)
+        if self.input_shape.current() == square:
+            area = cross_section_area_square(float(self.diameter.get()))
+            mf = calc_mf_square_solenoid(n, i, float(self.diameter.get()))
+            printed = calc_force(area, mf)
+            self.output_label.configure(text=printed)
+
 
 
 if __name__ == '__main__':
