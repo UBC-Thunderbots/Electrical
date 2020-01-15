@@ -9,6 +9,7 @@ import scipy
 from scipy import constants
 import matplotlib.pyplot as plt
 import numpy as np
+from json import *
 
 
 def input_values():

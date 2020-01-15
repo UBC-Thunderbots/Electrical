@@ -1,9 +1,8 @@
 from tkinter import *
 from tkinter import ttk
-from em_force_model import *
-
+from models.solenoids.em_force_model import *
 class solenoidGUI:
- 
+
     def __init__(self, master):
         self.master = master
         master.title("window title")
@@ -13,13 +12,14 @@ class solenoidGUI:
             column=0, row=0)
 
         # Changeable Parameters
-        self.description_label = Label(master, text="Changeable parameters: geometry", font=("Arial Bold", 20)).grid(column=0, row=1)
+        self.description_label = Label(master, text="Changeable parameters: geometry", font=("Arial Bold", 20)).grid(column=0,
+                                                                                                                     row=1)
         frame = Frame(master)
         frame.grid(column=0, row=2)
 
         self.description_length_solenoid = Label(frame, text="Solenoid Length in mm").grid(column=0, row=1)
         self.length_solenoid = Entry(frame, width=10)
-        self.length_solenoid.grid (column=1, row=1)
+        self.length_solenoid.grid(column=1, row=1)
 
         self.description_gauge_thickness = Label(frame, text="Gauge Thickness in mm").grid(column=0, row=2)
         self.gauge_thickness = Entry(frame, width=10)
@@ -59,8 +59,8 @@ class solenoidGUI:
 
         # click to solve
         self.button = Button(master, text='Solve', command=self.calc)
-        self.button.grid (column = 0, row =9)
-        self.close_button = Button(master, text="Close", command=master.quit).grid(column = 0, row = 10)
+        self.button.grid(column=0, row=9)
+        self.close_button = Button(master, text="Close", command=master.quit).grid(column=0, row=10)
         # output
         self.output_label = Label(master, text="output here")
         self.output_label.grid(column=0, row=11)
@@ -71,7 +71,7 @@ class solenoidGUI:
         i = max_current(float(self.voltage.get()), float(self.resistance.get()))
 
         # get shape
-
+        # ​
         # if circle
         area = cross_section_area_circle(float(self.diameter.get()))
         mf = calc_mf_circular_solenoid(n, i, float(self.diameter.get()))
@@ -83,6 +83,14 @@ class solenoidGUI:
 
         self.output_label.configure(text=printed)
 
-root = Tk()
-my_gui = solenoidGUI(root)
-root.mainloop()
+
+if __name__ == '__main__':
+    root = Tk()
+    my_gui = solenoidGUI(root)
+    root.mainloop()
+    # AWG conversions to mm
+    import json
+
+    with open('awg_data.json', 'r') as awg_json:
+        awg_data = json.load(awg_json)
+        print(awg_data['AWG'])
