@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
-from models.solenoids.em_force_model import *
+from em_force_model import *
+
 class solenoidGUI:
 
     def __init__(self, master):
