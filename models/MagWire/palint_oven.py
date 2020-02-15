@@ -23,6 +23,7 @@ import biotsavart
 w1 = wire.Wire(path=wire.Wire.SolenoidPath(radius=0.1, pitch=0.02, turns=20), discretization_length=0.01, current=10).Rotate(axis=(0, 1, 0), deg=90)
 w2 = wire.Wire(path=wire.Wire.SolenoidPath(radius=0.1, pitch=0.02, turns=30), discretization_length=0.01, current=20).Rotate(axis=(0, 1, 0), deg=90).Translate([.45,0,0])
 
+
 sol = biotsavart.BiotSavart(wire=w1)
 sol.AddWire(w2)
 
