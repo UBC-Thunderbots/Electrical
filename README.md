@@ -18,8 +18,9 @@ protocol rather than using ssh.
 ### `./repo.py pull`
 
 Runs a pull on all of the repositories to grab the latest version. This does
-not perform merges. If you have work that is not based on the latest version on
-the remote repository, you should perform a pull or a fetch+merge manually.
+not perform merges. This only performs fast-forwards. If there is both new
+content locally and remotely, pull will fail on the repository where this is
+the case and you should pull or fetch+merge manually.
 
 ### `./repo.py forall <cmd>`
 
