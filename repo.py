@@ -20,6 +20,7 @@ def whereami():
     """
     return Path(__file__).parent
 
+
 def get_repos():
     """
     Grabs a list of the repos we are tracking.
@@ -57,7 +58,7 @@ async def get_status(repo):
         # git status returns nonzero if there are untracked files
         return RepoStatus.UNTRACKED
 
-    status = await gitcmd(['fetch'], chdir=repo, err_ok=True)
+    status = await gitcmd(['fetch', '--quiet'], chdir=repo, err_ok=False)
     if status != 0:
         # Ignore errors and just fail to find status if we can't contact remote
         return RepoStatus.UNKNOWN
@@ -86,14 +87,16 @@ async def get_status(repo):
 
 
 
-async def run_cmd(executable, cmd, cb = lambda: None,
+async def run_cmd(executable, cmd, cb = lambda *_: None,
                   chdir = None, err_ok = False):
     #eprint('Executing', *cmd, 'in', chdir)
     proc = await asyncio.create_subprocess_exec(executable, *cmd, cwd=chdir)
     retcode = await proc.wait()
-    if retcode != 0 and not err_ok:  # EXIT_SUCCESS
-        eprint('Command', *cmd, 'exited with a failure status code', retcode)
-    cb()
+    if retcode != 0 and not err_ok:  # not EXIT_SUCCESS
+        eprint('Command', bold(' '.join((executable, *cmd))),
+                'in', bold(chdir), 'exited with a failure status code',
+                retcode)
+    cb(cmd, chdir, retcode)
     return retcode
 
 
@@ -145,7 +148,7 @@ async def cli_init(args):
     os.chdir(whereami())
     done = 0
 
-    def finished():
+    def finished(*_):
         nonlocal done
         done += 1
         eprint(f"Completed {done}/{total}")
@@ -155,6 +158,7 @@ async def cli_init(args):
         # Don't clone repos that exist
         if Path(directory).exists():
             eprint(f'Skipping already initialized {directory}')
+            finished()
             continue
         jobs.append(gitcmd(['clone', '--quiet', github_url + gh,
                                 directory], cb=finished))
@@ -167,39 +171,64 @@ async def cli_pull(args):
 
     total = len(repos)
     done = 0
-    def finished():
+
+    def finished(cmd, directory, exitcode):
         nonlocal done
         done += 1
+        if exitcode == 128:
+            eprint("Help: repo " + bold(directory) + " has "
+            "local changes that have not been integrated with changes in "
+            "the remote repository. You should integrate these changes "
+            "manually with `" + bold('git merge') + "` or "
+            "Altium if applicable.")
+            eprint('')
         eprint(f"Completed {done}/{total}")
 
     jobs = []
     for (_, directory) in repos:
         # Don't mess with repos that haven't been cloned yet
         if not Path(directory).exists():
-            eprint(f'Warning: {repo[1]} is not cloned yet. '
+            eprint(f'Warning: {directory} is not cloned yet. '
                     'Run `./repo.py init` to fix this.')
+            finished()
             continue
-        jobs.append(gitcmd(['pull', '--quiet', '--no-ff'], cb=finished,
+        jobs.append(gitcmd(['pull', '--quiet', '--ff-only'], cb=finished,
                                chdir=directory))
     await asyncio.gather(*jobs)
 
 
+class Colours:
+    RESET  = '\x1b[0m'
+    BOLD = '\x1b[1m'
+    RED = '\x1b[31m'
+    GREEN = '\x1b[32m'
+    PURPLE = '\x1b[35m'
+    YELLOW = '\x1b[33m'
+
+
 STATUS_COLOURS = {
-    RepoStatus.UNKNOWN:      '\x1b[31m',  # red
-    RepoStatus.UP_TO_DATE:   '\x1b[32m',  # green
-    RepoStatus.LOCAL_AHEAD:  '\x1b[35m',  # purple
-    RepoStatus.REMOTE_AHEAD: '\x1b[33m',  # yellow
+    RepoStatus.UNKNOWN:      Colours.RED,
+    RepoStatus.UP_TO_DATE:   Colours.GREEN,
+    RepoStatus.LOCAL_AHEAD:  Colours.PURPLE,
+    RepoStatus.REMOTE_AHEAD: Colours.YELLOW,
 }
 
 STATUS_NAMES = {
-    RepoStatus.UNKNOWN:      'unknown   ',  # red
-    RepoStatus.UP_TO_DATE:   'up to date',  # green
-    RepoStatus.LOCAL_AHEAD:  'needs push',  # purple
-    RepoStatus.REMOTE_AHEAD: 'needs pull',  # yellow
+    RepoStatus.UNKNOWN:      'unknown   ',
+    RepoStatus.UP_TO_DATE:   'up to date',
+    RepoStatus.LOCAL_AHEAD:  'needs push',
+    RepoStatus.REMOTE_AHEAD: 'needs pull',
 }
 
+
+def colour(colour, text):
+    return colour + text + Colours.RESET
+
+
+def bold(text):
+    return colour(Colours.BOLD, text)
+
 async def cli_status(args):
-    RESET  = '\x1b[0m'
 
     repos = get_repos()
     os.chdir(whereami())
@@ -210,7 +239,7 @@ async def cli_status(args):
 
     statuses = await asyncio.gather(*jobs)
     for idx, status in enumerate(statuses):
-        print(STATUS_COLOURS[status], STATUS_NAMES[status], RESET, '\t',
+        print(colour(STATUS_COLOURS[status], STATUS_NAMES[status]), '\t',
                 repos[idx][1], sep='')
 
 
@@ -221,7 +250,7 @@ async def cli_forall(args):
     os.chdir(whereami())
     done = 0
 
-    def finished():
+    def finished(*_):
         nonlocal done
         done += 1
         eprint(f"Completed {done}/{total}")
