@@ -130,7 +130,7 @@ class RepoStatus(enum.Enum):
     UNKNOWN      = enum.auto()
 
 
-async def get_status(repo):
+async def get_status(repo, fetch=True):
     """
     Return whether a given repo is up to date, behind, or has untracked files.
     Relies on you being in the whereami() directory.
@@ -140,10 +140,12 @@ async def get_status(repo):
         # git status returns nonzero if there are untracked files
         return RepoStatus.UNTRACKED
 
-    status = await gitcmd(['fetch', '--quiet'], chdir=repo, err_ok=False)
-    if status != 0:
-        # Ignore errors and just fail to find status if we can't contact remote
-        return RepoStatus.UNKNOWN
+    if fetch:
+        status = await gitcmd(['fetch', '--quiet'], chdir=repo, err_ok=False)
+        if status != 0:
+            # Ignore errors and just fail to find status if we can't contact
+            # remote
+            return RepoStatus.UNKNOWN
 
     local_is_ancestor, remote_is_ancestor = await asyncio.gather(
         gitcmd(['merge-base', '--is-ancestor', 'HEAD', '@{u}'],
@@ -295,17 +297,16 @@ async def cli_pull(args):
     total = len(repos)
     done = 0
 
-    def finished(cmd, directory, exitcode):
+    async def pull_repo(directory):
+        exitcode = await gitcmd(['pull', '--quiet', '--ff-only'], chdir=directory)
+        _, status = await get_status(directory, fetch=False)
+        if status != RepoStatus.UP_TO_DATE:
+            eprint('Warning: repo', bold(directory), 'is still',
+                    colour(STATUS_COLOURS[status], STATUS_NAMES[status]))
         nonlocal done
         done += 1
-        if exitcode == 128:
-            eprint("Help: repo " + bold(directory) + " has "
-            "local changes that have not been integrated with changes in "
-            "the remote repository. You should integrate these changes "
-            "manually with `" + bold('git merge') + "` or "
-            "Altium if applicable.")
-            eprint('')
         eprint(f"Completed {done}/{total}")
+
 
     semaphore = asyncio.Semaphore(MAX_JOBS)
     jobs = []
@@ -316,9 +317,7 @@ async def cli_pull(args):
                     'Run `./repo.py init` to fix this.')
             finished('', '', 0)
             continue
-        jobs.append(exec_n(gitcmd(['pull', '--quiet', '--ff-only'],
-                                  cb=finished, chdir=directory),
-                           semaphore))
+        jobs.append(exec_n(pull_repo(directory), semaphore))
     await asyncio.gather(*jobs)
 
 
