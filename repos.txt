@@ -1,13 +1,12 @@
 # ensure that libraries are up to date before any pushes are allowed
-!check_pulled libraries
-UBC-ThunderBots/Altium_Libraries libraries
+!check_submodule Altium_Libraries
 
-UBC-ThunderBots/PCB_Encoder encoder
-UBC-ThunderBots/PCB_EStop estop
-UBC-ThunderBots/PCB_MotorDriver motor-driver
-UBC-ThunderBots/PCB_NucleoClone nucleo-clone
-UBC-Thunderbots/PCB_Oven oven
-UBC-ThunderBots/PCB_Power power
-UBC-ThunderBots/PCB_RMII_Dongle rmii-dongle
-UBC-ThunderBots/PCB_Template template
-UBC-ThunderBots/PCB_Wifi wifi
+UBC-ThunderBots/PCB_Encoder PCB_Encoder
+UBC-ThunderBots/PCB_EStop PCB_EStop
+UBC-ThunderBots/PCB_MotorDriver PCB_MotorDriver
+UBC-ThunderBots/PCB_NucleoClone PCB_NucleoClone
+UBC-Thunderbots/PCB_Oven PCB_Oven
+UBC-ThunderBots/PCB_Power PCB_Power
+UBC-ThunderBots/PCB_RMII_Dongle PCB_RMII_Dongle
+UBC-ThunderBots/PCB_Template PCB_Template
+UBC-ThunderBots/PCB_Wifi PCB_Wifi

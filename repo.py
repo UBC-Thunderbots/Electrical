@@ -16,10 +16,20 @@ from typing import Optional
 MAX_JOBS = 4
 
 
-PREPUSH_HEADER = """
-#!/usr/bin/env bash
+PREPUSH_HEADER = """\
+#!/usr/bin/env bash\
 """
 PREPUSH_BODY = """
+sm_branch=$(git config --get "submodule.${check_path}.branch")
+
+# if branch is not set in config, it will be master
+# git source: https://github.com/git/git/blob/20514004ddf1a3528de8933bc32f284e175e1012/builtin/submodule--helper.c#L1984
+sm_branch="${sm_branch:-master}"
+
+# if the submodule is not here, allow all pushes
+if [[ ! -d "${check_path}" ]]; then
+    exit 0
+fi
 cd "${check_path}"
 
 red=$'\e[31m'
@@ -42,9 +52,9 @@ fi
 
 # source: https://stackoverflow.com/a/17938274
 git fetch
-if [[ ! $(git rev-parse HEAD) == $(git rev-parse @{u}) ]]; then
+if [[ ! $(git rev-parse HEAD) == $(git rev-parse "${sm_branch}@{u}") ]]; then
     echo "${red}!! ${bold}${check_path}${nobold} is not the same as remote${norm}" >&2
-    git status -u
+    echo "Help: run ${bold}git submodule update --remote${norm} to update ${bold}${check_path}${norm} and double check everything is OK before committing and pushing" >&2
     exit 1
 else
     exit 0
@@ -79,7 +89,7 @@ class Config:
     """
     Tool configuration.
     """
-    check_pulled: Optional[str] = None
+    check_submodule: Optional[str] = None
 
 
 async def exec_n(coro, semaphore):
@@ -212,7 +222,7 @@ def update_gitignore(repos):
 
     # we have to open this file in binary format because of the extremely
     # surprising behaviour described in https://bugs.python.org/issue26158
-    with open('.gitignore', 'rb+') as h:
+    with open(cwd / '.gitignore', 'rb+') as h:
         need_sig = True
 
         # move the position in the stream to after our signature
@@ -258,33 +268,42 @@ async def cli_init(args):
         done += 1
         eprint(f"Completed {done}/{total}")
 
+    def maybe_insert_hook(directory: Path):
+        if not config.check_submodule:
+            # don't insert hooks if they aren't enabled
+            return
+
+        eprint(f'Writing hook in {bold(directory)}')
+        script_path = directory / '.git/hooks/pre-push'
+
+        # write out the templated script
+        with open(script_path, 'w') as h:
+            h.write(make_prepush_check_pulled(config.check_submodule))
+        # chmod a+x
+        stat = script_path.stat()
+        script_path.chmod(add_exec_bit(stat.st_mode))
+
     async def clone(url, directory):
         # clone the repo
-        exitcode = await gitcmd(['clone', '--quiet', url, directory],
-                     cb=finished)
-        # insert pre-push hook if we are not processing that repo itself
-        if exitcode == 0 and config.check_pulled \
-                and directory != config.check_pulled:
-            check_relpath = os.path.relpath(
-                    Path(config.check_pulled).resolve(),
-                         start=Path(directory).resolve())
-            script_path = Path(directory) / '.git/hooks/pre-push'
+        exitcode = await gitcmd(['clone', '--recurse-submodules', '--quiet',
+                                 url, directory])
 
-            # write out the templated script
-            with open(script_path, 'w') as h:
-                h.write(make_prepush_check_pulled(check_relpath))
-            # chmod a+x
-            stat = script_path.stat()
-            script_path.chmod(add_exec_bit(stat.st_mode))
+        # insert pre-push hook if the submodule exists in this repo
+        if exitcode == 0:
+            maybe_insert_hook(Path(directory))
         eprint(f'Cloned {bold(directory)}')
+        finished()
+
 
     semaphore = asyncio.Semaphore(MAX_JOBS)
     jobs = []
     for (gh, directory) in repos:
+        dir_p = Path(directory)
         # Don't clone repos that exist
-        if Path(directory).exists():
+        if dir_p.exists():
+            maybe_insert_hook(dir_p)
+            eprint(f'Skipping cloning already cloned repo {bold(directory)}')
             finished()
-            eprint(f'Skipping already initialized repo {bold(directory)}')
             continue
         jobs.append(exec_n(clone(github_url + gh, directory), semaphore))
     await asyncio.gather(*jobs)
@@ -298,11 +317,15 @@ async def cli_pull(args):
     done = 0
 
     async def pull_repo(directory):
-        exitcode = await gitcmd(['pull', '--quiet', '--ff-only'], chdir=directory)
+        exitcode = await gitcmd(['pull', '--quiet', '--ff-only',
+                                 '--recurse-submodules=yes'], chdir=directory)
         _, status = await get_status(directory, fetch=False)
         if status != RepoStatus.UP_TO_DATE:
             eprint('Warning: repo', bold(directory), 'is still',
                     colour(STATUS_COLOURS[status], STATUS_NAMES[status]))
+        finished()
+
+    def finished(*_):
         nonlocal done
         done += 1
         eprint(f"Completed {done}/{total}")
@@ -315,7 +338,7 @@ async def cli_pull(args):
         if not Path(directory).exists():
             eprint(f'Warning: {bold(directory)} is not cloned yet. '
                     'Run `./repo.py init` to fix this.')
-            finished('', '', 0)
+            finished()
             continue
         jobs.append(exec_n(pull_repo(directory), semaphore))
     await asyncio.gather(*jobs)
@@ -349,7 +372,7 @@ def colour(colour, text):
     """
     Print `text` with `colour`.
     """
-    return colour + (text or '') + Colours.RESET
+    return colour + str(text or '') + Colours.RESET
 
 
 def bold(text):
@@ -397,10 +420,12 @@ async def cli_forall(args):
 
 
 def main():
-    async def fail(*args):
-        raise ValueError('Subcommand not specified')
-
     ap = argparse.ArgumentParser()
+
+    async def fail(*args):
+        ap.print_help()
+        sys.exit(1)
+
     ap.set_defaults(cmd=fail)
     sps = ap.add_subparsers()
 

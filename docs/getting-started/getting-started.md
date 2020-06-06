@@ -8,6 +8,20 @@ Information for new members of the Electrical sub-team on how to navigate the el
 
 We use Git for version control. Follow the instructions [here](https://git-scm.com/downloads) for your operating system to install Git.
 
+## repo.py
+
+This script lets you set up all the Elec projects in their own subdirectories.
+It sets up each compatible repository so it ensures your Altium libraries are
+up to date when you push.
+
+To get started, install [Python](https://www.python.org/) 3.7 or higher, then,
+in a Git Bash window in your copy of this repository, run
+`./repo.py init --https`. This will download all the projects and you can begin
+working on them.
+
+For more details on the version control setup, see [repo-organization](../repo-organization.md).
+
+
 ### (Optional) Git Configurations
 
 This is optional, but very useful and timesaving configurations.
