@@ -18,6 +18,7 @@ Altium is only compatible with Windows. We currently use **version 18.0**. For m
 ### Part 2 - License Setup
 
 1. If on campus, connect to either **UBCSecure** or **UBCPrivate**. No other wireless network will work. For remote use, you can VPN into the ECE license serve. Go [here ](getting-started-cad-software-wip.md#myvpn-setup)to setup myVPN.
+
 2. Open Altium and select `Setup private license server`.
 
 ![](../../.gitbook/assets/altium1.PNG)
