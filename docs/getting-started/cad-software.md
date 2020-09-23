@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Instructions to install Altium are now located under `2020-2021\Planning\On-Boarding` in the Electrical Subteam Google Drive. Please visit that location to get more up-to-date instructions.
+
 # Getting Started - CAD Software
 
 Setup instructions on how install CAD software for schematic capture and PCB layout.
